@@ -1,0 +1,168 @@
+---
+title: Construction Operations / Lines
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+toc_max_heading_level: 2
+---
+
+# Construction Operations / Lines
+
+[SA 2026.1.0529.7](/api/dotnet/construction-operations-lines) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/construction-operations-lines)
+
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
+
+## Construct Line 2 Points {/* #construct-line-2-points */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-points) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-2-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineTwoPointsAsync(
+        CollectionObjectName lineName,
+        PointName firstPoint,
+        PointName secondPoint,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line 2 Points (Vector Notation) {/* #construct-line-2-points-vector-notation */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-points-vector-notation) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-2-points-vector-notation)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineTwoPointsVectorNotationAsync(
+        CollectionObjectName lineName,
+        Vector firstVector,
+        Vector secondVector,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line Normal to Object {/* #construct-line-normal-to-object */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-normal-to-object) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-normal-to-object)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineNormalToObjectAsync(
+        CollectionObjectName lineName,
+        CollectionObjectName @object,
+        double lineLength = 1,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line - Project Line to Object Reference Plane {/* #construct-line---project-line-to-object-reference-plane */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line---project-line-to-object-reference-plane) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line---project-line-to-object-reference-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineProjectLineToObjectReferencePlaneAsync(
+        CollectionObjectName lineToCreate,
+        CollectionObjectName lineToProject,
+        CollectionObjectName objectToProjectTo,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line - Normal to Object through Point {/* #construct-line---normal-to-object-through-point */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line---normal-to-object-through-point) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line---normal-to-object-through-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineNormalToObjectThroughPointAsync(
+        CollectionObjectName lineToCreate,
+        CollectionObjectName objectName,
+        PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line 2 Plane Intersection {/* #construct-line-2-plane-intersection */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-plane-intersection) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-2-plane-intersection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineTwoPlaneIntersectionAsync(
+        CollectionObjectName lineName,
+        CollectionObjectName firstPlane,
+        CollectionObjectName secondPlane,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Lines From Surface Faces - Runtime Select {/* #construct-lines-from-surface-faces---runtime-select */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-lines-from-surface-faces---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-lines-from-surface-faces---runtime-select)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
+```csharp
+public Task ConstructLinesFromSurfaceFacesRuntimeSelectAsync(
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line Center of Slot {/* #construct-line-center-of-slot */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-center-of-slot) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-center-of-slot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineCenterOfSlotAsync(
+        CollectionObjectName lineName,
+        CollectionObjectName slotName,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line From Instrument Shot {/* #construct-line-from-instrument-shot */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-from-instrument-shot) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-from-instrument-shot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```csharp
+public Task ConstructLineFromInstrumentShotAsync(
+        PointName pointName,
+        CollectionObjectName lineName,
+        int observationIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Related References {/* #related-references */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7)

@@ -1,6 +1,6 @@
 ---
 title: View Control
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/view-control) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/view-control)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Auto-Scale {/* #auto-scale */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#auto-scale) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#auto-scale)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export declare function autoScale(
@@ -28,6 +30,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Center Graphics About Object(s) {/* #center-graphics-about-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#center-graphics-about-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#center-graphics-about-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CenterGraphicsAboutObjectsInput {
@@ -49,6 +53,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#center-graphics-about-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#center-graphics-about-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CenterGraphicsAboutPointInput {
   readonly pointName: PointName;
@@ -66,6 +72,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Define point of view {/* #define-point-of-view */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#define-point-of-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#define-point-of-view)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface DefinePointOfViewInput {
@@ -94,6 +102,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#get-active-clipping-planes) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#get-active-clipping-planes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function getActiveClippingPlanes(
   briosa: BriosaClient,
@@ -106,6 +116,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get point of view parameters {/* #get-point-of-view-parameters */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#get-point-of-view-parameters) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#get-point-of-view-parameters)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPointOfViewParametersInput {
@@ -125,6 +137,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#hide-all-callout-views) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#hide-all-callout-views)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function hideAllCalloutViews(
   briosa: BriosaClient,
@@ -137,6 +151,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Hide Objects {/* #hide-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#hide-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#hide-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface HideObjectsInput {
@@ -156,6 +172,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#highlight-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#highlight-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface HighlightObjectsInput {
   readonly objectNames: Iterable<CollectionObjectName>;
@@ -171,7 +189,7 @@ export declare function highlightObjects(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -180,6 +198,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Highlight Point {/* #highlight-point */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#highlight-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#highlight-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface HighlightPointInput {
@@ -196,7 +216,7 @@ export declare function highlightPoint(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -205,6 +225,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Highlight Relationships {/* #highlight-relationships */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#highlight-relationships) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#highlight-relationships)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface HighlightRelationshipsInput {
@@ -221,7 +243,7 @@ export declare function highlightRelationships(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -230,6 +252,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Load Ribbon Bar from XML File {/* #load-ribbon-bar-from-xml-file */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#load-ribbon-bar-from-xml-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#load-ribbon-bar-from-xml-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface LoadRibbonBarFromXmlFileInput {
@@ -249,6 +273,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#refresh-views) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#refresh-views)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function refreshViews(
   briosa: BriosaClient,
@@ -262,6 +288,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#reset-ribbon-bar-to-default) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#reset-ribbon-bar-to-default)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function resetRibbonBarToDefault(
   briosa: BriosaClient,
@@ -274,6 +302,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Save point of view {/* #save-point-of-view */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#save-point-of-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#save-point-of-view)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SavePointOfViewInput {
@@ -294,12 +324,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-background-color) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-background-color)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetBackgroundColorInput {
-  readonly solidColorName?: Color;
-  readonly gradientStartColorName?: Color;
-  readonly gradientEndColorName?: Color;
-  readonly highlightColor?: Color;
+  readonly solidColorName: Color;
+  readonly gradientStartColorName: Color;
+  readonly gradientEndColorName: Color;
+  readonly highlightColor: Color;
 }
 
 export declare function setBackgroundColor(
@@ -314,6 +346,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set MP's Window State {/* #set-mps-window-state */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-mps-window-state) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-mps-window-state)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetMpWindowStateInput {
@@ -333,10 +367,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-objects-color) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-objects-color)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetObjectsColorInput {
   readonly objectsToChange: Iterable<CollectionObjectName>;
-  readonly newWorkingColorName?: Color;
+  readonly newWorkingColorName: Color;
   readonly autoIncrement?: boolean;
 }
 
@@ -352,6 +388,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Object(s) Translucency {/* #set-objects-translucency */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-objects-translucency) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-objects-translucency)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetObjectsTranslucencyInput {
@@ -373,6 +411,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-point-of-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-point-of-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetPointOfViewInput {
   readonly viewName: ViewName;
@@ -391,6 +431,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-point-of-view-from-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-point-of-view-from-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetPointOfViewFromFrameInput {
   readonly frame: CollectionObjectName;
@@ -408,6 +450,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Point of View from Instrument Updates {/* #set-point-of-view-from-instrument-updates */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-point-of-view-from-instrument-updates) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-point-of-view-from-instrument-updates)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+A request that sets `displayViewControl` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface SetPointOfViewFromInstrumentUpdatesInput {
@@ -438,6 +484,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-render-mode-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-render-mode-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRenderModeTypeInput {
   readonly renderingMode: RenderModeType;
@@ -455,6 +503,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set SA's Window Pos {/* #set-sas-window-pos */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-sas-window-pos) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-sas-window-pos)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetSaWindowPosInput {
@@ -475,6 +525,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-sas-window-size) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-sas-window-size)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetSaWindowSizeInput {
   readonly width?: number;
@@ -494,6 +546,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-sas-window-state) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-sas-window-state)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetSaWindowStateInput {
   readonly saWindowState: WindowState;
@@ -511,6 +565,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Target Labels Use Full Names {/* #set-target-labels-use-full-names */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-target-labels-use-full-names) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-target-labels-use-full-names)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetTargetLabelsUseFullNamesInput {
@@ -530,6 +586,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-toolkit-visibility) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-toolkit-visibility)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetToolkitVisibilityInput {
   readonly showToolkit?: boolean;
@@ -547,6 +605,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set View Clipping Plane {/* #set-view-clipping-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-view-clipping-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-view-clipping-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetViewClippingPlaneInput {
@@ -567,9 +627,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-working-color) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-working-color)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetWorkingColorInput {
-  readonly newWorkingColorName?: Color;
+  readonly newWorkingColorName: Color;
 }
 
 export declare function setWorkingColor(
@@ -584,6 +646,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Working Color Auto Increment {/* #set-working-color-auto-increment */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#set-working-color-auto-increment) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#set-working-color-auto-increment)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetWorkingColorAutoIncrementInput {
@@ -603,6 +667,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show--hide-by-object-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show--hide-by-object-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowHideByObjectTypeInput {
   readonly allCollections?: boolean;
@@ -620,7 +686,7 @@ export declare function showHideByObjectType(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -629,6 +695,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Show / Hide Callout View {/* #show--hide-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show--hide-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show--hide-callout-view)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ShowHideCalloutViewInput {
@@ -649,6 +717,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show--hide-dimension) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show--hide-dimension)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowHideDimensionInput {
   readonly dimensionName: CollectionItemName;
@@ -668,6 +738,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show--hide-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show--hide-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowHidePointsInput {
   readonly pointNames: Iterable<PointName>;
@@ -683,7 +755,7 @@ export declare function showHidePoints(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -692,6 +764,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Show by Object Type {/* #show-by-object-type */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show-by-object-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show-by-object-type)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ShowByObjectTypeInput {
@@ -711,6 +785,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Show Items in Tree {/* #show-items-in-tree */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show-items-in-tree) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show-items-in-tree)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ShowItemsInTreeInput {
@@ -736,6 +812,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show-labels) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show-labels)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowLabelsInput {
   readonly pointLabelsOn?: boolean;
@@ -755,6 +833,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#show-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#show-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowObjectsInput {
   readonly objectsToShow: Iterable<CollectionObjectName>;
@@ -772,6 +852,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Show/Hide Annotations for Datums {/* #showhide-annotations-for-datums */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-annotations-for-datums) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-annotations-for-datums)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ShowHideAnnotationsForDatumsInput {
@@ -794,6 +876,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-annotations-for-feature-checks) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-annotations-for-feature-checks)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowHideAnnotationsForFeatureChecksInput {
   readonly featureCheckNameList: Iterable<CollectionItemName>;
@@ -815,6 +899,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-inspection-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-inspection-bar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowHideInspectionBarInput {
   readonly showInspectionBar?: boolean;
@@ -832,6 +918,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Show/Hide Instrument Interface {/* #showhide-instrument-interface */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-instrument-interface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-instrument-interface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface ShowHideInstrumentInterfaceInput {
@@ -853,6 +941,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-instrument-probe-tip) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-instrument-probe-tip)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowHideInstrumentProbeTipInput {
   readonly showInstrumentProbeTip?: boolean;
@@ -870,6 +960,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Show/Hide Instruments {/* #showhide-instruments */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-instruments) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-instruments)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ShowHideInstrumentsInput {
@@ -890,6 +982,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-relationship-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-relationship-report)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowHideRelationshipReportInput {
   readonly collectionName: CollectionName;
@@ -908,6 +1002,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Show/Hide Relationship Watch {/* #showhide-relationship-watch */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-relationship-watch) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#showhide-relationship-watch)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ShowHideRelationshipWatchInput {
@@ -929,4 +1025,4 @@ export declare function showHideRelationshipWatch(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

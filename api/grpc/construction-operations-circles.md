@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Circles
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-circles) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-circles)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circle)
 
 `/briosa.ConstructionOperations/ConstructCircle` · Operation ID: `construction_operations.construct_circle`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -47,6 +49,8 @@ message ConstructCircleResult {
 
 `/briosa.ConstructionOperations/ConstructCirclesFromSurfaceFacesRuntimeSelect` · Operation ID: `construction_operations.construct_circles_from_surface_faces_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -65,39 +69,7 @@ message ConstructCirclesFromSurfaceFacesRuntimeSelectResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces)
 
-`/briosa.ConstructionOperations/ConstructCirclesLinesFromSurfaces` · Operation ID: `construction_operations.construct_circles_lines_from_surfaces`
+Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code -1 for both the Circle and the Line mode on both exact targets. No replacement extracts circles or lines from surfaces on these exact targets. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `surfaces` | `repeated CollectionObjectName` | Surfaces | Required |
-| Request | 2 | `minimum_diameter` | `optional double` | Minimum Diameter | 0.000000 |
-| Request | 3 | `maximum_diameter` | `optional double` | Maximum Diameter | 0.000000 |
-| Request | 4 | `tolerance` | `optional double` | Tolerance | 0.020000 |
-| Request | 5 | `single_surface` | `optional bool` | Single Surface? | false |
-| Request | 6 | `circle_line_mode` | `optional CircleLineMode` | Circle Line Mode | Required |
-| Request | 7 | `destination_collection_name` | `optional CollectionName` | Destination Collection Name | Required |
-| Request | 8 | `base_name` | `optional string` | Base Name | Geometry Object |
-| Result | 1 | `geometry_objects` | `repeated CollectionObjectName` | Geometry Objects | — |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc ConstructCirclesLinesFromSurfaces(ConstructCirclesLinesFromSurfacesRequest) returns (ConstructCirclesLinesFromSurfacesResult);
-
-message ConstructCirclesLinesFromSurfacesRequest {
-  repeated CollectionObjectName surfaces = 1;
-  optional double minimum_diameter = 2;
-  optional double maximum_diameter = 3;
-  optional double tolerance = 4;
-  optional bool single_surface = 5;
-  optional CircleLineMode circle_line_mode = 6;
-  optional CollectionName destination_collection_name = 7;
-  optional string base_name = 8;
-}
-
-message ConstructCirclesLinesFromSurfacesResult {
-  repeated CollectionObjectName geometry_objects = 1;
-  MpExecutionDetails execution = 1000;
-}
-```
-
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

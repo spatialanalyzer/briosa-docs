@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Other MP Types
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-other-mp-types) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-system-string)
 
 `/briosa.ConstructionOperations/MakeSystemString` · Operation ID: `construction_operations.make_system_string`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -45,6 +47,8 @@ message MakeSystemStringResult {
 
 `/briosa.ConstructionOperations/MakeCollectionNameRuntimeSelect` · Operation ID: `construction_operations.make_collection_name_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -69,6 +73,8 @@ message MakeCollectionNameRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-item-name-reference-list---wildcard-selection)
 
 `/briosa.ConstructionOperations/MakeCollectionItemNameRefListWildcardSelection` · Operation ID: `construction_operations.make_collection_item_name_ref_list_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -99,6 +105,8 @@ message MakeCollectionItemNameRefListWildcardSelectionResult {
 
 `/briosa.ConstructionOperations/MakeCollectionObjectNameRuntimeSelect` · Operation ID: `construction_operations.make_collection_object_name_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -125,6 +133,8 @@ message MakeCollectionObjectNameRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name---ensure-unique)
 
 `/briosa.ConstructionOperations/MakeCollectionObjectNameEnsureUnique` · Operation ID: `construction_operations.make_collection_object_name_ensure_unique`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -153,6 +163,8 @@ message MakeCollectionObjectNameEnsureUniqueResult {
 
 `/briosa.ConstructionOperations/MakeCollectionObjectNameRefListRuntimeSelect` · Operation ID: `construction_operations.make_collection_object_name_ref_list_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -179,6 +191,8 @@ message MakeCollectionObjectNameRefListRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--wildcard-selection)
 
 `/briosa.ConstructionOperations/MakeCollectionObjectNameRefListWildcardSelection` · Operation ID: `construction_operations.make_collection_object_name_ref_list_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -209,6 +223,8 @@ message MakeCollectionObjectNameRefListWildcardSelectionResult {
 
 `/briosa.ConstructionOperations/MakeCollectionObjectNameRefListByType` · Operation ID: `construction_operations.make_collection_object_name_ref_list_by_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional string` | Collection | Empty |
@@ -235,6 +251,8 @@ message MakeCollectionObjectNameRefListByTypeResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type-and-color)
 
 `/briosa.ConstructionOperations/MakeCollectionObjectNameRefListByTypeAndColor` · Operation ID: `construction_operations.make_collection_object_name_ref_list_by_type_and_color`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -265,6 +283,8 @@ message MakeCollectionObjectNameRefListByTypeAndColorResult {
 
 `/briosa.ConstructionOperations/MakeCollectionObjectNameRefListFromAllGroupsInCollection` · Operation ID: `construction_operations.make_collection_object_name_ref_list_from_all_groups_in_collection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection_name` | `optional CollectionName` | Collection Name | Required |
@@ -289,6 +309,8 @@ message MakeCollectionObjectNameRefListFromAllGroupsInCollectionResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#get-collection-instrument-ref-list-variable)
 
 `/briosa.ConstructionOperations/GetCollectionInstrumentRefListVariable` · Operation ID: `construction_operations.get_collection_instrument_ref_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -315,6 +337,8 @@ message GetCollectionInstrumentRefListVariableResult {
 
 `/briosa.ConstructionOperations/SetCollectionInstrumentRefListVariable` · Operation ID: `construction_operations.set_collection_instrument_ref_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -338,36 +362,16 @@ message SetCollectionInstrumentRefListVariableResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection)
 
-`/briosa.ConstructionOperations/AddCollectionInstrumentsToRefListWildcardSelection` · Operation ID: `construction_operations.add_collection_instruments_to_ref_list_wildcard_selection`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `collection_instrument_ref_list` | `repeated CollectionInstrumentId` | Collection Instrument Reference List | Required |
-| Request | 2 | `collection_wildcard_criteria` | `optional string` | Collection Wildcard Criteria | * |
-| Request | 3 | `instrument_wildcard_criteria` | `optional string` | Instrument Wildcard Criteria | * |
-| Result | 1 | `collection_instrument_ref_list` | `repeated CollectionInstrumentId` | Collection Instrument Reference List | — |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc AddCollectionInstrumentsToRefListWildcardSelection(AddCollectionInstrumentsToRefListWildcardSelectionRequest) returns (AddCollectionInstrumentsToRefListWildcardSelectionResult);
-
-message AddCollectionInstrumentsToRefListWildcardSelectionRequest {
-  repeated CollectionInstrumentId collection_instrument_ref_list = 1;
-  optional string collection_wildcard_criteria = 2;
-  optional string instrument_wildcard_criteria = 3;
-}
-
-message AddCollectionInstrumentsToRefListWildcardSelectionResult {
-  repeated CollectionInstrumentId collection_instrument_ref_list = 1;
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code 2 on both exact targets, but the instrument list could not be read back, and the MP documents no other output. A reference list is a client-side value in Briosa, so build the instrument list directly. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Make a Collection Instrument Reference List- Runtime Select {/* #make-a-collection-instrument-reference-list--runtime-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select)
 
 `/briosa.ConstructionOperations/MakeCollectionInstrumentRefListRuntimeSelect` · Operation ID: `construction_operations.make_collection_instrument_ref_list_runtime_select`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -393,6 +397,8 @@ message MakeCollectionInstrumentRefListRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-relationship-reference-list--wildcard-selection)
 
 `/briosa.ConstructionOperations/MakeRelationshipRefListWildcardSelection` · Operation ID: `construction_operations.make_relationship_ref_list_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -421,6 +427,8 @@ message MakeRelationshipRefListWildcardSelectionResult {
 
 `/briosa.ConstructionOperations/MakeRelationshipRefListRuntimeSelect` · Operation ID: `construction_operations.make_relationship_ref_list_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -445,6 +453,8 @@ message MakeRelationshipRefListRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-an-event-reference-list--wildcard-selection)
 
 `/briosa.ConstructionOperations/MakeEventRefListWildcardSelection` · Operation ID: `construction_operations.make_event_ref_list_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -473,6 +483,8 @@ message MakeEventRefListWildcardSelectionResult {
 
 `/briosa.ConstructionOperations/MakeCollectionInstrumentIdRuntimeSelect` · Operation ID: `construction_operations.make_collection_instrument_id_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -497,6 +509,8 @@ message MakeCollectionInstrumentIdRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-report-ref-list-from-a-collection)
 
 `/briosa.ConstructionOperations/MakeReportRefListFromCollection` · Operation ID: `construction_operations.make_report_ref_list_from_collection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -523,6 +537,8 @@ message MakeReportRefListFromCollectionResult {
 
 `/briosa.ConstructionOperations/MakeReportRefListRuntimeSelect` · Operation ID: `construction_operations.make_report_ref_list_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -548,6 +564,8 @@ message MakeReportRefListRuntimeSelectResult {
 
 `/briosa.ConstructionOperations/MakePictureNameRefListRuntimeSelect` · Operation ID: `construction_operations.make_picture_name_ref_list_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -572,6 +590,8 @@ message MakePictureNameRefListRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-transform-from-doubles-fixed-xyz)
 
 `/briosa.ConstructionOperations/MakeTransformFromDoublesFixedXyz` · Operation ID: `construction_operations.make_transform_from_doubles_fixed_xyz`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -607,6 +627,8 @@ message MakeTransformFromDoublesFixedXyzResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-transform-from-doubles-euler-parameters)
 
 `/briosa.ConstructionOperations/MakeTransformFromDoublesEulerParameters` · Operation ID: `construction_operations.make_transform_from_doubles_euler_parameters`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -645,6 +667,8 @@ message MakeTransformFromDoublesEulerParametersResult {
 
 `/briosa.ConstructionOperations/GetWorkingTransformOfObjectFixedXyz` · Operation ID: `construction_operations.get_working_transform_of_object_fixed_xyz`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_name` | `optional CollectionObjectName` | Object Name | Required |
@@ -670,6 +694,8 @@ message GetWorkingTransformOfObjectFixedXyzResult {
 
 `/briosa.ConstructionOperations/InvertTransform` · Operation ID: `construction_operations.invert_transform`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `transform` | `optional Transform` | Transform | Required |
@@ -694,6 +720,8 @@ message InvertTransformResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-fixed-xyz)
 
 `/briosa.ConstructionOperations/DecomposeTransformIntoDoublesFixedXyz` · Operation ID: `construction_operations.decompose_transform_into_doubles_fixed_xyz`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -730,6 +758,8 @@ message DecomposeTransformIntoDoublesFixedXyzResult {
 
 `/briosa.ConstructionOperations/DecomposeTransformIntoVectorsFixedXyz` · Operation ID: `construction_operations.decompose_transform_into_vectors_fixed_xyz`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `input_transform` | `optional Transform` | Input Transform | Required |
@@ -756,6 +786,8 @@ message DecomposeTransformIntoVectorsFixedXyzResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-vectors-origin-and-axes)
 
 `/briosa.ConstructionOperations/DecomposeTransformIntoVectorsOriginAndAxes` · Operation ID: `construction_operations.decompose_transform_into_vectors_origin_and_axes`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -787,6 +819,8 @@ message DecomposeTransformIntoVectorsOriginAndAxesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world)
 
 `/briosa.ConstructionOperations/DecomposeWorldTransformOperatorIntoDoublesFixedXyzInWorld` · Operation ID: `construction_operations.decompose_world_transform_operator_into_doubles_fixed_xyz_in_world`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -825,6 +859,8 @@ message DecomposeWorldTransformOperatorIntoDoublesFixedXyzInWorldResult {
 
 `/briosa.ConstructionOperations/DecomposeTransformIntoDoublesEulerXyz` · Operation ID: `construction_operations.decompose_transform_into_doubles_euler_xyz`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `input_transform` | `optional Transform` | Input Transform | Required |
@@ -859,6 +895,8 @@ message DecomposeTransformIntoDoublesEulerXyzResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyx)
 
 `/briosa.ConstructionOperations/DecomposeTransformIntoDoublesEulerZyx` · Operation ID: `construction_operations.decompose_transform_into_doubles_euler_zyx`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -895,6 +933,8 @@ message DecomposeTransformIntoDoublesEulerZyxResult {
 
 `/briosa.ConstructionOperations/DecomposeTransformIntoDoublesEulerZyz` · Operation ID: `construction_operations.decompose_transform_into_doubles_euler_zyz`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `input_transform` | `optional Transform` | Input Transform | Required |
@@ -929,6 +969,8 @@ message DecomposeTransformIntoDoublesEulerZyzResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zxz)
 
 `/briosa.ConstructionOperations/DecomposeTransformIntoDoublesEulerZxz` · Operation ID: `construction_operations.decompose_transform_into_doubles_euler_zxz`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -965,6 +1007,8 @@ message DecomposeTransformIntoDoublesEulerZxzResult {
 
 `/briosa.ConstructionOperations/DecomposeWorldTransformOperatorIntoVectorsFixedXyzInWorld` · Operation ID: `construction_operations.decompose_world_transform_operator_into_vectors_fixed_xyz_in_world`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `input_world_transform_operator` | `optional WorldTransform` | Input World Transform Operator | Required |
@@ -1000,4 +1044,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

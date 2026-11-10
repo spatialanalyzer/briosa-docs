@@ -4,6 +4,7 @@ const sidebars: SidebarsConfig = {
   docsSidebar: [
     'intro',
     'releases',
+    'contract-major-3-migration',
     'mp-argument-name-migration',
     'runtime-redesign-migration',
     {
@@ -32,6 +33,7 @@ const sidebars: SidebarsConfig = {
       label: 'Operate Briosa',
       items: [
         'deployment/windows',
+        'deployment/operation-admission',
         'deployment/protocol-artifacts',
         'deployment/installation-selection',
         'deployment/control-center',

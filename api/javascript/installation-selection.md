@@ -1,20 +1,26 @@
 ---
 title: Installation Selection and Discovery
-description: Client 0.4.0 server selectors, inert discovery, selection reports, and startup failures for SA 2026.1.0529.7.
+description: Client 0.5.0 server selectors, inert discovery, selection reports, and startup failures for SA 2026.1.0529.7.
 ---
 
 # Installation Selection and Discovery
 
 [SA 2026.1.0529.7](/api/javascript/installation-selection) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/installation-selection)
 
-These APIs are released in client **0.4.0**. Import them from the same exact-target package as the client. Discovery reads local installation evidence without launching the server, SDK, or SpatialAnalyzer. It does not prove runtime readiness.
+These APIs are released in client **0.5.0**. Import them from the same exact-target package as the client. Discovery reads local installation evidence without launching the server, SDK, or SpatialAnalyzer. It does not prove runtime readiness. For the running server's capability snapshot, see [Server Snapshot and Capabilities](./lifecycle.md#server-snapshot-and-capabilities).
 
 ## Discovery and Resolution
 
 ```ts
 export type InstallationScope = 'machine' | 'user' | 'portable';
-export declare function discoverInstallations(selection?: BriosaServerSelection): Promise<BriosaDiscoveryReport>;
-export declare function resolveInstallation(selection?: BriosaServerSelection): Promise<BriosaInstallation>;
+
+export declare function discoverInstallations(
+  selection?: BriosaServerSelection,
+): Promise<BriosaDiscoveryReport>;
+
+export declare function resolveInstallation(
+  selection?: BriosaServerSelection,
+): Promise<BriosaInstallation>;
 ```
 
 Discovery returns structurally valid installations, diagnostics for rejected or inaccessible locations, the selected compatible installation if one exists, and a selection failure code otherwise. A discovered installation is not necessarily eligible. Resolve returns the selected installation or raises `BriosaStartupError` with the selection code. Invalid selector values raise `TypeError`.
@@ -25,7 +31,7 @@ Set `serverSelection` on `BriosaStartOptions`; its default is `{}`. Executable p
 
 Without constraints the client considers all three scopes, excludes prereleases, and chooses the highest compatible stable release. Exclusion and search-root lists default to empty. Prerelease and legacy environment override flags default to false. An invalid explicit selection fails without fallback. Search roots identify package stores containing the committed products layout, not arbitrary executable directories. Elevated automatic selection only admits protected machine installations.
 
-The package requires contract major **2**, revision **at least 0**, for its exact SA target. Major-1 servers and the earlier 0.6.1 legacy exception are not eligible. Generated artifacts remain pinned to Server 0.9.0; this build pin is not the runtime selection rule.
+The package requires contract major **3**, revision **at least 0**, for its exact SA target, which Server 0.10.0 provides. Servers of other contract majors, including the major-2 Server 0.9.x releases, and servers without contract metadata, including Server 0.6.1, are not eligible: discovery reports `server-installation-incompatible` for them, and `start()` raises `BriosaStartupError` with that code when no eligible installation remains. Server 0.10.0 installs beside Server 0.9.x, and the 0.4.0 packages keep selecting contract-major-2 servers, so they remain available for rollback. Generated artifacts are pinned to the Server 0.10.0 protocol checkpoint `0.10.0-dev.1`; this build pin is not the runtime selection rule.
 
 `BRIOSA_SERVER_PATH` is ignored unless the legacy override flag is enabled and no direct selector is supplied. Prefer per-application selection. The chosen installation stays fixed for the session and recovery. Startup checks the live server identity against the selected evidence before SDK or SA activity; contract compatibility never bypasses exact-target checks, policy, ownership, or readiness.
 
@@ -89,11 +95,11 @@ export interface BriosaDiscoveryReport {
 ```ts
 import { discoverInstallations } from "briosa";
 
-const report = await discoverInstallations({ minimumVersion: "0.9.0" });
+const report = await discoverInstallations({ minimumVersion: "0.10.0" });
 for (const diagnostic of report.diagnostics) console.log(diagnostic.code);
 console.log(report.selected?.version ?? report.diagnosticCode);
 ```
 
 Diagnostic paths are explicitly requested local data. Avoid publishing them in logs or support reports. See [Installation Selection](/docs/deployment/installation-selection) and [Diagnostics](/docs/deployment/diagnostics) for deployment guidance.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/blob/v0.4.0/targets/2026.1.0529.7/src/installationModels.ts)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7/src/installationModels.ts)

@@ -1,6 +1,6 @@
 ---
 title: Cloud and Mesh Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/cloud-and-mesh-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control)
 
 `/briosa.CloudAndMeshOperations/CloudDisplayControl` · Operation ID: `cloud_and_mesh_operations.cloud_display_control`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -37,7 +39,7 @@ message CloudDisplayControlResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -48,6 +50,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box)
 
 `/briosa.CloudAndMeshOperations/ResetCloudBoundingBox` · Operation ID: `cloud_and_mesh_operations.reset_cloud_bounding_box`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -100,6 +104,8 @@ message ResetCloudBoundingBoxResult {
 
 `/briosa.CloudAndMeshOperations/GetCloudPointCount` · Operation ID: `cloud_and_mesh_operations.get_cloud_point_count`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cloud_name` | `optional CollectionObjectName` | Cloud Name | Required |
@@ -131,6 +137,8 @@ message GetCloudPointCountResult {
 
 `/briosa.CloudAndMeshOperations/SetCloudDefaultClippingPlane` · Operation ID: `cloud_and_mesh_operations.set_cloud_default_clipping_plane`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `enable_cloud_clipping` | `optional bool` | Enable Cloud Clipping? | false |
@@ -155,6 +163,8 @@ message SetCloudDefaultClippingPlaneResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection)
 
 `/briosa.CloudAndMeshOperations/RasterScanEdgeInspection` · Operation ID: `cloud_and_mesh_operations.raster_scan_edge_inspection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -192,6 +202,8 @@ message RasterScanEdgeInspectionResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
 
 `/briosa.CloudAndMeshOperations/NewRasterScanEdgeInspection` · Operation ID: `cloud_and_mesh_operations.new_raster_scan_edge_inspection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -238,6 +250,8 @@ message NewRasterScanEdgeInspectionResult {
 
 `/briosa.CloudAndMeshOperations/EnableAllCloudCrossSections` · Operation ID: `cloud_and_mesh_operations.enable_all_cloud_cross_sections`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cross_section_cloud_name` | `optional CollectionObjectName` | Cross Section Cloud Name | Required |
@@ -260,6 +274,8 @@ message EnableAllCloudCrossSectionsResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
 
 `/briosa.CloudAndMeshOperations/EnableDisableCloudCrossSections` · Operation ID: `cloud_and_mesh_operations.enable_disable_cloud_cross_sections`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -288,6 +304,8 @@ message EnableDisableCloudCrossSectionsResult {
 
 `/briosa.CloudAndMeshOperations/EnableSingleCloudCrossSection` · Operation ID: `cloud_and_mesh_operations.enable_single_cloud_cross_section`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cross_section_cloud_name` | `optional CollectionObjectName` | Cross Section Cloud Name | Required |
@@ -313,6 +331,8 @@ message EnableSingleCloudCrossSectionResult {
 
 `/briosa.CloudAndMeshOperations/GetNumberOfCrossSectionsInCrossSectionCloud` · Operation ID: `cloud_and_mesh_operations.get_number_of_cross_sections_in_cross_section_cloud`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cross_section_cloud_name` | `optional CollectionObjectName` | Cross Section Cloud Name | Required |
@@ -337,6 +357,8 @@ message GetNumberOfCrossSectionsInCrossSectionCloudResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane)
 
 `/briosa.CloudAndMeshOperations/FilterCloudsToPlane` · Operation ID: `cloud_and_mesh_operations.filter_clouds_to_plane`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -371,6 +393,8 @@ message FilterCloudsToPlaneResult {
 
 `/briosa.CloudAndMeshOperations/FilterCloudsToGroup` · Operation ID: `cloud_and_mesh_operations.filter_clouds_to_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cloud_names` | `repeated CollectionObjectName` | Cloud Names | Required |
@@ -403,6 +427,8 @@ message FilterCloudsToGroupResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface)
 
 `/briosa.CloudAndMeshOperations/FilterCloudsToSurface` · Operation ID: `cloud_and_mesh_operations.filter_clouds_to_surface`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -439,6 +465,8 @@ message FilterCloudsToSurfaceResult {
 
 `/briosa.CloudAndMeshOperations/FilterCloudsToBSplines` · Operation ID: `cloud_and_mesh_operations.filter_clouds_to_bsplines`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cloud_names` | `repeated CollectionObjectName` | Cloud Names | Required |
@@ -471,6 +499,8 @@ message FilterCloudsToBSplinesResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment)
 
 `/briosa.CloudAndMeshOperations/FilterCloudsToLineSegment` · Operation ID: `cloud_and_mesh_operations.filter_clouds_to_line_segment`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -506,6 +536,8 @@ message FilterCloudsToLineSegmentResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
 
 `/briosa.CloudAndMeshOperations/FilterCloudsToVectorGroupsResolvePoints` · Operation ID: `cloud_and_mesh_operations.filter_clouds_to_vector_groups_resolve_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -543,6 +575,8 @@ message FilterCloudsToVectorGroupsResolvePointsResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter)
 
 `/briosa.CloudAndMeshOperations/RGBCloudPointFilter` · Operation ID: `cloud_and_mesh_operations.rgb_cloud_point_filter`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -611,6 +645,8 @@ message RGBCloudPointFilterResult {
 
 `/briosa.CloudAndMeshOperations/DeleteCloudPointsByRadialDistanceFromPoints` · Operation ID: `cloud_and_mesh_operations.delete_cloud_points_by_radial_distance_from_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cloud_names` | `repeated CollectionObjectName` | Cloud Names | Required |
@@ -638,44 +674,16 @@ message DeleteCloudPointsByRadialDistanceFromPointsResult {
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
 
-`/briosa.CloudAndMeshOperations/DeleteCloudPointsByXYZRange` · Operation ID: `cloud_and_mesh_operations.delete_cloud_points_by_xyz_range`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `cloud_names` | `repeated CollectionObjectName` | Cloud Names | Required |
-| Request | 2 | `x_min` | `optional double` | See Typed Binding | Required |
-| Request | 3 | `x_max` | `optional double` | See Typed Binding | Required |
-| Request | 4 | `y_min` | `optional double` | See Typed Binding | Required |
-| Request | 5 | `y_max` | `optional double` | See Typed Binding | Required |
-| Request | 6 | `z_min` | `optional double` | See Typed Binding | Required |
-| Request | 7 | `z_max` | `optional double` | See Typed Binding | Required |
-| Request | 8 | `delete_inside` | `optional bool` | Delete Inside | false |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc DeleteCloudPointsByXYZRange(DeleteCloudPointsByXYZRangeRequest) returns (DeleteCloudPointsByXYZRangeResult);
-
-message DeleteCloudPointsByXYZRangeRequest {
-  repeated CollectionObjectName cloud_names = 1;
-  optional double x_min = 2;
-  optional double x_max = 3;
-  optional double y_min = 4;
-  optional double y_max = 5;
-  optional double z_min = 6;
-  optional double z_max = 7;
-  optional bool delete_inside = 8;
-}
-
-message DeleteCloudPointsByXYZRangeResult {
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and it has no licensed validation yet. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Generate General Mesh {/* #generate-general-mesh */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh)
 
 `/briosa.CloudAndMeshOperations/GenerateGeneralMesh` · Operation ID: `cloud_and_mesh_operations.generate_general_mesh`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -711,6 +719,8 @@ message GenerateGeneralMeshResult {
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume)
 
 `/briosa.CloudAndMeshOperations/MeshVolume` · Operation ID: `cloud_and_mesh_operations.mesh_volume`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -763,4 +773,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

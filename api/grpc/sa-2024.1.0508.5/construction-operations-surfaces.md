@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Surfaces
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-surfaces) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-from-objects)
 
 `/briosa.ConstructionOperations/ConstructSurfacesFromObjects` · Operation ID: `construction_operations.construct_surfaces_from_objects`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -40,6 +42,8 @@ message ConstructSurfacesFromObjectsResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-bsplines)
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromBSplines` · Operation ID: `construction_operations.construct_surface_from_b_splines`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -65,6 +69,8 @@ message ConstructSurfaceFromBSplinesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-cylinder)
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromCylinder` · Operation ID: `construction_operations.construct_surface_from_cylinder`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -95,6 +101,8 @@ message ConstructSurfaceFromCylinderResult {
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromPlane` · Operation ID: `construction_operations.construct_surface_from_plane`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `resulting_surface_name` | `optional CollectionObjectName` | Resulting Surface Name | Required |
@@ -119,6 +127,8 @@ message ConstructSurfaceFromPlaneResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-sphere)
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromSphere` · Operation ID: `construction_operations.construct_surface_from_sphere`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -145,6 +155,8 @@ message ConstructSurfaceFromSphereResult {
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromCone` · Operation ID: `construction_operations.construct_surface_from_cone`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `resulting_surface_name` | `optional CollectionObjectName` | Resulting Surface Name | Required |
@@ -169,6 +181,8 @@ message ConstructSurfaceFromConeResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces)
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromCollectionOfSurfaces` · Operation ID: `construction_operations.construct_surface_from_collection_of_surfaces`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -203,6 +217,8 @@ message ConstructSurfaceFromCollectionOfSurfacesResult {
 
 `/briosa.ConstructionOperations/ConstructSurfaceFitFromNominalSurfacesAndActualData` · Operation ID: `construction_operations.construct_surface_fit_from_nominal_surfaces_and_actual_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `nominal_surface` | `optional CollectionObjectName` | Nominal Surface | Required |
@@ -230,6 +246,8 @@ message ConstructSurfaceFitFromNominalSurfacesAndActualDataResult {
 
 `/briosa.ConstructionOperations/ConstructSurfaceByDissectingSurfaces` · Operation ID: `construction_operations.construct_surface_by_dissecting_surfaces`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `dissection_mode` | `optional SurfaceDissectionMode` | Dissection Mode | Required |
@@ -255,6 +273,8 @@ message ConstructSurfaceByDissectingSurfacesResult {
 
 `/briosa.ConstructionOperations/ConstructSurfacesByDissectingSurfacesFromRefList` · Operation ID: `construction_operations.construct_surfaces_by_dissecting_surfaces_from_ref_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `surfaces_to_dissect` | `repeated CollectionObjectName` | Surfaces to Dissect | Required |
@@ -279,6 +299,8 @@ message ConstructSurfacesByDissectingSurfacesFromRefListResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-point-groups)
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromPointGroups` · Operation ID: `construction_operations.construct_surface_from_point_groups`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -307,6 +329,8 @@ message ConstructSurfaceFromPointGroupsResult {
 
 `/briosa.ConstructionOperations/ConstructSurfacesByProjectingPoints` · Operation ID: `construction_operations.construct_surfaces_by_projecting_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `projection_target_name_list` | `repeated CollectionObjectName` | Projection Target Name List | Required |
@@ -333,6 +357,8 @@ message ConstructSurfacesByProjectingPointsResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-by-offsetting-a-surface)
 
 `/briosa.ConstructionOperations/ConstructSurfaceByOffsettingSurface` · Operation ID: `construction_operations.construct_surface_by_offsetting_surface`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -361,6 +387,8 @@ message ConstructSurfaceByOffsettingSurfaceResult {
 
 `/briosa.ConstructionOperations/ConstructSurfaceFromAnnotationLinks` · Operation ID: `construction_operations.construct_surface_from_annotation_links`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `annotation_list` | `repeated CollectionObjectName` | Annotation List | Required |
@@ -385,6 +413,8 @@ message ConstructSurfaceFromAnnotationLinksResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-geometry-from-surfaces)
 
 `/briosa.ConstructionOperations/ConstructGeometryFromSurfaces` · Operation ID: `construction_operations.construct_geometry_from_surfaces`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -483,4 +513,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

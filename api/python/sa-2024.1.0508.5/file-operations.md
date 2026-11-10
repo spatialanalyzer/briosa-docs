@@ -1,6 +1,6 @@
 ---
 title: File Operations
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,16 +8,20 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/file-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/file-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Backup Now {/* #backup-now */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#backup-now) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#backup-now)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
 ```python
-async def backup_now(self) -> None: ...
+async def backup_now(
+        self, *, on_mp_completion: MpCompletionObserver | None = None
+    ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -26,6 +30,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#copy-general-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#copy-general-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def copy_general_file(
         self,
@@ -33,6 +39,7 @@ async def copy_general_file(
         destination_file_name: FileReference,
         *,
         overwrite: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -42,10 +49,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#delete-general-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#delete-general-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `filesystem_delete`, `destructive` · **Duration Class:** `quick`
+
 ```python
 async def delete_general_file(
         self,
         file_name: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -54,6 +65,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Direct CAD Access {/* #direct-cad-access */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#direct-cad-access) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#direct-cad-access)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `prompt_on_missing_components` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `selective_import` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def direct_cad_access(
@@ -83,18 +100,19 @@ async def direct_cad_access(
         import_into_folders_matching_cad_file_hierarchy: bool = False,
         remove_empty_folders: bool = True,
         surface_normals_mode: int = 1,
-        prompt_on_missing_components: bool = True,
+        prompt_on_missing_components: bool = False,
         selective_import: bool = False,
         surface_compatibility_mode: bool,
         explode_surfaces: bool = False,
         cad_file_units: str = "",
         build_callout_views: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> DirectCadAccessResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -104,6 +122,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Export ASCII Frame Set {/* #export-ascii-frame-set */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-ascii-frame-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```python
 async def export_ascii_frame_set(
@@ -116,6 +136,7 @@ async def export_ascii_frame_set(
         include_export_format_info: bool = False,
         decimal_precision: int = 6,
         append: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -125,6 +146,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-frames) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-ascii-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_ascii_frames(
         self,
@@ -133,6 +156,7 @@ async def export_ascii_frames(
         *,
         export_frame_mode: str = "Fixed XYZ",
         overwrite_existing_file: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -141,6 +165,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export ASCII Point Clouds {/* #export-ascii-point-clouds */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-ascii-point-clouds)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```python
 async def export_ascii_point_clouds(
@@ -151,6 +177,7 @@ async def export_ascii_point_clouds(
         *,
         overwrite_existing_file: bool = False,
         show_progress_dialog: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -159,6 +186,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export ASCII Point Set {/* #export-ascii-point-set */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-ascii-point-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```python
 async def export_ascii_point_set(
@@ -177,12 +206,13 @@ async def export_ascii_point_set(
         maximum_precision: bool = False,
         decimal_precision: int = 6,
         append: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -191,6 +221,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Export ASCII Points {/* #export-ascii-points */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-ascii-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```python
 async def export_ascii_points(
@@ -214,12 +246,13 @@ async def export_ascii_points(
         maximum_precision: bool = False,
         decimal_precision: int = 6,
         append: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -229,6 +262,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-dxf) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-dxf)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_dxf(
         self,
@@ -237,6 +272,7 @@ async def export_dxf(
         cloud_names: Iterable[CollectionObjectName],
         *,
         include_point_labels: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -246,6 +282,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-embedded-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-embedded-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_embedded_file(
         self,
@@ -254,6 +292,7 @@ async def export_embedded_file(
         embedded_file_name: str = "",
         external_file_name: FileReference,
         replace_existing: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -263,10 +302,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-hidden-point-bar-xml-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-hidden-point-bar-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_hidden_point_bar_xml_file(
         self,
         xml_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -276,10 +319,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-iges-file----entire-model) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-iges-file----entire-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_iges_file_entire_model(
         self,
         iges_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -289,11 +336,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-iges-file---partial-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_iges_file_partial_model(
         self,
         iges_file_path: FileReference,
         object_name_list: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -303,6 +354,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-ptx-point-clouds)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_ptx_point_clouds(
         self,
@@ -311,6 +364,7 @@ async def export_ptx_point_clouds(
         *,
         overwrite_existing_file: bool = False,
         show_progress_dialog: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -319,6 +373,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export QDAS Characteristics {/* #export-qdas-characteristics */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-qdas-characteristics)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```python
 async def export_qdas_characteristics(
@@ -342,6 +398,7 @@ async def export_qdas_characteristics(
         relationship_list: Iterable[CollectionItemName],
         feature_check_list: Iterable[CollectionItemName],
         vector_group_list: Iterable[CollectionObjectName],
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -351,10 +408,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-qdas-data-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-qdas-data-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_qdas_data_list(
         self,
         qdas_export_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -364,11 +425,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-scan-stripe-mesh-to-stl-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_scan_stripe_mesh_to_stl_file(
         self,
         stl_file_path: FileReference,
         mesh: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -378,10 +443,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-step-file---entire-model) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-step-file---entire-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_step_file_entire_model(
         self,
         step_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -391,11 +460,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-step-file---partial-model) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-step-file---partial-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_step_file_partial_model(
         self,
         step_file_path: FileReference,
         object_name_list: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -405,10 +478,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vdafs-file----entire-model) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-vdafs-file----entire-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_vda_fs_file_entire_model(
         self,
         vda_fs_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -418,11 +495,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-vdafs-file---partial-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def export_vda_fs_file_partial_model(
         self,
         vda_fs_file_path: FileReference,
         object_name_list: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -431,6 +512,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export Vector Container to ASCII File {/* #export-vector-container-to-ascii-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#export-vector-container-to-ascii-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```python
 async def export_vector_container_to_ascii_file(
@@ -442,12 +525,13 @@ async def export_vector_container_to_ascii_file(
         use_full_precision: bool = False,
         vector_name_format: ExportVectorNameFormat,
         include_vector_length: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -458,6 +542,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#find-files-in-directory) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#find-files-in-directory)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```python
 async def find_files_in_directory(
         self,
@@ -465,6 +551,7 @@ async def find_files_in_directory(
         directory: str = "",
         file_name_pattern: str = "*.*",
         recursive: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[str]: ...
 ```
 
@@ -474,12 +561,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#find-sub-directories-in-directory)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```python
 async def find_sub_directories_in_directory(
         self,
         *,
         directory: str = "",
         recursive: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[str]: ...
 ```
 
@@ -489,12 +579,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-boolean-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def get_boolean_from_data_share_file(
         self,
         data_share_file_path: FileReference,
         *,
         boolean_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> bool: ...
 ```
 
@@ -504,12 +597,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-double-from-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-double-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def get_double_from_data_share_file(
         self,
         data_share_file_path: FileReference,
         *,
         double_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -519,12 +615,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-integer-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def get_integer_from_data_share_file(
         self,
         data_share_file_path: FileReference,
         *,
         integer_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -534,11 +633,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-qdas-catalog-entries) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-qdas-catalog-entries)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_qdas_catalog_entries(
         self,
         *,
         k_field_target: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[str]: ...
 ```
 
@@ -548,12 +650,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-string-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def get_string_from_data_share_file(
         self,
         data_share_file_path: FileReference,
         *,
         string_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> str: ...
 ```
 
@@ -563,12 +668,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-transform-from-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-transform-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def get_transform_from_data_share_file(
         self,
         data_share_file_path: FileReference,
         *,
         transform_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -578,12 +686,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-vector-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def get_vector_from_data_share_file(
         self,
         data_share_file_path: FileReference,
         *,
         vector_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Vector: ...
 ```
 
@@ -593,8 +704,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#get-working-directory)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```python
-async def get_working_directory(self, timeout: float | None = None) -> str: ...
+async def get_working_directory(
+        self, *, on_mp_completion: MpCompletionObserver | None = None
+    ) -> str: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -602,6 +717,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import ASCII: Predefined Formats {/* #import-ascii-predefined-formats */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-ascii-predefined-formats)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```python
 async def import_ascii_predefined_formats(
@@ -615,6 +732,7 @@ async def import_ascii_predefined_formats(
         import_as_cloud: bool = False,
         ensure_new_point_group: bool = True,
         ensure_unique_names: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -623,6 +741,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import ASCII: Predefined Frame Set Formats {/* #import-ascii-predefined-frame-set-formats */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-ascii-predefined-frame-set-formats) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-ascii-predefined-frame-set-formats)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```python
 async def import_ascii_predefined_frame_set_formats(
@@ -634,6 +754,7 @@ async def import_ascii_predefined_frame_set_formats(
         angular_units: AngularUnits = AngularUnits.DEGREES,
         frame_set_container_name: CollectionObjectName,
         ensure_unique_name: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -642,6 +763,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import E57 File {/* #import-e57-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-e57-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-e57-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `long_running`
+
+A request that sets `automatically_close_converter` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def import_e57_file(
@@ -654,6 +779,7 @@ async def import_e57_file(
         prioritize_color_over_intensity: bool = True,
         import_scan_blocks_as_separate_clouds: bool = False,
         units: DistanceUnits = DistanceUnits.INCHES,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -663,12 +789,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-file-as-embedded-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-file-as-embedded-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```python
 async def import_file_as_embedded_file(
         self,
         external_file_name: FileReference,
         *,
         replace_existing: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -678,12 +807,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-file-as-picture) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-file-as-picture)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```python
 async def import_file_as_picture(
         self,
         external_file_name: FileReference,
         *,
         replace_existing: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -693,12 +825,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-hidden-point-bar-xml-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-hidden-point-bar-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```python
 async def import_hidden_point_bar_xml_file(
         self,
         xml_file_path: FileReference,
         *,
         replace_existing_entries: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -708,10 +843,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-iges-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-iges-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_iges_file(
         self,
         iges_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -721,12 +860,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-leica-gsi-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-leica-gsi-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_leica_gsi_file(
         self,
         instrument_id: CollectionInstrumentId,
         group_name: CollectionObjectName,
         file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -736,12 +879,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-leica-sdb-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-leica-sdb-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_leica_sdb_file(
         self,
         instrument_id: CollectionInstrumentId,
         scan_cloud_name: CollectionObjectName,
         file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -751,12 +898,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-mp-file-as-embedded-mp) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-mp-file-as-embedded-mp)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```python
 async def import_mp_file_as_embedded_mp(
         self,
         external_mp_file_name: FileReference,
         *,
         replace_existing: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -766,10 +916,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-nominals-from-xml-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-nominals-from-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_nominals_from_xml_file(
         self,
         file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -779,11 +933,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-polyworks-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-polyworks-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `long_running`
+
 ```python
 async def import_polyworks_file(
         self,
         cloud_name: CollectionObjectName,
         file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -793,10 +951,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-qdas-catalog-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-qdas-catalog-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_qdas_catalog_file(
         self,
         qdas_dfd_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -806,6 +968,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-sa-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-sa-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `allow_operator_selections` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```python
 async def import_sa_file(
         self,
@@ -813,12 +979,13 @@ async def import_sa_file(
         *,
         allow_operator_selections: bool = False,
         selected_collections: Iterable[str],
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -828,10 +995,14 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-sa-windows-placement) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-sa-windows-placement)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_sa_windows_placement(
         self,
         file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -841,10 +1012,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-sat-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-sat-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_sat_file(
         self,
         sat_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -854,6 +1029,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-step-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-step-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `display_entity_filters` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `display_residuals` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```python
 async def import_step_file(
         self,
@@ -861,6 +1042,7 @@ async def import_step_file(
         *,
         display_entity_filters: bool = False,
         display_residuals: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -870,6 +1052,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-stl-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-stl-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_stl_file(
         self,
@@ -878,6 +1062,7 @@ async def import_stl_file(
         units: DistanceUnits = DistanceUnits.MILLIMETERS,
         import_mesh: bool = True,
         import_point_cloud: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -887,10 +1072,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-vdafs-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-vdafs-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_vda_fs_file(
         self,
         vda_fs_file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -900,10 +1089,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-vstars-xyz-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_vstars_xyz_file(
         self,
         file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -913,10 +1106,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-vstars-cameras) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#import-vstars-cameras)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_vstars_cameras(
         self,
         file_path: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -925,6 +1122,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Load HTML Form {/* #load-html-form */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#load-html-form) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#load-html-form)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `filesystem_write`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```python
 async def load_html_form(
@@ -939,6 +1138,7 @@ async def load_html_form(
         save_button_text: str = "Save",
         cancel_button_text: str = "Cancel",
         hide_save_and_cancel_buttons: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -947,6 +1147,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Load HTML Form in Edge Browser {/* #load-html-form-in-edge-browser */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#load-html-form-in-edge-browser) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#load-html-form-in-edge-browser)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `filesystem_write`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```python
 async def load_html_form_in_edge_browser(
@@ -958,6 +1160,7 @@ async def load_html_form_in_edge_browser(
         input_data_share_file_path: FileReference,
         output_data_share_file_path: FileReference,
         save_in_binary_format: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -967,12 +1170,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#make-embedded-file-name-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_embedded_file_name_list(
         self,
         *,
         collection_wildcard_criteria: str = "*",
         file_name_pattern: str = "*.*",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[str]: ...
 ```
 
@@ -982,11 +1188,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#merge-measurements-into-xml-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#merge-measurements-into-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def merge_measurements_into_xml_file(
         self,
         file_path: FileReference,
         group_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -996,8 +1206,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#new-sa-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#new-sa-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
-async def new_sa_file(self) -> None: ...
+async def new_sa_file(
+        self, *, on_mp_completion: MpCompletionObserver | None = None
+    ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -1006,10 +1220,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#open-sa-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#open-sa-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `long_running`
+
 ```python
 async def open_sa_file(
         self,
         sa_file_name: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1019,10 +1237,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#open-template-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#open-template-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```python
 async def open_template_file(
         self,
         template_file_name: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1032,12 +1254,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#pop-polybay-analysis-window)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def pop_poly_bay_analysis_window(
         self,
         *,
         materials_file_path: str = "",
         bay_file_path: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1046,6 +1271,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Prepare QDAS Data List {/* #prepare-qdas-data-list */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#prepare-qdas-data-list)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def prepare_qdas_data_list(
@@ -1068,6 +1295,7 @@ async def prepare_qdas_data_list(
         relationship_list: Iterable[CollectionItemName],
         feature_check_list: Iterable[CollectionItemName],
         vector_group_list: Iterable[CollectionObjectName],
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1077,6 +1305,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#rename-general-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#rename-general-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `filesystem_read`, `filesystem_write`, `filesystem_delete` · **Duration Class:** `quick`
+
 ```python
 async def rename_general_file(
         self,
@@ -1084,6 +1314,7 @@ async def rename_general_file(
         destination_file_name: FileReference,
         *,
         overwrite: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1093,8 +1324,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#save) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#save)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
 ```python
-async def save(self) -> None: ...
+async def save(
+        self, *, on_mp_completion: MpCompletionObserver | None = None
+    ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -1103,10 +1338,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#save-as-read-only-template) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#save-as-read-only-template)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def save_as_read_only_template(
         self,
         template_file_name: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1116,6 +1355,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#save-as) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#save-as)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
 ```python
 async def save_as(
         self,
@@ -1123,6 +1364,7 @@ async def save_as(
         *,
         add_serial_number: bool = False,
         optional_number: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1132,6 +1374,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-boolean-in-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#set-boolean-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def set_boolean_in_data_share_file(
         self,
@@ -1139,6 +1383,7 @@ async def set_boolean_in_data_share_file(
         *,
         boolean_name: str = "",
         boolean_value: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1148,6 +1393,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#set-double-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def set_double_in_data_share_file(
         self,
@@ -1155,6 +1402,7 @@ async def set_double_in_data_share_file(
         *,
         double_name: str = "",
         double_value: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1164,6 +1412,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-integer-in-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#set-integer-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def set_integer_in_data_share_file(
         self,
@@ -1171,6 +1421,7 @@ async def set_integer_in_data_share_file(
         *,
         integer_name: str = "",
         integer_value: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1180,6 +1431,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#set-string-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def set_string_in_data_share_file(
         self,
@@ -1187,6 +1440,7 @@ async def set_string_in_data_share_file(
         *,
         string_name: str = "",
         string_value: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1196,6 +1450,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-transform-in-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#set-transform-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def set_transform_in_data_share_file(
         self,
@@ -1203,6 +1459,7 @@ async def set_transform_in_data_share_file(
         *,
         transform_name: str = "",
         transform_value: Transform,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1212,6 +1469,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#set-vector-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```python
 async def set_vector_in_data_share_file(
         self,
@@ -1219,6 +1478,7 @@ async def set_vector_in_data_share_file(
         *,
         vector_name: str = "",
         vector_value: Vector,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1228,8 +1488,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#terminate-all-running-mps)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `destructive`, `code_execution` · **Duration Class:** `quick`
+
 ```python
-async def terminate_all_running_mps(self) -> None: ...
+async def terminate_all_running_mps(
+        self, *, on_mp_completion: MpCompletionObserver | None = None
+    ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -1238,10 +1502,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#verify-general-file-exists) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#verify-general-file-exists)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```python
 async def verify_general_file_exists(
         self,
         file_name: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1251,10 +1519,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/file-operations#verify-mp-file-exists)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```python
 async def verify_mp_file_exists(
         self,
         mp_file_name: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1264,4 +1536,4 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Polygonized Surfaces
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-polygonized-surfaces) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-polygonized-surfaces)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -16,30 +16,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds)
 
-`/briosa.ConstructionOperations/ConstructPolygonizedSurfaceFromPointClouds` · Operation ID: `construction_operations.construct_polygonized_surface_from_point_clouds`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `point_cloud_list` | `repeated CollectionObjectName` | Point Cloud List | Required |
-| Request | 2 | `mesh_orientation` | `optional MeshOrientationType` | Mesh Orientation | Required |
-| Request | 3 | `grid_resolution` | `optional double` | Grid Resolution | 0 |
-| Request | 4 | `polygonized_surface_name` | `optional CollectionObjectName` | Polygonized Surface Name | Required |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc ConstructPolygonizedSurfaceFromPointClouds(ConstructPolygonizedSurfaceFromPointCloudsRequest) returns (ConstructPolygonizedSurfaceFromPointCloudsResult);
-
-message ConstructPolygonizedSurfaceFromPointCloudsRequest {
-  repeated CollectionObjectName point_cloud_list = 1;
-  optional MeshOrientationType mesh_orientation = 2;
-  optional double grid_resolution = 3;
-  optional CollectionObjectName polygonized_surface_name = 4;
-}
-
-message ConstructPolygonizedSurfaceFromPointCloudsResult {
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. On both exact targets SpatialAnalyzer reported an improper argument and returned no MP result, and the worker stalled until its watchdog ended it. No replacement polygonizes point clouds on these exact targets. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Shared Type {/* #shared-type */}
 
@@ -49,4 +27,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

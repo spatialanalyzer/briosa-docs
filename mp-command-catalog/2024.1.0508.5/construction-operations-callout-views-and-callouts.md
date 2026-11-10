@@ -9,7 +9,7 @@ description: Reviewed Construction Operations / Callout Views and Callouts comma
 <p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> Construction Operations <span aria-hidden="true">/</span> Callout Views and Callouts</p>
 
 This group contains 21 reviewed command entries. **Current** means implemented
-in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
+in Briosa Server 0.10.0 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |
@@ -29,9 +29,9 @@ command link for its exact-target signature, disposition, and version difference
 | [Get Number of Callout Views in Callout View Ref List](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-number-of-callout-views-in-callout-view-ref-list) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
 | [Get Number of Callouts in Callout View](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 | [Make a Callout View Ref List](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
-| [Make a Callout View Ref List - WildCard Selection](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Make a Callout View Ref List - WildCard Selection](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 | [Rename Callout View](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#rename-callout-view) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
-| [Set Callout View Properties](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Set Callout View Properties](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 | [Set Default Callout View Properties](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-default-callout-view-properties) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 | [Set I-th Callout Position in Callout View](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 | [Sort Callout View Ref List](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#sort-callout-view-ref-list) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |

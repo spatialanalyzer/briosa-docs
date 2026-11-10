@@ -1,6 +1,6 @@
 ---
 title: Variables
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/variables) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/variables)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/variables#add-double-to-named-double-list-variable)
 
 `/briosa.Variables/AddDoubleToNamedDoubleListVariable` · Operation ID: `variables.add_double_to_named_double_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -43,6 +45,8 @@ message AddDoubleToNamedDoubleListVariableResult {
 
 `/briosa.Variables/ClearNamedDoubleListVariable` · Operation ID: `variables.clear_named_double_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -66,9 +70,11 @@ message ClearNamedDoubleListVariableResult {
 
 `/briosa.Variables/DeleteVariable` · Operation ID: `variables.delete_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `name` | `optional string` | Name | Empty |
+| Request | 1 | `name` | `optional string` | Name | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -83,15 +89,23 @@ message DeleteVariableResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Delete Variables -- Wildcard Match {/* #delete-variables----wildcard-match */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#delete-variables----wildcard-match)
 
 `/briosa.Variables/DeleteVariablesWildcardMatch` · Operation ID: `variables.delete_variables_wildcard_match`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `variable_wildcard_criteria` | `optional string` | Variable Wildcard Criteria | Empty |
+| Request | 1 | `variable_wildcard_criteria` | `optional string` | Variable Wildcard Criteria | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -106,11 +120,19 @@ message DeleteVariablesWildcardMatchResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `variable_wildcard_criteria` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Get Boolean Variable {/* #get-boolean-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-boolean-variable)
 
 `/briosa.Variables/GetBooleanVariable` · Operation ID: `variables.get_boolean_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -137,6 +159,8 @@ message GetBooleanVariableResult {
 
 `/briosa.Variables/GetCollectionObjectNameVariable` · Operation ID: `variables.get_collection_object_name_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -161,6 +185,8 @@ message GetCollectionObjectNameVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#get-collection-object-ref-list-variable)
 
 `/briosa.Variables/GetCollectionObjectRefListVariable` · Operation ID: `variables.get_collection_object_ref_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -187,6 +213,8 @@ message GetCollectionObjectRefListVariableResult {
 
 `/briosa.Variables/GetDoubleVariable` · Operation ID: `variables.get_double_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -211,6 +239,8 @@ message GetDoubleVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#get-integer-variable)
 
 `/briosa.Variables/GetIntegerVariable` · Operation ID: `variables.get_integer_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -237,6 +267,8 @@ message GetIntegerVariableResult {
 
 `/briosa.Variables/GetNamedDoubleListVariable` · Operation ID: `variables.get_named_double_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -261,6 +293,8 @@ message GetNamedDoubleListVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#get-named-double-list-variable-minmax)
 
 `/briosa.Variables/GetNamedDoubleListVariableMinMax` · Operation ID: `variables.get_named_double_list_variable_min_max`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -289,6 +323,8 @@ message GetNamedDoubleListVariableMinMaxResult {
 
 `/briosa.Variables/GetPointNameRefListVariable` · Operation ID: `variables.get_point_name_ref_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -313,6 +349,8 @@ message GetPointNameRefListVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#get-point-name-variable)
 
 `/briosa.Variables/GetPointNameVariable` · Operation ID: `variables.get_point_name_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -339,6 +377,8 @@ message GetPointNameVariableResult {
 
 `/briosa.Variables/GetRelationshipRefListVariable` · Operation ID: `variables.get_relationship_ref_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -363,6 +403,8 @@ message GetRelationshipRefListVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#get-report-items-reference-list-variable)
 
 `/briosa.Variables/GetReportItemsReferenceListVariable` · Operation ID: `variables.get_report_items_reference_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -389,6 +431,8 @@ message GetReportItemsReferenceListVariableResult {
 
 `/briosa.Variables/GetStringRefListVariable` · Operation ID: `variables.get_string_ref_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -413,6 +457,8 @@ message GetStringRefListVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#get-string-variable)
 
 `/briosa.Variables/GetStringVariable` · Operation ID: `variables.get_string_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -439,6 +485,8 @@ message GetStringVariableResult {
 
 `/briosa.Variables/GetTransformVariable` · Operation ID: `variables.get_transform_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -463,6 +511,8 @@ message GetTransformVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#get-vector-name-ref-list-variable)
 
 `/briosa.Variables/GetVectorNameRefListVariable` · Operation ID: `variables.get_vector_name_ref_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -489,6 +539,8 @@ message GetVectorNameRefListVariableResult {
 
 `/briosa.Variables/GetVectorVariable` · Operation ID: `variables.get_vector_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -513,6 +565,8 @@ message GetVectorVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-boolean-variable)
 
 `/briosa.Variables/SetBooleanVariable` · Operation ID: `variables.set_boolean_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -539,6 +593,8 @@ message SetBooleanVariableResult {
 
 `/briosa.Variables/SetCollectionObjectNameVariable` · Operation ID: `variables.set_collection_object_name_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -563,6 +619,8 @@ message SetCollectionObjectNameVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-collection-object-ref-list-variable)
 
 `/briosa.Variables/SetCollectionObjectRefListVariable` · Operation ID: `variables.set_collection_object_ref_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -589,6 +647,8 @@ message SetCollectionObjectRefListVariableResult {
 
 `/briosa.Variables/SetDoubleVariable` · Operation ID: `variables.set_double_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -613,6 +673,8 @@ message SetDoubleVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-font-variable)
 
 `/briosa.Variables/SetFontVariable` · Operation ID: `variables.set_font_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -639,6 +701,8 @@ message SetFontVariableResult {
 
 `/briosa.Variables/SetIntegerVariable` · Operation ID: `variables.set_integer_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -663,6 +727,8 @@ message SetIntegerVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-named-double-list-variable)
 
 `/briosa.Variables/SetNamedDoubleListVariable` · Operation ID: `variables.set_named_double_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -689,6 +755,8 @@ message SetNamedDoubleListVariableResult {
 
 `/briosa.Variables/SetPointNameRefListVariable` · Operation ID: `variables.set_point_name_ref_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -713,6 +781,8 @@ message SetPointNameRefListVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-point-name-variable)
 
 `/briosa.Variables/SetPointNameVariable` · Operation ID: `variables.set_point_name_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -739,6 +809,8 @@ message SetPointNameVariableResult {
 
 `/briosa.Variables/SetRelationshipRefListVariable` · Operation ID: `variables.set_relationship_ref_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -763,6 +835,8 @@ message SetRelationshipRefListVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-report-items-reference-list-variable)
 
 `/briosa.Variables/SetReportItemsReferenceListVariable` · Operation ID: `variables.set_report_items_reference_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -789,6 +863,8 @@ message SetReportItemsReferenceListVariableResult {
 
 `/briosa.Variables/SetStringRefListVariable` · Operation ID: `variables.set_string_ref_list_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -813,6 +889,8 @@ message SetStringRefListVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-string-variable)
 
 `/briosa.Variables/SetStringVariable` · Operation ID: `variables.set_string_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -839,6 +917,8 @@ message SetStringVariableResult {
 
 `/briosa.Variables/SetTransformVariable` · Operation ID: `variables.set_transform_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -863,6 +943,8 @@ message SetTransformVariableResult {
 [MP Catalog](/mp-command-catalog/commands/variables#set-vector-name-ref-list-variable)
 
 `/briosa.Variables/SetVectorNameRefListVariable` · Operation ID: `variables.set_vector_name_ref_list_variable`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -889,6 +971,8 @@ message SetVectorNameRefListVariableResult {
 
 `/briosa.Variables/SetVectorVariable` · Operation ID: `variables.set_vector_variable`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `optional string` | Name | Empty |
@@ -908,4 +992,4 @@ message SetVectorVariableResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

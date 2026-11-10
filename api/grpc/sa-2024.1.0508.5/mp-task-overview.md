@@ -1,6 +1,6 @@
 ---
 title: MP Task Overview
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/mp-task-overview) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/mp-task-overview)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#add-task-overview-item)
 
 `/briosa.MpTaskOverview/AddTaskOverviewItem` · Operation ID: `mp_task_overview.add_task_overview_item`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -45,6 +47,8 @@ message AddTaskOverviewItemResult {
 
 `/briosa.MpTaskOverview/CreateClearTaskOverviewList` · Operation ID: `mp_task_overview.create_clear_task_overview_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `task_name_font` | `optional Font` | Task Name Font | MS Shell Dlg |
@@ -70,6 +74,8 @@ message CreateClearTaskOverviewListResult {
 
 `/briosa.MpTaskOverview/SetCurrentTask` · Operation ID: `mp_task_overview.set_current_task`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `task_index` | `optional int32` | Task Index | 0 |
@@ -92,6 +98,8 @@ message SetCurrentTaskResult {
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-overview-image)
 
 `/briosa.MpTaskOverview/SetOverviewImage` · Operation ID: `mp_task_overview.set_overview_image`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -116,6 +124,8 @@ message SetOverviewImageResult {
 
 `/briosa.MpTaskOverview/SetOverviewTitle` · Operation ID: `mp_task_overview.set_overview_title`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `overview_title` | `optional string` | Overview Title | Empty |
@@ -138,6 +148,8 @@ message SetOverviewTitleResult {
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-task-item-comment)
 
 `/briosa.MpTaskOverview/SetTaskItemComment` · Operation ID: `mp_task_overview.set_task_item_comment`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -163,6 +175,8 @@ message SetTaskItemCommentResult {
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-task-item-completion-values)
 
 `/briosa.MpTaskOverview/SetTaskItemCompletionValues` · Operation ID: `mp_task_overview.set_task_item_completion_values`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -191,6 +205,8 @@ message SetTaskItemCompletionValuesResult {
 
 `/briosa.MpTaskOverview/SetTaskItemName` · Operation ID: `mp_task_overview.set_task_item_name`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `task_item_index` | `optional int32` | Task Item Index | 0 |
@@ -215,6 +231,8 @@ message SetTaskItemNameResult {
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#show-progress-for-task-item)
 
 `/briosa.MpTaskOverview/ShowProgressForTaskItem` · Operation ID: `mp_task_overview.show_progress_for_task_item`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -241,6 +259,8 @@ message ShowProgressForTaskItemResult {
 
 `/briosa.MpTaskOverview/ShowTaskOverviewList` · Operation ID: `mp_task_overview.show_task_overview_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `show` | `optional bool` | Show? | false |
@@ -258,4 +278,4 @@ message ShowTaskOverviewListResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

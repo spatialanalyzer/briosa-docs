@@ -81,7 +81,8 @@ adopts, or reuses an SDK engine started by another program.
 | `ABORTED` | `STATE_CONFLICT` | Another lifecycle transition is active. |
 | `UNAVAILABLE` | `SDK_START_FAILED` | The worker or SDK process could not be started. |
 | `DEADLINE_EXCEEDED` | `TIMEOUT` | The server-side SDK startup bound expired. |
-| `CANCELLED` | — | The caller cancelled its wait; query SDK state before another transition. |
+| `CANCELLED` | `CALLER_CANCELLED` | The caller cancelled its wait. `sdk-lifecycle-request-withdrawn` means nothing changed; `sdk-lifecycle-caller-stopped-waiting` means the accepted transition continues detached, so query SDK state before another transition. |
+| `DEADLINE_EXCEEDED` | `CALLER_DEADLINE_EXCEEDED` | The caller's gRPC deadline ended its wait, with the same two diagnostics. |
 | `INTERNAL` | `INTERNAL` | Briosa could not preserve a valid lifecycle state. |
 
 A cancelled or timed-out call may still have created the SDK. Call

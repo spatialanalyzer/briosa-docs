@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / API - LADAR
-description: Briosa 0.4.0 Python APIs for API - LADAR MP commands.
+description: Availability of the API - LADAR commands that client 0.5.0 provides only for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,92 +8,43 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/instrument-operations-api-ladar)
 
-## set_ladar_auto_meas_point
+:::note[Not Available for SA 2024.1.0508.5]
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-point)
+The SA 2024.1.0508.5 package of client 0.5.0 has no method for these commands,
+and Server 0.10.0 for that target has no matching RPC. The
+[SA 2026.1.0529.7 reference](/api/python/instrument-operations-api-ladar)
+documents them for that target.
 
-```python
-async def set_ladar_auto_meas_point(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    sample_time_milliseconds: int = 0,
-) -> None: ...
-```
+:::
 
-The exact MP default is `0` despite the MP label documenting `1–2000`.
+## Set LADAR AutoMeas Point {/* #set_ladar_auto_meas_point */}
 
-## set_ladar_auto_meas_sphere
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point).
+No released signature is available for SA 2024.1.0508.5.
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-sphere)
+## Set LADAR AutoMeas Sphere {/* #set_ladar_auto_meas_sphere */}
 
-```python
-async def set_ladar_auto_meas_sphere(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    sphere_radius: float = 1.1875,
-    scan_line_spacing: float = 0.05,
-    send_center_point: bool = True,
-    send_sphere: bool = False,
-    send_measured_cloud: bool = False,
-) -> None: ...
-```
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere).
+No released signature is available for SA 2024.1.0508.5.
 
-## set_ladar_feature_meas_sphere
+## Set LADAR FeatureMeas Sphere {/* #set_ladar_feature_meas_sphere */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere).
+No released signature is available for SA 2024.1.0508.5.
 
-```python
-async def set_ladar_feature_meas_sphere(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-) -> None: ...
-```
+## Set LADAR FeatureMeas Circle {/* #set_ladar_feature_meas_circle */}
 
-## set_ladar_feature_meas_circle
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle).
+No released signature is available for SA 2024.1.0508.5.
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
+## Set LADAR FeatureMeas Slot {/* #set_ladar_feature_meas_slot */}
 
-```python
-async def set_ladar_feature_meas_circle(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-    width_of_extra_area_around_scan: float = 0.0,
-) -> None: ...
-```
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot).
+No released signature is available for SA 2024.1.0508.5.
 
-## set_ladar_feature_meas_slot
+## Set LADAR FeatureMeas Cylinder {/* #set_ladar_feature_meas_cylinder */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder).
+No released signature is available for SA 2024.1.0508.5.
 
-```python
-async def set_ladar_feature_meas_slot(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-    width_of_extra_area_around_scan: float = 0.0,
-) -> None: ...
-```
-
-## set_ladar_feature_meas_cylinder
-
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
-
-```python
-async def set_ladar_feature_meas_cylinder(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-    width_of_extra_area_around_scan: float = 0.0,
-) -> None: ...
-```
-
-Briosa does not convert units or add ranges to these instrument-specific
-settings. The calls are never automatically replayed.
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

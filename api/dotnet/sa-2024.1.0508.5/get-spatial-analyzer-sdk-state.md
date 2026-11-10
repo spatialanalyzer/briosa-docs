@@ -43,8 +43,7 @@ if (sdk.LastIncident?.ExecutionDisposition ==
 
 if (sdk.RecoveryState == SpatialAnalyzerSdkRecoveryState.RecoveryAvailable)
 {
-    sdk = await briosa.RecoverSpatialAnalyzerSdkAsync(
-        SpatialAnalyzerSdkRecoveryMode.ReplaceWithoutReplay);
+    sdk = await briosa.RecoverSpatialAnalyzerSdkAsync();
     sdk = await briosa.ConnectToSpatialAnalyzerAsync();
 }
 ```

@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Lines
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-lines) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-lines)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Line 2 Points {/* #construct-line-2-points */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-points) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-2-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructLineTwoPointsInput {
@@ -38,6 +40,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-points-vector-notation) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-2-points-vector-notation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructLineTwoPointsVectorNotationInput {
   readonly lineName: CollectionObjectName;
@@ -59,6 +63,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Line Normal to Object {/* #construct-line-normal-to-object */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-normal-to-object) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-normal-to-object)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructLineNormalToObjectInput {
@@ -82,6 +88,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line---project-line-to-object-reference-plane) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line---project-line-to-object-reference-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructLineProjectLineToObjectReferencePlaneInput {
   readonly lineToCreate: CollectionObjectName;
@@ -103,6 +111,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Line - Normal to Object through Point {/* #construct-line---normal-to-object-through-point */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line---normal-to-object-through-point) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line---normal-to-object-through-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructLineNormalToObjectThroughPointInput {
@@ -126,6 +136,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-plane-intersection) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-2-plane-intersection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructLineTwoPlaneIntersectionInput {
   readonly lineName: CollectionObjectName;
@@ -148,6 +160,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-lines-from-surface-faces---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-lines-from-surface-faces---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -162,6 +176,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Line Center of Slot {/* #construct-line-center-of-slot */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-center-of-slot) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-center-of-slot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructLineCenterOfSlotInput {
@@ -183,6 +199,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Line From Instrument Shot {/* #construct-line-from-instrument-shot */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-from-instrument-shot) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-line-from-instrument-shot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructLineFromInstrumentShotInput {
@@ -206,4 +224,4 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

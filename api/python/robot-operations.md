@@ -1,6 +1,6 @@
 ---
 title: Robot Operations
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,18 +8,22 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/robot-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/robot-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Add Robot/Machine (.SAMachine) {/* #add-robotmachine-samachine */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC Contract](/api/grpc/robot-operations#add-robotmachine-samachine)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def add_robot_machine_sa_machine(
         self,
         sa_machine_file: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -29,10 +33,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC Contract](/api/grpc/robot-operations#add-robotmachine-manipkin)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def add_robot_machine_manip_kin(
         self,
         manip_kin_file: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -42,10 +50,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC Contract](/api/grpc/robot-operations#delete-robotmachine)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def delete_robot_machine(
         self,
         machine_id: CollectionMachineId,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -55,6 +67,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC Contract](/api/grpc/robot-operations#move-robotmachine-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledge_arrival` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```python
 async def move_robot_machine_to_frame(
         self,
@@ -62,7 +78,8 @@ async def move_robot_machine_to_frame(
         destination_frame: CollectionObjectName,
         *,
         use_sa_kinematics: bool = False,
-        acknowledge_arrival: bool = False,
+        acknowledge_arrival: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -71,6 +88,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Move Robot/Machine through Path {/* #move-robotmachine-through-path */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC Contract](/api/grpc/robot-operations#move-robotmachine-through-path)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledge_arrival` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```python
 async def move_robot_machine_through_path(
@@ -81,6 +102,7 @@ async def move_robot_machine_through_path(
         use_sa_kinematics: bool = True,
         linear_segments: bool = False,
         acknowledge_arrival: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -90,13 +112,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC Contract](/api/grpc/robot-operations#move-robotmachine-to-named-destination)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledge_arrival` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```python
 async def move_robot_machine_to_named_destination(
         self,
         machine_id: CollectionMachineId,
         *,
         destination_name: str = "",
-        acknowledge_arrival: bool = False,
+        acknowledge_arrival: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -106,21 +133,32 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC Contract](/api/grpc/robot-operations#set-robotmachine-parameter)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```python
 async def set_robot_machine_parameter(
         self,
         machine_id: CollectionMachineId,
+        parameter_name: str,
         *,
-        parameter_name: str = "",
-        parameter_value: float = 0.0,
+        parameter_value: float,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `parameter_value` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Get Robot/Machine Parameter {/* #get-robotmachine-parameter */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC Contract](/api/grpc/robot-operations#get-robotmachine-parameter)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```python
 async def get_robot_machine_parameter(
@@ -128,6 +166,7 @@ async def get_robot_machine_parameter(
         machine_id: CollectionInstrumentId,
         *,
         parameter_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -137,21 +176,32 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC Contract](/api/grpc/robot-operations#set-robotmachine-model-link-parameters)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```python
 async def set_robot_machine_model_link_parameters(
         self,
         machine_id: CollectionMachineId,
         *,
         link_name: str = "",
-        configuration: RobotModelLinkConfiguration | None = None,
+        configuration: RobotModelLinkConfiguration,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `configuration` | The scalar parameters from `dh_alpha_component` through `segment_cg_mass_kg` are required (major 3): a request that omits one is rejected before dispatch instead of overwriting it with 0 or false. |
+
 ## Get Robot/Machine Model Link Parameters {/* #get-robotmachine-model-link-parameters */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC Contract](/api/grpc/robot-operations#get-robotmachine-model-link-parameters)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def get_robot_machine_model_link_parameters(
@@ -159,6 +209,7 @@ async def get_robot_machine_model_link_parameters(
         machine_id: CollectionMachineId,
         *,
         link_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> RobotModelLinkParameters: ...
 ```
 
@@ -168,14 +219,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC Contract](/api/grpc/robot-operations#set-robotmachine-base-transform)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_robot_machine_base_transform(
         self,
         machine_id: CollectionMachineId,
         reference_frame: CollectionObjectName,
         *,
-        destination_transform: Transform | None = None,
+        destination_transform: Transform,
         number_of_steps: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -185,6 +239,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC Contract](/api/grpc/robot-operations#start-robotmachine-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```python
 async def start_robot_machine_interface(
         self,
@@ -192,6 +248,7 @@ async def start_robot_machine_interface(
         *,
         interface_type: int = 0,
         run_in_simulation: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -201,10 +258,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC Contract](/api/grpc/robot-operations#stop-robotmachine-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```python
 async def stop_robot_machine_interface(
         self,
         machine_id: CollectionInstrumentId,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -214,6 +275,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC Contract](/api/grpc/robot-operations#compute-robotmachine-adjusted-goal-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```python
 async def compute_robot_machine_adjusted_goal_frame(
         self,
@@ -221,6 +284,8 @@ async def compute_robot_machine_adjusted_goal_frame(
         last_adjusted_goal_frame: CollectionObjectName,
         actual_measured_frame: CollectionObjectName,
         modified_goal_frame: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -230,25 +295,41 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC Contract](/api/grpc/robot-operations#move-robotmachine-to-joint-pose-6dof)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```python
 async def move_robot_machine_to_joint_pose_six_dof(
         self,
         machine_id: CollectionMachineId,
+        joint_1: float,
+        joint_2: float,
+        joint_3: float,
+        joint_4: float,
+        joint_5: float,
+        joint_6: float,
         *,
-        joint_1: float = 0.0,
-        joint_2: float = 0.0,
-        joint_3: float = 0.0,
-        joint_4: float = 0.0,
-        joint_5: float = 0.0,
-        joint_6: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `joint_1` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_2` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_3` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_4` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_5` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_6` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+
 ## Simulate Robot/Machine Path, Output CSV File {/* #simulate-robotmachine-path-output-csv-file */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC Contract](/api/grpc/robot-operations#simulate-robotmachine-path-output-csv-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
 
 ```python
 async def simulate_robot_machine_path_output_csv_file(
@@ -256,6 +337,8 @@ async def simulate_robot_machine_path_output_csv_file(
         machine_id: CollectionMachineId,
         path_frames: Iterable[CollectionObjectName],
         output_csv_file: FileReference,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -265,12 +348,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC Contract](/api/grpc/robot-operations#create-robot-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def create_robot_calibration(
         self,
         machine_id: CollectionMachineId,
         *,
         calibration_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -280,20 +366,31 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC Contract](/api/grpc/robot-operations#delete-robot-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def delete_robot_calibration(
         self,
         machine_id: CollectionMachineId,
+        calibration_name: str,
         *,
-        calibration_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `calibration_name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Import Poses Match to Measurements {/* #import-poses-match-to-measurements */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC Contract](/api/grpc/robot-operations#import-poses-match-to-measurements)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```python
 async def import_poses_match_to_measurements(
@@ -303,6 +400,7 @@ async def import_poses_match_to_measurements(
         csv_joint_set_file: FileReference,
         *,
         calibration_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -312,6 +410,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC Contract](/api/grpc/robot-operations#import-poses-match-to-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```python
 async def import_poses_match_to_frames(
         self,
@@ -320,6 +420,7 @@ async def import_poses_match_to_frames(
         csv_joint_set_file: FileReference,
         *,
         calibration_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -328,6 +429,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Perform Robot Calibration {/* #perform-robot-calibration */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC Contract](/api/grpc/robot-operations#perform-robot-calibration)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def perform_robot_calibration(
@@ -340,6 +445,7 @@ async def perform_robot_calibration(
         allowed_outlier_rejection_count: int = 0,
         allowable_maximum_error: float = 0.0,
         allowable_average_error: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> RobotCalibrationMetrics: ...
 ```
 
@@ -348,6 +454,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Perform Robot Calibration (Alternate) {/* #perform-robot-calibration-alternate */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC Contract](/api/grpc/robot-operations#perform-robot-calibration-alternate)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def perform_robot_calibration_alternate(
@@ -363,6 +473,7 @@ async def perform_robot_calibration_alternate(
         allowed_outlier_rejection_count: int = 0,
         allowable_maximum_error: float = 0.0,
         allowable_average_error: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> RobotCalibrationMetrics: ...
 ```
 
@@ -372,6 +483,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC Contract](/api/grpc/robot-operations#startstop-robot-calibration-trapping)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```python
 async def start_stop_robot_calibration_trapping(
         self,
@@ -380,6 +493,7 @@ async def start_stop_robot_calibration_trapping(
         *,
         calibration_name: str = "",
         start_trapping: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -389,12 +503,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC Contract](/api/grpc/robot-operations#set-active-robot-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```python
 async def set_active_robot_calibration(
         self,
         machine_id: CollectionMachineId,
         *,
         calibration_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -404,19 +521,22 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC Contract](/api/grpc/robot-operations#set-robot-calibration-tool-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```python
 async def set_robot_calibration_tool_frame(
         self,
         machine_id: CollectionMachineId,
         *,
         calibration_name: str = "",
-        tool_frame: Transform | None = None,
+        tool_frame: Transform,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -426,19 +546,22 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC Contract](/api/grpc/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```python
 async def set_robot_calibration_measurement_offset_in_tool_frame(
         self,
         machine_id: CollectionMachineId,
         *,
         calibration_name: str = "",
-        measurement_frame: Transform | None = None,
+        measurement_frame: Transform,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -448,6 +571,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC Contract](/api/grpc/robot-operations#get-robot-pose-for-a-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_robot_pose_for_a_frame(
         self,
@@ -456,6 +581,7 @@ async def get_robot_pose_for_a_frame(
         goal_pose_count: int,
         *,
         reference_pose: Iterable[float] = (),
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[float]: ...
 ```
 
@@ -465,11 +591,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC Contract](/api/grpc/robot-operations#get-calibration-appliance-integer-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```python
 async def get_calibration_appliance_integer_value(
         self,
         *,
         index_offset: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -479,12 +608,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC Contract](/api/grpc/robot-operations#set-calibration-appliance-integer-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```python
 async def set_calibration_appliance_integer_value(
         self,
         *,
         index_offset: int = 0,
         integer_value: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -494,11 +626,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC Contract](/api/grpc/robot-operations#get-calibration-appliance-real-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```python
 async def get_calibration_appliance_real_value(
         self,
         *,
         index_offset: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -508,12 +643,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC Contract](/api/grpc/robot-operations#set-calibration-appliance-real-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```python
 async def set_calibration_appliance_real_value(
         self,
         *,
         index_offset: int = 0,
         real_value: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -523,10 +661,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC Contract](/api/grpc/robot-operations#get-calibration-appliance-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```python
 async def get_calibration_appliance_data(
         self,
         real_value_count: int,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[float]: ...
 ```
 
@@ -536,11 +678,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC Contract](/api/grpc/robot-operations#set-calibration-appliance-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```python
 async def set_calibration_appliance_data(
         self,
         *,
         real_values: Iterable[float] = (),
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -682,4 +827,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2026.1.0529.7)

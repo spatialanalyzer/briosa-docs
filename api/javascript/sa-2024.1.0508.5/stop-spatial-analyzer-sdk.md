@@ -49,3 +49,8 @@ const sdk = await briosa.stopSpatialAnalyzerSdk();
 
 The method never closes SpatialAnalyzer and never makes an interrupted MP
 command safe to replay.
+
+After an aborted lifecycle call, stop a generation you own only after the
+accepted transition has ended: `sdk-lifecycle-transition-in-progress`
+(`stateConflict`, `refreshState`) means refresh state and retry later. See
+[After an Aborted Lifecycle Call](./lifecycle.md#after-an-aborted-lifecycle-call).

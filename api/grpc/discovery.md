@@ -1,19 +1,34 @@
 ---
 title: Server Discovery
-description: Server 0.9.0 identity, compatibility, readiness, and capability RPCs for SA 2026.1.0529.7.
+description: Server 0.10.0 identity, compatibility, readiness, admission, and capability RPCs for SA 2026.1.0529.7.
 ---
 
 # Server Discovery
 
 [SA 2026.1.0529.7](/api/grpc/discovery) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/discovery)
 
-`briosa.DiscoveryService` is available without starting the SDK or SA. `GetServerInfo` reports build coordinates and current runtime evidence. `ListCapabilities` lists implemented operations enabled by the active policy and isolation rules; membership alone does not mean a call is ready.
+`briosa.DiscoveryService` is available without starting the SDK or SA. `GetServerInfo` reports build coordinates and current runtime evidence. `ListCapabilities` lists the implemented operations that the active admission policy admits, each with its reviewed classification; membership alone does not mean a call is ready.
 
 ## Compatibility and Runtime Identity
 
-Server 0.9.0 declares behavioral contract **major 2, revision 0** for its exact target. `GetServerInfoResponse.compatibility` (field 11) is independent of product version and source revision. Matching these coordinates does not bypass exact SA/SDK identity, ownership, runtime admission, or readiness checks. An unavailable runtime identity must not be inferred from the configured target.
+Server 0.10.0 declares behavioral contract **major 3, revision 0** for its exact target. `GetServerInfoResponse.compatibility` (field 11) is independent of product version and source revision. Matching these coordinates does not bypass exact SA/SDK identity, ownership, runtime admission, or readiness checks. An unavailable runtime identity must not be inferred from the configured target.
 
 `version` uses `VersionCoordinates` for product/source and exact-target build coordinates. `ready_for_mp`, connection/readiness state, target isolation, and activated/connected identity evidence describe current runtime conditions. Capability entries identify the operation, fully qualified RPC, effect, replay safety, and execution scope. Never automatically replay an operation whose outcome is uncertain.
+
+## Admission and Classification
+
+`ListCapabilitiesResponse` reports the resolved `admission_profile` (`read-only`, `standard`, `device`, or `full`) and a `policy_fingerprint`. The fingerprint is a value-free `sha256:` digest over every admission input. Equal fingerprints mean equal static admission decisions; compare it only for equality, and never parse it.
+
+Each `OperationCapability` also carries the operation's reviewed classification:
+
+| Field | Meaning |
+| --- | --- |
+| `risk_flags` | The reviewed risk flags, in `OperationRiskFlag` declaration order. Empty when no risk applies. |
+| `duration_class` | `QUICK`, `LONG_RUNNING`, or `INTERACTIVE`; it selects the server's execution budget. |
+| `validation_status` | The recorded validation gap. It is informational and never affects admission. |
+| `admission` | `ADMITTED`, or the precedence step that denied the operation. |
+
+By default the response lists only admitted operations. Set `include_denied` to also list every registered operation the policy denies, each with its denial reason in `admission`. A denied entry never becomes callable. A request option can still deny an admitted operation at call time, for example one that opens operator UI without the interactive opt-in; discovery reports the reviewed row only. Each operation page in this reference shows the profiles that admit it, its risk flags, and its duration class, and [Operation Admission](/docs/deployment/operation-admission) explains the profiles and the interactive opt-in.
 
 ## Released Contract
 
@@ -32,7 +47,8 @@ service DiscoveryService {
   // Returns build coordinates and a safe current runtime summary.
   rpc GetServerInfo(GetServerInfoRequest) returns (GetServerInfoResponse);
 
-  // Lists only implemented operations enabled by the active runtime policy.
+  // Lists implemented operations enabled by the active runtime policy, with
+  // their reviewed classification. include_denied also lists denied operations.
   rpc ListCapabilities(ListCapabilitiesRequest) returns (ListCapabilitiesResponse);
 }
 
@@ -98,6 +114,7 @@ enum WorkerRuntimeState {
   WORKER_RUNTIME_STATE_STARTING = 2;
   WORKER_RUNTIME_STATE_READY = 3;
   WORKER_RUNTIME_STATE_DEGRADED = 4;
+  WORKER_RUNTIME_STATE_STOPPING = 5;
 }
 
 enum SpatialAnalyzerConnectionState {
@@ -127,14 +144,30 @@ enum ConnectedSpatialAnalyzerVersionState {
   CONNECTED_SPATIAL_ANALYZER_VERSION_STATE_OPERATOR_ATTESTED_MISMATCH = 5;
 }
 
-message ListCapabilitiesRequest {}
+message ListCapabilitiesRequest {
+  // False, the default, lists only the operations the active policy admits.
+  // True also lists every registered operation the policy denies, each with
+  // its denial reason in OperationCapability.admission.
+  bool include_denied = 1;
+}
 
 message ListCapabilitiesResponse {
   reserved 1, 2;
   reserved "catalog_id", "catalog_revision", "target_protocol_package";
   string spatial_analyzer_target = 3;
   string protocol_package = 4;
+  // Ordered by operation_id.
   repeated OperationCapability operations = 5;
+  // The resolved named admission profile: read-only, standard, device, or full.
+  string admission_profile = 6;
+  // A value-free "sha256:<hex>" digest over every admission input: the policy
+  // semantics version, the resolved profile and its definition, the isolation
+  // mode, flag settings, per-operation overrides, and for every registered
+  // operation its descriptor metadata (MP step, effect, replay safety, execution
+  // scope, author risk flags), reviewed classification, and request options. It
+  // changes whenever an admission input changes, equal values mean equal static
+  // admission decisions, and it never reveals a configured value.
+  string policy_fingerprint = 7;
 }
 
 message OperationCapability {
@@ -145,6 +178,86 @@ message OperationCapability {
   OperationEffect effect = 5;
   ReplaySafety replay_safety = 6;
   OperationExecutionScope execution_scope = 7;
+  // The reviewed risk flags of the operation's classification row, in the
+  // declaration order of OperationRiskFlag. Empty when no risk applies. A
+  // request option can add interactive_ui at call time; discovery reports the
+  // reviewed row only.
+  repeated OperationRiskFlag risk_flags = 8;
+  // The reviewed duration class, which selects the server execution budget.
+  OperationDurationClass duration_class = 9;
+  // The recorded validation gap. It is informational and never affects admission.
+  OperationValidationStatus validation_status = 10;
+  // Whether the active policy admits the operation's reviewed row, and if not,
+  // which precedence step denied it. Denied values appear only when the request
+  // set include_denied.
+  OperationAdmission admission = 11;
+}
+
+// The closed risk vocabulary decided on #242. A profile admits an operation
+// when it admits every flag on the operation's reviewed row.
+enum OperationRiskFlag {
+  OPERATION_RISK_FLAG_UNSPECIFIED = 0;
+  // Reads paths or existence, never file content.
+  OPERATION_RISK_FLAG_FILESYSTEM_METADATA = 1;
+  // Reads caller-named file content.
+  OPERATION_RISK_FLAG_FILESYSTEM_READ = 2;
+  // Creates or overwrites caller-named files.
+  OPERATION_RISK_FLAG_FILESYSTEM_WRITE = 3;
+  // Deletes files.
+  OPERATION_RISK_FLAG_FILESYSTEM_DELETE = 4;
+  // Removes SA objects, or discards or replaces unsaved job state.
+  OPERATION_RISK_FLAG_DESTRUCTIVE = 5;
+  // Runs or stops MP code.
+  OPERATION_RISK_FLAG_CODE_EXECUTION = 6;
+  // Can move hardware such as a tracker head, robot, or projector.
+  OPERATION_RISK_FLAG_PHYSICAL_MOTION = 7;
+  // Requires or controls a live instrument, robot, or appliance session.
+  OPERATION_RISK_FLAG_DEVICE_SESSION = 8;
+  // Changes configuration that a live device session consumes.
+  OPERATION_RISK_FLAG_DEVICE_CONFIG = 9;
+  // Blocks on operator input or opens operator UI.
+  OPERATION_RISK_FLAG_INTERACTIVE_UI = 10;
+  // Talks to systems other than SpatialAnalyzer, such as OPC DA or an appliance IP address.
+  OPERATION_RISK_FLAG_EXTERNAL_IO = 11;
+}
+
+// The reviewed execution-duration class of an operation. Unspecified means unreviewed.
+enum OperationDurationClass {
+  OPERATION_DURATION_CLASS_UNSPECIFIED = 0;
+  // Completes within the default execution watchdog.
+  OPERATION_DURATION_CLASS_QUICK = 1;
+  // Device actions, sessions, motion, and heavy document operations.
+  OPERATION_DURATION_CLASS_LONG_RUNNING = 2;
+  // Waits for an unbounded amount of operator time.
+  OPERATION_DURATION_CLASS_INTERACTIVE = 3;
+}
+
+// The recorded validation gap of an operation. Unspecified means unreviewed.
+enum OperationValidationStatus {
+  OPERATION_VALIDATION_STATUS_UNSPECIFIED = 0;
+  // No validation gap is recorded.
+  OPERATION_VALIDATION_STATUS_NO_RECORDED_GAP = 1;
+  // A licensed fixture is still needed to validate the operation.
+  OPERATION_VALIDATION_STATUS_FIXTURE_PENDING = 2;
+  // At risk: no runtime validation exists for the exact target.
+  OPERATION_VALIDATION_STATUS_AT_RISK_UNVALIDATED = 3;
+}
+
+// The active policy's static decision for an operation's reviewed row.
+enum OperationAdmission {
+  OPERATION_ADMISSION_UNSPECIFIED = 0;
+  OPERATION_ADMISSION_ADMITTED = 1;
+  // The profile, widened by flags set to allow, does not admit every risk flag,
+  // or the read-only effect filter excludes the operation.
+  OPERATION_ADMISSION_DENIED_PROFILE = 2;
+  // A risk flag of the operation is set to deny.
+  OPERATION_ADMISSION_DENIED_FLAG = 3;
+  // A per-operation override is set to deny.
+  OPERATION_ADMISSION_DENIED_OVERRIDE = 4;
+  // An exclusive workflow, which no setting admits in the current isolation mode.
+  OPERATION_ADMISSION_DENIED_EXCLUSIVE = 5;
+  // The operation's classification metadata is not reviewed.
+  OPERATION_ADMISSION_DENIED_UNREVIEWED = 6;
 }
 
 // Classifies an operation's dependency on SpatialAnalyzer application-global state.
@@ -166,4 +279,4 @@ enum OperationEffect {
 
 ```
 
-[Released Discovery Source](https://github.com/spatialanalyzer/briosa/blob/v0.9.0/targets/2026.1.0529.7/proto/briosa/discovery.proto) · [Version Coordinates](https://github.com/spatialanalyzer/briosa/blob/v0.9.0/targets/2026.1.0529.7/proto/briosa/version_coordinates.proto)
+[Candidate Discovery Source](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/proto/briosa/discovery.proto) · [Version Coordinates](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/proto/briosa/version_coordinates.proto)

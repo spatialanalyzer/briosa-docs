@@ -35,4 +35,9 @@ reviewed startup option delays SDK orchestration.
 
 The method never calls `ConnectEx`, launches SpatialAnalyzer, or closes another
 program's SDK engine. Failures use `BriosaLifecycleError`,
-`BriosaSpatialAnalyzerSdkError`, `TimeoutError`, or normal task cancellation.
+`BriosaSpatialAnalyzerSdkError`, `BriosaTransportError` with
+`transport-deadline-exceeded` when the caller `timeout` expires, or normal task
+cancellation. The server finishes a start it has accepted even after the caller
+stops waiting; refresh SDK state before retrying, as
+[After an Abandoned Lifecycle Call](./lifecycle.md#after-an-abandoned-lifecycle-call)
+describes.

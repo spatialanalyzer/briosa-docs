@@ -55,7 +55,7 @@ the `asyncio` setup.
 | --- | --- |
 | `BriosaLifecycleError` | The client is not started or another transition is active. |
 | `BriosaSpatialAnalyzerError` | The application is external, changed, still has an active SDK, or did not close. |
-| `TimeoutError` | The caller timeout expired; inspect application state. |
+| `BriosaTransportError` | The caller timeout expired (`transport-deadline-exceeded`); inspect application state. |
 | `asyncio.CancelledError` | The task was cancelled; inspect application state. |
 
 The method never closes an externally started application or another program's

@@ -1,6 +1,6 @@
 ---
 title: Construction Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -16,36 +16,16 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations#mirror-objects)
 
-`/briosa.ConstructionOperations/MirrorObjects` · Operation ID: `construction_operations.mirror_objects`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `objects` | `repeated CollectionObjectName` | Object(s) | Required |
-| Request | 2 | `frame_name` | `optional CollectionObjectName` | Frame Name | Required |
-| Request | 3 | `frame_plane_to_mirror_around` | `optional MirrorFramePlane` | Frame Plane to Mirror Around | Required |
-| Request | 4 | `copy` | `optional bool` | Copy? [FALSE = Move] | true |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc MirrorObjects(MirrorObjectsRequest) returns (MirrorObjectsResult);
-
-message MirrorObjectsRequest {
-  repeated CollectionObjectName objects = 1;
-  optional CollectionObjectName frame_name = 2;
-  optional MirrorFramePlane frame_plane_to_mirror_around = 3;
-  optional bool copy = 4;
-}
-
-message MirrorObjectsResult {
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement mirrors objects on these exact targets. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Copy Object {/* #copy-object */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations#copy-object)
 
 `/briosa.ConstructionOperations/CopyObject` · Operation ID: `construction_operations.copy_object`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -74,6 +54,8 @@ message CopyObjectResult {
 
 `/briosa.ConstructionOperations/CopyObjectsToACollection` · Operation ID: `construction_operations.copy_objects_to_a_collection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `source_objects` | `repeated CollectionObjectName` | Source Objects | Required |
@@ -99,6 +81,8 @@ message CopyObjectsToACollectionResult {
 
 `/briosa.ConstructionOperations/MoveObjectsToACollection` · Operation ID: `construction_operations.move_objects_to_a_collection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `source_objects` | `repeated CollectionObjectName` | Source Objects | Required |
@@ -123,6 +107,8 @@ message MoveObjectsToACollectionResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta)
 
 `/briosa.ConstructionOperations/CopyObjectsPointToPointDelta` · Operation ID: `construction_operations.copy_objects_point_to_point_delta`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -153,6 +139,8 @@ message CopyObjectsPointToPointDeltaResult {
 
 `/briosa.ConstructionOperations/MoveObjectsPointToPointDelta` · Operation ID: `construction_operations.move_objects_point_to_point_delta`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects_to_move` | `repeated CollectionObjectName` | Objects to Move | Required |
@@ -179,6 +167,8 @@ message MoveObjectsPointToPointDeltaResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations#rename-point)
 
 `/briosa.ConstructionOperations/RenamePoint` · Operation ID: `construction_operations.rename_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -207,6 +197,8 @@ message RenamePointResult {
 
 `/briosa.ConstructionOperations/RenamePointsWithNamePattern` · Operation ID: `construction_operations.rename_points_with_name_pattern`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_names` | `repeated PointName` | Point Names | Required |
@@ -234,6 +226,8 @@ message RenamePointsWithNamePatternResult {
 
 `/briosa.ConstructionOperations/RenameCollection` · Operation ID: `construction_operations.rename_collection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `original_collection_name` | `optional CollectionName` | Original Collection Name | Required |
@@ -258,6 +252,8 @@ message RenameCollectionResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations#rename-object)
 
 `/briosa.ConstructionOperations/RenameObject` · Operation ID: `construction_operations.rename_object`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -286,6 +282,8 @@ message RenameObjectResult {
 
 `/briosa.ConstructionOperations/RenameItem` · Operation ID: `construction_operations.rename_item`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `original_item_name` | `optional CollectionItemName` | Original Item Name | Required |
@@ -313,6 +311,8 @@ message RenameItemResult {
 
 `/briosa.ConstructionOperations/DeletePoints` · Operation ID: `construction_operations.delete_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_names` | `repeated PointName` | Point Names | Required |
@@ -335,6 +335,8 @@ message DeletePointsResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection)
 
 `/briosa.ConstructionOperations/DeletePointsWildcardSelection` · Operation ID: `construction_operations.delete_points_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -360,6 +362,8 @@ message DeletePointsWildcardSelectionResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select)
 
 `/briosa.ConstructionOperations/ConstructObjectsFromSurfaceFacesRuntimeSelect` · Operation ID: `construction_operations.construct_objects_from_surface_faces_runtime_select`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -391,4 +395,4 @@ message ConstructObjectsFromSurfaceFacesRuntimeSelectResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

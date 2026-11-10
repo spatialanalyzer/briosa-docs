@@ -32,5 +32,13 @@ named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
 the `asyncio` setup.
 
 If the SDK process or worker is unhealthy, recover it first and explicitly
-connect the replacement. Failures use the normal lifecycle, SpatialAnalyzer,
-SDK, compatibility, timeout, and cancellation error boundaries.
+connect the replacement. As after a connection, MP admission needs a server
+snapshot that reports readiness; call `get_server_snapshot()` when this
+session's startup did not connect.
+
+The server finishes an accepted reconnection under its own bounds, even after
+the caller stops waiting; see
+[After an Abandoned Lifecycle Call](./lifecycle.md#after-an-abandoned-lifecycle-call).
+Failures use the normal lifecycle, SpatialAnalyzer, SDK, compatibility,
+timeout, and cancellation error boundaries. A caller `timeout` raises
+`BriosaTransportError` with `transport-deadline-exceeded`.

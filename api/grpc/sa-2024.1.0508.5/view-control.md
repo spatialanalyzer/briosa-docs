@@ -1,6 +1,6 @@
 ---
 title: View Control
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/view-control) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/view-control)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/view-control#auto-scale)
 
 `/briosa.ViewControl/AutoScale` · Operation ID: `view_control.auto_scale`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -39,6 +41,8 @@ message AutoScaleResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#center-graphics-about-objects)
 
 `/briosa.ViewControl/CenterGraphicsAboutObjects` · Operation ID: `view_control.center_graphics_about_objects`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -67,6 +71,8 @@ message CenterGraphicsAboutObjectsResult {
 
 `/briosa.ViewControl/CenterGraphicsAboutPoint` · Operation ID: `view_control.center_graphics_about_point`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -89,6 +95,8 @@ message CenterGraphicsAboutPointResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#define-point-of-view)
 
 `/briosa.ViewControl/DefinePointOfView` · Operation ID: `view_control.define_point_of_view`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -131,6 +139,8 @@ message DefinePointOfViewResult {
 
 `/briosa.ViewControl/GetActiveClippingPlanes` · Operation ID: `view_control.get_active_clipping_planes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1 | `objects` | `repeated CollectionObjectName` | Objects | — |
@@ -154,6 +164,8 @@ message GetActiveClippingPlanesResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#get-point-of-view-parameters)
 
 `/briosa.ViewControl/GetPointOfViewParameters` · Operation ID: `view_control.get_point_of_view_parameters`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -194,6 +206,8 @@ message GetPointOfViewParametersResult {
 
 `/briosa.ViewControl/HideAllCalloutViews` · Operation ID: `view_control.hide_all_callout_views`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -215,6 +229,8 @@ message HideAllCalloutViewsResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#hide-objects)
 
 `/briosa.ViewControl/HideObjects` · Operation ID: `view_control.hide_objects`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -239,6 +255,8 @@ message HideObjectsResult {
 
 `/briosa.ViewControl/HighlightObjects` · Operation ID: `view_control.highlight_objects`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_names` | `repeated CollectionObjectName` | Object Names (Empty to clear all) | Required |
@@ -258,7 +276,7 @@ message HighlightObjectsResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -269,6 +287,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/view-control#highlight-point)
 
 `/briosa.ViewControl/HighlightPoint` · Operation ID: `view_control.highlight_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -289,7 +309,7 @@ message HighlightPointResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -300,6 +320,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/view-control#highlight-relationships)
 
 `/briosa.ViewControl/HighlightRelationships` · Operation ID: `view_control.highlight_relationships`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -320,7 +342,7 @@ message HighlightRelationshipsResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -331,6 +353,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/view-control#load-ribbon-bar-from-xml-file)
 
 `/briosa.ViewControl/LoadRibbonBarFromXmlFile` · Operation ID: `view_control.load_ribbon_bar_from_xml_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -355,6 +379,8 @@ message LoadRibbonBarFromXmlFileResult {
 
 `/briosa.ViewControl/RefreshViews` · Operation ID: `view_control.refresh_views`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -377,6 +403,8 @@ message RefreshViewsResult {
 
 `/briosa.ViewControl/ResetRibbonBarToDefault` · Operation ID: `view_control.reset_ribbon_bar_to_default`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -398,6 +426,8 @@ message ResetRibbonBarToDefaultResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#save-point-of-view)
 
 `/briosa.ViewControl/SavePointOfView` · Operation ID: `view_control.save_point_of_view`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -423,6 +453,8 @@ message SavePointOfViewResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#set-background-color)
 
 `/briosa.ViewControl/SetBackgroundColor` · Operation ID: `view_control.set_background_color`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -453,6 +485,8 @@ message SetBackgroundColorResult {
 
 `/briosa.ViewControl/SetMpWindowState` · Operation ID: `view_control.set_mp_window_state`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `mp_window_state` | `optional WindowState` | MP Window State | Required |
@@ -475,6 +509,8 @@ message SetMpWindowStateResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#set-objects-color)
 
 `/briosa.ViewControl/SetObjectsColor` · Operation ID: `view_control.set_objects_color`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -503,6 +539,8 @@ message SetObjectsColorResult {
 
 `/briosa.ViewControl/SetObjectsTranslucency` · Operation ID: `view_control.set_objects_translucency`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects_to_change` | `repeated CollectionObjectName` | Objects to change | Required |
@@ -530,6 +568,8 @@ message SetObjectsTranslucencyResult {
 
 `/briosa.ViewControl/SetPointOfView` · Operation ID: `view_control.set_point_of_view`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `view_name` | `optional ViewName` | View Name | Required |
@@ -553,6 +593,8 @@ message SetPointOfViewResult {
 
 `/briosa.ViewControl/SetPointOfViewFromFrame` · Operation ID: `view_control.set_point_of_view_from_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `frame` | `optional CollectionObjectName` | Frame | Required |
@@ -575,6 +617,10 @@ message SetPointOfViewFromFrameResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#set-point-of-view-from-instrument-updates)
 
 `/briosa.ViewControl/SetPointOfViewFromInstrumentUpdates` · Operation ID: `view_control.set_point_of_view_from_instrument_updates`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+A request that sets `display_view_control` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -621,6 +667,8 @@ message SetPointOfViewFromInstrumentUpdatesResult {
 
 `/briosa.ViewControl/SetRenderModeType` · Operation ID: `view_control.set_render_mode_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `rendering_mode` | `optional RenderModeType` | Rendering Mode | Required |
@@ -643,6 +691,8 @@ message SetRenderModeTypeResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#set-sas-window-pos)
 
 `/briosa.ViewControl/SetSaWindowPos` · Operation ID: `view_control.set_sa_window_pos`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -669,6 +719,8 @@ message SetSaWindowPosResult {
 
 `/briosa.ViewControl/SetSaWindowSize` · Operation ID: `view_control.set_sa_window_size`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `width` | `optional int32` | Width | 0 |
@@ -694,6 +746,8 @@ message SetSaWindowSizeResult {
 
 `/briosa.ViewControl/SetSaWindowState` · Operation ID: `view_control.set_sa_window_state`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `sa_window_state` | `optional WindowState` | SA Window State | Required |
@@ -716,6 +770,8 @@ message SetSaWindowStateResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#set-target-labels-use-full-names)
 
 `/briosa.ViewControl/SetTargetLabelsUseFullNames` · Operation ID: `view_control.set_target_labels_use_full_names`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -740,6 +796,8 @@ message SetTargetLabelsUseFullNamesResult {
 
 `/briosa.ViewControl/SetToolkitVisibility` · Operation ID: `view_control.set_toolkit_visibility`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `show_toolkit` | `optional bool` | Show Toolkit? | false |
@@ -762,6 +820,8 @@ message SetToolkitVisibilityResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#set-view-clipping-plane)
 
 `/briosa.ViewControl/SetViewClippingPlane` · Operation ID: `view_control.set_view_clipping_plane`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -788,6 +848,8 @@ message SetViewClippingPlaneResult {
 
 `/briosa.ViewControl/SetWorkingColor` · Operation ID: `view_control.set_working_color`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `new_working_color_name` | `optional Color` | New Working Color Name | RGB 255, 0, 0 |
@@ -810,6 +872,8 @@ message SetWorkingColorResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#set-working-color-auto-increment)
 
 `/briosa.ViewControl/SetWorkingColorAutoIncrement` · Operation ID: `view_control.set_working_color_auto_increment`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -834,6 +898,8 @@ message SetWorkingColorAutoIncrementResult {
 
 `/briosa.ViewControl/ShowHideByObjectType` · Operation ID: `view_control.show_hide_by_object_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `all_collections` | `optional bool` | All Collections? | false |
@@ -857,7 +923,7 @@ message ShowHideByObjectTypeResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -868,6 +934,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/view-control#show--hide-callout-view)
 
 `/briosa.ViewControl/ShowHideCalloutView` · Operation ID: `view_control.show_hide_callout_view`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -894,6 +962,8 @@ message ShowHideCalloutViewResult {
 
 `/briosa.ViewControl/ShowHideDimension` · Operation ID: `view_control.show_hide_dimension`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `dimension_name` | `optional CollectionItemName` | Dimension Name | Required |
@@ -919,6 +989,8 @@ message ShowHideDimensionResult {
 
 `/briosa.ViewControl/ShowHidePoints` · Operation ID: `view_control.show_hide_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_names` | `repeated PointName` | Point Names | Required |
@@ -938,7 +1010,7 @@ message ShowHidePointsResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -949,6 +1021,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/view-control#show-by-object-type)
 
 `/briosa.ViewControl/ShowByObjectType` · Operation ID: `view_control.show_by_object_type`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -974,6 +1048,8 @@ message ShowByObjectTypeResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#show-items-in-tree)
 
 `/briosa.ViewControl/ShowItemsInTree` · Operation ID: `view_control.show_items_in_tree`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1010,6 +1086,8 @@ message ShowItemsInTreeResult {
 
 `/briosa.ViewControl/ShowLabels` · Operation ID: `view_control.show_labels`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_labels_on` | `optional bool` | Point Labels On? | false |
@@ -1035,6 +1113,8 @@ message ShowLabelsResult {
 
 `/briosa.ViewControl/ShowObjects` · Operation ID: `view_control.show_objects`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects_to_show` | `repeated CollectionObjectName` | Objects To Show | Required |
@@ -1057,6 +1137,8 @@ message ShowObjectsResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-annotations-for-datums)
 
 `/briosa.ViewControl/ShowHideAnnotationsForDatums` · Operation ID: `view_control.show_hide_annotations_for_datums`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1087,6 +1169,8 @@ message ShowHideAnnotationsForDatumsResult {
 
 `/briosa.ViewControl/ShowHideAnnotationsForFeatureChecks` · Operation ID: `view_control.show_hide_annotations_for_feature_checks`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_check_name_list` | `repeated CollectionItemName` | Feature Check Name List | Required |
@@ -1116,6 +1200,8 @@ message ShowHideAnnotationsForFeatureChecksResult {
 
 `/briosa.ViewControl/ShowHideInspectionBar` · Operation ID: `view_control.show_hide_inspection_bar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `show_inspection_bar` | `optional bool` | Show Inspection Bar? | true |
@@ -1138,6 +1224,8 @@ message ShowHideInspectionBarResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-instrument-interface)
 
 `/briosa.ViewControl/ShowHideInstrumentInterface` · Operation ID: `view_control.show_hide_instrument_interface`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1166,6 +1254,8 @@ message ShowHideInstrumentInterfaceResult {
 
 `/briosa.ViewControl/ShowHideInstrumentProbeTip` · Operation ID: `view_control.show_hide_instrument_probe_tip`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `show_instrument_probe_tip` | `optional bool` | Show Instrument Probe Tip? | false |
@@ -1188,6 +1278,8 @@ message ShowHideInstrumentProbeTipResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-instruments)
 
 `/briosa.ViewControl/ShowHideInstruments` · Operation ID: `view_control.show_hide_instruments`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1214,6 +1306,8 @@ message ShowHideInstrumentsResult {
 
 `/briosa.ViewControl/ShowHideRelationshipReport` · Operation ID: `view_control.show_hide_relationship_report`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection_name` | `optional CollectionName` | Collection Name | Required |
@@ -1238,6 +1332,8 @@ message ShowHideRelationshipReportResult {
 [MP Catalog](/mp-command-catalog/commands/view-control#showhide-relationship-watch)
 
 `/briosa.ViewControl/ShowHideRelationshipWatch` · Operation ID: `view_control.show_hide_relationship_watch`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1268,4 +1364,4 @@ message ShowHideRelationshipWatchResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

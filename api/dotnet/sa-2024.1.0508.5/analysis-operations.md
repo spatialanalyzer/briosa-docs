@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/analysis-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Angle Between Line and Plane {/* #angle-between-line-and-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#angle-between-line-and-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task<double> AngleBetweenLineAndPlaneAsync(
@@ -22,12 +24,13 @@ public Task<double> AngleBetweenLineAndPlaneAsync(
         CollectionObjectName selectedPlane,
         double nominalAngle = 0.000000,
         double angleTolerance = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -37,18 +40,21 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#angle-between-two-lines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> AngleBetweenTwoLinesAsync(
         CollectionObjectName line1,
         CollectionObjectName line2,
         double nominalAngle = 0.000000,
         double angleTolerance = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -58,18 +64,21 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#angle-between-two-planes-normals)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> AngleBetweenTwoPlanesNormalsAsync(
         CollectionObjectName planeA,
         CollectionObjectName planeB,
         double nominalAngle = 0.000000,
         double angleTolerance = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -78,6 +87,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Best Fit Transformation - Group to Group {/* #best-fit-transformation---group-to-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#best-fit-transformation---group-to-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task<BestFitTransformationGroupToGroupResult> BestFitTransformationGroupToGroupAsync(
@@ -96,12 +109,13 @@ public Task<BestFitTransformationGroupToGroupResult> BestFitTransformationGroupT
         bool lockDegreesOfFreedom,
         bool generateEvent,
         FileReference filePathForCsvTextReport,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -113,10 +127,13 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#compute-group-to-group-orientation-rxryrz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<ComputeGroupToGroupOrientationRxRyRzResult> ComputeGroupToGroupOrientationRxRyRzAsync(
         CollectionObjectName referenceGroup,
         CollectionObjectName correspondingGroup,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -126,6 +143,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#create-point-uncertainty-cloud-point-sets)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<CreatePointUncertaintyCloudPointSetsResult> CreatePointUncertaintyCloudPointSetsAsync(
         IEnumerable<PointName> pointNameList,
@@ -133,6 +152,7 @@ public Task<CreatePointUncertaintyCloudPointSetsResult> CreatePointUncertaintyCl
         string uncertaintyReferenceFrameMode = "With respect to WORLD",
         string groupingMode = "Group per point",
         string pointSetMode = "Point clouds",
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -142,10 +162,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#create-point-uncertainty-fields)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task CreatePointUncertaintyFieldsAsync(
         IEnumerable<PointName> pointNameList,
         int numberOfSamples = 1000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -154,6 +177,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Fit Geometry to Point Group {/* #fit-geometry-to-point-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#fit-geometry-to-point-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `reportDeviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task FitGeometryToPointGroupAsync(
@@ -164,22 +191,27 @@ public Task FitGeometryToPointGroupAsync(
         bool reportDeviations,
         double fitInterfaceTolerance,
         bool ignoreOutOfTolerancePoints,
-        CollectionObjectName startingConditionGeometry,
+        CollectionObjectName? startingConditionGeometry = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `reportDeviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task FitGeometryToPointGroupProjectedToPlaneAsync(
@@ -191,22 +223,27 @@ public Task FitGeometryToPointGroupProjectedToPlaneAsync(
         bool reportDeviations,
         double fitInterfaceTolerance,
         bool ignoreOutOfTolerancePoints,
-        CollectionObjectName startingConditionGeometry,
+        CollectionObjectName? startingConditionGeometry = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#fit-geometry-to-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `reportDeviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task FitGeometryToPointsAsync(
@@ -217,26 +254,30 @@ public Task FitGeometryToPointsAsync(
         bool reportDeviations,
         double fitInterfaceTolerance,
         bool ignoreOutOfTolerancePoints,
-        CollectionObjectName startingConditionGeometry,
+        CollectionObjectName? startingConditionGeometry = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-b-spline-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetBSplinePropertiesResult> GetBSplinePropertiesAsync(
         CollectionObjectName bSplineName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -246,9 +287,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-circle-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetCirclePropertiesResult> GetCirclePropertiesAsync(
         CollectionObjectName circleName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -258,15 +302,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-cone-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetConePropertiesResult> GetConePropertiesAsync(
         CollectionObjectName coneName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -277,10 +324,13 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetCoordinateForIthPointInPointSetResult> GetCoordinateForIthPointInPointSetAsync(
         CollectionObjectName pointSet,
         int pointSetIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -290,9 +340,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-cylinder-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetCylinderPropertiesResult> GetCylinderPropertiesAsync(
         CollectionObjectName cylinderName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -302,9 +355,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-ellipse-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetEllipsePropertiesResult> GetEllipsePropertiesAsync(
         CollectionObjectName ellipseName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -314,9 +370,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-euler-parameters-for-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetEulerParametersForFrameResult> GetEulerParametersForFrameAsync(
         CollectionObjectName frame,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -326,10 +385,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetEulerParametersForIthFrameInFrameSetResult> GetEulerParametersForIthFrameInFrameSetAsync(
         CollectionObjectName frameSet,
         int frameSetIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -339,9 +401,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-i-th-collection-name)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<string> GetIthCollectionNameAsync(
         int collectionIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -351,10 +416,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-i-th-point-from-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetIthPointFromGroupResult> GetIthPointFromGroupAsync(
         CollectionObjectName groupName,
         int pointIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -364,9 +432,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-line-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetLinePropertiesResult> GetLinePropertiesAsync(
         CollectionObjectName lineName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -376,10 +447,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-measurement-auxiliary-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetMeasurementAuxiliaryDataResult> GetMeasurementAuxiliaryDataAsync(
         PointName pointName,
         string auxiliaryName = "",
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -389,9 +463,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-measurement-info-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<string> GetMeasurementInfoDataAsync(
         PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -401,15 +478,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-measurement-weather-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetMeasurementWeatherDataResult> GetMeasurementWeatherDataAsync(
         PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -421,8 +501,11 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-collections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<int> GetNumberOfCollectionsAsync(
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -432,9 +515,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-frames-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<int> GetNumberOfFramesInFrameSetAsync(
         CollectionObjectName frameSetContainer,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -444,9 +530,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-points-in-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<int> GetNumberOfPointsInGroupAsync(
         CollectionObjectName groupName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -456,9 +545,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-points-in-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<int> GetNumberOfPointsInPointSetAsync(
         CollectionObjectName pointSetContainer,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -468,9 +560,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-object-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<CollectionObjectName> GetObjectReportingFrameAsync(
         CollectionObjectName objectName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -480,9 +575,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-plane-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPlanePropertiesResult> GetPlanePropertiesAsync(
         CollectionObjectName planeName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -492,9 +590,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-coordinate)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPointCoordinateResult> GetPointCoordinateAsync(
         PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -504,9 +605,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-coordinate-cylindrical)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPointCoordinateCylindricalResult> GetPointCoordinateCylindricalAsync(
         PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -516,9 +620,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-coordinate-polar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPointCoordinatePolarResult> GetPointCoordinatePolarAsync(
         PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -528,9 +635,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPointPropertiesResult> GetPointPropertiesAsync(
         PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -540,10 +650,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-to-line-distance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPointToLineDistanceResult> GetPointToLineDistanceAsync(
         PointName point,
         CollectionObjectName line,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -553,10 +666,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-to-point-distance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPointToPointDistanceResult> GetPointToPointDistanceAsync(
         PointName firstPoint,
         PointName secondPoint,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -566,9 +682,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-tolerance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetPointToleranceResult> GetPointToleranceAsync(
         PointName pointName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -578,15 +697,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-slot-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetSlotPropertiesResult> GetSlotPropertiesAsync(
         CollectionObjectName slotName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -600,9 +722,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-sphere-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetSpherePropertiesResult> GetSpherePropertiesAsync(
         CollectionObjectName sphereName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -612,9 +737,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-surface-physical-stats)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetSurfacePhysicalStatsResult> GetSurfacePhysicalStatsAsync(
         CollectionObjectName surfaceName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -624,10 +752,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> GetTimestampForIthFrameInFrameSetAsync(
         CollectionObjectName frameSet,
         int frameSetIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -637,10 +768,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> GetTimestampForIthPointInPointSetAsync(
         CollectionObjectName pointSet,
         int pointSetIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -650,9 +784,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-torus-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetTorusPropertiesResult> GetTorusPropertiesAsync(
         CollectionObjectName torusName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -662,10 +799,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<Transform> GetTransformForIthFrameInFrameSetAsync(
         CollectionObjectName frameSet,
         int frameSetIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -675,6 +815,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#group-to-surface-fit)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GroupToSurfaceFitResult> GroupToSurfaceFitAsync(
         CollectionObjectName groupToFit,
@@ -682,12 +824,13 @@ public Task<GroupToSurfaceFitResult> GroupToSurfaceFitAsync(
         bool doConventionalFit = false,
         double rmsTolerance = 0.000000,
         double maximumAbsoluteTolerance = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -698,10 +841,13 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#import-geometry-fit-profiles)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task ImportGeometryFitProfilesAsync(
         FileReference geometryFitProfilesFilePath,
         bool overwriteProfilesWithSameName = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -711,10 +857,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#is-object-of-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<bool> IsObjectOfTypeAsync(
         CollectionObjectName objectName,
         ObjectType objectType,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -723,6 +872,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Circle Fit Profile {/* #make-circle-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-circle-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task MakeCircleFitProfileAsync(
@@ -738,12 +889,13 @@ public Task MakeCircleFitProfileAsync(
         bool makeCardinalPoints = true,
         bool cardinalPt1Center = true,
         bool cardinalPt2PointOnNormal = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -754,6 +906,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Cone Fit Profile {/* #make-cone-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-cone-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task MakeConeFitProfileAsync(
@@ -766,12 +920,13 @@ public Task MakeConeFitProfileAsync(
         bool cardinalPt1Vertex = true,
         bool cardinalPt2PointOnAxis = true,
         bool cardinalPt3CutPointOnAxis = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -781,6 +936,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Cylinder Fit Profile {/* #make-cylinder-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-cylinder-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task MakeCylinderFitProfileAsync(
@@ -795,12 +952,13 @@ public Task MakeCylinderFitProfileAsync(
         bool cardinalPt1BeginPt = true,
         bool cardinalPt2EndPt = true,
         bool cardinalPt3Center = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -810,6 +968,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Ellipse Fit Profile {/* #make-ellipse-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-ellipse-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task MakeEllipseFitProfileAsync(
@@ -825,12 +985,13 @@ public Task MakeEllipseFitProfileAsync(
         bool cardinalPt2PointOnNormal = true,
         bool cardinalPt3FocalPt1 = true,
         bool cardinalPt4FocalPt2 = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -841,6 +1002,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-line-fit-profile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task MakeLineFitProfileAsync(
         string fitProfileName = "",
@@ -849,6 +1012,7 @@ public Task MakeLineFitProfileAsync(
         bool cardinalPt1PointA = true,
         bool cardinalPt2PointB = true,
         bool cardinalPt3MidPoint = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -857,6 +1021,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Paraboloid Fit Profile {/* #make-paraboloid-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-paraboloid-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task MakeParaboloidFitProfileAsync(
@@ -868,12 +1034,13 @@ public Task MakeParaboloidFitProfileAsync(
         bool makeCardinalPoints = true,
         bool cardinalPt1Vertex = true,
         bool cardinalPt2FocalPoint = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -883,6 +1050,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Plane Fit Profile {/* #make-plane-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-plane-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task MakePlaneFitProfileAsync(
@@ -894,12 +1063,13 @@ public Task MakePlaneFitProfileAsync(
         bool makeCardinalPoints = true,
         bool cardinalPt1Centroid = true,
         bool cardinalPt2PointOnNormal = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -908,6 +1078,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Slot Fit Profile {/* #make-slot-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-slot-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task MakeSlotFitProfileAsync(
@@ -925,12 +1097,13 @@ public Task MakeSlotFitProfileAsync(
         bool cardinalPt2PointOnNormal = true,
         bool cardinalPt3CenterlinePt1 = true,
         bool cardinalPt4CenterlinePt2 = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -941,6 +1114,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-sphere-fit-profile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task MakeSphereFitProfileAsync(
         string fitProfileName,
@@ -950,12 +1125,13 @@ public Task MakeSphereFitProfileAsync(
         bool makeCardinalPoints,
         bool cardinalPt1Center,
         SphereFitComputationMode computationMethod,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -966,6 +1142,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#mushroom-target-hole-inspection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<MushroomTargetHoleInspectionResult> MushroomTargetHoleInspectionAsync(
         string namePrefixForIntermediateConstructions,
@@ -973,6 +1151,7 @@ public Task<MushroomTargetHoleInspectionResult> MushroomTargetHoleInspectionAsyn
         double sphereTargetRadius,
         CollectionObjectName targetContactPlane,
         PointName pointToCreateAtHole,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -982,12 +1161,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#patch-normal-shift---hole--pin)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task PatchNormalShiftHolePinAsync(
         CollectionObjectName planePointsGroupName,
         CollectionObjectName perimeterPointsGroupName,
         PointName resultingPointName,
         double additionalMaterialThickness = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -997,12 +1179,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#patch-normal-shift---point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task PatchNormalShiftPointAsync(
         CollectionObjectName planePointsGroupName,
         PointName pointToShift,
         PointName resultingPointName,
         double additionalMaterialThickness = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1011,6 +1196,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Query Clouds to Objects {/* #query-clouds-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-clouds-to-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task<QueryCloudsToObjectsResult> QueryCloudsToObjectsAsync(
@@ -1022,12 +1209,13 @@ public Task<QueryCloudsToObjectsResult> QueryCloudsToObjectsAsync(
         int skipFactor = 0,
         double rmsTolerance = 0.000000,
         double maximumAbsoluteTolerance = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1037,6 +1225,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Clouds to Surface {/* #query-clouds-to-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-clouds-to-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task<QueryCloudsToSurfaceResult> QueryCloudsToSurfaceAsync(
@@ -1048,12 +1238,13 @@ public Task<QueryCloudsToSurfaceResult> QueryCloudsToSurfaceAsync(
         int skipFactor = 0,
         double rmsTolerance = 0.000000,
         double maximumAbsoluteTolerance = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1064,16 +1255,19 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-frame-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<QueryFrameToFrameResult> QueryFrameToFrameAsync(
         CollectionObjectName referenceFrameName,
         CollectionObjectName correspondingFrameName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1085,6 +1279,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-groups-to-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showResultsDialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task<QueryGroupsToObjectsResult> QueryGroupsToObjectsAsync(
         IEnumerable<CollectionObjectName> groupNameList,
@@ -1094,12 +1292,13 @@ public Task<QueryGroupsToObjectsResult> QueryGroupsToObjectsAsync(
         double rmsTolerance = 0.000000,
         double maximumAbsoluteTolerance = 0.000000,
         bool showResultsDialog = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1112,11 +1311,14 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-point-to-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<QueryPointToObjectsResult> QueryPointToObjectsAsync(
         PointName pointName,
         IEnumerable<CollectionObjectName> objects,
         bool ignoreTargetOffset = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1126,11 +1328,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-point-to-point-along-curve)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> QueryPointToPointAlongCurveAsync(
         PointName value1stPoint,
         PointName value2ndPoint,
         CollectionObjectName curve,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1139,6 +1344,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Query Points to Circle {/* #query-points-to-circle */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-points-to-circle)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task QueryPointsToCircleAsync(
@@ -1149,6 +1356,7 @@ public Task QueryPointsToCircleAsync(
         CollectionObjectName vectorGroupNameForRadial,
         CollectionObjectName vectorGroupNameForPlanar,
         CollectionObjectName vectorGroupNameForCombined,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1157,6 +1365,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Query Points to Objects {/* #query-points-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-points-to-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showResultsDialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task<QueryPointsToObjectsResult> QueryPointsToObjectsAsync(
@@ -1167,12 +1379,13 @@ public Task<QueryPointsToObjectsResult> QueryPointsToObjectsAsync(
         double rmsTolerance = 0.000000,
         double maximumAbsoluteTolerance = 0.000000,
         bool showResultsDialog = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1184,11 +1397,16 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-points-to-single-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showVectorProperties` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task QueryPointsToSinglePointAsync(
         IEnumerable<PointName> pointNames,
         PointName singlePoint,
         bool showVectorProperties = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1198,11 +1416,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#re-compute-calculated-items)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ReComputeCalculatedItemsAsync(
         bool targetsFromShots = false,
         bool hiddenPoints = false,
         bool relationships = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1212,12 +1433,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verifyResults` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task RenamePointsBasedOnInterPointDistanceToReferencePointsAsync(
         CollectionObjectName referenceGroupName,
         CollectionObjectName groupToRenamePoints,
         double distanceThreshold = 0.000000,
         bool verifyResults = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1227,6 +1453,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#rename-points-based-on-proximity-to-reference-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verifyResults` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task RenamePointsBasedOnProximityToReferencePointsAsync(
         CollectionObjectName referenceGroupName,
@@ -1234,6 +1464,7 @@ public Task RenamePointsBasedOnProximityToReferencePointsAsync(
         double proximityThreshold = 0.000000,
         bool verifyResults = false,
         bool renameAllProximatePoints = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1243,9 +1474,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#reverse-b-splines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ReverseBSplinesAsync(
         IEnumerable<CollectionObjectName> bSplineList,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1255,9 +1489,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#reverse-plane-normals)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ReversePlaneNormalsAsync(
         IEnumerable<CollectionObjectName> planeList,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1267,9 +1504,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#reverse-surface-normals)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ReverseSurfaceNormalsAsync(
         IEnumerable<CollectionObjectName> surfaceList,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1279,12 +1519,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-circle-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetCirclePropertiesAsync(
         CollectionObjectName circleName,
         Vector centerCoordinate,
         Vector normalDirection,
         double radius = 0.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1293,6 +1536,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Cylinder Properties {/* #set-cylinder-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-cylinder-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task SetCylinderPropertiesAsync(
@@ -1306,6 +1551,7 @@ public Task SetCylinderPropertiesAsync(
         bool enableThetaExtentDisplayMode = true,
         double thetaStartInDegrees = 0.000000,
         double thetaSpanInDegrees = 360.000000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1315,9 +1561,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-default-colorization-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetDefaultColorizationOptionsAsync(
         ColorizationOptions colorizationOptions,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1327,12 +1576,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-geometry-relationship-fit-profile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetGeometryRelationshipFitProfileAsync(
         GeometryType geometryType,
         IEnumerable<CollectionItemName> relationshipRefList,
         string fitProfileName = "",
         bool applyCardinalPointSettings = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1342,12 +1594,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-measurement-auxiliary-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetMeasurementAuxiliaryDataAsync(
         PointName pointName,
         string auxiliaryName = "",
         double value = 0.000000,
         string units = "",
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1357,10 +1612,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-object-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetObjectReportingFrameAsync(
         CollectionObjectName objectName,
         CollectionObjectName reportingFrame,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1370,6 +1628,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-point-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetPointPropertiesAsync(
         IEnumerable<PointName> pointNameList,
@@ -1377,6 +1637,7 @@ public Task SetPointPropertiesAsync(
         double radialOffset,
         ToleranceVectorOptions positionTolerance,
         Vector componentWeights,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1386,6 +1647,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-point-weights-from-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<PointName[]> SetPointWeightsFromUncertaintiesAsync(
         IEnumerable<PointName> pointNameList,
@@ -1394,6 +1657,7 @@ public Task<PointName[]> SetPointWeightsFromUncertaintiesAsync(
         string weightNormalizationMode,
         double fixedWeightValue,
         CollectionObjectName outputWeightedPointGroup,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1403,11 +1667,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetTransformForIthFrameInFrameSetAsync(
         CollectionObjectName frameSet,
         int frameSetIndex,
         Transform transformInWorking,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1417,12 +1684,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#sphere-axis-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<SphereAxisCheckResult> SphereAxisCheckAsync(
         CollectionObjectName spherePointsGroupName,
         double sphereTargetRadius,
         PointName pointToCreateAtSphereCenter,
         CollectionObjectName lineDefiningTheAxis,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1432,6 +1702,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#temperature-compensate-a-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TemperatureCompensateAGroupAsync(
         CollectionObjectName originalGroup,
@@ -1440,12 +1712,13 @@ public Task TemperatureCompensateAGroupAsync(
         double initialTemperature,
         double finalTemperature,
         CollectionObjectName scaledGroupName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1458,12 +1731,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#transform-objects---frame-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TransformObjectsFrameToFrameAsync(
         IEnumerable<CollectionObjectName> objectNameList,
         CollectionObjectName initialFrameName,
         CollectionObjectName destinationFrameName,
         int numberOfSteps = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1473,10 +1749,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#transform-objects-by-delta-about-working-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TransformObjectsByDeltaAboutWorkingFrameAsync(
         IEnumerable<CollectionObjectName> objectsToTransform,
         Transform deltaTransform,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1486,10 +1765,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#transform-objects-by-delta-world-transform-operator)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TransformObjectsByDeltaWorldTransformOperatorAsync(
         IEnumerable<CollectionObjectName> objectsToTransform,
         WorldTransform deltaTransform,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1499,10 +1781,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#translate-objects-by-delta)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TranslateObjectsByDeltaAsync(
         IEnumerable<CollectionObjectName> objectsToTranslate,
         Vector deltaTranslation,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1520,4 +1805,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5)

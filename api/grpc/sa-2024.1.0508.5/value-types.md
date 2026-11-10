@@ -1,13 +1,13 @@
 ---
 title: MP Value Types
-description: Server 0.9.0 exact-target protobuf values for SA 2024.1.0508.5.
+description: Server 0.10.0 exact-target protobuf values for SA 2024.1.0508.5.
 ---
 
 # MP Value Types
 
 [SA 2026.1.0529.7](/api/grpc/value-types) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/value-types)
 
-These are the released Server **0.9.0** protobuf values for **SA 2024.1.0508.5**. Preserve reserved numbers and exact-target domains. Client libraries expose their own handwritten representations.
+These are the released Server **0.10.0** protobuf values for **SA 2024.1.0508.5**. Preserve reserved numbers and exact-target domains. Client libraries expose their own handwritten representations.
 
 ## `AngularUnits`
 
@@ -178,16 +178,6 @@ enum ChartType {
   CHART_TYPE_RUN_CHART = 1;
   CHART_TYPE_INDIVIDUAL_X_MOVING_RANGE = 2;
   CHART_TYPE_BULLSEYE_CHART = 3;
-}
-```
-
-## `CircleLineMode`
-
-```proto
-enum CircleLineMode {
-  CIRCLE_LINE_MODE_UNSPECIFIED = 0;
-  CIRCLE_LINE_MODE_CIRCLE = 1;
-  CIRCLE_LINE_MODE_LINE = 2;
 }
 ```
 
@@ -1033,27 +1023,6 @@ enum MeasuredSideForRadialOffset {
 }
 ```
 
-## `MeshOrientationType`
-
-```proto
-enum MeshOrientationType {
-  MESH_ORIENTATION_TYPE_UNSPECIFIED = 0;
-  MESH_ORIENTATION_TYPE_USE_CURRENT_POINT_OF_VIEW = 1;
-  MESH_ORIENTATION_TYPE_USE_CURRENT_WORKING_FRAME = 2;
-}
-```
-
-## `MirrorFramePlane`
-
-```proto
-enum MirrorFramePlane {
-  MIRROR_FRAME_PLANE_UNSPECIFIED = 0;
-  MIRROR_FRAME_PLANE_XY = 1;
-  MIRROR_FRAME_PLANE_XZ = 2;
-  MIRROR_FRAME_PLANE_YZ = 3;
-}
-```
-
 ## `MpDialogInteractionMode`
 
 ```proto
@@ -1084,6 +1053,7 @@ enum MpExecutionState {
   MP_EXECUTION_STATE_FAILED = 3;
   MP_EXECUTION_STATE_RESULT_UNAVAILABLE = 4;
   MP_EXECUTION_STATE_ARGUMENT_REJECTED = 5;
+  MP_EXECUTION_STATE_PARTIAL_SUCCESS = 6;
 }
 ```
 
@@ -1790,4 +1760,4 @@ message WrtlChannelStatus {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5/proto/briosa)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5/proto/briosa)

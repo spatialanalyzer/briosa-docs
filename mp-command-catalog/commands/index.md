@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 # Reviewed Command Index
 
 Search the reviewed command identities for SpatialAnalyzer 2026.1.0529.7 and
-2024.1.0508.5. Both targets have released Server 0.9.2 distributions.
+2024.1.0508.5. Both targets have released Server 0.10.0 distributions.
 Select an exact target to see its own groups, status, and validation. Filters are
 stored in the page URL so a filtered catalog view can be bookmarked or shared.
 
@@ -2479,17 +2479,17 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="excluded" data-validation="licensed-execution-probe">
   <td><Link to="/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</Link></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — destructive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
-<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Analysis Operations / Cloud Filters" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Analysis Operations / Cloud Filters" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</Link></td>
   <td>Analysis Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Generate General Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><Link to="/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh">Generate General Mesh</Link></td>
@@ -2527,17 +2527,17 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Mirror Object(s)" data-group="Construction Operations" data-status="current" data-validation="licensed-setter-probe-fixture-execution-required">
+<tr data-target="2026.1.0529.7" data-command="Mirror Object(s)" data-group="Construction Operations" data-status="excluded" data-validation="licensed-execution-probe">
   <td><Link to="/mp-command-catalog/commands/construction-operations#mirror-objects">Mirror Object(s)</Link></td>
   <td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>Licensed setter probe; fixture execution required</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
-<tr data-command="Mirror Object(s)" data-group="Construction Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Mirror Object(s)" data-group="Construction Operations" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations#mirror-objects">Mirror Object(s)</Link></td>
   <td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>Evidence review — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Copy Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><Link to="/mp-command-catalog/commands/construction-operations#copy-object">Copy Object</Link></td>
@@ -2859,12 +2859,12 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-output-binding-validation-required"><td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</Link></td><td>Construction Operations / Callout Views and Callouts</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — output-binding validation required</td></tr>
-<tr data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe"><td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</Link></td><td>Construction Operations / Callout Views and Callouts</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</Link></td>
   <td>Construction Operations / Callout Views and Callouts</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Add a Callout View to Callout View Ref List" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="portable-contract-review"><td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#add-a-callout-view-to-callout-view-ref-list">Add a Callout View to Callout View Ref List</Link></td><td>Construction Operations / Callout Views and Callouts</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Add a Callout View to Callout View Ref List" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
@@ -2901,12 +2901,12 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-input-binding-and-fixture-validation-required"><td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties">Set Callout View Properties</Link></td><td>Construction Operations / Callout Views and Callouts</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — input-binding and fixture validation required</td></tr>
-<tr data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe"><td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties">Set Callout View Properties</Link></td><td>Construction Operations / Callout Views and Callouts</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties">Set Callout View Properties</Link></td>
   <td>Construction Operations / Callout Views and Callouts</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-destructive-fixture-validation-required"><td><Link to="/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#delete-callout-view">Delete Callout View</Link></td><td>Construction Operations / Callout Views and Callouts</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive fixture validation required</td></tr>
 <tr data-command="Delete Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
@@ -2964,12 +2964,12 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-setter-probe-and-fixture-validation-required"><td><Link to="/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</Link></td><td>Construction Operations / Circles</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — setter probe and fixture validation required</td></tr>
-<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="excluded" data-validation="licensed-execution-probe"><td><Link to="/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</Link></td><td>Construction Operations / Circles</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</Link></td>
   <td>Construction Operations / Circles</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set (or construct) default collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-fixture-validation-required"><td><Link to="/mp-command-catalog/commands/construction-operations-collections#set-or-construct-default-collection">Set (or construct) default collection</Link></td><td>Construction Operations / Collections</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Set (or construct) default collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
@@ -11832,12 +11832,12 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-and-fixture-validation-required"><td><Link to="/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</Link></td><td>Construction Operations / Other MP Types</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — output binding and fixture</td></tr>
-<tr data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="licensed-execution-probe"><td><Link to="/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</Link></td><td>Construction Operations / Other MP Types</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</Link></td>
   <td>Construction Operations / Other MP Types</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><Link to="/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select">Make a Collection Instrument Reference List- Runtime Select</Link></td><td>Construction Operations / Other MP Types</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
@@ -12602,12 +12602,12 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Polygonized Surface from Point Clouds" data-group="Construction Operations / Polygonized Surfaces" data-status="current" data-validation="at-risk-dense-point-cloud-fixture"><td><Link to="/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds">Construct Polygonized Surface from Point Clouds</Link></td><td>Construction Operations / Polygonized Surfaces</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — dense point-cloud fixture</td></tr>
-<tr data-command="Construct Polygonized Surface from Point Clouds" data-group="Construction Operations / Polygonized Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Construct Polygonized Surface from Point Clouds" data-group="Construction Operations / Polygonized Surfaces" data-status="excluded" data-validation="licensed-execution-probe"><td><Link to="/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds">Construct Polygonized Surface from Point Clouds</Link></td><td>Construction Operations / Polygonized Surfaces</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Construct Polygonized Surface from Point Clouds" data-group="Construction Operations / Polygonized Surfaces" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds">Construct Polygonized Surface from Point Clouds</Link></td>
   <td>Construction Operations / Polygonized Surfaces</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="current" data-validation="at-risk-scale-bar-tolerance-fixture"><td><Link to="/mp-command-catalog/commands/construction-operations-scale-bars#construct-scale-bar">Construct Scale Bar</Link></td><td>Construction Operations / Scale Bars</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scale-bar tolerance fixture</td></tr>
 <tr data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
@@ -12791,19 +12791,19 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><Link to="/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</Link></td><td>Construction Operations / Vectors and Vector Groups</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive fixture</td></tr>
-<tr data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="uncommitted" data-validation="licensed-execution-probe"><td><Link to="/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</Link></td><td>Construction Operations / Vectors and Vector Groups</td><td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="uncommitted" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</Link></td>
   <td>Construction Operations / Vectors and Vector Groups</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
+  <td>Licensed execution probe</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><Link to="/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</Link></td><td>Construction Operations / Vectors and Vector Groups</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive fixture</td></tr>
-<tr data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="excluded" data-validation="licensed-execution-probe"><td><Link to="/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</Link></td><td>Construction Operations / Vectors and Vector Groups</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</Link></td>
   <td>Construction Operations / Vectors and Vector Groups</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><Link to="/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group">Make Vector Names Unique in Vector Group</Link></td><td>Construction Operations / Vectors and Vector Groups</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector-group fixture</td></tr>
 <tr data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>

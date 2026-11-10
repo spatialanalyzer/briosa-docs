@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Points and Groups
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-points-and-groups) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-fit-to-points)
 
 `/briosa.ConstructionOperations/ConstructPointFitToPoints` · Operation ID: `construction_operations.construct_point_fit_to_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -43,6 +45,8 @@ message ConstructPointFitToPointsResult {
 
 `/briosa.ConstructionOperations/ConstructPointInWorkingCoordinates` · Operation ID: `construction_operations.construct_point_in_working_coordinates`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -67,6 +71,8 @@ message ConstructPointInWorkingCoordinatesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-from-survey-target-center)
 
 `/briosa.ConstructionOperations/ConstructPointFromSurveyTargetCenter` · Operation ID: `construction_operations.construct_point_from_survey_target_center`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -99,6 +105,8 @@ message ConstructPointFromSurveyTargetCenterResult {
 
 `/briosa.ConstructionOperations/SetPointPositionInWorkingCoordinates` · Operation ID: `construction_operations.set_point_position_in_working_coordinates`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -123,6 +131,8 @@ message SetPointPositionInWorkingCoordinatesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#transform-points-by-delta-about-working-frame)
 
 `/briosa.ConstructionOperations/TransformPointsByDeltaAboutWorkingFrame` · Operation ID: `construction_operations.transform_points_by_delta_about_working_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -149,6 +159,8 @@ message TransformPointsByDeltaAboutWorkingFrameResult {
 
 `/briosa.ConstructionOperations/ConstructPointAtLineMidpoint` · Operation ID: `construction_operations.construct_point_at_line_midpoint`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `line_name` | `optional CollectionObjectName` | Line Name | Required |
@@ -174,6 +186,8 @@ message ConstructPointAtLineMidpointResult {
 
 `/briosa.ConstructionOperations/ConstructPointGroupFromPointNameRefList` · Operation ID: `construction_operations.construct_point_group_from_point_name_ref_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name_list` | `repeated PointName` | Point Name List | Required |
@@ -198,6 +212,8 @@ message ConstructPointGroupFromPointNameRefListResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-groups-from-vector-groups)
 
 `/briosa.ConstructionOperations/ConstructPointGroupsFromVectorGroups` · Operation ID: `construction_operations.construct_point_groups_from_vector_groups`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -229,6 +245,8 @@ message ConstructPointGroupsFromVectorGroupsResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-group-from-point-cloud)
 
 `/briosa.ConstructionOperations/ConstructPointGroupFromPointCloud` · Operation ID: `construction_operations.construct_point_group_from_point_cloud`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -267,6 +285,8 @@ message ConstructPointGroupFromPointCloudResult {
 
 `/briosa.ConstructionOperations/ConstructPointFromCloudPointRuntimeSelect` · Operation ID: `construction_operations.construct_point_from_cloud_point_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `selection_prompt` | `optional string` | Selection Prompt | Select cloud point |
@@ -296,6 +316,8 @@ message ConstructPointFromCloudPointRuntimeSelectResult {
 
 `/briosa.ConstructionOperations/ConstructPointAtCircleCenter` · Operation ID: `construction_operations.construct_point_at_circle_center`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `circle_name` | `optional CollectionObjectName` | Circle Name | Required |
@@ -320,6 +342,8 @@ message ConstructPointAtCircleCenterResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-planes)
 
 `/briosa.ConstructionOperations/ConstructPointAtIntersectionOfPlanes` · Operation ID: `construction_operations.construct_point_at_intersection_of_planes`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -350,6 +374,8 @@ message ConstructPointAtIntersectionOfPlanesResult {
 
 `/briosa.ConstructionOperations/ConstructPointAtIntersectionOfTwoLines` · Operation ID: `construction_operations.construct_point_at_intersection_of_two_lines`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `first_line_name` | `optional CollectionObjectName` | First Line Name | Required |
@@ -376,6 +402,8 @@ message ConstructPointAtIntersectionOfTwoLinesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-plane-and-line)
 
 `/briosa.ConstructionOperations/ConstructPointAtIntersectionOfPlaneAndLine` · Operation ID: `construction_operations.construct_point_at_intersection_of_plane_and_line`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -404,6 +432,8 @@ message ConstructPointAtIntersectionOfPlaneAndLineResult {
 
 `/briosa.ConstructionOperations/ConstructPointAtIntersectionOfTwoBSplines` · Operation ID: `construction_operations.construct_point_at_intersection_of_two_b_splines`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `first_b_spline_name` | `optional CollectionObjectName` | First B-Spline Name | Required |
@@ -430,6 +460,8 @@ message ConstructPointAtIntersectionOfTwoBSplinesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-b-spline-and-surfaces)
 
 `/briosa.ConstructionOperations/ConstructPointAtIntersectionOfBSplineAndSurfaces` · Operation ID: `construction_operations.construct_point_at_intersection_of_b_spline_and_surfaces`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -460,6 +492,8 @@ message ConstructPointAtIntersectionOfBSplineAndSurfacesResult {
 
 `/briosa.ConstructionOperations/ConstructPointsAtIntersectionOfCircleAndLine` · Operation ID: `construction_operations.construct_points_at_intersection_of_circle_and_line`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `circle_name` | `optional CollectionObjectName` | Circle Name | Required |
@@ -486,6 +520,8 @@ message ConstructPointsAtIntersectionOfCircleAndLineResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-at-intersection-of-principle-object-axes-and-surfaces)
 
 `/briosa.ConstructionOperations/ConstructPointsAtIntersectionOfPrincipalObjectAxesAndSurfaces` · Operation ID: `construction_operations.construct_points_at_intersection_of_principal_object_axes_and_surfaces`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -516,6 +552,8 @@ message ConstructPointsAtIntersectionOfPrincipalObjectAxesAndSurfacesResult {
 
 `/briosa.ConstructionOperations/ConstructPointsFromCylinder` · Operation ID: `construction_operations.construct_points_from_cylinder`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cylinder_name` | `optional CollectionObjectName` | Cylinder Name | Required |
@@ -540,6 +578,8 @@ message ConstructPointsFromCylinderResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-a-point-at-projection-of-point-onto-an-object)
 
 `/briosa.ConstructionOperations/ConstructPointAtProjectionOfPointOntoObject` · Operation ID: `construction_operations.construct_point_at_projection_of_point_onto_object`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -567,6 +607,8 @@ message ConstructPointAtProjectionOfPointOntoObjectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis)
 
 `/briosa.ConstructionOperations/ConstructPointsAtProjectionOnSurfacesParallelToWcfAxis` · Operation ID: `construction_operations.construct_points_at_projection_on_surfaces_parallel_to_wcf_axis`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -601,6 +643,8 @@ message ConstructPointsAtProjectionOnSurfacesParallelToWcfAxisResult {
 
 `/briosa.ConstructionOperations/ConstructPointsAtProjectionOnSurfacesRadialFromWcfAxis` · Operation ID: `construction_operations.construct_points_at_projection_on_surfaces_radial_from_wcf_axis`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `surface_list` | `repeated CollectionObjectName` | Surface List | Required |
@@ -634,6 +678,8 @@ message ConstructPointsAtProjectionOnSurfacesRadialFromWcfAxisResult {
 
 `/briosa.ConstructionOperations/ConstructPointsAtProjectionOnSurfacesSphericalFromWcfOrigin` · Operation ID: `construction_operations.construct_points_at_projection_on_surfaces_spherical_from_wcf_origin`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `surface_list` | `repeated CollectionObjectName` | Surface List | Required |
@@ -665,6 +711,8 @@ message ConstructPointsAtProjectionOnSurfacesSphericalFromWcfOriginResult {
 
 `/briosa.ConstructionOperations/GetGradientAtProjectedPointOnSurface` · Operation ID: `construction_operations.get_gradient_at_projected_point_on_surface`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_to_project` | `optional PointName` | Point to Project | Required |
@@ -693,6 +741,8 @@ message GetGradientAtProjectedPointOnSurfaceResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface-edge)
 
 `/briosa.ConstructionOperations/GetGradientAtProjectedPointOnSurfaceEdge` · Operation ID: `construction_operations.get_gradient_at_projected_point_on_surface_edge`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -723,7 +773,7 @@ message GetGradientAtProjectedPointOnSurfaceEdgeResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -734,6 +784,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-by-projecting-points-on-mesh-along-direction)
 
 `/briosa.ConstructionOperations/ConstructPointsByProjectingPointsOnMeshAlongDirection` · Operation ID: `construction_operations.construct_points_by_projecting_points_on_mesh_along_direction`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -768,6 +820,8 @@ message ConstructPointsByProjectingPointsOnMeshAlongDirectionResult {
 
 `/briosa.ConstructionOperations/ConstructPointsSpacedAtDistanceOnCurves` · Operation ID: `construction_operations.construct_points_spaced_at_distance_on_curves`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `b_spline_list` | `repeated CollectionObjectName` | B-Spline List | Required |
@@ -797,6 +851,8 @@ message ConstructPointsSpacedAtDistanceOnCurvesResult {
 
 `/briosa.ConstructionOperations/ConstructPointsNSpacedOnCurves` · Operation ID: `construction_operations.construct_points_n_spaced_on_curves`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `b_spline_list` | `repeated CollectionObjectName` | B-Spline List | Required |
@@ -825,6 +881,8 @@ message ConstructPointsNSpacedOnCurvesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-on-curves-using-max-chordal-deviation)
 
 `/briosa.ConstructionOperations/ConstructPointsOnCurvesUsingMaxChordalDeviation` · Operation ID: `construction_operations.construct_points_on_curves_using_max_chordal_deviation`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -859,6 +917,8 @@ message ConstructPointsOnCurvesUsingMaxChordalDeviationResult {
 
 `/briosa.ConstructionOperations/ConstructPointsOnObjectVertices` · Operation ID: `construction_operations.construct_points_on_object_vertices`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_name_list` | `repeated CollectionObjectName` | Object Name List | Required |
@@ -883,6 +943,8 @@ message ConstructPointsOnObjectVerticesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-on-surfaces-by-clicking)
 
 `/briosa.ConstructionOperations/ConstructPointsOnSurfacesByClicking` · Operation ID: `construction_operations.construct_points_on_surfaces_by_clicking`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -909,6 +971,8 @@ message ConstructPointsOnSurfacesByClickingResult {
 
 `/briosa.ConstructionOperations/ConstructPointsFromSurfaceFacesRuntimeSelect` · Operation ID: `construction_operations.construct_points_from_surface_faces_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -928,6 +992,8 @@ message ConstructPointsFromSurfaceFacesRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-from-surfaces-on-uv-grid)
 
 `/briosa.ConstructionOperations/ConstructPointsFromSurfacesOnUvGrid` · Operation ID: `construction_operations.construct_points_from_surfaces_on_uv_grid`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -962,6 +1028,8 @@ message ConstructPointsFromSurfacesOnUvGridResult {
 
 `/briosa.ConstructionOperations/ConstructPointAtObjectOrigin` · Operation ID: `construction_operations.construct_point_at_object_origin`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_name` | `optional CollectionObjectName` | Object Name | Required |
@@ -988,6 +1056,8 @@ message ConstructPointAtObjectOriginResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-shifted-in-working-frame)
 
 `/briosa.ConstructionOperations/ConstructPointsShiftedInWorkingFrame` · Operation ID: `construction_operations.construct_points_shifted_in_working_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1016,6 +1086,8 @@ message ConstructPointsShiftedInWorkingFrameResult {
 
 `/briosa.ConstructionOperations/ConstructPointsCylindricallyShifted` · Operation ID: `construction_operations.construct_points_cylindrically_shifted`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_object_name` | `optional CollectionObjectName` | Reference Object Name | Required |
@@ -1043,7 +1115,7 @@ message ConstructPointsCylindricallyShiftedResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1054,6 +1126,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-wildcard-selection)
 
 `/briosa.ConstructionOperations/ConstructPointsWildcardSelection` · Operation ID: `construction_operations.construct_points_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1084,6 +1158,8 @@ message ConstructPointsWildcardSelectionResult {
 
 `/briosa.ConstructionOperations/ConstructPointsSubsetWithGreatestSpacing` · Operation ID: `construction_operations.construct_points_subset_with_greatest_spacing`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `points_to_subsample` | `repeated PointName` | Points to Subsample | Required |
@@ -1110,6 +1186,8 @@ message ConstructPointsSubsetWithGreatestSpacingResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-layout-on-grid)
 
 `/briosa.ConstructionOperations/ConstructPointsLayoutOnGrid` · Operation ID: `construction_operations.construct_points_layout_on_grid`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1154,6 +1232,8 @@ message ConstructPointsLayoutOnGridResult {
 
 `/briosa.ConstructionOperations/ConstructPointsAutoCorrespondTwoGroupsProximity` · Operation ID: `construction_operations.construct_points_auto_correspond_two_groups_proximity`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_group` | `optional CollectionObjectName` | Reference group (known point names) | Required |
@@ -1183,6 +1263,8 @@ message ConstructPointsAutoCorrespondTwoGroupsProximityResult {
 
 `/briosa.ConstructionOperations/ConstructPointsAutoCorrespondTwoGroupsInterPointDistance` · Operation ID: `construction_operations.construct_points_auto_correspond_two_groups_inter_point_distance`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_group` | `optional CollectionObjectName` | Reference group (known point names) | Required |
@@ -1211,6 +1293,8 @@ message ConstructPointsAutoCorrespondTwoGroupsInterPointDistanceResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#average-a-set-of-groups)
 
 `/briosa.ConstructionOperations/AverageSetOfGroups` · Operation ID: `construction_operations.average_set_of_groups`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1245,6 +1329,8 @@ message AverageSetOfGroupsResult {
 
 `/briosa.ConstructionOperations/CopyGroupsExcludingObscuredPoints` · Operation ID: `construction_operations.copy_groups_excluding_obscured_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument_id` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -1272,6 +1358,8 @@ message CopyGroupsExcludingObscuredPointsResult {
 
 `/briosa.ConstructionOperations/MakePointNameRuntimeSelect` · Operation ID: `construction_operations.make_point_name_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -1296,6 +1384,8 @@ message MakePointNameRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#make-a-point-name---ensure-unique)
 
 `/briosa.ConstructionOperations/MakePointNameEnsureUnique` · Operation ID: `construction_operations.make_point_name_ensure_unique`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1324,6 +1414,8 @@ message MakePointNameEnsureUniqueResult {
 
 `/briosa.ConstructionOperations/MakePointNameRefListFromGroup` · Operation ID: `construction_operations.make_point_name_ref_list_from_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `group_name` | `optional CollectionObjectName` | Group Name | Required |
@@ -1349,6 +1441,8 @@ message MakePointNameRefListFromGroupResult {
 
 `/briosa.ConstructionOperations/MakePointNameRefListRuntimeSelect` · Operation ID: `construction_operations.make_point_name_ref_list_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
@@ -1373,6 +1467,8 @@ message MakePointNameRefListRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#make-a-point-name-ref-list---wildcard-select)
 
 `/briosa.ConstructionOperations/MakePointNameRefListWildcardSelect` · Operation ID: `construction_operations.make_point_name_ref_list_wildcard_select`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1403,6 +1499,8 @@ message MakePointNameRefListWildcardSelectResult {
 
 `/briosa.ConstructionOperations/ClearHiddenPointBarDatabase` · Operation ID: `construction_operations.clear_hidden_point_bar_database`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -1422,6 +1520,8 @@ message ClearHiddenPointBarDatabaseResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#create-hidden-point-rod)
 
 `/briosa.ConstructionOperations/CreateHiddenPointRod` · Operation ID: `construction_operations.create_hidden_point_rod`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1448,7 +1548,7 @@ message CreateHiddenPointRodResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1460,6 +1560,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#get-hidden-point-rod-index-by-name)
 
 `/briosa.ConstructionOperations/GetHiddenPointRodIndexByName` · Operation ID: `construction_operations.get_hidden_point_rod_index_by_name`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1486,6 +1588,8 @@ message GetHiddenPointRodIndexByNameResult {
 
 `/briosa.ConstructionOperations/DeleteHiddenPointRod` · Operation ID: `construction_operations.delete_hidden_point_rod`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `hidden_point_rod_index` | `optional int32` | Hidden Point Rod Index | 0 |
@@ -1508,6 +1612,8 @@ message DeleteHiddenPointRodResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#create-hidden-point)
 
 `/briosa.ConstructionOperations/CreateHiddenPoint` · Operation ID: `construction_operations.create_hidden_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1570,4 +1676,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

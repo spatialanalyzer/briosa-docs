@@ -1,6 +1,6 @@
 ---
 title: Vector Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/vector-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/vector-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/vector-operations#add-a-vector-to-vector-name-ref-list)
 
 `/briosa.VectorOperations/AddAVectorToVectorNameRefList` · Operation ID: `vector_operations.add_a_vector_to_vector_name_ref_list`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -45,6 +47,8 @@ message AddAVectorToVectorNameRefListResult {
 
 `/briosa.VectorOperations/AutoRangeAndSetVectorGroupColorizationAll` · Operation ID: `vector_operations.auto_range_and_set_vector_group_colorization_all`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `treat_individually` | `optional bool` | Treat Individually? | false |
@@ -64,7 +68,7 @@ message AutoRangeAndSetVectorGroupColorizationAllResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -75,6 +79,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-selected)
 
 `/briosa.VectorOperations/AutoRangeAndSetVectorGroupColorizationSelected` · Operation ID: `vector_operations.auto_range_and_set_vector_group_colorization_selected`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -97,7 +103,7 @@ message AutoRangeAndSetVectorGroupColorizationSelectedResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -109,10 +115,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.VectorOperations/DeleteIthVectorFromVectorGroup` · Operation ID: `vector_operations.delete_ith_vector_from_vector_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_group_name` | `optional CollectionObjectName` | Vector Group Name | Required |
-| Request | 2 | `vector_index` | `optional int32` | Vector Index | 0 |
+| Request | 2 | `vector_index` | `optional int32` | Vector Index | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -128,16 +136,24 @@ message DeleteIthVectorFromVectorGroupResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `vector_index` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Delete Vector by Name {/* #delete-vector-by-name */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#delete-vector-by-name)
 
 `/briosa.VectorOperations/DeleteVectorByName` · Operation ID: `vector_operations.delete_vector_by_name`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_group_name` | `optional CollectionObjectName` | Vector Group Name | Required |
-| Request | 2 | `vector_name` | `optional string` | Vector Name | Empty |
+| Request | 2 | `vector_name` | `optional string` | Vector Name | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -153,11 +169,19 @@ message DeleteVectorByNameResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `vector_name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Delete Vectors {/* #delete-vectors */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#delete-vectors)
 
 `/briosa.VectorOperations/DeleteVectors` · Operation ID: `vector_operations.delete_vectors`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -181,6 +205,8 @@ message DeleteVectorsResult {
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-group)
 
 `/briosa.VectorOperations/GetIthVectorFromVectorGroup` · Operation ID: `vector_operations.get_ith_vector_from_vector_group`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -218,6 +244,8 @@ message GetIthVectorFromVectorGroupResult {
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-name-ref-list)
 
 `/briosa.VectorOperations/GetIthVectorFromVectorNameRefList` · Operation ID: `vector_operations.get_ith_vector_from_vector_name_ref_list`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -258,6 +286,8 @@ message GetIthVectorFromVectorNameRefListResult {
 
 `/briosa.VectorOperations/GetNumberOfVectorsInVectorGroup` · Operation ID: `vector_operations.get_number_of_vectors_in_vector_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_group_name` | `optional CollectionObjectName` | Vector Group Name | Required |
@@ -283,6 +313,8 @@ message GetNumberOfVectorsInVectorGroupResult {
 
 `/briosa.VectorOperations/GetNumberOfVectorsInVectorNameRefList` · Operation ID: `vector_operations.get_number_of_vectors_in_vector_name_ref_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_name_list` | `repeated VectorName` | Vector Name List | Required |
@@ -307,6 +339,8 @@ message GetNumberOfVectorsInVectorNameRefListResult {
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-vector-from-vector-group-by-name)
 
 `/briosa.VectorOperations/GetVectorFromVectorGroupByName` · Operation ID: `vector_operations.get_vector_from_vector_group_by_name`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -342,6 +376,8 @@ message GetVectorFromVectorGroupByNameResult {
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-vector-group-properties)
 
 `/briosa.VectorOperations/GetVectorGroupProperties` · Operation ID: `vector_operations.get_vector_group_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -400,6 +436,8 @@ message GetVectorGroupPropertiesResult {
 
 `/briosa.VectorOperations/SetVectorGroupColorizationOptionsAll` · Operation ID: `vector_operations.set_vector_group_colorization_options_all`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `colorization_options` | `optional ColorizationOptions` | Colorization Options | Red |
@@ -422,6 +460,8 @@ message SetVectorGroupColorizationOptionsAllResult {
 [MP Catalog](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-selected)
 
 `/briosa.VectorOperations/SetVectorGroupColorizationOptionsSelected` · Operation ID: `vector_operations.set_vector_group_colorization_options_selected`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -447,6 +487,8 @@ message SetVectorGroupColorizationOptionsSelectedResult {
 [MP Catalog](/mp-command-catalog/commands/vector-operations#sort-vectors)
 
 `/briosa.VectorOperations/SortVectors` · Operation ID: `vector_operations.sort_vectors`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -485,4 +527,4 @@ message SortVectorsResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

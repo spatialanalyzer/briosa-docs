@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Vectors and Vector Groups
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-vectors-and-vector-groups) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-group---group-to-group-compare)
 
 `/briosa.ConstructionOperations/ConstructVectorGroupGroupToGroupCompare` · Operation ID: `construction_operations.construct_vector_group_group_to_group_compare`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -59,6 +61,8 @@ message ConstructVectorGroupGroupToGroupCompareResult {
 
 `/briosa.ConstructionOperations/ConstructVectorGroupAreaProfileCheck` · Operation ID: `construction_operations.construct_vector_group_area_profile_check`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_vectors` | `repeated VectorName` | Reference Vectors | Required |
@@ -90,6 +94,8 @@ message ConstructVectorGroupAreaProfileCheckResult {
 
 `/briosa.ConstructionOperations/ConstructVectorGroupFromVectorNameRefList` · Operation ID: `construction_operations.construct_vector_group_from_vector_name_ref_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_name_list` | `repeated VectorName` | Vector Name List | Required |
@@ -114,6 +120,8 @@ message ConstructVectorGroupFromVectorNameRefListResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindelta)
 
 `/briosa.ConstructionOperations/ConstructVectorInWorkingCoordinatesBeginDelta` · Operation ID: `construction_operations.construct_vector_in_working_coordinates_begin_delta`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -146,6 +154,8 @@ message ConstructVectorInWorkingCoordinatesBeginDeltaResult {
 
 `/briosa.ConstructionOperations/ConstructVectorInWorkingCoordinatesBeginDirectionMagnitude` · Operation ID: `construction_operations.construct_vector_in_working_coordinates_begin_direction_magnitude`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_group_name` | `optional CollectionObjectName` | Vector Group Name | Required |
@@ -177,6 +187,8 @@ message ConstructVectorInWorkingCoordinatesBeginDirectionMagnitudeResult {
 
 `/briosa.ConstructionOperations/ConstructVectorGroupFromRelationship` · Operation ID: `construction_operations.construct_vector_group_from_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -202,6 +214,8 @@ message ConstructVectorGroupFromRelationshipResult {
 
 `/briosa.ConstructionOperations/MakeVectorNameRefListFromVectorGroup` · Operation ID: `construction_operations.make_vector_name_ref_list_from_vector_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_group_name` | `optional CollectionObjectName` | Vector Group Name | Required |
@@ -225,57 +239,23 @@ message MakeVectorNameRefListFromVectorGroupResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select)
 
-`/briosa.ConstructionOperations/MakeVectorNameRefListRuntimeSelect` · Operation ID: `construction_operations.make_vector_name_ref_list_runtime_select`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `user_prompt` | `optional string` | User Prompt |  Select Vectors (ENTER when done)  |
-| Result | 1 | `resultant_vector_name_list` | `repeated VectorName` | Resultant Vector Name List | — |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc MakeVectorNameRefListRuntimeSelect(MakeVectorNameRefListRuntimeSelectRequest) returns (MakeVectorNameRefListRuntimeSelectResult);
-
-message MakeVectorNameRefListRuntimeSelectRequest {
-  optional string user_prompt = 1;
-}
-
-message MakeVectorNameRefListRuntimeSelectResult {
-  repeated VectorName resultant_vector_name_list = 1;
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. No operator could complete its selection on either exact target in a licensed session, so it is unverified. SpatialAnalyzer never rejected it. It can return in a later 3.x revision once a licensed session verifies it. Build a vector name list directly, or from a vector group with Make a Vector Name Ref List From a Vector Group. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Make a Collection Vector Group Name Ref List - Runtime Select {/* #make-a-collection-vector-group-name-ref-list---runtime-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select)
 
-`/briosa.ConstructionOperations/MakeCollectionVectorGroupNameRefListRuntimeSelect` · Operation ID: `construction_operations.make_collection_vector_group_name_ref_list_runtime_select`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `user_prompt` | `optional string` | User Prompt | Empty |
-| Result | 1 | `resultant_collection_vector_group_name_reference_list` | `repeated CollectionVectorGroupName` | Resultant Collection Vector Group Name Reference List | — |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc MakeCollectionVectorGroupNameRefListRuntimeSelect(MakeCollectionVectorGroupNameRefListRuntimeSelectRequest) returns (MakeCollectionVectorGroupNameRefListRuntimeSelectResult);
-
-message MakeCollectionVectorGroupNameRefListRuntimeSelectRequest {
-  optional string user_prompt = 1;
-}
-
-message MakeCollectionVectorGroupNameRefListRuntimeSelectResult {
-  repeated CollectionVectorGroupName resultant_collection_vector_group_name_reference_list = 1;
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code 2 on both exact targets, but the selected vector groups could not be read back. No replacement selects vector groups at run time on these exact targets. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Make Vector Names Unique in Vector Group {/* #make-vector-names-unique-in-vector-group */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group)
 
 `/briosa.ConstructionOperations/MakeVectorNamesUniqueInVectorGroup` · Operation ID: `construction_operations.make_vector_names_unique_in_vector_group`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -338,4 +318,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

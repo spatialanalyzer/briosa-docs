@@ -1,6 +1,6 @@
 ---
 title: GDT Operations / GDT Analysis
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,17 +8,20 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/gdt-analysis) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/gdt-analysis)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Get Feature Check Datum References {/* #get-feature-check-datum-references */}
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-datum-references) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-datum-references)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<FeatureCheckDatumReferencesResult> GetFeatureCheckDatumReferencesAsync(
         CollectionItemName featureCheck,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -28,9 +31,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-datum-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-datum-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GdtMeasurements> GetDatumMeasurementsAsync(
         CollectionItemName datum,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -40,12 +46,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-datum-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-datum-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetDatumMeasurementsAsync(
         CollectionItemName datum,
         IEnumerable<PointName> pointNames,
         IEnumerable<CollectionObjectName> cloudNames,
         bool replaceExistingMeasurements = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -55,9 +64,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GdtMeasurements> GetFeatureCheckMeasurementsAsync(
         CollectionItemName featureCheck,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -67,12 +79,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetFeatureCheckMeasurementsAsync(
         CollectionItemName featureCheck,
         IEnumerable<PointName> pointNames,
         IEnumerable<CollectionObjectName> cloudNames,
         bool replaceExistingMeasurements = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -82,9 +97,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-cylinder-eval-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-cylinder-eval-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<FeatureCheckCylinderEvalOptions> GetFeatureCheckCylinderEvalOptionsAsync(
         CollectionItemName featureCheck,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -94,11 +112,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-cylinder-eval-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-cylinder-eval-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetFeatureCheckCylinderEvalOptionsAsync(
         CollectionItemName featureCheck,
         bool enableActualDiameterOverride = false,
         double actualDiameterOverride = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -108,20 +129,23 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#feature-inspection-auto-filter) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#feature-inspection-auto-filter)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task FeatureInspectionAutoFilterAsync(
-        IEnumerable<PointName>? pointNames = null,
-        IEnumerable<CollectionObjectName>? groupNames = null,
-        IEnumerable<CollectionObjectName>? cloudNames = null,
+        IEnumerable<PointName> pointNames,
+        IEnumerable<CollectionObjectName> groupNames,
+        IEnumerable<CollectionObjectName> cloudNames,
+        IEnumerable<CollectionItemName> featureCheckNameList,
+        OffsetDirectionType offsetDirection,
         double surfaceOffset = 0.1,
         double edgeOffset = 0.1,
-        OffsetDirectionType offsetDirection = OffsetDirectionType.Both,
         bool includePointsWithinCylinderAxisProximity = false,
         bool enforceMaxPointsPerFaceInOutput = false,
         int maxPointsPerFace = 0,
-        IEnumerable<CollectionItemName>? featureCheckNameList = null,
         bool includeDatums = true,
         bool createCloudForEachDatumOrCheck = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -131,9 +155,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-global-force-simultaneous-evaluation) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-global-force-simultaneous-evaluation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetGlobalForceSimultaneousEvaluationAsync(
         bool globalSimultaneousEvaluation = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -143,11 +170,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#evaluate-feature-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<EvaluateFeatureCheckResult> EvaluateFeatureCheckAsync(
         CollectionItemName featureCheck,
         bool performEvaluation = true,
         bool simultaneousEvaluation = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -157,11 +187,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#evaluate-feature-checks) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-checks)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<EvaluateFeatureChecksResult> EvaluateFeatureChecksAsync(
         IEnumerable<CollectionItemName> featureCheckList,
         bool simultaneousEvaluation = false,
         bool restrictEvaluationsToListedChecks = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -171,10 +204,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#generate-feature-check-summary) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#generate-feature-check-summary)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task GenerateFeatureCheckSummaryAsync(
         IEnumerable<CollectionItemName> featureCheckList,
         string summaryTableName = "GDT Feature Check Summary",
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -184,11 +220,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#startstop-feature-check-trapping) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#startstop-feature-check-trapping)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StartStopFeatureCheckTrappingAsync(
         CollectionItemName featureCheck,
         CollectionInstrumentId instrumentId,
         bool startTrapping = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -198,13 +237,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#enabledisable-datum-alignment-for-feature-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#enabledisable-datum-alignment-for-feature-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task EnableDisableDatumAlignmentForFeatureCheckAsync(
         CollectionItemName featureCheck,
+        CollectionItemName alignment,
         bool enableDatumAlignment = true,
         bool enableCustomInitialAlignment = false,
         bool enableInitialDatumAlignment = true,
-        CollectionItemName? alignment = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -214,12 +256,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#datum-alignment) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#datum-alignment)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task DatumAlignmentAsync(
         CollectionItemName featureCheck,
         IEnumerable<CollectionObjectName> objectsToMove,
         IEnumerable<CollectionInstrumentId> instrumentsToMove,
         bool applyFeatureCheckTransform = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -229,8 +274,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-gdt-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-gdt-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GdtOptions> GetGdtOptionsAsync(
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -240,17 +288,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-gdt-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-gdt-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetGdtOptionsAsync(
+        GdtDistanceBetweenMode distanceBetweenMode,
+        GdtEvaluationMethod evaluationMethod,
         bool useHighPoints = false,
         bool extrapolateAxialExtent = true,
         bool excludeFromAutoEvaluation = true,
-        GdtDistanceBetweenMode distanceBetweenMode = GdtDistanceBetweenMode.Centroid,
-        GdtEvaluationMethod evaluationMethod = GdtEvaluationMethod.None,
         bool createActualFeatures = false,
         bool createSolvedPoints = false,
         double crossSectionCriteria = 0.039370,
         bool enableAutoFeatureDetection = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -260,9 +311,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#refresh-datumsfeature-checks-from-annotations) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#refresh-datumsfeature-checks-from-annotations)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task RefreshDatumsFeatureChecksFromAnnotationsAsync(
         CollectionName collection,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -272,10 +326,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetFeatureCheckReportingFrameAsync(
         CollectionItemName featureCheck,
         CollectionObjectName reportingFrame,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -285,9 +342,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<CollectionObjectName> GetFeatureCheckReportingFrameAsync(
         CollectionItemName featureCheck,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -296,6 +356,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Feature Check Reporting Options {/* #set-feature-check-reporting-options */}
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-options)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task SetFeatureCheckReportingOptionsAsync(
@@ -306,6 +368,7 @@ public Task SetFeatureCheckReportingOptionsAsync(
         bool showFeatureSummary = false,
         bool showPointDetailsSummary = false,
         bool showLowerTierTables = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -315,9 +378,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-reporting-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<FeatureCheckReportingOptions> GetFeatureCheckReportingOptionsAsync(
         CollectionItemName featureCheck,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -423,4 +489,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5)

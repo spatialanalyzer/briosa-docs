@@ -1,6 +1,6 @@
 ---
 title: Robot Calibration Appliance Node Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/robot-calibration-appliance-node-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/AddCalibrationApplianceNode` · Operation ID: `robot_calibration_appliance_node_operations.add_calibration_appliance_node`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -41,6 +43,8 @@ message AddCalibrationApplianceNodeResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/DeleteCalibrationApplianceNode` · Operation ID: `robot_calibration_appliance_node_operations.delete_calibration_appliance_node`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node_to_delete` | `optional CollectionObjectName` | Calibration Appliance Node to Delete | Required |
@@ -63,6 +67,8 @@ message DeleteCalibrationApplianceNodeResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/ConnectDisconnectCalibrationApplianceNode` · Operation ID: `robot_calibration_appliance_node_operations.connect_disconnect_calibration_appliance_node`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -89,6 +95,8 @@ message ConnectDisconnectCalibrationApplianceNodeResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeInstrument` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_instrument`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -113,6 +121,8 @@ message SetCalibrationApplianceNodeInstrumentResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeMeasurementProfile` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_measurement_profile`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -139,6 +149,8 @@ message SetCalibrationApplianceNodeMeasurementProfileResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeMeasurementTarget` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_measurement_target`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -163,6 +175,8 @@ message SetCalibrationApplianceNodeMeasurementTargetResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/EnableDisableCalibrationApplianceNodeInstrumentAutoPoint` · Operation ID: `robot_calibration_appliance_node_operations.enable_disable_calibration_appliance_node_instrument_auto_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -189,6 +203,8 @@ message EnableDisableCalibrationApplianceNodeInstrumentAutoPointResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeInstrumentDwellTime` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_instrument_dwell_time`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -208,7 +224,7 @@ message SetCalibrationApplianceNodeInstrumentDwellTimeResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -219,6 +235,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SkipCalibrationApplianceNodeMeasurement` · Operation ID: `robot_calibration_appliance_node_operations.skip_calibration_appliance_node_measurement`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -242,6 +260,8 @@ message SkipCalibrationApplianceNodeMeasurementResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeMeasurementFrame` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_measurement_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -268,6 +288,8 @@ message SetCalibrationApplianceNodeMeasurementFrameResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeMeasurementOffsetTransform` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_measurement_offset_transform`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -292,6 +314,8 @@ message SetCalibrationApplianceNodeMeasurementOffsetTransformResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeMeasurementPointGroup` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_measurement_point_group`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -318,6 +342,8 @@ message SetCalibrationApplianceNodeMeasurementPointGroupResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeCalibrationApplianceIpAddress` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_calibration_appliance_ip_address`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_config`, `external_io` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -342,6 +368,8 @@ message SetCalibrationApplianceNodeCalibrationApplianceIpAddressResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeTrappingNodeId` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_trapping_node_id`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -368,6 +396,8 @@ message SetCalibrationApplianceNodeTrappingNodeIdResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/EnableDisableCalibrationApplianceNodeTrapManager` · Operation ID: `robot_calibration_appliance_node_operations.enable_disable_calibration_appliance_node_trap_manager`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -393,6 +423,8 @@ message EnableDisableCalibrationApplianceNodeTrapManagerResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/ClearCalibrationApplianceNodeTrapManagerRequests` · Operation ID: `robot_calibration_appliance_node_operations.clear_calibration_appliance_node_trap_manager_requests`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `destructive`, `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -415,6 +447,8 @@ message ClearCalibrationApplianceNodeTrapManagerRequestsResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeIntegerValue` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_integer_value`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -443,6 +477,8 @@ message SetCalibrationApplianceNodeIntegerValueResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/GetCalibrationApplianceNodeIntegerValue` · Operation ID: `robot_calibration_appliance_node_operations.get_calibration_appliance_node_integer_value`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -469,6 +505,8 @@ message GetCalibrationApplianceNodeIntegerValueResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeRealValue` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_real_value`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -497,6 +535,8 @@ message SetCalibrationApplianceNodeRealValueResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/GetCalibrationApplianceNodeRealValue` · Operation ID: `robot_calibration_appliance_node_operations.get_calibration_appliance_node_real_value`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -524,6 +564,8 @@ message GetCalibrationApplianceNodeRealValueResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeData` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -548,6 +590,8 @@ message SetCalibrationApplianceNodeDataResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/GetCalibrationApplianceNodeData` · Operation ID: `robot_calibration_appliance_node_operations.get_calibration_appliance_node_data`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -576,6 +620,8 @@ message GetCalibrationApplianceNodeDataResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/SetCalibrationApplianceNodeDisplayRobot` · Operation ID: `robot_calibration_appliance_node_operations.set_calibration_appliance_node_display_robot`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -600,6 +646,8 @@ message SetCalibrationApplianceNodeDisplayRobotResult {
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
 
 `/briosa.RobotCalibrationApplianceNodeOperations/UpdateCalibrationApplianceNodeDisplayRobotJoints` · Operation ID: `robot_calibration_appliance_node_operations.update_calibration_appliance_node_display_robot_joints`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -626,6 +674,8 @@ message UpdateCalibrationApplianceNodeDisplayRobotJointsResult {
 
 `/briosa.RobotCalibrationApplianceNodeOperations/GetCalibrationApplianceNodeStatus` · Operation ID: `robot_calibration_appliance_node_operations.get_calibration_appliance_node_status`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
@@ -651,4 +701,4 @@ message GetCalibrationApplianceNodeStatusResult {
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

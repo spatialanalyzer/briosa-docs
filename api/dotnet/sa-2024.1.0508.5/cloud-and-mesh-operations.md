@@ -1,6 +1,6 @@
 ---
 title: Cloud and Mesh Operations
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,24 +8,27 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/cloud-and-mesh-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/cloud-and-mesh-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Cloud Display Control {/* #cloud-display-control */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#cloud-display-control)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task CloudDisplayControlAsync(
         int thin = 1,
         int pointSize = 1,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -35,6 +38,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#reset-cloud-bounding-box)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<ResetCloudBoundingBoxResult> ResetCloudBoundingBoxAsync(
         CollectionObjectName cloudName,
@@ -42,6 +47,7 @@ public Task<ResetCloudBoundingBoxResult> ResetCloudBoundingBoxAsync(
         bool showBoundingBox = true,
         bool useAllPoints = false,
         int desiredPointCount = 1000,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -51,9 +57,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-point-count) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#get-cloud-point-count)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<GetCloudPointCountResult> GetCloudPointCountAsync(
         CollectionObjectName cloudName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -63,10 +72,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetCloudDefaultClippingPlaneAsync(
         bool enableCloudClipping = false,
         CollectionObjectName? referenceObject = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -75,6 +87,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Raster Scan Edge Inspection {/* #raster-scan-edge-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#raster-scan-edge-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task<string> RasterScanEdgeInspectionAsync(
@@ -85,6 +99,7 @@ public Task<string> RasterScanEdgeInspectionAsync(
         double tolerance = 0.0,
         int minimumGoodPointsPerUnitLength = 0,
         double maximumBadPointsPercentage = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -93,6 +108,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## New Raster Scan Edge Inspection {/* #new-raster-scan-edge-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```csharp
 public Task<string> NewRasterScanEdgeInspectionAsync(
@@ -107,6 +124,7 @@ public Task<string> NewRasterScanEdgeInspectionAsync(
         bool useCosineProjectionMethod = false,
         int minimumEdgePointsPerSegment = 0,
         FileReference? intermediateCalculationResultsFile = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -116,9 +134,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task EnableAllCloudCrossSectionsAsync(
         CollectionObjectName crossSectionCloudName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -128,11 +149,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task EnableDisableCloudCrossSectionsAsync(
         CollectionObjectName crossSectionCloudName,
         int crossSectionId = 0,
         bool enable = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -142,10 +166,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#enable-single-cloud-cross-section)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task EnableSingleCloudCrossSectionAsync(
         CollectionObjectName crossSectionCloudName,
         int crossSectionId = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -155,9 +182,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<int> GetNumberOfCrossSectionsInCrossSectionCloudAsync(
         CollectionObjectName crossSectionCloudName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -167,6 +197,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task FilterCloudsToPlaneAsync(
         IEnumerable<CollectionObjectName> cloudNames,
@@ -175,6 +207,7 @@ public Task FilterCloudsToPlaneAsync(
         double proximity = 0.0,
         OffsetDirectionType allowableOffsetDirection = OffsetDirectionType.Both,
         PointOutputType outputType = PointOutputType.Points,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -184,6 +217,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task FilterCloudsToGroupAsync(
         IEnumerable<CollectionObjectName> cloudNames,
@@ -192,6 +227,7 @@ public Task FilterCloudsToGroupAsync(
         double proximity = 0.0,
         int maximumNumberOfPoints = 0,
         PointOutputType outputType = PointOutputType.Points,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -200,6 +236,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Surface {/* #filter-clouds-to-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task FilterCloudsToSurfaceAsync(
@@ -210,6 +248,7 @@ public Task FilterCloudsToSurfaceAsync(
         double highProximity = 0.0,
         int skipFactor = 0,
         PointOutputType outputType = PointOutputType.Points,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -219,6 +258,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-bsplines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task FilterCloudsToBSplinesAsync(
         IEnumerable<CollectionObjectName> cloudNames,
@@ -227,6 +268,7 @@ public Task FilterCloudsToBSplinesAsync(
         double minimumProximity = 0.0,
         double maximumProximity = 0.0,
         PointOutputType outputType = PointOutputType.Points,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -235,6 +277,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Line Segment {/* #filter-clouds-to-line-segment */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-line-segment)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task FilterCloudsToLineSegmentAsync(
@@ -245,6 +289,7 @@ public Task FilterCloudsToLineSegmentAsync(
         double minimumProximity = 0.0,
         double maximumProximity = 0.0,
         PointOutputType outputType = PointOutputType.Points,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -253,6 +298,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Vector Groups - Resolve points {/* #filter-clouds-to-vector-groups---resolve-points */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task FilterCloudsToVectorGroupsResolvePointsAsync(
@@ -264,6 +311,7 @@ public Task FilterCloudsToVectorGroupsResolvePointsAsync(
         double maximumDistanceFromVectorBegin = 0.0,
         int minimumNumberOfRequiredPoints = 0,
         PointOutputType outputType = PointOutputType.Points,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -272,6 +320,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## RGB Cloud Point Filter {/* #rgb-cloud-point-filter */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#rgb-cloud-point-filter)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task RGBCloudPointFilterAsync(
@@ -298,6 +348,7 @@ public Task RGBCloudPointFilterAsync(
         bool grayScaleLowEnabled = false,
         int grayScaleLowThreshold = 0,
         RGBFilterOperation rgbFilterOperation = RGBFilterOperation.ResetAndApplyFilter,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -307,12 +358,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task DeleteCloudPointsByRadialDistanceFromPointsAsync(
         IEnumerable<CollectionObjectName> cloudNames,
         IEnumerable<PointName> points,
         double radius = 0.0,
         bool deleteInside = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -322,24 +376,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
 
-```csharp
-public Task DeleteCloudPointsByXYZRangeAsync(
-        IEnumerable<CollectionObjectName> cloudNames,
-        double? xMin = null,
-        double? xMax = null,
-        double? yMin = null,
-        double? yMax = null,
-        double? zMin = null,
-        double? zMax = null,
-        bool deleteInside = false,
-        CancellationToken cancellationToken = default);
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and it has no licensed validation yet. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Generate General Mesh {/* #generate-general-mesh */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#generate-general-mesh)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `long_running`
 
 ```csharp
 public Task GenerateGeneralMeshAsync(
@@ -350,6 +394,7 @@ public Task GenerateGeneralMeshAsync(
         bool finalize = true,
         bool useScanDirectionForPointNormal = true,
         FileReference? jsonFile = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -359,10 +404,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#mesh-volume)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<MeshVolumeResult> MeshVolumeAsync(
         CollectionObjectName mesh,
         CollectionObjectName plane,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -396,4 +444,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5)

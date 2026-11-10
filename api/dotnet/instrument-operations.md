@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,16 +8,19 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/instrument-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/instrument-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Get Last Instrument Index {/* #get-last-instrument-index */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC Contract](/api/grpc/instrument-operations#get-last-instrument-index)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<LastInstrumentIndexResult> GetLastInstrumentIndexAsync(
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -27,10 +30,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC Contract](/api/grpc/instrument-operations#rename-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task RenameInstrumentAsync(
         CollectionInstrumentId instrument,
         string newName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -40,9 +46,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-id-from-name)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<CollectionInstrumentId> GetInstrumentIdFromNameAsync(
         string name,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -52,9 +61,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<InstrumentModelResult> GetInstrumentModelAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -64,10 +76,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC Contract](/api/grpc/instrument-operations#move-instrument-to-another-collection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task MoveInstrumentToAnotherCollectionAsync(
         CollectionInstrumentId instrument,
         CollectionName collectionName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -77,10 +92,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC Contract](/api/grpc/instrument-operations#save-instrument-configuration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_write`, `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SaveInstrumentConfigurationAsync(
         CollectionInstrumentId instrument,
         FileReference configurationFile,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -90,10 +108,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC Contract](/api/grpc/instrument-operations#load-instrument-configuration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task LoadInstrumentConfigurationAsync(
         CollectionInstrumentId instrument,
         FileReference configurationFile,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -103,10 +124,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC Contract](/api/grpc/instrument-operations#export-instrument-history-to-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```csharp
 public Task ExportInstrumentHistoryToXmlFileAsync(
         CollectionInstrumentId instrument,
         FileReference filePath,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -116,11 +140,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC Contract](/api/grpc/instrument-operations#point-at-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task PointAtTargetAsync(
         CollectionInstrumentId instrument,
         PointName targetId,
         FileReference? htmlPromptFile = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -130,12 +159,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC Contract](/api/grpc/instrument-operations#measure-single-point-here)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task MeasureSinglePointHereAsync(
         CollectionInstrumentId instrument,
         PointName targetId,
-        bool measureImmediately = false,
+        bool measureImmediately = true,
         FileReference? htmlPromptFile = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -145,17 +181,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC Contract](/api/grpc/instrument-operations#get-current-instrument-position-update)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<InstrumentPositionUpdate> GetCurrentInstrumentPositionUpdateAsync(
         CollectionInstrumentId instrument,
         InstrumentPositionReportingFrame reportingFrame = InstrumentPositionReportingFrame.InstrumentBase,
         bool polarCoordinates = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -168,13 +207,16 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC Contract](/api/grpc/instrument-operations#build-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```csharp
 public Task BuildTargetAsync(
         CollectionInstrumentId instrument,
         PointName outputTargetName,
         PointName nominalPoint,
-        ToleranceVectorOptions? tolerance = null,
+        ToleranceVectorOptions tolerance,
         FileReference? htmlPromptFile = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -184,13 +226,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task<PointName> MeasureExistingSinglePointAsync(
         CollectionInstrumentId instrument,
         PointName existingTargetId,
         CollectionObjectName groupNameForNewPoint,
-        bool measureImmediately = false,
+        bool measureImmediately = true,
         FileReference? htmlPromptFile = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -200,30 +249,46 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point-manual-guide)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```csharp
 public Task<PointName> MeasureExistingSinglePointManualGuideAsync(
         CollectionInstrumentId instrument,
         PointName existingTargetId,
         CollectionObjectName groupNameForNewPoint,
-        bool measureImmediately = false,
+        bool measureImmediately = true,
         FileReference? htmlPromptFile = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+
 ## Measure Existing Single Point and Compare {/* #measure-existing-single-point-and-compare */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point-and-compare)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task<PointComparisonResult> MeasureExistingSinglePointAndCompareAsync(
         CollectionInstrumentId instrument,
         PointName existingTargetId,
         CollectionObjectName groupNameForNewPoint,
-        bool measureImmediately = false,
+        bool measureImmediately = true,
         FileReference? htmlPromptFile = null,
         double tolerance = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -233,6 +298,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC Contract](/api/grpc/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```csharp
 public Task SetProbeOffsetFrameOnlineAsync(
         CollectionInstrumentId instrument,
@@ -241,6 +308,7 @@ public Task SetProbeOffsetFrameOnlineAsync(
         int faceId = 0,
         string measureProfileName = "",
         double timeoutSeconds = 15.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -250,6 +318,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC Contract](/api/grpc/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetProbeOffsetFrameOfflineAsync(
         CollectionInstrumentId instrument,
@@ -257,6 +327,7 @@ public Task SetProbeOffsetFrameOfflineAsync(
         CollectionObjectName rawMeasuredFrame,
         CollectionObjectName offsetFrame,
         int faceId = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -266,9 +337,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC Contract](/api/grpc/instrument-operations#stop-active-measurement-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StopActiveMeasurementModeAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -278,9 +352,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC Contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task EnableDisableFrameSetScanModeAllInstrumentsAsync(
         bool enableFrameSetScanMode = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -290,10 +367,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC Contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task EnableDisableFrameSetScanModeByInstrumentAsync(
         CollectionInstrumentId instrument,
         bool enableFrameSetScanMode = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -303,10 +383,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC Contract](/api/grpc/instrument-operations#enabledisable-point-set-scan-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task EnableDisablePointSetScanModeAsync(
         CollectionInstrumentId instrument,
         bool enablePointSetScanMode = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -316,9 +399,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC Contract](/api/grpc/instrument-operations#add-new-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<CollectionInstrumentId> AddNewInstrumentAsync(
         InstrumentTypeName instrumentType,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -328,11 +414,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC Contract](/api/grpc/instrument-operations#delete-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
+A request that sets `promptUserToConfirm` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task DeleteInstrumentAsync(
         CollectionInstrumentId instrument,
         bool promptUserToConfirm = false,
         bool keepResultingPoints = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -342,11 +433,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC Contract](/api/grpc/instrument-operations#delete-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task DeleteMeasurementsAsync(
         CollectionInstrumentId instrument,
         PointName pointName,
         bool deletePointIfNoMeasurementsRemain = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -356,35 +450,55 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC Contract](/api/grpc/instrument-operations#delete-measurement-observation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task DeleteMeasurementObservationAsync(
         PointName pointName,
-        int observationIndex = 0,
+        int observationIndex,
         bool deletePointIfNoMeasurementsRemain = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Move Measurement Observation {/* #move-measurement-observation */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC Contract](/api/grpc/instrument-operations#move-measurement-observation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task MoveMeasurementObservationAsync(
         PointName sourcePointName,
         PointName destinationPointName,
-        int observationIndex = 0,
+        int observationIndex,
         bool deletePointIfNoMeasurementsRemain = false,
         bool forceObservationActive = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Initiate Servo-Guide {/* #initiate-servo-guide */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC Contract](/api/grpc/instrument-operations#initiate-servo-guide)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```csharp
 public Task InitiateServoGuideAsync(
@@ -393,6 +507,7 @@ public Task InitiateServoGuideAsync(
         string groupNameSuffix = "",
         string targetNameSuffix = "",
         double tolerance = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -402,6 +517,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC Contract](/api/grpc/instrument-operations#start-theodolite-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StartTheodoliteInterfaceAsync(
         CollectionInstrumentId instrument,
@@ -409,6 +526,7 @@ public Task StartTheodoliteInterfaceAsync(
         int commPort = 0,
         string? deviceIpAddress = null,
         bool simulation = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -418,6 +536,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC Contract](/api/grpc/instrument-operations#start-instrument-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `external_io` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StartInstrumentInterfaceAsync(
         CollectionInstrumentId instrument,
@@ -426,6 +546,7 @@ public Task StartInstrumentInterfaceAsync(
         int interfaceType = 0,
         bool runInSimulation = false,
         bool allowStartWithoutInitializationRequirements = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -435,9 +556,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC Contract](/api/grpc/instrument-operations#stop-instrument-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StopInstrumentInterfaceAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -447,10 +571,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC Contract](/api/grpc/instrument-operations#activatedeactivate-instrument-toolbar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task ActivateDeactivateInstrumentToolbarAsync(
         CollectionInstrumentId instrument,
         bool deactivateToolbar = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -460,9 +587,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC Contract](/api/grpc/instrument-operations#verify-instrument-connection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<bool> VerifyInstrumentConnectionAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -472,14 +602,21 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC Contract](/api/grpc/instrument-operations#configure-and-measure)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task ConfigureAndMeasureAsync(
         CollectionInstrumentId instrument,
         PointName target,
         string measurementMode,
-        bool measureImmediately = false,
+        bool measureImmediately = true,
         bool waitForCompletion = true,
         double timeoutSeconds = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -489,9 +626,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC Contract](/api/grpc/instrument-operations#measure)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task MeasureAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -501,10 +641,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC Contract](/api/grpc/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetXyzReferenceFrameInstrumentBaseAnchorFrameAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName anchorFrame,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -514,10 +657,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC Contract](/api/grpc/instrument-operations#dock-instrument-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task DockInstrumentInterfaceAsync(
         CollectionInstrumentId instrument,
         bool dockInterface = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -527,6 +673,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-ref-tie-in)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```csharp
 public Task LocateInstrumentRefTieInAsync(
         CollectionInstrumentId instrument,
@@ -534,6 +682,7 @@ public Task LocateInstrumentRefTieInAsync(
         CollectionObjectName actualsGroup,
         double tolerance = 0.0,
         bool autoSurvey = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -543,15 +692,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-group-to-surface-quick-fit)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<FitErrorResult> LocateInstrumentGroupToSurfaceQuickFitAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName measuredGroup,
         CollectionObjectName surfacePointsGroup,
         CollectionObjectName surfaceToFit,
-        IEnumerable<CollectionObjectName>? otherObjectsToTransform = null,
+        IEnumerable<CollectionObjectName> otherObjectsToTransform,
         double rmsTolerance = 0.0,
         double maximumAbsoluteTolerance = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -561,11 +713,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC Contract](/api/grpc/instrument-operations#multi-measurement-initiate)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task MultiMeasurementInitiateAsync(
         IEnumerable<CollectionInstrumentId> instruments,
         string measurementMode,
         bool waitForCompletion = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -575,9 +730,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC Contract](/api/grpc/instrument-operations#multi-measurement-stop)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task MultiMeasurementStopAsync(
         IEnumerable<CollectionInstrumentId> instruments,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -587,10 +745,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC Contract](/api/grpc/instrument-operations#align-laser-projector)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task AlignLaserProjectorAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName group,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -600,14 +761,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC Contract](/api/grpc/instrument-operations#locate-instruments-usmn)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `showUsmnDialog` to Yes or On Tolerance Violation also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task<FitErrorResult> LocateInstrumentsUsmnAsync(
         IEnumerable<CollectionInstrumentId> instruments,
         CollectionObjectName outputGroup,
+        ShowUsmnDialog showUsmnDialog,
         CollectionObjectName? nominalsGroup = null,
         bool moveInWorkingFrame = false,
         bool autoRejectOutliersAndResolve = false,
-        ShowUsmnDialog showUsmnDialog = ShowUsmnDialog.No,
         double maximumAcceptableRmsError = 0.0,
         double maximumAcceptableError = 0.0,
         IEnumerable<CollectionObjectName>? excludedGroups = null,
@@ -615,20 +780,24 @@ public Task<FitErrorResult> LocateInstrumentsUsmnAsync(
         bool runUncertaintyFieldAnalysis = false,
         int analysisSamples = 300,
         double analysisTimeLimit = 4.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
+| `nominalsGroup` | Optional (major 3): omitted when absent. An empty object name is sent blank, which SpatialAnalyzer documents as no nominals group. |
 | `analysisTimeLimit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC Contract](/api/grpc/instrument-operations#create-templated-instrument-usmn)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task CreateTemplatedInstrumentUsmnAsync(
@@ -647,12 +816,13 @@ public Task CreateTemplatedInstrumentUsmnAsync(
         double component1Weight = 1.0,
         double component2Weight = 1.0,
         double component3Weight = 1.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -663,6 +833,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Locate Instrument (Best Fit - Group to Group) {/* #locate-instrument-best-fit---group-to-group */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-best-fit---group-to-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task<InstrumentBestFitResult> LocateInstrumentBestFitGroupToGroupAsync(
@@ -681,6 +855,7 @@ public Task<InstrumentBestFitResult> LocateInstrumentBestFitGroupToGroupAsync(
         bool lockDegreesOfFreedom = false,
         bool generateEvent = false,
         FileReference? csvReport = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -689,6 +864,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Locate Instrument (Best Fit - Nominal Geometry) {/* #locate-instrument-best-fit---nominal-geometry */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-best-fit---nominal-geometry)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```csharp
 public Task<InstrumentBestFitResult> LocateInstrumentBestFitNominalGeometryAsync(
@@ -707,6 +886,7 @@ public Task<InstrumentBestFitResult> LocateInstrumentBestFitNominalGeometryAsync
         bool lockDegreesOfFreedom = false,
         bool generateEvent = false,
         FileReference? csvReport = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -716,10 +896,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-transform)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<Transform> GetInstrumentTransformAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName referenceFrame,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -729,12 +912,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-transform)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentTransformAsync(
         CollectionInstrumentId instrument,
         Transform destinationTransform,
         CollectionObjectName referenceFrame,
         int numberOfSteps = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -744,15 +930,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#get-trackeredm-theodolite-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<TrackerEdmTheodoliteUncertainties> GetTrackerEdmTheodoliteUncertaintiesAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -764,6 +953,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#set-trackeredm-theodolite-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetTrackerEdmTheodoliteUncertaintiesAsync(
         CollectionInstrumentId instrument,
@@ -773,12 +964,13 @@ public Task SetTrackerEdmTheodoliteUncertaintiesAsync(
         double phiThreshold = 0.001,
         double distance = 2.5,
         double distanceThreshold = 0.0003,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -790,9 +982,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<InstrumentXyzUncertainties> GetPcmmInstrumentXyzUncertaintiesAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -802,12 +997,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetPcmmInstrumentXyzUncertaintiesAsync(
         CollectionInstrumentId instrument,
         double xUncertainty = 0.001,
         double yUncertainty = 0.001,
         double zUncertainty = 0.001,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -817,9 +1015,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#get-xyz-instrument-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<InstrumentXyzUncertainties> GetXyzInstrumentUncertaintiesAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -829,12 +1030,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#set-xyz-instrument-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetXyzInstrumentUncertaintiesAsync(
         CollectionInstrumentId instrument,
         double xUncertainty = 0.0005,
         double yUncertainty = 0.0005,
         double zUncertainty = 0.0005,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -844,15 +1048,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-weather-setting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task<InstrumentWeatherSetting> GetInstrumentWeatherSettingAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -864,39 +1071,46 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-weather-setting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentWeatherSettingAsync(
         CollectionInstrumentId instrument,
-        double temperature = 0.0,
-        double pressure = 0.0,
-        double relativeHumidity = 0.0,
-        bool setAutomatically = false,
+        bool setAutomatically,
+        double? temperature = null,
+        double? pressure = null,
+        double? relativeHumidity = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `temperature` | Temperature in degrees Fahrenheit. |
-| `pressure` | Pressure in millimeters of mercury. |
-| `relativeHumidity` | Relative humidity in percent. |
+| `setAutomatically` | Required (major 3). |
+| `temperature` | Required (major 3) when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Temperature in degrees Fahrenheit. |
+| `pressure` | Required (major 3) when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Pressure in millimeters of mercury. |
+| `relativeHumidity` | Required (major 3) when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Relative humidity in percent. |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-part-temperature)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<double> GetInstrumentPartTemperatureAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -906,17 +1120,20 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC Contract](/api/grpc/instrument-operations#compute-cte-scale-factor)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> ComputeCteScaleFactorAsync(
         double materialCte = 0.0,
         double initialTemperature = 0.0,
         double finalTemperature = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -928,35 +1145,56 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC Contract](/api/grpc/instrument-operations#set-multiply-instrument-scale-factor-caution)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetMultiplyInstrumentScaleFactorAsync(
         CollectionInstrumentId instrument,
-        double scaleFactor = 0.0,
+        double scaleFactor,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Set (absolute) Instrument Scale Factor (CAUTION!) {/* #set-absolute-instrument-scale-factor-caution */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC Contract](/api/grpc/instrument-operations#set-absolute-instrument-scale-factor-caution)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetAbsoluteInstrumentScaleFactorAsync(
         CollectionInstrumentId instrument,
-        double scaleFactor = 0.0,
+        double scaleFactor,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Get Instrument Scale Factor {/* #get-instrument-scale-factor */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-scale-factor)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> GetInstrumentScaleFactorAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -966,12 +1204,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC Contract](/api/grpc/instrument-operations#transform-instrument---frame-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TransformInstrumentFrameToFrameAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName initialFrame,
         CollectionObjectName destinationFrame,
         int numberOfSteps = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -981,11 +1222,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC Contract](/api/grpc/instrument-operations#transform-instrument-by-delta)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TransformInstrumentByDeltaAsync(
         CollectionInstrumentId instrument,
         WorldTransform deltaTransform,
         bool applyScaleToInstrument = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -995,11 +1239,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC Contract](/api/grpc/instrument-operations#transform-multiple-instruments-by-delta)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task TransformMultipleInstrumentsByDeltaAsync(
         IEnumerable<CollectionInstrumentId> instruments,
         WorldTransform deltaTransform,
         bool applyScaleToInstruments = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1009,10 +1256,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC Contract](/api/grpc/instrument-operations#instrument-operational-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write`, `physical_motion`, `device_session`, `device_config` · **Duration Class:** `long_running`
+
+A request that sets a non-empty `checkType` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task InstrumentOperationalCheckAsync(
         CollectionInstrumentId instrument,
         string checkType,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1022,9 +1274,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC Contract](/api/grpc/instrument-operations#get-number-of-observations-on-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<int> GetNumberOfObservationsOnTargetAsync(
         PointName point,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1034,9 +1289,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC Contract](/api/grpc/instrument-operations#get-instruments-with-observations-on-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<IReadOnlyList<CollectionInstrumentId>> GetInstrumentsWithObservationsOnTargetAsync(
         PointName point,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1046,9 +1304,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC Contract](/api/grpc/instrument-operations#get-targets-measured-by-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<IReadOnlyList<PointName>> GetTargetsMeasuredByInstrumentAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1058,11 +1319,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC Contract](/api/grpc/instrument-operations#set-observation-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetObservationStatusAsync(
         PointName point,
         int observationIndex = 0,
         bool active = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1072,16 +1336,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC Contract](/api/grpc/instrument-operations#get-observation-info)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<ObservationInfo> GetObservationInfoAsync(
         PointName point,
         int observationIndex = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1093,6 +1360,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC Contract](/api/grpc/instrument-operations#fabricate-observations)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task FabricateObservationsAsync(
         CollectionInstrumentId instrument,
@@ -1101,6 +1370,7 @@ public Task FabricateObservationsAsync(
         bool limitDistance = false,
         double minimumDistance = 0.0,
         double maximumDistance = 1000000.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1110,11 +1380,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC Contract](/api/grpc/instrument-operations#get-obscured-points-from-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<IReadOnlyList<PointName>> GetObscuredPointsFromInstrumentAsync(
         CollectionInstrumentId instrument,
         IEnumerable<PointName> candidatePoints,
         bool showObscuredShots = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1124,9 +1397,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-targets-and-modeprofiles)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task<InstrumentTargetsAndModeProfiles> GetInstrumentTargetsAndModeProfilesAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1136,10 +1412,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-measurement-modeprofile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentMeasurementModeProfileAsync(
         CollectionInstrumentId instrument,
         string modeProfile,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1149,10 +1428,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-group-and-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentGroupAndTargetAsync(
         CollectionInstrumentId instrument,
         PointName point,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1162,10 +1444,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-targeting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentTargetingAsync(
         CollectionInstrumentId instrument,
         string targetingName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1175,9 +1460,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-measurement-modeprofile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task<string> GetInstrumentMeasurementModeProfileAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1187,9 +1475,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-group-and-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task<PointName> GetInstrumentGroupAndTargetAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1199,9 +1490,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-targeting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task<string> GetInstrumentTargetingAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1211,10 +1505,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC Contract](/api/grpc/instrument-operations#set-target-computation-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetTargetComputationOptionsAsync(
-        TargetComputationMethod computationMethod = TargetComputationMethod.UseMostRecentShotFromEachFace,
+        TargetComputationMethod computationMethod,
         bool ignoreDistanceMeasurements = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1224,12 +1521,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC Contract](/api/grpc/instrument-operations#set-observation-mirror-cube-shot-face)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetObservationMirrorCubeShotFaceAsync(
         PointName point,
         int observationIndex = 0,
         bool isMirrorCubeShot = false,
         int mirrorCubeShotFace = 1,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1239,12 +1539,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC Contract](/api/grpc/instrument-operations#set-observation-collimation-shot-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetObservationCollimationShotOptionsAsync(
         PointName point,
+        CollectionInstrumentId targetedInstrument,
         int observationIndex = 0,
         bool isCollimationShot = false,
-        CollectionInstrumentId? targetedInstrument = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1254,19 +1557,22 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC Contract](/api/grpc/instrument-operations#collimation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task CollimationAsync(
         CollectionInstrumentId stationaryInstrument,
         CollectionInstrumentId movingInstrument,
         PointName collimationPoint,
+        CollimationTiltMode tiltMode,
+        CollimationBaselineMethod baselineMethod,
+        PointName scalePoint1,
+        PointName scalePoint2,
+        PointName notMeasuredByMovingInstrument,
+        PointName asMeasuredByMovingInstrument,
         bool zeroMovingInstrument = false,
-        CollimationTiltMode tiltMode = CollimationTiltMode.FullCollimation,
-        CollimationBaselineMethod baselineMethod = CollimationBaselineMethod.DeterminedByValue,
         double baselineDistance = 0.0,
-        PointName? scalePoint1 = null,
-        PointName? scalePoint2 = null,
-        PointName? notMeasuredByMovingInstrument = null,
-        PointName? asMeasuredByMovingInstrument = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1276,9 +1582,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-target-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<InstrumentTargetStatus> GetInstrumentTargetStatusAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1288,9 +1597,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC Contract](/api/grpc/instrument-operations#make-surface-face-list-from-point-proximity)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<SurfaceFaceList> MakeSurfaceFaceListFromPointProximityAsync(
         IReadOnlyList<PointName> measuredPoints,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1300,6 +1612,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC Contract](/api/grpc/instrument-operations#scan-within-perimeter)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task ScanWithinPerimeterAsync(
         CollectionInstrumentId instrument,
@@ -1308,6 +1624,7 @@ public Task ScanWithinPerimeterAsync(
         string parameterSetName,
         CollectionObjectName pointGroup,
         bool waitForCompletion = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1316,6 +1633,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Edit Scan Perimeter Profile {/* #edit-scan-perimeter-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC Contract](/api/grpc/instrument-operations#edit-scan-perimeter-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `destructive`, `device_config` · **Duration Class:** `quick`
 
 ```csharp
 public Task EditScanPerimeterProfileAsync(
@@ -1326,6 +1645,7 @@ public Task EditScanPerimeterProfileAsync(
         string profileName,
         bool clearProfile = true,
         bool createNewProfile = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1335,10 +1655,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC Contract](/api/grpc/instrument-operations#get-estimated-scan-time)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<double> GetEstimatedScanTimeAsync(
         CollectionInstrumentId instrument,
         string profileName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1348,9 +1671,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC Contract](/api/grpc/instrument-operations#construct-perimeters-from-surface-face-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<PerimeterLists> ConstructPerimetersFromSurfaceFaceListAsync(
         SurfaceFaceList surfaceFaces,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1360,6 +1686,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC Contract](/api/grpc/instrument-operations#scan-cad-faces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task ScanCadFacesAsync(
         CollectionInstrumentId instrument,
@@ -1367,6 +1697,7 @@ public Task ScanCadFacesAsync(
         string parameterSetName,
         bool enableExclusions = true,
         bool waitForCompletion = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1376,6 +1707,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC Contract](/api/grpc/instrument-operations#edge-scan-measurement)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task EdgeScanMeasurementAsync(
         CollectionInstrumentId instrument,
@@ -1384,6 +1717,7 @@ public Task EdgeScanMeasurementAsync(
         string parameterSetName,
         CollectionObjectName pointGroup,
         string targetName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1392,6 +1726,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Track Tape Measurement {/* #track-tape-measurement */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC Contract](/api/grpc/instrument-operations#track-tape-measurement)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```csharp
 public Task TrackTapeMeasurementAsync(
@@ -1403,6 +1739,7 @@ public Task TrackTapeMeasurementAsync(
         string parameterSetName,
         CollectionObjectName pointGroup,
         string initialTargetName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1412,6 +1749,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `autoStart` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task AutoMeasurePointsAsync(
         CollectionInstrumentId instrument,
@@ -1420,7 +1763,8 @@ public Task AutoMeasurePointsAsync(
         bool forceExistingGroup = false,
         bool showCompleteDialog = false,
         bool waitForCompletion = true,
-        bool autoStart = false,
+        bool autoStart = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1429,6 +1773,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Auto-Measure Vectors {/* #auto-measure-vectors */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-vectors)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```csharp
 public Task AutoMeasureVectorsAsync(
@@ -1439,6 +1785,7 @@ public Task AutoMeasureVectorsAsync(
         double angleTolerance = 0.0,
         double highTolerance = 0.0,
         double lowTolerance = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1448,12 +1795,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-surface-vector-intersections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForComplete` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task AutoMeasureSurfaceVectorIntersectionsAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName vectorGroup,
         CollectionObjectName resultantGroup,
         bool waitForComplete = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1463,12 +1815,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-specified-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForComplete` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task AutoMeasureSpecifiedGeometryAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName geometry,
         string modeProfile,
-        bool waitForComplete = false,
+        bool waitForComplete = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1478,11 +1835,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-batch-of-features)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForComplete` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task AutoMeasureBatchOfFeaturesAsync(
         CollectionInstrumentId instrument,
         IEnumerable<CollectionItemName> features,
         bool waitForComplete = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1492,12 +1854,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC Contract](/api/grpc/instrument-operations#auto-correspond-closest-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```csharp
 public Task AutoCorrespondClosestPointAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName referenceGroup,
         CollectionObjectName actualsGroup,
         bool waitForCompletion = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1507,9 +1872,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC Contract](/api/grpc/instrument-operations#close-auto-correspond-closest-point-dialog)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task CloseAutoCorrespondClosestPointDialogAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1519,19 +1887,24 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC Contract](/api/grpc/instrument-operations#auto-correspond-with-proximity-trigger)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+A request that sets `showWatchWindow` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```csharp
 public Task AutoCorrespondWithProximityTriggerAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName nominalGroup,
         CollectionObjectName resultsGroup,
+        string deviationVectorGroupName,
         double pointDistanceThreshold = 0.5,
         double vectorAxisThreshold = 0.25,
         bool projectResultsToNominalVector = false,
         double warblerRampStartDistance = 12.0,
         bool showWatchWindow = false,
-        string? deviationVectorGroupName = null,
         bool makeUnmeasuredGroup = false,
         bool measureEachPointOnlyOnce = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1541,11 +1914,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC Contract](/api/grpc/instrument-operations#construct-mirror-from-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```csharp
 public Task ConstructMirrorFromPlaneAsync(
         CollectionInstrumentId instrument,
         string mirrorName,
         CollectionObjectName plane,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1555,6 +1931,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC Contract](/api/grpc/instrument-operations#construct-mirror-from-two-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<CollectionObjectName> ConstructMirrorFromTwoPointsAsync(
         CollectionInstrumentId instrument,
@@ -1562,6 +1940,7 @@ public Task<CollectionObjectName> ConstructMirrorFromTwoPointsAsync(
         PointName pointMeasuredDirectly,
         PointName pointMeasuredThroughMirror,
         bool sendMirrorToInstrument = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1571,6 +1950,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC Contract](/api/grpc/instrument-operations#drift-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```csharp
 public Task<DriftCheckResult> DriftCheckAsync(
         CollectionInstrumentId instrument,
@@ -1579,6 +1960,7 @@ public Task<DriftCheckResult> DriftCheckAsync(
         double tolerance = 0.0,
         int minimumPointCount = 0,
         bool useClosestReferencePoint = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1588,11 +1970,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC Contract](/api/grpc/instrument-operations#measure-nominal-feature)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task MeasureNominalFeatureAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName feature,
         PointName resultingPoint,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1601,6 +1986,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Guide Objects in 6D based on Point Measurements {/* #guide-objects-in-6d-based-on-point-measurements */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC Contract](/api/grpc/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```csharp
 public Task GuideObjectsIn6dBasedOnPointMeasurementsAsync(
@@ -1611,6 +1998,7 @@ public Task GuideObjectsIn6dBasedOnPointMeasurementsAsync(
         CollectionObjectName? initialSurveyGroup = null,
         ToleranceVectorOptions? positionalTolerance = null,
         ToleranceVectorOptions? rotationalTolerance = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1620,11 +2008,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC Contract](/api/grpc/instrument-operations#move-objects-in-6d-using-instrument-updates)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task MoveObjectsIn6dUsingInstrumentUpdatesAsync(
         CollectionInstrumentId instrument,
         IEnumerable<CollectionObjectName> objectsToMove,
         string measurementMode,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1634,6 +2025,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC Contract](/api/grpc/instrument-operations#align-two-targets-with-axis-wcf---x)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```csharp
 public Task AlignTwoTargetsWithAxisWcfXAsync(
         CollectionInstrumentId instrument,
@@ -1641,6 +2034,7 @@ public Task AlignTwoTargetsWithAxisWcfXAsync(
         PointName secondPointOnAxis,
         CollectionObjectName initialMeasuredGroup,
         ToleranceVectorOptions? rotationalTolerance = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1650,15 +2044,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-interface-response-timeout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task<double> GetInstrumentInterfaceResponseTimeoutAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1668,16 +2065,19 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-interface-response-timeout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentInterfaceResponseTimeoutAsync(
         CollectionInstrumentId instrument,
         double timeout = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1687,8 +2087,11 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC Contract](/api/grpc/instrument-operations#get-current-trapping-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<CurrentTrappingStatus> GetCurrentTrappingStatusAsync(
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1698,8 +2101,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC Contract](/api/grpc/instrument-operations#wait-for-trapping-to-complete)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task WaitForTrappingToCompleteAsync(
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1709,10 +2115,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC Contract](/api/grpc/instrument-operations#jump-instrument-to-new-location)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task JumpInstrumentToNewLocationAsync(
         CollectionInstrumentId liveInstrument,
         bool hidePreviousInstrument = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1722,6 +2131,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC Contract](/api/grpc/instrument-operations#quick-align)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task QuickAlignAsync(
         IEnumerable<CollectionInstrumentId> instruments,
@@ -1729,6 +2140,7 @@ public Task QuickAlignAsync(
         IEnumerable<PointName>? nominalPoints = null,
         IEnumerable<string>? nominalPointOfViewNames = null,
         bool alignToIndividualFacesOnly = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1738,6 +2150,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC Contract](/api/grpc/instrument-operations#align-cloud-to-cad)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<CloudToCadAlignmentResult> AlignCloudToCadAsync(
         CollectionObjectName cloud,
@@ -1745,6 +2159,7 @@ public Task<CloudToCadAlignmentResult> AlignCloudToCadAsync(
         double maximumCoarseCadMeshEdgeLength = 0.0,
         bool useFineCadMesh = false,
         bool executeAlignment = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1754,10 +2169,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC Contract](/api/grpc/instrument-operations#start-gdt-inspection-design)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StartGdtInspectionDesignAsync(
         CollectionName collection,
         InspectionFilter filter = InspectionFilter.All,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1767,10 +2185,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC Contract](/api/grpc/instrument-operations#start-gdt-inspection-rehearse)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StartGdtInspectionRehearseAsync(
         CollectionName collection,
         InspectionFilter filter = InspectionFilter.All,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1780,11 +2201,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC Contract](/api/grpc/instrument-operations#start-gdt-inspection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task StartGdtInspectionAsync(
         CollectionInstrumentId instrument,
         CollectionName collection,
         InspectionFilter filter = InspectionFilter.All,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1794,8 +2218,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC Contract](/api/grpc/instrument-operations#get-inspection-verification-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task<bool> GetInspectionVerificationModeAsync(
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1805,9 +2232,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC Contract](/api/grpc/instrument-operations#set-inspection-verification-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInspectionVerificationModeAsync(
         bool verificationEnabled = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1817,9 +2247,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC Contract](/api/grpc/instrument-operations#set-remeasure-failed-checks-only)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `destructive`, `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```csharp
 public Task SetRemeasureFailedChecksOnlyAsync(
         CollectionName collection,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1829,10 +2262,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC Contract](/api/grpc/instrument-operations#associate-objects-with-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task AssociateObjectsWithInstrumentAsync(
         CollectionInstrumentId instrument,
         IEnumerable<CollectionObjectName> objects,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1842,9 +2278,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC Contract](/api/grpc/instrument-operations#disassociate-objects-from-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task DisassociateObjectsFromInstrumentAsync(
         IEnumerable<CollectionObjectName> objects,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1854,9 +2293,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC Contract](/api/grpc/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<IReadOnlyList<CollectionObjectName>> MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstrumentsAsync(
         IEnumerable<CollectionInstrumentId> instruments,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1866,10 +2308,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC Contract](/api/grpc/instrument-operations#combine-point-groups)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task CombinePointGroupsAsync(
         IEnumerable<CollectionObjectName> groupsToCombine,
         CollectionObjectName combinedPointGroup,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1879,10 +2324,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC Contract](/api/grpc/instrument-operations#dissect-point-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task DissectPointGroupAsync(
         CollectionObjectName groupToDissect,
         string baseNameForDissectedGroups,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1892,6 +2340,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC Contract](/api/grpc/instrument-operations#synchronized-measurement-masterslave)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```csharp
 public Task SynchronizedMeasurementMasterSlaveAsync(
         CollectionInstrumentId masterInstrument,
@@ -1900,6 +2352,7 @@ public Task SynchronizedMeasurementMasterSlaveAsync(
         bool locateOneOfTheInstruments = true,
         bool locateMaster = false,
         bool waitForCompletion = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1909,11 +2362,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC Contract](/api/grpc/instrument-operations#create-new-dynamic-reference)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```csharp
 public Task CreateNewDynamicReferenceAsync(
         CollectionInstrumentId instrument,
         IEnumerable<PointName> pointsDefiningDynamicReference,
         string dynamicReferenceName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1923,11 +2379,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#calculate-tcp-fixture-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<TcpFixtureUncertainties> CalculateTcpFixtureUncertaintiesAsync(
         CollectionObjectName tcpFixture,
         IEnumerable<PointName> tcpMeasurements,
-        Transform? tcpInWorking = null,
+        Transform tcpInWorking,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1937,11 +2396,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC Contract](/api/grpc/instrument-operations#construct-tcp-fixture)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task<CollectionObjectName> ConstructTcpFixtureAsync(
         CollectionObjectName requestedTcpFixture,
         double pointMatchThreshold = 0.0,
         bool replaceExistingTcpFixture = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1950,6 +2412,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Nominal Point to TCP Fixture {/* #add-nominal-point-to-tcp-fixture */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC Contract](/api/grpc/instrument-operations#add-nominal-point-to-tcp-fixture)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task AddNominalPointToTcpFixtureAsync(
@@ -1962,6 +2426,7 @@ public Task AddNominalPointToTcpFixtureAsync(
         double covarXy = 0.0,
         double covarXz = 0.0,
         double covarYz = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1971,9 +2436,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC Contract](/api/grpc/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<UncertaintyCovarianceMatrix> GetLastSolvedTcpFixtureUncertaintyCovarianceMatrixAsync(
         CollectionObjectName tcpFixture,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1983,10 +2451,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentBaseUncertaintyCovarianceMatrixWrtBaseAsync(
         CollectionInstrumentId instrument,
         UncertaintyCovarianceMatrix covarianceMatrix,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -1996,10 +2467,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldAsync(
         CollectionInstrumentId instrument,
         UncertaintyCovarianceMatrix covarianceMatrix,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -2009,9 +2483,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<UncertaintyCovarianceMatrix> GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -2021,9 +2498,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC Contract](/api/grpc/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructMeasuredPointUncertaintyEllipsoidsAsync(
         IEnumerable<PointName> measurements,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -2033,9 +2513,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC Contract](/api/grpc/instrument-operations#get-wrtl-channel-and-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<WrtlChannelStatus> GetWrtlChannelAndStatusAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -2045,10 +2528,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC Contract](/api/grpc/instrument-operations#set-wrtl-channel)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task SetWrtlChannelAsync(
         CollectionInstrumentId instrument,
         int channel = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -2602,4 +3088,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7)

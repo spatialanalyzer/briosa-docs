@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/instrument-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/instrument-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index)
 
 `/briosa.InstrumentOperations/GetLastInstrumentIndex` · Operation ID: `instrument_operations.get_last_instrument_index`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -41,6 +43,8 @@ message GetLastInstrumentIndexResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#rename-instrument)
 
 `/briosa.InstrumentOperations/RenameInstrument` · Operation ID: `instrument_operations.rename_instrument`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -67,6 +71,8 @@ message RenameInstrumentResult {
 
 `/briosa.InstrumentOperations/GetInstrumentIdFromName` · Operation ID: `instrument_operations.get_instrument_id_from_name`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `string` | Name | Empty |
@@ -91,6 +97,8 @@ message GetInstrumentIdFromNameResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-model)
 
 `/briosa.InstrumentOperations/GetInstrumentModel` · Operation ID: `instrument_operations.get_instrument_model`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -119,6 +127,8 @@ message GetInstrumentModelResult {
 
 `/briosa.InstrumentOperations/MoveInstrumentToAnotherCollection` · Operation ID: `instrument_operations.move_instrument_to_another_collection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -143,6 +153,8 @@ message MoveInstrumentToAnotherCollectionResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration)
 
 `/briosa.InstrumentOperations/SaveInstrumentConfiguration` · Operation ID: `instrument_operations.save_instrument_configuration`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_write`, `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -169,6 +181,8 @@ message SaveInstrumentConfigurationResult {
 
 `/briosa.InstrumentOperations/LoadInstrumentConfiguration` · Operation ID: `instrument_operations.load_instrument_configuration`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -194,6 +208,8 @@ message LoadInstrumentConfigurationResult {
 
 `/briosa.InstrumentOperations/ExportInstrumentHistoryToXmlFile` · Operation ID: `instrument_operations.export_instrument_history_to_xml_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -218,6 +234,10 @@ message ExportInstrumentHistoryToXmlFileResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#point-at-target)
 
 `/briosa.InstrumentOperations/PointAtTarget` · Operation ID: `instrument_operations.point_at_target`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `html_prompt_file` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -246,11 +266,17 @@ message PointAtTargetResult {
 
 `/briosa.InstrumentOperations/MeasureSinglePointHere` · Operation ID: `instrument_operations.measure_single_point_here`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `html_prompt_file` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measure_immediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
 | Request | 2 | `target_id` | `optional PointName` | Target ID | Required |
-| Request | 3 | `measure_immediately` | `optional bool` | Measure Immediately | false |
+| Request | 3 | `measure_immediately` | `optional bool` | Measure Immediately | true |
 | Request | 4 | `html_prompt_file` | `optional FileReference` | HTML Prompt File (optional) | Omitted |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -274,6 +300,8 @@ message MeasureSinglePointHereResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update)
 
 `/briosa.InstrumentOperations/GetCurrentInstrumentPositionUpdate` · Operation ID: `instrument_operations.get_current_instrument_position_update`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -306,7 +334,7 @@ message GetCurrentInstrumentPositionUpdateResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -320,6 +348,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#build-target)
 
 `/briosa.InstrumentOperations/BuildTarget` · Operation ID: `instrument_operations.build_target`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -352,12 +382,18 @@ message BuildTargetResult {
 
 `/briosa.InstrumentOperations/MeasureExistingSinglePoint` · Operation ID: `instrument_operations.measure_existing_single_point`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `html_prompt_file` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measure_immediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
 | Request | 2 | `existing_target_id` | `optional PointName` | Existing Target ID | Required |
 | Request | 3 | `group_name_for_new_point` | `optional CollectionObjectName` | Group name for new point | Required |
-| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | false |
+| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | true |
 | Request | 5 | `html_prompt_file` | `optional FileReference` | HTML Prompt File (optional) | Omitted |
 | Result | 1 | `resulting_point_name` | `optional PointName` | Resulting Point Name | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -385,12 +421,14 @@ message MeasureExistingSinglePointResult {
 
 `/briosa.InstrumentOperations/MeasureExistingSinglePointManualGuide` · Operation ID: `instrument_operations.measure_existing_single_point_manual_guide`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
 | Request | 2 | `existing_target_id` | `optional PointName` | Existing Target ID | Required |
 | Request | 3 | `group_name_for_new_point` | `optional CollectionObjectName` | Group name for new point | Required |
-| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | false |
+| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | true |
 | Request | 5 | `html_prompt_file` | `optional FileReference` | HTML Prompt File (optional) | Omitted |
 | Result | 1 | `resulting_point_name` | `optional PointName` | Resulting Point Name | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -412,18 +450,30 @@ message MeasureExistingSinglePointManualGuideResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measure_immediately` | Defaults to true (major 3), as for the other measure operations. |
+
 ## Measure Existing Single Point and Compare {/* #measure-existing-single-point-and-compare */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare)
 
 `/briosa.InstrumentOperations/MeasureExistingSinglePointAndCompare` · Operation ID: `instrument_operations.measure_existing_single_point_and_compare`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `html_prompt_file` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measure_immediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
 | Request | 2 | `existing_target_id` | `optional PointName` | Existing Target ID | Required |
 | Request | 3 | `group_name_for_new_point` | `optional CollectionObjectName` | Group name for new point | Required |
-| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | false |
+| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | true |
 | Request | 5 | `html_prompt_file` | `optional FileReference` | HTML Prompt File (optional) | Omitted |
 | Request | 6 | `tolerance` | `optional double` | Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `vector_representation` | `optional Vector` | Vector Representation | — |
@@ -463,6 +513,8 @@ message MeasureExistingSinglePointAndCompareResult {
 
 `/briosa.InstrumentOperations/SetProbeOffsetFrameOnline` · Operation ID: `instrument_operations.set_probe_offset_frame_online`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -496,6 +548,8 @@ message SetProbeOffsetFrameOnlineResult {
 
 `/briosa.InstrumentOperations/SetProbeOffsetFrameOffline` · Operation ID: `instrument_operations.set_probe_offset_frame_offline`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -527,6 +581,8 @@ message SetProbeOffsetFrameOfflineResult {
 
 `/briosa.InstrumentOperations/StopActiveMeasurementMode` · Operation ID: `instrument_operations.stop_active_measurement_mode`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -550,6 +606,8 @@ message StopActiveMeasurementModeResult {
 
 `/briosa.InstrumentOperations/EnableDisableFrameSetScanModeAllInstruments` · Operation ID: `instrument_operations.enable_disable_frame_set_scan_mode_all_instruments`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `enable_frame_set_scan_mode` | `optional bool` | Enable Frame Set Scan Mode | true |
@@ -572,6 +630,8 @@ message EnableDisableFrameSetScanModeAllInstrumentsResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
 
 `/briosa.InstrumentOperations/EnableDisableFrameSetScanModeByInstrument` · Operation ID: `instrument_operations.enable_disable_frame_set_scan_mode_by_instrument`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -598,6 +658,8 @@ message EnableDisableFrameSetScanModeByInstrumentResult {
 
 `/briosa.InstrumentOperations/EnableDisablePointSetScanMode` · Operation ID: `instrument_operations.enable_disable_point_set_scan_mode`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -623,6 +685,8 @@ message EnableDisablePointSetScanModeResult {
 
 `/briosa.InstrumentOperations/AddNewInstrument` · Operation ID: `instrument_operations.add_new_instrument`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument_type` | `optional InstrumentTypeName` | Instrument Type | Required |
@@ -647,6 +711,10 @@ message AddNewInstrumentResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#delete-instrument)
 
 `/briosa.InstrumentOperations/DeleteInstrument` · Operation ID: `instrument_operations.delete_instrument`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
+A request that sets `prompt_user_to_confirm` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -675,6 +743,8 @@ message DeleteInstrumentResult {
 
 `/briosa.InstrumentOperations/DeleteMeasurements` · Operation ID: `instrument_operations.delete_measurements`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -702,10 +772,12 @@ message DeleteMeasurementsResult {
 
 `/briosa.InstrumentOperations/DeleteMeasurementObservation` · Operation ID: `instrument_operations.delete_measurement_observation`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
-| Request | 2 | `observation_index` | `optional int32` | Observation index | 0 |
+| Request | 2 | `observation_index` | `optional int32` | Observation index | Required |
 | Request | 3 | `delete_point_if_no_measurements_remain` | `optional bool` | Delete point if no measurements remain? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -723,16 +795,24 @@ message DeleteMeasurementObservationResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `observation_index` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Move Measurement Observation {/* #move-measurement-observation */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#move-measurement-observation)
 
 `/briosa.InstrumentOperations/MoveMeasurementObservation` · Operation ID: `instrument_operations.move_measurement_observation`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `source_point_name` | `optional PointName` | Source Point Name | Required |
-| Request | 2 | `observation_index` | `optional int32` | Observation index | 0 |
+| Request | 2 | `observation_index` | `optional int32` | Observation index | Required |
 | Request | 3 | `delete_point_if_no_measurements_remain` | `optional bool` | Delete point if no measurements remain? | false |
 | Request | 4 | `destination_point_name` | `optional PointName` | Destination Point Name | Required |
 | Request | 5 | `force_observation_active` | `optional bool` | Force observation to be active? | true |
@@ -754,11 +834,19 @@ message MoveMeasurementObservationResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `observation_index` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Initiate Servo-Guide {/* #initiate-servo-guide */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide)
 
 `/briosa.InstrumentOperations/InitiateServoGuide` · Operation ID: `instrument_operations.initiate_servo_guide`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -791,6 +879,8 @@ message InitiateServoGuideResult {
 
 `/briosa.InstrumentOperations/StartTheodoliteInterface` · Operation ID: `instrument_operations.start_theodolite_interface`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -821,6 +911,8 @@ message StartTheodoliteInterfaceResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-instrument-interface)
 
 `/briosa.InstrumentOperations/StartInstrumentInterface` · Operation ID: `instrument_operations.start_instrument_interface`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `external_io` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -855,6 +947,8 @@ message StartInstrumentInterfaceResult {
 
 `/briosa.InstrumentOperations/StopInstrumentInterface` · Operation ID: `instrument_operations.stop_instrument_interface`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -877,6 +971,8 @@ message StopInstrumentInterfaceResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar)
 
 `/briosa.InstrumentOperations/ActivateDeactivateInstrumentToolbar` · Operation ID: `instrument_operations.activate_deactivate_instrument_toolbar`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -903,6 +999,8 @@ message ActivateDeactivateInstrumentToolbarResult {
 
 `/briosa.InstrumentOperations/VerifyInstrumentConnection` · Operation ID: `instrument_operations.verify_instrument_connection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -928,12 +1026,18 @@ message VerifyInstrumentConnectionResult {
 
 `/briosa.InstrumentOperations/ConfigureAndMeasure` · Operation ID: `instrument_operations.configure_and_measure`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
+A request that sets `measure_immediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `wait_for_completion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
 | Request | 2 | `target` | `optional PointName` | Target Name | Required |
 | Request | 3 | `measurement_mode` | `optional string` | Measurement Mode | Empty |
-| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | false |
+| Request | 4 | `measure_immediately` | `optional bool` | Measure Immediately | true |
 | Request | 5 | `wait_for_completion` | `optional bool` | Wait for Completion | true |
 | Request | 6 | `timeout_seconds` | `optional double` | Timeout in Seconds | 0.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -961,6 +1065,8 @@ message ConfigureAndMeasureResult {
 
 `/briosa.InstrumentOperations/Measure` · Operation ID: `instrument_operations.measure`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -983,6 +1089,8 @@ message MeasureResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
 
 `/briosa.InstrumentOperations/SetXyzReferenceFrameInstrumentBaseAnchorFrame` · Operation ID: `instrument_operations.set_xyz_reference_frame_instrument_base_anchor_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1009,6 +1117,8 @@ message SetXyzReferenceFrameInstrumentBaseAnchorFrameResult {
 
 `/briosa.InstrumentOperations/DockInstrumentInterface` · Operation ID: `instrument_operations.dock_instrument_interface`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -1033,6 +1143,8 @@ message DockInstrumentInterfaceResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in)
 
 `/briosa.InstrumentOperations/LocateInstrumentRefTieIn` · Operation ID: `instrument_operations.locate_instrument_ref_tie_in`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1064,6 +1176,8 @@ message LocateInstrumentRefTieInResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit)
 
 `/briosa.InstrumentOperations/LocateInstrumentGroupToSurfaceQuickFit` · Operation ID: `instrument_operations.locate_instrument_group_to_surface_quick_fit`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1104,6 +1218,8 @@ message LocateInstrumentGroupToSurfaceQuickFitResult {
 
 `/briosa.InstrumentOperations/MultiMeasurementInitiate` · Operation ID: `instrument_operations.multi_measurement_initiate`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instruments` | `repeated CollectionInstrumentId` | Instruments | Required |
@@ -1131,6 +1247,8 @@ message MultiMeasurementInitiateResult {
 
 `/briosa.InstrumentOperations/MultiMeasurementStop` · Operation ID: `instrument_operations.multi_measurement_stop`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instruments` | `repeated CollectionInstrumentId` | Instruments | Required |
@@ -1153,6 +1271,8 @@ message MultiMeasurementStopResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-laser-projector)
 
 `/briosa.InstrumentOperations/AlignLaserProjector` · Operation ID: `instrument_operations.align_laser_projector`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1179,17 +1299,21 @@ message AlignLaserProjectorResult {
 
 `/briosa.InstrumentOperations/LocateInstrumentsUsmn` · Operation ID: `instrument_operations.locate_instruments_usmn`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `show_usmn_dialog` to `SHOW_USMN_DIALOG_YES` or `SHOW_USMN_DIALOG_ON_TOLERANCE_VIOLATION` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instruments` | `repeated CollectionInstrumentId` | Instruments to Locate | Required |
-| Request | 2 | `nominals_group` | `optional CollectionObjectName` | Nominals Group Name (blank for none) | Required |
+| Request | 2 | `nominals_group` | `optional CollectionObjectName` | Nominals Group Name (blank for none) | Omitted |
 | Request | 3 | `output_group` | `optional CollectionObjectName` | Output Group Name (to be established) | Required |
 | Request | 4 | `move_in_working_frame` | `optional bool` | Move In Working Frame (TRUE) or Instrument Frame (FALSE) | false |
 | Request | 5 | `auto_reject_outliers_and_resolve` | `optional bool` | AutoReject Outliers and Resolve | false |
 | Request | 6 | `show_usmn_dialog` | `optional ShowUsmnDialog` | Show USMN Dialog | Required |
 | Request | 7 | `maximum_acceptable_rms_error` | `optional double` | Max Acceptable RMS Error Value (0.0 for none) | 0.000000 |
 | Request | 8 | `maximum_acceptable_error` | `optional double` | Max Acceptable Error Value (0.0 for none) | 0.000000 |
-| Request | 9 | `excluded_groups` | `repeated CollectionObjectName` | Groups to be Excluded | Required |
+| Request | 9 | `excluded_groups` | `repeated CollectionObjectName` | Groups to be Excluded | Omitted |
 | Request | 10 | `exclude_single_instrument_points` | `optional bool` | Exclude Points Measured By Only One Instrument | false |
 | Request | 11 | `run_uncertainty_field_analysis` | `optional bool` | Run Uncertainty Field Analysis? | false |
 | Request | 12 | `analysis_samples` | `optional int32` | Analysis Samples | 300 |
@@ -1224,10 +1348,11 @@ message LocateInstrumentsUsmnResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
+| `nominals_group` | Optional (major 3): omitted when absent. An empty object name is sent blank, which SpatialAnalyzer documents as no nominals group. |
 | `analysis_time_limit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
@@ -1235,6 +1360,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn)
 
 `/briosa.InstrumentOperations/CreateTemplatedInstrumentUsmn` · Operation ID: `instrument_operations.create_templated_instrument_usmn`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1281,7 +1408,7 @@ message CreateTemplatedInstrumentUsmnResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1294,6 +1421,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group)
 
 `/briosa.InstrumentOperations/LocateInstrumentBestFitGroupToGroup` · Operation ID: `instrument_operations.locate_instrument_best_fit_group_to_group`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1360,6 +1491,10 @@ message LocateInstrumentBestFitGroupToGroupResult {
 
 `/briosa.InstrumentOperations/LocateInstrumentBestFitNominalGeometry` · Operation ID: `instrument_operations.locate_instrument_best_fit_nominal_geometry`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -1425,6 +1560,8 @@ message LocateInstrumentBestFitNominalGeometryResult {
 
 `/briosa.InstrumentOperations/GetInstrumentTransform` · Operation ID: `instrument_operations.get_instrument_transform`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -1451,6 +1588,8 @@ message GetInstrumentTransformResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-transform)
 
 `/briosa.InstrumentOperations/SetInstrumentTransform` · Operation ID: `instrument_operations.set_instrument_transform`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1481,6 +1620,8 @@ message SetInstrumentTransformResult {
 
 `/briosa.InstrumentOperations/GetTrackerEdmTheodoliteUncertainties` · Operation ID: `instrument_operations.get_tracker_edm_theodolite_uncertainties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -1510,7 +1651,7 @@ message GetTrackerEdmTheodoliteUncertaintiesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1523,6 +1664,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties)
 
 `/briosa.InstrumentOperations/SetTrackerEdmTheodoliteUncertainties` · Operation ID: `instrument_operations.set_tracker_edm_theodolite_uncertainties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1553,7 +1696,7 @@ message SetTrackerEdmTheodoliteUncertaintiesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1566,6 +1709,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
 
 `/briosa.InstrumentOperations/GetPcmmInstrumentXyzUncertainties` · Operation ID: `instrument_operations.get_pcmm_instrument_xyz_uncertainties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1596,6 +1741,8 @@ message GetPcmmInstrumentXyzUncertaintiesResult {
 
 `/briosa.InstrumentOperations/SetPcmmInstrumentXyzUncertainties` · Operation ID: `instrument_operations.set_pcmm_instrument_xyz_uncertainties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -1624,6 +1771,8 @@ message SetPcmmInstrumentXyzUncertaintiesResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties)
 
 `/briosa.InstrumentOperations/GetXyzInstrumentUncertainties` · Operation ID: `instrument_operations.get_xyz_instrument_uncertainties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1654,6 +1803,8 @@ message GetXyzInstrumentUncertaintiesResult {
 
 `/briosa.InstrumentOperations/SetXyzInstrumentUncertainties` · Operation ID: `instrument_operations.set_xyz_instrument_uncertainties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -1683,6 +1834,8 @@ message SetXyzInstrumentUncertaintiesResult {
 
 `/briosa.InstrumentOperations/GetInstrumentWeatherSetting` · Operation ID: `instrument_operations.get_instrument_weather_setting`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -1708,7 +1861,7 @@ message GetInstrumentWeatherSettingResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1722,13 +1875,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.InstrumentOperations/SetInstrumentWeatherSetting` · Operation ID: `instrument_operations.set_instrument_weather_setting`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Request | 2 | `temperature` | `optional double` | Temperature (F) | 0.000000 |
-| Request | 3 | `pressure` | `optional double` | Pressure (mmHg) | 0.000000 |
-| Request | 4 | `relative_humidity` | `optional double` | Humidity (%Rel) | 0.000000 |
-| Request | 5 | `set_automatically` | `optional bool` | Set Automatically? (Ignore above values) | false |
+| Request | 2 | `temperature` | `optional double` | Temperature (F) | Required when `set_automatically` is false; 0.000000 when it is true |
+| Request | 3 | `pressure` | `optional double` | Pressure (mmHg) | Required when `set_automatically` is false; 0.000000 when it is true |
+| Request | 4 | `relative_humidity` | `optional double` | Humidity (%Rel) | Required when `set_automatically` is false; 0.000000 when it is true |
+| Request | 5 | `set_automatically` | `optional bool` | Set Automatically? (Ignore above values) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1747,19 +1902,22 @@ message SetInstrumentWeatherSettingResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `temperature` | Temperature in degrees Fahrenheit. |
-| `pressure` | Pressure in millimeters of mercury. |
-| `relative_humidity` | Relative humidity in percent. |
+| `temperature` | Required (major 3) when `set_automatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Temperature in degrees Fahrenheit. |
+| `pressure` | Required (major 3) when `set_automatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Pressure in millimeters of mercury. |
+| `relative_humidity` | Required (major 3) when `set_automatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Relative humidity in percent. |
+| `set_automatically` | Required (major 3). |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature)
 
 `/briosa.InstrumentOperations/GetInstrumentPartTemperature` · Operation ID: `instrument_operations.get_instrument_part_temperature`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1780,7 +1938,7 @@ message GetInstrumentPartTemperatureResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1791,6 +1949,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor)
 
 `/briosa.InstrumentOperations/ComputeCteScaleFactor` · Operation ID: `instrument_operations.compute_cte_scale_factor`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1815,7 +1975,7 @@ message ComputeCteScaleFactorResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1829,10 +1989,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.InstrumentOperations/SetMultiplyInstrumentScaleFactor` · Operation ID: `instrument_operations.set_multiply_instrument_scale_factor`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Request | 2 | `scale_factor` | `optional double` | Scale Factor | 0.000000 |
+| Request | 2 | `scale_factor` | `optional double` | Scale Factor | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1848,16 +2010,24 @@ message SetMultiplyInstrumentScaleFactorResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scale_factor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Set (absolute) Instrument Scale Factor (CAUTION!) {/* #set-absolute-instrument-scale-factor-caution */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution)
 
 `/briosa.InstrumentOperations/SetAbsoluteInstrumentScaleFactor` · Operation ID: `instrument_operations.set_absolute_instrument_scale_factor`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Request | 2 | `scale_factor` | `optional double` | Scale Factor | 0.000000 |
+| Request | 2 | `scale_factor` | `optional double` | Scale Factor | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1873,11 +2043,19 @@ message SetAbsoluteInstrumentScaleFactorResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scale_factor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Get Instrument Scale Factor {/* #get-instrument-scale-factor */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor)
 
 `/briosa.InstrumentOperations/GetInstrumentScaleFactor` · Operation ID: `instrument_operations.get_instrument_scale_factor`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1903,6 +2081,8 @@ message GetInstrumentScaleFactorResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame)
 
 `/briosa.InstrumentOperations/TransformInstrumentFrameToFrame` · Operation ID: `instrument_operations.transform_instrument_frame_to_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1933,6 +2113,8 @@ message TransformInstrumentFrameToFrameResult {
 
 `/briosa.InstrumentOperations/TransformInstrumentByDelta` · Operation ID: `instrument_operations.transform_instrument_by_delta`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument to Transform | Required |
@@ -1959,6 +2141,8 @@ message TransformInstrumentByDeltaResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta)
 
 `/briosa.InstrumentOperations/TransformMultipleInstrumentsByDelta` · Operation ID: `instrument_operations.transform_multiple_instruments_by_delta`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1987,6 +2171,10 @@ message TransformMultipleInstrumentsByDeltaResult {
 
 `/briosa.InstrumentOperations/InstrumentOperationalCheck` · Operation ID: `instrument_operations.instrument_operational_check`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write`, `physical_motion`, `device_session`, `device_config` · **Duration Class:** `long_running`
+
+A request that sets a non-empty `check_type` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument to Check | Required |
@@ -2011,6 +2199,8 @@ message InstrumentOperationalCheckResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target)
 
 `/briosa.InstrumentOperations/GetNumberOfObservationsOnTarget` · Operation ID: `instrument_operations.get_number_of_observations_on_target`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2037,6 +2227,8 @@ message GetNumberOfObservationsOnTargetResult {
 
 `/briosa.InstrumentOperations/GetInstrumentsWithObservationsOnTarget` · Operation ID: `instrument_operations.get_instruments_with_observations_on_target`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point` | `optional PointName` | Point Name | Required |
@@ -2062,6 +2254,8 @@ message GetInstrumentsWithObservationsOnTargetResult {
 
 `/briosa.InstrumentOperations/GetTargetsMeasuredByInstrument` · Operation ID: `instrument_operations.get_targets_measured_by_instrument`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Measuring Instrument ID | Required |
@@ -2086,6 +2280,8 @@ message GetTargetsMeasuredByInstrumentResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-status)
 
 `/briosa.InstrumentOperations/SetObservationStatus` · Operation ID: `instrument_operations.set_observation_status`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2114,6 +2310,8 @@ message SetObservationStatusResult {
 
 `/briosa.InstrumentOperations/GetObservationInfo` · Operation ID: `instrument_operations.get_observation_info`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point` | `optional PointName` | Point Name | Required |
@@ -2135,7 +2333,7 @@ message GetObservationInfoResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -2148,6 +2346,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#fabricate-observations)
 
 `/briosa.InstrumentOperations/FabricateObservations` · Operation ID: `instrument_operations.fabricate_observations`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2182,6 +2382,8 @@ message FabricateObservationsResult {
 
 `/briosa.InstrumentOperations/GetObscuredPointsFromInstrument` · Operation ID: `instrument_operations.get_obscured_points_from_instrument`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -2211,6 +2413,8 @@ message GetObscuredPointsFromInstrumentResult {
 
 `/briosa.InstrumentOperations/GetInstrumentTargetsAndModeProfiles` · Operation ID: `instrument_operations.get_instrument_targets_and_mode_profiles`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument to set | Required |
@@ -2238,6 +2442,8 @@ message GetInstrumentTargetsAndModeProfilesResult {
 
 `/briosa.InstrumentOperations/SetInstrumentMeasurementModeProfile` · Operation ID: `instrument_operations.set_instrument_measurement_mode_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument to set | Required |
@@ -2262,6 +2468,8 @@ message SetInstrumentMeasurementModeProfileResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target)
 
 `/briosa.InstrumentOperations/SetInstrumentGroupAndTarget` · Operation ID: `instrument_operations.set_instrument_group_and_target`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2288,6 +2496,8 @@ message SetInstrumentGroupAndTargetResult {
 
 `/briosa.InstrumentOperations/SetInstrumentTargeting` · Operation ID: `instrument_operations.set_instrument_targeting`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -2313,6 +2523,8 @@ message SetInstrumentTargetingResult {
 
 `/briosa.InstrumentOperations/SetTargetComputationOptions` · Operation ID: `instrument_operations.set_target_computation_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `computation_method` | `optional TargetComputationMethod` | Target Computation Method | Required |
@@ -2337,6 +2549,8 @@ message SetTargetComputationOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face)
 
 `/briosa.InstrumentOperations/SetObservationMirrorCubeShotFace` · Operation ID: `instrument_operations.set_observation_mirror_cube_shot_face`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2367,6 +2581,8 @@ message SetObservationMirrorCubeShotFaceResult {
 
 `/briosa.InstrumentOperations/SetObservationCollimationShotOptions` · Operation ID: `instrument_operations.set_observation_collimation_shot_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point` | `optional PointName` | Point Name | Required |
@@ -2395,6 +2611,8 @@ message SetObservationCollimationShotOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#collimation)
 
 `/briosa.InstrumentOperations/Collimation` · Operation ID: `instrument_operations.collimation`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2439,6 +2657,8 @@ message CollimationResult {
 
 `/briosa.InstrumentOperations/GetInstrumentTargetStatus` · Operation ID: `instrument_operations.get_instrument_target_status`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
@@ -2464,6 +2684,8 @@ message GetInstrumentTargetStatusResult {
 
 `/briosa.InstrumentOperations/MakeSurfaceFaceListFromPointProximity` · Operation ID: `instrument_operations.make_surface_face_list_from_point_proximity`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `measured_points` | `repeated PointName` | Measured Points | Required |
@@ -2488,6 +2710,8 @@ message MakeSurfaceFaceListFromPointProximityResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time)
 
 `/briosa.InstrumentOperations/GetEstimatedScanTime` · Operation ID: `instrument_operations.get_estimated_scan_time`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2516,6 +2740,8 @@ message GetEstimatedScanTimeResult {
 
 `/briosa.InstrumentOperations/ConstructPerimetersFromSurfaceFaceList` · Operation ID: `instrument_operations.construct_perimeters_from_surface_face_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `surface_faces` | `optional SurfaceFaceList` | Selected Surface Faces | Empty |
@@ -2540,6 +2766,8 @@ message ConstructPerimetersFromSurfaceFaceListResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement)
 
 `/briosa.InstrumentOperations/EdgeScanMeasurement` · Operation ID: `instrument_operations.edge_scan_measurement`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2573,6 +2801,8 @@ message EdgeScanMeasurementResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#track-tape-measurement)
 
 `/briosa.InstrumentOperations/TrackTapeMeasurement` · Operation ID: `instrument_operations.track_tape_measurement`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2611,6 +2841,12 @@ message TrackTapeMeasurementResult {
 
 `/briosa.InstrumentOperations/AutoMeasurePoints` · Operation ID: `instrument_operations.auto_measure_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `auto_start` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `wait_for_completion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -2619,7 +2855,7 @@ message TrackTapeMeasurementResult {
 | Request | 4 | `force_existing_group` | `optional bool` | Force use of existing group? | false |
 | Request | 5 | `show_complete_dialog` | `optional bool` | Show complete dialog? | false |
 | Request | 6 | `wait_for_completion` | `optional bool` | Wait for Completion? | true |
-| Request | 7 | `auto_start` | `optional bool` | Auto Start? | false |
+| Request | 7 | `auto_start` | `optional bool` | Auto Start? | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -2645,6 +2881,8 @@ message AutoMeasurePointsResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors)
 
 `/briosa.InstrumentOperations/AutoMeasureVectors` · Operation ID: `instrument_operations.auto_measure_vectors`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2681,6 +2919,10 @@ message AutoMeasureVectorsResult {
 
 `/briosa.InstrumentOperations/AutoMeasureSurfaceVectorIntersections` · Operation ID: `instrument_operations.auto_measure_surface_vector_intersections`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `wait_for_complete` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -2710,12 +2952,16 @@ message AutoMeasureSurfaceVectorIntersectionsResult {
 
 `/briosa.InstrumentOperations/AutoMeasureSpecifiedGeometry` · Operation ID: `instrument_operations.auto_measure_specified_geometry`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `wait_for_complete` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
 | Request | 2 | `geometry` | `optional CollectionObjectName` | Object | Required |
 | Request | 3 | `mode_profile` | `optional string` | Mode/Profile | Empty |
-| Request | 4 | `wait_for_complete` | `optional bool` | Wait for Complete | false |
+| Request | 4 | `wait_for_complete` | `optional bool` | Wait for Complete | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -2738,6 +2984,10 @@ message AutoMeasureSpecifiedGeometryResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features)
 
 `/briosa.InstrumentOperations/AutoMeasureBatchOfFeatures` · Operation ID: `instrument_operations.auto_measure_batch_of_features`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `wait_for_complete` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2765,6 +3015,8 @@ message AutoMeasureBatchOfFeaturesResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point)
 
 `/briosa.InstrumentOperations/AutoCorrespondClosestPoint` · Operation ID: `instrument_operations.auto_correspond_closest_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2795,6 +3047,8 @@ message AutoCorrespondClosestPointResult {
 
 `/briosa.InstrumentOperations/CloseAutoCorrespondClosestPointDialog` · Operation ID: `instrument_operations.close_auto_correspond_closest_point_dialog`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -2817,6 +3071,10 @@ message CloseAutoCorrespondClosestPointDialogResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger)
 
 `/briosa.InstrumentOperations/AutoCorrespondWithProximityTrigger` · Operation ID: `instrument_operations.auto_correspond_with_proximity_trigger`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+A request that sets `show_watch_window` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2861,6 +3119,8 @@ message AutoCorrespondWithProximityTriggerResult {
 
 `/briosa.InstrumentOperations/ConstructMirrorFromPlane` · Operation ID: `instrument_operations.construct_mirror_from_plane`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -2887,6 +3147,8 @@ message ConstructMirrorFromPlaneResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points)
 
 `/briosa.InstrumentOperations/ConstructMirrorFromTwoPoints` · Operation ID: `instrument_operations.construct_mirror_from_two_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2920,6 +3182,8 @@ message ConstructMirrorFromTwoPointsResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#drift-check)
 
 `/briosa.InstrumentOperations/DriftCheck` · Operation ID: `instrument_operations.drift_check`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2962,6 +3226,8 @@ message DriftCheckResult {
 
 `/briosa.InstrumentOperations/MeasureNominalFeature` · Operation ID: `instrument_operations.measure_nominal_feature`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -2988,6 +3254,8 @@ message MeasureNominalFeatureResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
 
 `/briosa.InstrumentOperations/GuideObjectsIn6dBasedOnPointMeasurements` · Operation ID: `instrument_operations.guide_objects_in_6d_based_on_point_measurements`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3024,6 +3292,8 @@ message GuideObjectsIn6dBasedOnPointMeasurementsResult {
 
 `/briosa.InstrumentOperations/MoveObjectsIn6dUsingInstrumentUpdates` · Operation ID: `instrument_operations.move_objects_in_6d_using_instrument_updates`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -3050,6 +3320,8 @@ message MoveObjectsIn6dUsingInstrumentUpdatesResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x)
 
 `/briosa.InstrumentOperations/AlignTwoTargetsWithAxisWcfX` · Operation ID: `instrument_operations.align_two_targets_with_axis_wcf_x`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3082,6 +3354,8 @@ message AlignTwoTargetsWithAxisWcfXResult {
 
 `/briosa.InstrumentOperations/GetInstrumentInterfaceResponseTimeout` · Operation ID: `instrument_operations.get_instrument_interface_response_timeout`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -3101,7 +3375,7 @@ message GetInstrumentInterfaceResponseTimeoutResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -3112,6 +3386,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout)
 
 `/briosa.InstrumentOperations/SetInstrumentInterfaceResponseTimeout` · Operation ID: `instrument_operations.set_instrument_interface_response_timeout`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3132,7 +3408,7 @@ message SetInstrumentInterfaceResponseTimeoutResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -3143,6 +3419,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status)
 
 `/briosa.InstrumentOperations/GetCurrentTrappingStatus` · Operation ID: `instrument_operations.get_current_trapping_status`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3166,6 +3444,8 @@ message GetCurrentTrappingStatusResult {
 
 `/briosa.InstrumentOperations/WaitForTrappingToComplete` · Operation ID: `instrument_operations.wait_for_trapping_to_complete`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -3185,6 +3465,8 @@ message WaitForTrappingToCompleteResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location)
 
 `/briosa.InstrumentOperations/JumpInstrumentToNewLocation` · Operation ID: `instrument_operations.jump_instrument_to_new_location`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3210,6 +3492,8 @@ message JumpInstrumentToNewLocationResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#quick-align)
 
 `/briosa.InstrumentOperations/QuickAlign` · Operation ID: `instrument_operations.quick_align`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3241,6 +3525,8 @@ message QuickAlignResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad)
 
 `/briosa.InstrumentOperations/AlignCloudToCad` · Operation ID: `instrument_operations.align_cloud_to_cad`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3275,6 +3561,8 @@ message AlignCloudToCadResult {
 
 `/briosa.InstrumentOperations/StartGdtInspectionDesign` · Operation ID: `instrument_operations.start_gdt_inspection_design`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection Name | Required |
@@ -3300,6 +3588,8 @@ message StartGdtInspectionDesignResult {
 
 `/briosa.InstrumentOperations/StartGdtInspectionRehearse` · Operation ID: `instrument_operations.start_gdt_inspection_rehearse`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection Name | Required |
@@ -3324,6 +3614,8 @@ message StartGdtInspectionRehearseResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection)
 
 `/briosa.InstrumentOperations/StartGdtInspection` · Operation ID: `instrument_operations.start_gdt_inspection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3352,6 +3644,8 @@ message StartGdtInspectionResult {
 
 `/briosa.InstrumentOperations/SetRemeasureFailedChecksOnly` · Operation ID: `instrument_operations.set_remeasure_failed_checks_only`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `destructive`, `device_session`, `device_config` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection Name | Required |
@@ -3374,6 +3668,8 @@ message SetRemeasureFailedChecksOnlyResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument)
 
 `/briosa.InstrumentOperations/AssociateObjectsWithInstrument` · Operation ID: `instrument_operations.associate_objects_with_instrument`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3400,6 +3696,8 @@ message AssociateObjectsWithInstrumentResult {
 
 `/briosa.InstrumentOperations/DisassociateObjectsFromInstrument` · Operation ID: `instrument_operations.disassociate_objects_from_instrument`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects` | `repeated CollectionObjectName` | Objects | Required |
@@ -3422,6 +3720,8 @@ message DisassociateObjectsFromInstrumentResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
 
 `/briosa.InstrumentOperations/MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstruments` · Operation ID: `instrument_operations.make_collection_object_name_ref_list_from_objects_associated_with_instruments`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3448,6 +3748,8 @@ message MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstrumentsResul
 
 `/briosa.InstrumentOperations/CombinePointGroups` · Operation ID: `instrument_operations.combine_point_groups`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `groups_to_combine` | `repeated CollectionObjectName` | Groups to Combine | Required |
@@ -3473,6 +3775,8 @@ message CombinePointGroupsResult {
 
 `/briosa.InstrumentOperations/DissectPointGroup` · Operation ID: `instrument_operations.dissect_point_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `group_to_dissect` | `optional CollectionObjectName` | Group to Dissect | Required |
@@ -3497,6 +3801,10 @@ message DissectPointGroupResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave)
 
 `/briosa.InstrumentOperations/SynchronizedMeasurementMasterSlave` · Operation ID: `instrument_operations.synchronized_measurement_master_slave`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `wait_for_completion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3531,6 +3839,8 @@ message SynchronizedMeasurementMasterSlaveResult {
 
 `/briosa.InstrumentOperations/CreateNewDynamicReference` · Operation ID: `instrument_operations.create_new_dynamic_reference`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -3557,6 +3867,8 @@ message CreateNewDynamicReferenceResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties)
 
 `/briosa.InstrumentOperations/CalculateTcpFixtureUncertainties` · Operation ID: `instrument_operations.calculate_tcp_fixture_uncertainties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3587,6 +3899,8 @@ message CalculateTcpFixtureUncertaintiesResult {
 
 `/briosa.InstrumentOperations/ConstructTcpFixture` · Operation ID: `instrument_operations.construct_tcp_fixture`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `requested_tcp_fixture` | `optional CollectionObjectName` | Requested TCP Fixture | Required |
@@ -3615,6 +3929,8 @@ message ConstructTcpFixtureResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture)
 
 `/briosa.InstrumentOperations/AddNominalPointToTcpFixture` · Operation ID: `instrument_operations.add_nominal_point_to_tcp_fixture`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3655,6 +3971,8 @@ message AddNominalPointToTcpFixtureResult {
 
 `/briosa.InstrumentOperations/GetLastSolvedTcpFixtureUncertaintyCovarianceMatrix` · Operation ID: `instrument_operations.get_last_solved_tcp_fixture_uncertainty_covariance_matrix`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `tcp_fixture` | `optional CollectionObjectName` | TCP Fixture | Required |
@@ -3679,6 +3997,8 @@ message GetLastSolvedTcpFixtureUncertaintyCovarianceMatrixResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
 
 `/briosa.InstrumentOperations/SetInstrumentBaseUncertaintyCovarianceMatrixWrtBase` · Operation ID: `instrument_operations.set_instrument_base_uncertainty_covariance_matrix_wrt_base`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3705,6 +4025,8 @@ message SetInstrumentBaseUncertaintyCovarianceMatrixWrtBaseResult {
 
 `/briosa.InstrumentOperations/SetInstrumentBaseUncertaintyCovarianceMatrixWrtWorld` · Operation ID: `instrument_operations.set_instrument_base_uncertainty_covariance_matrix_wrt_world`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -3729,6 +4051,8 @@ message SetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 `/briosa.InstrumentOperations/GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorld` · Operation ID: `instrument_operations.get_instrument_base_uncertainty_covariance_matrix_wrt_world`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3755,6 +4079,8 @@ message GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldResult {
 
 `/briosa.InstrumentOperations/ConstructMeasuredPointUncertaintyEllipsoids` · Operation ID: `instrument_operations.construct_measured_point_uncertainty_ellipsoids`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `measurements` | `repeated PointName` | Measurements | Required |
@@ -3777,6 +4103,8 @@ message ConstructMeasuredPointUncertaintyEllipsoidsResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status)
 
 `/briosa.InstrumentOperations/GetWrtlChannelAndStatus` · Operation ID: `instrument_operations.get_wrtl_channel_and_status`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3802,6 +4130,8 @@ message GetWrtlChannelAndStatusResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel)
 
 `/briosa.InstrumentOperations/SetWrtlChannel` · Operation ID: `instrument_operations.set_wrtl_channel`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3862,4 +4192,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

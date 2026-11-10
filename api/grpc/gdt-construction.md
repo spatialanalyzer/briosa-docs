@@ -1,6 +1,6 @@
 ---
 title: GDT Operations / GDT Construction
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/gdt-construction) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/gdt-construction)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-surface-face-list---runtime-select)
 
 `/briosa.GdtOperations/MakeSurfaceFaceListRuntimeSelect` · Operation ID: `gdt_operations.make_surface_face_list_runtime_select`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -39,6 +41,8 @@ message MakeSurfaceFaceListRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-surface-face-list-from-surface)
 
 `/briosa.GdtOperations/MakeSurfaceFaceListFromSurface` · Operation ID: `gdt_operations.make_surface_face_list_from_surface`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -64,6 +68,8 @@ message MakeSurfaceFaceListFromSurfaceResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-gdt-feature-check-annotation)
 
 `/briosa.GdtOperations/MakeGdtFeatureCheckAnnotation` · Operation ID: `gdt_operations.make_gdt_feature_check_annotation`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -146,6 +152,8 @@ message MakeGdtFeatureCheckAnnotationResult {
 
 `/briosa.GdtOperations/MakeGdtDatumAnnotation` · Operation ID: `gdt_operations.make_gdt_datum_annotation`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `datum_name` | `string` | Datum Name | Empty |
@@ -183,6 +191,8 @@ message MakeGdtDatumAnnotationResult {
 
 `/briosa.GdtOperations/MakeFeatureChecks` · Operation ID: `gdt_operations.make_feature_checks`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection Name | Required |
@@ -205,6 +215,8 @@ message MakeFeatureChecksResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-a-feature-check-ref-list-from-a-collection)
 
 `/briosa.GdtOperations/MakeFeatureCheckRefListFromCollection` · Operation ID: `gdt_operations.make_feature_check_ref_list_from_collection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -230,6 +242,8 @@ message MakeFeatureCheckRefListFromCollectionResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-a-feature-check-reference-list--wildcard-selection)
 
 `/briosa.GdtOperations/MakeFeatureCheckReferenceListWildcardSelection` · Operation ID: `gdt_operations.make_feature_check_reference_list_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -258,6 +272,8 @@ message MakeFeatureCheckReferenceListWildcardSelectionResult {
 
 `/briosa.GdtOperations/MakeAnnotationRefListFromCollection` · Operation ID: `gdt_operations.make_annotation_ref_list_from_collection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection Name | Required |
@@ -282,6 +298,8 @@ message MakeAnnotationRefListFromCollectionResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-annotation-ref-list--wildcard-selection)
 
 `/briosa.GdtOperations/MakeAnnotationRefListWildcardSelection` · Operation ID: `gdt_operations.make_annotation_ref_list_wildcard_selection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -310,6 +328,8 @@ message MakeAnnotationRefListWildcardSelectionResult {
 
 `/briosa.GdtOperations/DeleteFeatureChecks` · Operation ID: `gdt_operations.delete_feature_checks`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_checks` | `repeated CollectionItemName` | Feature Check Name List | Required |
@@ -332,6 +352,8 @@ message DeleteFeatureChecksResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-a-datum-ref-list-from-a-collection)
 
 `/briosa.GdtOperations/MakeDatumRefListFromCollection` · Operation ID: `gdt_operations.make_datum_ref_list_from_collection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -376,4 +398,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

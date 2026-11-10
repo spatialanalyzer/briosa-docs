@@ -1,6 +1,6 @@
 ---
 title: File Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/file-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/file-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/file-operations#backup-now)
 
 `/briosa.FileOperations/BackupNow` · Operation ID: `file_operations.backup_now`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -39,6 +41,8 @@ message BackupNowResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#copy-general-file)
 
 `/briosa.FileOperations/CopyGeneralFile` · Operation ID: `file_operations.copy_general_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -67,6 +71,8 @@ message CopyGeneralFileResult {
 
 `/briosa.FileOperations/DeleteGeneralFile` · Operation ID: `file_operations.delete_general_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `filesystem_delete`, `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `file_name` | `optional FileReference` | File Name | Required |
@@ -89,6 +95,12 @@ message DeleteGeneralFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#direct-cad-access)
 
 `/briosa.FileOperations/DirectCadAccess` · Operation ID: `file_operations.direct_cad_access`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `prompt_on_missing_components` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `selective_import` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -116,7 +128,7 @@ message DeleteGeneralFileResult {
 | Request | 22 | `import_into_folders_matching_cad_file_hierarchy` | `optional bool` | Import into Folders matching CAD file hierarchy | false |
 | Request | 23 | `remove_empty_folders` | `optional bool` | Remove Empty Folders | true |
 | Request | 24 | `surface_normals_mode` | `optional int32` | Surface Normals Mode (1 or 2) | 1 |
-| Request | 25 | `prompt_on_missing_components` | `optional bool` | Prompt on Missing Components | true |
+| Request | 25 | `prompt_on_missing_components` | `optional bool` | Prompt on Missing Components | false |
 | Request | 26 | `selective_import` | `optional bool` | Selective Import | false |
 | Request | 27 | `surface_compatibility_mode` | `optional bool` | Surface Compatibility Mode | true |
 | Request | 28 | `explode_surfaces` | `optional bool` | Explode Surfaces | false |
@@ -173,7 +185,7 @@ message DirectCadAccessResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -185,6 +197,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-frame-set)
 
 `/briosa.FileOperations/ExportAsciiFrameSet` · Operation ID: `file_operations.export_ascii_frame_set`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -221,6 +235,8 @@ message ExportAsciiFrameSetResult {
 
 `/briosa.FileOperations/ExportAsciiFrames` · Operation ID: `file_operations.export_ascii_frames`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `ascii_file_path` | `optional FileReference` | ASCII File Path | Required |
@@ -249,6 +265,8 @@ message ExportAsciiFramesResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds)
 
 `/briosa.FileOperations/ExportAsciiPointClouds` · Operation ID: `file_operations.export_ascii_point_clouds`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -284,6 +302,8 @@ message ExportAsciiPointCloudsResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-point-set)
 
 `/briosa.FileOperations/ExportAsciiPointSet` · Operation ID: `file_operations.export_ascii_point_set`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -326,7 +346,7 @@ message ExportAsciiPointSetResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -337,6 +357,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-points)
 
 `/briosa.FileOperations/ExportAsciiPoints` · Operation ID: `file_operations.export_ascii_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -389,7 +411,7 @@ message ExportAsciiPointsResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -400,6 +422,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-dxf)
 
 `/briosa.FileOperations/ExportDxf` · Operation ID: `file_operations.export_dxf`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -430,6 +454,8 @@ message ExportDxfResult {
 
 `/briosa.FileOperations/ExportEmbeddedFile` · Operation ID: `file_operations.export_embedded_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `embedded_file_collection_name` | `optional CollectionName` | Embedded File Collection Name | Required |
@@ -459,6 +485,8 @@ message ExportEmbeddedFileResult {
 
 `/briosa.FileOperations/ExportHiddenPointBarXmlFile` · Operation ID: `file_operations.export_hidden_point_bar_xml_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `xml_file_path` | `optional FileReference` | XML File Path | Required |
@@ -482,6 +510,8 @@ message ExportHiddenPointBarXmlFileResult {
 
 `/briosa.FileOperations/ExportIgesFileEntireModel` · Operation ID: `file_operations.export_iges_file_entire_model`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `iges_file_path` | `optional FileReference` | IGES File Path | Required |
@@ -504,6 +534,8 @@ message ExportIgesFileEntireModelResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model)
 
 `/briosa.FileOperations/ExportIgesFilePartialModel` · Operation ID: `file_operations.export_iges_file_partial_model`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -529,6 +561,8 @@ message ExportIgesFilePartialModelResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds)
 
 `/briosa.FileOperations/ExportPtxPointClouds` · Operation ID: `file_operations.export_ptx_point_clouds`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -558,6 +592,8 @@ message ExportPtxPointCloudsResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-qdas-characteristics)
 
 `/briosa.FileOperations/ExportQdasCharacteristics` · Operation ID: `file_operations.export_qdas_characteristics`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -616,6 +652,8 @@ message ExportQdasCharacteristicsResult {
 
 `/briosa.FileOperations/ExportQdasDataList` · Operation ID: `file_operations.export_qdas_data_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `qdas_export_file_path` | `optional FileReference` | QDAS Export File Path | Required |
@@ -638,6 +676,8 @@ message ExportQdasDataListResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file)
 
 `/briosa.FileOperations/ExportScanStripeMeshToStlFile` · Operation ID: `file_operations.export_scan_stripe_mesh_to_stl_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -664,6 +704,8 @@ message ExportScanStripeMeshToStlFileResult {
 
 `/briosa.FileOperations/ExportStepFileEntireModel` · Operation ID: `file_operations.export_step_file_entire_model`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `step_file_path` | `optional FileReference` | STEP File Path | Required |
@@ -686,6 +728,8 @@ message ExportStepFileEntireModelResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-step-file---partial-model)
 
 `/briosa.FileOperations/ExportStepFilePartialModel` · Operation ID: `file_operations.export_step_file_partial_model`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -712,6 +756,8 @@ message ExportStepFilePartialModelResult {
 
 `/briosa.FileOperations/ExportVdaFsFileEntireModel` · Operation ID: `file_operations.export_vda_fs_file_entire_model`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vda_fs_file_path` | `optional FileReference` | VDA/FS File Path | Required |
@@ -734,6 +780,8 @@ message ExportVdaFsFileEntireModelResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model)
 
 `/briosa.FileOperations/ExportVdaFsFilePartialModel` · Operation ID: `file_operations.export_vda_fs_file_partial_model`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -759,6 +807,8 @@ message ExportVdaFsFilePartialModelResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file)
 
 `/briosa.FileOperations/ExportVectorContainerToAsciiFile` · Operation ID: `file_operations.export_vector_container_to_ascii_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -787,7 +837,7 @@ message ExportVectorContainerToAsciiFileResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -799,6 +849,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/file-operations#find-files-in-directory)
 
 `/briosa.FileOperations/FindFilesInDirectory` · Operation ID: `file_operations.find_files_in_directory`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -829,6 +881,8 @@ message FindFilesInDirectoryResult {
 
 `/briosa.FileOperations/FindSubDirectoriesInDirectory` · Operation ID: `file_operations.find_sub_directories_in_directory`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `directory` | `optional string` | Directory | Empty |
@@ -855,6 +909,8 @@ message FindSubDirectoriesInDirectoryResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file)
 
 `/briosa.FileOperations/GetBooleanFromDataShareFile` · Operation ID: `file_operations.get_boolean_from_data_share_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -883,6 +939,8 @@ message GetBooleanFromDataShareFileResult {
 
 `/briosa.FileOperations/GetDoubleFromDataShareFile` · Operation ID: `file_operations.get_double_from_data_share_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `data_share_file_path` | `optional FileReference` | DataShare File Path | Required |
@@ -909,6 +967,8 @@ message GetDoubleFromDataShareFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file)
 
 `/briosa.FileOperations/GetIntegerFromDataShareFile` · Operation ID: `file_operations.get_integer_from_data_share_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -937,6 +997,8 @@ message GetIntegerFromDataShareFileResult {
 
 `/briosa.FileOperations/GetQdasCatalogEntries` · Operation ID: `file_operations.get_qdas_catalog_entries`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `k_field_target` | `optional string` | K-Field Target | Empty |
@@ -961,6 +1023,8 @@ message GetQdasCatalogEntriesResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file)
 
 `/briosa.FileOperations/GetStringFromDataShareFile` · Operation ID: `file_operations.get_string_from_data_share_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -989,6 +1053,8 @@ message GetStringFromDataShareFileResult {
 
 `/briosa.FileOperations/GetTransformFromDataShareFile` · Operation ID: `file_operations.get_transform_from_data_share_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `data_share_file_path` | `optional FileReference` | DataShare File Path | Required |
@@ -1015,6 +1081,8 @@ message GetTransformFromDataShareFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file)
 
 `/briosa.FileOperations/GetVectorFromDataShareFile` · Operation ID: `file_operations.get_vector_from_data_share_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1043,6 +1111,8 @@ message GetVectorFromDataShareFileResult {
 
 `/briosa.FileOperations/GetWorkingDirectory` · Operation ID: `file_operations.get_working_directory`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1 | `directory` | `optional string` | Directory | — |
@@ -1066,6 +1136,8 @@ message GetWorkingDirectoryResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats)
 
 `/briosa.FileOperations/ImportAsciiPredefinedFormats` · Operation ID: `file_operations.import_ascii_predefined_formats`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1104,6 +1176,8 @@ message ImportAsciiPredefinedFormatsResult {
 
 `/briosa.FileOperations/ImportAsciiPredefinedFrameSetFormats` · Operation ID: `file_operations.import_ascii_predefined_frame_set_formats`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `ascii_file_path` | `optional FileReference` | ASCII File Path | Required |
@@ -1136,6 +1210,10 @@ message ImportAsciiPredefinedFrameSetFormatsResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-e57-file)
 
 `/briosa.FileOperations/ImportE57File` · Operation ID: `file_operations.import_e57_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `long_running`
+
+A request that sets `automatically_close_converter` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1172,6 +1250,8 @@ message ImportE57FileResult {
 
 `/briosa.FileOperations/ImportFileAsEmbeddedFile` · Operation ID: `file_operations.import_file_as_embedded_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `external_file_name` | `optional FileReference` | External File Name | Required |
@@ -1196,6 +1276,8 @@ message ImportFileAsEmbeddedFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-file-as-picture)
 
 `/briosa.FileOperations/ImportFileAsPicture` · Operation ID: `file_operations.import_file_as_picture`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1222,6 +1304,8 @@ message ImportFileAsPictureResult {
 
 `/briosa.FileOperations/ImportHiddenPointBarXmlFile` · Operation ID: `file_operations.import_hidden_point_bar_xml_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `xml_file_path` | `optional FileReference` | XML File Path | Required |
@@ -1247,6 +1331,8 @@ message ImportHiddenPointBarXmlFileResult {
 
 `/briosa.FileOperations/ImportIgesFile` · Operation ID: `file_operations.import_iges_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `iges_file_path` | `optional FileReference` | IGES File Path | Required |
@@ -1269,6 +1355,8 @@ message ImportIgesFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-leica-gsi-file)
 
 `/briosa.FileOperations/ImportLeicaGsiFile` · Operation ID: `file_operations.import_leica_gsi_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1297,6 +1385,8 @@ message ImportLeicaGsiFileResult {
 
 `/briosa.FileOperations/ImportLeicaSdbFile` · Operation ID: `file_operations.import_leica_sdb_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument_id` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -1324,6 +1414,8 @@ message ImportLeicaSdbFileResult {
 
 `/briosa.FileOperations/ImportMpFileAsEmbeddedMp` · Operation ID: `file_operations.import_mp_file_as_embedded_mp`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `external_mp_file_name` | `optional FileReference` | External MP File Name | Required |
@@ -1349,6 +1441,8 @@ message ImportMpFileAsEmbeddedMpResult {
 
 `/briosa.FileOperations/ImportNominalsFromXmlFile` · Operation ID: `file_operations.import_nominals_from_xml_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `file_path` | `optional FileReference` | File Path | Required |
@@ -1371,6 +1465,8 @@ message ImportNominalsFromXmlFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-polyworks-file)
 
 `/briosa.FileOperations/ImportPolyworksFile` · Operation ID: `file_operations.import_polyworks_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1397,6 +1493,8 @@ message ImportPolyworksFileResult {
 
 `/briosa.FileOperations/ImportQdasCatalogFile` · Operation ID: `file_operations.import_qdas_catalog_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `qdas_dfd_file_path` | `optional FileReference` | QDAS DFD File Path | Required |
@@ -1420,6 +1518,10 @@ message ImportQdasCatalogFileResult {
 
 `/briosa.FileOperations/ImportSaFile` · Operation ID: `file_operations.import_sa_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `allow_operator_selections` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `sa_file_name` | `optional FileReference` | SA File Name | Required |
@@ -1441,7 +1543,7 @@ message ImportSaFileResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1452,6 +1554,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-sa-windows-placement)
 
 `/briosa.FileOperations/ImportSaWindowsPlacement` · Operation ID: `file_operations.import_sa_windows_placement`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1476,6 +1580,8 @@ message ImportSaWindowsPlacementResult {
 
 `/briosa.FileOperations/ImportSatFile` · Operation ID: `file_operations.import_sat_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `sat_file_path` | `optional FileReference` | SAT File Path | Required |
@@ -1498,6 +1604,12 @@ message ImportSatFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-step-file)
 
 `/briosa.FileOperations/ImportStepFile` · Operation ID: `file_operations.import_step_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `display_entity_filters` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `display_residuals` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1525,6 +1637,8 @@ message ImportStepFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-stl-file)
 
 `/briosa.FileOperations/ImportStlFile` · Operation ID: `file_operations.import_stl_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1555,6 +1669,8 @@ message ImportStlFileResult {
 
 `/briosa.FileOperations/ImportVdaFsFile` · Operation ID: `file_operations.import_vda_fs_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vda_fs_file_path` | `optional FileReference` | VDA/FS File Path | Required |
@@ -1577,6 +1693,8 @@ message ImportVdaFsFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file)
 
 `/briosa.FileOperations/ImportVstarsXyzFile` · Operation ID: `file_operations.import_vstars_xyz_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1601,6 +1719,8 @@ message ImportVstarsXyzFileResult {
 
 `/briosa.FileOperations/ImportVstarsCameras` · Operation ID: `file_operations.import_vstars_cameras`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `file_path` | `optional FileReference` | File Path | Required |
@@ -1623,6 +1743,8 @@ message ImportVstarsCamerasResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#load-html-form)
 
 `/briosa.FileOperations/LoadHtmlForm` · Operation ID: `file_operations.load_html_form`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `filesystem_write`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1663,6 +1785,8 @@ message LoadHtmlFormResult {
 
 `/briosa.FileOperations/LoadHtmlFormInEdgeBrowser` · Operation ID: `file_operations.load_html_form_in_edge_browser`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `filesystem_write`, `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `input_html_form_path` | `optional FileReference` | Input HTML Form Path | Required |
@@ -1696,6 +1820,8 @@ message LoadHtmlFormInEdgeBrowserResult {
 
 `/briosa.FileOperations/MakeEmbeddedFileNameList` · Operation ID: `file_operations.make_embedded_file_name_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection_wildcard_criteria` | `optional string` | Collection Wildcard Criteria | * |
@@ -1723,6 +1849,8 @@ message MakeEmbeddedFileNameListResult {
 
 `/briosa.FileOperations/MergeMeasurementsIntoXmlFile` · Operation ID: `file_operations.merge_measurements_into_xml_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `file_path` | `optional FileReference` | File Path | Required |
@@ -1748,6 +1876,8 @@ message MergeMeasurementsIntoXmlFileResult {
 
 `/briosa.FileOperations/NewSaFile` · Operation ID: `file_operations.new_sa_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -1769,6 +1899,8 @@ message NewSaFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#open-sa-file)
 
 `/briosa.FileOperations/OpenSaFile` · Operation ID: `file_operations.open_sa_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1793,6 +1925,8 @@ message OpenSaFileResult {
 
 `/briosa.FileOperations/OpenTemplateFile` · Operation ID: `file_operations.open_template_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `template_file_name` | `optional FileReference` | Template File Name | Required |
@@ -1815,6 +1949,8 @@ message OpenTemplateFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window)
 
 `/briosa.FileOperations/PopPolyBayAnalysisWindow` · Operation ID: `file_operations.pop_poly_bay_analysis_window`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1840,6 +1976,8 @@ message PopPolyBayAnalysisWindowResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list)
 
 `/briosa.FileOperations/PrepareQdasDataList` · Operation ID: `file_operations.prepare_qdas_data_list`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1896,6 +2034,8 @@ message PrepareQdasDataListResult {
 
 `/briosa.FileOperations/RenameGeneralFile` · Operation ID: `file_operations.rename_general_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `filesystem_read`, `filesystem_write`, `filesystem_delete` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `source_file_name` | `optional FileReference` | Source File Name | Required |
@@ -1923,6 +2063,8 @@ message RenameGeneralFileResult {
 
 `/briosa.FileOperations/Save` · Operation ID: `file_operations.save`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -1944,6 +2086,8 @@ message SaveResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#save-as-read-only-template)
 
 `/briosa.FileOperations/SaveAsReadOnlyTemplate` · Operation ID: `file_operations.save_as_read_only_template`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1967,6 +2111,8 @@ message SaveAsReadOnlyTemplateResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#save-as)
 
 `/briosa.FileOperations/SaveAs` · Operation ID: `file_operations.save_as`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1995,6 +2141,8 @@ message SaveAsResult {
 
 `/briosa.FileOperations/SetBooleanInDataShareFile` · Operation ID: `file_operations.set_boolean_in_data_share_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `data_share_file_path` | `optional FileReference` | DataShare File Path | Required |
@@ -2021,6 +2169,8 @@ message SetBooleanInDataShareFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file)
 
 `/briosa.FileOperations/SetDoubleInDataShareFile` · Operation ID: `file_operations.set_double_in_data_share_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2049,6 +2199,8 @@ message SetDoubleInDataShareFileResult {
 
 `/briosa.FileOperations/SetIntegerInDataShareFile` · Operation ID: `file_operations.set_integer_in_data_share_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `data_share_file_path` | `optional FileReference` | DataShare File Path | Required |
@@ -2075,6 +2227,8 @@ message SetIntegerInDataShareFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file)
 
 `/briosa.FileOperations/SetStringInDataShareFile` · Operation ID: `file_operations.set_string_in_data_share_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2103,6 +2257,8 @@ message SetStringInDataShareFileResult {
 
 `/briosa.FileOperations/SetTransformInDataShareFile` · Operation ID: `file_operations.set_transform_in_data_share_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `data_share_file_path` | `optional FileReference` | DataShare File Path | Required |
@@ -2129,6 +2285,8 @@ message SetTransformInDataShareFileResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file)
 
 `/briosa.FileOperations/SetVectorInDataShareFile` · Operation ID: `file_operations.set_vector_in_data_share_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2157,6 +2315,8 @@ message SetVectorInDataShareFileResult {
 
 `/briosa.FileOperations/TerminateAllRunningMPs` · Operation ID: `file_operations.terminate_all_running_mps`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `destructive`, `code_execution` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -2178,6 +2338,8 @@ message TerminateAllRunningMPsResult {
 [MP Catalog](/mp-command-catalog/commands/file-operations#use-nrkxml-library)
 
 `/briosa.FileOperations/UseNrkxmlLibrary` · Operation ID: `file_operations.use_nrkxml_library`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2202,6 +2364,8 @@ message UseNrkxmlLibraryResult {
 
 `/briosa.FileOperations/VerifyGeneralFileExists` · Operation ID: `file_operations.verify_general_file_exists`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `file_name` | `optional FileReference` | File Name | Required |
@@ -2225,6 +2389,8 @@ message VerifyGeneralFileExistsResult {
 
 `/briosa.FileOperations/VerifyMpFileExists` · Operation ID: `file_operations.verify_mp_file_exists`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `mp_file_name` | `optional FileReference` | MP File Name | Required |
@@ -2242,4 +2408,4 @@ message VerifyMpFileExistsResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

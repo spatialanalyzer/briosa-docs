@@ -1,6 +1,6 @@
 ---
 title: Utility Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/utility-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/utility-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Close All Watch Windows {/* #close-all-watch-windows */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#close-all-watch-windows) · [gRPC Contract](/api/grpc/utility-operations#close-all-watch-windows)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export declare function closeAllWatchWindows(
@@ -29,9 +31,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#delete-folder) · [gRPC Contract](/api/grpc/utility-operations#delete-folder)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteFolderInput {
-  readonly folderPath?: string;
+  readonly folderPath: string;
 }
 
 export declare function deleteFolder(
@@ -43,9 +47,17 @@ export declare function deleteFolder(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `folderPath` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Delete Items {/* #delete-items */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#delete-items) · [gRPC Contract](/api/grpc/utility-operations#delete-items)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface DeleteItemsInput {
@@ -65,6 +77,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#delete-objects) · [gRPC Contract](/api/grpc/utility-operations#delete-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteObjectsInput {
   readonly objectNames: Iterable<CollectionObjectName>;
@@ -83,6 +97,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-active-language) · [gRPC Contract](/api/grpc/utility-operations#get-active-language)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function getActiveLanguage(
   briosa: BriosaClient,
@@ -95,6 +111,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Active Units {/* #get-active-units */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-active-units) · [gRPC Contract](/api/grpc/utility-operations#get-active-units)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export declare function getActiveUnits(
@@ -109,6 +127,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-angular-representation) · [gRPC Contract](/api/grpc/utility-operations#get-angular-representation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function getAngularRepresentation(
   briosa: BriosaClient,
@@ -118,7 +138,7 @@ export declare function getAngularRepresentation(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -127,6 +147,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Collection Notes {/* #get-collection-notes */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-collection-notes) · [gRPC Contract](/api/grpc/utility-operations#get-collection-notes)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetCollectionNotesInput {
@@ -146,6 +168,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-folder-collections) · [gRPC Contract](/api/grpc/utility-operations#get-folder-collections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetFolderCollectionsInput {
   readonly folderPath?: string;
@@ -164,6 +188,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-folder-notes) · [gRPC Contract](/api/grpc/utility-operations#get-folder-notes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetFolderNotesInput {
   readonly folderPath?: string;
@@ -181,6 +207,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Folders by Wildcard {/* #get-folders-by-wildcard */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-folders-by-wildcard) · [gRPC Contract](/api/grpc/utility-operations#get-folders-by-wildcard)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetFoldersByWildcardInput {
@@ -201,6 +229,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-object-notes) · [gRPC Contract](/api/grpc/utility-operations#get-object-notes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetObjectNotesInput {
   readonly object: CollectionObjectName;
@@ -218,6 +248,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get OPC DA Tag Value Double {/* #get-opc-da-tag-value-double */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-double) · [gRPC Contract](/api/grpc/utility-operations#get-opc-da-tag-value-double)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 ```ts
 export interface GetOpcDaTagValueDoubleInput {
@@ -237,6 +269,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-integer) · [gRPC Contract](/api/grpc/utility-operations#get-opc-da-tag-value-integer)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
+
 ```ts
 export interface GetOpcDaTagValueIntegerInput {
   readonly opcServerDaTagName?: string;
@@ -254,6 +288,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get OPC DA Tag Value String {/* #get-opc-da-tag-value-string */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-string) · [gRPC Contract](/api/grpc/utility-operations#get-opc-da-tag-value-string)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 ```ts
 export interface GetOpcDaTagValueStringInput {
@@ -273,6 +309,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-point-notes) · [gRPC Contract](/api/grpc/utility-operations#get-point-notes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointNotesInput {
   readonly point: PointName;
@@ -291,6 +329,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-screen-resolution) · [gRPC Contract](/api/grpc/utility-operations#get-screen-resolution)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetScreenResolutionInput {
   readonly display?: number;
@@ -305,7 +345,7 @@ export declare function getScreenResolution(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -314,6 +354,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Working Frame Properties {/* #get-working-frame-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-working-frame-properties) · [gRPC Contract](/api/grpc/utility-operations#get-working-frame-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export declare function getWorkingFrameProperties(
@@ -327,6 +369,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Increment Point Name {/* #increment-point-name */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#increment-point-name) · [gRPC Contract](/api/grpc/utility-operations#increment-point-name)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface IncrementPointNameInput {
@@ -347,6 +391,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#lock-imported-items) · [gRPC Contract](/api/grpc/utility-operations#lock-imported-items)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface LockImportedItemsInput {
   readonly lockItems?: boolean;
@@ -364,6 +410,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Lock/Unlock Selected Items {/* #lockunlock-selected-items */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#lockunlock-selected-items) · [gRPC Contract](/api/grpc/utility-operations#lockunlock-selected-items)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface LockUnlockSelectedItemsInput {
@@ -384,6 +432,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Lock/Unlock Trapping Control {/* #lockunlock-trapping-control */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#lockunlock-trapping-control) · [gRPC Contract](/api/grpc/utility-operations#lockunlock-trapping-control)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface LockUnlockTrappingControlInput {
@@ -406,6 +456,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#move-collection-to-folder) · [gRPC Contract](/api/grpc/utility-operations#move-collection-to-folder)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MoveCollectionToFolderInput {
   readonly collection: CollectionName;
@@ -424,6 +476,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Move Folder to Folder {/* #move-folder-to-folder */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#move-folder-to-folder) · [gRPC Contract](/api/grpc/utility-operations#move-folder-to-folder)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MoveFolderToFolderInput {
@@ -444,6 +498,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#move-instruments-drag-graphically) · [gRPC Contract](/api/grpc/utility-operations#move-instruments-drag-graphically)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface MoveInstrumentsDragGraphicallyInput {
   readonly instruments: Iterable<CollectionInstrumentId>;
@@ -461,6 +517,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Move Objects Drag Graphically {/* #move-objects-drag-graphically */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#move-objects-drag-graphically) · [gRPC Contract](/api/grpc/utility-operations#move-objects-drag-graphically)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface MoveObjectsDragGraphicallyInput {
@@ -480,10 +538,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#scale-objects) · [gRPC Contract](/api/grpc/utility-operations#scale-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ScaleObjectsInput {
   readonly objects: Iterable<CollectionObjectName>;
-  readonly scaleFactor?: number;
+  readonly scaleFactor: number;
 }
 
 export declare function scaleObjects(
@@ -495,9 +555,17 @@ export declare function scaleObjects(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Set Active Custom Language {/* #set-active-custom-language */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-active-custom-language) · [gRPC Contract](/api/grpc/utility-operations#set-active-custom-language)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface SetActiveCustomLanguageInput {
@@ -517,6 +585,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Active Units {/* #set-active-units */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-active-units) · [gRPC Contract](/api/grpc/utility-operations#set-active-units)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetActiveUnitsInput {
@@ -541,6 +611,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-angular-representation) · [gRPC Contract](/api/grpc/utility-operations#set-angular-representation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetAngularRepresentationInput {
   readonly value0360?: boolean;
@@ -555,7 +627,7 @@ export declare function setAngularRepresentation(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -564,6 +636,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Auto Event Creation {/* #set-auto-event-creation */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-auto-event-creation) · [gRPC Contract](/api/grpc/utility-operations#set-auto-event-creation)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetAutoEventCreationInput {
@@ -582,6 +656,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Automatic Backup State {/* #set-automatic-backup-state */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-automatic-backup-state) · [gRPC Contract](/api/grpc/utility-operations#set-automatic-backup-state)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetAutomaticBackupStateInput {
@@ -602,6 +678,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-automatic-relationship-construction-state) · [gRPC Contract](/api/grpc/utility-operations#set-automatic-relationship-construction-state)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetAutomaticRelationshipConstructionStateInput {
   readonly active?: boolean;
@@ -620,6 +698,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-collection-notes) · [gRPC Contract](/api/grpc/utility-operations#set-collection-notes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCollectionNotesInput {
   readonly collection: CollectionName;
@@ -636,7 +716,7 @@ export declare function setCollectionNotes(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -645,6 +725,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Decimal Digits for Display {/* #set-decimal-digits-for-display */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-decimal-digits-for-display) · [gRPC Contract](/api/grpc/utility-operations#set-decimal-digits-for-display)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetDecimalDigitsForDisplayInput {
@@ -668,6 +750,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-folder-notes) · [gRPC Contract](/api/grpc/utility-operations#set-folder-notes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetFolderNotesInput {
   readonly folderPath?: string;
@@ -684,7 +768,7 @@ export declare function setFolderNotes(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -693,6 +777,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Interaction Mode {/* #set-interaction-mode */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-interaction-mode) · [gRPC Contract](/api/grpc/utility-operations#set-interaction-mode)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `saInteractionMode` to Sa Interaction Mode Manual or Sa Interaction Mode Automatic also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface SetInteractionModeInput {
@@ -714,6 +802,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-logging-state) · [gRPC Contract](/api/grpc/utility-operations#set-logging-state)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetLoggingStateInput {
   readonly active?: boolean;
@@ -731,6 +821,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Notification Cancel Override {/* #set-notification-cancel-override */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-notification-cancel-override) · [gRPC Contract](/api/grpc/utility-operations#set-notification-cancel-override)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetNotificationCancelOverrideInput {
@@ -750,6 +842,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-object-notes) · [gRPC Contract](/api/grpc/utility-operations#set-object-notes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetObjectNotesInput {
   readonly object: CollectionObjectName;
@@ -766,7 +860,7 @@ export declare function setObjectNotes(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -775,6 +869,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set OPC DA Tag Value Double {/* #set-opc-da-tag-value-double */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-double) · [gRPC Contract](/api/grpc/utility-operations#set-opc-da-tag-value-double)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 ```ts
 export interface SetOpcDaTagValueDoubleInput {
@@ -795,6 +891,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-integer) · [gRPC Contract](/api/grpc/utility-operations#set-opc-da-tag-value-integer)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
+
 ```ts
 export interface SetOpcDaTagValueIntegerInput {
   readonly opcServerDaTagName?: string;
@@ -813,6 +911,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set OPC DA Tag Value String {/* #set-opc-da-tag-value-string */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-string) · [gRPC Contract](/api/grpc/utility-operations#set-opc-da-tag-value-string)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 ```ts
 export interface SetOpcDaTagValueStringInput {
@@ -833,6 +933,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-point-notes) · [gRPC Contract](/api/grpc/utility-operations#set-point-notes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetPointNotesInput {
   readonly point: PointName;
@@ -849,7 +951,7 @@ export declare function setPointNotes(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -859,10 +961,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-user-interface-profile) · [gRPC Contract](/api/grpc/utility-operations#set-user-interface-profile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface SetUserInterfaceProfileInput {
   readonly profileName?: string;
-  readonly profileFileName: FileReference;
+  readonly profileFileName?: FileReference;
 }
 
 export declare function setUserInterfaceProfile(
@@ -874,15 +978,17 @@ export declare function setUserInterfaceProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `profileFileName` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `profileFileName` | Optional (major 3): omitted when absent; an empty path is rejected. |
 
 ## Set View Idle Update Frequency {/* #set-view-idle-update-frequency */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-view-idle-update-frequency) · [gRPC Contract](/api/grpc/utility-operations#set-view-idle-update-frequency)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetViewIdleUpdateFrequencyInput {
@@ -902,6 +1008,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-wildcard-asterisk-mode) · [gRPC Contract](/api/grpc/utility-operations#set-wildcard-asterisk-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetWildCardAsteriskModeInput {
   readonly autoWrapSearchString?: boolean;
@@ -920,6 +1028,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-working-frame) · [gRPC Contract](/api/grpc/utility-operations#set-working-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetWorkingFrameInput {
   readonly newWorkingFrameName: CollectionObjectName;
@@ -937,6 +1047,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Status Dialog {/* #status-dialog */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#status-dialog) · [gRPC Contract](/api/grpc/utility-operations#status-dialog)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface StatusDialogInput {
@@ -961,6 +1073,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#trim-log-file) · [gRPC Contract](/api/grpc/utility-operations#trim-log-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface TrimLogFileInput {
   readonly numberOfEntriesToKeep?: number;
@@ -979,6 +1093,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#write-to-log) · [gRPC Contract](/api/grpc/utility-operations#write-to-log)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface WriteToLogInput {
   readonly logEntry?: string;
@@ -993,4 +1109,4 @@ export declare function writeToLog(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

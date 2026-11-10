@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Lines
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-lines) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-lines)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-points)
 
 `/briosa.ConstructionOperations/ConstructLineTwoPoints` · Operation ID: `construction_operations.construct_line_two_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -45,6 +47,8 @@ message ConstructLineTwoPointsResult {
 
 `/briosa.ConstructionOperations/ConstructLineTwoPointsVectorNotation` · Operation ID: `construction_operations.construct_line_two_points_vector_notation`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `line_name` | `optional CollectionObjectName` | Line Name | Required |
@@ -71,6 +75,8 @@ message ConstructLineTwoPointsVectorNotationResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-normal-to-object)
 
 `/briosa.ConstructionOperations/ConstructLineNormalToObject` · Operation ID: `construction_operations.construct_line_normal_to_object`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -99,6 +105,8 @@ message ConstructLineNormalToObjectResult {
 
 `/briosa.ConstructionOperations/ConstructLineProjectLineToObjectReferencePlane` · Operation ID: `construction_operations.construct_line_project_line_to_object_reference_plane`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `line_to_create` | `optional CollectionObjectName` | Line To Create | Required |
@@ -125,6 +133,8 @@ message ConstructLineProjectLineToObjectReferencePlaneResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line---normal-to-object-through-point)
 
 `/briosa.ConstructionOperations/ConstructLineNormalToObjectThroughPoint` · Operation ID: `construction_operations.construct_line_normal_to_object_through_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -153,6 +163,8 @@ message ConstructLineNormalToObjectThroughPointResult {
 
 `/briosa.ConstructionOperations/ConstructLineTwoPlaneIntersection` · Operation ID: `construction_operations.construct_line_two_plane_intersection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `line_name` | `optional CollectionObjectName` | Line Name | Required |
@@ -180,6 +192,8 @@ message ConstructLineTwoPlaneIntersectionResult {
 
 `/briosa.ConstructionOperations/ConstructLinesFromSurfaceFacesRuntimeSelect` · Operation ID: `construction_operations.construct_lines_from_surface_faces_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -199,6 +213,8 @@ message ConstructLinesFromSurfaceFacesRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-center-of-slot)
 
 `/briosa.ConstructionOperations/ConstructLineCenterOfSlot` · Operation ID: `construction_operations.construct_line_center_of_slot`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -224,6 +240,8 @@ message ConstructLineCenterOfSlotResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-from-instrument-shot)
 
 `/briosa.ConstructionOperations/ConstructLineFromInstrumentShot` · Operation ID: `construction_operations.construct_line_from_instrument_shot`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -254,4 +272,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

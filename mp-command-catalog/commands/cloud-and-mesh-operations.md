@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Cloud and Mesh Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -270,17 +270,17 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="excluded" data-validation="licensed-execution-probe">
   <td><a href="#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — destructive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
-<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Analysis Operations / Cloud Filters" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Analysis Operations / Cloud Filters" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</a></td>
   <td>Analysis Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Generate General Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#generate-general-mesh">Generate General Mesh</a></td>
@@ -374,7 +374,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Adjusts SpatialAnalyzer cloud drawing density and point size.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/cloud-display-control) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/cloud-display-control) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/cloud-display-control) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/cloud-display-control)
@@ -460,7 +460,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Recomputes one cloud bounding box and returns its dimensions, axes, centroid, transforms, and sample count.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/reset-cloud-bounding-box) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/reset-cloud-bounding-box) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/reset-cloud-bounding-box) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/reset-cloud-bounding-box)
@@ -526,7 +526,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Returns the selected cloud point count and current clipping-related values.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-point-count) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-point-count) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-point-count) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-point-count)
@@ -590,7 +590,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 Controls the default clipping plane for newly measured clouds. The exact SDK cannot set the MP Clipping Options value, so enabling uses SpatialAnalyzer current default clipping components. Briosa defaults to disabled to avoid an interactive object selector; reference_object is required only when enabling.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/set-cloud-default-clipping-plane) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/set-cloud-default-clipping-plane) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/set-cloud-default-clipping-plane) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/set-cloud-default-clipping-plane)
@@ -662,7 +662,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Runs the legacy raster-scan edge inspection workflow and returns the SA summary result.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/raster-scan-edge-inspection) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/raster-scan-edge-inspection) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/raster-scan-edge-inspection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/raster-scan-edge-inspection)
@@ -742,7 +742,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Runs the newer raster-scan edge inspection workflow and optionally writes intermediate calculations.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/new-raster-scan-edge-inspection) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/new-raster-scan-edge-inspection) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/new-raster-scan-edge-inspection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/new-raster-scan-edge-inspection)
@@ -776,7 +776,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Clears point-deviation data stored on the selected cloud.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/clear-cloud-point-deviations) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/clear-cloud-point-deviations) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/clear-cloud-point-deviations) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/clear-cloud-point-deviations)
@@ -834,7 +834,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Enables every cross section in one cross-section cloud.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-all-cloud-cross-sections) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-all-cloud-cross-sections) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-all-cloud-cross-sections) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-all-cloud-cross-sections)
@@ -896,7 +896,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Enables or disables one identified cross section.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/enabledisable-cloud-cross-sections) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/enabledisable-cloud-cross-sections) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/enabledisable-cloud-cross-sections) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/enabledisable-cloud-cross-sections)
@@ -956,7 +956,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Enables one cross section and leaves it as the single enabled section.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-single-cloud-cross-section) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-single-cloud-cross-section) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-single-cloud-cross-section) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/enable-single-cloud-cross-section)
@@ -1016,7 +1016,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Returns the number of cross sections in the selected cross-section cloud.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/get-number-of-cross-sections-in-cross-section-cloud) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/get-number-of-cross-sections-in-cross-section-cloud) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/get-number-of-cross-sections-in-cross-section-cloud) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/get-number-of-cross-sections-in-cross-section-cloud)
@@ -1084,7 +1084,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Filters cloud points by proximity to a plane. Briosa supplies non-interactive Both and Points defaults where the MP Editor export is blank.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-plane) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-plane) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-plane) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-plane)
@@ -1152,7 +1152,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Filters clouds by proximity to a point group.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-group) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-group)
@@ -1222,7 +1222,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Filters clouds to a surface using low and high proximity limits.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-surface) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-surface) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-surface) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-surface)
@@ -1290,7 +1290,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Filters clouds by proximity to one or more BSplines.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-bsplines) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-bsplines) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-bsplines) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-bsplines)
@@ -1360,7 +1360,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Filters clouds by proximity to a line segment defined by two SA points.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-line-segment) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-line-segment) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-line-segment) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-line-segment)
@@ -1433,7 +1433,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Resolves cloud points against vector groups. The exact 2026.1 target includes the Include Proximity Points input absent from ObjectiveSA 2024.1.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-points) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-points)
@@ -1473,7 +1473,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Creates filtered clouds from vector-group cutoffs and returns the resulting cloud references.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-clouds) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-clouds) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-clouds) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/filter-clouds-to-vector-groups---resolve-clouds)
@@ -1573,7 +1573,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Applies the selected RGB, intensity, and grayscale thresholds to one or more clouds.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/rgb-cloud-point-filter) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/rgb-cloud-point-filter) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/rgb-cloud-point-filter) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/rgb-cloud-point-filter)
@@ -1612,7 +1612,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Returns channel statistics for a cloud.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values)
@@ -1653,7 +1653,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Returns channel statistics for cloud points within a diameter around an SA point.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values-near-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values-near-point) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values-near-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/get-cloud-rgb-values-near-point)
@@ -1691,7 +1691,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Subdivides an enhanced cloud by point spacing into a new enhanced cloud.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/subdivide-cloud-by-point-spacing) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/subdivide-cloud-by-point-spacing) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/subdivide-cloud-by-point-spacing) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/subdivide-cloud-by-point-spacing)
@@ -1753,7 +1753,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Deletes cloud points inside or outside the radial neighborhoods of selected SA points.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-radial-distance-from-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-radial-distance-from-points) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-radial-distance-from-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-radial-distance-from-points)
@@ -1761,19 +1761,19 @@ mesh behavior through a reviewed exact-target SDK command.
 ## Delete Cloud Points by X Y Z Range
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-destructive-fixture-validation-required">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
-  <span className="catalog-target-validation">At Risk — destructive fixture validation required</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Analysis Operations / Cloud Filters" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [Python](/api/python/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [Python](/api/python/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [JavaScript/TypeScript](/api/javascript/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -1801,10 +1801,14 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and it has no licensed validation yet.
+
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
   <div><span>MP Group Path</span><strong>Cloud and Mesh Operations / Cloud Filters</strong></div>
-  <div><span>Validation</span><strong>At Risk — destructive fixture validation required</strong></div>
+  <div><span>Validation</span><strong>Licensed execution probe</strong></div>
   <div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
@@ -1833,12 +1837,9 @@ points. SA rejects the substituted bound setters; the same `Cloud Names` list
 works with Delete Cloud Points by Radial Distance from Points. A request that
 omits all six bounds sends no bound setter and has not been tested. If SA treats
 unset bounds as unlimited, that request with `Delete Inside` true deletes every
-point in the named clouds. Contract major 3 removes this operation.
+point in the named clouds.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
-mesh behavior through a reviewed exact-target SDK command.
-
-**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range)
+**API References (Server 0.9.2 and Client 0.4.0):** [gRPC](/api/grpc/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [Python](/api/python/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range)
 
 ## Generate General Mesh
 
@@ -1905,7 +1906,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Generates a scan-stripe mesh from one or more clouds and can optionally write a JSON file.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/generate-general-mesh) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/generate-general-mesh) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/generate-general-mesh) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/generate-general-mesh)
@@ -1939,7 +1940,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Consolidates the selected scan-stripe mesh.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/consolidate-mesh) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/consolidate-mesh) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/consolidate-mesh) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/consolidate-mesh)
@@ -2003,7 +2004,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Returns the mesh volume above and below the selected plane.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-volume) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-volume) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-volume) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-volume)
@@ -2041,7 +2042,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Fills holes in the selected mesh. Briosa keeps Fill All Holes true by default so the command does not open an interactive hole-selection dialog.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.10.0 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-fill-holes) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-fill-holes) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-fill-holes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/mesh-fill-holes)

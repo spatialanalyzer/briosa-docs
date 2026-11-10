@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Other MP Types
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/construction-operations-other-mp-types) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/construction-operations-other-mp-types)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Make a System String {/* #make-a-system-string */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-system-string) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-system-string)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_system_string(
@@ -22,6 +24,7 @@ async def make_system_string(
         string_content: SystemString,
         *,
         format_string: str | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> str: ...
 ```
 
@@ -31,11 +34,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-name---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-name---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def make_collection_name_runtime_select(
         self,
         *,
         user_prompt: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionName: ...
 ```
 
@@ -45,13 +51,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-item-name-reference-list---wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-item-name-reference-list---wildcard-selection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_collection_item_name_ref_list_wildcard_selection(
         self,
         *,
         collection_wildcard_criteria: str = "*",
         item_wildcard_criteria: str = "*",
-        item_type: ItemType = ItemType.ANY,
+        item_type: ItemType,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionItemName]: ...
 ```
 
@@ -61,12 +70,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-object-name---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def make_collection_object_name_runtime_select(
         self,
         *,
         user_prompt: str = "",
-        object_type: ObjectType = ObjectType.ANY,
+        object_type: ObjectType,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -76,12 +88,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name---ensure-unique) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-object-name---ensure-unique)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_collection_object_name_ensure_unique(
         self,
         collection_object_name: CollectionObjectName,
         *,
         use_number_suffix: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -91,12 +106,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def make_collection_object_name_ref_list_runtime_select(
         self,
         *,
         user_prompt: str = "",
-        object_type: ObjectType = ObjectType.ANY,
+        object_type: ObjectType,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -106,13 +124,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--wildcard-selection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_collection_object_name_ref_list_wildcard_selection(
         self,
         *,
         collection_wildcard_criteria: str = "*",
         object_wildcard_criteria: str = "*",
-        object_type: ObjectType = ObjectType.ANY,
+        object_type: ObjectType,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -122,12 +143,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_collection_object_name_ref_list_by_type(
         self,
         collection: str,
+        object_type: ObjectType,
         *,
-        object_type: ObjectType = ObjectType.ANY,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -137,13 +161,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type-and-color) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type-and-color)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_collection_object_name_ref_list_by_type_and_color(
         self,
         collection: str,
+        object_type: ObjectType,
         *,
-        object_type: ObjectType = ObjectType.ANY,
         object_color: Color = Color(255, 0, 0),
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -153,10 +180,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_collection_object_name_ref_list_from_all_groups_in_collection(
         self,
         collection_name: CollectionName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -166,10 +197,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#get-collection-instrument-ref-list-variable) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#get-collection-instrument-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_collection_instrument_ref_list_variable(
         self,
         name: str,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionInstrumentId]: ...
 ```
 
@@ -179,11 +214,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#set-collection-instrument-ref-list-variable) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#set-collection-instrument-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_collection_instrument_ref_list_variable(
         self,
         name: str,
         value: Iterable[CollectionInstrumentId],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -193,27 +232,21 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection)
 
-```python
-async def add_collection_instruments_to_ref_list_wildcard_selection(
-        self,
-        collection_instrument_ref_list: Iterable[CollectionInstrumentId],
-        *,
-        collection_wildcard_criteria: str = "*",
-        instrument_wildcard_criteria: str = "*",
-    ) -> list[CollectionInstrumentId]: ...
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code 2 on both exact targets, but the instrument list could not be read back, and the MP documents no other output. A reference list is a client-side value in Briosa, so build the instrument list directly. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Make a Collection Instrument Reference List- Runtime Select {/* #make-a-collection-instrument-reference-list--runtime-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 ```python
 async def make_collection_instrument_ref_list_runtime_select(
         self,
         *,
         user_prompt: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionInstrumentId]: ...
 ```
 
@@ -223,12 +256,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-relationship-reference-list--wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-relationship-reference-list--wildcard-selection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_relationship_ref_list_wildcard_selection(
         self,
         *,
         collection_wildcard_criteria: str = "*",
         relationship_wildcard_criteria: str = "*",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionItemName]: ...
 ```
 
@@ -238,11 +274,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-relationship-reference-list--runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-relationship-reference-list--runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def make_relationship_ref_list_runtime_select(
         self,
         *,
         user_prompt: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionItemName]: ...
 ```
 
@@ -252,12 +291,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-an-event-reference-list--wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-an-event-reference-list--wildcard-selection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_event_ref_list_wildcard_selection(
         self,
         *,
         collection_wildcard_criteria: str = "*",
         event_wildcard_criteria: str = "*",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionItemName]: ...
 ```
 
@@ -267,11 +309,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-collection-instrument-id---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-collection-instrument-id---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def make_collection_instrument_id_runtime_select(
         self,
         *,
         user_prompt: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionInstrumentId: ...
 ```
 
@@ -281,10 +326,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-report-ref-list-from-a-collection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-report-ref-list-from-a-collection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_report_ref_list_from_collection(
         self,
         collection_name: CollectionName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionItemName]: ...
 ```
 
@@ -294,11 +343,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-report-ref-list---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-report-ref-list---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def make_report_ref_list_runtime_select(
         self,
         *,
         user_prompt: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionItemName]: ...
 ```
 
@@ -308,11 +360,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-picture-name-ref-list---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-picture-name-ref-list---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def make_picture_name_ref_list_runtime_select(
         self,
         *,
         user_prompt: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionItemName]: ...
 ```
 
@@ -321,6 +376,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make a Transform from Doubles (Fixed XYZ) {/* #make-a-transform-from-doubles-fixed-xyz */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-transform-from-doubles-fixed-xyz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-transform-from-doubles-fixed-xyz)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_transform_from_doubles_fixed_xyz(
@@ -332,6 +389,7 @@ async def make_transform_from_doubles_fixed_xyz(
         rx: float = 0,
         ry: float = 0,
         rz: float = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -340,6 +398,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make a Transform from Doubles (Euler Parameters) {/* #make-a-transform-from-doubles-euler-parameters */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#make-a-transform-from-doubles-euler-parameters) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#make-a-transform-from-doubles-euler-parameters)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_transform_from_doubles_euler_parameters(
@@ -352,6 +412,7 @@ async def make_transform_from_doubles_euler_parameters(
         e2: float = 0,
         e3: float = 0,
         e4: float = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -361,10 +422,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#get-working-transform-of-object-fixed-xyz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#get-working-transform-of-object-fixed-xyz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_working_transform_of_object_fixed_xyz(
         self,
         object_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -374,10 +439,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#invert-transform) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#invert-transform)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def invert_transform(
         self,
         transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -387,10 +456,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-fixed-xyz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-transform-into-doubles-fixed-xyz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_transform_into_doubles_fixed_xyz(
         self,
         input_transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> FixedXyzTransformComponents: ...
 ```
 
@@ -400,10 +473,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-vectors-fixed-xyz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-transform-into-vectors-fixed-xyz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_transform_into_vectors_fixed_xyz(
         self,
         input_transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> FixedXyzTransformVectors: ...
 ```
 
@@ -413,10 +490,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-vectors-origin-and-axes) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-transform-into-vectors-origin-and-axes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_transform_into_vectors_origin_and_axes(
         self,
         transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> TransformAxes: ...
 ```
 
@@ -426,10 +507,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_world_transform_operator_into_doubles_fixed_xyz_in_world(
         self,
         input_world_transform_operator: WorldTransform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> WorldFixedXyzTransformComponents: ...
 ```
 
@@ -439,10 +524,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-xyz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-xyz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_transform_into_doubles_euler_xyz(
         self,
         input_transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> EulerXyzTransformComponents: ...
 ```
 
@@ -452,10 +541,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyx) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyx)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_transform_into_doubles_euler_zyx(
         self,
         input_transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> EulerZyxTransformComponents: ...
 ```
 
@@ -465,10 +558,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_transform_into_doubles_euler_zyz(
         self,
         input_transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> EulerZyzTransformComponents: ...
 ```
 
@@ -478,10 +575,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zxz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zxz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_transform_into_doubles_euler_zxz(
         self,
         input_transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> EulerZxzTransformComponents: ...
 ```
 
@@ -491,10 +592,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def decompose_world_transform_operator_into_vectors_fixed_xyz_in_world(
         self,
         input_world_transform_operator: WorldTransform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> WorldFixedXyzTransformVectors: ...
 ```
 
@@ -508,4 +613,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

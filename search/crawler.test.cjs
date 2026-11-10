@@ -116,7 +116,10 @@ test('the command index preserves one disposition per command and exact target',
       assert.ok(row.attr('hidden') !== undefined, href);
     }
   }
-  assert.equal(statuses2024.current, 996);
+  // Server 0.10.0 registers 987 SA 2024 operations; contract major 3 retired nine.
+  assert.equal(statuses2024.current, 987);
+  assert.equal(statuses2024.excluded, 179);
+  assert.equal(statuses2024.uncommitted, 42);
   assert.equal(statuses2024.next, undefined);
   assert.ok(statuses2024['sdk-unavailable'] > 0);
 });
@@ -142,10 +145,11 @@ test('product guides and landing pages use the DocSearch content selectors', () 
 test('API results keep exact current release/SA context and method-section destinations', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
-      const release = family === 'grpc' ? '0.9.0' : '0.4.0';
+      const release = family === 'grpc' ? '0.10.0' : '0.5.0';
+      const previous = family === 'grpc' ? '0.9.0' : '0.4.0';
       const route = `api/${family}/sa-${target}/analysis-operations/angle-between-line-and-plane`;
       const records = run(route);
-      assert.equal(run(`api/${family}/sa-${target}/${release}/analysis-operations/angle-between-line-and-plane`).length, 0);
+      assert.equal(run(`api/${family}/sa-${target}/${previous}/analysis-operations/angle-between-line-and-plane`).length, 0);
       assert.ok(records.length > 1);
       for (const record of records) {
         assert.equal(record.sa_target, target);

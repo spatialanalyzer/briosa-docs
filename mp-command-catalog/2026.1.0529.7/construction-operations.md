@@ -17,7 +17,7 @@ page in the sidebar.
 
 | MP Command | Exact MP Group Path | Briosa Status | Validation |
 | --- | --- | --- | --- |
-| [Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) | Construction Operations | <span className="catalog-status catalog-status--current">Current</span> | Licensed setter probe; fixture execution required |
+| [Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) | Construction Operations | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 | [Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) | Construction Operations | <span className="catalog-status catalog-status--current">Current</span> | At Risk — fixture validation required |
 | [Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) | Construction Operations | <span className="catalog-status catalog-status--current">Current</span> | At Risk — fixture validation required |
 | [Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) | Construction Operations | <span className="catalog-status catalog-status--current">Current</span> | At Risk — fixture validation required |

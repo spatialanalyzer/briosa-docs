@@ -17,13 +17,14 @@ This separation lets you keep the control plane available without starting SA,
 restart a failed SDK without restarting Briosa, and leave SpatialAnalyzer open
 when your client exits.
 
-:::note[Client 0.4.0 and Server 0.9.2]
+:::note[Client 0.5.0 and Server 0.10.0]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
-Install the package matching your exact SA release. Client 0.4.0 selects a
-compatible server for that target using behavioral contract 2.0. See
-[Release Status](/docs/releases) for package links and validation limits, and
-[installation selection](/docs/deployment/installation-selection) for per-application choices.
+Install the package matching your exact SA release. Client 0.5.0 selects a
+compatible server for that target using behavioral contract 3.0. See
+[Release Status](/docs/releases) for package links and validation limits,
+[installation selection](/docs/deployment/installation-selection) for per-application choices,
+and the [contract major 3 migration guide](/docs/contract-major-3-migration) to upgrade from client 0.4.0.
 
 :::
 
@@ -116,7 +117,7 @@ closed when it cannot identify a compatible, unambiguous target.
 `ConnectEx` success proves only that the SDK attached to a SpatialAnalyzer
 application. `ConnectToSpatialAnalyzer` also verifies that the activated SDK
 and connected application match the exact Briosa target, then proves the MP
-execution channel within a bounded watchdog.
+execution channel within the readiness-probe bound.
 
 MP methods become available only when the SDK reports `READY` and
 `ready_for_mp` is true.
@@ -183,13 +184,31 @@ default client startup procedure launched the SA application.
 
 Client startup options expose one overall startup timeout. Application launch,
 SDK startup, connection, identity verification, recovery, and MP execution
-retain separate server-configured safety bounds. Cancelling a caller's wait
-does not reverse a transition that may already have occurred. Query application
-or SDK state before trying another transition.
+retain separate server-configured safety bounds. MP execution uses the budget of
+each operation's duration class; see [Operation Admission](/docs/deployment/operation-admission#duration-classes).
+
+Server 0.10.0 accepts each launch, start, connect, reconnect, and recovery at
+one point, after its state checks and before its first transition. Cancelling
+or timing out before that point withdraws the request, and nothing changes.
+After it, the transition continues detached under the server's own bounds even
+though the caller stopped waiting: an abandoned startup can still produce a
+ready SDK generation, and an abandoned launch can still bring SpatialAnalyzer to
+`RUNNING`. Refresh application or SDK state after a cancelled or timed-out
+lifecycle call, before trying another transition. A stop keeps its caller
+waiting once it is accepted.
 
 The server serializes application and SDK lifecycle transitions. A conflicting
 request fails clearly instead of racing another launch, start, connect,
-reconnect, stop, recovery, or close.
+reconnect, stop, recovery, or close. While an accepted transition is still
+running, a new lifecycle request fails with `sdk-lifecycle-transition-in-progress`
+or `application-lifecycle-transition-in-progress`: refresh state and retry
+later, and stop an owned generation only after the transition has ended.
+
+The first-party clients report a cancelled lifecycle call in their language's
+own way and never retry it: .NET throws `OperationCanceledException`, Python
+raises `asyncio.CancelledError`, and JavaScript rejects with
+`BriosaCallAbortedError`. After a manual connect, take a fresh server snapshot
+before MP calls, so the client sees the new generation's readiness.
 
 ## API References
 

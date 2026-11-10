@@ -1,6 +1,6 @@
 ---
 title: Robot Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/robot-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/robot-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Add Robot/Machine (.SAMachine) {/* #add-robotmachine-samachine */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#add-robotmachine-samachine)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface AddRobotMachineSaMachineInput {
@@ -36,6 +38,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#add-robotmachine-manipkin)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface AddRobotMachineManipKinInput {
   readonly manipKinFile: FileReference;
@@ -55,6 +59,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Delete Robot/Machine {/* #delete-robotmachine */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#delete-robotmachine)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface DeleteRobotMachineInput {
@@ -76,6 +82,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledgeArrival` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```ts
 export interface MoveRobotMachineToFrameInput {
   readonly machineId: CollectionMachineId;
@@ -95,9 +105,19 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `acknowledgeArrival` | Defaults to true (major 3). |
+
 ## Move Robot/Machine through Path {/* #move-robotmachine-through-path */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-through-path)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledgeArrival` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```ts
 export interface MoveRobotMachineThroughPathInput {
@@ -123,6 +143,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-named-destination)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledgeArrival` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```ts
 export interface MoveRobotMachineToNamedDestinationInput {
   readonly machineId: CollectionMachineId;
@@ -141,15 +165,23 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `acknowledgeArrival` | Defaults to true (major 3). |
+
 ## Set Robot/Machine Parameter {/* #set-robotmachine-parameter */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robotmachine-parameter)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```ts
 export interface SetRobotMachineParameterInput {
   readonly machineId: CollectionMachineId;
-  readonly parameterName?: string;
-  readonly parameterValue?: number;
+  readonly parameterName: string;
+  readonly parameterValue: number;
 }
 
 // Member of BriosaClient
@@ -163,9 +195,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `parameterValue` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Get Robot/Machine Parameter {/* #get-robotmachine-parameter */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#get-robotmachine-parameter)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface GetRobotMachineParameterInput {
@@ -188,11 +228,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robotmachine-model-link-parameters)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetRobotMachineModelLinkParametersInput {
   readonly machineId: CollectionMachineId;
   readonly linkName?: string;
-  readonly configuration?: RobotModelLinkConfiguration;
+  readonly configuration: RobotModelLinkConfiguration;
 }
 
 // Member of BriosaClient
@@ -206,9 +248,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `configuration` | Its scalar parameters, from `dhAlphaComponent` through `segmentCgMassKg`, are required (major 3): a request that omits one is rejected before dispatch instead of overwriting it with 0 or false. |
+
 ## Get Robot/Machine Model Link Parameters {/* #get-robotmachine-model-link-parameters */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#get-robotmachine-model-link-parameters)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRobotMachineModelLinkParametersInput {
@@ -231,10 +281,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robotmachine-base-transform)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRobotMachineBaseTransformInput {
   readonly machineId: CollectionMachineId;
-  readonly destinationTransform?: Transform;
+  readonly destinationTransform: Transform;
   readonly referenceFrame: CollectionObjectName;
   readonly numberOfSteps?: number;
 }
@@ -253,6 +305,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Start Robot/Machine Interface {/* #start-robotmachine-interface */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#start-robotmachine-interface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface StartRobotMachineInterfaceInput {
@@ -276,6 +330,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#stop-robotmachine-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface StopRobotMachineInterfaceInput {
   readonly machineId: CollectionInstrumentId;
@@ -295,6 +351,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Compute Robot/Machine Adjusted Goal Frame {/* #compute-robotmachine-adjusted-goal-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#compute-robotmachine-adjusted-goal-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface ComputeRobotMachineAdjustedGoalFrameInput {
@@ -319,15 +377,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-joint-pose-6dof)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface MoveRobotMachineToJointPoseSixDofInput {
   readonly machineId: CollectionMachineId;
-  readonly joint1?: number;
-  readonly joint2?: number;
-  readonly joint3?: number;
-  readonly joint4?: number;
-  readonly joint5?: number;
-  readonly joint6?: number;
+  readonly joint1: number;
+  readonly joint2: number;
+  readonly joint3: number;
+  readonly joint4: number;
+  readonly joint5: number;
+  readonly joint6: number;
 }
 
 // Member of BriosaClient
@@ -341,9 +401,22 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `joint1` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint2` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint3` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint4` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint5` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint6` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+
 ## Simulate Robot/Machine Path, Output CSV File {/* #simulate-robotmachine-path-output-csv-file */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#simulate-robotmachine-path-output-csv-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
 
 ```ts
 export interface SimulateRobotMachinePathOutputCsvFileInput {
@@ -367,6 +440,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#create-robot-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CreateRobotCalibrationInput {
   readonly machineId: CollectionMachineId;
@@ -388,10 +463,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#delete-robot-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteRobotCalibrationInput {
   readonly machineId: CollectionMachineId;
-  readonly calibrationName?: string;
+  readonly calibrationName: string;
 }
 
 // Member of BriosaClient
@@ -405,9 +482,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `calibrationName` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Import Poses Match to Measurements {/* #import-poses-match-to-measurements */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#import-poses-match-to-measurements)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportPosesMatchToMeasurementsInput {
@@ -432,6 +517,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#import-poses-match-to-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportPosesMatchToFramesInput {
   readonly machineId: CollectionMachineId;
@@ -454,6 +541,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Perform Robot Calibration {/* #perform-robot-calibration */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#perform-robot-calibration)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface PerformRobotCalibrationInput {
@@ -480,6 +571,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Perform Robot Calibration (Alternate) {/* #perform-robot-calibration-alternate */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#perform-robot-calibration-alternate)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface PerformRobotCalibrationAlternateInput {
@@ -510,6 +605,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#startstop-robot-calibration-trapping)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface StartStopRobotCalibrationTrappingInput {
   readonly machineId: CollectionMachineId;
@@ -533,6 +630,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-active-robot-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetActiveRobotCalibrationInput {
   readonly machineId: CollectionMachineId;
@@ -554,11 +653,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robot-calibration-tool-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetRobotCalibrationToolFrameInput {
   readonly machineId: CollectionMachineId;
   readonly calibrationName?: string;
-  readonly toolFrame?: Transform;
+  readonly toolFrame: Transform;
 }
 
 // Member of BriosaClient
@@ -572,7 +673,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -582,11 +683,13 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetRobotCalibrationMeasurementOffsetInToolFrameInput {
   readonly machineId: CollectionMachineId;
   readonly calibrationName?: string;
-  readonly measurementFrame?: Transform;
+  readonly measurementFrame: Transform;
 }
 
 // Member of BriosaClient
@@ -600,7 +703,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -609,6 +712,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Robot Pose for a Frame {/* #get-robot-pose-for-a-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#get-robot-pose-for-a-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRobotPoseForAFrameInput {
@@ -633,6 +738,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-integer-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```ts
 export interface GetCalibrationApplianceIntegerValueInput {
   readonly indexOffset?: number;
@@ -652,6 +759,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Integer Value {/* #set-calibration-appliance-integer-value */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-integer-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
 
 ```ts
 export interface SetCalibrationApplianceIntegerValueInput {
@@ -674,6 +783,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-real-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```ts
 export interface GetCalibrationApplianceRealValueInput {
   readonly indexOffset?: number;
@@ -693,6 +804,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Real Value {/* #set-calibration-appliance-real-value */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-real-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
 
 ```ts
 export interface SetCalibrationApplianceRealValueInput {
@@ -715,6 +828,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 ```ts
 export interface GetCalibrationApplianceDataInput {
   readonly realValueCount: number;
@@ -734,6 +849,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Data {/* #set-calibration-appliance-data */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-data)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
 
 ```ts
 export interface SetCalibrationApplianceDataInput {
@@ -887,4 +1004,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

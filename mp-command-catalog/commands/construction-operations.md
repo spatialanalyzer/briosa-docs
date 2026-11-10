@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries cover the 14 commands observed directly in the Construction
 Operations root group for SA 2026.1.0529.7. The group's subgroups are reviewed
-separately. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+separately. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -26,15 +26,15 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Mirror Object(s)" data-group="Construction Operations" data-status="current" data-validation="licensed-setter-probe-fixture-execution-required">
+<tr data-target="2026.1.0529.7" data-command="Mirror Object(s)" data-group="Construction Operations" data-status="excluded" data-validation="licensed-execution-probe">
   <td><a href="#mirror-objects">Mirror Object(s)</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed setter probe; fixture execution required</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td>
 </tr>
-<tr data-command="Mirror Object(s)" data-group="Construction Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Mirror Object(s)" data-group="Construction Operations" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#mirror-objects">Mirror Object(s)</a></td>
   <td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>Evidence review — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Copy Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#copy-object">Copy Object</a></td><td>Construction Operations</td>
@@ -172,19 +172,19 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 ## Mirror Object(s)
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="licensed-setter-probe-fixture-execution-required">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">Licensed setter probe; fixture execution required</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations#mirror-objects) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations#mirror-objects) · [Python](/api/python/sa-2024.1.0508.5/construction-operations#mirror-objects) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations#mirror-objects)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/construction-operations/mirror-objects) · [.NET](/api/dotnet/construction-operations/mirror-objects) · [Python](/api/python/construction-operations/mirror-objects) · [JavaScript/TypeScript](/api/javascript/construction-operations/mirror-objects)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -210,10 +210,14 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** No replacement mirrors objects on these exact targets.
+
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
   <div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>Licensed setter probe; fixture execution required</strong></div>
+  <div><span>Validation</span><strong>Licensed execution probe</strong></div>
   <div><span>SDK Observation</span><strong>Present with recovered plane binding</strong></div>
 </div>
 
@@ -233,9 +237,11 @@ frame. A licensed SA 2026.1.0529.7 setter-only probe confirmed that the exact
 SDK accepts all three documented plane values through `SetStringArg`, despite
 the MP Editor export marking this argument `NOT_SUPPORTED`. The probe never
 called `ExecuteStep`; actual copy and move behavior still requires a protected
-fixture scenario.
+fixture scenario. Licensed probes on October 7, 2026 then ran the step through
+Briosa on both exact targets: with the frame plane sent through `SetStringArg`,
+SpatialAnalyzer returned MP code -1. The evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310).
 
-**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/mirror-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/mirror-objects) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/mirror-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/mirror-objects)
+**API References (Server 0.9.2 and Client 0.4.0):** [gRPC](/api/grpc/construction-operations/mirror-objects) · [.NET](/api/dotnet/construction-operations/mirror-objects) · [Python](/api/python/construction-operations/mirror-objects) · [JavaScript and TypeScript](/api/javascript/construction-operations/mirror-objects)
 
 ## Copy Object
 
@@ -964,7 +970,7 @@ from `Any` through `Vertex Points`, followed by `Point Offset`. A second
 exported `Object Type` setter with `Entire Solid` and `Select Faces` choices is
 an SA View SDK Code export defect and is not part of the command signature.
 
-Included in Briosa Server 0.9.2 because callers may intentionally coordinate an
+Included in Briosa Server 0.10.0 because callers may intentionally coordinate an
 operator-driven CAD selection workflow. Briosa requires `Object Type` rather
 than defaulting it to `Any`; choosing a specific type avoids the additional
 type-selection dialog, while callers can still select `Any` when that dialog is

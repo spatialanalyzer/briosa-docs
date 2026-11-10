@@ -31,11 +31,22 @@ Passing `None` uses `BriosaStartOptions()`.
 | `launch_spatial_analyzer` | `True` | Launch a fresh exact-target SpatialAnalyzer application. |
 | `connect_to_spatial_analyzer` | `True` | Connect the new SDK generation and establish MP readiness. |
 | `launch_options` | Empty | Controlled initial job, instrument quick-start, and window-state options. |
-| `startup_timeout` | `30.0` | Bounds the complete requested startup procedure, in seconds. |
+| `startup_timeout` | `120.0` | Bounds the complete requested startup procedure, in seconds. |
 
 `connect_to_spatial_analyzer=True` requires
 `start_spatial_analyzer_sdk=True`. Non-default launch options require
 `launch_spatial_analyzer=True`.
+
+The 120-second startup budget covers the server's default worst case of about
+100 seconds for a start that launches SpatialAnalyzer, with a 20-second margin.
+If you raise the server's `Briosa:Worker:StartupTimeout`,
+`Briosa:Worker:ReadinessProbeTimeout`, or
+`Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the budget too. When
+it expires, `start()` raises `BriosaStartupError` with diagnostic
+`startup-timeout`. The server finishes a step it has accepted, so the abandoned
+start may still produce a ready generation. Calling `start()` again waits for the
+same start, and other lifecycle calls fail with `client-start-in-progress` until
+it ends; then read the SDK state before retrying.
 
 ## Example
 
@@ -162,10 +173,10 @@ session.
 
 | Error | Meaning |
 | --- | --- |
-| `BriosaStartupError` | The server or default startup procedure could not complete. |
+| `BriosaStartupError` | The server or default startup procedure could not complete; `startup-timeout` when the startup budget expires. |
 | `BriosaSpatialAnalyzerError` | A fresh exact-target application could not be launched. |
 | `BriosaSpatialAnalyzerSdkError` | SDK startup or connection failed. |
 | `BriosaCompatibilityError` | Server, SDK, or connected SA identity does not match the package target. |
 | `BriosaLifecycleError` | The client is used from another event loop. |
 | `ValueError` | Startup options contain an invalid combination or malformed value. |
-| `asyncio.CancelledError` | This task cancelled its wait after startup may have crossed a lifecycle boundary. |
+| `asyncio.CancelledError` | This task stopped waiting. The start continues until it completes or its budget expires. Calling `start()` again waits for the same start, and other lifecycle calls fail with `client-start-in-progress` until it ends; then read the SDK state before retrying. |

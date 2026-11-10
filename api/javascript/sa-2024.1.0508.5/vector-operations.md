@@ -1,6 +1,6 @@
 ---
 title: Vector Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/vector-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/vector-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Add a Vector To Vector Name Ref List {/* #add-a-vector-to-vector-name-ref-list */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#add-a-vector-to-vector-name-ref-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#add-a-vector-to-vector-name-ref-list)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddAVectorToVectorNameRefListInput {
@@ -36,6 +38,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-all) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#auto-range-and-set-vector-group-colorization-all)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AutoRangeAndSetVectorGroupColorizationAllInput {
   readonly treatIndividually?: boolean;
@@ -51,7 +55,7 @@ export declare function autoRangeAndSetVectorGroupColorizationAll(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -60,6 +64,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Auto-Range and Set Vector Group Colorization (Selected) {/* #auto-range-and-set-vector-group-colorization-selected */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-selected) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#auto-range-and-set-vector-group-colorization-selected)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AutoRangeAndSetVectorGroupColorizationSelectedInput {
@@ -77,7 +83,7 @@ export declare function autoRangeAndSetVectorGroupColorizationSelected(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -87,10 +93,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#delete-i-th-vector-from-vector-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#delete-i-th-vector-from-vector-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteIthVectorFromVectorGroupInput {
   readonly vectorGroupName: CollectionObjectName;
-  readonly vectorIndex?: number;
+  readonly vectorIndex: number;
 }
 
 export declare function deleteIthVectorFromVectorGroup(
@@ -102,14 +110,22 @@ export declare function deleteIthVectorFromVectorGroup(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `vectorIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Delete Vector by Name {/* #delete-vector-by-name */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#delete-vector-by-name) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#delete-vector-by-name)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteVectorByNameInput {
   readonly vectorGroupName: CollectionObjectName;
-  readonly vectorName?: string;
+  readonly vectorName: string;
 }
 
 export declare function deleteVectorByName(
@@ -121,9 +137,17 @@ export declare function deleteVectorByName(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `vectorName` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Delete Vectors {/* #delete-vectors */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#delete-vectors) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#delete-vectors)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface DeleteVectorsInput {
@@ -142,6 +166,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get i-th Vector From Vector Group {/* #get-i-th-vector-from-vector-group */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#get-i-th-vector-from-vector-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetIthVectorFromVectorGroupInput {
@@ -162,6 +188,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-name-ref-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#get-i-th-vector-from-vector-name-ref-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetIthVectorFromVectorNameRefListInput {
   readonly vectorNameList: Iterable<VectorName>;
@@ -181,6 +209,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#get-number-of-vectors-in-vector-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetNumberOfVectorsInVectorGroupInput {
   readonly vectorGroupName: CollectionObjectName;
@@ -199,6 +229,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-name-ref-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#get-number-of-vectors-in-vector-name-ref-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetNumberOfVectorsInVectorNameRefListInput {
   readonly vectorNameList: Iterable<VectorName>;
@@ -216,6 +248,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Vector From Vector Group By Name {/* #get-vector-from-vector-group-by-name */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-vector-from-vector-group-by-name) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#get-vector-from-vector-group-by-name)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetVectorFromVectorGroupByNameInput {
@@ -236,6 +270,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#get-vector-group-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#get-vector-group-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetVectorGroupPropertiesInput {
   readonly vectorGroupName: CollectionObjectName;
@@ -253,6 +289,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Vector Group Colorization Options (All) {/* #set-vector-group-colorization-options-all */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-all) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#set-vector-group-colorization-options-all)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetVectorGroupColorizationOptionsAllInput {
@@ -272,6 +310,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-selected) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#set-vector-group-colorization-options-selected)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetVectorGroupColorizationOptionsSelectedInput {
   readonly vectorGroupsToBeSet: Iterable<CollectionVectorGroupName>;
@@ -290,6 +330,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Sort Vectors {/* #sort-vectors */}
 
 [MP Catalog](/mp-command-catalog/commands/vector-operations#sort-vectors) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/vector-operations#sort-vectors)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SortVectorsInput {
@@ -314,4 +356,4 @@ export declare function sortVectors(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

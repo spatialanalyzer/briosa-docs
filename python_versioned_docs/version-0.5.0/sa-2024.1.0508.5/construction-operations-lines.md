@@ -1,0 +1,186 @@
+---
+title: Construction Operations / Lines
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+toc_max_heading_level: 2
+---
+
+# Construction Operations / Lines
+
+[SA 2026.1.0529.7](/api/python/construction-operations-lines) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/construction-operations-lines)
+
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+
+## Construct Line 2 Points {/* #construct-line-2-points */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line-2-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_two_points(
+        self,
+        line_name: CollectionObjectName,
+        first_point: PointName,
+        second_point: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line 2 Points (Vector Notation) {/* #construct-line-2-points-vector-notation */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-points-vector-notation) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line-2-points-vector-notation)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_two_points_vector_notation(
+        self,
+        line_name: CollectionObjectName,
+        first_vector: Vector,
+        second_vector: Vector,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line Normal to Object {/* #construct-line-normal-to-object */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-normal-to-object) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line-normal-to-object)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_normal_to_object(
+        self,
+        line_name: CollectionObjectName,
+        object: CollectionObjectName,
+        *,
+        line_length: float = 1,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line - Project Line to Object Reference Plane {/* #construct-line---project-line-to-object-reference-plane */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line---project-line-to-object-reference-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line---project-line-to-object-reference-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_project_line_to_object_reference_plane(
+        self,
+        line_to_create: CollectionObjectName,
+        line_to_project: CollectionObjectName,
+        object_to_project_to: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line - Normal to Object through Point {/* #construct-line---normal-to-object-through-point */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line---normal-to-object-through-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line---normal-to-object-through-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_normal_to_object_through_point(
+        self,
+        line_to_create: CollectionObjectName,
+        object_name: CollectionObjectName,
+        point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line 2 Plane Intersection {/* #construct-line-2-plane-intersection */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-2-plane-intersection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line-2-plane-intersection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_two_plane_intersection(
+        self,
+        line_name: CollectionObjectName,
+        first_plane: CollectionObjectName,
+        second_plane: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Lines From Surface Faces - Runtime Select {/* #construct-lines-from-surface-faces---runtime-select */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-lines-from-surface-faces---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-lines-from-surface-faces---runtime-select)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
+```python
+async def construct_lines_from_surface_faces_runtime_select(
+        self,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line Center of Slot {/* #construct-line-center-of-slot */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-center-of-slot) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line-center-of-slot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_center_of_slot(
+        self,
+        line_name: CollectionObjectName,
+        slot_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Construct Line From Instrument Shot {/* #construct-line-from-instrument-shot */}
+
+[MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-line-from-instrument-shot) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-lines#construct-line-from-instrument-shot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```python
+async def construct_line_from_instrument_shot(
+        self,
+        point_name: PointName,
+        line_name: CollectionObjectName,
+        *,
+        observation_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
+    ) -> None: ...
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Related References {/* #related-references */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

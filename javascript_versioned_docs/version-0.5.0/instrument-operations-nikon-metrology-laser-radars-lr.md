@@ -1,0 +1,340 @@
+---
+title: Instrument Operations / Nikon Metrology Laser Radars LR
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+toc_max_heading_level: 2
+---
+
+# Instrument Operations / Nikon Metrology Laser Radars LR
+
+[SA 2026.1.0529.7](/api/javascript/instrument-operations-nikon-metrology-laser-radars-lr) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr)
+
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+
+## LR Hardware Connect {/* #lr-hardware-connect */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `external_io` · **Duration Class:** `long_running`
+
+```ts
+export interface LrHardwareConnectInput {
+  readonly instrument: CollectionInstrumentId;
+  readonly host: string;
+  readonly port: number;
+}
+
+// Member of BriosaClient
+interface BriosaClient {
+  lrHardwareConnect(
+    input: LrHardwareConnectInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## LR Hardware Disconnect {/* #lr-hardware-disconnect */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrHardwareDisconnect(
+    input: LrInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## LR Verify Hardware Connection {/* #lr-verify-hardware-connection */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrVerifyHardwareConnection(
+    input: LrInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<boolean>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## LR Set Red Laser Intensity {/* #lr-set-red-laser-intensity */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
+```ts
+export interface LrSetRedLaserIntensityInput {
+  readonly instrument: CollectionInstrumentId;
+  readonly intensity?: number;
+}
+
+// Member of BriosaClient
+interface BriosaClient {
+  lrSetRedLaserIntensity(
+    input: LrSetRedLaserIntensityInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## LR Get Most Recent SNR Info {/* #lr-get-most-recent-snr-info */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrGetMostRecentSnrInfo(
+    input: LrInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<LrSnrInfo>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `peakValue` | Value in decibels. |
+| `measuredRange` | Range in meters. |
+
+## LR Self Test {/* #lr-self-test */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrSelfTest(
+    input: LrInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<LrSelfTestResult>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `referenceArmLength` | Length in inches. |
+| `mirrorMeasurementRangeMean` | Length in inches. |
+| `mirrorMeasurementRangeStandardDeviation` | Length in inches. |
+
+## LR Self Test - Linearization {/* #lr-self-test---linearization */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrSelfTestLinearization(
+    input: LrInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<number>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `linearity` | Frequency in kilohertz. |
+
+## LR Self Test - Flip Test {/* #lr-self-test---flip-test */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrSelfTestFlipTest(
+    input: LrInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<LrFlipTestResult>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `frontRange` | Length in inches. |
+| `frontAzimuth` | Angle in degrees. |
+| `frontElevation` | Angle in degrees. |
+| `backRange` | Length in inches. |
+| `backAzimuth` | Angle in degrees. |
+| `backElevation` | Angle in degrees. |
+| `frontBackDifferenceRange` | Length in inches. |
+| `frontBackDifferenceAzimuth` | Angle in degrees. |
+| `frontBackDifferenceElevation` | Angle in degrees. |
+
+## LR Self Test - LO Sep {/* #lr-self-test---lo-sep */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrSelfTestLoSep(
+    input: LrSelfTestLoSepInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<LrLoSeparationTestResult>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `primaryLo` | Indexing starts at 1. |
+| `secondaryLo` | Indexing starts at 1. |
+| `primaryLoRangeMean` | Length in inches. |
+| `primaryLoRangeStandardDeviation` | Length in inches. |
+| `secondaryLoRangeMean` | Length in inches. |
+| `secondaryLoRangeStandardDeviation` | Length in inches. |
+
+## LR APDIS Perform MCM Calibration {/* #lr-apdis-perform-mcm-calibration */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrApdisPerformMcmCalibration(
+    input: LrApdisPerformMcmCalibrationInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## LR APDIS Activate MCM Calibration {/* #lr-apdis-activate-mcm-calibration */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrApdisActivateMcmCalibration(
+    input: LrApdisActivateMcmCalibrationInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<string>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## LR APDIS Get Active MCM Calibration {/* #lr-apdis-get-active-mcm-calibration */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+// Member of BriosaClient
+interface BriosaClient {
+  lrApdisGetActiveMcmCalibration(
+    input: LrInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<string>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Types {/* #types */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrHardwareConnect {/* #lrhardwareconnect */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrHardwareDisconnect {/* #lrhardwaredisconnect */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrVerifyHardwareConnection {/* #lrverifyhardwareconnection */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrSetRedLaserIntensity {/* #lrsetredlaserintensity */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrGetMostRecentSnrInfo {/* #lrgetmostrecentsnrinfo */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrSelfTest {/* #lrselftest */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrSelfTestLinearization {/* #lrselftestlinearization */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrSelfTestFlipTest {/* #lrselftestfliptest */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrSelfTestLoSep {/* #lrselftestlosep */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrApdisPerformMcmCalibration {/* #lrapdisperformmcmcalibration */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrApdisActivateMcmCalibration {/* #lrapdisactivatemcmcalibration */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## lrApdisGetActiveMcmCalibration {/* #lrapdisgetactivemcmcalibration */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

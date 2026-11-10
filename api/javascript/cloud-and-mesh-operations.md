@@ -1,6 +1,6 @@
 ---
 title: Cloud and Mesh Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/cloud-and-mesh-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/cloud-and-mesh-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Cloud Display Control {/* #cloud-display-control */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#cloud-display-control)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CloudDisplayControlInput {
@@ -31,7 +33,7 @@ export declare function cloudDisplayControl(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -40,6 +42,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Reset Cloud Bounding Box {/* #reset-cloud-bounding-box */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#reset-cloud-bounding-box)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ResetCloudBoundingBoxInput {
@@ -63,6 +67,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-point-count) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#get-cloud-point-count)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetCloudPointCountInput {
   readonly cloudName: CollectionObjectName;
@@ -80,6 +86,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Cloud Default Clipping Plane {/* #set-cloud-default-clipping-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetCloudDefaultClippingPlaneInput {
@@ -99,6 +107,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Raster Scan Edge Inspection {/* #raster-scan-edge-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#raster-scan-edge-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface RasterScanEdgeInspectionInput {
@@ -123,6 +133,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## New Raster Scan Edge Inspection {/* #new-raster-scan-edge-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface NewRasterScanEdgeInspectionInput {
@@ -152,6 +164,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#clear-cloud-point-deviations) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#clear-cloud-point-deviations)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface ClearCloudPointDeviationsInput {
   readonly cloudName: CollectionObjectName;
@@ -170,6 +184,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface EnableAllCloudCrossSectionsInput {
   readonly crossSectionCloudName: CollectionObjectName;
@@ -187,6 +203,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Enable/Disable Cloud Cross Sections {/* #enabledisable-cloud-cross-sections */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface EnableDisableCloudCrossSectionsInput {
@@ -208,6 +226,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#enable-single-cloud-cross-section)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface EnableSingleCloudCrossSectionInput {
   readonly crossSectionCloudName: CollectionObjectName;
@@ -227,6 +247,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetNumberOfCrossSectionsInCrossSectionCloudInput {
   readonly crossSectionCloudName: CollectionObjectName;
@@ -244,6 +266,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Plane {/* #filter-clouds-to-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface FilterCloudsToPlaneInput {
@@ -268,6 +292,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface FilterCloudsToGroupInput {
   readonly cloudNames: Iterable<CollectionObjectName>;
@@ -290,6 +316,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Surface {/* #filter-clouds-to-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface FilterCloudsToSurfaceInput {
@@ -315,6 +343,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-bsplines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface FilterCloudsToBSplinesInput {
   readonly cloudNames: Iterable<CollectionObjectName>;
@@ -337,6 +367,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Line Segment {/* #filter-clouds-to-line-segment */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-line-segment)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface FilterCloudsToLineSegmentInput {
@@ -361,6 +393,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Vector Groups - Resolve points {/* #filter-clouds-to-vector-groups---resolve-points */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface FilterCloudsToVectorGroupsResolvePointsInput {
@@ -388,6 +422,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface FilterCloudsToVectorGroupsResolveCloudsInput {
   readonly cloudNames: Iterable<CollectionObjectName>;
@@ -410,6 +446,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## RGB Cloud Point Filter {/* #rgb-cloud-point-filter */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#rgb-cloud-point-filter)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface RGBCloudPointFilterInput {
@@ -451,6 +489,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetCloudRGBValuesInput {
   readonly sourceCloudName: CollectionObjectName;
@@ -469,6 +509,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Cloud RGB Values Near Point {/* #get-cloud-rgb-values-near-point */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values-near-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetCloudRGBValuesNearPointInput {
@@ -490,6 +532,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Subdivide Cloud by Point Spacing {/* #subdivide-cloud-by-point-spacing */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SubdivideCloudByPointSpacingInput {
@@ -513,6 +557,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteCloudPointsByRadialDistanceFromPointsInput {
   readonly cloudNames: Iterable<CollectionObjectName>;
@@ -534,30 +580,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
 
-```ts
-export interface DeleteCloudPointsByXYZRangeInput {
-  readonly cloudNames: Iterable<CollectionObjectName>;
-  readonly xMin?: number;
-  readonly xMax?: number;
-  readonly yMin?: number;
-  readonly yMax?: number;
-  readonly zMin?: number;
-  readonly zMax?: number;
-  readonly deleteInside?: boolean;
-}
-
-export declare function deleteCloudPointsByXYZRange(
-  briosa: BriosaClient,
-  input: DeleteCloudPointsByXYZRangeInput,
-  options?: BriosaCallOptions,
-): Promise<void>;
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and it has no licensed validation yet. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Generate General Mesh {/* #generate-general-mesh */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#generate-general-mesh)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `long_running`
 
 ```ts
 export interface GenerateGeneralMeshInput {
@@ -583,6 +613,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#consolidate-mesh) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#consolidate-mesh)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConsolidateMeshInput {
   readonly mesh: CollectionObjectName;
@@ -600,6 +632,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Mesh Volume {/* #mesh-volume */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#mesh-volume)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MeshVolumeInput {
@@ -620,6 +654,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-fill-holes) · [gRPC Contract](/api/grpc/cloud-and-mesh-operations#mesh-fill-holes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `fillAllHoles` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface MeshFillHolesInput {
   readonly mesh: CollectionObjectName;
@@ -638,4 +676,4 @@ export declare function meshFillHoles(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

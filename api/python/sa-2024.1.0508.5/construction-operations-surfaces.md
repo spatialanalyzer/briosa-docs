@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Surfaces
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,18 +8,22 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/construction-operations-surfaces) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/construction-operations-surfaces)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Surfaces From Objects {/* #construct-surfaces-from-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-from-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-from-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surfaces_from_objects(
         self,
         objects: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -29,11 +33,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-bsplines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-bsplines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_from_b_splines(
         self,
         resulting_surface_name: CollectionObjectName,
         b_spline_list: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -43,6 +51,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-cylinder) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cylinder)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_from_cylinder(
         self,
@@ -51,6 +61,7 @@ async def construct_surface_from_cylinder(
         *,
         internal_cylinder: bool = True,
         use_theta_extent_mode: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -60,11 +71,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_from_plane(
         self,
         resulting_surface_name: CollectionObjectName,
         plane_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -74,11 +89,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-sphere) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-sphere)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_from_sphere(
         self,
         resulting_surface_name: CollectionObjectName,
         sphere_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -88,11 +107,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-cone) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cone)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_from_cone(
         self,
         resulting_surface_name: CollectionObjectName,
         cone_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -101,6 +124,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Surface From a Collection of Surfaces {/* #construct-surface-from-a-collection-of-surfaces */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```python
 async def construct_surface_from_collection_of_surfaces(
@@ -112,6 +137,7 @@ async def construct_surface_from_collection_of_surfaces(
         delete_original_surfaces: bool = False,
         enable_sewing_tolerance: bool = False,
         sewing_tolerance: float = -1.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -121,12 +147,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_fit_from_nominal_surfaces_and_actual_data(
         self,
         nominal_surface: CollectionObjectName,
         actual_data_point_list: Iterable[PointName],
         resulting_surface_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -136,10 +166,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-by-dissecting-surfaces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-dissecting-surfaces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def construct_surface_by_dissecting_surfaces(
         self,
         dissection_mode: SurfaceDissectionMode,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -149,10 +183,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surfaces_by_dissecting_surfaces_from_ref_list(
         self,
         surfaces_to_dissect: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -162,6 +200,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-point-groups) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-point-groups)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_from_point_groups(
         self,
@@ -169,6 +209,7 @@ async def construct_surface_from_point_groups(
         resulting_surface_name: CollectionObjectName,
         *,
         b_spline_fit_options: BSplineFitOptions | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -178,12 +219,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-by-projecting-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-projecting-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surfaces_by_projecting_points(
         self,
         projection_target_name_list: Iterable[CollectionObjectName],
         point_list: Iterable[PointName],
         resulting_surface_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -193,6 +238,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-by-offsetting-a-surface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-offsetting-a-surface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_by_offsetting_surface(
         self,
@@ -200,6 +247,7 @@ async def construct_surface_by_offsetting_surface(
         *,
         surface_offset: float = 0.0,
         hide_original_surface: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -209,11 +257,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-annotation-links) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-annotation-links)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_surface_from_annotation_links(
         self,
         annotation_list: Iterable[CollectionObjectName],
         resulting_surface_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -222,6 +274,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Geometry From Surfaces {/* #construct-geometry-from-surfaces */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-geometry-from-surfaces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-geometry-from-surfaces)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_geometry_from_surfaces(
@@ -233,6 +287,7 @@ async def construct_geometry_from_surfaces(
         reference_frame: CollectionObjectName | None = None,
         destination_collection_name: CollectionName | None = None,
         base_name: str = "Geometry Object",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -298,4 +353,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

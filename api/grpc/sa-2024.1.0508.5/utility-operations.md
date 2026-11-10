@@ -1,6 +1,6 @@
 ---
 title: Utility Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/utility-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/utility-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/utility-operations#close-all-watch-windows)
 
 `/briosa.UtilityOperations/CloseAllWatchWindows` · Operation ID: `utility_operations.close_all_watch_windows`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -40,9 +42,11 @@ message CloseAllWatchWindowsResult {
 
 `/briosa.UtilityOperations/DeleteFolder` · Operation ID: `utility_operations.delete_folder`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `folder_path` | `optional string` | Folder Path | Empty |
+| Request | 1 | `folder_path` | `optional string` | Folder Path | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -57,11 +61,19 @@ message DeleteFolderResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `folder_path` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Delete Items {/* #delete-items */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#delete-items)
 
 `/briosa.UtilityOperations/DeleteItems` · Operation ID: `utility_operations.delete_items`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -86,6 +98,8 @@ message DeleteItemsResult {
 
 `/briosa.UtilityOperations/DeleteObjects` · Operation ID: `utility_operations.delete_objects`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_names` | `repeated CollectionObjectName` | Object Names | Required |
@@ -108,6 +122,8 @@ message DeleteObjectsResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-active-language)
 
 `/briosa.UtilityOperations/GetActiveLanguage` · Operation ID: `utility_operations.get_active_language`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -134,6 +150,8 @@ message GetActiveLanguageResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-active-units)
 
 `/briosa.UtilityOperations/GetActiveUnits` · Operation ID: `utility_operations.get_active_units`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -163,6 +181,8 @@ message GetActiveUnitsResult {
 
 `/briosa.UtilityOperations/GetAngularRepresentation` · Operation ID: `utility_operations.get_angular_representation`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1 | `value_0_360` | `optional bool` | 0-360, (FALSE = +/-180) | — |
@@ -181,7 +201,7 @@ message GetAngularRepresentationResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -192,6 +212,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-collection-notes)
 
 `/briosa.UtilityOperations/GetCollectionNotes` · Operation ID: `utility_operations.get_collection_notes`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -218,6 +240,8 @@ message GetCollectionNotesResult {
 
 `/briosa.UtilityOperations/GetFolderCollections` · Operation ID: `utility_operations.get_folder_collections`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `folder_path` | `optional string` | Folder Path | Empty |
@@ -243,6 +267,8 @@ message GetFolderCollectionsResult {
 
 `/briosa.UtilityOperations/GetFolderNotes` · Operation ID: `utility_operations.get_folder_notes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `folder_path` | `optional string` | Folder Path | Empty |
@@ -267,6 +293,8 @@ message GetFolderNotesResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-folders-by-wildcard)
 
 `/briosa.UtilityOperations/GetFoldersByWildcard` · Operation ID: `utility_operations.get_folders_by_wildcard`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -295,6 +323,8 @@ message GetFoldersByWildcardResult {
 
 `/briosa.UtilityOperations/GetObjectNotes` · Operation ID: `utility_operations.get_object_notes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object` | `optional CollectionObjectName` | Object | Required |
@@ -319,6 +349,8 @@ message GetObjectNotesResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-double)
 
 `/briosa.UtilityOperations/GetOpcDaTagValueDouble` · Operation ID: `utility_operations.get_opc_da_tag_value_double`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -345,6 +377,8 @@ message GetOpcDaTagValueDoubleResult {
 
 `/briosa.UtilityOperations/GetOpcDaTagValueInteger` · Operation ID: `utility_operations.get_opc_da_tag_value_integer`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `opc_server_da_tag_name` | `optional string` | OPC Server DA Tag Name | Empty |
@@ -369,6 +403,8 @@ message GetOpcDaTagValueIntegerResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-string)
 
 `/briosa.UtilityOperations/GetOpcDaTagValueString` · Operation ID: `utility_operations.get_opc_da_tag_value_string`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -395,6 +431,8 @@ message GetOpcDaTagValueStringResult {
 
 `/briosa.UtilityOperations/GetPointNotes` · Operation ID: `utility_operations.get_point_notes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point` | `optional PointName` | Point | Required |
@@ -419,6 +457,8 @@ message GetPointNotesResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-screen-resolution)
 
 `/briosa.UtilityOperations/GetScreenResolution` · Operation ID: `utility_operations.get_screen_resolution`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -449,7 +489,7 @@ message GetScreenResolutionResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -460,6 +500,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/utility-operations#get-working-frame-properties)
 
 `/briosa.UtilityOperations/GetWorkingFrameProperties` · Operation ID: `utility_operations.get_working_frame_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -489,6 +531,8 @@ message GetWorkingFramePropertiesResult {
 
 `/briosa.UtilityOperations/IncrementPointName` · Operation ID: `utility_operations.increment_point_name`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `base_point_name` | `optional PointName` | 'Base' Point Name | Required |
@@ -516,6 +560,8 @@ message IncrementPointNameResult {
 
 `/briosa.UtilityOperations/LockImportedItems` · Operation ID: `utility_operations.lock_imported_items`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `lock_items` | `optional bool` | Lock Items? | false |
@@ -538,6 +584,8 @@ message LockImportedItemsResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#lockunlock-selected-items)
 
 `/briosa.UtilityOperations/LockUnlockSelectedItems` · Operation ID: `utility_operations.lock_unlock_selected_items`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -565,6 +613,8 @@ message LockUnlockSelectedItemsResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#lockunlock-trapping-control)
 
 `/briosa.UtilityOperations/LockUnlockTrappingControl` · Operation ID: `utility_operations.lock_unlock_trapping_control`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -595,6 +645,8 @@ message LockUnlockTrappingControlResult {
 
 `/briosa.UtilityOperations/MoveCollectionToFolder` · Operation ID: `utility_operations.move_collection_to_folder`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection | Required |
@@ -619,6 +671,8 @@ message MoveCollectionToFolderResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#move-folder-to-folder)
 
 `/briosa.UtilityOperations/MoveFolderToFolder` · Operation ID: `utility_operations.move_folder_to_folder`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -645,6 +699,8 @@ message MoveFolderToFolderResult {
 
 `/briosa.UtilityOperations/MoveInstrumentsDragGraphically` · Operation ID: `utility_operations.move_instruments_drag_graphically`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instruments` | `repeated CollectionInstrumentId` | Instruments | Required |
@@ -667,6 +723,8 @@ message MoveInstrumentsDragGraphicallyResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#move-objects-drag-graphically)
 
 `/briosa.UtilityOperations/MoveObjectsDragGraphically` · Operation ID: `utility_operations.move_objects_drag_graphically`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -691,10 +749,12 @@ message MoveObjectsDragGraphicallyResult {
 
 `/briosa.UtilityOperations/ScaleObjects` · Operation ID: `utility_operations.scale_objects`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects` | `repeated CollectionObjectName` | Objects | Required |
-| Request | 2 | `scale_factor` | `optional double` | Scale Factor | 0.000000 |
+| Request | 2 | `scale_factor` | `optional double` | Scale Factor | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -710,11 +770,19 @@ message ScaleObjectsResult {
 }
 ```
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scale_factor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Set Active Custom Language {/* #set-active-custom-language */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-active-custom-language)
 
 `/briosa.UtilityOperations/SetActiveCustomLanguage` · Operation ID: `utility_operations.set_active_custom_language`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -740,6 +808,8 @@ message SetActiveCustomLanguageResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-active-units)
 
 `/briosa.UtilityOperations/SetActiveUnits` · Operation ID: `utility_operations.set_active_units`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -774,6 +844,8 @@ message SetActiveUnitsResult {
 
 `/briosa.UtilityOperations/SetAngularRepresentation` · Operation ID: `utility_operations.set_angular_representation`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `value_0_360` | `optional bool` | 0-360, (FALSE = +/-180) | false |
@@ -791,7 +863,7 @@ message SetAngularRepresentationResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -802,6 +874,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-auto-event-creation)
 
 `/briosa.UtilityOperations/SetAutoEventCreation` · Operation ID: `utility_operations.set_auto_event_creation`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -825,6 +899,8 @@ message SetAutoEventCreationResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-automatic-backup-state)
 
 `/briosa.UtilityOperations/SetAutomaticBackupState` · Operation ID: `utility_operations.set_automatic_backup_state`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -851,6 +927,8 @@ message SetAutomaticBackupStateResult {
 
 `/briosa.UtilityOperations/SetAutomaticRelationshipConstructionState` · Operation ID: `utility_operations.set_automatic_relationship_construction_state`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `active` | `optional bool` | Active? | false |
@@ -874,6 +952,8 @@ message SetAutomaticRelationshipConstructionStateResult {
 
 `/briosa.UtilityOperations/SetCollectionNotes` · Operation ID: `utility_operations.set_collection_notes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection | Required |
@@ -895,7 +975,7 @@ message SetCollectionNotesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -906,6 +986,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-decimal-digits-for-display)
 
 `/briosa.UtilityOperations/SetDecimalDigitsForDisplay` · Operation ID: `utility_operations.set_decimal_digits_for_display`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -938,6 +1020,8 @@ message SetDecimalDigitsForDisplayResult {
 
 `/briosa.UtilityOperations/SetFolderNotes` · Operation ID: `utility_operations.set_folder_notes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `folder_path` | `optional string` | Folder Path | Empty |
@@ -959,7 +1043,7 @@ message SetFolderNotesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -970,6 +1054,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-interaction-mode)
 
 `/briosa.UtilityOperations/SetInteractionMode` · Operation ID: `utility_operations.set_interaction_mode`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `sa_interaction_mode` to `SA_INTERACTION_MODE_MANUAL` or `SA_INTERACTION_MODE_AUTOMATIC` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -998,6 +1086,8 @@ message SetInteractionModeResult {
 
 `/briosa.UtilityOperations/SetLoggingState` · Operation ID: `utility_operations.set_logging_state`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `active` | `optional bool` | Active? | false |
@@ -1020,6 +1110,8 @@ message SetLoggingStateResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-notification-cancel-override)
 
 `/briosa.UtilityOperations/SetNotificationCancelOverride` · Operation ID: `utility_operations.set_notification_cancel_override`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1044,6 +1136,8 @@ message SetNotificationCancelOverrideResult {
 
 `/briosa.UtilityOperations/SetObjectNotes` · Operation ID: `utility_operations.set_object_notes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object` | `optional CollectionObjectName` | Object | Required |
@@ -1065,7 +1159,7 @@ message SetObjectNotesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1076,6 +1170,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-double)
 
 `/briosa.UtilityOperations/SetOpcDaTagValueDouble` · Operation ID: `utility_operations.set_opc_da_tag_value_double`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1102,6 +1198,8 @@ message SetOpcDaTagValueDoubleResult {
 
 `/briosa.UtilityOperations/SetOpcDaTagValueInteger` · Operation ID: `utility_operations.set_opc_da_tag_value_integer`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `opc_server_da_tag_name` | `optional string` | OPC Server DA Tag Name | Empty |
@@ -1126,6 +1224,8 @@ message SetOpcDaTagValueIntegerResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-string)
 
 `/briosa.UtilityOperations/SetOpcDaTagValueString` · Operation ID: `utility_operations.set_opc_da_tag_value_string`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `external_io` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1152,6 +1252,8 @@ message SetOpcDaTagValueStringResult {
 
 `/briosa.UtilityOperations/SetPointNotes` · Operation ID: `utility_operations.set_point_notes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point` | `optional PointName` | Point | Required |
@@ -1173,7 +1275,7 @@ message SetPointNotesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1185,10 +1287,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.UtilityOperations/SetUserInterfaceProfile` · Operation ID: `utility_operations.set_user_interface_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `profile_name` | `optional string` | Profile Name | Default |
-| Request | 2 | `profile_file_name` | `optional FileReference` | Profile File Name (optional) | Required |
+| Request | 2 | `profile_file_name` | `optional FileReference` | Profile File Name (optional) | Omitted |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1204,17 +1308,19 @@ message SetUserInterfaceProfileResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `profile_file_name` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `profile_file_name` | Optional (major 3): omitted when absent; an empty path is rejected. |
 
 ## Set View Idle Update Frequency {/* #set-view-idle-update-frequency */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-view-idle-update-frequency)
 
 `/briosa.UtilityOperations/SetViewIdleUpdateFrequency` · Operation ID: `utility_operations.set_view_idle_update_frequency`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1239,6 +1345,8 @@ message SetViewIdleUpdateFrequencyResult {
 
 `/briosa.UtilityOperations/SetWildCardAsteriskMode` · Operation ID: `utility_operations.set_wild_card_asterisk_mode`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `auto_wrap_search_string` | `optional bool` | Auto Wrap Search String? | true |
@@ -1262,6 +1370,8 @@ message SetWildCardAsteriskModeResult {
 
 `/briosa.UtilityOperations/SetWorkingFrame` · Operation ID: `utility_operations.set_working_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `new_working_frame_name` | `optional CollectionObjectName` | New Working Frame Name | Required |
@@ -1284,6 +1394,8 @@ message SetWorkingFrameResult {
 [MP Catalog](/mp-command-catalog/commands/utility-operations#status-dialog)
 
 `/briosa.UtilityOperations/StatusDialog` · Operation ID: `utility_operations.status_dialog`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1318,6 +1430,8 @@ message StatusDialogResult {
 
 `/briosa.UtilityOperations/TrimLogFile` · Operation ID: `utility_operations.trim_log_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `number_of_entries_to_keep` | `optional int32` | Number of Entries to Keep | 10 |
@@ -1341,6 +1455,8 @@ message TrimLogFileResult {
 
 `/briosa.UtilityOperations/WriteToLog` · Operation ID: `utility_operations.write_to_log`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `log_entry` | `optional string` | Log Entry | Empty |
@@ -1358,4 +1474,4 @@ message WriteToLogResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

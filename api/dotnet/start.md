@@ -38,7 +38,7 @@ The parameterless overload delegates to `BriosaStartOptions.Default`.
 | `LaunchSpatialAnalyzer` | `true` | Launch a fresh exact-target SpatialAnalyzer application. |
 | `ConnectToSpatialAnalyzer` | `true` | Connect the new SDK generation and establish MP readiness. |
 | `LaunchOptions` | Empty | Controlled initial job, instrument quick-start, and window-state options. |
-| `StartupTimeout` | 30 seconds | Bounds the complete startup procedure requested by this call. |
+| `StartupTimeout` | 2 minutes | One overall budget for the complete startup procedure requested by this call, whichever phases are selected. |
 
 `ConnectToSpatialAnalyzer` cannot be `true` when
 `StartSpatialAnalyzerSdk` is `false`. Non-default `LaunchOptions` require
@@ -133,10 +133,10 @@ client session.
 
 | Exception | Meaning |
 | --- | --- |
-| `BriosaStartupException` | The server or default startup procedure could not complete. |
+| `BriosaStartupException` | The server or default startup procedure could not complete, including `startup-timeout` when `StartupTimeout` expires. |
 | `BriosaSpatialAnalyzerException` | A fresh exact-target application could not be launched. |
 | `BriosaSpatialAnalyzerSdkException` | SDK startup or connection failed. |
 | `BriosaCompatibilityException` | Server, SDK, or connected SA identity does not match the package target. |
 | `ArgumentException` | Startup options contain an invalid combination or malformed value. |
-| `OperationCanceledException` | This caller cancelled its wait; startup may have crossed a lifecycle boundary. |
+| `OperationCanceledException` | This caller stopped waiting; the start continues until it completes or its budget expires. Calling `StartAsync` again waits for the same start, and other lifecycle calls fail with `client-start-in-progress` until it ends. Then read the SDK state before retrying. |
 | `ObjectDisposedException` | Final client disposal already completed. |

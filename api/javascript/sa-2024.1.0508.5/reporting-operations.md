@@ -1,6 +1,6 @@
 ---
 title: Reporting Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/reporting-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/reporting-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Add Charts to Report Bar {/* #add-charts-to-report-bar */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-charts-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-charts-to-report-bar)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddChartsToReportBarInput {
@@ -34,6 +36,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Custom Table to SA Report {/* #add-custom-table-to-sa-report */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-custom-table-to-sa-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-custom-table-to-sa-report)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showReport` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface AddCustomTableToSaReportInput {
@@ -55,6 +61,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-custom-tables-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-custom-tables-to-report-bar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AddCustomTablesToReportBarInput {
   readonly customTablesToReport: Iterable<CollectionItemName>;
@@ -73,6 +81,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Datums to Report Bar {/* #add-datums-to-report-bar */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-datums-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-datums-to-report-bar)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddDatumsToReportBarInput {
@@ -93,6 +103,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-events-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-events-to-report-bar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AddEventsToReportBarInput {
   readonly events: Iterable<CollectionItemName>;
@@ -112,6 +124,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-feature-checks-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-feature-checks-to-report-bar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AddFeatureChecksToReportBarInput {
   readonly featureChecks: Iterable<CollectionItemName>;
@@ -130,6 +144,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Item to SA Report at Location {/* #add-item-to-sa-report-at-location */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-item-to-sa-report-at-location) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-item-to-sa-report-at-location)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showReport` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface AddItemToSaReportAtLocationInput {
@@ -154,6 +172,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-objects-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-objects-to-report-bar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AddObjectsToReportBarInput {
   readonly objects: Iterable<CollectionObjectName>;
@@ -172,6 +192,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Pictures to Report Bar {/* #add-pictures-to-report-bar */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-pictures-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-pictures-to-report-bar)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddPicturesToReportBarInput {
@@ -192,6 +214,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-relationships-to-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#add-relationships-to-report-bar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AddRelationshipsToReportBarInput {
   readonly relationships: Iterable<CollectionItemName>;
@@ -210,6 +234,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Append Items to SA Report {/* #append-items-to-sa-report */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#append-items-to-sa-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#append-items-to-sa-report)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showReport` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface AppendItemsToSaReportInput {
@@ -232,6 +260,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#capture-current-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#capture-current-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CaptureCurrentViewInput {
   readonly pictureName: CollectionItemName;
@@ -249,6 +279,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Capture Screen to File (BMP/JPG/PNG/GIF/TIFF) {/* #capture-screen-to-file-bmpjpgpnggiftiff */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface CaptureScreenToFileBmpJpgPngGifTiffInput {
@@ -268,6 +300,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#clear-custom-table) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#clear-custom-table)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface ClearCustomTableInput {
   readonly tableName: CollectionObjectName;
@@ -286,6 +320,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#close-all-reports) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#close-all-reports)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function closeAllReports(
   briosa: BriosaClient,
@@ -299,6 +335,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#close-html-display-board) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#close-html-display-board)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export declare function closeHtmlDisplayBoard(
   briosa: BriosaClient,
@@ -311,6 +349,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Combine SA Reports {/* #combine-sa-reports */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#combine-sa-reports) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#combine-sa-reports)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showReport` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface CombineSaReportsInput {
@@ -332,6 +374,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#create-chart-from-vector-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#create-chart-from-vector-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface CreateChartFromVectorGroupInput {
   readonly newChartName: ChartName;
@@ -339,7 +385,7 @@ export interface CreateChartFromVectorGroupInput {
   readonly chartType: ChartType;
   readonly dataSetToChart: DatasetType;
   readonly auxDataSetToChart: DatasetType;
-  readonly templateChartName: ChartName;
+  readonly templateChartName?: ChartName;
   readonly showInterface?: boolean;
 }
 
@@ -352,15 +398,19 @@ export declare function createChartFromVectorGroup(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `templateChartName` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `templateChartName` | Optional (major 3): omitted when absent; an empty name is rejected. On SA 2026.1.0529.7 a name that matched no chart opened a blocking SpatialAnalyzer dialog; that case is unverified on this target. |
 
 ## Define Report Template {/* #define-report-template */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#define-report-template) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#define-report-template)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showGeneratedReport` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface DefineReportTemplateInput {
@@ -385,7 +435,7 @@ export declare function defineReportTemplate(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -394,6 +444,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Delete Chart {/* #delete-chart */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-chart) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#delete-chart)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface DeleteChartInput {
@@ -413,6 +465,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-custom-table) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#delete-custom-table)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteCustomTableInput {
   readonly tableName: CollectionObjectName;
@@ -430,6 +484,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Delete Picture {/* #delete-picture */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-picture) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#delete-picture)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface DeletePictureInput {
@@ -449,6 +505,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-sa-doc) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#delete-sa-doc)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteSaDocInput {
   readonly docName: CollectionObjectName;
@@ -466,6 +524,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Delete SA Report {/* #delete-sa-report */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-sa-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#delete-sa-report)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface DeleteSaReportInput {
@@ -485,6 +545,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-sa-report-template) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#delete-sa-report-template)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteSaReportTemplateInput {
   readonly reportTemplateName: CollectionObjectName;
@@ -502,6 +564,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Generate Quick Report from Tab Order {/* #generate-quick-report-from-tab-order */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#generate-quick-report-from-tab-order) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#generate-quick-report-from-tab-order)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `openReport` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface GenerateQuickReportFromTabOrderInput {
@@ -522,6 +588,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#generate-standard-html-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#generate-standard-html-report)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface GenerateStandardHtmlReportInput {
   readonly htmlOutputFile: FileReference;
@@ -541,6 +609,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#generateupdate-templated-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#generateupdate-templated-report)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GenerateUpdateTemplatedReportInput {
   readonly reportTemplate: CollectionObjectName;
@@ -558,6 +628,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Custom Table Cell Double {/* #get-custom-table-cell-double */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-double) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#get-custom-table-cell-double)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetCustomTableCellDoubleInput {
@@ -579,6 +651,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-string) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#get-custom-table-cell-string)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetCustomTableCellStringInput {
   readonly tableName: CollectionObjectName;
@@ -599,6 +673,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#get-defined-report-tags) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#get-defined-report-tags)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function getDefinedReportTags(
   briosa: BriosaClient,
@@ -611,6 +687,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Report Tag Value {/* #get-report-tag-value */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#get-report-tag-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#get-report-tag-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetReportTagValueInput {
@@ -629,6 +707,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## HTML Display Board {/* #html-display-board */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#html-display-board) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#html-display-board)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface HtmlDisplayBoardInput {
@@ -649,6 +729,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#make-custom-table) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#make-custom-table)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeCustomTableInput {
   readonly tableName: CollectionObjectName;
@@ -668,6 +750,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#make-new-sa-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#make-new-sa-report)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeNewSaReportInput {
   readonly newSaReportName: CollectionObjectName;
@@ -683,7 +767,7 @@ export declare function makeNewSaReport(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -692,6 +776,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Utility Chart {/* #make-utility-chart */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#make-utility-chart) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#make-utility-chart)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `showChartDialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface MakeUtilityChartInput {
@@ -717,6 +805,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#notify-user-double) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#notify-user-double)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface NotifyUserDoubleInput {
   readonly leadingText?: string;
@@ -739,6 +829,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#notify-user-html) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#notify-user-html)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface NotifyUserHtmlInput {
   readonly htmlFile: FileReference;
@@ -756,6 +848,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Notify User Integer {/* #notify-user-integer */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#notify-user-integer) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#notify-user-integer)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface NotifyUserIntegerInput {
@@ -778,6 +872,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#notify-user-text-array) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#notify-user-text-array)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface NotifyUserTextArrayInput {
   readonly notificationText: Iterable<string>;
@@ -799,6 +895,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-excel) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#output-sa-report-to-excel)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
+A request that sets `showFile` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface OutputSaReportToExcelInput {
   readonly reportName: CollectionObjectName;
@@ -818,6 +918,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Output SA Report to PDF {/* #output-sa-report-to-pdf */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-pdf) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#output-sa-report-to-pdf)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
+A request that sets `showPdf` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface OutputSaReportToPdfInput {
@@ -839,6 +943,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#quick-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#quick-report)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface QuickReportInput {
   readonly itemName: CollectionObjectName;
@@ -855,7 +961,7 @@ export declare function quickReport(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -864,6 +970,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Refresh Callout Views in SA Report {/* #refresh-callout-views-in-sa-report */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#refresh-callout-views-in-sa-report) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#refresh-callout-views-in-sa-report)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface RefreshCalloutViewsInSaReportInput {
@@ -883,6 +991,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#refresh-report-bar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#refresh-report-bar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export declare function refreshReportBar(
   briosa: BriosaClient,
@@ -896,9 +1006,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#remove-report-tag) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#remove-report-tag)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface RemoveReportTagInput {
-  readonly tagName?: string;
+  readonly tagName: string;
 }
 
 export declare function removeReportTag(
@@ -910,9 +1022,17 @@ export declare function removeReportTag(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `tagName` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Rename Picture {/* #rename-picture */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#rename-picture) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#rename-picture)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface RenamePictureInput {
@@ -934,6 +1054,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#save-chart-to-jpeg-file) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#save-chart-to-jpeg-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface SaveChartToJPegFileInput {
   readonly chartToSave: ChartName;
@@ -953,6 +1075,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#save-current-view-bmpjpgpnggiftiff)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface SaveCurrentViewBmpJpgPngGifTiffInput {
   readonly fileToSaveTo: FileReference;
@@ -968,7 +1092,7 @@ export declare function saveCurrentViewBmpJpgPngGifTiff(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -978,13 +1102,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-color) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-custom-table-cell-color)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCustomTableCellColorInput {
   readonly tableName: CollectionObjectName;
   readonly row?: number;
   readonly column?: number;
-  readonly foregroundColorName?: Color;
-  readonly backgroundColorName?: Color;
+  readonly foregroundColorName: Color;
+  readonly backgroundColorName: Color;
 }
 
 export declare function setCustomTableCellColor(
@@ -999,6 +1125,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Custom Table Cell Double {/* #set-custom-table-cell-double */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-double) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-custom-table-cell-double)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetCustomTableCellDoubleInput {
@@ -1023,6 +1151,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-font) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-custom-table-cell-font)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCustomTableCellFontInput {
   readonly tableName: CollectionObjectName;
@@ -1043,6 +1173,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Custom Table Cell String {/* #set-custom-table-cell-string */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-string) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-custom-table-cell-string)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetCustomTableCellStringInput {
@@ -1066,6 +1198,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-cell) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-custom-table-header-cell)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCustomTableHeaderCellInput {
   readonly tableName: CollectionObjectName;
@@ -1088,6 +1222,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-row) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-custom-table-header-row)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCustomTableHeaderRowInput {
   readonly tableName: CollectionObjectName;
@@ -1108,6 +1244,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-title) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-custom-table-title)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCustomTableTitleInput {
   readonly tableName: CollectionObjectName;
@@ -1127,6 +1265,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Point Group Report Options {/* #set-point-group-report-options */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-point-group-report-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-point-group-report-options)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetPointGroupReportOptionsInput {
@@ -1159,6 +1299,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-relationship-report-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-relationship-report-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipReportOptionsInput {
   readonly relationshipName: CollectionObjectName;
@@ -1178,6 +1320,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-report-bar-visibility) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-report-bar-visibility)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetReportBarVisibilityInput {
   readonly showReportBar?: boolean;
@@ -1196,6 +1340,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-report-options-for-object) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-report-options-for-object)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface SetReportOptionsForObjectInput {
   readonly object: CollectionObjectName;
@@ -1213,6 +1359,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Report Tag Value From Double {/* #set-report-tag-value-from-double */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-double) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-report-tag-value-from-double)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetReportTagValueFromDoubleInput {
@@ -1233,6 +1381,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-integer) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-report-tag-value-from-integer)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetReportTagValueFromIntegerInput {
   readonly tagName?: string;
@@ -1251,6 +1401,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Report Tag Value From String {/* #set-report-tag-value-from-string */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-string) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-report-tag-value-from-string)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetReportTagValueFromStringInput {
@@ -1271,6 +1423,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-scale-for-picture) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-scale-for-picture)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetScaleForPictureInput {
   readonly pictureName: CollectionItemName;
@@ -1290,6 +1444,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-vector-group-report-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/reporting-operations#set-vector-group-report-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetVectorGroupReportOptionsInput {
   readonly vectorGroup: CollectionObjectName;
@@ -1305,4 +1461,4 @@ export declare function setVectorGroupReportOptions(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Points and Groups
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-points-and-groups) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Point (Fit to Points) {/* #construct-point-fit-to-points */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-fit-to-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-fit-to-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointFitToPointsInput {
@@ -37,6 +39,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-a-point-in-working-coordinates) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-in-working-coordinates)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointInWorkingCoordinatesInput {
   readonly pointName: PointName;
@@ -57,6 +61,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point From Survey Target Center {/* #construct-point-from-survey-target-center */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-from-survey-target-center) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-survey-target-center)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointFromSurveyTargetCenterInput {
@@ -82,6 +88,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#set-point-position-in-working-coordinates) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#set-point-position-in-working-coordinates)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetPointPositionInWorkingCoordinatesInput {
   readonly pointName: PointName;
@@ -102,6 +110,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Transform Points by Delta (About Working Frame) {/* #transform-points-by-delta-about-working-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#transform-points-by-delta-about-working-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#transform-points-by-delta-about-working-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface TransformPointsByDeltaAboutWorkingFrameInput {
@@ -124,6 +134,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-a-point-at-line-midpoint) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-line-midpoint)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointAtLineMidpointInput {
   readonly lineName: CollectionObjectName;
@@ -145,6 +157,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-group-from-point-name-ref-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-name-ref-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointGroupFromPointNameRefListInput {
   readonly pointNameList: Iterable<PointName>;
@@ -165,6 +179,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point Groups from Vector Groups {/* #construct-point-groups-from-vector-groups */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-groups-from-vector-groups) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-groups-from-vector-groups)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointGroupsFromVectorGroupsInput {
@@ -188,6 +204,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point Group from Point Cloud {/* #construct-point-group-from-point-cloud */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-group-from-point-cloud) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-cloud)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointGroupFromPointCloudInput {
@@ -216,17 +234,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-from-cloud-point---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-cloud-point---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface ConstructPointFromCloudPointRuntimeSelectInput {
   readonly selectionPrompt?: string;
   readonly constructPoint?: boolean;
-  readonly constructedPointName?: PointName;
+  readonly constructedPointName: PointName;
 }
 
 // Member of BriosaClient
 interface BriosaClient {
   constructPointFromCloudPointRuntimeSelect(
-    input?: ConstructPointFromCloudPointRuntimeSelectInput,
+    input: ConstructPointFromCloudPointRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
   ): Promise<Vector>;
 }
@@ -237,6 +257,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct a Point at Circle Center {/* #construct-a-point-at-circle-center */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-a-point-at-circle-center) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-circle-center)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointAtCircleCenterInput {
@@ -258,6 +280,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point at Intersection of Planes {/* #construct-point-at-intersection-of-planes */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-planes) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-planes)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointAtIntersectionOfPlanesInput {
@@ -282,6 +306,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-two-lines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-two-lines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointAtIntersectionOfTwoLinesInput {
   readonly firstLineName: CollectionObjectName;
@@ -303,6 +329,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point at Intersection of Plane and Line {/* #construct-point-at-intersection-of-plane-and-line */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-plane-and-line) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-plane-and-line)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointAtIntersectionOfPlaneAndLineInput {
@@ -326,6 +354,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-2-b-splines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-2-b-splines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointAtIntersectionOfTwoBSplinesInput {
   readonly firstBSplineName: CollectionObjectName;
@@ -347,6 +377,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point at intersection of B-Spline and Surfaces {/* #construct-point-at-intersection-of-b-spline-and-surfaces */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-intersection-of-b-spline-and-surfaces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-b-spline-and-surfaces)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointAtIntersectionOfBSplineAndSurfacesInput {
@@ -371,6 +403,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-at-intersection-of-circle-and-line) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-circle-and-line)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsAtIntersectionOfCircleAndLineInput {
   readonly circleName: CollectionObjectName;
@@ -392,6 +426,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Points at Intersection of Principle Object Axes and Surfaces {/* #construct-points-at-intersection-of-principle-object-axes-and-surfaces */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-at-intersection-of-principle-object-axes-and-surfaces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-principle-object-axes-and-surfaces)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointsAtIntersectionOfPrincipalObjectAxesAndSurfacesInput {
@@ -416,6 +452,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-from-cylinder) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-cylinder)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsFromCylinderInput {
   readonly cylinderName: CollectionObjectName;
@@ -436,6 +474,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct a Point at Projection of Point onto An Object {/* #construct-a-point-at-projection-of-point-onto-an-object */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-a-point-at-projection-of-point-onto-an-object) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-projection-of-point-onto-an-object)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointAtProjectionOfPointOntoObjectInput {
@@ -458,6 +498,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Points at Projection on Surfaces - Parallel to WCF Axis {/* #construct-points-at-projection-on-surfaces---parallel-to-wcf-axis */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointsAtProjectionOnSurfacesParallelToWcfAxisInput {
@@ -484,6 +526,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---radial-from-wcf-axis) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---radial-from-wcf-axis)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsAtProjectionOnSurfacesRadialFromWcfAxisInput {
   readonly surfaceList: Iterable<CollectionObjectName>;
@@ -509,6 +553,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsAtProjectionOnSurfacesSphericalFromWcfOriginInput {
   readonly surfaceList: Iterable<CollectionObjectName>;
@@ -533,6 +579,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetGradientAtProjectedPointOnSurfaceInput {
   readonly pointToProject: PointName;
@@ -555,12 +603,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface-edge) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface-edge)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetGradientAtProjectedPointOnSurfaceEdgeInput {
   readonly pointToProject: PointName;
   readonly surfaceEdge: CollectionObjectName;
   readonly surfaceName: CollectionObjectName;
-  readonly edgeOffsetDirection?: Vector;
+  readonly edgeOffsetDirection: Vector;
   readonly edgeOffsetDistance?: number;
   readonly generateOutputVectorLines?: boolean;
 }
@@ -576,7 +626,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -585,6 +635,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Construct Points By Projecting Points On Mesh Along Direction {/* #construct-points-by-projecting-points-on-mesh-along-direction */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-by-projecting-points-on-mesh-along-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-by-projecting-points-on-mesh-along-direction)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointsByProjectingPointsOnMeshAlongDirectionInput {
@@ -610,6 +662,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-spaced-at-a-distance-on-curves) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-spaced-at-a-distance-on-curves)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsSpacedAtDistanceOnCurvesInput {
   readonly bSplineList: Iterable<CollectionObjectName>;
@@ -633,6 +687,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-n-spaced-on-curves) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-n-spaced-on-curves)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsNSpacedOnCurvesInput {
   readonly bSplineList: Iterable<CollectionObjectName>;
@@ -655,6 +711,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Points on Curves Using Max Chordal Deviation {/* #construct-points-on-curves-using-max-chordal-deviation */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-on-curves-using-max-chordal-deviation) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-curves-using-max-chordal-deviation)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointsOnCurvesUsingMaxChordalDeviationInput {
@@ -681,6 +739,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-on-objects-vertices) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-objects-vertices)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsOnObjectVerticesInput {
   readonly objectNameList: Iterable<CollectionObjectName>;
@@ -701,6 +761,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Points on Surface(s) by Clicking {/* #construct-points-on-surfaces-by-clicking */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-on-surfaces-by-clicking) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-surfaces-by-clicking)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface ConstructPointsOnSurfacesByClickingInput {
@@ -723,6 +785,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-from-surface-faces---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surface-faces---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -738,6 +802,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-from-surfaces-on-uv-grid) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surfaces-on-uv-grid)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsFromSurfacesOnUvGridInput {
   readonly surfaceList: Iterable<CollectionObjectName>;
@@ -745,7 +811,7 @@ export interface ConstructPointsFromSurfacesOnUvGridInput {
   readonly makeEachLineSeparateGroup?: boolean;
   readonly numberOfUGrids?: number;
   readonly numberOfVGrids?: number;
-  readonly edgePointMode?: EdgePointMode;
+  readonly edgePointMode: EdgePointMode;
 }
 
 // Member of BriosaClient
@@ -762,6 +828,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point at Object Origin {/* #construct-point-at-object-origin */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-point-at-object-origin) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-object-origin)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointAtObjectOriginInput {
@@ -784,11 +852,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-shifted-in-working-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-shifted-in-working-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsShiftedInWorkingFrameInput {
   readonly originalPoints: Iterable<PointName>;
   readonly groupForNewPoints: CollectionObjectName;
-  readonly shiftVector?: Vector;
+  readonly shiftVector: Vector;
 }
 
 // Member of BriosaClient
@@ -805,6 +875,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Points Cylindrically Shifted {/* #construct-points-cylindrically-shifted */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-cylindrically-shifted) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-cylindrically-shifted)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointsCylindricallyShiftedInput {
@@ -827,7 +899,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -836,6 +908,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Construct Points WildCard Selection {/* #construct-points-wildcard-selection */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-wildcard-selection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointsWildcardSelectionInput {
@@ -860,11 +934,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-subset-with-greatest-spacing) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-subset-with-greatest-spacing)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsSubsetWithGreatestSpacingInput {
   readonly pointsToSubsample: Iterable<PointName>;
   readonly subsetSize?: number;
-  readonly groupForSubset?: CollectionObjectName;
+  readonly groupForSubset: CollectionObjectName;
 }
 
 // Member of BriosaClient
@@ -881,6 +957,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Points Layout on Grid {/* #construct-points-layout-on-grid */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-layout-on-grid) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-layout-on-grid)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointsLayoutOnGridInput {
@@ -912,6 +990,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-proximity) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-proximity)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsAutoCorrespondTwoGroupsProximityInput {
   readonly referenceGroup: CollectionObjectName;
@@ -935,6 +1015,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-inter-point-distance) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-inter-point-distance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointsAutoCorrespondTwoGroupsInterPointDistanceInput {
   readonly referenceGroup: CollectionObjectName;
@@ -957,6 +1039,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Average a set of Groups {/* #average-a-set-of-groups */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#average-a-set-of-groups) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#average-a-set-of-groups)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AverageSetOfGroupsInput {
@@ -982,6 +1066,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#copy-groups-excluding-obscured-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#copy-groups-excluding-obscured-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CopyGroupsExcludingObscuredPointsInput {
   readonly instrumentId: CollectionInstrumentId;
@@ -1004,6 +1090,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#make-a-point-name---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface MakePointNameRuntimeSelectInput {
   readonly userPrompt?: string;
@@ -1023,6 +1111,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make a Point Name - Ensure Unique {/* #make-a-point-name---ensure-unique */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#make-a-point-name---ensure-unique) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---ensure-unique)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakePointNameEnsureUniqueInput {
@@ -1045,6 +1135,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#make-a-point-name-ref-list-from-a-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list-from-a-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakePointNameRefListFromGroupInput {
   readonly groupName: CollectionObjectName;
@@ -1065,6 +1157,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#make-a-point-name-ref-list---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface MakePointNameRefListRuntimeSelectInput {
   readonly userPrompt?: string;
@@ -1084,6 +1178,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make a Point Name Ref List - Wildcard Select {/* #make-a-point-name-ref-list---wildcard-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#make-a-point-name-ref-list---wildcard-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---wildcard-select)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakePointNameRefListWildcardSelectInput {
@@ -1107,6 +1203,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#clear-hidden-point-bar-database) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#clear-hidden-point-bar-database)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -1119,6 +1217,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Hidden Point Rod {/* #create-hidden-point-rod */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#create-hidden-point-rod) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point-rod)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CreateHiddenPointRodInput {
@@ -1139,7 +1239,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1149,6 +1249,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Hidden Point Rod Index by Name {/* #get-hidden-point-rod-index-by-name */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#get-hidden-point-rod-index-by-name) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#get-hidden-point-rod-index-by-name)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetHiddenPointRodIndexByNameInput {
@@ -1170,6 +1272,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#delete-hidden-point-rod) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#delete-hidden-point-rod)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteHiddenPointRodInput {
   readonly hiddenPointRodIndex?: number;
@@ -1189,6 +1293,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Hidden Point {/* #create-hidden-point */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups#create-hidden-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface CreateHiddenPointInput {
@@ -1242,4 +1348,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

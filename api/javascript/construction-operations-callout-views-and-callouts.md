@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Callout Views and Callouts
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-callout-views-and-callouts) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Create Vector Callout {/* #create-vector-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#create-vector-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CreateVectorCalloutInput {
@@ -57,6 +59,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CreateMinMaxVectorGroupCalloutInput {
   readonly destinationCalloutView: CollectionItemName;
@@ -97,6 +101,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-callout) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#create-point-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CreatePointCalloutInput {
   readonly destinationCalloutView: CollectionItemName;
@@ -114,7 +120,7 @@ export interface CreatePointCalloutInput {
   readonly showUy?: boolean;
   readonly showUz?: boolean;
   readonly showUMag?: boolean;
-  readonly desiredCoordinateSystem?: CoordinateSystemType;
+  readonly desiredCoordinateSystem: CoordinateSystemType;
   readonly notes?: Iterable<string>;
   readonly useDefaultPlacement?: boolean;
 }
@@ -130,7 +136,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -144,6 +150,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Create Point Comparison Callout {/* #create-point-comparison-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#create-point-comparison-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CreatePointComparisonCalloutInput {
@@ -186,6 +194,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-relationship-callout) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#create-relationship-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CreateRelationshipCalloutInput {
   readonly destinationCalloutView: CollectionItemName;
@@ -209,6 +219,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Picture Callout {/* #create-picture-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-picture-callout) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#create-picture-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CreatePictureCalloutInput {
@@ -235,6 +247,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-text-callout) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#create-text-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CreateTextCalloutInput {
   readonly destinationCalloutView: CollectionItemName;
@@ -259,26 +273,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)
 
-```ts
-export interface MakeCalloutViewRefListWildcardSelectionInput {
-  readonly collectionWildcardCriteria?: string;
-  readonly calloutViewWildcardCriteria?: string;
-}
-
-// Member of BriosaClient
-interface BriosaClient {
-  makeCalloutViewRefListWildcardSelection(
-    input?: MakeCalloutViewRefListWildcardSelectionInput,
-    callOptions?: BriosaCallOptions,
-  ): Promise<readonly CollectionItemName[]>;
-}
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Set Default Callout View Properties {/* #set-default-callout-view-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-default-callout-view-properties) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetDefaultCalloutViewPropertiesInput {
@@ -301,26 +303,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#set-callout-view-properties)
 
-```ts
-export interface SetCalloutViewPropertiesInput {
-  readonly calloutViews: Iterable<CollectionItemName>;
-  readonly properties?: CalloutViewProperties;
-}
-
-// Member of BriosaClient
-interface BriosaClient {
-  setCalloutViewProperties(
-    input: SetCalloutViewPropertiesInput,
-    callOptions?: BriosaCallOptions,
-  ): Promise<void>;
-}
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement sets callout view properties on a list. Set Default Callout View Properties remains. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Delete Callout View {/* #delete-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#delete-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#delete-callout-view)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 // Member of BriosaClient
@@ -337,6 +327,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Rename Callout View {/* #rename-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#rename-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#rename-callout-view)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface RenameCalloutViewInput {
@@ -360,6 +352,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#auto-arrange-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#auto-arrange-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -376,6 +370,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -391,6 +387,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get I-th Callout Position in Callout View {/* #get-i-th-callout-position-in-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetIthCalloutPositionInCalloutViewInput {
@@ -412,6 +410,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set I-th Callout Position in Callout View {/* #set-i-th-callout-position-in-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetIthCalloutPositionInCalloutViewInput {
@@ -436,4 +436,4 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)
