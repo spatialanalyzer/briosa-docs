@@ -21,7 +21,9 @@ This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other e
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
-  makeSurfaceFaceListRuntimeSelect(): Promise<SurfaceFaceList>;
+  makeSurfaceFaceListRuntimeSelect(
+    callOptions?: BriosaCallOptions,
+  ): Promise<SurfaceFaceList>;
 }
 ```
 
@@ -38,6 +40,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 interface BriosaClient {
   makeSurfaceFaceListFromSurface(
     surface: CollectionObjectName,
+    callOptions?: BriosaCallOptions,
   ): Promise<SurfaceFaceList>;
 }
 ```
@@ -55,6 +58,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 interface BriosaClient {
   makeGdtFeatureCheckAnnotation(
     options: MakeGdtFeatureCheckAnnotationOptions,
+    callOptions?: BriosaCallOptions,
   ): Promise<void>;
 }
 ```
@@ -70,7 +74,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
-  makeGdtDatumAnnotation(options: MakeGdtDatumAnnotationOptions): Promise<void>;
+  makeGdtDatumAnnotation(
+    options: MakeGdtDatumAnnotationOptions,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
 }
 ```
 
@@ -85,7 +92,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
-  makeFeatureChecks(collection: CollectionName): Promise<void>;
+  makeFeatureChecks(
+    collection: CollectionName,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
 }
 ```
 
@@ -102,6 +112,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 interface BriosaClient {
   makeFeatureCheckRefListFromCollection(
     collection: CollectionName,
+    callOptions?: BriosaCallOptions,
   ): Promise<readonly CollectionItemName[]>;
 }
 ```
@@ -117,10 +128,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
-  makeFeatureCheckReferenceListWildcardSelection(options?: {
-    collectionWildcardCriteria?: string;
-    featureCheckWildcardCriteria?: string;
-  }): Promise<readonly CollectionItemName[]>;
+  makeFeatureCheckReferenceListWildcardSelection(
+    options?: {
+      collectionWildcardCriteria?: string;
+      featureCheckWildcardCriteria?: string;
+    },
+    callOptions?: BriosaCallOptions,
+  ): Promise<readonly CollectionItemName[]>;
 }
 ```
 
@@ -137,6 +151,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 interface BriosaClient {
   makeAnnotationRefListFromCollection(
     collection: CollectionName,
+    callOptions?: BriosaCallOptions,
   ): Promise<readonly CollectionItemName[]>;
 }
 ```
@@ -152,10 +167,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
-  makeAnnotationRefListWildcardSelection(options?: {
-    collectionWildcardCriteria?: string;
-    annotationWildcardCriteria?: string;
-  }): Promise<readonly CollectionItemName[]>;
+  makeAnnotationRefListWildcardSelection(
+    options?: {
+      collectionWildcardCriteria?: string;
+      annotationWildcardCriteria?: string;
+    },
+    callOptions?: BriosaCallOptions,
+  ): Promise<readonly CollectionItemName[]>;
 }
 ```
 
@@ -172,6 +190,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 interface BriosaClient {
   deleteFeatureChecks(
     featureChecks: readonly CollectionItemName[],
+    callOptions?: BriosaCallOptions,
   ): Promise<void>;
 }
 ```
@@ -189,6 +208,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 interface BriosaClient {
   makeDatumRefListFromCollection(
     collection: CollectionName,
+    callOptions?: BriosaCallOptions,
   ): Promise<readonly CollectionObjectName[]>;
 }
 ```
@@ -243,4 +263,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/c6691dff8e9a7af9d6c4accf422074dab7287e8c/targets/2026.1.0529.7)

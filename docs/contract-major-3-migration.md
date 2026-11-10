@@ -166,7 +166,9 @@ their documentation says the work was not done:
 Return types do not change. To see whether a call fully or partly succeeded,
 pass the per-call observer: `onMpCompletion` before the `CancellationToken` in
 .NET, the keyword-only `on_mp_completion` in Python, or `onMpCompletion` in
-JavaScript's `BriosaCallOptions`. A .NET caller that passed its cancellation
+JavaScript's `BriosaCallOptions`. Eleven JavaScript `gdtOperations` methods
+that took no call options in 0.4.0, such as `makeFeatureChecks`, now take them
+too; existing calls are unchanged. A .NET caller that passed its cancellation
 token positionally must now name it. Every client checks each MP success,
 observed or not, and reports a success without valid MP details as a protocol
 error. See [Understand MP Command Results](/docs/concepts/execution-outcomes#when-a-command-partly-succeeds).

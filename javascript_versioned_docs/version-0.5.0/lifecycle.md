@@ -466,16 +466,9 @@ export interface MpCompletion {
 }
 ```
 
-MP functions take `BriosaCallOptions` as their optional last argument. The
+Every MP function takes `BriosaCallOptions` as its optional last argument. The
 `signal` and the `onMpCompletion` observer (contract major 3) are call controls,
-not MP inputs. Eleven `gdtOperations` members take no call options at all, so
-they can be neither aborted nor observed: `deleteFeatureChecks`,
-`makeAnnotationRefListFromCollection`, `makeAnnotationRefListWildcardSelection`,
-`makeDatumRefListFromCollection`, `makeFeatureCheckRefListFromCollection`,
-`makeFeatureCheckReferenceListWildcardSelection`, `makeFeatureChecks`,
-`makeGdtDatumAnnotation`, `makeGdtFeatureCheckAnnotation`,
-`makeSurfaceFaceListFromSurface`, and `makeSurfaceFaceListRuntimeSelect`. The
-client still checks the MP completion of their successes.
+not MP inputs.
 
 An MP that returns code 4 (PARTIAL SUCCESS) did its work, but not its full
 intended effect. The call still succeeds: it resolves with its outputs as usual,
