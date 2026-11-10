@@ -50,6 +50,8 @@ public sealed record SpatialAnalyzerLaunchOptions
 
 public sealed record BriosaStartOptions
 {
+    public BriosaServerSelection ServerSelection { get; init; } = new();
+    public BriosaLoggingOptions? Logging { get; init; }
     public bool StartSpatialAnalyzerSdk { get; init; } = true;
     public bool LaunchSpatialAnalyzer { get; init; } = true;
     public bool ConnectToSpatialAnalyzer { get; init; } = true;
@@ -181,7 +183,7 @@ public enum SpatialAnalyzerSdkTerminationKind
 
 public enum SpatialAnalyzerSdkRecoveryMode
 {
-    ReplaceWithoutReplay,
+    ReplaceWithoutReplay = 1,
 }
 
 public enum SpatialAnalyzerConnectionState

@@ -50,6 +50,9 @@ class SpatialAnalyzerLaunchOptions:
 
 @dataclass(frozen=True, slots=True)
 class BriosaStartOptions:
+    server_selection: BriosaServerSelection = field(
+        default_factory=BriosaServerSelection,
+    )
     start_spatial_analyzer_sdk: bool = True
     launch_spatial_analyzer: bool = True
     connect_to_spatial_analyzer: bool = True
@@ -57,6 +60,7 @@ class BriosaStartOptions:
         default_factory=SpatialAnalyzerLaunchOptions,
     )
     startup_timeout: float = 120.0
+    logging: BriosaLoggingOptions | None = None
 
 
 class BriosaClient:
