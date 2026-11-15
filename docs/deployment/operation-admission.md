@@ -67,10 +67,19 @@ admission.
 ## Interactive Operations
 
 `interactive_ui` is in no profile. An operation that opens or blocks on operator
-UI is admitted only with the **interactive opt-in**:
-`Flags:interactive_ui=allow`, or a per-operation `allow` override. The other
-flags of its row still need a profile that admits them, so an interactive device
-operation needs `device` or `full` as well as the opt-in.
+UI is admitted only with the **interactive opt-in**, in one of two forms:
+
+- `Flags:interactive_ui=allow` adds operator UI to what the profile admits. The
+  other flags of the operation's row still need the profile or an `allow`
+  setting of their own, and a `deny` setting on any of them still denies the
+  operation. An interactive device operation therefore also needs `device`,
+  `full`, or its device flags set to `allow`.
+- `Overrides:<service>:<operation>=allow` admits that one operation under every
+  profile and flag setting, because an override is decided before flags and the
+  profile. Only the unreviewed and exclusive-workflow denials come first; see
+  [Precedence](#precedence). For example, an `allow` override admits an
+  interactive motion operation under `standard`, even with
+  `Flags:physical_motion=deny`.
 
 Some operations open operator UI only when a request option asks for it, such
 as Show Interface, Show Results Dialog, Report Deviations, Pause MP Until
@@ -142,9 +151,26 @@ value is anything other than `allow` or `deny`, or when the retired `Allow` or
 `Deny` arrays are present. Names and values are exact and case-sensitive.
 Policy is fixed for the process lifetime; restart the server after changing it.
 
-A denied call returns the typed, value-free `PermissionDenied` outcome with a
-`NotStarted` disposition. An operation without a complete reviewed
-classification is denied under every setting.
+## Precedence
+
+The first rule that applies decides each request:
+
+1. An operation that is not registered for the exact target, or whose MP
+   binding does not match, is unsupported. An operation without a complete
+   reviewed classification, or a request that cannot be read against its
+   reviewed options, is denied.
+2. An exclusive workflow, or a request that leaves work running after the call
+   returns, is denied.
+3. An override of the operation decides next: `deny` denies it, and `allow`
+   admits it without consulting the flags or the profile.
+4. A `deny` setting on any of the request's flags denies it.
+5. The profile admits the request when each of its flags is in the profile's set
+   or set to `allow`, and the effect filter passes. Otherwise it is denied.
+
+A request's flags are the risk flags of its operation's reviewed row, plus
+`interactive_ui` when a request option turns on operator UI. No setting changes
+the first two rules. A denied call returns the typed, value-free
+`PermissionDenied` outcome with a `NotStarted` disposition.
 
 ## Duration Classes
 
@@ -172,7 +198,7 @@ bounds; see [Windows Deployment](./windows.md#worker-time-bounds).
 | A missing `Allow` denied every operation | A missing `Profile` fails startup |
 | `Deny:0=<service>.<operation>` | `Overrides:<service>:<operation>=deny` |
 | Adding an ID to `Allow` | `Overrides:<service>:<operation>=allow`, or a wider profile |
-| Narrowing by command only | `Flags:<risk_flag>=deny` narrows a whole risk family |
+| Narrowing by command only | `Flags:<risk_flag>=deny` narrows a whole risk family, except operations with an `allow` override |
 | `Briosa__Security__Operations__Deny__0` | `Briosa__Security__Operations__Overrides__<service>__<operation>=deny` |
 
 To keep the previous behavior as closely as the new model allows, which is
