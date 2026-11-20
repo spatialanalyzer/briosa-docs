@@ -437,8 +437,10 @@ export type OperationAdmission =
   `setProbeOffsetFrameOffline`) need `Profile=device`, `Profile=full`, or a
   per-operation `allow` override. Operations, and request options, that open or
   block on operator UI need the server's interactive opt-in
-  (`Flags:interactive_ui=allow` or a per-operation `allow` override); without it
-  the request is denied with `operation-option-denied`. Multi-call exclusive
+  (`Flags:interactive_ui=allow` or a per-operation `allow` override). Without
+  it, the server returns `operation-option-denied` only when a request option
+  causes the denial; an operation whose own risk flags are denied gets
+  `operation-policy-denied`. Multi-call exclusive
   workflows (device, trapping, watch, robot-interface, and appliance sessions)
   are denied under every setting. The facades of denied operations stay in the
   package: a denied call fails with `BriosaOperationError` of kind `policyDenied` and
