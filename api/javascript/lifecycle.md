@@ -439,9 +439,14 @@ export type OperationAdmission =
   and request options, that open or block on operator UI need the server's
   interactive opt-in
   (`Flags:interactive_ui=allow` or a per-operation `allow` override). Without
-  it, the server returns `operation-option-denied` only when a request option
-  causes the denial; an operation whose own risk flags are denied gets
-  `operation-policy-denied`. Multi-call exclusive
+  it, a request that is denied only because one of its options opens operator
+  UI fails with `operation-option-denied`, and a request for an operation that
+  the profile doesn't admit fails with `operation-policy-denied`. Flags
+  explicitly set to `deny` are checked before the profile, though: with
+  `Flags:interactive_ui=deny`, a request whose option opens operator UI fails
+  with `operation-option-denied` even when the profile doesn't admit its
+  operation, unless one of the operation's own risk flags is set to `deny` too,
+  in which case it fails with `operation-policy-denied`. Multi-call exclusive
   workflows (device, trapping, watch, robot-interface, and appliance sessions)
   are denied under every setting. The facades of denied operations stay in the
   package: a denied call fails with `BriosaOperationError` of kind `policyDenied` and
