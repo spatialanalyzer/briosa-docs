@@ -63,10 +63,14 @@ Server 0.10.0 reports it as a success: the call returns its outputs, the MP
 execution state is `PartialSuccess` with code `4`, and the command is
 **completed**. Do not repeat the call to change its outcome.
 
-Four operations are the exception, because their documentation says code `4`
-leaves the requested work undone: `construct_point_from_survey_target_center`,
-`open_sa_file`, `open_template_file`, and `set_report_options_for_object`. For
-these, code `4` is an ordinary MP failure.
+Four operations are the exception: for
+`construct_point_from_survey_target_center`, `open_sa_file`,
+`open_template_file`, and `set_report_options_for_object`, code `4` is an
+ordinary MP failure. Their documentation says code `4` leaves the requested
+work undone, except that the SA 2024.1.0508.5 documentation doesn't list code
+`4` for `open_sa_file` and `open_template_file`. Those two keep the failure
+mapping on that target too, because a false success would discard the open
+job.
 
 A partial success does not change a method's return type. To see whether a call
 fully or partly succeeded, pass the per-call completion observer:

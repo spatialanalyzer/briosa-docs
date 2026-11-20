@@ -158,10 +158,12 @@ sent as given.
 SpatialAnalyzer reports MP code `4` when a command did its work but not its
 full intended effect. Server 0.10.0 reports it as a completed success with its
 outputs, and the clients never throw for it or retry it. Do not replay the call
-to change its outcome. Four operations keep code `4` as an MP failure, because
-their documentation says the work was not done:
+to change its outcome. Four operations keep code `4` as an MP failure:
 `construct_point_from_survey_target_center`, `open_sa_file`,
-`open_template_file`, and `set_report_options_for_object`.
+`open_template_file`, and `set_report_options_for_object`. Their documentation
+says the work was not done, except that the SA 2024.1.0508.5 documentation
+doesn't list code `4` for the two open-file commands; they keep the failure
+mapping there too, because a false success would discard the open job.
 
 Return types do not change. To see whether a call fully or partly succeeded,
 pass the per-call observer: `onMpCompletion` before the `CancellationToken` in
