@@ -1699,15 +1699,15 @@ mesh behavior through a reviewed exact-target SDK command.
 ## Delete Cloud Points by Radial Distance from Points
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="licensed-execution-probe">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
-  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Cloud Filters" data-validation="licensed-execution-probe">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
@@ -1736,7 +1736,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
   <div><span>MP Group Path</span><strong>Cloud and Mesh Operations / Cloud Filters</strong></div>
-  <div><span>Validation</span><strong>At Risk — fixture or interactive validation required</strong></div>
+  <div><span>Validation</span><strong>Licensed execution probe</strong></div>
   <div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
@@ -1803,7 +1803,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 **Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
 
-**Recommended Alternative:** No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and it has no licensed validation yet.
+**Recommended Alternative:** No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and a licensed session validated it on both targets for one cloud and one point.
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

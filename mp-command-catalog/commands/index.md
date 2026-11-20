@@ -2467,17 +2467,17 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by Radial Distance from Points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by Radial Distance from Points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="licensed-execution-probe">
   <td><Link to="/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points">Delete Cloud Points by Radial Distance from Points</Link></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — fixture or interactive validation required</td>
+  <td>Licensed execution probe</td>
 </tr>
-<tr data-command="Delete Cloud Points by Radial Distance from Points" data-group="Analysis Operations / Cloud Filters" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Cloud Points by Radial Distance from Points" data-group="Analysis Operations / Cloud Filters" data-status="current" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><Link to="/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points">Delete Cloud Points by Radial Distance from Points</Link></td>
   <td>Analysis Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="excluded" data-validation="licensed-execution-probe">
   <td><Link to="/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</Link></td>

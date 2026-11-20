@@ -91,7 +91,7 @@ contract that Server 0.9.2 and client 0.4.0 serve.
 
 | Operation | Why It Was Removed | Instead |
 | --- | --- | --- |
-| Delete Cloud Points by X Y Z Range | With bounds set, SpatialAnalyzer returned MP code -1 on both targets and deleted no points. | No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance instead; its semantics differ, and it has no licensed validation yet. |
+| Delete Cloud Points by X Y Z Range | With bounds set, SpatialAnalyzer returned MP code -1 on both targets and deleted no points. | No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance instead; its semantics differ, and a licensed session validated it on both targets for one cloud and one point. |
 | Mirror Object(s) | SpatialAnalyzer returned MP code -1 on both targets. | No replacement. |
 | Construct Circles (Lines) From Surfaces | SpatialAnalyzer returned MP code -1 for both modes on both targets. | No replacement. |
 | Set Callout View Properties | SpatialAnalyzer returned MP code -1 on both targets. | Set Default Callout View Properties remains. |
