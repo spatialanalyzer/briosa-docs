@@ -42,8 +42,9 @@ admits everything the narrower ones do.
 
 The seven device-configuration setters, such as the instrument scale factors,
 the robot model-link parameters, and the robot calibration frames, carry only
-`device_config`. `device` and `full` admit them, and so do
-`Flags:device_config=allow` and a per-operation `allow` override.
+`device_config`. `device` and `full` admit them, `standard` admits them with
+`Flags:device_config=allow`, and a per-operation `allow` override admits them
+under any profile.
 
 ## Risk Flags
 
