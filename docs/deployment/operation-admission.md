@@ -76,17 +76,23 @@ UI is admitted only with the **interactive opt-in**, in one of two forms:
   `full`, or its device flags set to `allow`.
 - `Overrides:<service>:<operation>=allow` admits that one operation under every
   profile and flag setting, because an override is decided before flags and the
-  profile. Only the unreviewed and exclusive-workflow denials come first; see
-  [Precedence](#precedence). For example, an `allow` override admits an
-  interactive motion operation under `standard`, even with
-  `Flags:physical_motion=deny`.
+  profile. Only four denials come first: unreviewed operations, requests the
+  server can't classify against their reviewed options
+  (`operation-request-unclassified`), exclusive workflows, and requests whose
+  options leave work running after the call returns
+  (`operation-option-isolation-unsupported`). See [Precedence](#precedence). For
+  example, an `allow` override admits an interactive motion operation under
+  `standard`, even with `Flags:physical_motion=deny`.
 
 Some operations open operator UI only when a request option asks for it, such
 as Show Interface, Show Results Dialog, Report Deviations, Pause MP Until
 Closed, or an HTML prompt file. The server reads each request's reviewed options
 before it maps or dispatches the request. A request that turns such an option on
-also needs the interactive opt-in; without it the request is denied with
-`operation-option-denied`. The operation's page names each such option.
+also needs the interactive opt-in. Without it, the request is denied with
+`operation-option-denied` when that option is the only reason. When the profile
+doesn't admit the operation itself either, as for `measure_single_point_here` (a
+device session) under `standard`, the denial is `operation-policy-denied`. The
+operation's page names each such option.
 
 These request defaults changed in Server 0.10.0 so that the waiting,
 non-prompting behavior is the default:
