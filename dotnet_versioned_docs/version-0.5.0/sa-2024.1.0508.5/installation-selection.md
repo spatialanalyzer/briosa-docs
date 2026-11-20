@@ -239,9 +239,10 @@ The seven device-configuration setters (`SetAbsoluteInstrumentScaleFactorAsync`,
 `SetMultiplyInstrumentScaleFactorAsync`, `SetRobotMachineModelLinkParametersAsync`,
 `SetActiveRobotCalibrationAsync`, `SetRobotCalibrationToolFrameAsync`,
 `SetRobotCalibrationMeasurementOffsetInToolFrameAsync`, and
-`SetProbeOffsetFrameOfflineAsync`) need the `device` or `full` profile or an
-override. Operations that open or block on operator UI need the explicit
-interactive opt-in. The facades of denied operations stay. The multi-call
+`SetProbeOffsetFrameOfflineAsync`) need the `device` or `full` profile,
+`Flags:device_config=allow`, or a per-operation `allow` override. Operations
+that open or block on operator UI need the explicit interactive opt-in. The
+facades of denied operations stay. The multi-call
 device, trapping, watch, robot-interface, and appliance session workflows are
 exclusive, and every profile, flag, and override denies them for now: a call
 fails with `PolicyDenied` and `NotStarted`.

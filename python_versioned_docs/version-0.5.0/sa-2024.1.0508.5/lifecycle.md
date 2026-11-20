@@ -405,9 +405,10 @@ class OperationAdmission(StrEnum):
   snapshot admits a method.
 - The packaged `standard` profile does not admit device sessions, device
   configuration, motion, code execution, external IO, file deletion, or
-  operator UI. The seven `device_config` operations need `Profile=device`,
-  `full`, or an override; interactive operations need the explicit
-  `Flags:interactive_ui=allow` opt-in. Methods for denied and exclusive
+  operator UI. The seven `device_config` operations need `Profile=device` or
+  `full`, `Flags:device_config=allow`, or a per-operation `allow` override;
+  interactive operations need the explicit opt-in, `Flags:interactive_ui=allow`
+  or a per-operation `allow` override. Methods for denied and exclusive
   operations remain, and a denied call fails with `POLICY_DENIED` and
   `NOT_STARTED`.
 
