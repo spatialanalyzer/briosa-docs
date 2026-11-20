@@ -92,8 +92,10 @@ before it maps or dispatches the request. A request that turns such an option on
 also needs the interactive opt-in. Without it, the request is denied with
 `operation-option-denied` when that option is the only reason. When the profile
 doesn't admit the operation itself either, as for `measure_single_point_here` (a
-device session) under `standard`, the denial is `operation-policy-denied`. The
-operation's page names each such option.
+device session) under `standard`, the denial is `operation-policy-denied`. Flag
+`deny` settings are checked before the profile, so an explicit
+`Flags:interactive_ui=deny` can make it `operation-option-denied` instead; see
+[Precedence](#precedence). The operation's page names each such option.
 
 These request defaults changed in Server 0.10.0 so that the waiting,
 non-prompting behavior is the default:
