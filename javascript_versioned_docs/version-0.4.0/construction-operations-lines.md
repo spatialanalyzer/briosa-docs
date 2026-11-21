@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct Line 2 Points {/* #construct-line-2-points */}
 
@@ -23,8 +23,8 @@ export interface ConstructLineTwoPointsInput {
   readonly secondPoint: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineTwoPoints(...))
+interface ConstructionOperations {
   constructLineTwoPoints(
     input: ConstructLineTwoPointsInput,
     callOptions?: BriosaCallOptions,
@@ -45,8 +45,8 @@ export interface ConstructLineTwoPointsVectorNotationInput {
   readonly secondVector: Vector;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineTwoPointsVectorNotation(...))
+interface ConstructionOperations {
   constructLineTwoPointsVectorNotation(
     input: ConstructLineTwoPointsVectorNotationInput,
     callOptions?: BriosaCallOptions,
@@ -67,8 +67,8 @@ export interface ConstructLineNormalToObjectInput {
   readonly lineLength?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineNormalToObject(...))
+interface ConstructionOperations {
   constructLineNormalToObject(
     input: ConstructLineNormalToObjectInput,
     callOptions?: BriosaCallOptions,
@@ -89,8 +89,8 @@ export interface ConstructLineProjectLineToObjectReferencePlaneInput {
   readonly objectToProjectTo: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineProjectLineToObjectReferencePlane(...))
+interface ConstructionOperations {
   constructLineProjectLineToObjectReferencePlane(
     input: ConstructLineProjectLineToObjectReferencePlaneInput,
     callOptions?: BriosaCallOptions,
@@ -111,8 +111,8 @@ export interface ConstructLineNormalToObjectThroughPointInput {
   readonly pointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineNormalToObjectThroughPoint(...))
+interface ConstructionOperations {
   constructLineNormalToObjectThroughPoint(
     input: ConstructLineNormalToObjectThroughPointInput,
     callOptions?: BriosaCallOptions,
@@ -133,8 +133,8 @@ export interface ConstructLineTwoPlaneIntersectionInput {
   readonly secondPlane: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineTwoPlaneIntersection(...))
+interface ConstructionOperations {
   constructLineTwoPlaneIntersection(
     input: ConstructLineTwoPlaneIntersectionInput,
     callOptions?: BriosaCallOptions,
@@ -149,8 +149,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/construction-operations-lines#construct-lines-from-surface-faces---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-lines#construct-lines-from-surface-faces---runtime-select)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLinesFromSurfaceFacesRuntimeSelect(...))
+interface ConstructionOperations {
   constructLinesFromSurfaceFacesRuntimeSelect(
     callOptions?: BriosaCallOptions,
   ): Promise<void>;
@@ -169,8 +169,8 @@ export interface ConstructLineCenterOfSlotInput {
   readonly slotName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineCenterOfSlot(...))
+interface ConstructionOperations {
   constructLineCenterOfSlot(
     input: ConstructLineCenterOfSlotInput,
     callOptions?: BriosaCallOptions,
@@ -191,8 +191,8 @@ export interface ConstructLineFromInstrumentShotInput {
   readonly observationIndex?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructLineFromInstrumentShot(...))
+interface ConstructionOperations {
   constructLineFromInstrumentShot(
     input: ConstructLineFromInstrumentShotInput,
     callOptions?: BriosaCallOptions,

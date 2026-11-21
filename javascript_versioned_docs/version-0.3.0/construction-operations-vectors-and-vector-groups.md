@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.3.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct a Vector Group - Group to Group Compare {/* #construct-a-vector-group---group-to-group-compare */}
 
@@ -26,8 +26,8 @@ export interface ConstructVectorGroupGroupToGroupCompareInput {
   readonly averageDeviationTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructVectorGroupGroupToGroupCompare(...))
+interface ConstructionOperations {
   constructVectorGroupGroupToGroupCompare(
     input: ConstructVectorGroupGroupToGroupCompareInput,
     callOptions?: BriosaCallOptions,
@@ -50,8 +50,8 @@ export interface ConstructVectorGroupAreaProfileCheckInput {
   readonly areaTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructVectorGroupAreaProfileCheck(...))
+interface ConstructionOperations {
   constructVectorGroupAreaProfileCheck(
     input: ConstructVectorGroupAreaProfileCheckInput,
     callOptions?: BriosaCallOptions,
@@ -71,8 +71,8 @@ export interface ConstructVectorGroupFromVectorNameRefListInput {
   readonly resultantVectorGroupName: CollectionVectorGroupName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructVectorGroupFromVectorNameRefList(...))
+interface ConstructionOperations {
   constructVectorGroupFromVectorNameRefList(
     input: ConstructVectorGroupFromVectorNameRefListInput,
     callOptions?: BriosaCallOptions,
@@ -95,8 +95,8 @@ export interface ConstructVectorInWorkingCoordinatesBeginDeltaInput {
   readonly isMagnitudeNegative?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructVectorInWorkingCoordinatesBeginDelta(...))
+interface ConstructionOperations {
   constructVectorInWorkingCoordinatesBeginDelta(
     input: ConstructVectorInWorkingCoordinatesBeginDeltaInput,
     callOptions?: BriosaCallOptions,
@@ -119,8 +119,8 @@ export interface ConstructVectorInWorkingCoordinatesBeginDirectionMagnitudeInput
   readonly signedMagnitude?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructVectorInWorkingCoordinatesBeginDirectionMagnitude(...))
+interface ConstructionOperations {
   constructVectorInWorkingCoordinatesBeginDirectionMagnitude(
     input: ConstructVectorInWorkingCoordinatesBeginDirectionMagnitudeInput,
     callOptions?: BriosaCallOptions,
@@ -140,8 +140,8 @@ export interface ConstructVectorGroupFromRelationshipInput {
   readonly vectorGroupName: CollectionVectorGroupName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructVectorGroupFromRelationship(...))
+interface ConstructionOperations {
   constructVectorGroupFromRelationship(
     input: ConstructVectorGroupFromRelationshipInput,
     callOptions?: BriosaCallOptions,
@@ -160,8 +160,8 @@ export interface MakeVectorNameRefListFromVectorGroupInput {
   readonly vectorGroupName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeVectorNameRefListFromVectorGroup(...))
+interface ConstructionOperations {
   makeVectorNameRefListFromVectorGroup(
     input: MakeVectorNameRefListFromVectorGroupInput,
     callOptions?: BriosaCallOptions,
@@ -180,8 +180,8 @@ export interface MakeVectorNameRefListRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeVectorNameRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makeVectorNameRefListRuntimeSelect(
     input?: MakeVectorNameRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -200,8 +200,8 @@ export interface MakeCollectionVectorGroupNameRefListRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionVectorGroupNameRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makeCollectionVectorGroupNameRefListRuntimeSelect(
     input?: MakeCollectionVectorGroupNameRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -220,8 +220,8 @@ export interface MakeVectorNamesUniqueInVectorGroupInput {
   readonly vectorGroupName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeVectorNamesUniqueInVectorGroup(...))
+interface ConstructionOperations {
   makeVectorNamesUniqueInVectorGroup(
     input: MakeVectorNamesUniqueInVectorGroupInput,
     callOptions?: BriosaCallOptions,

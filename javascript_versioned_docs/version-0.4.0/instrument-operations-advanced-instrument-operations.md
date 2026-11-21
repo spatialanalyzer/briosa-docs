@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `InstrumentOperations` methods through `briosa.instrumentOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Issue Instrument Actuator Command {/* #issue-instrument-actuator-command */}
 
@@ -22,8 +22,8 @@ export interface IssueInstrumentActuatorCommandInput {
   readonly command: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.issueInstrumentActuatorCommand(...))
+interface InstrumentOperations {
   issueInstrumentActuatorCommand(
     input: IssueInstrumentActuatorCommandInput,
     callOptions?: BriosaCallOptions,
@@ -44,8 +44,8 @@ export interface SetInstrumentAxesInput {
   readonly numberOfSteps?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentAxes(...))
+interface InstrumentOperations {
   setInstrumentAxes(
     input: SetInstrumentAxesInput,
     callOptions?: BriosaCallOptions,
@@ -66,8 +66,8 @@ export interface SetAlignmentProjectorInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setAlignmentProjector(...))
+interface InstrumentOperations {
   setAlignmentProjector(
     input: SetAlignmentProjectorInput,
     callOptions?: BriosaCallOptions,

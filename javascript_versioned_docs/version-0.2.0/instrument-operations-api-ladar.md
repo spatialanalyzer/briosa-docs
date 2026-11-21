@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `InstrumentOperations` methods through `briosa.instrumentOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Set LADAR AutoMeas Point {/* #set-ladar-automeas-point */}
 
@@ -22,8 +22,8 @@ export interface SetLadarAutoMeasPointInput {
   readonly sampleTimeMilliseconds?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setLadarAutoMeasPoint(...))
+interface InstrumentOperations {
   setLadarAutoMeasPoint(
     input: SetLadarAutoMeasPointInput,
     callOptions?: BriosaCallOptions,
@@ -47,8 +47,8 @@ export interface SetLadarAutoMeasSphereInput {
   readonly sendMeasuredCloud?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setLadarAutoMeasSphere(...))
+interface InstrumentOperations {
   setLadarAutoMeasSphere(
     input: SetLadarAutoMeasSphereInput,
     callOptions?: BriosaCallOptions,
@@ -68,8 +68,8 @@ export interface SetLadarFeatureMeasSphereInput {
   readonly scanLineSpacing?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setLadarFeatureMeasSphere(...))
+interface InstrumentOperations {
   setLadarFeatureMeasSphere(
     input: SetLadarFeatureMeasSphereInput,
     callOptions?: BriosaCallOptions,
@@ -90,8 +90,8 @@ export interface SetLadarFeatureMeasCircleInput {
   readonly widthOfExtraAreaAroundScan?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setLadarFeatureMeasCircle(...))
+interface InstrumentOperations {
   setLadarFeatureMeasCircle(
     input: SetLadarFeatureMeasCircleInput,
     callOptions?: BriosaCallOptions,
@@ -112,8 +112,8 @@ export interface SetLadarFeatureMeasSlotInput {
   readonly widthOfExtraAreaAroundScan?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setLadarFeatureMeasSlot(...))
+interface InstrumentOperations {
   setLadarFeatureMeasSlot(
     input: SetLadarFeatureMeasSlotInput,
     callOptions?: BriosaCallOptions,
@@ -134,8 +134,8 @@ export interface SetLadarFeatureMeasCylinderInput {
   readonly widthOfExtraAreaAroundScan?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setLadarFeatureMeasCylinder(...))
+interface InstrumentOperations {
   setLadarFeatureMeasCylinder(
     input: SetLadarFeatureMeasCylinderInput,
     callOptions?: BriosaCallOptions,

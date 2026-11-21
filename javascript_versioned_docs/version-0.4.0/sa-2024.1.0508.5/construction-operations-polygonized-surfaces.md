@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct Polygonized Surface from Point Clouds {/* #construct-polygonized-surface-from-point-clouds */}
 
@@ -24,8 +24,8 @@ export interface ConstructPolygonizedSurfaceFromPointCloudsInput {
   readonly gridResolution?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPolygonizedSurfaceFromPointClouds(...))
+interface ConstructionOperations {
   constructPolygonizedSurfaceFromPointClouds(
     input: ConstructPolygonizedSurfaceFromPointCloudsInput,
     callOptions?: BriosaCallOptions,

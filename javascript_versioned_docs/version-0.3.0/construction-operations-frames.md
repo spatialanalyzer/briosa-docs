@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.3.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct Frame with Wizard {/* #construct-frame-with-wizard */}
 
@@ -22,8 +22,8 @@ export interface ConstructFrameWithWizardInput {
   readonly waitForCompletion?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameWithWizard(...))
+interface ConstructionOperations {
   constructFrameWithWizard(
     input: ConstructFrameWithWizardInput,
     callOptions?: BriosaCallOptions,
@@ -43,8 +43,8 @@ export interface ConstructFrameInput {
   readonly transformInWorkingCoordinates?: Transform;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrame(...))
+interface ConstructionOperations {
   constructFrame(
     input: ConstructFrameInput,
     callOptions?: BriosaCallOptions,
@@ -64,8 +64,8 @@ export interface ConstructFrameFromTransformInWorldInput {
   readonly transformInWorldCoordinates?: Transform;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameFromTransformInWorld(...))
+interface ConstructionOperations {
   constructFrameFromTransformInWorld(
     input: ConstructFrameFromTransformInWorldInput,
     callOptions?: BriosaCallOptions,
@@ -85,8 +85,8 @@ export interface ConstructFrameOnInstrumentBaseInput {
   readonly frameName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameOnInstrumentBase(...))
+interface ConstructionOperations {
   constructFrameOnInstrumentBase(
     input: ConstructFrameOnInstrumentBaseInput,
     callOptions?: BriosaCallOptions,
@@ -106,8 +106,8 @@ export interface ConstructFrameOnObjectInput {
   readonly frameName?: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameOnObject(...))
+interface ConstructionOperations {
   constructFrameOnObject(
     input: ConstructFrameOnObjectInput,
     callOptions?: BriosaCallOptions,
@@ -130,8 +130,8 @@ export interface ConstructFrameThreePointsInput {
   readonly frameName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameThreePoints(...))
+interface ConstructionOperations {
   constructFrameThreePoints(
     input: ConstructFrameThreePointsInput,
     callOptions?: BriosaCallOptions,
@@ -153,8 +153,8 @@ export interface ConstructFrameAtPointWithWorkingZAndClockedAxisInput {
   readonly frameName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameAtPointWithWorkingZAndClockedAxis(...))
+interface ConstructionOperations {
   constructFrameAtPointWithWorkingZAndClockedAxis(
     input: ConstructFrameAtPointWithWorkingZAndClockedAxisInput,
     callOptions?: BriosaCallOptions,
@@ -175,8 +175,8 @@ export interface ConstructFramePickOriginAndPointOnXAxisClockZAlongWorkingZInput
   readonly frameName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFramePickOriginAndPointOnXAxisClockZAlongWorkingZ(...))
+interface ConstructionOperations {
   constructFramePickOriginAndPointOnXAxisClockZAlongWorkingZ(
     input: ConstructFramePickOriginAndPointOnXAxisClockZAlongWorkingZInput,
     callOptions?: BriosaCallOptions,
@@ -201,8 +201,8 @@ export interface ConstructFrameKnownOriginObjectDirectionObjectDirectionInput {
   readonly frameName?: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameKnownOriginObjectDirectionObjectDirection(...))
+interface ConstructionOperations {
   constructFrameKnownOriginObjectDirectionObjectDirection(
     input: ConstructFrameKnownOriginObjectDirectionObjectDirectionInput,
     callOptions?: BriosaCallOptions,
@@ -227,8 +227,8 @@ export interface ConstructFrameThreePlanesInput {
   readonly frameName?: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameThreePlanes(...))
+interface ConstructionOperations {
   constructFrameThreePlanes(
     input: ConstructFrameThreePlanesInput,
     callOptions?: BriosaCallOptions,
@@ -249,8 +249,8 @@ export interface ConstructFrameCopyAndMakeLeftHandedInput {
   readonly frameName?: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameCopyAndMakeLeftHanded(...))
+interface ConstructionOperations {
   constructFrameCopyAndMakeLeftHanded(
     input: ConstructFrameCopyAndMakeLeftHandedInput,
     callOptions?: BriosaCallOptions,
@@ -270,8 +270,8 @@ export interface ConstructFrameAverageOfOtherObjectFramesInput {
   readonly frameName?: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameAverageOfOtherObjectFrames(...))
+interface ConstructionOperations {
   constructFrameAverageOfOtherObjectFrames(
     input: ConstructFrameAverageOfOtherObjectFramesInput,
     callOptions?: BriosaCallOptions,
@@ -292,8 +292,8 @@ export interface ConstructFrameAtRobotLinkInput {
   readonly resultingFrame: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameAtRobotLink(...))
+interface ConstructionOperations {
   constructFrameAtRobotLink(
     input: ConstructFrameAtRobotLinkInput,
     callOptions?: BriosaCallOptions,
@@ -313,8 +313,8 @@ export interface ConstructFrameFromPointMeasurementProbingFramesInput {
   readonly showFrame?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFrameFromPointMeasurementProbingFrames(...))
+interface ConstructionOperations {
   constructFrameFromPointMeasurementProbingFrames(
     input: ConstructFrameFromPointMeasurementProbingFramesInput,
     callOptions?: BriosaCallOptions,
@@ -336,8 +336,8 @@ export interface ConstructMirrorCubeFrameInput {
   readonly nominalCubeFaceAngle?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructMirrorCubeFrame(...))
+interface ConstructionOperations {
   constructMirrorCubeFrame(
     input: ConstructMirrorCubeFrameInput,
     callOptions?: BriosaCallOptions,
@@ -359,8 +359,8 @@ export interface ConstructFramesByProjectingFramesOnMeshAlongFrameDirectionInput
   readonly biDirectionalProjection?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFramesByProjectingFramesOnMeshAlongFrameDirection(...))
+interface ConstructionOperations {
   constructFramesByProjectingFramesOnMeshAlongFrameDirection(
     input: ConstructFramesByProjectingFramesOnMeshAlongFrameDirectionInput,
     callOptions?: BriosaCallOptions,
@@ -383,8 +383,8 @@ export interface ConstructFramesByProjectingFramesOnMeshAlongReferenceDirectionI
   readonly biDirectionalProjection?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFramesByProjectingFramesOnMeshAlongReferenceDirection(...))
+interface ConstructionOperations {
   constructFramesByProjectingFramesOnMeshAlongReferenceDirection(
     input: ConstructFramesByProjectingFramesOnMeshAlongReferenceDirectionInput,
     callOptions?: BriosaCallOptions,
@@ -409,8 +409,8 @@ export interface AddSurfaceToMeshOffsetAlongReferenceDirectionInput {
   readonly biDirectionalProjection?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.addSurfaceToMeshOffsetAlongReferenceDirection(...))
+interface ConstructionOperations {
   addSurfaceToMeshOffsetAlongReferenceDirection(
     input: AddSurfaceToMeshOffsetAlongReferenceDirectionInput,
     callOptions?: BriosaCallOptions,

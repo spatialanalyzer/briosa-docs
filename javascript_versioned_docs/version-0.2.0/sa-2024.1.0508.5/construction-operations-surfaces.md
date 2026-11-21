@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct Surfaces From Objects {/* #construct-surfaces-from-objects */}
 
@@ -21,8 +21,8 @@ export interface ConstructSurfacesFromObjectsInput {
   readonly objects: Iterable<CollectionObjectName>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfacesFromObjects(...))
+interface ConstructionOperations {
   constructSurfacesFromObjects(
     input: ConstructSurfacesFromObjectsInput,
     callOptions?: BriosaCallOptions,
@@ -42,8 +42,8 @@ export interface ConstructSurfaceFromBSplinesInput {
   readonly bSplineList: Iterable<CollectionObjectName>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromBSplines(...))
+interface ConstructionOperations {
   constructSurfaceFromBSplines(
     input: ConstructSurfaceFromBSplinesInput,
     callOptions?: BriosaCallOptions,
@@ -65,8 +65,8 @@ export interface ConstructSurfaceFromCylinderInput {
   readonly useThetaExtentMode?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromCylinder(...))
+interface ConstructionOperations {
   constructSurfaceFromCylinder(
     input: ConstructSurfaceFromCylinderInput,
     callOptions?: BriosaCallOptions,
@@ -86,8 +86,8 @@ export interface ConstructSurfaceFromPlaneInput {
   readonly planeName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromPlane(...))
+interface ConstructionOperations {
   constructSurfaceFromPlane(
     input: ConstructSurfaceFromPlaneInput,
     callOptions?: BriosaCallOptions,
@@ -107,8 +107,8 @@ export interface ConstructSurfaceFromSphereInput {
   readonly sphereName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromSphere(...))
+interface ConstructionOperations {
   constructSurfaceFromSphere(
     input: ConstructSurfaceFromSphereInput,
     callOptions?: BriosaCallOptions,
@@ -128,8 +128,8 @@ export interface ConstructSurfaceFromConeInput {
   readonly coneName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromCone(...))
+interface ConstructionOperations {
   constructSurfaceFromCone(
     input: ConstructSurfaceFromConeInput,
     callOptions?: BriosaCallOptions,
@@ -153,8 +153,8 @@ export interface ConstructSurfaceFromCollectionOfSurfacesInput {
   readonly sewingTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromCollectionOfSurfaces(...))
+interface ConstructionOperations {
   constructSurfaceFromCollectionOfSurfaces(
     input: ConstructSurfaceFromCollectionOfSurfacesInput,
     callOptions?: BriosaCallOptions,
@@ -175,8 +175,8 @@ export interface ConstructSurfaceFitFromNominalSurfacesAndActualDataInput {
   readonly resultingSurfaceName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFitFromNominalSurfacesAndActualData(...))
+interface ConstructionOperations {
   constructSurfaceFitFromNominalSurfacesAndActualData(
     input: ConstructSurfaceFitFromNominalSurfacesAndActualDataInput,
     callOptions?: BriosaCallOptions,
@@ -195,8 +195,8 @@ export interface ConstructSurfaceByDissectingSurfacesInput {
   readonly dissectionMode: SurfaceDissectionMode;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceByDissectingSurfaces(...))
+interface ConstructionOperations {
   constructSurfaceByDissectingSurfaces(
     input: ConstructSurfaceByDissectingSurfacesInput,
     callOptions?: BriosaCallOptions,
@@ -215,8 +215,8 @@ export interface ConstructSurfacesByDissectingSurfacesFromRefListInput {
   readonly surfacesToDissect: Iterable<CollectionObjectName>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfacesByDissectingSurfacesFromRefList(...))
+interface ConstructionOperations {
   constructSurfacesByDissectingSurfacesFromRefList(
     input: ConstructSurfacesByDissectingSurfacesFromRefListInput,
     callOptions?: BriosaCallOptions,
@@ -237,8 +237,8 @@ export interface ConstructSurfaceFromPointGroupsInput {
   readonly bSplineFitOptions?: BSplineFitOptions;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromPointGroups(...))
+interface ConstructionOperations {
   constructSurfaceFromPointGroups(
     input: ConstructSurfaceFromPointGroupsInput,
     callOptions?: BriosaCallOptions,
@@ -259,8 +259,8 @@ export interface ConstructSurfacesByProjectingPointsInput {
   readonly resultingSurfaceName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfacesByProjectingPoints(...))
+interface ConstructionOperations {
   constructSurfacesByProjectingPoints(
     input: ConstructSurfacesByProjectingPointsInput,
     callOptions?: BriosaCallOptions,
@@ -281,8 +281,8 @@ export interface ConstructSurfaceByOffsettingSurfaceInput {
   readonly hideOriginalSurface?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceByOffsettingSurface(...))
+interface ConstructionOperations {
   constructSurfaceByOffsettingSurface(
     input: ConstructSurfaceByOffsettingSurfaceInput,
     callOptions?: BriosaCallOptions,
@@ -302,8 +302,8 @@ export interface ConstructSurfaceFromAnnotationLinksInput {
   readonly resultingSurfaceName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructSurfaceFromAnnotationLinks(...))
+interface ConstructionOperations {
   constructSurfaceFromAnnotationLinks(
     input: ConstructSurfaceFromAnnotationLinksInput,
     callOptions?: BriosaCallOptions,
@@ -327,8 +327,8 @@ export interface ConstructGeometryFromSurfacesInput {
   readonly baseName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructGeometryFromSurfaces(...))
+interface ConstructionOperations {
   constructGeometryFromSurfaces(
     input: ConstructGeometryFromSurfacesInput,
     callOptions?: BriosaCallOptions,
