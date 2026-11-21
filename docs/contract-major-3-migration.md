@@ -238,5 +238,7 @@ The client migration notes list every fix.
 
 Server 0.10.0 packages use the same schema-3 distribution format, so Briosa
 Installer 0.3.0 or later installs them beside 0.9.2. The
-[Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples) move to
-client 0.5.0 and Server 0.10.0 with this release.{/* release-pending */}
+[Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples) name the
+client and server versions they use in their README. A tutorial that uses client
+0.4.0 needs Server 0.9.x, and one that uses client 0.5.0 needs Server 0.10.0;
+each client rejects the other major.

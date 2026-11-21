@@ -69,14 +69,22 @@ covers every change for applications.
   `sa-modal-dialog-open`. See [Windows Deployment](/docs/deployment/windows#worker-time-bounds).
 
 Portable CI ran the full server suites on both targets, the conformance package's
-15 scenarios against the six 0.5.0 client candidates, and the release protocol
-check against Server 0.9.2, which verified the nine reviewed retirements. The
-published 0.4.0 clients reject the 0.10.0 servers as expected. Licensed probe
-sessions on October 7, October 25, and November 9, 2026 decided the removals
-and several argument rules; Server 0.10.0 itself was not run against licensed
-SpatialAnalyzer. The release's acceptance pass on the signed packages, covering
-installation, side-by-side discovery, Control Center navigation, and upgrade and
-rollback, is recorded with the release.{/* release-pending */}
+15 scenarios against the six published 0.5.0 client packages, and the release
+protocol check against Server 0.9.2, which verified the nine reviewed
+retirements. The published 0.4.0 clients reject the 0.10.0 servers as expected.
+Licensed probe sessions on October 7, October 25, and November 9, 2026 decided
+the removals and several argument rules; Server 0.10.0 itself was not run
+against licensed SpatialAnalyzer.
+
+Before publication, the signed 0.10.0 packages passed an acceptance run with the
+signed Installer 0.4.1 and the published clients, without SpatialAnalyzer. From
+a signed local catalog, both targets' 0.10.0 packages installed beside 0.9.2 and
+were verified, repaired, and removed with the Installer command line, and the
+SA 2026.1.0529.7 package again with the Installer app. In all three languages,
+the 0.5.0 clients selected 0.10.0 and the 0.4.0 clients selected 0.9.2, each
+rejecting the other major and the other target. Control Center opened for 0.10.0
+on both targets and for 0.9.2 on SA 2026.1.0529.7 without starting a server, and
+removing 0.10.0 left 0.9.2 unchanged.
 
 ## Server 0.9.2 Corrections
 
@@ -214,7 +222,7 @@ have no licensed validation.
 
 ## Example Applications
 
-{/* release-pending */}The [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples)
+The [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples)
 show how to create two points, read their coordinates, and measure their distance
 in an empty SA 2026.1.0529.7 job. Choose .NET, TypeScript, Python, or direct gRPC;
 each example is a short program that constructs its own demo points.
@@ -222,8 +230,11 @@ The language clients use their built-in server discovery and cleanup. The
 gRPC example connects to a server prepared in Control Center.
 All four ran successfully with Server 0.7.0 and licensed SA 2026.1.0529.7;
 see the [validation record](https://github.com/spatialanalyzer/briosa-examples/blob/main/docs/evidence/licensed-2026-09-19.md).
-The updated 0.4.0/0.9.0 tutorials passed 47 portable fake-server scenarios;
-licensed execution of those release pins has not yet been recorded.
+With their client 0.4.0 and Server 0.9.0 pins, the tutorials passed 47 portable
+fake-server scenarios; licensed execution of those release pins has not yet been
+recorded. The tutorials' README names the client and server versions they use. A
+tutorial that uses client 0.4.0 needs Server 0.9.x, and one that uses client
+0.5.0 needs Server 0.10.0; each client rejects the other major.
 SA 2024 qualification remains outstanding.
 
 ## Supported SpatialAnalyzer Targets
