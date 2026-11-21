@@ -64,10 +64,12 @@ or no `Profile`.
 ## Worker Time Bounds
 
 The server chooses each request's execution budget from its operation's
-duration class. A request that turns on operator UI runs under the interactive
-budget. Each value is a .NET `TimeSpan` (`hh:mm:ss`); the server refuses to
-start, naming the key, when a value is malformed, not positive, or above its
-maximum.
+duration class. An admitted request whose option turns on operator UI receives
+the longer of the configured interactive budget and the operation's reviewed
+budget. For example, a 60-minute `long_running` budget survives a 30-minute
+`interactive` setting. Each value is a .NET `TimeSpan` (`hh:mm:ss`); the server
+refuses to start, naming the key, when a value is malformed, not positive, or
+above its maximum.
 
 | Configuration Key (Environment Variable Form) | Bounds | Default | Maximum |
 | --- | --- | --- | --- |
@@ -92,6 +94,16 @@ reconnect, recovery, or launch continues under its own bound even if the caller
 stops waiting. If Briosa reports operator recovery required, establish a clean
 SpatialAnalyzer/SDK ownership state before restarting.
 
+A graceful server shutdown (such as Ctrl+C or **Stop server** in Control
+Center) lets accepted lifecycle work finish and then stops the worker. At the
+default settings, the host allows 105 seconds for that shutdown:
+`ApplicationStartupTimeout` (30 s), plus the longest accepted SDK exchange
+(Connect, 60 s), plus worker teardown (15 s). An MP command already in flight
+is outside that bound and drains under its own execution budget. If the
+command outlasts the host shutdown bound, the host reports a shutdown failure,
+still waits for the command to end and stops the worker, and the server exits
+with an error.
+
 ## SpatialAnalyzer Interaction Mode
 
 Job state or an argument value can make SpatialAnalyzer open a blocking dialog
@@ -114,10 +126,18 @@ previous mode. In the licensed probe sessions, `Silent` turned each observed
 blocking dialog into an immediate MP failure while operator prompts still
 worked; those are observations of bounded sessions, not vendor guarantees.
 
-When a command still stalls past its budget while a SpatialAnalyzer modal
-dialog is open, Briosa reports the diagnostic `sa-modal-dialog-open` with
-operator-intervention guidance. Read and dismiss the dialog in SpatialAnalyzer
-before recovering the SDK; Briosa never dismisses a dialog.
+At an MP watchdog, readiness-probe, or interaction-mode timeout, Briosa
+reports `sa-modal-dialog-open` if it can identify a visible standard modal
+dialog of the single exact-target SpatialAnalyzer process (it reads no window
+text and sends no input). When it cannot observe that process, for example
+when SpatialAnalyzer runs from another path or multiple exact-target
+instances are running, the generic timeout diagnostic remains. An affected MP
+operation carries `OperatorInterventionRequired` guidance. Read and dismiss
+the dialog in SpatialAnalyzer before recovering the SDK; Briosa never
+dismisses a dialog. Licensed probe observations cover the zero-match and
+missing-chart MP stalls and `Silent` suppressing those triggers on both
+targets; they do not establish detection for every dialog or licensed
+execution of the readiness-timeout path.
 
 For the full package contract, use the
 [authoritative Windows guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/windows-package.md).

@@ -54,10 +54,11 @@ profiles that admit it, its risk flags, and its duration class; see
 reference does not override those controls or imply that an operation is ready
 to run in the current session.
 
-Behavioral contract major 3 removed nine operations that SpatialAnalyzer rejects,
-or that no operator could complete, on these exact targets. Their pages remain
-as unavailable views that explain the removal and link to the contract that
-Server 0.9.2 and earlier serve.
+Behavioral contract major 3 removed nine operations on these exact targets: eight
+failed end to end on both targets (three of them reached MP code `2` but returned
+no usable list), and the ninth was removed unverified because no operator could
+complete the selection. Their pages remain as unavailable views that explain the
+removal and link to the contract that Server 0.9.2 and earlier serve.
 
 The server contains both read-only and mutating operations. Follow each
 operation's replay guidance; do not retry an ambiguously completed command

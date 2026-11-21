@@ -84,13 +84,15 @@ fully or partly succeeded, pass the per-call completion observer:
 The client calls the observer once, after it checks the completion and before it
 maps the outputs. Every client checks each MP success, whether or not you pass
 an observer: a success must report `Succeeded` with code `2` or
-`PartialSuccess` with code `4`, and anything else is a protocol error. If an
-output then fails, the call fails instead, and the observer doesn't run. The
-`DataLoss` error (`OutputRetrievalFailure`, or `SdkCallFaulted` for a getter
-that threw) keeps `PartialSuccess` and code `4` in its MP execution details, so
-the code is never lost. Both stay **completed** and say **do not replay**. The
-output retrievals in those details are the per-output states the server
-reports, which don't always identify the getter that failed.
+`PartialSuccess` with code `4`, and anything else is a protocol error. If
+**server retrieval** fails after code `4`, the client receives `DataLoss`
+(`OutputRetrievalFailure`, or `SdkCallFaulted` for a getter that threw) and the
+observer never runs; the error keeps `PartialSuccess` and code `4` in its MP
+execution details, stays **completed**, and says **do not replay**. If the
+server returns the outputs and **client mapping** subsequently fails, the
+observer has already run. The output retrievals in those details are the
+per-output states the server reports, which don't always identify the getter
+that failed.
 
 ## When the SDK Raises an Exception
 
@@ -141,10 +143,13 @@ unknown.
 
 Job state or an argument value can make SpatialAnalyzer open a modal dialog,
 which holds the command until someone dismisses it. When the command's
-execution budget then expires, Briosa reports a watchdog timeout whose outcome
-is unknown, with diagnostic `sa-modal-dialog-open` and guidance that operator
-intervention is required. Read and dismiss the dialog in SpatialAnalyzer before
-recovering the SDK; the clients never retry such a command. The
+execution budget then expires and Briosa can identify a visible blocking dialog
+of the single exact-target SpatialAnalyzer process, Briosa reports a watchdog
+timeout whose outcome is unknown, with diagnostic `sa-modal-dialog-open` and
+guidance that operator intervention is required (otherwise the generic timeout
+diagnostic remains; readiness-probe and interaction-mode timeouts use the same
+check). Read and dismiss the dialog in SpatialAnalyzer before recovering the
+SDK; the clients never retry such a command. The
 `Briosa:SpatialAnalyzer:InteractionMode` server setting can make SpatialAnalyzer
 show fewer dialogs on an unattended station; see
 [Windows Deployment](/docs/deployment/windows#spatialanalyzer-interaction-mode).

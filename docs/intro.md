@@ -87,10 +87,12 @@ if (!sdk.GetMPStepResult(ref mpResultCode))
     throw new InvalidOperationException("The MP result could not be retrieved.");
 }
 
-if (mpResultCode != 2)
+if (mpResultCode is not (2 or 4))
 {
     throw new InvalidOperationException($"The MP failed with result code {mpResultCode}.");
 }
+
+var partialSuccess = mpResultCode == 4;
 
 var directory = string.Empty;
 if (!sdk.GetStringArg("Directory", ref directory))

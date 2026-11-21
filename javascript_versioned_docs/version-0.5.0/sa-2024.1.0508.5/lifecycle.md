@@ -315,17 +315,18 @@ observation. Allow more on a heavily loaded machine.
 
 | Call | Server Worst Case to a Typed Answer | Minimum Per-Call Deadline |
 | --- | --- | --- |
-| `startSpatialAnalyzerSdk` | 15 s | 20 s |
+| `startSpatialAnalyzerSdk` | 15 s (disconnected worker); 45 s if `Ready` reports an attached SDK and identity permits the probe | 20 s (disconnected); 50 s (attached) |
 | `connectToSpatialAnalyzer` or `reconnectToSpatialAnalyzer` | 60 s | 65 s |
-| `recoverSpatialAnalyzerSdk` | 25 s | 30 s |
+| `recoverSpatialAnalyzerSdk` | 25 s (disconnected worker); 55 s if the replacement's `Ready` reports an attached SDK and identity permits the probe | 30 s (disconnected); 60 s (attached) |
 | `launchSpatialAnalyzer` | 30 s | 35 s |
 | `closeOwnedSpatialAnalyzer` | 30 s | 35 s |
 | `stopSpatialAnalyzerSdk` | The execution budget of any in-flight MP command, then 15 s | That budget plus 20 s |
 
 When the server's bounds are raised, add the increase: `Briosa:Worker:StartupTimeout`
 counts once for Start and Recover and twice for Connect,
-`Briosa:Worker:ReadinessProbeTimeout` once for Connect, and the application
-startup and shutdown bounds once for Launch and Close.
+`Briosa:Worker:ReadinessProbeTimeout` counts once for Connect (and once for Start
+or Recover on the attached-SDK path), and the application startup and shutdown
+bounds count once for Launch and Close.
 
 ## Server Snapshot and Capabilities
 

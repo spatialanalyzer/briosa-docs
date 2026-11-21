@@ -33,7 +33,7 @@ admits everything the narrower ones do.
 | `read-only` | `filesystem_metadata` | Read-only operations only | Dashboards, inspection, and CI probes |
 | `standard` (packaged default) | Adds `filesystem_read`, `filesystem_write`, and `destructive` | None | Document automation: construct, analyze, relate, report, import, export, save, and delete model objects |
 | `device` | Adds `device_session`, `device_config`, and `physical_motion` | None | Measurement, robot, and appliance automation on a station whose session the operator started in SpatialAnalyzer |
-| `full` | Adds `external_io`, `code_execution`, and `filesystem_delete` | None | Everything except interactive operations and exclusive workflows |
+| `full` | Adds `external_io`, `code_execution`, and `filesystem_delete` | None | Reviewed standalone operations except interactive ones |
 
 | Target | Registered | `read-only` | `standard` | `device` | `full` | Exclusive Workflows | Interactive |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -158,19 +158,28 @@ $env:Briosa__Security__Operations__Overrides__file_operations__get_working_direc
 Startup fails, rather than ignoring a value, when `Profile` is missing or
 unknown, when a flag, service, operation, or section name is unknown, when a
 value is anything other than `allow` or `deny`, or when the retired `Allow` or
-`Deny` arrays are present. Names and values are exact and case-sensitive.
-Policy is fixed for the process lifetime; restart the server after changing it.
+`Deny` arrays are present. Configuration section names (`Profile`, `Flags`,
+`Overrides`) are case-insensitive, following .NET configuration keys; profile,
+risk flag, service, and operation names and `allow`/`deny` values are exact and
+case-sensitive. Policy is fixed for the process lifetime; restart the server
+after changing it.
 
 ## Precedence
 
 The first rule that applies decides each request:
 
-1. An operation that is not registered for the exact target, or whose MP
-   binding does not match, is unsupported. An operation without a complete
-   reviewed classification, or a request that cannot be read against its
-   reviewed options, is denied.
-2. An exclusive workflow, or a request that leaves work running after the call
-   returns, is denied.
+1. An operation that is not registered for the exact target
+   (`operation-unsupported`), or whose MP binding does not match
+   (`operation-binding-mismatch`), fails as unsupported (`Unimplemented`).
+   An operation with missing or unreviewed risk, effect, or replay-safety
+   metadata, including `Unknown` or `Unspecified` replay safety, is denied
+   with `operation-risk-unreviewed`. An unknown or unspecified execution scope
+   is denied with `operation-isolation-unreviewed`, and a request that cannot
+   be read against its reviewed options is denied with
+   `operation-request-unclassified`.
+2. An exclusive workflow is denied with `operation-isolation-unsupported`, and
+   a request whose options leave work running after the call returns is denied
+   with `operation-option-isolation-unsupported`.
 3. An override of the operation decides next: `deny` denies it, and `allow`
    admits it without consulting the flags or the profile.
 4. A `deny` setting on any of the request's flags denies it.
@@ -178,14 +187,20 @@ The first rule that applies decides each request:
    or set to `allow`, and the effect filter passes. Otherwise it is denied.
 
 A request's flags are the risk flags of its operation's reviewed row, plus
-`interactive_ui` when a request option turns on operator UI. No setting changes
-the first two rules. A denied call returns the typed, value-free
-`PermissionDenied` outcome with a `NotStarted` disposition.
+`interactive_ui` when a request option turns on operator UI. Before dispatch,
+the worker supervisor also enforces a duration-class safeguard, denying any
+operation without a reviewed duration class with
+`operation-duration-unreviewed`. No setting changes the first two rules.
+Unregistered operations and binding mismatches return `Unimplemented`; policy
+denials return the typed, value-free `PermissionDenied` outcome with a
+`NotStarted` disposition.
 
 ## Duration Classes
 
-The duration class selects the server's execution budget for a request. A
-request that turns on operator UI runs under the interactive budget.
+The duration class selects the server's execution budget for a request. An
+admitted request whose option turns on operator UI receives the longer of the
+configured interactive budget and the operation's reviewed budget. For example,
+a 60-minute `long_running` budget survives a 30-minute `interactive` setting.
 
 | Duration Class | Configuration Key (Environment Variable Form) | Default | Maximum |
 | --- | --- | --- | --- |
@@ -211,13 +226,18 @@ bounds; see [Windows Deployment](./windows.md#worker-time-bounds).
 | Narrowing by command only | `Flags:<risk_flag>=deny` narrows a whole risk family, except operations with an `allow` override |
 | `Briosa__Security__Operations__Deny__0` | `Briosa__Security__Operations__Overrides__<service>__<operation>=deny` |
 
-To keep the previous behavior as closely as the new model allows, which is
-everything except exclusive workflows:
+To keep the previous behavior as closely as the new model allows:
 
 ```powershell
 $env:Briosa__Security__Operations__Profile = "full"
 $env:Briosa__Security__Operations__Flags__interactive_ui = "allow"
 ```
+
+This admits reviewed standalone operations, including interactive ones.
+Exclusive workflows, requests whose options leave work running after the call
+returns, requests that cannot be classified against their reviewed options,
+and operations with unreviewed metadata (including unknown replay safety)
+still fail closed before overrides apply.
 
 Compared with the previous default, `standard` stops admitting device sessions,
 device configuration, and motion (use `device`); external IO, code execution,
@@ -226,6 +246,12 @@ and file deletion (use `full`); operations that open or block on operator UI
 The operations that the client conformance scenarios and the
 [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples) use all
 stay admitted by `standard`.
+
+**Replay safety.** Server 0.10.0 also tightens replay classification. The 11
+surviving `Make*RuntimeSelect` operations on each target moved from replay
+safety `Safe` to `Unsafe`, because replaying one prompts the operator again.
+An operation whose replay safety is `Unknown` or `Unspecified` is denied as
+unreviewed (`operation-risk-unreviewed`) under every setting.
 
 The [authoritative policy guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/command-policy-and-auditing.md)
 gives the full precedence and the audit records.

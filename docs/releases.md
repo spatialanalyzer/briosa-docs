@@ -46,18 +46,29 @@ covers every change for applications.
 - **Operation admission.** A named profile replaces the `Allow` and `Deny`
   arrays, and the packaged `standard` default no longer admits device, motion,
   external IO, code execution, file deletion, operator UI, or exclusive
-  workflows. Discovery reports the profile, a policy fingerprint, and each
-  operation's risk flags, duration class, validation status, and admission.
+  workflows. The 11 surviving `Make*RuntimeSelect` operations on each target
+  also moved from replay safety `Safe` to `Unsafe`, and operations with unknown
+  replay safety are denied as unreviewed. Discovery reports the profile, a
+  policy fingerprint, and each operation's risk flags, duration class,
+  validation status, and admission.
   See [Operation Admission](/docs/deployment/operation-admission).
-- **Waiting defaults.** Ten request defaults changed so that measuring,
-  starting, and arriving wait and CAD import does not prompt.
+- **Request defaults.** Ten request defaults changed: the five
+  `measure_immediately` defaults and `auto_start` became `true`, so measurement
+  can begin without an operator prompt; `wait_for_complete` and the two
+  `acknowledge_arrival` defaults became `true`, so those calls wait for
+  completion or arrival; and CAD import's `prompt_on_missing_components` became
+  `false` so it does not prompt on missing components.
 - **Nine operations removed.** Eight failed on both exact targets in licensed
   probe sessions, and no operator could complete the ninth, the vector name list
   runtime select. See [Replace Removed Operations](/docs/contract-major-3-migration#replace-removed-operations).
 - **Argument rules.** The server rejects omitted scale factors, joints, indexes,
-  required names, and model-link parameters instead of sending `0` or an empty
-  string, and three optional inputs are now omitted when absent. The clients
-  require every input the server requires.
+  required names, and model-link parameters instead of sending `0`, `false`, or
+  an empty string. Omitting the chart template, UI profile file, either
+  bounding-plane name, fit seed, or USMN nominals group now skips its setter;
+  explicit empty values are still rejected for the first four, an explicitly
+  empty USMN nominal object name is sent blank, and an empty USMN
+  `excluded_groups` list skips its setter. The clients require every input the
+  server requires.
 - **Typed outcomes.** MP code `4` is reported as a partial success with its
   outputs when all of them are retrieved. An SA SDK exception has its own
   failure kind, `SdkCallFaulted`.
@@ -65,8 +76,9 @@ covers every change for applications.
   transition continues detached when its caller stops waiting.
 - **Operator settings.** Execution budgets follow each operation's duration
   class, and `Briosa:SpatialAnalyzer:InteractionMode` can quiet blocking
-  SpatialAnalyzer dialogs; a dialog that still blocks a command reports
-  `sa-modal-dialog-open`. See [Windows Deployment](/docs/deployment/windows#worker-time-bounds).
+  SpatialAnalyzer dialogs; a detectable modal dialog blocking an MP, readiness
+  probe, or interaction-mode timeout reports `sa-modal-dialog-open`. See
+  [Windows Deployment](/docs/deployment/windows#worker-time-bounds).
 
 Portable CI ran the full server suites on both targets, the conformance package's
 15 scenarios against the six published 0.5.0 client packages, and the release
@@ -132,8 +144,11 @@ still have no licensed validation; treat them as **At Risk**.
 
 Portable CI and the release workflow ran the full server suites, package smoke
 tests, and the retained-client gate against the published major-2 and major-1
-clients. 0.9.2 was not run against licensed SpatialAnalyzer. The corrected step
-text and the new SDK-exception reporting have no licensed validation.
+clients. The packaged 0.9.2 release did not undergo licensed testing. The
+October 7, 2026 development-build probe session subsequently exercised three of
+the 25 corrected SA 2026 step texts; the other 22, the SA 2024
+`Make Pipe Relationship Cut` step, and the new SDK-exception reporting remain
+without licensed validation.
 
 ## Server 0.9.1 Corrections
 
@@ -152,8 +167,11 @@ requires no client or generated-binding change.
   `Delete Cloud Points by X Y Z Range` step and sets each bound only when the
   caller supplies it. Later licensed probes found that requests with bounds
   still fail on both targets; see the October 25, 2026 correction below.
-- **Vector-group reference lists.** `MakeCollectionVectorGroupNameRefListRuntimeSelect`
-  now returns its result instead of a `DataLoss` error after the MP step succeeds.
+- **Vector-group reference lists.** 0.9.1 changed the output mapping of
+  `MakeCollectionVectorGroupNameRefListRuntimeSelect` to avoid a `DataLoss`
+  error after MP success. Later licensed probes on October 25, 2026 disproved
+  that as an end-to-end fix: on both targets, the getter still returned nothing
+  after MP code `2`, and contract major 3 removes the operation.
 - **Vector percentages.** `GetVectorGroupProperties` now reads tolerance
   percentages as doubles, so fractional values are no longer truncated.
 - **Typed reconnect errors.** Reconnecting a generation that is connected but

@@ -59,6 +59,12 @@ unavailable, ask for the denied operations as well:
 A denied entry never becomes callable. The clients take admission from the
 server and never recompute it or pre-validate request options.
 
+**Replay safety.** The 11 surviving `Make*RuntimeSelect` operations on each
+target moved from replay safety `Safe` to `Unsafe`, because replaying one
+prompts the operator again. An operation whose replay safety is `Unknown` or
+`Unspecified` is denied as unreviewed (`operation-risk-unreviewed`) under every
+setting.
+
 ## Send Old Request Defaults Explicitly
 
 These request defaults changed so that waiting, not prompting, is the default.
@@ -103,9 +109,11 @@ contract that Server 0.9.2 and client 0.4.0 serve.
 
 ## Pass Inputs the Server Requires
 
-**Optional with no default.** When you omit one of these, the request leaves the
-field unset and SpatialAnalyzer runs without it. An empty value is still
-rejected.
+**Optional with no default.** Omitting the chart template, UI profile file,
+either bounding-plane name, fit seed, or USMN nominals group skips its setter.
+Explicit empty values are rejected for the first four categories; for USMN, an
+explicitly empty nominal object name is sent blank, and an empty
+`excluded_groups` list skips its setter:
 
 - Create Chart from Vector Group: the template chart name. A name that matches
   no chart can open a blocking SpatialAnalyzer dialog.
@@ -114,10 +122,10 @@ rejected.
   Point Group Projected to Plane: the starting condition geometry.
 - Construct Planes Bounding Point Group: the resulting plane names, for which
   SpatialAnalyzer then uses its default names.
-- Locate Instruments (USMN): the nominals group, which is omitted when absent;
-  an explicit empty name is sent blank, as SpatialAnalyzer documents for no
-  nominals group. An empty list of excluded groups now skips that setting
-  instead of being rejected.
+- Locate Instruments (USMN): the nominals group (omitted when absent; an
+  explicitly empty nominal object name is sent blank, as SpatialAnalyzer
+  documents for no nominals group) and `excluded_groups` (an empty list skips
+  its setter instead of being rejected).
 
 **Required.** The server now rejects an omission that earlier releases sent as
 `0`, `false`, or an empty string, before any SA call:
@@ -191,10 +199,13 @@ error. See [Understand MP Command Results](/docs/concepts/execution-outcomes#whe
   result. With either kind, the MP details keep `PartialSuccess` with code `4`.
   Their output retrievals are the per-output states the server reports, which
   don't always identify the getter that failed.
-- **Blocking dialogs.** A command stalled by a SpatialAnalyzer modal dialog
-  reports a watchdog timeout with diagnostic `sa-modal-dialog-open` and
-  operator-intervention guidance. Dismiss the dialog before recovering the SDK.
-  See [SpatialAnalyzer interaction mode](/docs/deployment/windows#spatialanalyzer-interaction-mode).
+- **Blocking dialogs.** At an MP watchdog, readiness-probe, or
+  interaction-mode timeout, Briosa reports diagnostic `sa-modal-dialog-open`
+  when it can identify a visible blocking dialog of the single exact-target
+  SpatialAnalyzer process (otherwise the generic timeout diagnostic remains);
+  an affected MP carries operator-intervention guidance. Dismiss the dialog
+  before recovering the SDK. See
+  [SpatialAnalyzer interaction mode](/docs/deployment/windows#spatialanalyzer-interaction-mode).
 - **Lifecycle cancellation.** The lifecycle failure kinds gain
   `CALLER_CANCELLED` and `CALLER_DEADLINE_EXCEEDED`. An accepted lifecycle
   transition continues detached after its caller stops waiting, so refresh

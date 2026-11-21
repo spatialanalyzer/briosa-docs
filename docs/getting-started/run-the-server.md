@@ -34,6 +34,17 @@ and the [contract major 3 migration guide](/docs/contract-major-3-migration) to 
 - Install and license the supported SpatialAnalyzer release on a Windows x64
   workstation
 - Close competing SDK clients and SpatialAnalyzer instances
+- Configure identity attestation for the connected SpatialAnalyzer version and a
+  non-sensitive reference to independently verified evidence in the environment
+  or configuration used by the server the client launches, and supply the
+  activated SDK pair too if its runtime version cannot be observed. The
+  production adapter has no reviewed runtime query for the connected
+  application's version, so a clean station does not reach MP readiness without
+  it. Control Center's private **Connection setup** settings apply only to
+  servers that Control Center launches; see
+  [Control Center version evidence](../deployment/control-center#set-up-version-evidence)
+  and the
+  [server identity configuration guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/health-and-discovery.md#operator-attestation-when-runtime-evidence-is-unavailable).
 - Install the Briosa client package for your programming language
 
 SpatialAnalyzer remains separate software. Briosa does not install it, include
