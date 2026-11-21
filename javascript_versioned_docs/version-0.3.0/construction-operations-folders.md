@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.3.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct Folder(s) {/* #construct-folders */}
 
@@ -21,8 +21,8 @@ export interface ConstructFoldersInput {
   readonly folderPath: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructFolders(...))
+interface ConstructionOperations {
   constructFolders(
     input: ConstructFoldersInput,
     callOptions?: BriosaCallOptions,
@@ -43,8 +43,8 @@ export interface DeleteFoldersByWildcardInput {
   readonly allowDeletingAllFolders?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.deleteFoldersByWildcard(...))
+interface ConstructionOperations {
   deleteFoldersByWildcard(
     input: DeleteFoldersByWildcardInput,
     callOptions?: BriosaCallOptions,

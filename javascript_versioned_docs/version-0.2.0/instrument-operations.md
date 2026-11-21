@@ -10,15 +10,15 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `InstrumentOperations` methods through `briosa.instrumentOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Get Last Instrument Index {/* #get-last-instrument-index */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC Contract](/api/grpc/instrument-operations#get-last-instrument-index)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getLastInstrumentIndex(...))
+interface InstrumentOperations {
   getLastInstrumentIndex(
     callOptions?: BriosaCallOptions,
   ): Promise<LastInstrumentIndexResult>;
@@ -37,8 +37,8 @@ export interface RenameInstrumentInput {
   readonly newName: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.renameInstrument(...))
+interface InstrumentOperations {
   renameInstrument(
     input: RenameInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -57,8 +57,8 @@ export interface GetInstrumentIdFromNameInput {
   readonly name: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentIdFromName(...))
+interface InstrumentOperations {
   getInstrumentIdFromName(
     input: GetInstrumentIdFromNameInput,
     callOptions?: BriosaCallOptions,
@@ -77,8 +77,8 @@ export interface GetInstrumentModelInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentModel(...))
+interface InstrumentOperations {
   getInstrumentModel(
     input: GetInstrumentModelInput,
     callOptions?: BriosaCallOptions,
@@ -98,8 +98,8 @@ export interface MoveInstrumentToAnotherCollectionInput {
   readonly collectionName: CollectionName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.moveInstrumentToAnotherCollection(...))
+interface InstrumentOperations {
   moveInstrumentToAnotherCollection(
     input: MoveInstrumentToAnotherCollectionInput,
     callOptions?: BriosaCallOptions,
@@ -119,8 +119,8 @@ export interface SaveInstrumentConfigurationInput {
   readonly configurationFile: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.saveInstrumentConfiguration(...))
+interface InstrumentOperations {
   saveInstrumentConfiguration(
     input: SaveInstrumentConfigurationInput,
     callOptions?: BriosaCallOptions,
@@ -140,8 +140,8 @@ export interface LoadInstrumentConfigurationInput {
   readonly configurationFile: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.loadInstrumentConfiguration(...))
+interface InstrumentOperations {
   loadInstrumentConfiguration(
     input: LoadInstrumentConfigurationInput,
     callOptions?: BriosaCallOptions,
@@ -161,8 +161,8 @@ export interface ExportInstrumentHistoryToXmlFileInput {
   readonly filePath: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.exportInstrumentHistoryToXmlFile(...))
+interface InstrumentOperations {
   exportInstrumentHistoryToXmlFile(
     input: ExportInstrumentHistoryToXmlFileInput,
     callOptions?: BriosaCallOptions,
@@ -183,8 +183,8 @@ export interface PointAtTargetInput {
   readonly htmlPromptFile?: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.pointAtTarget(...))
+interface InstrumentOperations {
   pointAtTarget(
     input: PointAtTargetInput,
     callOptions?: BriosaCallOptions,
@@ -206,8 +206,8 @@ export interface MeasureSinglePointHereInput {
   readonly htmlPromptFile?: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.measureSinglePointHere(...))
+interface InstrumentOperations {
   measureSinglePointHere(
     input: MeasureSinglePointHereInput,
     callOptions?: BriosaCallOptions,
@@ -228,8 +228,8 @@ export interface GetCurrentInstrumentPositionUpdateInput {
   readonly polarCoordinates?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getCurrentInstrumentPositionUpdate(...))
+interface InstrumentOperations {
   getCurrentInstrumentPositionUpdate(
     input: GetCurrentInstrumentPositionUpdateInput,
     callOptions?: BriosaCallOptions,
@@ -252,8 +252,8 @@ export interface BuildTargetInput {
   readonly htmlPromptFile?: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.buildTarget(...))
+interface InstrumentOperations {
   buildTarget(
     input: BuildTargetInput,
     callOptions?: BriosaCallOptions,
@@ -276,8 +276,8 @@ export interface MeasureExistingSinglePointInput {
   readonly htmlPromptFile?: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.measureExistingSinglePoint(...))
+interface InstrumentOperations {
   measureExistingSinglePoint(
     input: MeasureExistingSinglePointInput,
     callOptions?: BriosaCallOptions,
@@ -292,8 +292,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point-manual-guide)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.measureExistingSinglePointManualGuide(...))
+interface InstrumentOperations {
   measureExistingSinglePointManualGuide(
     input: MeasureExistingSinglePointInput,
     callOptions?: BriosaCallOptions,
@@ -308,8 +308,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point-and-compare)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.measureExistingSinglePointAndCompare(...))
+interface InstrumentOperations {
   measureExistingSinglePointAndCompare(
     input: MeasureExistingSinglePointAndCompareInput,
     callOptions?: BriosaCallOptions,
@@ -333,8 +333,8 @@ export interface SetProbeOffsetFrameOnlineInput {
   readonly timeoutSeconds?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setProbeOffsetFrameOnline(...))
+interface InstrumentOperations {
   setProbeOffsetFrameOnline(
     input: SetProbeOffsetFrameOnlineInput,
     callOptions?: BriosaCallOptions,
@@ -357,8 +357,8 @@ export interface SetProbeOffsetFrameOfflineInput {
   readonly faceId?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setProbeOffsetFrameOffline(...))
+interface InstrumentOperations {
   setProbeOffsetFrameOffline(
     input: SetProbeOffsetFrameOfflineInput,
     callOptions?: BriosaCallOptions,
@@ -377,8 +377,8 @@ export interface StopActiveMeasurementModeInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.stopActiveMeasurementMode(...))
+interface InstrumentOperations {
   stopActiveMeasurementMode(
     input: StopActiveMeasurementModeInput,
     callOptions?: BriosaCallOptions,
@@ -397,8 +397,8 @@ export interface EnableDisableFrameSetScanModeAllInstrumentsInput {
   readonly enableFrameSetScanMode?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.enableDisableFrameSetScanModeAllInstruments(...))
+interface InstrumentOperations {
   enableDisableFrameSetScanModeAllInstruments(
     input?: EnableDisableFrameSetScanModeAllInstrumentsInput,
     callOptions?: BriosaCallOptions,
@@ -418,8 +418,8 @@ export interface EnableDisableFrameSetScanModeByInstrumentInput {
   readonly enableFrameSetScanMode?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.enableDisableFrameSetScanModeByInstrument(...))
+interface InstrumentOperations {
   enableDisableFrameSetScanModeByInstrument(
     input: EnableDisableFrameSetScanModeByInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -439,8 +439,8 @@ export interface EnableDisablePointSetScanModeInput {
   readonly enablePointSetScanMode?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.enableDisablePointSetScanMode(...))
+interface InstrumentOperations {
   enableDisablePointSetScanMode(
     input: EnableDisablePointSetScanModeInput,
     callOptions?: BriosaCallOptions,
@@ -459,8 +459,8 @@ export interface AddNewInstrumentInput {
   readonly instrumentType: InstrumentTypeName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.addNewInstrument(...))
+interface InstrumentOperations {
   addNewInstrument(
     input: AddNewInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -481,8 +481,8 @@ export interface DeleteInstrumentInput {
   readonly keepResultingPoints?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.deleteInstrument(...))
+interface InstrumentOperations {
   deleteInstrument(
     input: DeleteInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -503,8 +503,8 @@ export interface DeleteMeasurementsInput {
   readonly deletePointIfNoMeasurementsRemain?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.deleteMeasurements(...))
+interface InstrumentOperations {
   deleteMeasurements(
     input: DeleteMeasurementsInput,
     callOptions?: BriosaCallOptions,
@@ -525,8 +525,8 @@ export interface DeleteMeasurementObservationInput {
   readonly deletePointIfNoMeasurementsRemain?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.deleteMeasurementObservation(...))
+interface InstrumentOperations {
   deleteMeasurementObservation(
     input: DeleteMeasurementObservationInput,
     callOptions?: BriosaCallOptions,
@@ -549,8 +549,8 @@ export interface MoveMeasurementObservationInput {
   readonly forceObservationActive?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.moveMeasurementObservation(...))
+interface InstrumentOperations {
   moveMeasurementObservation(
     input: MoveMeasurementObservationInput,
     callOptions?: BriosaCallOptions,
@@ -573,8 +573,8 @@ export interface InitiateServoGuideInput {
   readonly tolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.initiateServoGuide(...))
+interface InstrumentOperations {
   initiateServoGuide(
     input: InitiateServoGuideInput,
     callOptions?: BriosaCallOptions,
@@ -597,8 +597,8 @@ export interface StartTheodoliteInterfaceInput {
   readonly simulation?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.startTheodoliteInterface(...))
+interface InstrumentOperations {
   startTheodoliteInterface(
     input: StartTheodoliteInterfaceInput,
     callOptions?: BriosaCallOptions,
@@ -622,8 +622,8 @@ export interface StartInstrumentInterfaceInput {
   readonly allowStartWithoutInitializationRequirements?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.startInstrumentInterface(...))
+interface InstrumentOperations {
   startInstrumentInterface(
     input: StartInstrumentInterfaceInput,
     callOptions?: BriosaCallOptions,
@@ -642,8 +642,8 @@ export interface StopInstrumentInterfaceInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.stopInstrumentInterface(...))
+interface InstrumentOperations {
   stopInstrumentInterface(
     input: StopInstrumentInterfaceInput,
     callOptions?: BriosaCallOptions,
@@ -663,8 +663,8 @@ export interface ActivateDeactivateInstrumentToolbarInput {
   readonly deactivateToolbar?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.activateDeactivateInstrumentToolbar(...))
+interface InstrumentOperations {
   activateDeactivateInstrumentToolbar(
     input: ActivateDeactivateInstrumentToolbarInput,
     callOptions?: BriosaCallOptions,
@@ -683,8 +683,8 @@ export interface VerifyInstrumentConnectionInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.verifyInstrumentConnection(...))
+interface InstrumentOperations {
   verifyInstrumentConnection(
     input: VerifyInstrumentConnectionInput,
     callOptions?: BriosaCallOptions,
@@ -708,8 +708,8 @@ export interface ConfigureAndMeasureInput {
   readonly timeoutSeconds?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.configureAndMeasure(...))
+interface InstrumentOperations {
   configureAndMeasure(
     input: ConfigureAndMeasureInput,
     callOptions?: BriosaCallOptions,
@@ -728,8 +728,8 @@ export interface MeasureInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.measure(...))
+interface InstrumentOperations {
   measure(input: MeasureInput, callOptions?: BriosaCallOptions): Promise<void>;
 }
 ```
@@ -746,8 +746,8 @@ export interface SetXyzReferenceFrameInstrumentBaseAnchorFrameInput {
   readonly anchorFrame: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setXyzReferenceFrameInstrumentBaseAnchorFrame(...))
+interface InstrumentOperations {
   setXyzReferenceFrameInstrumentBaseAnchorFrame(
     input: SetXyzReferenceFrameInstrumentBaseAnchorFrameInput,
     callOptions?: BriosaCallOptions,
@@ -767,8 +767,8 @@ export interface DockInstrumentInterfaceInput {
   readonly dockInterface?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.dockInstrumentInterface(...))
+interface InstrumentOperations {
   dockInstrumentInterface(
     input: DockInstrumentInterfaceInput,
     callOptions?: BriosaCallOptions,
@@ -791,8 +791,8 @@ export interface LocateInstrumentRefTieInInput {
   readonly autoSurvey?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.locateInstrumentRefTieIn(...))
+interface InstrumentOperations {
   locateInstrumentRefTieIn(
     input: LocateInstrumentRefTieInInput,
     callOptions?: BriosaCallOptions,
@@ -817,8 +817,8 @@ export interface LocateInstrumentGroupToSurfaceQuickFitInput {
   readonly maximumAbsoluteTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.locateInstrumentGroupToSurfaceQuickFit(...))
+interface InstrumentOperations {
   locateInstrumentGroupToSurfaceQuickFit(
     input: LocateInstrumentGroupToSurfaceQuickFitInput,
     callOptions?: BriosaCallOptions,
@@ -839,8 +839,8 @@ export interface MultiMeasurementInitiateInput {
   readonly waitForCompletion?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.multiMeasurementInitiate(...))
+interface InstrumentOperations {
   multiMeasurementInitiate(
     input: MultiMeasurementInitiateInput,
     callOptions?: BriosaCallOptions,
@@ -859,8 +859,8 @@ export interface MultiMeasurementStopInput {
   readonly instruments: Iterable<CollectionInstrumentId>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.multiMeasurementStop(...))
+interface InstrumentOperations {
   multiMeasurementStop(
     input: MultiMeasurementStopInput,
     callOptions?: BriosaCallOptions,
@@ -880,8 +880,8 @@ export interface AlignLaserProjectorInput {
   readonly group: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.alignLaserProjector(...))
+interface InstrumentOperations {
   alignLaserProjector(
     input: AlignLaserProjectorInput,
     callOptions?: BriosaCallOptions,
@@ -912,8 +912,8 @@ export interface LocateInstrumentsUsmnInput {
   readonly analysisTimeLimitMinutes?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.locateInstrumentsUsmn(...))
+interface InstrumentOperations {
   locateInstrumentsUsmn(
     input: LocateInstrumentsUsmnInput,
     callOptions?: BriosaCallOptions,
@@ -946,8 +946,8 @@ export interface CreateTemplatedInstrumentUsmnInput {
   readonly distanceWeight?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.createTemplatedInstrumentUsmn(...))
+interface InstrumentOperations {
   createTemplatedInstrumentUsmn(
     input: CreateTemplatedInstrumentUsmnInput,
     callOptions?: BriosaCallOptions,
@@ -980,8 +980,8 @@ export interface LocateInstrumentBestFitGroupToGroupInput {
   readonly csvReport?: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.locateInstrumentBestFitGroupToGroup(...))
+interface InstrumentOperations {
   locateInstrumentBestFitGroupToGroup(
     input: LocateInstrumentBestFitGroupToGroupInput,
     callOptions?: BriosaCallOptions,
@@ -1014,8 +1014,8 @@ export interface LocateInstrumentBestFitNominalGeometryInput {
   readonly csvReport?: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.locateInstrumentBestFitNominalGeometry(...))
+interface InstrumentOperations {
   locateInstrumentBestFitNominalGeometry(
     input: LocateInstrumentBestFitNominalGeometryInput,
     callOptions?: BriosaCallOptions,
@@ -1035,8 +1035,8 @@ export interface GetInstrumentTransformInput {
   readonly referenceFrame: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentTransform(...))
+interface InstrumentOperations {
   getInstrumentTransform(
     input: GetInstrumentTransformInput,
     callOptions?: BriosaCallOptions,
@@ -1058,8 +1058,8 @@ export interface SetInstrumentTransformInput {
   readonly numberOfSteps?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentTransform(...))
+interface InstrumentOperations {
   setInstrumentTransform(
     input: SetInstrumentTransformInput,
     callOptions?: BriosaCallOptions,
@@ -1078,8 +1078,8 @@ export interface GetTrackerEdmTheodoliteUncertaintiesInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getTrackerEdmTheodoliteUncertainties(...))
+interface InstrumentOperations {
   getTrackerEdmTheodoliteUncertainties(
     input: GetTrackerEdmTheodoliteUncertaintiesInput,
     callOptions?: BriosaCallOptions,
@@ -1104,8 +1104,8 @@ export interface SetTrackerEdmTheodoliteUncertaintiesInput {
   readonly distanceThreshold?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setTrackerEdmTheodoliteUncertainties(...))
+interface InstrumentOperations {
   setTrackerEdmTheodoliteUncertainties(
     input: SetTrackerEdmTheodoliteUncertaintiesInput,
     callOptions?: BriosaCallOptions,
@@ -1124,8 +1124,8 @@ export interface GetPcmmInstrumentXyzUncertaintiesInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getPcmmInstrumentXyzUncertainties(...))
+interface InstrumentOperations {
   getPcmmInstrumentXyzUncertainties(
     input: GetPcmmInstrumentXyzUncertaintiesInput,
     callOptions?: BriosaCallOptions,
@@ -1147,8 +1147,8 @@ export interface SetPcmmInstrumentXyzUncertaintiesInput {
   readonly zUncertainty?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setPcmmInstrumentXyzUncertainties(...))
+interface InstrumentOperations {
   setPcmmInstrumentXyzUncertainties(
     input: SetPcmmInstrumentXyzUncertaintiesInput,
     callOptions?: BriosaCallOptions,
@@ -1167,8 +1167,8 @@ export interface GetXyzInstrumentUncertaintiesInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getXyzInstrumentUncertainties(...))
+interface InstrumentOperations {
   getXyzInstrumentUncertainties(
     input: GetXyzInstrumentUncertaintiesInput,
     callOptions?: BriosaCallOptions,
@@ -1190,8 +1190,8 @@ export interface SetXyzInstrumentUncertaintiesInput {
   readonly zUncertainty?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setXyzInstrumentUncertainties(...))
+interface InstrumentOperations {
   setXyzInstrumentUncertainties(
     input: SetXyzInstrumentUncertaintiesInput,
     callOptions?: BriosaCallOptions,
@@ -1210,8 +1210,8 @@ export interface GetInstrumentWeatherSettingInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentWeatherSetting(...))
+interface InstrumentOperations {
   getInstrumentWeatherSetting(
     input: GetInstrumentWeatherSettingInput,
     callOptions?: BriosaCallOptions,
@@ -1234,8 +1234,8 @@ export interface SetInstrumentWeatherSettingInput {
   readonly setAutomatically?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentWeatherSetting(...))
+interface InstrumentOperations {
   setInstrumentWeatherSetting(
     input: SetInstrumentWeatherSettingInput,
     callOptions?: BriosaCallOptions,
@@ -1254,8 +1254,8 @@ export interface GetInstrumentPartTemperatureInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentPartTemperature(...))
+interface InstrumentOperations {
   getInstrumentPartTemperature(
     input: GetInstrumentPartTemperatureInput,
     callOptions?: BriosaCallOptions,
@@ -1276,8 +1276,8 @@ export interface ComputeCteScaleFactorInput {
   readonly finalTemperatureFahrenheit?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.computeCteScaleFactor(...))
+interface InstrumentOperations {
   computeCteScaleFactor(
     input?: ComputeCteScaleFactorInput,
     callOptions?: BriosaCallOptions,
@@ -1297,8 +1297,8 @@ export interface SetMultiplyInstrumentScaleFactorInput {
   readonly scaleFactor?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setMultiplyInstrumentScaleFactor(...))
+interface InstrumentOperations {
   setMultiplyInstrumentScaleFactor(
     input: SetMultiplyInstrumentScaleFactorInput,
     callOptions?: BriosaCallOptions,
@@ -1318,8 +1318,8 @@ export interface SetAbsoluteInstrumentScaleFactorInput {
   readonly scaleFactor?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setAbsoluteInstrumentScaleFactor(...))
+interface InstrumentOperations {
   setAbsoluteInstrumentScaleFactor(
     input: SetAbsoluteInstrumentScaleFactorInput,
     callOptions?: BriosaCallOptions,
@@ -1338,8 +1338,8 @@ export interface GetInstrumentScaleFactorInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentScaleFactor(...))
+interface InstrumentOperations {
   getInstrumentScaleFactor(
     input: GetInstrumentScaleFactorInput,
     callOptions?: BriosaCallOptions,
@@ -1361,8 +1361,8 @@ export interface TransformInstrumentFrameToFrameInput {
   readonly numberOfSteps?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.transformInstrumentFrameToFrame(...))
+interface InstrumentOperations {
   transformInstrumentFrameToFrame(
     input: TransformInstrumentFrameToFrameInput,
     callOptions?: BriosaCallOptions,
@@ -1383,8 +1383,8 @@ export interface TransformInstrumentByDeltaInput {
   readonly applyScaleToInstrument?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.transformInstrumentByDelta(...))
+interface InstrumentOperations {
   transformInstrumentByDelta(
     input: TransformInstrumentByDeltaInput,
     callOptions?: BriosaCallOptions,
@@ -1405,8 +1405,8 @@ export interface TransformMultipleInstrumentsByDeltaInput {
   readonly applyScaleToInstruments?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.transformMultipleInstrumentsByDelta(...))
+interface InstrumentOperations {
   transformMultipleInstrumentsByDelta(
     input: TransformMultipleInstrumentsByDeltaInput,
     callOptions?: BriosaCallOptions,
@@ -1426,8 +1426,8 @@ export interface InstrumentOperationalCheckInput {
   readonly checkType: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.instrumentOperationalCheck(...))
+interface InstrumentOperations {
   instrumentOperationalCheck(
     input: InstrumentOperationalCheckInput,
     callOptions?: BriosaCallOptions,
@@ -1446,8 +1446,8 @@ export interface GetNumberOfObservationsOnTargetInput {
   readonly point: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getNumberOfObservationsOnTarget(...))
+interface InstrumentOperations {
   getNumberOfObservationsOnTarget(
     input: GetNumberOfObservationsOnTargetInput,
     callOptions?: BriosaCallOptions,
@@ -1466,8 +1466,8 @@ export interface GetInstrumentsWithObservationsOnTargetInput {
   readonly point: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentsWithObservationsOnTarget(...))
+interface InstrumentOperations {
   getInstrumentsWithObservationsOnTarget(
     input: GetInstrumentsWithObservationsOnTargetInput,
     callOptions?: BriosaCallOptions,
@@ -1486,8 +1486,8 @@ export interface GetTargetsMeasuredByInstrumentInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getTargetsMeasuredByInstrument(...))
+interface InstrumentOperations {
   getTargetsMeasuredByInstrument(
     input: GetTargetsMeasuredByInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -1508,8 +1508,8 @@ export interface SetObservationStatusInput {
   readonly active?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setObservationStatus(...))
+interface InstrumentOperations {
   setObservationStatus(
     input: SetObservationStatusInput,
     callOptions?: BriosaCallOptions,
@@ -1529,8 +1529,8 @@ export interface GetObservationInfoInput {
   readonly observationIndex?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getObservationInfo(...))
+interface InstrumentOperations {
   getObservationInfo(
     input: GetObservationInfoInput,
     callOptions?: BriosaCallOptions,
@@ -1554,8 +1554,8 @@ export interface FabricateObservationsInput {
   readonly maximumDistance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.fabricateObservations(...))
+interface InstrumentOperations {
   fabricateObservations(
     input: FabricateObservationsInput,
     callOptions?: BriosaCallOptions,
@@ -1576,8 +1576,8 @@ export interface GetObscuredPointsFromInstrumentInput {
   readonly showObscuredShots?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getObscuredPointsFromInstrument(...))
+interface InstrumentOperations {
   getObscuredPointsFromInstrument(
     input: GetObscuredPointsFromInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -1596,8 +1596,8 @@ export interface GetInstrumentTargetsAndModeProfilesInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentTargetsAndModeProfiles(...))
+interface InstrumentOperations {
   getInstrumentTargetsAndModeProfiles(
     input: GetInstrumentTargetsAndModeProfilesInput,
     callOptions?: BriosaCallOptions,
@@ -1617,8 +1617,8 @@ export interface SetInstrumentMeasurementModeProfileInput {
   readonly modeProfile: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentMeasurementModeProfile(...))
+interface InstrumentOperations {
   setInstrumentMeasurementModeProfile(
     input: SetInstrumentMeasurementModeProfileInput,
     callOptions?: BriosaCallOptions,
@@ -1638,8 +1638,8 @@ export interface SetInstrumentGroupAndTargetInput {
   readonly point: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentGroupAndTarget(...))
+interface InstrumentOperations {
   setInstrumentGroupAndTarget(
     input: SetInstrumentGroupAndTargetInput,
     callOptions?: BriosaCallOptions,
@@ -1659,8 +1659,8 @@ export interface SetInstrumentTargetingInput {
   readonly targetingName: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentTargeting(...))
+interface InstrumentOperations {
   setInstrumentTargeting(
     input: SetInstrumentTargetingInput,
     callOptions?: BriosaCallOptions,
@@ -1679,8 +1679,8 @@ export interface GetInstrumentMeasurementModeProfileInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentMeasurementModeProfile(...))
+interface InstrumentOperations {
   getInstrumentMeasurementModeProfile(
     input: GetInstrumentMeasurementModeProfileInput,
     callOptions?: BriosaCallOptions,
@@ -1699,8 +1699,8 @@ export interface GetInstrumentGroupAndTargetInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentGroupAndTarget(...))
+interface InstrumentOperations {
   getInstrumentGroupAndTarget(
     input: GetInstrumentGroupAndTargetInput,
     callOptions?: BriosaCallOptions,
@@ -1719,8 +1719,8 @@ export interface GetInstrumentTargetingInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentTargeting(...))
+interface InstrumentOperations {
   getInstrumentTargeting(
     input: GetInstrumentTargetingInput,
     callOptions?: BriosaCallOptions,
@@ -1740,8 +1740,8 @@ export interface SetTargetComputationOptionsInput {
   readonly ignoreDistanceMeasurements?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setTargetComputationOptions(...))
+interface InstrumentOperations {
   setTargetComputationOptions(
     input?: SetTargetComputationOptionsInput,
     callOptions?: BriosaCallOptions,
@@ -1763,8 +1763,8 @@ export interface SetObservationMirrorCubeShotFaceInput {
   readonly mirrorCubeShotFace?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setObservationMirrorCubeShotFace(...))
+interface InstrumentOperations {
   setObservationMirrorCubeShotFace(
     input: SetObservationMirrorCubeShotFaceInput,
     callOptions?: BriosaCallOptions,
@@ -1786,8 +1786,8 @@ export interface SetObservationCollimationShotOptionsInput {
   readonly targetedInstrument?: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setObservationCollimationShotOptions(...))
+interface InstrumentOperations {
   setObservationCollimationShotOptions(
     input: SetObservationCollimationShotOptionsInput,
     callOptions?: BriosaCallOptions,
@@ -1816,8 +1816,8 @@ export interface CollimationInput {
   readonly asMeasuredByMovingInstrument?: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.collimation(...))
+interface InstrumentOperations {
   collimation(
     input: CollimationInput,
     callOptions?: BriosaCallOptions,
@@ -1836,8 +1836,8 @@ export interface GetInstrumentTargetStatusInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentTargetStatus(...))
+interface InstrumentOperations {
   getInstrumentTargetStatus(
     input: GetInstrumentTargetStatusInput,
     callOptions?: BriosaCallOptions,
@@ -1852,8 +1852,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC Contract](/api/grpc/instrument-operations#make-surface-face-list-from-point-proximity)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.makeSurfaceFaceListFromPointProximity(...))
+interface InstrumentOperations {
   makeSurfaceFaceListFromPointProximity(
     measuredPoints: readonly PointName[],
     callOptions?: BriosaCallOptions,
@@ -1877,8 +1877,8 @@ export interface ScanWithinPerimeterInput {
   readonly waitForCompletion?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.scanWithinPerimeter(...))
+interface InstrumentOperations {
   scanWithinPerimeter(
     input: ScanWithinPerimeterInput,
     callOptions?: BriosaCallOptions,
@@ -1903,8 +1903,8 @@ export interface EditScanPerimeterProfileInput {
   readonly createNewProfile?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.editScanPerimeterProfile(...))
+interface InstrumentOperations {
   editScanPerimeterProfile(
     input: EditScanPerimeterProfileInput,
     callOptions?: BriosaCallOptions,
@@ -1919,8 +1919,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC Contract](/api/grpc/instrument-operations#get-estimated-scan-time)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getEstimatedScanTime(...))
+interface InstrumentOperations {
   getEstimatedScanTime(
     instrument: CollectionInstrumentId,
     profileName: string,
@@ -1936,8 +1936,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC Contract](/api/grpc/instrument-operations#construct-perimeters-from-surface-face-list)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.constructPerimetersFromSurfaceFaceList(...))
+interface InstrumentOperations {
   constructPerimetersFromSurfaceFaceList(
     surfaceFaces: SurfaceFaceList,
     callOptions?: BriosaCallOptions,
@@ -1960,8 +1960,8 @@ export interface ScanCadFacesInput {
   readonly waitForCompletion?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.scanCadFaces(...))
+interface InstrumentOperations {
   scanCadFaces(
     input: ScanCadFacesInput,
     callOptions?: BriosaCallOptions,
@@ -1985,8 +1985,8 @@ export interface EdgeScanMeasurementInput {
   readonly targetName: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.edgeScanMeasurement(...))
+interface InstrumentOperations {
   edgeScanMeasurement(
     input: EdgeScanMeasurementInput,
     callOptions?: BriosaCallOptions,
@@ -2012,8 +2012,8 @@ export interface TrackTapeMeasurementInput {
   readonly initialTargetName: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.trackTapeMeasurement(...))
+interface InstrumentOperations {
   trackTapeMeasurement(
     input: TrackTapeMeasurementInput,
     callOptions?: BriosaCallOptions,
@@ -2038,8 +2038,8 @@ export interface AutoMeasurePointsInput {
   readonly autoStart?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.autoMeasurePoints(...))
+interface InstrumentOperations {
   autoMeasurePoints(
     input: AutoMeasurePointsInput,
     callOptions?: BriosaCallOptions,
@@ -2064,8 +2064,8 @@ export interface AutoMeasureVectorsInput {
   readonly lowTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.autoMeasureVectors(...))
+interface InstrumentOperations {
   autoMeasureVectors(
     input: AutoMeasureVectorsInput,
     callOptions?: BriosaCallOptions,
@@ -2087,8 +2087,8 @@ export interface AutoMeasureSurfaceVectorIntersectionsInput {
   readonly waitForComplete?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.autoMeasureSurfaceVectorIntersections(...))
+interface InstrumentOperations {
   autoMeasureSurfaceVectorIntersections(
     input: AutoMeasureSurfaceVectorIntersectionsInput,
     callOptions?: BriosaCallOptions,
@@ -2110,8 +2110,8 @@ export interface AutoMeasureSpecifiedGeometryInput {
   readonly waitForComplete?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.autoMeasureSpecifiedGeometry(...))
+interface InstrumentOperations {
   autoMeasureSpecifiedGeometry(
     input: AutoMeasureSpecifiedGeometryInput,
     callOptions?: BriosaCallOptions,
@@ -2132,8 +2132,8 @@ export interface AutoMeasureBatchOfFeaturesInput {
   readonly waitForComplete?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.autoMeasureBatchOfFeatures(...))
+interface InstrumentOperations {
   autoMeasureBatchOfFeatures(
     input: AutoMeasureBatchOfFeaturesInput,
     callOptions?: BriosaCallOptions,
@@ -2155,8 +2155,8 @@ export interface AutoCorrespondClosestPointInput {
   readonly waitForCompletion?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.autoCorrespondClosestPoint(...))
+interface InstrumentOperations {
   autoCorrespondClosestPoint(
     input: AutoCorrespondClosestPointInput,
     callOptions?: BriosaCallOptions,
@@ -2171,8 +2171,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC Contract](/api/grpc/instrument-operations#close-auto-correspond-closest-point-dialog)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.closeAutoCorrespondClosestPointDialog(...))
+interface InstrumentOperations {
   closeAutoCorrespondClosestPointDialog(
     instrument: CollectionInstrumentId,
     callOptions?: BriosaCallOptions,
@@ -2201,8 +2201,8 @@ export interface AutoCorrespondWithProximityTriggerInput {
   readonly measureEachPointOnlyOnce?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.autoCorrespondWithProximityTrigger(...))
+interface InstrumentOperations {
   autoCorrespondWithProximityTrigger(
     input: AutoCorrespondWithProximityTriggerInput,
     callOptions?: BriosaCallOptions,
@@ -2223,8 +2223,8 @@ export interface ConstructMirrorFromPlaneInput {
   readonly plane: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.constructMirrorFromPlane(...))
+interface InstrumentOperations {
   constructMirrorFromPlane(
     input: ConstructMirrorFromPlaneInput,
     callOptions?: BriosaCallOptions,
@@ -2247,8 +2247,8 @@ export interface ConstructMirrorFromTwoPointsInput {
   readonly sendMirrorToInstrument?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.constructMirrorFromTwoPoints(...))
+interface InstrumentOperations {
   constructMirrorFromTwoPoints(
     input: ConstructMirrorFromTwoPointsInput,
     callOptions?: BriosaCallOptions,
@@ -2272,8 +2272,8 @@ export interface DriftCheckInput {
   readonly useClosestReferencePoint?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.driftCheck(...))
+interface InstrumentOperations {
   driftCheck(
     input: DriftCheckInput,
     callOptions?: BriosaCallOptions,
@@ -2294,8 +2294,8 @@ export interface MeasureNominalFeatureInput {
   readonly resultingPoint: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.measureNominalFeature(...))
+interface InstrumentOperations {
   measureNominalFeature(
     input: MeasureNominalFeatureInput,
     callOptions?: BriosaCallOptions,
@@ -2320,8 +2320,8 @@ export interface GuideObjectsIn6dBasedOnPointMeasurementsInput {
   readonly rotationalTolerance?: ToleranceVectorOptions;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.guideObjectsIn6dBasedOnPointMeasurements(...))
+interface InstrumentOperations {
   guideObjectsIn6dBasedOnPointMeasurements(
     input: GuideObjectsIn6dBasedOnPointMeasurementsInput,
     callOptions?: BriosaCallOptions,
@@ -2342,8 +2342,8 @@ export interface MoveObjectsIn6dUsingInstrumentUpdatesInput {
   readonly measurementMode: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.moveObjectsIn6dUsingInstrumentUpdates(...))
+interface InstrumentOperations {
   moveObjectsIn6dUsingInstrumentUpdates(
     input: MoveObjectsIn6dUsingInstrumentUpdatesInput,
     callOptions?: BriosaCallOptions,
@@ -2366,8 +2366,8 @@ export interface AlignTwoTargetsWithAxisWcfXInput {
   readonly rotationalTolerance?: ToleranceVectorOptions;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.alignTwoTargetsWithAxisWcfX(...))
+interface InstrumentOperations {
   alignTwoTargetsWithAxisWcfX(
     input: AlignTwoTargetsWithAxisWcfXInput,
     callOptions?: BriosaCallOptions,
@@ -2382,8 +2382,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-interface-response-timeout)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentInterfaceResponseTimeout(...))
+interface InstrumentOperations {
   getInstrumentInterfaceResponseTimeout(
     instrument: CollectionInstrumentId,
     callOptions?: BriosaCallOptions,
@@ -2398,8 +2398,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-interface-response-timeout)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentInterfaceResponseTimeout(...))
+interface InstrumentOperations {
   setInstrumentInterfaceResponseTimeout(
     instrument: CollectionInstrumentId,
     timeoutSeconds?: number,
@@ -2415,8 +2415,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC Contract](/api/grpc/instrument-operations#get-current-trapping-status)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getCurrentTrappingStatus(...))
+interface InstrumentOperations {
   getCurrentTrappingStatus(
     callOptions?: BriosaCallOptions,
   ): Promise<CurrentTrappingStatus>;
@@ -2430,8 +2430,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC Contract](/api/grpc/instrument-operations#wait-for-trapping-to-complete)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.waitForTrappingToComplete(...))
+interface InstrumentOperations {
   waitForTrappingToComplete(callOptions?: BriosaCallOptions): Promise<void>;
 }
 ```
@@ -2448,8 +2448,8 @@ export interface JumpInstrumentToNewLocationInput {
   readonly hidePreviousInstrument?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.jumpInstrumentToNewLocation(...))
+interface InstrumentOperations {
   jumpInstrumentToNewLocation(
     input: JumpInstrumentToNewLocationInput,
     callOptions?: BriosaCallOptions,
@@ -2472,8 +2472,8 @@ export interface QuickAlignInput {
   readonly alignToIndividualFacesOnly?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.quickAlign(...))
+interface InstrumentOperations {
   quickAlign(
     input: QuickAlignInput,
     callOptions?: BriosaCallOptions,
@@ -2496,8 +2496,8 @@ export interface AlignCloudToCadInput {
   readonly executeAlignment?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.alignCloudToCad(...))
+interface InstrumentOperations {
   alignCloudToCad(
     input: AlignCloudToCadInput,
     callOptions?: BriosaCallOptions,
@@ -2517,8 +2517,8 @@ export interface StartGdtInspectionDesignInput {
   readonly filter?: InspectionFilter;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.startGdtInspectionDesign(...))
+interface InstrumentOperations {
   startGdtInspectionDesign(
     input: StartGdtInspectionDesignInput,
     callOptions?: BriosaCallOptions,
@@ -2538,8 +2538,8 @@ export interface StartGdtInspectionRehearseInput {
   readonly filter?: InspectionFilter;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.startGdtInspectionRehearse(...))
+interface InstrumentOperations {
   startGdtInspectionRehearse(
     input: StartGdtInspectionRehearseInput,
     callOptions?: BriosaCallOptions,
@@ -2560,8 +2560,8 @@ export interface StartGdtInspectionInput {
   readonly filter?: InspectionFilter;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.startGdtInspection(...))
+interface InstrumentOperations {
   startGdtInspection(
     input: StartGdtInspectionInput,
     callOptions?: BriosaCallOptions,
@@ -2576,8 +2576,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC Contract](/api/grpc/instrument-operations#get-inspection-verification-mode)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInspectionVerificationMode(...))
+interface InstrumentOperations {
   getInspectionVerificationMode(
     callOptions?: BriosaCallOptions,
   ): Promise<boolean>;
@@ -2595,8 +2595,8 @@ export interface SetInspectionVerificationModeInput {
   readonly verificationEnabled?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInspectionVerificationMode(...))
+interface InstrumentOperations {
   setInspectionVerificationMode(
     input?: SetInspectionVerificationModeInput,
     callOptions?: BriosaCallOptions,
@@ -2615,8 +2615,8 @@ export interface SetRemeasureFailedChecksOnlyInput {
   readonly collection: CollectionName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setRemeasureFailedChecksOnly(...))
+interface InstrumentOperations {
   setRemeasureFailedChecksOnly(
     input: SetRemeasureFailedChecksOnlyInput,
     callOptions?: BriosaCallOptions,
@@ -2636,8 +2636,8 @@ export interface AssociateObjectsWithInstrumentInput {
   readonly objects: readonly CollectionObjectName[];
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.associateObjectsWithInstrument(...))
+interface InstrumentOperations {
   associateObjectsWithInstrument(
     input: AssociateObjectsWithInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -2656,8 +2656,8 @@ export interface DisassociateObjectsFromInstrumentInput {
   readonly objects: readonly CollectionObjectName[];
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.disassociateObjectsFromInstrument(...))
+interface InstrumentOperations {
   disassociateObjectsFromInstrument(
     input: DisassociateObjectsFromInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -2676,8 +2676,8 @@ export interface MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstrum
   readonly instruments: readonly CollectionInstrumentId[];
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.makeCollectionObjectNameRefListFromObjectsAssociatedWithInstruments(...))
+interface InstrumentOperations {
   makeCollectionObjectNameRefListFromObjectsAssociatedWithInstruments(
     input: MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstrumentsInput,
     callOptions?: BriosaCallOptions,
@@ -2697,8 +2697,8 @@ export interface CombinePointGroupsInput {
   readonly combinedPointGroup: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.combinePointGroups(...))
+interface InstrumentOperations {
   combinePointGroups(
     input: CombinePointGroupsInput,
     callOptions?: BriosaCallOptions,
@@ -2718,8 +2718,8 @@ export interface DissectPointGroupInput {
   readonly baseNameForDissectedGroups: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.dissectPointGroup(...))
+interface InstrumentOperations {
   dissectPointGroup(
     input: DissectPointGroupInput,
     callOptions?: BriosaCallOptions,
@@ -2743,8 +2743,8 @@ export interface SynchronizedMeasurementMasterSlaveInput {
   readonly waitForCompletion?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.synchronizedMeasurementMasterSlave(...))
+interface InstrumentOperations {
   synchronizedMeasurementMasterSlave(
     input: SynchronizedMeasurementMasterSlaveInput,
     callOptions?: BriosaCallOptions,
@@ -2765,8 +2765,8 @@ export interface CreateNewDynamicReferenceInput {
   readonly dynamicReferenceName: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.createNewDynamicReference(...))
+interface InstrumentOperations {
   createNewDynamicReference(
     input: CreateNewDynamicReferenceInput,
     callOptions?: BriosaCallOptions,
@@ -2787,8 +2787,8 @@ export interface CalculateTcpFixtureUncertaintiesInput {
   readonly tcpInWorking?: Transform;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.calculateTcpFixtureUncertainties(...))
+interface InstrumentOperations {
   calculateTcpFixtureUncertainties(
     input: CalculateTcpFixtureUncertaintiesInput,
     callOptions?: BriosaCallOptions,
@@ -2809,8 +2809,8 @@ export interface ConstructTcpFixtureInput {
   readonly replaceExistingTcpFixture?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.constructTcpFixture(...))
+interface InstrumentOperations {
   constructTcpFixture(
     input: ConstructTcpFixtureInput,
     callOptions?: BriosaCallOptions,
@@ -2837,8 +2837,8 @@ export interface AddNominalPointToTcpFixtureInput {
   readonly covarYz?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.addNominalPointToTcpFixture(...))
+interface InstrumentOperations {
   addNominalPointToTcpFixture(
     input: AddNominalPointToTcpFixtureInput,
     callOptions?: BriosaCallOptions,
@@ -2857,8 +2857,8 @@ export interface GetLastSolvedTcpFixtureUncertaintyCovarianceMatrixInput {
   readonly tcpFixture: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getLastSolvedTcpFixtureUncertaintyCovarianceMatrix(...))
+interface InstrumentOperations {
   getLastSolvedTcpFixtureUncertaintyCovarianceMatrix(
     input: GetLastSolvedTcpFixtureUncertaintyCovarianceMatrixInput,
     callOptions?: BriosaCallOptions,
@@ -2873,8 +2873,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentBaseUncertaintyCovarianceMatrixWrtBase(...))
+interface InstrumentOperations {
   setInstrumentBaseUncertaintyCovarianceMatrixWrtBase(
     input: SetInstrumentBaseUncertaintyCovarianceMatrixInput,
     callOptions?: BriosaCallOptions,
@@ -2889,8 +2889,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setInstrumentBaseUncertaintyCovarianceMatrixWrtWorld(...))
+interface InstrumentOperations {
   setInstrumentBaseUncertaintyCovarianceMatrixWrtWorld(
     input: SetInstrumentBaseUncertaintyCovarianceMatrixInput,
     callOptions?: BriosaCallOptions,
@@ -2909,8 +2909,8 @@ export interface GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getInstrumentBaseUncertaintyCovarianceMatrixWrtWorld(...))
+interface InstrumentOperations {
   getInstrumentBaseUncertaintyCovarianceMatrixWrtWorld(
     input: GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldInput,
     callOptions?: BriosaCallOptions,
@@ -2929,8 +2929,8 @@ export interface ConstructMeasuredPointUncertaintyEllipsoidsInput {
   readonly measurements: readonly PointName[];
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.constructMeasuredPointUncertaintyEllipsoids(...))
+interface InstrumentOperations {
   constructMeasuredPointUncertaintyEllipsoids(
     input: ConstructMeasuredPointUncertaintyEllipsoidsInput,
     callOptions?: BriosaCallOptions,
@@ -2949,8 +2949,8 @@ export interface GetWrtlChannelAndStatusInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.getWrtlChannelAndStatus(...))
+interface InstrumentOperations {
   getWrtlChannelAndStatus(
     input: GetWrtlChannelAndStatusInput,
     callOptions?: BriosaCallOptions,
@@ -2970,8 +2970,8 @@ export interface SetWrtlChannelInput {
   readonly channel?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setWrtlChannel(...))
+interface InstrumentOperations {
   setWrtlChannel(
     input: SetWrtlChannelInput,
     callOptions?: BriosaCallOptions,

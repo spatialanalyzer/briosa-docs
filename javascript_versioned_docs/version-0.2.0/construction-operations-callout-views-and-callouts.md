@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Create Vector Callout {/* #create-vector-callout */}
 
@@ -42,8 +42,8 @@ export interface CreateVectorCalloutInput {
   readonly useDefaultPlacement?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createVectorCallout(...))
+interface ConstructionOperations {
   createVectorCallout(
     input: CreateVectorCalloutInput,
     callOptions?: BriosaCallOptions,
@@ -82,8 +82,8 @@ export interface CreateMinMaxVectorGroupCalloutInput {
   readonly useDefaultPlacement?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createMinMaxVectorGroupCallout(...))
+interface ConstructionOperations {
   createMinMaxVectorGroupCallout(
     input: CreateMinMaxVectorGroupCalloutInput,
     callOptions?: BriosaCallOptions,
@@ -119,8 +119,8 @@ export interface CreatePointCalloutInput {
   readonly useDefaultPlacement?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createPointCallout(...))
+interface ConstructionOperations {
   createPointCallout(
     input: CreatePointCalloutInput,
     callOptions?: BriosaCallOptions,
@@ -160,8 +160,8 @@ export interface CreatePointComparisonCalloutInput {
   readonly useDefaultPlacement?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createPointComparisonCallout(...))
+interface ConstructionOperations {
   createPointComparisonCallout(
     input: CreatePointComparisonCalloutInput,
     callOptions?: BriosaCallOptions,
@@ -184,8 +184,8 @@ export interface CreateRelationshipCalloutInput {
   readonly additionalNotes?: Iterable<string>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createRelationshipCallout(...))
+interface ConstructionOperations {
   createRelationshipCallout(
     input: CreateRelationshipCalloutInput,
     callOptions?: BriosaCallOptions,
@@ -209,8 +209,8 @@ export interface CreatePictureCalloutInput {
   readonly objectForCalloutAnchorPoint?: CollectionItemName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createPictureCallout(...))
+interface ConstructionOperations {
   createPictureCallout(
     input: CreatePictureCalloutInput,
     callOptions?: BriosaCallOptions,
@@ -233,8 +233,8 @@ export interface CreateTextCalloutInput {
   readonly calloutAnchorPoint?: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createTextCallout(...))
+interface ConstructionOperations {
   createTextCallout(
     input: CreateTextCalloutInput,
     callOptions?: BriosaCallOptions,
@@ -254,8 +254,8 @@ export interface MakeCalloutViewRefListWildcardSelectionInput {
   readonly calloutViewWildcardCriteria?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCalloutViewRefListWildcardSelection(...))
+interface ConstructionOperations {
   makeCalloutViewRefListWildcardSelection(
     input?: MakeCalloutViewRefListWildcardSelectionInput,
     callOptions?: BriosaCallOptions,
@@ -275,8 +275,8 @@ export interface SetDefaultCalloutViewPropertiesInput {
   readonly properties?: CalloutViewProperties;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.setDefaultCalloutViewProperties(...))
+interface ConstructionOperations {
   setDefaultCalloutViewProperties(
     input?: SetDefaultCalloutViewPropertiesInput,
     callOptions?: BriosaCallOptions,
@@ -296,8 +296,8 @@ export interface SetCalloutViewPropertiesInput {
   readonly properties?: CalloutViewProperties;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.setCalloutViewProperties(...))
+interface ConstructionOperations {
   setCalloutViewProperties(
     input: SetCalloutViewPropertiesInput,
     callOptions?: BriosaCallOptions,
@@ -312,8 +312,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#delete-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#delete-callout-view)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.deleteCalloutView(...))
+interface ConstructionOperations {
   deleteCalloutView(
     calloutView: CollectionItemName,
     callOptions?: BriosaCallOptions,
@@ -334,8 +334,8 @@ export interface RenameCalloutViewInput {
   readonly overwriteIfExists?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.renameCalloutView(...))
+interface ConstructionOperations {
   renameCalloutView(
     input: RenameCalloutViewInput,
     callOptions?: BriosaCallOptions,
@@ -350,8 +350,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#auto-arrange-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#auto-arrange-callout-view)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.autoArrangeCalloutView(...))
+interface ConstructionOperations {
   autoArrangeCalloutView(
     calloutView: CollectionItemName,
     callOptions?: BriosaCallOptions,
@@ -366,8 +366,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) · [gRPC Contract](/api/grpc/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.getNumberOfCalloutsInCalloutView(...))
+interface ConstructionOperations {
   getNumberOfCalloutsInCalloutView(
     calloutView: CollectionItemName,
     callOptions?: BriosaCallOptions,
@@ -387,8 +387,8 @@ export interface GetIthCalloutPositionInCalloutViewInput {
   readonly calloutViewIndex: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.getIthCalloutPositionInCalloutView(...))
+interface ConstructionOperations {
   getIthCalloutPositionInCalloutView(
     input: GetIthCalloutPositionInCalloutViewInput,
     callOptions?: BriosaCallOptions,
@@ -410,8 +410,8 @@ export interface SetIthCalloutPositionInCalloutViewInput {
   readonly yPosition: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.setIthCalloutPositionInCalloutView(...))
+interface ConstructionOperations {
   setIthCalloutPositionInCalloutView(
     input: SetIthCalloutPositionInCalloutViewInput,
     callOptions?: BriosaCallOptions,

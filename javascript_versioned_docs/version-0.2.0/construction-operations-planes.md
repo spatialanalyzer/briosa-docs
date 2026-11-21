@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct Plane {/* #construct-plane */}
 
@@ -24,8 +24,8 @@ export interface ConstructPlaneInput {
   readonly planeEdgeDimension?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPlane(...))
+interface ConstructionOperations {
   constructPlane(
     input: ConstructPlaneInput,
     callOptions?: BriosaCallOptions,
@@ -47,8 +47,8 @@ export interface ConstructPlaneNormalToObjectThroughPointInput {
   readonly planeEdgeDimension?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPlaneNormalToObjectThroughPoint(...))
+interface ConstructionOperations {
   constructPlaneNormalToObjectThroughPoint(
     input: ConstructPlaneNormalToObjectThroughPointInput,
     callOptions?: BriosaCallOptions,
@@ -72,8 +72,8 @@ export interface ConstructPlanesBoundingPointGroupInput {
   readonly offsetValue?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPlanesBoundingPointGroup(...))
+interface ConstructionOperations {
   constructPlanesBoundingPointGroup(
     input: ConstructPlanesBoundingPointGroupInput,
     callOptions?: BriosaCallOptions,
@@ -94,8 +94,8 @@ export interface ConstructPlanesBisectTwoPlanesInput {
   readonly secondPlane: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPlanesBisectTwoPlanes(...))
+interface ConstructionOperations {
   constructPlanesBisectTwoPlanes(
     input: ConstructPlanesBisectTwoPlanesInput,
     callOptions?: BriosaCallOptions,
@@ -116,8 +116,8 @@ export interface ShiftPlaneInput {
   readonly growBoundsByFactor?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.shiftPlane(...))
+interface ConstructionOperations {
   shiftPlane(
     input: ShiftPlaneInput,
     callOptions?: BriosaCallOptions,
@@ -132,8 +132,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/construction-operations-planes#construct-planes-from-surface-faces---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-planes#construct-planes-from-surface-faces---runtime-select)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPlanesFromSurfaceFacesRuntimeSelect(...))
+interface ConstructionOperations {
   constructPlanesFromSurfaceFacesRuntimeSelect(
     callOptions?: BriosaCallOptions,
   ): Promise<void>;

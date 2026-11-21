@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct Circle {/* #construct-circle */}
 
@@ -24,8 +24,8 @@ export interface ConstructCircleInput {
   readonly circleRadius: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructCircle(...))
+interface ConstructionOperations {
   constructCircle(
     input: ConstructCircleInput,
     callOptions?: BriosaCallOptions,
@@ -40,8 +40,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-circles#construct-circles-from-surface-faces---runtime-select)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructCirclesFromSurfaceFacesRuntimeSelect(...))
+interface ConstructionOperations {
   constructCirclesFromSurfaceFacesRuntimeSelect(
     callOptions?: BriosaCallOptions,
   ): Promise<void>;
@@ -66,8 +66,8 @@ export interface ConstructCirclesLinesFromSurfacesInput {
   readonly baseName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructCirclesLinesFromSurfaces(...))
+interface ConstructionOperations {
   constructCirclesLinesFromSurfaces(
     input: ConstructCirclesLinesFromSurfacesInput,
     callOptions?: BriosaCallOptions,

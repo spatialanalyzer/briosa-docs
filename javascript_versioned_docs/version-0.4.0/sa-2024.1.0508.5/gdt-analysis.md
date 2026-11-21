@@ -10,15 +10,15 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `GdtOperations` methods through `briosa.gdtOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Get Feature Check Datum References {/* #get-feature-check-datum-references */}
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-datum-references) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-datum-references)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.getFeatureCheckDatumReferences(...))
+interface GdtOperations {
   getFeatureCheckDatumReferences(
     input: FeatureCheckInput,
     callOptions?: BriosaCallOptions,
@@ -33,8 +33,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-datum-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-datum-measurements)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.getDatumMeasurements(...))
+interface GdtOperations {
   getDatumMeasurements(
     input: DatumInput,
     callOptions?: BriosaCallOptions,
@@ -49,8 +49,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-datum-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-datum-measurements)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.setDatumMeasurements(...))
+interface GdtOperations {
   setDatumMeasurements(
     input: SetDatumMeasurementsInput,
     callOptions?: BriosaCallOptions,
@@ -65,8 +65,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-measurements)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.getFeatureCheckMeasurements(...))
+interface GdtOperations {
   getFeatureCheckMeasurements(
     input: FeatureCheckInput,
     callOptions?: BriosaCallOptions,
@@ -81,8 +81,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-measurements)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.setFeatureCheckMeasurements(...))
+interface GdtOperations {
   setFeatureCheckMeasurements(
     input: SetFeatureCheckMeasurementsInput,
     callOptions?: BriosaCallOptions,
@@ -97,8 +97,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-cylinder-eval-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-cylinder-eval-options)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.getFeatureCheckCylinderEvalOptions(...))
+interface GdtOperations {
   getFeatureCheckCylinderEvalOptions(
     input: FeatureCheckInput,
     callOptions?: BriosaCallOptions,
@@ -119,8 +119,8 @@ export interface SetFeatureCheckCylinderEvalOptionsInput {
   readonly actualDiameterOverride?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.setFeatureCheckCylinderEvalOptions(...))
+interface GdtOperations {
   setFeatureCheckCylinderEvalOptions(
     input: SetFeatureCheckCylinderEvalOptionsInput,
     callOptions?: BriosaCallOptions,
@@ -150,8 +150,8 @@ export interface FeatureInspectionAutoFilterInput {
   readonly createCloudForEachDatumOrCheck?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.featureInspectionAutoFilter(...))
+interface GdtOperations {
   featureInspectionAutoFilter(
     input?: FeatureInspectionAutoFilterInput,
     callOptions?: BriosaCallOptions,
@@ -170,8 +170,8 @@ export interface SetGlobalForceSimultaneousEvaluationInput {
   readonly globalSimultaneousEvaluation?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.setGlobalForceSimultaneousEvaluation(...))
+interface GdtOperations {
   setGlobalForceSimultaneousEvaluation(
     input?: SetGlobalForceSimultaneousEvaluationInput,
     callOptions?: BriosaCallOptions,
@@ -186,8 +186,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#evaluate-feature-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-check)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.evaluateFeatureCheck(...))
+interface GdtOperations {
   evaluateFeatureCheck(
     input: EvaluateFeatureCheckInput,
     callOptions?: BriosaCallOptions,
@@ -208,8 +208,8 @@ export interface EvaluateFeatureChecksInput {
   readonly restrictEvaluationsToListedChecks?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.evaluateFeatureChecks(...))
+interface GdtOperations {
   evaluateFeatureChecks(
     input: EvaluateFeatureChecksInput,
     callOptions?: BriosaCallOptions,
@@ -229,8 +229,8 @@ export interface GenerateFeatureCheckSummaryInput {
   readonly summaryTableName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.generateFeatureCheckSummary(...))
+interface GdtOperations {
   generateFeatureCheckSummary(
     input: GenerateFeatureCheckSummaryInput,
     callOptions?: BriosaCallOptions,
@@ -245,8 +245,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#startstop-feature-check-trapping) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#startstop-feature-check-trapping)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.startStopFeatureCheckTrapping(...))
+interface GdtOperations {
   startStopFeatureCheckTrapping(
     input: StartStopFeatureCheckTrappingInput,
     callOptions?: BriosaCallOptions,
@@ -261,8 +261,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#enabledisable-datum-alignment-for-feature-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#enabledisable-datum-alignment-for-feature-check)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.enableDisableDatumAlignmentForFeatureCheck(...))
+interface GdtOperations {
   enableDisableDatumAlignmentForFeatureCheck(
     input: EnableDisableDatumAlignmentForFeatureCheckInput,
     callOptions?: BriosaCallOptions,
@@ -277,8 +277,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#datum-alignment) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#datum-alignment)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.datumAlignment(...))
+interface GdtOperations {
   datumAlignment(
     input: DatumAlignmentInput,
     callOptions?: BriosaCallOptions,
@@ -293,8 +293,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-gdt-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-gdt-options)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.getGdtOptions(...))
+interface GdtOperations {
   getGdtOptions(callOptions?: BriosaCallOptions): Promise<GdtOptions>;
 }
 ```
@@ -318,8 +318,8 @@ export interface SetGdtOptionsInput {
   readonly enableAutoFeatureDetection?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.setGdtOptions(...))
+interface GdtOperations {
   setGdtOptions(
     input?: SetGdtOptionsInput,
     callOptions?: BriosaCallOptions,
@@ -338,8 +338,8 @@ export interface RefreshDatumsFeatureChecksFromAnnotationsInput {
   readonly collection: CollectionName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.refreshDatumsFeatureChecksFromAnnotations(...))
+interface GdtOperations {
   refreshDatumsFeatureChecksFromAnnotations(
     input: RefreshDatumsFeatureChecksFromAnnotationsInput,
     callOptions?: BriosaCallOptions,
@@ -354,8 +354,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-frame)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.setFeatureCheckReportingFrame(...))
+interface GdtOperations {
   setFeatureCheckReportingFrame(
     input: SetFeatureCheckReportingFrameInput,
     callOptions?: BriosaCallOptions,
@@ -370,8 +370,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-frame)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.getFeatureCheckReportingFrame(...))
+interface GdtOperations {
   getFeatureCheckReportingFrame(
     input: FeatureCheckInput,
     callOptions?: BriosaCallOptions,
@@ -386,8 +386,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-options)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.setFeatureCheckReportingOptions(...))
+interface GdtOperations {
   setFeatureCheckReportingOptions(
     input: SetFeatureCheckReportingOptionsInput,
     callOptions?: BriosaCallOptions,
@@ -402,8 +402,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-reporting-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-options)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.getFeatureCheckReportingOptions(...))
+interface GdtOperations {
   getFeatureCheckReportingOptions(
     input: FeatureCheckInput,
     callOptions?: BriosaCallOptions,

@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `InstrumentOperations` methods through `briosa.instrumentOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## LR Hardware Connect {/* #lr-hardware-connect */}
 
@@ -25,8 +25,8 @@ export interface LrHardwareConnectInput {
   readonly port: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrHardwareConnect(...))
+interface InstrumentOperations {
   lrHardwareConnect(
     input: LrHardwareConnectInput,
     callOptions?: BriosaCallOptions,
@@ -43,8 +43,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrHardwareDisconnect(...))
+interface InstrumentOperations {
   lrHardwareDisconnect(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -61,8 +61,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrVerifyHardwareConnection(...))
+interface InstrumentOperations {
   lrVerifyHardwareConnection(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -84,8 +84,8 @@ export interface LrSetRedLaserIntensityInput {
   readonly intensity?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSetRedLaserIntensity(...))
+interface InstrumentOperations {
   lrSetRedLaserIntensity(
     input: LrSetRedLaserIntensityInput,
     callOptions?: BriosaCallOptions,
@@ -102,8 +102,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrGetMostRecentSnrInfo(...))
+interface InstrumentOperations {
   lrGetMostRecentSnrInfo(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -127,8 +127,8 @@ Parameter and result notes:
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTest(...))
+interface InstrumentOperations {
   lrSelfTest(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -153,8 +153,8 @@ Parameter and result notes:
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTestLinearization(...))
+interface InstrumentOperations {
   lrSelfTestLinearization(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -177,8 +177,8 @@ Parameter and result notes:
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTestFlipTest(...))
+interface InstrumentOperations {
   lrSelfTestFlipTest(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -209,8 +209,8 @@ Parameter and result notes:
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTestLoSep(...))
+interface InstrumentOperations {
   lrSelfTestLoSep(
     input: LrSelfTestLoSepInput,
     callOptions?: BriosaCallOptions,
@@ -238,8 +238,8 @@ Parameter and result notes:
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrApdisPerformMcmCalibration(...))
+interface InstrumentOperations {
   lrApdisPerformMcmCalibration(
     input: LrApdisPerformMcmCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -256,8 +256,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrApdisActivateMcmCalibration(...))
+interface InstrumentOperations {
   lrApdisActivateMcmCalibration(
     input: LrApdisActivateMcmCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -274,8 +274,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrApdisGetActiveMcmCalibration(...))
+interface InstrumentOperations {
   lrApdisGetActiveMcmCalibration(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,

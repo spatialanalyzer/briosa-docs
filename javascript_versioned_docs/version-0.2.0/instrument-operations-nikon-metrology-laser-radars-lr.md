@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `InstrumentOperations` methods through `briosa.instrumentOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## LR Hardware Connect {/* #lr-hardware-connect */}
 
@@ -23,8 +23,8 @@ export interface LrHardwareConnectInput {
   readonly port: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrHardwareConnect(...))
+interface InstrumentOperations {
   lrHardwareConnect(
     input: LrHardwareConnectInput,
     callOptions?: BriosaCallOptions,
@@ -39,8 +39,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrHardwareDisconnect(...))
+interface InstrumentOperations {
   lrHardwareDisconnect(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -55,8 +55,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrVerifyHardwareConnection(...))
+interface InstrumentOperations {
   lrVerifyHardwareConnection(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -76,8 +76,8 @@ export interface LrSetRedLaserIntensityInput {
   readonly intensity?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSetRedLaserIntensity(...))
+interface InstrumentOperations {
   lrSetRedLaserIntensity(
     input: LrSetRedLaserIntensityInput,
     callOptions?: BriosaCallOptions,
@@ -92,8 +92,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrGetMostRecentSnrInfo(...))
+interface InstrumentOperations {
   lrGetMostRecentSnrInfo(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -108,8 +108,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTest(...))
+interface InstrumentOperations {
   lrSelfTest(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -124,8 +124,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTestLinearization(...))
+interface InstrumentOperations {
   lrSelfTestLinearization(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -140,8 +140,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTestFlipTest(...))
+interface InstrumentOperations {
   lrSelfTestFlipTest(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -156,8 +156,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrSelfTestLoSep(...))
+interface InstrumentOperations {
   lrSelfTestLoSep(
     input: LrSelfTestLoSepInput,
     callOptions?: BriosaCallOptions,
@@ -172,8 +172,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrApdisPerformMcmCalibration(...))
+interface InstrumentOperations {
   lrApdisPerformMcmCalibration(
     input: LrApdisPerformMcmCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -188,8 +188,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrApdisActivateMcmCalibration(...))
+interface InstrumentOperations {
   lrApdisActivateMcmCalibration(
     input: LrApdisActivateMcmCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -204,8 +204,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.lrApdisGetActiveMcmCalibration(...))
+interface InstrumentOperations {
   lrApdisGetActiveMcmCalibration(
     input: LrInstrumentInput,
     callOptions?: BriosaCallOptions,

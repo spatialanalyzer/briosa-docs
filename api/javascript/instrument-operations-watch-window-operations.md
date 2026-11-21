@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `InstrumentOperations` methods through `briosa.instrumentOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Watch Point To Point {/* #watch-point-to-point */}
 
@@ -33,8 +33,8 @@ export interface WatchPointToPointInput {
   readonly windowHeight?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.watchPointToPoint(...))
+interface InstrumentOperations {
   watchPointToPoint(
     input: WatchPointToPointInput,
     callOptions?: BriosaCallOptions,
@@ -66,8 +66,8 @@ export interface WatchPointToObjectsInput {
   readonly windowHeight?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.watchPointToObjects(...))
+interface InstrumentOperations {
   watchPointToObjects(
     input: WatchPointToObjectsInput,
     callOptions?: BriosaCallOptions,
@@ -100,8 +100,8 @@ export interface WatchPointToEdgeInput {
   readonly windowHeight?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.watchPointToEdge(...))
+interface InstrumentOperations {
   watchPointToEdge(
     input: WatchPointToEdgeInput,
     callOptions?: BriosaCallOptions,
@@ -132,8 +132,8 @@ export interface WatchClosestPointInput {
   readonly windowHeight?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.watchClosestPoint(...))
+interface InstrumentOperations {
   watchClosestPoint(
     input: WatchClosestPointInput,
     callOptions?: BriosaCallOptions,
@@ -162,8 +162,8 @@ export interface WatchInstrumentInput {
   readonly windowHeight?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.watchInstrument(...))
+interface InstrumentOperations {
   watchInstrument(
     input: WatchInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -186,8 +186,8 @@ export interface WatchPointToPointWithViewZoomingInput {
   readonly update?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.watchPointToPointWithViewZooming(...))
+interface InstrumentOperations {
   watchPointToPointWithViewZooming(
     input: WatchPointToPointWithViewZoomingInput,
     callOptions?: BriosaCallOptions,

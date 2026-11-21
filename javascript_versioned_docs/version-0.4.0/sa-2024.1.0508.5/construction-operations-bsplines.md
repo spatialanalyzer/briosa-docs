@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Construct B-Spline From Points {/* #construct-b-spline-from-points */}
 
@@ -23,8 +23,8 @@ export interface ConstructBSplineFromPointsInput {
   readonly bSplineFitOptions?: BSplineFitOptions;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplineFromPoints(...))
+interface ConstructionOperations {
   constructBSplineFromPoints(
     input: ConstructBSplineFromPointsInput,
     callOptions?: BriosaCallOptions,
@@ -45,8 +45,8 @@ export interface ConstructBSplineFromPointSetInput {
   readonly bSplineFitOptions?: BSplineFitOptions;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplineFromPointSet(...))
+interface ConstructionOperations {
   constructBSplineFromPointSet(
     input: ConstructBSplineFromPointSetInput,
     callOptions?: BriosaCallOptions,
@@ -67,8 +67,8 @@ export interface ConstructBSplineFromSeveralBSplinesInput {
   readonly closeResultingBSpline?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplineFromSeveralBSplines(...))
+interface ConstructionOperations {
   constructBSplineFromSeveralBSplines(
     input: ConstructBSplineFromSeveralBSplinesInput,
     callOptions?: BriosaCallOptions,
@@ -90,8 +90,8 @@ export interface ConstructBSplineFromIntersectionOfPlaneAndSurfaceInput {
   readonly approximationTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplineFromIntersectionOfPlaneAndSurface(...))
+interface ConstructionOperations {
   constructBSplineFromIntersectionOfPlaneAndSurface(
     input: ConstructBSplineFromIntersectionOfPlaneAndSurfaceInput,
     callOptions?: BriosaCallOptions,
@@ -113,8 +113,8 @@ export interface ConstructBSplineFromIntersectionOfSurfacesInput {
   readonly approximationTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplineFromIntersectionOfSurfaces(...))
+interface ConstructionOperations {
   constructBSplineFromIntersectionOfSurfaces(
     input: ConstructBSplineFromIntersectionOfSurfacesInput,
     callOptions?: BriosaCallOptions,
@@ -134,8 +134,8 @@ export interface ConstructBSplinesFromSurfacesInput {
   readonly resultingBSplineNamePrefix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplinesFromSurfaces(...))
+interface ConstructionOperations {
   constructBSplinesFromSurfaces(
     input: ConstructBSplinesFromSurfacesInput,
     callOptions?: BriosaCallOptions,
@@ -155,8 +155,8 @@ export interface ConstructBSplinesFromLinesInput {
   readonly resultingBSplineNamePrefix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplinesFromLines(...))
+interface ConstructionOperations {
   constructBSplinesFromLines(
     input: ConstructBSplinesFromLinesInput,
     callOptions?: BriosaCallOptions,
@@ -180,8 +180,8 @@ export interface ConstructBSplinesFromIntersectionOfPlaneAndMeshInput {
   readonly createIntersectionPoints?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBSplinesFromIntersectionOfPlaneAndMesh(...))
+interface ConstructionOperations {
   constructBSplinesFromIntersectionOfPlaneAndMesh(
     input: ConstructBSplinesFromIntersectionOfPlaneAndMeshInput,
     callOptions?: BriosaCallOptions,

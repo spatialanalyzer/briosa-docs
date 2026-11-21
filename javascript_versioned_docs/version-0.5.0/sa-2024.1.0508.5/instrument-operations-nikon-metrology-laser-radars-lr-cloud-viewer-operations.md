@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `InstrumentOperations` methods through `briosa.instrumentOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Clear Cloud Viewer {/* #clear-cloud-viewer */}
 
@@ -19,8 +19,8 @@ This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other e
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `destructive`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.clearCloudViewer(...))
+interface InstrumentOperations {
   clearCloudViewer(
     input: CloudViewerInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -37,8 +37,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.sendCloudToSa(...))
+interface InstrumentOperations {
   sendCloudToSa(
     input: SendCloudToSaInput,
     callOptions?: BriosaCallOptions,
@@ -55,8 +55,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.setCloudViewerFilter(...))
+interface InstrumentOperations {
   setCloudViewerFilter(
     input: SetCloudViewerFilterInput,
     callOptions?: BriosaCallOptions,
@@ -73,8 +73,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_write`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.saveCloudViewerPointCloudFile(...))
+interface InstrumentOperations {
   saveCloudViewerPointCloudFile(
     input: SaveCloudViewerPointCloudFileInput,
     callOptions?: BriosaCallOptions,
@@ -91,8 +91,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of InstrumentOperations (briosa.instrumentOperations.loadCloudViewerPointCloudFile(...))
+interface InstrumentOperations {
   loadCloudViewerPointCloudFile(
     input: LoadCloudViewerPointCloudFileInput,
     callOptions?: BriosaCallOptions,

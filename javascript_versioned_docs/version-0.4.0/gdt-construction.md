@@ -10,15 +10,15 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `GdtOperations` methods through `briosa.gdtOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Make Surface Face List - Runtime Select {/* #make-surface-face-list---runtime-select */}
 
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-surface-face-list---runtime-select) · [gRPC Contract](/api/grpc/gdt-construction#make-surface-face-list---runtime-select)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeSurfaceFaceListRuntimeSelect(...))
+interface GdtOperations {
   makeSurfaceFaceListRuntimeSelect(): Promise<SurfaceFaceList>;
 }
 ```
@@ -30,8 +30,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-surface-face-list-from-surface) · [gRPC Contract](/api/grpc/gdt-construction#make-surface-face-list-from-surface)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeSurfaceFaceListFromSurface(...))
+interface GdtOperations {
   makeSurfaceFaceListFromSurface(
     surface: CollectionObjectName,
   ): Promise<SurfaceFaceList>;
@@ -45,8 +45,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-gdt-feature-check-annotation) · [gRPC Contract](/api/grpc/gdt-construction#make-gdt-feature-check-annotation)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeGdtFeatureCheckAnnotation(...))
+interface GdtOperations {
   makeGdtFeatureCheckAnnotation(
     options: MakeGdtFeatureCheckAnnotationOptions,
   ): Promise<void>;
@@ -60,8 +60,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-gdt-datum-annotation) · [gRPC Contract](/api/grpc/gdt-construction#make-gdt-datum-annotation)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeGdtDatumAnnotation(...))
+interface GdtOperations {
   makeGdtDatumAnnotation(options: MakeGdtDatumAnnotationOptions): Promise<void>;
 }
 ```
@@ -73,8 +73,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-feature-checks) · [gRPC Contract](/api/grpc/gdt-construction#make-feature-checks)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeFeatureChecks(...))
+interface GdtOperations {
   makeFeatureChecks(collection: CollectionName): Promise<void>;
 }
 ```
@@ -86,8 +86,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-a-feature-check-ref-list-from-a-collection) · [gRPC Contract](/api/grpc/gdt-construction#make-a-feature-check-ref-list-from-a-collection)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeFeatureCheckRefListFromCollection(...))
+interface GdtOperations {
   makeFeatureCheckRefListFromCollection(
     collection: CollectionName,
   ): Promise<readonly CollectionItemName[]>;
@@ -101,8 +101,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-a-feature-check-reference-list--wildcard-selection) · [gRPC Contract](/api/grpc/gdt-construction#make-a-feature-check-reference-list--wildcard-selection)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeFeatureCheckReferenceListWildcardSelection(...))
+interface GdtOperations {
   makeFeatureCheckReferenceListWildcardSelection(options?: {
     collectionWildcardCriteria?: string;
     featureCheckWildcardCriteria?: string;
@@ -117,8 +117,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-annotation-ref-list-from-a-collection) · [gRPC Contract](/api/grpc/gdt-construction#make-annotation-ref-list-from-a-collection)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeAnnotationRefListFromCollection(...))
+interface GdtOperations {
   makeAnnotationRefListFromCollection(
     collection: CollectionName,
   ): Promise<readonly CollectionItemName[]>;
@@ -132,8 +132,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-annotation-ref-list--wildcard-selection) · [gRPC Contract](/api/grpc/gdt-construction#make-annotation-ref-list--wildcard-selection)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeAnnotationRefListWildcardSelection(...))
+interface GdtOperations {
   makeAnnotationRefListWildcardSelection(options?: {
     collectionWildcardCriteria?: string;
     annotationWildcardCriteria?: string;
@@ -148,8 +148,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#delete-feature-checks) · [gRPC Contract](/api/grpc/gdt-construction#delete-feature-checks)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.deleteFeatureChecks(...))
+interface GdtOperations {
   deleteFeatureChecks(
     featureChecks: readonly CollectionItemName[],
   ): Promise<void>;
@@ -163,8 +163,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/gdt-construction#make-a-datum-ref-list-from-a-collection) · [gRPC Contract](/api/grpc/gdt-construction#make-a-datum-ref-list-from-a-collection)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeDatumRefListFromCollection(...))
+interface GdtOperations {
   makeDatumRefListFromCollection(
     collection: CollectionName,
   ): Promise<readonly CollectionObjectName[]>;

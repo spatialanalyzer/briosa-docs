@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `RobotOperations` methods through `briosa.robotOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Add Robot/Machine (.SAMachine) {/* #add-robotmachine-samachine */}
 
@@ -21,8 +21,8 @@ export interface AddRobotMachineSaMachineInput {
   readonly saMachineFile: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.addRobotMachineSaMachine(...))
+interface RobotOperations {
   addRobotMachineSaMachine(
     input: AddRobotMachineSaMachineInput,
     callOptions?: BriosaCallOptions,
@@ -41,8 +41,8 @@ export interface AddRobotMachineManipKinInput {
   readonly manipKinFile: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.addRobotMachineManipKin(...))
+interface RobotOperations {
   addRobotMachineManipKin(
     input: AddRobotMachineManipKinInput,
     callOptions?: BriosaCallOptions,
@@ -61,8 +61,8 @@ export interface DeleteRobotMachineInput {
   readonly machineId: CollectionMachineId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.deleteRobotMachine(...))
+interface RobotOperations {
   deleteRobotMachine(
     input: DeleteRobotMachineInput,
     callOptions?: BriosaCallOptions,
@@ -84,8 +84,8 @@ export interface MoveRobotMachineToFrameInput {
   readonly acknowledgeArrival?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.moveRobotMachineToFrame(...))
+interface RobotOperations {
   moveRobotMachineToFrame(
     input: MoveRobotMachineToFrameInput,
     callOptions?: BriosaCallOptions,
@@ -108,8 +108,8 @@ export interface MoveRobotMachineThroughPathInput {
   readonly acknowledgeArrival?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.moveRobotMachineThroughPath(...))
+interface RobotOperations {
   moveRobotMachineThroughPath(
     input: MoveRobotMachineThroughPathInput,
     callOptions?: BriosaCallOptions,
@@ -130,8 +130,8 @@ export interface MoveRobotMachineToNamedDestinationInput {
   readonly acknowledgeArrival?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.moveRobotMachineToNamedDestination(...))
+interface RobotOperations {
   moveRobotMachineToNamedDestination(
     input: MoveRobotMachineToNamedDestinationInput,
     callOptions?: BriosaCallOptions,
@@ -152,8 +152,8 @@ export interface SetRobotMachineParameterInput {
   readonly parameterValue?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setRobotMachineParameter(...))
+interface RobotOperations {
   setRobotMachineParameter(
     input: SetRobotMachineParameterInput,
     callOptions?: BriosaCallOptions,
@@ -173,8 +173,8 @@ export interface GetRobotMachineParameterInput {
   readonly parameterName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.getRobotMachineParameter(...))
+interface RobotOperations {
   getRobotMachineParameter(
     input: GetRobotMachineParameterInput,
     callOptions?: BriosaCallOptions,
@@ -195,8 +195,8 @@ export interface SetRobotMachineModelLinkParametersInput {
   readonly configuration?: RobotModelLinkConfiguration;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setRobotMachineModelLinkParameters(...))
+interface RobotOperations {
   setRobotMachineModelLinkParameters(
     input: SetRobotMachineModelLinkParametersInput,
     callOptions?: BriosaCallOptions,
@@ -216,8 +216,8 @@ export interface GetRobotMachineModelLinkParametersInput {
   readonly linkName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.getRobotMachineModelLinkParameters(...))
+interface RobotOperations {
   getRobotMachineModelLinkParameters(
     input: GetRobotMachineModelLinkParametersInput,
     callOptions?: BriosaCallOptions,
@@ -239,8 +239,8 @@ export interface SetRobotMachineBaseTransformInput {
   readonly numberOfSteps?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setRobotMachineBaseTransform(...))
+interface RobotOperations {
   setRobotMachineBaseTransform(
     input: SetRobotMachineBaseTransformInput,
     callOptions?: BriosaCallOptions,
@@ -261,8 +261,8 @@ export interface StartRobotMachineInterfaceInput {
   readonly runInSimulation?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.startRobotMachineInterface(...))
+interface RobotOperations {
   startRobotMachineInterface(
     input: StartRobotMachineInterfaceInput,
     callOptions?: BriosaCallOptions,
@@ -281,8 +281,8 @@ export interface StopRobotMachineInterfaceInput {
   readonly machineId: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.stopRobotMachineInterface(...))
+interface RobotOperations {
   stopRobotMachineInterface(
     input: StopRobotMachineInterfaceInput,
     callOptions?: BriosaCallOptions,
@@ -304,8 +304,8 @@ export interface ComputeRobotMachineAdjustedGoalFrameInput {
   readonly modifiedGoalFrame: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.computeRobotMachineAdjustedGoalFrame(...))
+interface RobotOperations {
   computeRobotMachineAdjustedGoalFrame(
     input: ComputeRobotMachineAdjustedGoalFrameInput,
     callOptions?: BriosaCallOptions,
@@ -330,8 +330,8 @@ export interface MoveRobotMachineToJointPoseSixDofInput {
   readonly joint6?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.moveRobotMachineToJointPoseSixDof(...))
+interface RobotOperations {
   moveRobotMachineToJointPoseSixDof(
     input: MoveRobotMachineToJointPoseSixDofInput,
     callOptions?: BriosaCallOptions,
@@ -352,8 +352,8 @@ export interface SimulateRobotMachinePathOutputCsvFileInput {
   readonly outputCsvFile: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.simulateRobotMachinePathOutputCsvFile(...))
+interface RobotOperations {
   simulateRobotMachinePathOutputCsvFile(
     input: SimulateRobotMachinePathOutputCsvFileInput,
     callOptions?: BriosaCallOptions,
@@ -373,8 +373,8 @@ export interface CreateRobotCalibrationInput {
   readonly calibrationName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.createRobotCalibration(...))
+interface RobotOperations {
   createRobotCalibration(
     input: CreateRobotCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -394,8 +394,8 @@ export interface DeleteRobotCalibrationInput {
   readonly calibrationName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.deleteRobotCalibration(...))
+interface RobotOperations {
   deleteRobotCalibration(
     input: DeleteRobotCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -417,8 +417,8 @@ export interface ImportPosesMatchToMeasurementsInput {
   readonly csvJointSetFile: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.importPosesMatchToMeasurements(...))
+interface RobotOperations {
   importPosesMatchToMeasurements(
     input: ImportPosesMatchToMeasurementsInput,
     callOptions?: BriosaCallOptions,
@@ -440,8 +440,8 @@ export interface ImportPosesMatchToFramesInput {
   readonly csvJointSetFile: FileReference;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.importPosesMatchToFrames(...))
+interface RobotOperations {
   importPosesMatchToFrames(
     input: ImportPosesMatchToFramesInput,
     callOptions?: BriosaCallOptions,
@@ -466,8 +466,8 @@ export interface PerformRobotCalibrationInput {
   readonly allowableAverageError?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.performRobotCalibration(...))
+interface RobotOperations {
   performRobotCalibration(
     input: PerformRobotCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -495,8 +495,8 @@ export interface PerformRobotCalibrationAlternateInput {
   readonly allowableAverageError?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.performRobotCalibrationAlternate(...))
+interface RobotOperations {
   performRobotCalibrationAlternate(
     input: PerformRobotCalibrationAlternateInput,
     callOptions?: BriosaCallOptions,
@@ -518,8 +518,8 @@ export interface StartStopRobotCalibrationTrappingInput {
   readonly startTrapping?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.startStopRobotCalibrationTrapping(...))
+interface RobotOperations {
   startStopRobotCalibrationTrapping(
     input: StartStopRobotCalibrationTrappingInput,
     callOptions?: BriosaCallOptions,
@@ -539,8 +539,8 @@ export interface SetActiveRobotCalibrationInput {
   readonly calibrationName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setActiveRobotCalibration(...))
+interface RobotOperations {
   setActiveRobotCalibration(
     input: SetActiveRobotCalibrationInput,
     callOptions?: BriosaCallOptions,
@@ -561,8 +561,8 @@ export interface SetRobotCalibrationToolFrameInput {
   readonly toolFrame?: Transform;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setRobotCalibrationToolFrame(...))
+interface RobotOperations {
   setRobotCalibrationToolFrame(
     input: SetRobotCalibrationToolFrameInput,
     callOptions?: BriosaCallOptions,
@@ -589,8 +589,8 @@ export interface SetRobotCalibrationMeasurementOffsetInToolFrameInput {
   readonly measurementFrame?: Transform;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setRobotCalibrationMeasurementOffsetInToolFrame(...))
+interface RobotOperations {
   setRobotCalibrationMeasurementOffsetInToolFrame(
     input: SetRobotCalibrationMeasurementOffsetInToolFrameInput,
     callOptions?: BriosaCallOptions,
@@ -618,8 +618,8 @@ export interface GetRobotPoseForAFrameInput {
   readonly goalPoseCount: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.getRobotPoseForAFrame(...))
+interface RobotOperations {
   getRobotPoseForAFrame(
     input: GetRobotPoseForAFrameInput,
     callOptions?: BriosaCallOptions,
@@ -638,8 +638,8 @@ export interface GetCalibrationApplianceIntegerValueInput {
   readonly indexOffset?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.getCalibrationApplianceIntegerValue(...))
+interface RobotOperations {
   getCalibrationApplianceIntegerValue(
     input?: GetCalibrationApplianceIntegerValueInput,
     callOptions?: BriosaCallOptions,
@@ -659,8 +659,8 @@ export interface SetCalibrationApplianceIntegerValueInput {
   readonly integerValue?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setCalibrationApplianceIntegerValue(...))
+interface RobotOperations {
   setCalibrationApplianceIntegerValue(
     input?: SetCalibrationApplianceIntegerValueInput,
     callOptions?: BriosaCallOptions,
@@ -679,8 +679,8 @@ export interface GetCalibrationApplianceRealValueInput {
   readonly indexOffset?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.getCalibrationApplianceRealValue(...))
+interface RobotOperations {
   getCalibrationApplianceRealValue(
     input?: GetCalibrationApplianceRealValueInput,
     callOptions?: BriosaCallOptions,
@@ -700,8 +700,8 @@ export interface SetCalibrationApplianceRealValueInput {
   readonly realValue?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setCalibrationApplianceRealValue(...))
+interface RobotOperations {
   setCalibrationApplianceRealValue(
     input?: SetCalibrationApplianceRealValueInput,
     callOptions?: BriosaCallOptions,
@@ -720,8 +720,8 @@ export interface GetCalibrationApplianceDataInput {
   readonly realValueCount: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.getCalibrationApplianceData(...))
+interface RobotOperations {
   getCalibrationApplianceData(
     input: GetCalibrationApplianceDataInput,
     callOptions?: BriosaCallOptions,
@@ -740,8 +740,8 @@ export interface SetCalibrationApplianceDataInput {
   readonly realValues?: Iterable<number>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotOperations (briosa.robotOperations.setCalibrationApplianceData(...))
+interface RobotOperations {
   setCalibrationApplianceData(
     input?: SetCalibrationApplianceDataInput,
     callOptions?: BriosaCallOptions,

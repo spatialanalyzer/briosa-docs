@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`; package-level functions take `briosa` as their first argument. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Set (or construct) default collection {/* #set-or-construct-default-collection */}
 
@@ -23,8 +23,8 @@ export interface SetOrConstructDefaultCollectionInput {
   readonly collectionName: CollectionName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.setOrConstructDefaultCollection(...))
+interface ConstructionOperations {
   setOrConstructDefaultCollection(
     input: SetOrConstructDefaultCollectionInput,
     callOptions?: BriosaCallOptions,
@@ -47,8 +47,8 @@ export interface ConstructCollectionInput {
   readonly makeDefaultCollection?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructCollection(...))
+interface ConstructionOperations {
   constructCollection(
     input: ConstructCollectionInput,
     callOptions?: BriosaCallOptions,
@@ -84,8 +84,8 @@ export interface DeleteCollectionInput {
   readonly collectionName: CollectionName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.deleteCollection(...))
+interface ConstructionOperations {
   deleteCollection(
     input: DeleteCollectionInput,
     callOptions?: BriosaCallOptions,
@@ -108,8 +108,8 @@ export interface DeleteCollectionsByWildcardInput {
   readonly allowDeletingAllCollections?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.deleteCollectionsByWildcard(...))
+interface ConstructionOperations {
   deleteCollectionsByWildcard(
     input: DeleteCollectionsByWildcardInput,
     callOptions?: BriosaCallOptions,

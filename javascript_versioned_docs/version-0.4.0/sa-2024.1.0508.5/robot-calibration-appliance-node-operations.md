@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+Call `RobotCalibrationApplianceNodeOperations` methods through `briosa.robotCalibrationApplianceNodeOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
 ## Add Calibration Appliance Node {/* #add-calibration-appliance-node */}
 
@@ -21,8 +21,8 @@ export interface AddCalibrationApplianceNodeInput {
   readonly calibrationApplianceNodeToAdd: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.addCalibrationApplianceNode(...))
+interface RobotCalibrationApplianceNodeOperations {
   addCalibrationApplianceNode(
     input: AddCalibrationApplianceNodeInput,
     callOptions?: BriosaCallOptions,
@@ -41,8 +41,8 @@ export interface DeleteCalibrationApplianceNodeInput {
   readonly calibrationApplianceNodeToDelete: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.deleteCalibrationApplianceNode(...))
+interface RobotCalibrationApplianceNodeOperations {
   deleteCalibrationApplianceNode(
     input: DeleteCalibrationApplianceNodeInput,
     callOptions?: BriosaCallOptions,
@@ -62,8 +62,8 @@ export interface ConnectDisconnectCalibrationApplianceNodeInput {
   readonly connect?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.connectDisconnectCalibrationApplianceNode(...))
+interface RobotCalibrationApplianceNodeOperations {
   connectDisconnectCalibrationApplianceNode(
     input: ConnectDisconnectCalibrationApplianceNodeInput,
     callOptions?: BriosaCallOptions,
@@ -83,8 +83,8 @@ export interface SetCalibrationApplianceNodeInstrumentInput {
   readonly instrument: CollectionInstrumentId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeInstrument(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeInstrument(
     input: SetCalibrationApplianceNodeInstrumentInput,
     callOptions?: BriosaCallOptions,
@@ -104,8 +104,8 @@ export interface SetCalibrationApplianceNodeMeasurementProfileInput {
   readonly measurementProfile?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementProfile(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeMeasurementProfile(
     input: SetCalibrationApplianceNodeMeasurementProfileInput,
     callOptions?: BriosaCallOptions,
@@ -125,8 +125,8 @@ export interface SetCalibrationApplianceNodeMeasurementTargetInput {
   readonly measurementTarget?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementTarget(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeMeasurementTarget(
     input: SetCalibrationApplianceNodeMeasurementTargetInput,
     callOptions?: BriosaCallOptions,
@@ -146,8 +146,8 @@ export interface EnableDisableCalibrationApplianceNodeInstrumentAutoPointInput {
   readonly enableInstrumentAutoPoint?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.enableDisableCalibrationApplianceNodeInstrumentAutoPoint(...))
+interface RobotCalibrationApplianceNodeOperations {
   enableDisableCalibrationApplianceNodeInstrumentAutoPoint(
     input: EnableDisableCalibrationApplianceNodeInstrumentAutoPointInput,
     callOptions?: BriosaCallOptions,
@@ -167,8 +167,8 @@ export interface SetCalibrationApplianceNodeInstrumentDwellTimeInput {
   readonly measurementDwellTime?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeInstrumentDwellTime(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeInstrumentDwellTime(
     input: SetCalibrationApplianceNodeInstrumentDwellTimeInput,
     callOptions?: BriosaCallOptions,
@@ -193,8 +193,8 @@ export interface SkipCalibrationApplianceNodeMeasurementInput {
   readonly calibrationApplianceNode: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.skipCalibrationApplianceNodeMeasurement(...))
+interface RobotCalibrationApplianceNodeOperations {
   skipCalibrationApplianceNodeMeasurement(
     input: SkipCalibrationApplianceNodeMeasurementInput,
     callOptions?: BriosaCallOptions,
@@ -214,8 +214,8 @@ export interface SetCalibrationApplianceNodeMeasurementFrameInput {
   readonly measurementReferenceFrame: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementFrame(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeMeasurementFrame(
     input: SetCalibrationApplianceNodeMeasurementFrameInput,
     callOptions?: BriosaCallOptions,
@@ -235,8 +235,8 @@ export interface SetCalibrationApplianceNodeMeasurementOffsetTransformInput {
   readonly measurementOffsetTransform?: Transform;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementOffsetTransform(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeMeasurementOffsetTransform(
     input: SetCalibrationApplianceNodeMeasurementOffsetTransformInput,
     callOptions?: BriosaCallOptions,
@@ -256,8 +256,8 @@ export interface SetCalibrationApplianceNodeMeasurementPointGroupInput {
   readonly pointGroupName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementPointGroup(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeMeasurementPointGroup(
     input: SetCalibrationApplianceNodeMeasurementPointGroupInput,
     callOptions?: BriosaCallOptions,
@@ -277,8 +277,8 @@ export interface SetCalibrationApplianceNodeCalibrationApplianceIpAddressInput {
   readonly calibrationApplianceIpAddress?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeCalibrationApplianceIpAddress(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeCalibrationApplianceIpAddress(
     input: SetCalibrationApplianceNodeCalibrationApplianceIpAddressInput,
     callOptions?: BriosaCallOptions,
@@ -298,8 +298,8 @@ export interface SetCalibrationApplianceNodeTrappingNodeIdInput {
   readonly trappingNodeId?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeTrappingNodeId(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeTrappingNodeId(
     input: SetCalibrationApplianceNodeTrappingNodeIdInput,
     callOptions?: BriosaCallOptions,
@@ -319,8 +319,8 @@ export interface EnableDisableCalibrationApplianceNodeTrapManagerInput {
   readonly enable?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.enableDisableCalibrationApplianceNodeTrapManager(...))
+interface RobotCalibrationApplianceNodeOperations {
   enableDisableCalibrationApplianceNodeTrapManager(
     input: EnableDisableCalibrationApplianceNodeTrapManagerInput,
     callOptions?: BriosaCallOptions,
@@ -339,8 +339,8 @@ export interface ClearCalibrationApplianceNodeTrapManagerRequestsInput {
   readonly calibrationApplianceNode: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.clearCalibrationApplianceNodeTrapManagerRequests(...))
+interface RobotCalibrationApplianceNodeOperations {
   clearCalibrationApplianceNodeTrapManagerRequests(
     input: ClearCalibrationApplianceNodeTrapManagerRequestsInput,
     callOptions?: BriosaCallOptions,
@@ -361,8 +361,8 @@ export interface SetCalibrationApplianceNodeIntegerValueInput {
   readonly integerValue?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeIntegerValue(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeIntegerValue(
     input: SetCalibrationApplianceNodeIntegerValueInput,
     callOptions?: BriosaCallOptions,
@@ -382,8 +382,8 @@ export interface GetCalibrationApplianceNodeIntegerValueInput {
   readonly indexOffset?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeIntegerValue(...))
+interface RobotCalibrationApplianceNodeOperations {
   getCalibrationApplianceNodeIntegerValue(
     input: GetCalibrationApplianceNodeIntegerValueInput,
     callOptions?: BriosaCallOptions,
@@ -404,8 +404,8 @@ export interface SetCalibrationApplianceNodeRealValueInput {
   readonly realValue?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeRealValue(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeRealValue(
     input: SetCalibrationApplianceNodeRealValueInput,
     callOptions?: BriosaCallOptions,
@@ -425,8 +425,8 @@ export interface GetCalibrationApplianceNodeRealValueInput {
   readonly indexOffset?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeRealValue(...))
+interface RobotCalibrationApplianceNodeOperations {
   getCalibrationApplianceNodeRealValue(
     input: GetCalibrationApplianceNodeRealValueInput,
     callOptions?: BriosaCallOptions,
@@ -446,8 +446,8 @@ export interface SetCalibrationApplianceNodeDataInput {
   readonly realValues?: Iterable<number>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeData(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeData(
     input: SetCalibrationApplianceNodeDataInput,
     callOptions?: BriosaCallOptions,
@@ -467,8 +467,8 @@ export interface GetCalibrationApplianceNodeDataInput {
   readonly realValueCount: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeData(...))
+interface RobotCalibrationApplianceNodeOperations {
   getCalibrationApplianceNodeData(
     input: GetCalibrationApplianceNodeDataInput,
     callOptions?: BriosaCallOptions,
@@ -488,8 +488,8 @@ export interface SetCalibrationApplianceNodeDisplayRobotInput {
   readonly machineId: CollectionMachineId;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeDisplayRobot(...))
+interface RobotCalibrationApplianceNodeOperations {
   setCalibrationApplianceNodeDisplayRobot(
     input: SetCalibrationApplianceNodeDisplayRobotInput,
     callOptions?: BriosaCallOptions,
@@ -509,8 +509,8 @@ export interface UpdateCalibrationApplianceNodeDisplayRobotJointsInput {
   readonly enableDisplayRobotJointUpdates?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.updateCalibrationApplianceNodeDisplayRobotJoints(...))
+interface RobotCalibrationApplianceNodeOperations {
   updateCalibrationApplianceNodeDisplayRobotJoints(
     input: UpdateCalibrationApplianceNodeDisplayRobotJointsInput,
     callOptions?: BriosaCallOptions,
@@ -529,8 +529,8 @@ export interface GetCalibrationApplianceNodeStatusInput {
   readonly calibrationApplianceNode: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeStatus(...))
+interface RobotCalibrationApplianceNodeOperations {
   getCalibrationApplianceNodeStatus(
     input: GetCalibrationApplianceNodeStatusInput,
     callOptions?: BriosaCallOptions,
