@@ -22,7 +22,7 @@ exact SpatialAnalyzer target:
 briosa-0.10.0-sa-<exact-sa-target>-win-x64.zip
 ```
 
-Choose exact target `2024.1.0508.5` or `2026.1.0529.7` from the [Server 0.10.0 assets](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0){/* release-pending */}. Use the adjacent ZIP checksum and provenance. Schema-3 packages require Installer **0.3.0** or later. Manual extraction alone does not create a registered, committed package-store receipt; use Installer to manage discovery, or an explicitly selected validated server path as described in [Installation Selection](./installation-selection). Raw gRPC users should also read [Protocol Artifacts](./protocol-artifacts).
+Choose exact target `2024.1.0508.5` or `2026.1.0529.7` from the [Server 0.10.0 assets](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0). Use the adjacent ZIP checksum and provenance. Schema-3 packages require Installer **0.3.0** or later. Manual extraction alone does not create a registered, committed package-store receipt; use Installer to manage discovery, or an explicitly selected validated server path as described in [Installation Selection](./installation-selection). Raw gRPC users should also read [Protocol Artifacts](./protocol-artifacts).
 
 The archive does not contain SpatialAnalyzer, its installer, SDK executable,
 original type library, license material, or vendor documentation.
@@ -120,4 +120,4 @@ operator-intervention guidance. Read and dismiss the dialog in SpatialAnalyzer
 before recovering the SDK; Briosa never dismisses a dialog.
 
 For the full package contract, use the
-[authoritative Windows guide](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/docs/operations/windows-package.md).{/* release-pending */}
+[authoritative Windows guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/windows-package.md).

@@ -139,4 +139,4 @@ supports.
 For the underlying readiness checks, see
 [Readiness is more than connection](./readiness). The authoritative target
 implementation lives in the
-[Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/v0.10.0/targets).{/* release-pending */}
+[Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/v0.10.0/targets).

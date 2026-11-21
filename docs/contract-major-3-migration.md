@@ -6,7 +6,7 @@ description: Move an application from client 0.4.0 and Server 0.9.x to client 0.
 # Contract Major 3 Migration
 
 Server 0.10.0 and the exact-target .NET, Python, and JavaScript 0.5.0 clients
-introduce behavioral contract major 3 for both SA targets.{/* release-pending */}
+introduce behavioral contract major 3 for both SA targets.
 Several changes break callers on purpose: the default operation admission is
 narrower, some request defaults changed, nine operations are gone, and inputs
 the server always required are now required in the client signatures. Most
@@ -17,7 +17,7 @@ method's history page keeps the Server 0.9.0 and client 0.4.0 contracts. Each
 client's own migration notes list every changed method:
 [.NET](https://github.com/spatialanalyzer/briosa-dotnet/blob/main/docs/contract-major-3-migration.md),
 [Python](https://github.com/spatialanalyzer/briosa-py/blob/main/targets/2026.1.0529.7/README.md#contract-major-3-050),
-and [JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/blob/main/docs/contract-major-3-migration.md).{/* release-pending */}
+and [JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/blob/main/docs/contract-major-3-migration.md).
 
 ## Upgrade the Client and Server Together
 

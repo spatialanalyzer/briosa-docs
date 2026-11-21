@@ -46,7 +46,7 @@ release it supports. The package version remains an independent Briosa client
 version; it is not the SpatialAnalyzer version.
 
 Both targets are published as client **0.5.0**. Use Server **0.10.0** for
-the same exact target.{/* release-pending */} Compatible contract revisions can be selected
+the same exact target. Compatible contract revisions can be selected
 independently of the client's generation artifact.
 Choose one exact target for each application environment. The examples below
 use SA 2026; the matching SA 2024 install command follows each example.

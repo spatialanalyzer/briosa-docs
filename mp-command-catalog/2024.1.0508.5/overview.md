@@ -9,7 +9,7 @@ This catalog documents **1,283 captured MP commands** across **79 command groups
 and subgroups** in SpatialAnalyzer 2024.1.0508.5. Each command links to a canonical
 entry with its exact-target group, disposition, signature, and reviewed differences.
 
-**Server 0.10.0 and all three client families 0.5.0 are released for this target.**{/* release-pending */}
+**Server 0.10.0 and all three client families 0.5.0 are released for this target.**
 
 [Browse the exact-target gRPC reference](/api/grpc/sa-2024.1.0508.5), [.NET reference](/api/dotnet/sa-2024.1.0508.5), [Python reference](/api/python/sa-2024.1.0508.5), or [JavaScript/TypeScript reference](/api/javascript/sa-2024.1.0508.5).
 

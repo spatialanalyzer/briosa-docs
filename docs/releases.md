@@ -13,11 +13,11 @@ not mean that every documented API is only a proposal.
 
 | Product | Released Version | Availability |
 | --- | --- | --- |
-| Briosa Server and Control Center | [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0){/* release-pending */} | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 3.0. [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) remains available for client 0.4.0 applications |
+| Briosa Server and Control Center | [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 3.0. [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) remains available for client 0.4.0 applications |
 | Briosa Installer | [0.4.1](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.4.1) | Signed Windows setup and portable distribution; patched .NET runtime 10.0.15 |
-| .NET client | 0.5.0{/* release-pending */} | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.5.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.5.0) |
-| Python client | 0.5.0{/* release-pending */} | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.5.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.5.0/) |
-| JavaScript/TypeScript client | 0.5.0{/* release-pending */} | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.5.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.5.0) |
+| .NET client | 0.5.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.5.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.5.0) |
+| Python client | 0.5.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.5.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.5.0/) |
+| JavaScript/TypeScript client | 0.5.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.5.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.5.0) |
 
 Use [Install Briosa](/install) to obtain the released Windows products and
 [Install the Exact-Target Client](/docs/getting-started/run-the-server#install-the-exact-target-client)
@@ -36,7 +36,7 @@ See [installation selection and migration](/docs/deployment/installation-selecti
 
 ## Server 0.10.0 and Clients 0.5.0
 
-Server [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0){/* release-pending */}
+Server [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0)
 and the exact-target 0.5.0 clients introduce **behavioral contract major 3**,
 revision 0, for both exact targets. This is a breaking release: client 0.5.0
 selects only major-3 servers, and client 0.4.0 keeps working with Server 0.9.2

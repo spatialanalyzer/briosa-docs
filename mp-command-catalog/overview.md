@@ -99,4 +99,4 @@ and alternatives.
 
 Released server support and client-package publication are separate. The .NET,
 Python, and JavaScript/TypeScript clients are published as package version
-**0.5.0** for each exact target.{/* release-pending */} See [Release Status](/docs/releases).
+**0.5.0** for each exact target. See [Release Status](/docs/releases).

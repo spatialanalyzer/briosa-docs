@@ -9,7 +9,7 @@ First-party clients package their own transport bindings. Raw gRPC applications 
 
 ## Choose and Verify the Artifact
 
-From the [Server 0.10.0 release](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0){/* release-pending */}, download one of:
+From the [Server 0.10.0 release](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0), download one of:
 
 - `briosa-protocol-0.10.0-sa-2024.1.0508.5.zip`
 - `briosa-protocol-0.10.0-sa-2026.1.0529.7.zip`

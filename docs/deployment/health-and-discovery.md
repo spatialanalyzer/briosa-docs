@@ -48,7 +48,7 @@ values, and the installed SA command inventory.
 See the [gRPC lifecycle API](/api/grpc/sa-2026.1.0529.7/lifecycle) for the operations that move
 between these states.
 
-[Read the source-of-truth health guide](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/docs/operations/health-and-discovery.md).{/* release-pending */}
+[Read the source-of-truth health guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/health-and-discovery.md).
 
 ## Behavioral Compatibility
 
