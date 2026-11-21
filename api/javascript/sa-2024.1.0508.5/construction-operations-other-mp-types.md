@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Make a System String {/* #make-a-system-string */}
 
@@ -24,8 +24,8 @@ export interface MakeSystemStringInput {
   readonly formatString?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeSystemString(...))
+interface ConstructionOperations {
   makeSystemString(
     input: MakeSystemStringInput,
     callOptions?: BriosaCallOptions,
@@ -46,8 +46,8 @@ export interface MakeCollectionNameRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionNameRuntimeSelect(...))
+interface ConstructionOperations {
   makeCollectionNameRuntimeSelect(
     input?: MakeCollectionNameRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -70,8 +70,8 @@ export interface MakeCollectionItemNameRefListWildcardSelectionInput {
   readonly itemType: ItemType;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionItemNameRefListWildcardSelection(...))
+interface ConstructionOperations {
   makeCollectionItemNameRefListWildcardSelection(
     input: MakeCollectionItemNameRefListWildcardSelectionInput,
     callOptions?: BriosaCallOptions,
@@ -93,8 +93,8 @@ export interface MakeCollectionObjectNameRuntimeSelectInput {
   readonly objectType: ObjectType;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionObjectNameRuntimeSelect(...))
+interface ConstructionOperations {
   makeCollectionObjectNameRuntimeSelect(
     input: MakeCollectionObjectNameRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -116,8 +116,8 @@ export interface MakeCollectionObjectNameEnsureUniqueInput {
   readonly useNumberSuffix?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionObjectNameEnsureUnique(...))
+interface ConstructionOperations {
   makeCollectionObjectNameEnsureUnique(
     input: MakeCollectionObjectNameEnsureUniqueInput,
     callOptions?: BriosaCallOptions,
@@ -139,8 +139,8 @@ export interface MakeCollectionObjectNameRefListRuntimeSelectInput {
   readonly objectType: ObjectType;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionObjectNameRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makeCollectionObjectNameRefListRuntimeSelect(
     input: MakeCollectionObjectNameRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -163,8 +163,8 @@ export interface MakeCollectionObjectNameRefListWildcardSelectionInput {
   readonly objectType: ObjectType;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionObjectNameRefListWildcardSelection(...))
+interface ConstructionOperations {
   makeCollectionObjectNameRefListWildcardSelection(
     input: MakeCollectionObjectNameRefListWildcardSelectionInput,
     callOptions?: BriosaCallOptions,
@@ -186,8 +186,8 @@ export interface MakeCollectionObjectNameRefListByTypeInput {
   readonly objectType: ObjectType;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionObjectNameRefListByType(...))
+interface ConstructionOperations {
   makeCollectionObjectNameRefListByType(
     input: MakeCollectionObjectNameRefListByTypeInput,
     callOptions?: BriosaCallOptions,
@@ -210,8 +210,8 @@ export interface MakeCollectionObjectNameRefListByTypeAndColorInput {
   readonly objectColor?: Color;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionObjectNameRefListByTypeAndColor(...))
+interface ConstructionOperations {
   makeCollectionObjectNameRefListByTypeAndColor(
     input: MakeCollectionObjectNameRefListByTypeAndColorInput,
     callOptions?: BriosaCallOptions,
@@ -228,8 +228,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionObjectNameRefListFromAllGroupsInCollection(...))
+interface ConstructionOperations {
   makeCollectionObjectNameRefListFromAllGroupsInCollection(
     collectionName: CollectionName,
     callOptions?: BriosaCallOptions,
@@ -246,8 +246,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.getCollectionInstrumentRefListVariable(...))
+interface ConstructionOperations {
   getCollectionInstrumentRefListVariable(
     name: string,
     callOptions?: BriosaCallOptions,
@@ -269,8 +269,8 @@ export interface SetCollectionInstrumentRefListVariableInput {
   readonly value: Iterable<CollectionInstrumentId>;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.setCollectionInstrumentRefListVariable(...))
+interface ConstructionOperations {
   setCollectionInstrumentRefListVariable(
     input: SetCollectionInstrumentRefListVariableInput,
     callOptions?: BriosaCallOptions,
@@ -298,8 +298,8 @@ export interface MakeCollectionInstrumentRefListRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionInstrumentRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makeCollectionInstrumentRefListRuntimeSelect(
     input?: MakeCollectionInstrumentRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -321,8 +321,8 @@ export interface MakeRelationshipRefListWildcardSelectionInput {
   readonly relationshipWildcardCriteria?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeRelationshipRefListWildcardSelection(...))
+interface ConstructionOperations {
   makeRelationshipRefListWildcardSelection(
     input?: MakeRelationshipRefListWildcardSelectionInput,
     callOptions?: BriosaCallOptions,
@@ -343,8 +343,8 @@ export interface MakeRelationshipRefListRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeRelationshipRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makeRelationshipRefListRuntimeSelect(
     input?: MakeRelationshipRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -366,8 +366,8 @@ export interface MakeEventRefListWildcardSelectionInput {
   readonly eventWildcardCriteria?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeEventRefListWildcardSelection(...))
+interface ConstructionOperations {
   makeEventRefListWildcardSelection(
     input?: MakeEventRefListWildcardSelectionInput,
     callOptions?: BriosaCallOptions,
@@ -388,8 +388,8 @@ export interface MakeCollectionInstrumentIdRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeCollectionInstrumentIdRuntimeSelect(...))
+interface ConstructionOperations {
   makeCollectionInstrumentIdRuntimeSelect(
     input?: MakeCollectionInstrumentIdRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -406,8 +406,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeReportRefListFromCollection(...))
+interface ConstructionOperations {
   makeReportRefListFromCollection(
     collectionName: CollectionName,
     callOptions?: BriosaCallOptions,
@@ -428,8 +428,8 @@ export interface MakeReportRefListRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeReportRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makeReportRefListRuntimeSelect(
     input?: MakeReportRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -450,8 +450,8 @@ export interface MakePictureNameRefListRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makePictureNameRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makePictureNameRefListRuntimeSelect(
     input?: MakePictureNameRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -477,8 +477,8 @@ export interface MakeTransformFromDoublesFixedXyzInput {
   readonly rz?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeTransformFromDoublesFixedXyz(...))
+interface ConstructionOperations {
   makeTransformFromDoublesFixedXyz(
     input?: MakeTransformFromDoublesFixedXyzInput,
     callOptions?: BriosaCallOptions,
@@ -505,8 +505,8 @@ export interface MakeTransformFromDoublesEulerParametersInput {
   readonly e4?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makeTransformFromDoublesEulerParameters(...))
+interface ConstructionOperations {
   makeTransformFromDoublesEulerParameters(
     input?: MakeTransformFromDoublesEulerParametersInput,
     callOptions?: BriosaCallOptions,
@@ -523,8 +523,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.getWorkingTransformOfObjectFixedXyz(...))
+interface ConstructionOperations {
   getWorkingTransformOfObjectFixedXyz(
     objectName: CollectionObjectName,
     callOptions?: BriosaCallOptions,
@@ -541,8 +541,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.invertTransform(...))
+interface ConstructionOperations {
   invertTransform(
     transform: Transform,
     callOptions?: BriosaCallOptions,
@@ -559,8 +559,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeTransformIntoDoublesFixedXyz(...))
+interface ConstructionOperations {
   decomposeTransformIntoDoublesFixedXyz(
     inputTransform: Transform,
     callOptions?: BriosaCallOptions,
@@ -577,8 +577,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeTransformIntoVectorsFixedXyz(...))
+interface ConstructionOperations {
   decomposeTransformIntoVectorsFixedXyz(
     inputTransform: Transform,
     callOptions?: BriosaCallOptions,
@@ -595,8 +595,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeTransformIntoVectorsOriginAndAxes(...))
+interface ConstructionOperations {
   decomposeTransformIntoVectorsOriginAndAxes(
     transform: Transform,
     callOptions?: BriosaCallOptions,
@@ -613,8 +613,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeWorldTransformOperatorIntoDoublesFixedXyzInWorld(...))
+interface ConstructionOperations {
   decomposeWorldTransformOperatorIntoDoublesFixedXyzInWorld(
     inputWorldTransformOperator: WorldTransform,
     callOptions?: BriosaCallOptions,
@@ -631,8 +631,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeTransformIntoDoublesEulerXyz(...))
+interface ConstructionOperations {
   decomposeTransformIntoDoublesEulerXyz(
     inputTransform: Transform,
     callOptions?: BriosaCallOptions,
@@ -649,8 +649,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeTransformIntoDoublesEulerZyx(...))
+interface ConstructionOperations {
   decomposeTransformIntoDoublesEulerZyx(
     inputTransform: Transform,
     callOptions?: BriosaCallOptions,
@@ -667,8 +667,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeTransformIntoDoublesEulerZyz(...))
+interface ConstructionOperations {
   decomposeTransformIntoDoublesEulerZyz(
     inputTransform: Transform,
     callOptions?: BriosaCallOptions,
@@ -685,8 +685,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeTransformIntoDoublesEulerZxz(...))
+interface ConstructionOperations {
   decomposeTransformIntoDoublesEulerZxz(
     inputTransform: Transform,
     callOptions?: BriosaCallOptions,
@@ -703,8 +703,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.decomposeWorldTransformOperatorIntoVectorsFixedXyzInWorld(...))
+interface ConstructionOperations {
   decomposeWorldTransformOperatorIntoVectorsFixedXyzInWorld(
     inputWorldTransformOperator: WorldTransform,
     callOptions?: BriosaCallOptions,

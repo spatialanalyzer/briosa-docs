@@ -332,3 +332,84 @@ test('a new release adds no compatibility redirect documents', async () => {
     await rm(fixture, {recursive: true, force: true});
   }
 });
+
+test('JavaScript operation-group methods declare their owning group interface, never BriosaClient', async () => {
+  const {readdir} = require('node:fs/promises');
+  const groupProperties = {
+    ConstructionOperations: 'constructionOperations',
+    GdtOperations: 'gdtOperations',
+    InstrumentOperations: 'instrumentOperations',
+    RobotCalibrationApplianceNodeOperations: 'robotCalibrationApplianceNodeOperations',
+    RobotOperations: 'robotOperations',
+  };
+  const clientLifecycleMembers = new Set([
+    'start',
+    'getServerSnapshot',
+    'listCapabilities',
+    'getSpatialAnalyzerState',
+    'launchSpatialAnalyzer',
+    'closeOwnedSpatialAnalyzer',
+    'getSpatialAnalyzerSdkState',
+    'startSpatialAnalyzerSdk',
+    'connectToSpatialAnalyzer',
+    'reconnectToSpatialAnalyzer',
+    'stopSpatialAnalyzerSdk',
+    'recoverSpatialAnalyzerSdk',
+    'stop',
+    '[Symbol.asyncDispose]',
+  ]);
+  const [latest] = JSON.parse(await readFile(path.join(root, 'javascript_versions.json'), 'utf8'));
+  const folders = [
+    path.join(root, 'api', 'javascript'),
+    path.join(root, 'api', 'javascript', 'sa-2024.1.0508.5'),
+    path.join(root, 'javascript_versioned_docs', `version-${latest}`),
+    path.join(root, 'javascript_versioned_docs', `version-${latest}`, 'sa-2024.1.0508.5'),
+  ];
+  for (const folder of folders) {
+    const label = path.relative(root, folder).split(path.sep).join('/');
+    const files = (await readdir(folder)).filter((name) => name.endsWith('.md')).sort();
+    let groupMethodCount = 0;
+    for (const file of files) {
+      const text = await readFile(path.join(folder, file), 'utf8');
+      const rel = `${label}/${file}`;
+      const usedGroups = new Set();
+      for (const [, code] of text.matchAll(/```ts\n([\s\S]*?)```/g)) {
+        const clientMatch = code.match(/interface BriosaClient \{\n([\s\S]*?)\n\}/);
+        if (clientMatch || code.includes('Member of BriosaClient')) {
+          assert.ok(clientMatch, `${rel} has a Member of BriosaClient label without an interface block`);
+          const declared = [...clientMatch[1].matchAll(/^  (\[Symbol\.\w+\]|\w+)\(/gm)].map((m) => m[1]);
+          assert.ok(declared.length > 0, `${rel} has an empty interface BriosaClient block`);
+          for (const member of declared) {
+            assert.ok(
+              clientLifecycleMembers.has(member),
+              `${rel} declares ${member} on BriosaClient instead of its owning operation-group interface`,
+            );
+          }
+          continue;
+        }
+        const memberMatch = code.match(/^\/\/ Member of (\w+) \(briosa\.(\w+)\.(\w+)\(\.\.\.\)\)\ninterface (\w+) \{\n([\s\S]*?)\n\}/m);
+        if (code.includes('// Member of ')) {
+          assert.ok(memberMatch, `${rel} has a malformed group-owner declaration`);
+          const [, owner, prop, labeledMethod, iface, body] = memberMatch;
+          assert.equal(iface, owner, `${rel} owner comment disagrees with interface declaration`);
+          assert.equal(groupProperties[owner], prop, `${rel} uses unknown group owner or property ${owner}.${prop}`);
+          const declared = [...body.matchAll(/^  (\w+)\(/gm)].map((m) => m[1]);
+          assert.deepEqual(declared, [labeledMethod], `${rel} owner label disagrees with declared method`);
+          usedGroups.add(`${owner}:${prop}`);
+          groupMethodCount++;
+        }
+      }
+      if (usedGroups.size > 0) {
+        const intro = text.slice(0, text.indexOf('\n## '));
+        for (const pair of usedGroups) {
+          const [owner, prop] = pair.split(':');
+          assert.ok(
+            intro.includes(`\`${owner}\``) && intro.includes(`\`briosa.${prop}.<method>(...)\``),
+            `${rel} intro must explain how to call ${owner} methods via briosa.${prop}.<method>(...)`,
+          );
+        }
+      }
+    }
+    assert.ok(groupMethodCount > 400, `${label}: expected >400 group method declarations, found ${groupMethodCount}`);
+  }
+});

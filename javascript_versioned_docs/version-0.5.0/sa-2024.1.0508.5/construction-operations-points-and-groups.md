@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Point (Fit to Points) {/* #construct-point-fit-to-points */}
 
@@ -24,8 +24,8 @@ export interface ConstructPointFitToPointsInput {
   readonly resultingPointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointFitToPoints(...))
+interface ConstructionOperations {
   constructPointFitToPoints(
     input: ConstructPointFitToPointsInput,
     callOptions?: BriosaCallOptions,
@@ -47,8 +47,8 @@ export interface ConstructPointInWorkingCoordinatesInput {
   readonly workingCoordinates: Vector;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointInWorkingCoordinates(...))
+interface ConstructionOperations {
   constructPointInWorkingCoordinates(
     input: ConstructPointInWorkingCoordinatesInput,
     callOptions?: BriosaCallOptions,
@@ -73,8 +73,8 @@ export interface ConstructPointFromSurveyTargetCenterInput {
   readonly searchDiameter?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointFromSurveyTargetCenter(...))
+interface ConstructionOperations {
   constructPointFromSurveyTargetCenter(
     input: ConstructPointFromSurveyTargetCenterInput,
     callOptions?: BriosaCallOptions,
@@ -96,8 +96,8 @@ export interface SetPointPositionInWorkingCoordinatesInput {
   readonly positionInWorkingCoordinates: Vector;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.setPointPositionInWorkingCoordinates(...))
+interface ConstructionOperations {
   setPointPositionInWorkingCoordinates(
     input: SetPointPositionInWorkingCoordinatesInput,
     callOptions?: BriosaCallOptions,
@@ -119,8 +119,8 @@ export interface TransformPointsByDeltaAboutWorkingFrameInput {
   readonly deltaInWorkingCoordinates: Vector;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.transformPointsByDeltaAboutWorkingFrame(...))
+interface ConstructionOperations {
   transformPointsByDeltaAboutWorkingFrame(
     input: TransformPointsByDeltaAboutWorkingFrameInput,
     callOptions?: BriosaCallOptions,
@@ -142,8 +142,8 @@ export interface ConstructPointAtLineMidpointInput {
   readonly pointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtLineMidpoint(...))
+interface ConstructionOperations {
   constructPointAtLineMidpoint(
     input: ConstructPointAtLineMidpointInput,
     callOptions?: BriosaCallOptions,
@@ -165,8 +165,8 @@ export interface ConstructPointGroupFromPointNameRefListInput {
   readonly groupName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointGroupFromPointNameRefList(...))
+interface ConstructionOperations {
   constructPointGroupFromPointNameRefList(
     input: ConstructPointGroupFromPointNameRefListInput,
     callOptions?: BriosaCallOptions,
@@ -190,8 +190,8 @@ export interface ConstructPointGroupsFromVectorGroupsInput {
   readonly makeVectorEndPoints?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointGroupsFromVectorGroups(...))
+interface ConstructionOperations {
   constructPointGroupsFromVectorGroups(
     input: ConstructPointGroupsFromVectorGroupsInput,
     callOptions?: BriosaCallOptions,
@@ -219,8 +219,8 @@ export interface ConstructPointGroupFromPointCloudInput {
   readonly showProgress?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointGroupFromPointCloud(...))
+interface ConstructionOperations {
   constructPointGroupFromPointCloud(
     input: ConstructPointGroupFromPointCloudInput,
     callOptions?: BriosaCallOptions,
@@ -243,8 +243,8 @@ export interface ConstructPointFromCloudPointRuntimeSelectInput {
   readonly constructedPointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointFromCloudPointRuntimeSelect(...))
+interface ConstructionOperations {
   constructPointFromCloudPointRuntimeSelect(
     input: ConstructPointFromCloudPointRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -266,8 +266,8 @@ export interface ConstructPointAtCircleCenterInput {
   readonly pointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtCircleCenter(...))
+interface ConstructionOperations {
   constructPointAtCircleCenter(
     input: ConstructPointAtCircleCenterInput,
     callOptions?: BriosaCallOptions,
@@ -291,8 +291,8 @@ export interface ConstructPointAtIntersectionOfPlanesInput {
   readonly pointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtIntersectionOfPlanes(...))
+interface ConstructionOperations {
   constructPointAtIntersectionOfPlanes(
     input: ConstructPointAtIntersectionOfPlanesInput,
     callOptions?: BriosaCallOptions,
@@ -315,8 +315,8 @@ export interface ConstructPointAtIntersectionOfTwoLinesInput {
   readonly resultingPointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtIntersectionOfTwoLines(...))
+interface ConstructionOperations {
   constructPointAtIntersectionOfTwoLines(
     input: ConstructPointAtIntersectionOfTwoLinesInput,
     callOptions?: BriosaCallOptions,
@@ -339,8 +339,8 @@ export interface ConstructPointAtIntersectionOfPlaneAndLineInput {
   readonly resultingPointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtIntersectionOfPlaneAndLine(...))
+interface ConstructionOperations {
   constructPointAtIntersectionOfPlaneAndLine(
     input: ConstructPointAtIntersectionOfPlaneAndLineInput,
     callOptions?: BriosaCallOptions,
@@ -363,8 +363,8 @@ export interface ConstructPointAtIntersectionOfTwoBSplinesInput {
   readonly pointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtIntersectionOfTwoBSplines(...))
+interface ConstructionOperations {
   constructPointAtIntersectionOfTwoBSplines(
     input: ConstructPointAtIntersectionOfTwoBSplinesInput,
     callOptions?: BriosaCallOptions,
@@ -388,8 +388,8 @@ export interface ConstructPointAtIntersectionOfBSplineAndSurfacesInput {
   readonly approximationTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtIntersectionOfBSplineAndSurfaces(...))
+interface ConstructionOperations {
   constructPointAtIntersectionOfBSplineAndSurfaces(
     input: ConstructPointAtIntersectionOfBSplineAndSurfacesInput,
     callOptions?: BriosaCallOptions,
@@ -412,8 +412,8 @@ export interface ConstructPointsAtIntersectionOfCircleAndLineInput {
   readonly basePointNameForResults: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsAtIntersectionOfCircleAndLine(...))
+interface ConstructionOperations {
   constructPointsAtIntersectionOfCircleAndLine(
     input: ConstructPointsAtIntersectionOfCircleAndLineInput,
     callOptions?: BriosaCallOptions,
@@ -437,8 +437,8 @@ export interface ConstructPointsAtIntersectionOfPrincipalObjectAxesAndSurfacesIn
   readonly pointSuffix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsAtIntersectionOfPrincipalObjectAxesAndSurfaces(...))
+interface ConstructionOperations {
   constructPointsAtIntersectionOfPrincipalObjectAxesAndSurfaces(
     input: ConstructPointsAtIntersectionOfPrincipalObjectAxesAndSurfacesInput,
     callOptions?: BriosaCallOptions,
@@ -460,8 +460,8 @@ export interface ConstructPointsFromCylinderInput {
   readonly groupName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsFromCylinder(...))
+interface ConstructionOperations {
   constructPointsFromCylinder(
     input: ConstructPointsFromCylinderInput,
     callOptions?: BriosaCallOptions,
@@ -484,8 +484,8 @@ export interface ConstructPointAtProjectionOfPointOntoObjectInput {
   readonly resultingPointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtProjectionOfPointOntoObject(...))
+interface ConstructionOperations {
   constructPointAtProjectionOfPointOntoObject(
     input: ConstructPointAtProjectionOfPointOntoObjectInput,
     callOptions?: BriosaCallOptions,
@@ -511,8 +511,8 @@ export interface ConstructPointsAtProjectionOnSurfacesParallelToWcfAxisInput {
   readonly pointNameSuffix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsAtProjectionOnSurfacesParallelToWcfAxis(...))
+interface ConstructionOperations {
   constructPointsAtProjectionOnSurfacesParallelToWcfAxis(
     input: ConstructPointsAtProjectionOnSurfacesParallelToWcfAxisInput,
     callOptions?: BriosaCallOptions,
@@ -538,8 +538,8 @@ export interface ConstructPointsAtProjectionOnSurfacesRadialFromWcfAxisInput {
   readonly pointNameSuffix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsAtProjectionOnSurfacesRadialFromWcfAxis(...))
+interface ConstructionOperations {
   constructPointsAtProjectionOnSurfacesRadialFromWcfAxis(
     input: ConstructPointsAtProjectionOnSurfacesRadialFromWcfAxisInput,
     callOptions?: BriosaCallOptions,
@@ -564,8 +564,8 @@ export interface ConstructPointsAtProjectionOnSurfacesSphericalFromWcfOriginInpu
   readonly pointNameSuffix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsAtProjectionOnSurfacesSphericalFromWcfOrigin(...))
+interface ConstructionOperations {
   constructPointsAtProjectionOnSurfacesSphericalFromWcfOrigin(
     input: ConstructPointsAtProjectionOnSurfacesSphericalFromWcfOriginInput,
     callOptions?: BriosaCallOptions,
@@ -588,8 +588,8 @@ export interface GetGradientAtProjectedPointOnSurfaceInput {
   readonly generateOutputVectorLines?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.getGradientAtProjectedPointOnSurface(...))
+interface ConstructionOperations {
   getGradientAtProjectedPointOnSurface(
     input: GetGradientAtProjectedPointOnSurfaceInput,
     callOptions?: BriosaCallOptions,
@@ -615,8 +615,8 @@ export interface GetGradientAtProjectedPointOnSurfaceEdgeInput {
   readonly generateOutputVectorLines?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.getGradientAtProjectedPointOnSurfaceEdge(...))
+interface ConstructionOperations {
   getGradientAtProjectedPointOnSurfaceEdge(
     input: GetGradientAtProjectedPointOnSurfaceEdgeInput,
     callOptions?: BriosaCallOptions,
@@ -647,8 +647,8 @@ export interface ConstructPointsByProjectingPointsOnMeshAlongDirectionInput {
   readonly biDirectionalProjection?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsByProjectingPointsOnMeshAlongDirection(...))
+interface ConstructionOperations {
   constructPointsByProjectingPointsOnMeshAlongDirection(
     input: ConstructPointsByProjectingPointsOnMeshAlongDirectionInput,
     callOptions?: BriosaCallOptions,
@@ -672,8 +672,8 @@ export interface ConstructPointsSpacedAtDistanceOnCurvesInput {
   readonly resultantPointNamePrefix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsSpacedAtDistanceOnCurves(...))
+interface ConstructionOperations {
   constructPointsSpacedAtDistanceOnCurves(
     input: ConstructPointsSpacedAtDistanceOnCurvesInput,
     callOptions?: BriosaCallOptions,
@@ -697,8 +697,8 @@ export interface ConstructPointsNSpacedOnCurvesInput {
   readonly resultantPointNamePrefix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsNSpacedOnCurves(...))
+interface ConstructionOperations {
   constructPointsNSpacedOnCurves(
     input: ConstructPointsNSpacedOnCurvesInput,
     callOptions?: BriosaCallOptions,
@@ -724,8 +724,8 @@ export interface ConstructPointsOnCurvesUsingMaxChordalDeviationInput {
   readonly resultantPointNamePrefix?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsOnCurvesUsingMaxChordalDeviation(...))
+interface ConstructionOperations {
   constructPointsOnCurvesUsingMaxChordalDeviation(
     input: ConstructPointsOnCurvesUsingMaxChordalDeviationInput,
     callOptions?: BriosaCallOptions,
@@ -747,8 +747,8 @@ export interface ConstructPointsOnObjectVerticesInput {
   readonly resultantGroupName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsOnObjectVertices(...))
+interface ConstructionOperations {
   constructPointsOnObjectVertices(
     input: ConstructPointsOnObjectVerticesInput,
     callOptions?: BriosaCallOptions,
@@ -770,8 +770,8 @@ export interface ConstructPointsOnSurfacesByClickingInput {
   readonly firstPointName?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsOnSurfacesByClicking(...))
+interface ConstructionOperations {
   constructPointsOnSurfacesByClicking(
     input: ConstructPointsOnSurfacesByClickingInput,
     callOptions?: BriosaCallOptions,
@@ -788,8 +788,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsFromSurfaceFacesRuntimeSelect(...))
+interface ConstructionOperations {
   constructPointsFromSurfaceFacesRuntimeSelect(
     callOptions?: BriosaCallOptions,
   ): Promise<void>;
@@ -814,8 +814,8 @@ export interface ConstructPointsFromSurfacesOnUvGridInput {
   readonly edgePointMode: EdgePointMode;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsFromSurfacesOnUvGrid(...))
+interface ConstructionOperations {
   constructPointsFromSurfacesOnUvGrid(
     input: ConstructPointsFromSurfacesOnUvGridInput,
     callOptions?: BriosaCallOptions,
@@ -837,8 +837,8 @@ export interface ConstructPointAtObjectOriginInput {
   readonly resultantPointName: PointName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointAtObjectOrigin(...))
+interface ConstructionOperations {
   constructPointAtObjectOrigin(
     input: ConstructPointAtObjectOriginInput,
     callOptions?: BriosaCallOptions,
@@ -861,8 +861,8 @@ export interface ConstructPointsShiftedInWorkingFrameInput {
   readonly shiftVector: Vector;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsShiftedInWorkingFrame(...))
+interface ConstructionOperations {
   constructPointsShiftedInWorkingFrame(
     input: ConstructPointsShiftedInWorkingFrameInput,
     callOptions?: BriosaCallOptions,
@@ -888,8 +888,8 @@ export interface ConstructPointsCylindricallyShiftedInput {
   readonly planarShift?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsCylindricallyShifted(...))
+interface ConstructionOperations {
   constructPointsCylindricallyShifted(
     input: ConstructPointsCylindricallyShiftedInput,
     callOptions?: BriosaCallOptions,
@@ -919,8 +919,8 @@ export interface ConstructPointsWildcardSelectionInput {
   readonly includePriorCompleteName?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsWildcardSelection(...))
+interface ConstructionOperations {
   constructPointsWildcardSelection(
     input: ConstructPointsWildcardSelectionInput,
     callOptions?: BriosaCallOptions,
@@ -943,8 +943,8 @@ export interface ConstructPointsSubsetWithGreatestSpacingInput {
   readonly groupForSubset: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsSubsetWithGreatestSpacing(...))
+interface ConstructionOperations {
   constructPointsSubsetWithGreatestSpacing(
     input: ConstructPointsSubsetWithGreatestSpacingInput,
     callOptions?: BriosaCallOptions,
@@ -975,8 +975,8 @@ export interface ConstructPointsLayoutOnGridInput {
   readonly zCount?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsLayoutOnGrid(...))
+interface ConstructionOperations {
   constructPointsLayoutOnGrid(
     input: ConstructPointsLayoutOnGridInput,
     callOptions?: BriosaCallOptions,
@@ -1000,8 +1000,8 @@ export interface ConstructPointsAutoCorrespondTwoGroupsProximityInput {
   readonly samePointTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsAutoCorrespondTwoGroupsProximity(...))
+interface ConstructionOperations {
   constructPointsAutoCorrespondTwoGroupsProximity(
     input: ConstructPointsAutoCorrespondTwoGroupsProximityInput,
     callOptions?: BriosaCallOptions,
@@ -1025,8 +1025,8 @@ export interface ConstructPointsAutoCorrespondTwoGroupsInterPointDistanceInput {
   readonly samePointTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointsAutoCorrespondTwoGroupsInterPointDistance(...))
+interface ConstructionOperations {
   constructPointsAutoCorrespondTwoGroupsInterPointDistance(
     input: ConstructPointsAutoCorrespondTwoGroupsInterPointDistanceInput,
     callOptions?: BriosaCallOptions,
@@ -1051,8 +1051,8 @@ export interface AverageSetOfGroupsInput {
   readonly maximumAverageTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.averageSetOfGroups(...))
+interface ConstructionOperations {
   averageSetOfGroups(
     input: AverageSetOfGroupsInput,
     callOptions?: BriosaCallOptions,
@@ -1075,8 +1075,8 @@ export interface CopyGroupsExcludingObscuredPointsInput {
   readonly newCollectionName: CollectionName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.copyGroupsExcludingObscuredPoints(...))
+interface ConstructionOperations {
   copyGroupsExcludingObscuredPoints(
     input: CopyGroupsExcludingObscuredPointsInput,
     callOptions?: BriosaCallOptions,
@@ -1097,8 +1097,8 @@ export interface MakePointNameRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makePointNameRuntimeSelect(...))
+interface ConstructionOperations {
   makePointNameRuntimeSelect(
     input?: MakePointNameRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -1120,8 +1120,8 @@ export interface MakePointNameEnsureUniqueInput {
   readonly useNumberSuffix?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makePointNameEnsureUnique(...))
+interface ConstructionOperations {
   makePointNameEnsureUnique(
     input: MakePointNameEnsureUniqueInput,
     callOptions?: BriosaCallOptions,
@@ -1142,8 +1142,8 @@ export interface MakePointNameRefListFromGroupInput {
   readonly groupName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makePointNameRefListFromGroup(...))
+interface ConstructionOperations {
   makePointNameRefListFromGroup(
     input: MakePointNameRefListFromGroupInput,
     callOptions?: BriosaCallOptions,
@@ -1164,8 +1164,8 @@ export interface MakePointNameRefListRuntimeSelectInput {
   readonly userPrompt?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makePointNameRefListRuntimeSelect(...))
+interface ConstructionOperations {
   makePointNameRefListRuntimeSelect(
     input?: MakePointNameRefListRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -1188,8 +1188,8 @@ export interface MakePointNameRefListWildcardSelectInput {
   readonly pointNameWildcardCriteria?: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.makePointNameRefListWildcardSelect(...))
+interface ConstructionOperations {
   makePointNameRefListWildcardSelect(
     input?: MakePointNameRefListWildcardSelectInput,
     callOptions?: BriosaCallOptions,
@@ -1206,8 +1206,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.clearHiddenPointBarDatabase(...))
+interface ConstructionOperations {
   clearHiddenPointBarDatabase(callOptions?: BriosaCallOptions): Promise<void>;
 }
 ```
@@ -1228,8 +1228,8 @@ export interface CreateHiddenPointRodInput {
   readonly interPointTolerance?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createHiddenPointRod(...))
+interface ConstructionOperations {
   createHiddenPointRod(
     input: CreateHiddenPointRodInput,
     callOptions?: BriosaCallOptions,
@@ -1257,8 +1257,8 @@ export interface GetHiddenPointRodIndexByNameInput {
   readonly hiddenPointRodName: string;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.getHiddenPointRodIndexByName(...))
+interface ConstructionOperations {
   getHiddenPointRodIndexByName(
     input: GetHiddenPointRodIndexByNameInput,
     callOptions?: BriosaCallOptions,
@@ -1279,8 +1279,8 @@ export interface DeleteHiddenPointRodInput {
   readonly hiddenPointRodIndex?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.deleteHiddenPointRod(...))
+interface ConstructionOperations {
   deleteHiddenPointRod(
     input?: DeleteHiddenPointRodInput,
     callOptions?: BriosaCallOptions,
@@ -1305,8 +1305,8 @@ export interface CreateHiddenPointInput {
   readonly overwriteExistingPoint?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.createHiddenPoint(...))
+interface ConstructionOperations {
   createHiddenPoint(
     input: CreateHiddenPointInput,
     callOptions?: BriosaCallOptions,

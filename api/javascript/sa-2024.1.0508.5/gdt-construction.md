@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `GdtOperations` methods through `briosa.gdtOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Make Surface Face List - Runtime Select {/* #make-surface-face-list---runtime-select */}
 
@@ -19,8 +19,8 @@ This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other e
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeSurfaceFaceListRuntimeSelect(...))
+interface GdtOperations {
   makeSurfaceFaceListRuntimeSelect(
     callOptions?: BriosaCallOptions,
   ): Promise<SurfaceFaceList>;
@@ -36,8 +36,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeSurfaceFaceListFromSurface(...))
+interface GdtOperations {
   makeSurfaceFaceListFromSurface(
     surface: CollectionObjectName,
     callOptions?: BriosaCallOptions,
@@ -54,8 +54,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeGdtFeatureCheckAnnotation(...))
+interface GdtOperations {
   makeGdtFeatureCheckAnnotation(
     options: MakeGdtFeatureCheckAnnotationOptions,
     callOptions?: BriosaCallOptions,
@@ -72,8 +72,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeGdtDatumAnnotation(...))
+interface GdtOperations {
   makeGdtDatumAnnotation(
     options: MakeGdtDatumAnnotationOptions,
     callOptions?: BriosaCallOptions,
@@ -90,8 +90,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeFeatureChecks(...))
+interface GdtOperations {
   makeFeatureChecks(
     collection: CollectionName,
     callOptions?: BriosaCallOptions,
@@ -108,8 +108,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeFeatureCheckRefListFromCollection(...))
+interface GdtOperations {
   makeFeatureCheckRefListFromCollection(
     collection: CollectionName,
     callOptions?: BriosaCallOptions,
@@ -126,8 +126,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeFeatureCheckReferenceListWildcardSelection(...))
+interface GdtOperations {
   makeFeatureCheckReferenceListWildcardSelection(
     options?: {
       collectionWildcardCriteria?: string;
@@ -147,8 +147,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeAnnotationRefListFromCollection(...))
+interface GdtOperations {
   makeAnnotationRefListFromCollection(
     collection: CollectionName,
     callOptions?: BriosaCallOptions,
@@ -165,8 +165,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeAnnotationRefListWildcardSelection(...))
+interface GdtOperations {
   makeAnnotationRefListWildcardSelection(
     options?: {
       collectionWildcardCriteria?: string;
@@ -186,8 +186,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.deleteFeatureChecks(...))
+interface GdtOperations {
   deleteFeatureChecks(
     featureChecks: readonly CollectionItemName[],
     callOptions?: BriosaCallOptions,
@@ -204,8 +204,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 **[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
+// Member of GdtOperations (briosa.gdtOperations.makeDatumRefListFromCollection(...))
+interface GdtOperations {
   makeDatumRefListFromCollection(
     collection: CollectionName,
     callOptions?: BriosaCallOptions,

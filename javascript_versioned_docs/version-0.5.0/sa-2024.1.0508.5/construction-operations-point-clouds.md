@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+Call `ConstructionOperations` methods through `briosa.constructionOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Point Clouds from Existing Point Group {/* #construct-point-clouds-from-existing-point-group */}
 
@@ -24,8 +24,8 @@ export interface ConstructPointCloudsFromExistingPointGroupInput {
   readonly cloudName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointCloudsFromExistingPointGroup(...))
+interface ConstructionOperations {
   constructPointCloudsFromExistingPointGroup(
     input: ConstructPointCloudsFromExistingPointGroupInput,
     callOptions?: BriosaCallOptions,
@@ -46,8 +46,8 @@ export interface ConstructPointCloudsFromExistingCloudPointsRuntimeSelectInput {
   readonly cloudName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointCloudsFromExistingCloudPointsRuntimeSelect(...))
+interface ConstructionOperations {
   constructPointCloudsFromExistingCloudPointsRuntimeSelect(
     input: ConstructPointCloudsFromExistingCloudPointsRuntimeSelectInput,
     callOptions?: BriosaCallOptions,
@@ -72,8 +72,8 @@ export interface ConstructPointCloudsFromExistingCloudsUniformSpacingInput {
   readonly hideOriginalPointClouds?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointCloudsFromExistingCloudsUniformSpacing(...))
+interface ConstructionOperations {
   constructPointCloudsFromExistingCloudsUniformSpacing(
     input: ConstructPointCloudsFromExistingCloudsUniformSpacingInput,
     callOptions?: BriosaCallOptions,
@@ -97,8 +97,8 @@ export interface ConstructPointCloudFromExistingCloudsInput {
   readonly hideOriginalPointClouds?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointCloudFromExistingClouds(...))
+interface ConstructionOperations {
   constructPointCloudFromExistingClouds(
     input: ConstructPointCloudFromExistingCloudsInput,
     callOptions?: BriosaCallOptions,
@@ -120,8 +120,8 @@ export interface ConstructPointCloudFromVisibleCloudPointsInput {
   readonly destinationCloudName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointCloudFromVisibleCloudPoints(...))
+interface ConstructionOperations {
   constructPointCloudFromVisibleCloudPoints(
     input: ConstructPointCloudFromVisibleCloudPointsInput,
     callOptions?: BriosaCallOptions,
@@ -143,8 +143,8 @@ export interface ConstructBoundaryPointsFromCloudInput {
   readonly destinationCloudName: CollectionObjectName;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructBoundaryPointsFromCloud(...))
+interface ConstructionOperations {
   constructBoundaryPointsFromCloud(
     input: ConstructBoundaryPointsFromCloudInput,
     callOptions?: BriosaCallOptions,
@@ -169,8 +169,8 @@ export interface ConstructPointCloudLimitingProbingDirectionsInput {
   readonly hideSourceCloud?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructPointCloudLimitingProbingDirections(...))
+interface ConstructionOperations {
   constructPointCloudLimitingProbingDirections(
     input: ConstructPointCloudLimitingProbingDirectionsInput,
     callOptions?: BriosaCallOptions,
@@ -203,8 +203,8 @@ export interface ConstructCrossSectionCloudInput {
   readonly updateExistingCloud?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructCrossSectionCloud(...))
+interface ConstructionOperations {
   constructCrossSectionCloud(
     input: ConstructCrossSectionCloudInput,
     callOptions?: BriosaCallOptions,
@@ -233,8 +233,8 @@ export interface ConstructCrossSectionCloudUserSelectInput {
   readonly updateExistingCloud?: boolean;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.constructCrossSectionCloudUserSelect(...))
+interface ConstructionOperations {
   constructCrossSectionCloudUserSelect(
     input: ConstructCrossSectionCloudUserSelectInput,
     callOptions?: BriosaCallOptions,
@@ -261,8 +261,8 @@ export interface ExtractSphereCentersFromPointCloudInput {
   readonly finalFitConeAngle?: number;
 }
 
-// Member of BriosaClient
-interface BriosaClient {
+// Member of ConstructionOperations (briosa.constructionOperations.extractSphereCentersFromPointCloud(...))
+interface ConstructionOperations {
   extractSphereCentersFromPointCloud(
     input: ExtractSphereCentersFromPointCloudInput,
     callOptions?: BriosaCallOptions,

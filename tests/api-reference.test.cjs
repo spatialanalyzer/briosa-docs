@@ -465,3 +465,24 @@ test('all old grouped command anchors have useful HTML links without JavaScript'
     }
   }
 });
+
+test('JavaScript operation-group pages render the owning interface and group-property call', () => {
+  for (const target of ['2026.1.0529.7', '2024.1.0508.5']) {
+    const gdt = read(`/api/javascript/sa-${target}/gdt-construction/make-feature-checks`);
+    const gdtContract = gdt('.api-op').text();
+    assert.match(gdtContract, /\/\/ Member of GdtOperations \(briosa\.gdtOperations\.makeFeatureChecks\(\.\.\.\)\)/, target);
+    assert.match(gdtContract, /interface GdtOperations \{/, target);
+    assert.doesNotMatch(gdtContract, /Member of BriosaClient|interface BriosaClient/, target);
+    assert.match(gdt('#execution-notes').nextUntil('h2').text(), /briosa\.gdtOperations\.<method>\(\.\.\.\)/, target);
+
+    const construct = read(`/api/javascript/sa-${target}/construction-operations-collections/construct-collection`);
+    const constructContract = construct('.api-op').text();
+    assert.match(constructContract, /\/\/ Member of ConstructionOperations \(briosa\.constructionOperations\.constructCollection\(\.\.\.\)\)/, target);
+    assert.match(constructContract, /interface ConstructionOperations \{/, target);
+    assert.doesNotMatch(constructContract, /Member of BriosaClient|interface BriosaClient/, target);
+
+    const standalone = read(`/api/javascript/sa-${target}/construction-operations-collections/get-active-collection-name`);
+    assert.match(standalone('.api-op').text(), /export declare function getActiveCollectionName\(/, target);
+    assert.match(standalone('#execution-notes').nextUntil('h2').text(), /package-level functions take briosa as their first argument/, target);
+  }
+});
