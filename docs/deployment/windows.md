@@ -76,7 +76,7 @@ above its maximum.
 | `Briosa__Worker__ExecutionWatchdogTimeout` | Execution of `quick` operations | 30 seconds | 10 minutes |
 | `Briosa__Worker__LongRunningExecutionWatchdogTimeout` | Execution of `long_running` operations | 10 minutes | 2 hours; not shorter than the quick budget |
 | `Briosa__Worker__InteractiveExecutionWatchdogTimeout` | Execution of `interactive` operations | 30 minutes | 8 hours; not shorter than the quick budget |
-| `Briosa__Worker__ReadinessProbeTimeout` | The execution-readiness probe after an explicit connect | 30 seconds | 10 minutes |
+| `Briosa__Worker__ReadinessProbeTimeout` | The execution-readiness probe, and the interaction mode step when one is configured, after a connect or after a start or recovery whose worker reports an attached SDK | 30 seconds | 10 minutes |
 | `Briosa__Worker__StartupTimeout` | Worker launch, COM activation, `ConnectEx`, and Connect's application association | 10 seconds | 5 minutes |
 | `Briosa__SpatialAnalyzer__ApplicationStartupTimeout` | `LaunchSpatialAnalyzer`'s wait for the application window | 30 seconds | 10 minutes |
 | `Briosa__SpatialAnalyzer__ApplicationShutdownTimeout` | `CloseOwnedSpatialAnalyzer`'s wait for the owned application to exit | 30 seconds | 10 minutes |

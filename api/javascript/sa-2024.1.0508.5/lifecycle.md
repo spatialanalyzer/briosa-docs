@@ -328,6 +328,10 @@ counts once for Start and Recover and twice for Connect,
 or Recover on the attached-SDK path), and the application startup and shutdown
 bounds count once for Launch and Close.
 
+The Connect row assumes no launch is in progress. A Connect waits for an
+accepted `launchSpatialAnalyzer` to finish before the server accepts it, so
+complete the launch first, or add its remaining startup time to the deadline.
+
 ## Server Snapshot and Capabilities
 
 ```ts

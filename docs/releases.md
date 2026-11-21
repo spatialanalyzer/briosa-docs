@@ -41,7 +41,8 @@ and the exact-target 0.5.0 clients introduce **behavioral contract major 3**,
 revision 0, for both exact targets. This is a breaking release: client 0.5.0
 selects only major-3 servers, and client 0.4.0 keeps working with Server 0.9.2
 installed side by side. The [contract major 3 migration guide](/docs/contract-major-3-migration)
-covers every change for applications.
+summarizes the changes for applications and links to each client's migration
+notes. The versioned API references hold the individual signatures.
 
 - **Operation admission.** A named profile replaces the `Allow` and `Deny`
   arrays, and the packaged `standard` default no longer admits device, motion,
@@ -70,7 +71,8 @@ covers every change for applications.
   `excluded_groups` list skips its setter. The clients require every input the
   server requires.
 - **Typed outcomes.** MP code `4` is reported as a partial success with its
-  outputs when all of them are retrieved. An SA SDK exception has its own
+  outputs when all of them are retrieved, except for four documented
+  operations that keep the failure mapping. An SA SDK exception has its own
   failure kind, `SdkCallFaulted`.
   Lifecycle failures gain caller-cancellation kinds, and an accepted lifecycle
   transition continues detached when its caller stops waiting.
@@ -201,7 +203,9 @@ nothing: each cloud still held 8 points afterwards.
 
 The bounds cause the failure. SA documents them as optional doubles, and the
 exact-target SDK code marks the setter for that argument type as not supported
-on both targets. SA rejects the `SetDoubleArg` call that Briosa sends instead.
+on both targets. With the `SetDoubleArg` call that Briosa sends instead, the
+setters and `ExecuteStep` returned true, and SA then returned MP code -1 and
+deleted no points.
 The cloud list is not the cause: on October 25, 2026, the radial delete sent
 the same list and deleted the expected point on both targets.
 
@@ -234,9 +238,9 @@ only a setter probe on SA 2026. Add the operation to
 
 Portable CI and the release workflow ran the full server suites, package smoke
 tests, and the retained-client gate against the published major-2 and major-1
-clients. 0.9.1 was not run against licensed SpatialAnalyzer. The corrected
-labels, the restored Delete Cloud Points bounds, and the new output retrievals
-have no licensed validation.
+clients. The 0.9.1 release workflow used no licensed SpatialAnalyzer. Later
+development-build probe sessions exercised the Delete Cloud Points bounds and
+the output retrievals, with the results described above.
 
 ## Example Applications
 

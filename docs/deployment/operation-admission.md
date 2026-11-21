@@ -98,8 +98,10 @@ device session) under `standard`, the denial is `operation-policy-denied`. Flag
 `Flags:interactive_ui=deny` can make it `operation-option-denied` instead; see
 [Precedence](#precedence). The operation's page names each such option.
 
-These request defaults changed in Server 0.10.0 so that the waiting,
-non-prompting behavior is the default:
+These request defaults changed in Server 0.10.0. Five measurement operations
+now measure immediately, and Auto Measure Points starts automatically, so none
+of them waits for the operator. Three defaults wait for completion or arrival,
+and CAD import skips its missing-component prompt:
 
 | Operation | Field | Old Default | New Default |
 | --- | --- | --- | --- |
@@ -168,9 +170,8 @@ after changing it.
 
 The first rule that applies decides each request:
 
-1. An operation that is not registered for the exact target
-   (`operation-unsupported`), or whose MP binding does not match
-   (`operation-binding-mismatch`), fails as unsupported (`Unimplemented`).
+1. An operation that is not registered for the exact target is unsupported
+   (`Unimplemented`, `operation-unsupported`).
    An operation with missing or unreviewed risk, effect, or replay-safety
    metadata, including `Unknown` or `Unspecified` replay safety, is denied
    with `operation-risk-unreviewed`. An unknown or unspecified execution scope
@@ -191,9 +192,11 @@ A request's flags are the risk flags of its operation's reviewed row, plus
 the worker supervisor also enforces a duration-class safeguard, denying any
 operation without a reviewed duration class with
 `operation-duration-unreviewed`. No setting changes the first two rules.
-Unregistered operations and binding mismatches return `Unimplemented`; policy
-denials return the typed, value-free `PermissionDenied` outcome with a
-`NotStarted` disposition.
+An unregistered operation returns `Unimplemented`; policy denials return the
+typed, value-free `PermissionDenied` outcome with a `NotStarted` disposition.
+After admission, the server also checks that the mapped MP command matches its
+registration. A mismatch fails request validation before dispatch
+(`InvalidArgument`, `request-validation-failed`, `NotStarted`).
 
 ## Duration Classes
 

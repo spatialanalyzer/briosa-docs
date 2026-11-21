@@ -14,7 +14,7 @@ breaks surface as compile or type errors rather than at run time.
 
 The current API references document Server 0.10.0 and client 0.5.0. Each
 method's history page keeps the Server 0.9.0 and client 0.4.0 contracts. Each
-client's own migration notes list every changed method:
+client's own migration notes give the language-specific changes:
 [.NET](https://github.com/spatialanalyzer/briosa-dotnet/blob/main/docs/contract-major-3-migration.md),
 [Python](https://github.com/spatialanalyzer/briosa-py/blob/main/targets/2026.1.0529.7/README.md#contract-major-3-050),
 and [JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/blob/main/docs/contract-major-3-migration.md).
@@ -67,9 +67,12 @@ setting.
 
 ## Send Old Request Defaults Explicitly
 
-These request defaults changed so that waiting, not prompting, is the default.
-The server denies the old values of the measure and prompt options without the
-interactive opt-in, and denies the non-waiting values under every setting:
+These request defaults changed. Five measurement operations now measure
+immediately, and Auto Measure Points starts automatically, so none of them
+waits for the operator. Three defaults wait for completion or arrival, and CAD
+import skips its missing-component prompt. The server denies the old values of
+the measure, start, and prompt options without the interactive opt-in, and
+denies the non-waiting values under every setting:
 
 | Operation | Field | Old Default | New Default |
 | --- | --- | --- | --- |
@@ -243,7 +246,7 @@ Among them:
 - in JavaScript, report output options now reach the server, and the 2D Auto
   Filter operation sends its settings and its own tolerance.
 
-The client migration notes list every fix.
+The client migration notes describe these fixes for each language.
 
 ## Installer and Examples
 
