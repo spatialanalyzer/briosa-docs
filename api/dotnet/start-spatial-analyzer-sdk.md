@@ -41,7 +41,11 @@ or when a future reviewed startup option delays SDK orchestration.
 | --- | --- |
 | `BriosaLifecycleException` | The client is not started or another transition is active. |
 | `BriosaSpatialAnalyzerSdkException` | An SDK is already active, startup failed, or recovery is required. |
-| `OperationCanceledException` | The caller cancelled its wait; inspect SDK state. |
+| `OperationCanceledException` | The caller stopped waiting. A request cancelled before the server accepted it changed nothing; an accepted one continues under the server's bounds, so refresh SDK state, and the server snapshot before MP work. |
+
+A second lifecycle call while an accepted transition is in progress fails
+with `sdk-lifecycle-transition-in-progress` (`StateConflict`,
+`RefreshState`): refresh state and retry later.
 
 The method never calls `ConnectEx`, launches SpatialAnalyzer, or closes another
 program's SDK engine.

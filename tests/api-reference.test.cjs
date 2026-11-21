@@ -26,7 +26,7 @@ const revision = (family, id, release, target) => {
 
 async function reference() {
   const {loadReference} = await import('../plugins/api-reference/content.mjs');
-  const {contexts, releases} = await loadReference(root);
+  const {contexts, releases, compatibility} = await loadReference(root);
   // Each SA target is read at the newest release that documents it.
   const current = new Set();
   for (const family of Object.keys(releases)) for (const target of new Set(contexts.filter((c) => c.family === family).map((c) => c.target))) {
@@ -34,7 +34,7 @@ async function reference() {
     current.add(`${family}/${release}/${target}`);
   }
   for (const ctx of contexts) ctx.current = current.has(`${ctx.family}/${ctx.release}/${ctx.target}`);
-  return {contexts, releases};
+  return {contexts, releases, compatibility};
 }
 
 test('SA target roots and release roots serve real HTML instead of a client-recovered 404', async (t) => {
@@ -264,13 +264,13 @@ test('search prefers the release of the reference being read, including release-
   assert.deepEqual(searchFilters('/api/grpc/file-operations/direct-cad-access', current), ['api_family:grpc']);
   assert.equal(searchFilters('/docs/intro', current), undefined);
   const built = JSON.parse(readFileSync(path.join(root, '.docusaurus', 'globalData.json'), 'utf8'))['briosa-api-reference'].default.current;
-  for (const [family, release] of Object.entries({grpc: '0.9.0', dotnet: '0.4.0', python: '0.4.0', javascript: '0.4.0'})) {
+  for (const [family, release] of Object.entries({grpc: '0.10.0', dotnet: '0.5.0', python: '0.5.0', javascript: '0.5.0'})) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) assert.equal(built[family][target], release, `${family} ${target}`);
   }
 });
 
 test('every released MP method preserves its original code at its current page or history revision', async () => {
-  const {contexts} = await reference();
+  const {contexts, compatibility} = await reference();
   let methods = 0;
   const codesByPage = new Map();
   const key = (ctx, id) => `${ctx.family}/${ctx.release}/${ctx.target}/${id}`;
@@ -280,8 +280,12 @@ test('every released MP method preserves its original code at its current page o
   for (const [ctx, page] of entries) {
     methods++;
     const exact = ctx.base + '/' + page.id;
-    const stub = read(exact);
-    assert.match(stub('meta[name="robots"]').attr('content'), /noindex/, exact);
+    // Only releases published with release-qualified addresses have a stub there
+    // (targets.json compatibilityAddresses); later releases never add one.
+    const published = compatibility[ctx.family]?.includes(ctx.release);
+    assert.equal(existsSync(path.join(root, 'build', exact.slice(1) + '.html')), Boolean(published), exact);
+    const stub = published ? read(exact) : null;
+    if (stub) assert.match(stub('meta[name="robots"]').attr('content'), /noindex/, exact);
     let code;
     if (ctx.current) {
       const route = `/api/${ctx.family}/sa-${ctx.target}/${page.id}`;
@@ -291,7 +295,7 @@ test('every released MP method preserves its original code at its current page o
       assert.equal($('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + route, route);
       assert.equal($('meta[name="briosa:sa-target"]').attr('content'), ctx.target);
       assert.equal($('#sa-compatibility').length, 1, `${route} shows SpatialAnalyzer compatibility`);
-      assert.equal(stub('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + route, exact);
+      if (stub) assert.equal(stub('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + route, exact);
       code = $('.api-contract pre code').toArray().map((n) => $(n).text().trimEnd());
     } else {
       const history = `/api/${ctx.family}/${page.id}`;
@@ -299,7 +303,7 @@ test('every released MP method preserves its original code at its current page o
       const section = revision(ctx.family, page.id, ctx.release, ctx.target);
       if (!page.available) { assert.equal(section.length, 0, `${exact} is not presented as documented`); continue; }
       assert.equal(section.length, 1, `${exact} has a history revision`);
-      assert.equal(stub('link[rel="canonical"]').attr('href'), `https://briosa.dev${history}#${pair(ctx.release, ctx.target)}`, exact);
+      if (stub) assert.equal(stub('link[rel="canonical"]').attr('href'), `https://briosa.dev${history}#${pair(ctx.release, ctx.target)}`, exact);
       const $ = read(history);
       code = section.find('.api-revision-contract pre code').toArray().map((n) => $(n).text().trimEnd());
     }
@@ -359,13 +363,17 @@ test('method pages render their contract as an operation panel with highlighted,
   // Copy and expand controls need JavaScript and are added after hydration, so
   // the served page and its search records carry no button text.
   assert.equal($('.api-contract button').length, 0);
-  // The gRPC reference names the later servers that serve its contract unchanged:
-  // in a chip, and in a site note kept apart from the released text.
-  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.9.0', 'Same Contract 0.9.1 · 0.9.2']);
-  assert.equal($('.api-same-contract').text(), 'Servers 0.9.1 and 0.9.2 serve this same contract; Release Status lists their runtime corrections.');
-  assert.equal($('.api-same-contract a').attr('href'), '/docs/releases#documentation-versions');
-  assert.doesNotMatch($('.api-contract').text(), /same contract/);
-  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.9\.0\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
+  // The current reference has no later same-contract servers.
+  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.10.0']);
+  assert.equal($('.api-same-contract').length, 0);
+  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.10\.0\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
+  // The Server 0.9.0 reference names the later servers that serve its contract
+  // unchanged: in a chip, and in a site note kept apart from the released text.
+  const earlier = read('/api/grpc/sa-2026.1.0529.7/0.9.0/file-operations');
+  assert.deepEqual(earlier('.api-applies .sl-chip').toArray().map((n) => earlier(n).text()), ['SA 2026.1.0529.7', 'Server 0.9.0', 'Same Contract 0.9.1 · 0.9.2']);
+  assert.equal(earlier('.api-same-contract').text(), 'Servers 0.9.1 and 0.9.2 serve this same contract; Release Status lists their runtime corrections.');
+  assert.equal(earlier('.api-same-contract a').attr('href'), '/docs/releases#documentation-versions');
+  assert.doesNotMatch(earlier('.api-contract').text(), /same contract/);
   // The first-call walkthrough's grpcurl example is highlighted in the served page.
   const walkthrough = read('/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory')('.api-code[data-language="powershell"]');
   assert.equal(walkthrough.length, 1);
@@ -406,11 +414,14 @@ test('titles never show literal backticks, and overview links read as the overvi
 test('release-qualified addresses redirect statically to current references or history without indexing', () => {
   const map = sitemap();
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
-    const [currentRelease, olderRelease] = family === 'grpc' ? ['0.9.0', '0.7.0'] : ['0.4.0', '0.2.0'];
+    // Releases cut after release-independent addresses get no release-qualified
+    // addresses, so every published release-qualified method address now leads
+    // to the method's history.
+    const [previousRelease, olderRelease] = family === 'grpc' ? ['0.9.0', '0.7.0'] : ['0.4.0', '0.2.0'];
     const target = '2024.1.0508.5';
     const method = 'analysis-operations/angle-between-line-and-plane';
     const canonical = `/api/${family}/sa-${target}/${method}`;
-    for (const [from, to] of [[`/api/${family}/sa-${target}/${currentRelease}/${method}`, canonical], [`/api/${family}/sa-${target}/${olderRelease}/${method}`, `/api/${family}/${method}#${pair(olderRelease, target)}`]]) {
+    for (const [from, to] of [[`/api/${family}/sa-${target}/${previousRelease}/${method}`, `/api/${family}/${method}#${pair(previousRelease, target)}`], [`/api/${family}/sa-${target}/${olderRelease}/${method}`, `/api/${family}/${method}#${pair(olderRelease, target)}`]]) {
       const $ = read(from);
       assert.match($('meta[name="robots"]').attr('content'), /noindex/, from);
       assert.equal($('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + to, from);
@@ -421,7 +432,7 @@ test('release-qualified addresses redirect statically to current references or h
     assert.ok(!existsSync(path.join(root, 'build', `api/${family}/${olderRelease}/sa-${target}/${method}.html`)), 'release-first method aliases are retired');
     const toolbar = read(canonical)('.api-toolbar');
     assert.deepEqual(toolbar.find('.api-version-label').toArray().map((n) => n.children[0].data), ['SpatialAnalyzer', family === 'grpc' ? 'Server Release' : 'Client Release']);
-    for (const base of [`/api/${family}/sa-${target}`, `/api/${family}/sa-${target}/${currentRelease}`, `/api/${family}/sa-${target}/${olderRelease}`]) {
+    for (const base of [`/api/${family}/sa-${target}`, `/api/${family}/sa-${target}/${previousRelease}`, `/api/${family}/sa-${target}/${olderRelease}`]) {
       assert.equal(readFileSync(path.join(root, 'build', base, 'index.html'), 'utf8'), readFileSync(path.join(root, 'build', base + '.html'), 'utf8'));
     }
   }
@@ -436,9 +447,12 @@ test('older aggregate JavaScript signatures keep their history without inferred 
 });
 
 test('all old grouped command anchors have useful HTML links without JavaScript', async () => {
-  const {contexts, releases} = await reference();
+  const {contexts, releases, compatibility} = await reference();
   for (const ctx of contexts) {
-    const latest = ctx.release === releases[ctx.family][0];
+    // Pre-redesign group addresses exist only for releases published with them;
+    // the newest of those owns the unversioned address.
+    if (!compatibility[ctx.family]?.includes(ctx.release)) continue;
+    const latest = ctx.release === releases[ctx.family].find((r) => compatibility[ctx.family].includes(r));
     const prefix = `/api/${ctx.family}${latest ? '' : '/' + ctx.release}${ctx.target.startsWith('2024') ? '/sa-' + ctx.target : ''}`;
     for (const group of Object.values(ctx.pages).filter((p) => p.kind === 'group')) {
       const $ = read(prefix + '/' + group.id);

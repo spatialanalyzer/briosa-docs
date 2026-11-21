@@ -28,12 +28,24 @@ Omitting `options` uses the default startup procedure.
 | `launchSpatialAnalyzer` | `true` | Launch a fresh exact-target SpatialAnalyzer application. |
 | `connectToSpatialAnalyzer` | `true` | Connect the new SDK generation and establish MP readiness. |
 | `launchOptions` | Empty | Controlled initial job, instrument quick-start, and window-state options. |
-| `startupTimeoutMs` | `30_000` | Bounds the complete startup procedure requested by this call. |
-| `signal` | `undefined` | Aborts this caller's wait. |
+| `startupTimeoutMs` | `120_000` | One overall budget, in milliseconds, for the complete startup procedure requested by this call, whichever phases are selected. |
+| `signal` | `undefined` | Aborts this caller's wait only; the start continues until it completes or its budget expires. |
 
 `connectToSpatialAnalyzer: true` requires
 `startSpatialAnalyzerSdk: true`. Non-default launch options require
 `launchSpatialAnalyzer: true`.
+
+The 120-second startup budget covers the server's default worst case of about
+100 seconds for a start that launches SpatialAnalyzer, with a 20-second margin.
+If you raise the server's `Briosa:Worker:StartupTimeout`,
+`Briosa:Worker:ReadinessProbeTimeout`, or
+`Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the budget too, to at
+least 3 times `StartupTimeout`, plus `ReadinessProbeTimeout`, plus
+`ApplicationStartupTimeout` when launching, plus 10 seconds, plus a margin. When
+the budget expires, `start()` rejects with `BriosaStartupError` and diagnostic
+`startup-timeout`. The server finishes an SDK start or connection it has
+accepted, so an abandoned start may still produce a ready generation: read the
+SDK state before retrying.
 
 ## Example
 
@@ -66,6 +78,10 @@ await briosa.start({
   connectToSpatialAnalyzer: false,
 });
 ```
+
+After a control-plane-only start, start and connect the SDK yourself, then call
+`getServerSnapshot()` before MP work; see
+[Server Snapshot and Capabilities](./lifecycle.md#server-snapshot-and-capabilities).
 
 ## Server Logging
 
@@ -123,10 +139,10 @@ session.
 
 | Error | Meaning |
 | --- | --- |
-| `BriosaStartupError` | The server or default startup procedure could not complete. |
+| `BriosaStartupError` | The server or default startup procedure could not complete, including `startup-timeout` when `startupTimeoutMs` expires. |
 | `BriosaSpatialAnalyzerError` | A fresh exact-target application could not be launched. |
 | `BriosaSpatialAnalyzerSdkError` | SDK startup or connection failed. |
 | `BriosaCompatibilityError` | Server, SDK, or connected SA identity does not match the package target. |
 | `TypeError` | Startup options contain an invalid combination or malformed value. |
-| `BriosaCallAbortedError` | The caller aborted its wait after startup may have crossed a lifecycle boundary. |
+| `BriosaCallAbortedError` | The caller aborted its wait. The start continues until it completes or its budget expires; read the SDK state before retrying. |
 | `BriosaLifecycleError` | The handle was finally disposed. |

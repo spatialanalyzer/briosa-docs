@@ -49,7 +49,7 @@ const application = await briosa.closeOwnedSpatialAnalyzer();
 | Error | Meaning |
 | --- | --- |
 | `BriosaLifecycleError` | The client is not started or another transition is active. |
-| `BriosaSpatialAnalyzerError` | The application is external, changed, still has an active SDK, or did not close. |
+| `BriosaSpatialAnalyzerError` | The application is external, changed, still has an active SDK, did not close, or another accepted transition is still running (`application-lifecycle-transition-in-progress`: refresh state and retry later). |
 | `BriosaCallAbortedError` | The caller aborted its wait; inspect application state. |
 
 The method never closes an externally started application or another program's

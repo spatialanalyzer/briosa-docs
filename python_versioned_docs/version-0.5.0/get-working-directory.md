@@ -1,0 +1,75 @@
+---
+title: get_working_directory
+description: Call SpatialAnalyzer's Get Working Directory MP command from the Briosa Python client.
+---
+
+# get_working_directory
+
+[SA 2026.1.0529.7](/api/python/get-working-directory) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/get-working-directory)
+
+Calls SpatialAnalyzer's `Get Working Directory` MP command and returns its
+`Directory` output as a Python string.
+
+| API Item | Value |
+| --- | --- |
+| MP Command | [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) |
+| SpatialAnalyzer Group | File Operations |
+| MP Command Status | **Current** |
+| Client | `BriosaClient` |
+| Method | `get_working_directory` |
+| MP Inputs | None |
+| Return Value | `str` |
+
+## Example
+
+```python
+import asyncio
+
+from briosa import BriosaClient
+
+
+async def main():
+    async with BriosaClient() as briosa:
+        working_directory = await briosa.get_working_directory()
+
+
+asyncio.run(main())
+```
+
+Entering the asynchronous context starts a compatible Briosa session and
+verifies that SpatialAnalyzer is ready for MP execution. Exiting the context
+cleans up the local Briosa session and SDK while leaving SpatialAnalyzer open.
+
+## Signature
+
+```python
+async def get_working_directory(
+    self,
+    *,
+    on_mp_completion: MpCompletionObserver | None = None,
+) -> str: ...
+```
+
+The command has no MP inputs. Like every MP method in client 0.5.0, it is an
+ordinary MP operation and takes the keyword-only
+[`on_mp_completion`](./lifecycle.md#mp-completion) observer. Applications can
+set a client-wide command timeout or use normal `asyncio` cancellation and
+timeout facilities around the call.
+
+## Return Value
+
+The coroutine returns the working directory reported by SpatialAnalyzer. The
+client validates the required MP output and does not expose the generated gRPC
+result message. A missing directory is the protocol error
+`required-output-missing:directory`, as for any other missing output.
+
+## Failures and Cancellation
+
+A command failure raises through the handwritten Briosa exception hierarchy.
+Cancelling the task does not prove that an in-flight SpatialAnalyzer command
+was stopped, and the client does not automatically replay a call with an
+uncertain outcome.
+
+- [gRPC operation](/api/grpc/get-working-directory)
+- [`BriosaClient` lifecycle](./lifecycle)
+- [Understanding execution outcomes](/docs/concepts/execution-outcomes)

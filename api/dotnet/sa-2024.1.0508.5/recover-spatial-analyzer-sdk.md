@@ -14,12 +14,11 @@ is complete.
 
 ```csharp
 public Task<SpatialAnalyzerSdkLifecycleState> RecoverSpatialAnalyzerSdkAsync(
-    SpatialAnalyzerSdkRecoveryMode mode,
     CancellationToken cancellationToken = default);
 ```
 
-`mode` must be `ReplaceWithoutReplay`. The client supplies the failed SDK
-generation guard automatically.
+The client always requests `ReplaceWithoutReplay` recovery and supplies the
+failed SDK generation guard automatically.
 
 ## Returns
 
@@ -30,8 +29,7 @@ failure remains in `LastIncident`.
 
 ```csharp
 SpatialAnalyzerSdkLifecycleState sdk =
-    await briosa.RecoverSpatialAnalyzerSdkAsync(
-        SpatialAnalyzerSdkRecoveryMode.ReplaceWithoutReplay);
+    await briosa.RecoverSpatialAnalyzerSdkAsync();
 
 sdk = await briosa.ConnectToSpatialAnalyzerAsync();
 ```
@@ -42,7 +40,10 @@ Recovery neither calls `ConnectEx` nor resolves or replays an earlier command.
 
 | Exception | Meaning |
 | --- | --- |
-| `ArgumentOutOfRangeException` | `mode` is not a defined recovery mode. |
 | `BriosaLifecycleException` | The client is not started or another transition is active. |
 | `BriosaSpatialAnalyzerSdkException` | Recovery is not available, operator action remains, or replacement failed. |
-| `OperationCanceledException` | The caller cancelled its wait; inspect SDK state. |
+| `OperationCanceledException` | The caller stopped waiting. A request cancelled before the server accepted it changed nothing; an accepted one continues under the server's bounds, so refresh SDK state, and the server snapshot before MP work. |
+
+A second lifecycle call while an accepted transition is in progress fails
+with `sdk-lifecycle-transition-in-progress` (`StateConflict`,
+`RefreshState`): refresh state and retry later.

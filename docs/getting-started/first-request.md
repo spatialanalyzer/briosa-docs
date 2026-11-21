@@ -18,13 +18,14 @@ Before continuing, install and license the supported SpatialAnalyzer release,
 close competing SA and SDK instances, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Client 0.4.0 and Server 0.9.2]
+:::note[Client 0.5.0 and Server 0.10.0]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
-Install the package matching your exact SA release. Client 0.4.0 selects a
-compatible server for that target using behavioral contract 2.0. See
-[Release Status](/docs/releases) for package links and validation limits, and
-[installation selection](/docs/deployment/installation-selection) for per-application choices.
+Install the package matching your exact SA release. Client 0.5.0 selects a
+compatible server for that target using behavioral contract 3.0. See
+[Release Status](/docs/releases) for package links and validation limits,
+[installation selection](/docs/deployment/installation-selection) for per-application choices,
+and the [contract major 3 migration guide](/docs/contract-major-3-migration) to upgrade from client 0.4.0.
 
 :::
 

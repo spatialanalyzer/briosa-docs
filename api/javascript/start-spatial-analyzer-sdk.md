@@ -29,3 +29,11 @@ startup option delays SDK orchestration.
 The method never calls `ConnectEx`, launches SpatialAnalyzer, or closes another
 program's SDK engine. Failures use the normal lifecycle, SDK, and abort error
 boundaries.
+
+Aborting the `signal` rejects with `BriosaCallAbortedError` and stops only your
+wait. The server finishes a start it has accepted under its own bounds, so
+refresh with `getSpatialAnalyzerSdkState()` before deciding what to do. A second
+lifecycle call while an accepted transition is in progress fails with
+`sdk-lifecycle-transition-in-progress` (`stateConflict`, `refreshState`): refresh
+state and retry later. See
+[After an Aborted Lifecycle Call](./lifecycle.md#after-an-aborted-lifecycle-call).

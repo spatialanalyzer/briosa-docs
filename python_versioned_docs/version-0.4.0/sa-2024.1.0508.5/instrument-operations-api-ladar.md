@@ -8,92 +8,47 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/instrument-operations-api-ladar)
 
+:::warning[Correction (November 10, 2026)]
+
+This page listed six methods for SA 2024.1.0508.5 that the SA 2024.1.0508.5
+package of client 0.4.0 never had, and Server 0.9.x for that target has no
+matching RPC. The commands remain available for SA 2026.1.0529.7; see the
+[SA 2026.1.0529.7 reference](/api/python/instrument-operations-api-ladar).
+
+:::
+
 ## set_ladar_auto_meas_point
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-point)
 
-```python
-async def set_ladar_auto_meas_point(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    sample_time_milliseconds: int = 0,
-) -> None: ...
-```
-
-The exact MP default is `0` despite the MP label documenting `1–2000`.
+No released signature is available for SA 2024.1.0508.5.
 
 ## set_ladar_auto_meas_sphere
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-sphere)
 
-```python
-async def set_ladar_auto_meas_sphere(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    sphere_radius: float = 1.1875,
-    scan_line_spacing: float = 0.05,
-    send_center_point: bool = True,
-    send_sphere: bool = False,
-    send_measured_cloud: bool = False,
-) -> None: ...
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## set_ladar_feature_meas_sphere
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
 
-```python
-async def set_ladar_feature_meas_sphere(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-) -> None: ...
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## set_ladar_feature_meas_circle
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
 
-```python
-async def set_ladar_feature_meas_circle(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-    width_of_extra_area_around_scan: float = 0.0,
-) -> None: ...
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## set_ladar_feature_meas_slot
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
 
-```python
-async def set_ladar_feature_meas_slot(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-    width_of_extra_area_around_scan: float = 0.0,
-) -> None: ...
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## set_ladar_feature_meas_cylinder
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
 
-```python
-async def set_ladar_feature_meas_cylinder(
-    self,
-    instrument: CollectionInstrumentId,
-    *,
-    scan_line_spacing: float = 0.05,
-    width_of_extra_area_around_scan: float = 0.0,
-) -> None: ...
-```
-
-Briosa does not convert units or add ranges to these instrument-specific
-settings. The calls are never automatically replayed.
+No released signature is available for SA 2024.1.0508.5.

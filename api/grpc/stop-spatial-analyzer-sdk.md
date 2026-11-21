@@ -84,7 +84,8 @@ process ends.
 | `FAILED_PRECONDITION` | `STATE_CONFLICT` | Another lifecycle transition is active. |
 | `UNAVAILABLE` | `SDK_STOP_FAILED` | Graceful SDK shutdown failed; state reports whether forced worker isolation completed. |
 | `DEADLINE_EXCEEDED` | `TIMEOUT` | The server-side SDK shutdown bound expired. Query state before another transition. |
-| `CANCELLED` | — | The caller cancelled its wait; query state before another transition. |
+| `CANCELLED` | `CALLER_CANCELLED` | The caller cancelled before the stop was accepted (`sdk-lifecycle-request-withdrawn`); nothing changed. An accepted stop keeps its caller waiting until its shutdown bound. |
+| `DEADLINE_EXCEEDED` | `CALLER_DEADLINE_EXCEEDED` | The caller's gRPC deadline ended its wait before the stop was accepted; nothing changed. |
 | `INTERNAL` | `INTERNAL` | Briosa could not preserve a valid lifecycle state. |
 
 The operation is generation-guarded, but a cancelled or timed-out stop is not

@@ -13,7 +13,7 @@ This section follows the public API of the Briosa Python client library. Use it
 to look up asynchronous client lifecycle, operation methods, result types,
 exceptions, timeouts, and cancellation behavior.
 
-This is the **0.4.0** client reference for **SA 2026.1.0529.7**.
+This is the **0.5.0** client reference for **SA 2026.1.0529.7**.
 Use the [SA 2024 reference](/api/python/sa-2024.1.0508.5) for the other released exact target. Arguments, choices, and command availability can differ.
 
 :::note[Local Connections]
@@ -41,6 +41,13 @@ result types, and links to the corresponding gRPC contract and MP catalog.
 The catalog's Current status describes server availability. Client package
 versions and runtime validation are separate claims.
 
+Client 0.5.0 selects only servers that implement behavioral contract major 3
+(Server 0.10.0). Every MP method takes the keyword-only `on_mp_completion`
+observer, which reports a [partial success](./lifecycle.md#mp-completion)
+without changing the return value. The
+[lifecycle overview](./lifecycle.md#server-snapshot-and-capabilities) also
+covers capability discovery and the [operation errors](./lifecycle.md#operation-errors).
+
 See [Release Status](/docs/releases) for product availability and validation limits.
 
 ## Exact Target
@@ -49,4 +56,4 @@ This section covers **SA 2026.1.0529.7**. Select [SA 2024.1.0508.5](/api/python/
 
 ## Selection and Value Types
 
-See [Installation Selection and Discovery](./installation-selection.md) for client 0.4.0 startup additions, and [MP Value Types](./value-types.md) for exact-target public values.
+See [Installation Selection and Discovery](./installation-selection.md) for server selection, and [MP Value Types](./value-types.md) for exact-target public values.

@@ -28,11 +28,12 @@ The returned path is application data. Briosa returns it to the caller but does
 not log it by default.
 
 The worker sets the MP step, executes it, retrieves the MP result, requires
-result code `2`, and only then retrieves the `Directory` string. MP failure
-prevents the getter from running; getter failure returns a data-loss outcome
-instead of an empty directory.
+result code `2`, or `4` (a partial success, reported as `PARTIAL_SUCCESS`), and
+only then retrieves the `Directory` string. MP failure prevents the getter from
+running; getter failure returns a data-loss outcome instead of an empty
+directory.
 
-[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.9.0/targets/2024.1.0508.5/docs/operations/get-working-directory.md).
+[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2024.1.0508.5/docs/operations/get-working-directory.md).
 
 ## Client Library References
 

@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Utility Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -1159,7 +1159,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 | Direction | Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
-| Input | `Folder Path` | String | Empty | Empty |
+| Input | `Folder Path` | String | Empty | Required |
 
 ### Briosa Disposition
 
@@ -3309,7 +3309,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 | Direction | Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
 | Input | `Objects` | Collection Object Name Ref List | See MP definition | Required |
-| Input | `Scale Factor` | Double | 0.000000 | 0.000000 |
+| Input | `Scale Factor` | Double | 0.000000 | Required |
 
 ### Briosa Disposition
 
@@ -4844,7 +4844,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 | Direction | Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
 | Input | `Profile Name` | String | Default | Default |
-| Input | `Profile File Name (optional)` | File Path or Embedded File | Empty | Required |
+| Input | `Profile File Name (optional)` | File Path or Embedded File | Empty | Omitted |
 
 ### Briosa Disposition
 

@@ -8,28 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar)
 
-:::note[Released Server API]
+:::warning[Correction (November 10, 2026)]
 
-These operations are included in Briosa Server **0.9.0** for SpatialAnalyzer
-**2024.1.0508.5**. Runtime policy and readiness determine whether a particular
-call is admitted. Validation qualifications below remain independent of release
-availability; an At Risk entry is not a claim of licensed-SA validation.
+This page said that Briosa Server 0.9.0 included these operations for
+SA 2024.1.0508.5 and listed their RPCs. No Briosa Server for SA 2024.1.0508.5
+has an RPC for these commands. They remain available for SA 2026.1.0529.7;
+see the
+[SA 2026.1.0529.7 reference](/api/grpc/instrument-operations-api-ladar).
 
 :::
-
-All RPCs use `briosa.InstrumentOperations`, return
-`MpExecutionDetails execution = 1000`, and prohibit automatic replay.
-
-## RPC Index
-
-| MP Command | RPC | Operation ID |
-| --- | --- | --- |
-| Set LADAR AutoMeas Point | `SetLadarAutoMeasPoint` | `instrument_operations.set_ladar_auto_meas_point` |
-| Set LADAR AutoMeas Sphere | `SetLadarAutoMeasSphere` | `instrument_operations.set_ladar_auto_meas_sphere` |
-| Set LADAR FeatureMeas Sphere | `SetLadarFeatureMeasSphere` | `instrument_operations.set_ladar_feature_meas_sphere` |
-| Set LADAR FeatureMeas Circle | `SetLadarFeatureMeasCircle` | `instrument_operations.set_ladar_feature_meas_circle` |
-| Set LADAR FeatureMeas Slot | `SetLadarFeatureMeasSlot` | `instrument_operations.set_ladar_feature_meas_slot` |
-| Set LADAR FeatureMeas Cylinder | `SetLadarFeatureMeasCylinder` | `instrument_operations.set_ladar_feature_meas_cylinder` |
 
 ## Set LADAR AutoMeas Point
 

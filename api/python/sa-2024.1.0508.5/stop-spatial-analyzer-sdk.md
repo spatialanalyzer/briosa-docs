@@ -50,7 +50,7 @@ the `asyncio` setup.
 | --- | --- |
 | `BriosaLifecycleError` | The client is not started or another transition is active. |
 | `BriosaSpatialAnalyzerSdkError` | No matching SDK generation exists, it changed, or shutdown failed. |
-| `TimeoutError` | The caller timeout expired; inspect SDK state. |
+| `BriosaTransportError` | The caller timeout expired (`transport-deadline-exceeded`); inspect SDK state. |
 | `asyncio.CancelledError` | The task was cancelled; inspect SDK state. |
 
 The method never closes SpatialAnalyzer and never makes an interrupted MP

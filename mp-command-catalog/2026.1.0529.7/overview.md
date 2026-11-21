@@ -1,12 +1,12 @@
 ---
 title: SA 2026.1.0529.7 Catalog
-description: Find SpatialAnalyzer 2026.1.0529.7 MP commands and their availability in Briosa Server 0.9.2.
+description: Find SpatialAnalyzer 2026.1.0529.7 MP commands and their availability in Briosa Server 0.10.0.
 ---
 
 # SA 2026.1.0529.7 Catalog
 
 This catalog preserves the SpatialAnalyzer MP Editor group hierarchy and
-explains each reviewed command's availability in **Briosa Server 0.9.2**.
+explains each reviewed command's availability in **Briosa Server 0.10.0**.
 
 <div className="catalog-quicklinks">
 
@@ -20,11 +20,11 @@ explains each reviewed command's availability in **Briosa Server 0.9.2**.
 ## Availability
 
 **Current** means the operation is implemented in the released server for this
-exact target. Runtime allow/deny policy, isolation rules, and readiness still
-determine whether a particular call can run. Query
+exact target. The [admission profile](/docs/deployment/operation-admission),
+isolation rules, and readiness still determine whether a particular call can run. Query
 `DiscoveryService/ListCapabilities` for the admitted surface of your server.
 
-The server registry includes **1,027 MP operations**. The broader catalog also
+The server registry includes **1,018 MP operations**. The broader catalog also
 contains proposed operations, exclusions, and commands unavailable through the
 SDK. A catalog entry does not make a command part of the server API.
 

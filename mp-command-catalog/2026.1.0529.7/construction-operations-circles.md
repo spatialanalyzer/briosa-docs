@@ -12,6 +12,6 @@ description: Reviewed circle-construction MP commands for exact SpatialAnalyzer 
 | --- | --- | --- |
 | [Construct Circle](/mp-command-catalog/commands/construction-operations-circles#construct-circle) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — fixture validation required |
 | [Construct Circles From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — interactive fixture validation required |
-| [Construct Circles (Lines) From Surfaces](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — setter probe and fixture validation required |
+| [Construct Circles (Lines) From Surfaces](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 
 [Open the canonical Circles command reference ->](/mp-command-catalog/commands/construction-operations-circles)

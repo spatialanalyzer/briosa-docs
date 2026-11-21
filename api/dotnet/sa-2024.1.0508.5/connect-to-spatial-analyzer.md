@@ -35,6 +35,11 @@ SpatialAnalyzerSdkLifecycleState sdk =
 The method calls `ConnectEx("localhost", ...)`; it never selects a particular SA
 window or accepts a remote host.
 
+After a connection you start yourself, as in control-plane-only mode, call
+[`GetServerSnapshotAsync`](./installation-selection.md#server-snapshot-and-admission)
+before MP work: MP admission needs both the snapshot and the SDK state to
+report readiness.
+
 ## Exceptions
 
 | Exception | Meaning |
@@ -43,4 +48,8 @@ window or accepts a remote host.
 | `BriosaSpatialAnalyzerException` | No local SDK-addressable application is available. |
 | `BriosaSpatialAnalyzerSdkException` | No live disconnected SDK exists, connection failed, or operator action is required. |
 | `BriosaCompatibilityException` | The activated SDK or connected application does not exactly match the target. |
-| `OperationCanceledException` | The caller cancelled its wait; inspect SDK state. |
+| `OperationCanceledException` | The caller stopped waiting. A request cancelled before the server accepted it changed nothing; an accepted one continues under the server's bounds, so refresh SDK state, and the server snapshot before MP work. |
+
+A second lifecycle call while an accepted transition is in progress fails
+with `sdk-lifecycle-transition-in-progress` (`StateConflict`,
+`RefreshState`): refresh state and retry later.

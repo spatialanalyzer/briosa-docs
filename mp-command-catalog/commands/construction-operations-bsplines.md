@@ -9,7 +9,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 # Construction Operations / BSplines Commands
 
 These entries cover the nine commands observed under **Construction Operations
-→ BSplines** in SA 2026.1.0529.7. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+→ BSplines** in SA 2026.1.0529.7. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -250,7 +250,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2 with a strongly typed fit-options value and an
+Included in Briosa Server 0.10.0 with a strongly typed fit-options value and an
 ordered point-name list. At least three suitable points and licensed geometry
 validation are required before the implementation can be marked validated.
 
@@ -308,7 +308,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2. The point-set container must identify an SA
+Included in Briosa Server 0.10.0. The point-set container must identify an SA
 Point Set, and licensed geometry validation remains outstanding.
 
 ### API References
@@ -365,7 +365,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2. Briosa preserves the supplied B-spline order
+Included in Briosa Server 0.10.0. Briosa preserves the supplied B-spline order
 and does not close the result unless the caller requests it.
 
 ### API References
@@ -424,7 +424,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2 with the exact MP tolerance default. Licensed
+Included in Briosa Server 0.10.0 with the exact MP tolerance default. Licensed
 plane-and-surface fixtures are still required.
 
 ### API References
@@ -483,7 +483,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2. Exact SDK and MP documentation agree on the
+Included in Briosa Server 0.10.0. Exact SDK and MP documentation agree on the
 signature, although the installed help places its page under Ellipsoids rather
 than the MP Editor's BSplines group. Briosa follows the exact MP Editor group.
 
@@ -539,7 +539,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2. Briosa returns every created B-spline identity
+Included in Briosa Server 0.10.0. Briosa returns every created B-spline identity
 and omits the optional prefix unless the caller supplies one.
 
 ### API References
@@ -594,7 +594,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2. The SA 2026.1 exact argument uses `B-Spline`
+Included in Briosa Server 0.10.0. The SA 2026.1 exact argument uses `B-Spline`
 with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 
 ### API References
@@ -659,7 +659,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.9.2. The result may contain several B-splines, so
+Included in Briosa Server 0.10.0. The result may contain several B-splines, so
 the API returns the complete MP output list rather than only echoing the
 requested base name.
 

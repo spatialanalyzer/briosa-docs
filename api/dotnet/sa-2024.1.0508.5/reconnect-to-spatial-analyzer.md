@@ -41,4 +41,8 @@ replacement explicitly.
 | `BriosaSpatialAnalyzerException` | No local SDK-addressable application is available. |
 | `BriosaSpatialAnalyzerSdkException` | Reconnect is unnecessary, the SDK must be recovered, or reconnection failed. |
 | `BriosaCompatibilityException` | Runtime identity evidence does not match the target. |
-| `OperationCanceledException` | The caller cancelled its wait; inspect SDK state. |
+| `OperationCanceledException` | The caller stopped waiting. A request cancelled before the server accepted it changed nothing; an accepted one continues under the server's bounds, so refresh SDK state, and the server snapshot before MP work. |
+
+A second lifecycle call while an accepted transition is in progress fails
+with `sdk-lifecycle-transition-in-progress` (`StateConflict`,
+`RefreshState`): refresh state and retry later.

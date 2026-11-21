@@ -73,7 +73,8 @@ not launch SpatialAnalyzer or replace the SDK generation.
 | `FAILED_PRECONDITION` | `OPERATOR_ACTION_REQUIRED` | A competing client or ambiguous readiness probe requires operator action. |
 | `UNAVAILABLE` | `SDK_CONNECTION_FAILED` | `ConnectEx` or connection verification failed. |
 | `DEADLINE_EXCEEDED` | `TIMEOUT` | The connection or readiness bound expired. |
-| `CANCELLED` | — | The caller cancelled its wait; query SDK state before another transition. |
+| `CANCELLED` | `CALLER_CANCELLED` | The caller cancelled its wait. `sdk-lifecycle-request-withdrawn` means nothing changed; `sdk-lifecycle-caller-stopped-waiting` means the accepted transition continues detached, so query SDK state before another transition. |
+| `DEADLINE_EXCEEDED` | `CALLER_DEADLINE_EXCEEDED` | The caller's gRPC deadline ended its wait, with the same two diagnostics. |
 
 After a non-validation failure, inspect
 [`GetSpatialAnalyzerSdkState`](./get-spatial-analyzer-sdk-state.md) before

@@ -13,11 +13,11 @@ not mean that every documented API is only a proposal.
 
 | Product | Released Version | Availability |
 | --- | --- | --- |
-| Briosa Server and Control Center | [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 2.0 |
+| Briosa Server and Control Center | [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 3.0. [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) remains available for client 0.4.0 applications |
 | Briosa Installer | [0.4.1](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.4.1) | Signed Windows setup and portable distribution; patched .NET runtime 10.0.15 |
-| .NET client | 0.4.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.4.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.4.0) |
-| Python client | 0.4.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.4.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.4.0/) |
-| JavaScript/TypeScript client | 0.4.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.4.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.4.0) |
+| .NET client | 0.5.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.5.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.5.0) |
+| Python client | 0.5.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.5.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.5.0/) |
+| JavaScript/TypeScript client | 0.5.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.5.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.5.0) |
 
 Use [Install Briosa](/install) to obtain the released Windows products and
 [Install the Exact-Target Client](/docs/getting-started/run-the-server#install-the-exact-target-client)
@@ -25,12 +25,80 @@ for registry installation commands. A separately installed and licensed
 SpatialAnalyzer environment remains required for MP execution. Connections
 remain local and use loopback.
 
-Each package name contains the exact SA target; its **0.4.0** package version is
-independent of SA and the server version. Client 0.4.0 selects a server implementing
-behavioral contract major 2 with revision at least 0. Its generation artifact is
-pinned to Server 0.9.0. C# uses `using Briosa;`, Python uses `import briosa`, and JavaScript uses
+Each package name contains the exact SA target; its **0.5.0** package version is
+independent of SA and the server version. Client 0.5.0 selects a server implementing
+behavioral contract major 3 with revision at least 0. Its generation artifact is
+pinned to the frozen Server 0.10.0 protocol. Client 0.4.0 keeps selecting a
+major-2 server, so keep Server 0.9.2 installed beside 0.10.0 until its
+applications migrate. C# uses `using Briosa;`, Python uses `import briosa`, and JavaScript uses
 the npm alias `briosa`. Use separate environments or applications for different targets.
 See [installation selection and migration](/docs/deployment/installation-selection).
+
+## Server 0.10.0 and Clients 0.5.0
+
+Server [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0)
+and the exact-target 0.5.0 clients introduce **behavioral contract major 3**,
+revision 0, for both exact targets. This is a breaking release: client 0.5.0
+selects only major-3 servers, and client 0.4.0 keeps working with Server 0.9.2
+installed side by side. The [contract major 3 migration guide](/docs/contract-major-3-migration)
+summarizes the changes for applications and links to each client's migration
+notes. The versioned API references hold the individual signatures.
+
+- **Operation admission.** A named profile replaces the `Allow` and `Deny`
+  arrays, and the packaged `standard` default no longer admits device, motion,
+  external IO, code execution, file deletion, operator UI, or exclusive
+  workflows. The 11 surviving `Make*RuntimeSelect` operations on each target
+  also moved from replay safety `Safe` to `Unsafe`, and operations with unknown
+  replay safety are denied as unreviewed. Discovery reports the profile, a
+  policy fingerprint, and each operation's risk flags, duration class,
+  validation status, and admission.
+  See [Operation Admission](/docs/deployment/operation-admission).
+- **Request defaults.** Ten request defaults changed: the five
+  `measure_immediately` defaults and `auto_start` became `true`, so measurement
+  can begin without an operator prompt; `wait_for_complete` and the two
+  `acknowledge_arrival` defaults became `true`, so those calls wait for
+  completion or arrival; and CAD import's `prompt_on_missing_components` became
+  `false` so it does not prompt on missing components.
+- **Nine operations removed.** Eight failed on both exact targets in licensed
+  probe sessions, and no operator could complete the ninth, the vector name list
+  runtime select. See [Replace Removed Operations](/docs/contract-major-3-migration#replace-removed-operations).
+- **Argument rules.** The server rejects omitted scale factors, joints, indexes,
+  required names, and model-link parameters instead of sending `0`, `false`, or
+  an empty string. Omitting the chart template, UI profile file, either
+  bounding-plane name, fit seed, or USMN nominals group now skips its setter;
+  explicit empty values are still rejected for the first four, an explicitly
+  empty USMN nominal object name is sent blank, and an empty USMN
+  `excluded_groups` list skips its setter. The clients require every input the
+  server requires.
+- **Typed outcomes.** MP code `4` is reported as a partial success with its
+  outputs when all of them are retrieved, except for four documented
+  operations that keep the failure mapping. An SA SDK exception has its own
+  failure kind, `SdkCallFaulted`.
+  Lifecycle failures gain caller-cancellation kinds, and an accepted lifecycle
+  transition continues detached when its caller stops waiting.
+- **Operator settings.** Execution budgets follow each operation's duration
+  class, and `Briosa:SpatialAnalyzer:InteractionMode` can quiet blocking
+  SpatialAnalyzer dialogs; a detectable modal dialog blocking an MP, readiness
+  probe, or interaction-mode timeout reports `sa-modal-dialog-open`. See
+  [Windows Deployment](/docs/deployment/windows#worker-time-bounds).
+
+Portable CI ran the full server suites on both targets, the conformance package's
+15 scenarios against the six published 0.5.0 client packages, and the release
+protocol check against Server 0.9.2, which verified the nine reviewed
+retirements. The published 0.4.0 clients reject the 0.10.0 servers as expected.
+Licensed probe sessions on October 7, October 25, and November 9, 2026 decided
+the removals and several argument rules; Server 0.10.0 itself was not run
+against licensed SpatialAnalyzer.
+
+Before publication, the signed 0.10.0 packages passed an acceptance run with the
+signed Installer 0.4.1 and the published clients, without SpatialAnalyzer. From
+a signed local catalog, both targets' 0.10.0 packages installed beside 0.9.2 and
+were verified, repaired, and removed with the Installer command line, and the
+SA 2026.1.0529.7 package again with the Installer app. In all three languages,
+the 0.5.0 clients selected 0.10.0 and the 0.4.0 clients selected 0.9.2, each
+rejecting the other major and the other target. Control Center opened for 0.10.0
+on both targets and for 0.9.2 on SA 2026.1.0529.7 without starting a server, and
+removing 0.10.0 left 0.9.2 unchanged.
 
 ## Server 0.9.2 Corrections
 
@@ -64,19 +132,25 @@ requires no client or generated-binding change.
   harness prepares the licensed probe session. None of these changes runtime
   behavior.
 
-:::warning[Corrected Step Text Is At Risk]
+:::warning[Most Corrected Step Text Is Still At Risk]
 
-The 25 corrected SA 2026 steps and the SA 2024 `Make Pipe Relationship Cut`
-step have no licensed validation. Treat them as **At Risk** until the licensed
-probe session ([briosa#277](https://github.com/spatialanalyzer/briosa/issues/277))
-runs.
+The licensed probe session ([briosa#277](https://github.com/spatialanalyzer/briosa/issues/277))
+ran on October 7, 2026. On SA 2026.1.0529.7 it sent three of the 25 corrected
+steps in both forms. `Compute Group to Group Orientation (Rx,Ry,Rz)` and
+`Show / Hide Points` were accepted with either text, and
+`Angle Between Two Planes' normals` succeeded only with the corrected SDK text.
+The other 22 corrected steps and the SA 2024 `Make Pipe Relationship Cut` step
+still have no licensed validation; treat them as **At Risk**.
 
 :::
 
 Portable CI and the release workflow ran the full server suites, package smoke
 tests, and the retained-client gate against the published major-2 and major-1
-clients. 0.9.2 was not run against licensed SpatialAnalyzer. The corrected step
-text and the new SDK-exception reporting have no licensed validation.
+clients. The packaged 0.9.2 release did not undergo licensed testing. The
+October 7, 2026 development-build probe session subsequently exercised three of
+the 25 corrected SA 2026 step texts; the other 22, the SA 2024
+`Make Pipe Relationship Cut` step, and the new SDK-exception reporting remain
+without licensed validation.
 
 ## Server 0.9.1 Corrections
 
@@ -95,8 +169,11 @@ requires no client or generated-binding change.
   `Delete Cloud Points by X Y Z Range` step and sets each bound only when the
   caller supplies it. Later licensed probes found that requests with bounds
   still fail on both targets; see the October 25, 2026 correction below.
-- **Vector-group reference lists.** `MakeCollectionVectorGroupNameRefListRuntimeSelect`
-  now returns its result instead of a `DataLoss` error after the MP step succeeds.
+- **Vector-group reference lists.** 0.9.1 changed the output mapping of
+  `MakeCollectionVectorGroupNameRefListRuntimeSelect` to avoid a `DataLoss`
+  error after MP success. Later licensed probes on October 25, 2026 disproved
+  that as an end-to-end fix: on both targets, the getter still returned nothing
+  after MP code `2`, and contract major 3 removes the operation.
 - **Vector percentages.** `GetVectorGroupProperties` now reads tolerance
   percentages as doubles, so fractional values are no longer truncated.
 - **Typed reconnect errors.** Reconnecting a generation that is connected but
@@ -126,7 +203,9 @@ nothing: each cloud still held 8 points afterwards.
 
 The bounds cause the failure. SA documents them as optional doubles, and the
 exact-target SDK code marks the setter for that argument type as not supported
-on both targets. SA rejects the `SetDoubleArg` call that Briosa sends instead.
+on both targets. With the `SetDoubleArg` call that Briosa sends instead, the
+setters and `ExecuteStep` returned true, and SA then returned MP code -1 and
+deleted no points.
 The cloud list is not the cause: on October 25, 2026, the radial delete sent
 the same list and deleted the expected point on both targets.
 
@@ -159,9 +238,9 @@ only a setter probe on SA 2026. Add the operation to
 
 Portable CI and the release workflow ran the full server suites, package smoke
 tests, and the retained-client gate against the published major-2 and major-1
-clients. 0.9.1 was not run against licensed SpatialAnalyzer. The corrected
-labels, the restored Delete Cloud Points bounds, and the new output retrievals
-have no licensed validation.
+clients. The 0.9.1 release workflow used no licensed SpatialAnalyzer. Later
+development-build probe sessions exercised the Delete Cloud Points bounds and
+the output retrievals, with the results described above.
 
 ## Example Applications
 
@@ -173,8 +252,11 @@ The language clients use their built-in server discovery and cleanup. The
 gRPC example connects to a server prepared in Control Center.
 All four ran successfully with Server 0.7.0 and licensed SA 2026.1.0529.7;
 see the [validation record](https://github.com/spatialanalyzer/briosa-examples/blob/main/docs/evidence/licensed-2026-09-19.md).
-The updated 0.4.0/0.9.0 tutorials passed 47 portable fake-server scenarios;
-licensed execution of those release pins has not yet been recorded.
+With their client 0.4.0 and Server 0.9.0 pins, the tutorials passed 47 portable
+fake-server scenarios; licensed execution of those release pins has not yet been
+recorded. The tutorials' README names the client and server versions they use. A
+tutorial that uses client 0.4.0 needs Server 0.9.x, and one that uses client
+0.5.0 needs Server 0.10.0; each client rejects the other major.
 SA 2024 qualification remains outstanding.
 
 ## Supported SpatialAnalyzer Targets
@@ -223,17 +305,21 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 
 ## Documentation Versions
 
-The [runtime redesign migration guide](/docs/runtime-redesign-migration)
-explains the major-2 behavior and the client upgrade. The current [gRPC
-reference](/api/grpc) documents **Server 0.9.0**; the [.NET](/api/dotnet),
-[Python](/api/python), and [JavaScript/TypeScript](/api/javascript) references
-document **client 0.4.0**. Each includes a separate SA 2024 section alongside
-SA 2026. Servers 0.9.1 and 0.9.2 have the same protobuf and public API schemas,
-so the 0.9.0 gRPC reference also describes their services and messages; their
-runtime corrections are listed in
+The [contract major 3 migration guide](/docs/contract-major-3-migration)
+explains the major-3 behavior and the client upgrade, and the
+[runtime redesign migration guide](/docs/runtime-redesign-migration) covers
+major 2. The current [gRPC reference](/api/grpc) documents **Server 0.10.0**;
+the [.NET](/api/dotnet), [Python](/api/python), and
+[JavaScript/TypeScript](/api/javascript) references document **client 0.5.0**.
+Each includes a separate SA 2024 section alongside SA 2026, and each method's
+history page keeps every earlier contract. Servers 0.9.1 and 0.9.2 have the same
+protobuf and public API schemas as 0.9.0, so the
+[Server 0.9.0 reference](/api/grpc/sa-2026.1.0529.7/0.9.0) also describes their
+services and messages; their runtime corrections are listed in
 [Server 0.9.2 Corrections](#server-092-corrections) and
 [Server 0.9.1 Corrections](#server-091-corrections).
-Historical references include [Server 0.8.0](/api/grpc/sa-2026.1.0529.7/0.8.0),
+Historical references include [client 0.4.0](/api/dotnet/sa-2026.1.0529.7/0.4.0),
+[Server 0.8.0](/api/grpc/sa-2026.1.0529.7/0.8.0),
 [client 0.3.0](/api/dotnet/sa-2026.1.0529.7/0.3.0), [Server 0.7.0](/api/grpc/sa-2026.1.0529.7/0.7.0), and
 [client 0.2.0](/api/dotnet/sa-2026.1.0529.7/0.2.0).
 
@@ -243,7 +329,8 @@ Historical references include [Server 0.8.0](/api/grpc/sa-2026.1.0529.7/0.8.0),
 | 0.1.1 | Exact Server 0.6.1 build | Same public schemas as 0.1.0; changed server pin |
 | 0.2.0 | Contract major 1, revision at least 0, plus the exact reviewed 0.6.1 exception | Retained API, including discovery and selection |
 | 0.3.0 | Major 1 | Clean MP argument names; [migration guide](/docs/mp-argument-name-migration) |
-| 0.4.0 | Major 2, revision at least 0 | Current API; [runtime redesign migration guide](/docs/runtime-redesign-migration) |
+| 0.4.0 | Major 2, revision at least 0 | Retained API; [runtime redesign migration guide](/docs/runtime-redesign-migration) |
+| 0.5.0 | Major 3, revision at least 0 | Current API; [contract major 3 migration guide](/docs/contract-major-3-migration) |
 
 The [public compatibility matrix](https://github.com/spatialanalyzer/briosa/blob/main/compatibility/matrix.json) records the tested package identities and their fake-SDK scenarios, distinguishing published artifacts from development candidates. This is compatibility evidence, not licensed validation of every MP operation. Preserve legacy installations until their consuming applications migrate. `BRIOSA_SERVER_PATH` requires explicit opt-in; prefer per-application selectors.
 The product guides, installation instructions, release status, and MP catalog

@@ -1,0 +1,260 @@
+---
+title: Operation Admission
+description: How Server 0.10.0 decides which MP operations it admits, from named profiles, risk flags, overrides, and request options.
+---
+
+# Operation Admission
+
+Server 0.10.0 admits MP operations through a named **admission profile**. The
+profile is applied to the reviewed classification of every registered operation
+for the exact target: its risk flags, duration class, validation status, and
+isolation class. The packaged default is the `standard` profile. Admission can
+only narrow what the server implements; it never adds an operation.
+
+Every operation page in the [API reference](/api) shows the profiles that admit
+it, its risk flags, and its duration class. `DiscoveryService/ListCapabilities`
+reports the same classification for the running server, together with the
+resolved profile and a policy fingerprint; see
+[Health and Discovery](./health-and-discovery.md#discovery).
+
+Server 0.10.0 replaces the indexed `Briosa:Security:Operations:Allow` and `Deny`
+arrays of earlier releases. A server that finds either array, or no `Profile`,
+refuses to start. See
+[Migrating From Allow and Deny](#migrating-from-allow-and-deny).
+
+## Profiles
+
+A profile admits an operation when every risk flag on the operation's reviewed
+row is in the profile's set and the profile's effect filter passes. Each profile
+admits everything the narrower ones do.
+
+| Profile | Admitted Risk Flags | Effect Filter | Intended Use |
+| --- | --- | --- | --- |
+| `read-only` | `filesystem_metadata` | Read-only operations only | Dashboards, inspection, and CI probes |
+| `standard` (packaged default) | Adds `filesystem_read`, `filesystem_write`, and `destructive` | None | Document automation: construct, analyze, relate, report, import, export, save, and delete model objects |
+| `device` | Adds `device_session`, `device_config`, and `physical_motion` | None | Measurement, robot, and appliance automation on a station whose session the operator started in SpatialAnalyzer |
+| `full` | Adds `external_io`, `code_execution`, and `filesystem_delete` | None | Reviewed standalone operations except interactive ones |
+
+| Target | Registered | `read-only` | `standard` | `device` | `full` | Exclusive Workflows | Interactive |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| SA 2026.1.0529.7 | 1,018 | 184 | 797 | 905 | 922 | 42 | 57 |
+| SA 2024.1.0508.5 | 987 | 180 | 778 | 871 | 888 | 45 | 57 |
+
+The seven device-configuration setters, such as the instrument scale factors,
+the robot model-link parameters, and the robot calibration frames, carry only
+`device_config`. `device` and `full` admit them, `standard` admits them with
+`Flags:device_config=allow`, and a per-operation `allow` override admits them
+under any profile.
+
+## Risk Flags
+
+| Risk Flag | Meaning |
+| --- | --- |
+| `filesystem_metadata` | Reads paths or existence, never file content. |
+| `filesystem_read` | Reads caller-named file content. |
+| `filesystem_write` | Creates or overwrites caller-named files. |
+| `filesystem_delete` | Deletes files. |
+| `destructive` | Removes SpatialAnalyzer objects, or discards or replaces unsaved job state. |
+| `code_execution` | Runs or stops MP code. |
+| `physical_motion` | Can move hardware such as a tracker head, robot, or projector. |
+| `device_session` | Requires or controls a live instrument, robot, or appliance session. |
+| `device_config` | Changes configuration that a live device session consumes. |
+| `interactive_ui` | Blocks on operator input or opens operator UI. |
+| `external_io` | Talks to systems other than SpatialAnalyzer, such as OPC DA or an appliance IP address. |
+
+The validation status of an operation (`no_recorded_gap`, `fixture_pending`, or
+`at_risk_unvalidated`) is recorded for review and audit. It never affects
+admission.
+
+## Interactive Operations
+
+`interactive_ui` is in no profile. An operation that opens or blocks on operator
+UI is admitted only with the **interactive opt-in**, in one of two forms:
+
+- `Flags:interactive_ui=allow` adds operator UI to what the profile admits. The
+  other flags of the operation's row still need the profile or an `allow`
+  setting of their own, and a `deny` setting on any of them still denies the
+  operation. An interactive device operation therefore also needs `device`,
+  `full`, or its device flags set to `allow`.
+- `Overrides:<service>:<operation>=allow` admits that one operation under every
+  profile and flag setting, because an override is decided before flags and the
+  profile. Only four denials come first: unreviewed operations, requests the
+  server can't classify against their reviewed options
+  (`operation-request-unclassified`), exclusive workflows, and requests whose
+  options leave work running after the call returns
+  (`operation-option-isolation-unsupported`). See [Precedence](#precedence). For
+  example, an `allow` override admits an interactive motion operation under
+  `standard`, even with `Flags:physical_motion=deny`.
+
+Some operations open operator UI only when a request option asks for it, such
+as Show Interface, Show Results Dialog, Report Deviations, Pause MP Until
+Closed, or an HTML prompt file. The server reads each request's reviewed options
+before it maps or dispatches the request. A request that turns such an option on
+also needs the interactive opt-in. Without it, the request is denied with
+`operation-option-denied` when that option is the only reason. When the profile
+doesn't admit the operation itself either, as for `measure_single_point_here` (a
+device session) under `standard`, the denial is `operation-policy-denied`. Flag
+`deny` settings are checked before the profile, so an explicit
+`Flags:interactive_ui=deny` can make it `operation-option-denied` instead; see
+[Precedence](#precedence). The operation's page names each such option.
+
+These request defaults changed in Server 0.10.0. Five measurement operations
+now measure immediately, and Auto Measure Points starts automatically, so none
+of them waits for the operator. Three defaults wait for completion or arrival,
+and CAD import skips its missing-component prompt:
+
+| Operation | Field | Old Default | New Default |
+| --- | --- | --- | --- |
+| `instrument_operations.measure_single_point_here` | `measure_immediately` | `false` | `true` |
+| `instrument_operations.configure_and_measure` | `measure_immediately` | `false` | `true` |
+| `instrument_operations.measure_existing_single_point` | `measure_immediately` | `false` | `true` |
+| `instrument_operations.measure_existing_single_point_and_compare` | `measure_immediately` | `false` | `true` |
+| `instrument_operations.measure_existing_single_point_manual_guide` | `measure_immediately` | `false` | `true` |
+| `instrument_operations.auto_measure_points` | `auto_start` | `false` | `true` |
+| `instrument_operations.auto_measure_specified_geometry` | `wait_for_complete` | `false` | `true` |
+| `robot_operations.move_robot_machine_to_frame` | `acknowledge_arrival` | `false` | `true` |
+| `robot_operations.move_robot_machine_to_named_destination` | `acknowledge_arrival` | `false` | `true` |
+| `file_operations.direct_cad_access` | `prompt_on_missing_components` | `true` | `false` |
+
+A caller that relied on an old default must send the old value explicitly. For
+`measure_immediately`, `auto_start`, and `prompt_on_missing_components`, that
+also needs the interactive opt-in, because the operator then starts the
+measurement or answers the prompt.
+
+## Exclusive Workflows
+
+Multi-call device, trapping, watch, robot-interface, and appliance session
+lifecycles are exclusive workflows. They are denied under every profile, flag,
+and override until an accepted lease design exists, and discovery never lists
+them as admitted. A request that would let a call return while the instrument
+measures or the robot moves, such as `wait_for_completion` or
+`acknowledge_arrival` set to false, is treated the same way: it is denied under
+every setting with `operation-option-isolation-unsupported`.
+
+## Configure the Server
+
+The packaged `appsettings.json` sets only `"Profile": "standard"`:
+
+```jsonc
+"Briosa": { "Security": { "Operations": {
+  "Profile": "standard",                         // required: read-only, standard, device, or full
+  "Flags": { "filesystem_write": "deny" },       // optional: <risk_flag> = allow | deny
+  "Overrides": {                                 // optional: <service>:<operation> = allow | deny
+    "mp_subroutines": { "run_subroutine": "allow" },
+    "file_operations": { "get_working_directory": "deny" }
+  }
+}}}
+```
+
+Each key holds one value, so the last configuration provider wins, and a user
+secret, environment variable, or command-line value can narrow or widen any
+single decision without editing the package. An operation ID maps to an
+override key by replacing `.` with `:`. Environment variables use `__`:
+
+```powershell
+$env:Briosa__Security__Operations__Profile = "device"
+$env:Briosa__Security__Operations__Flags__interactive_ui = "allow"
+$env:Briosa__Security__Operations__Overrides__file_operations__get_working_directory = "deny"
+```
+
+Startup fails, rather than ignoring a value, when `Profile` is missing or
+unknown, when a flag, service, operation, or section name is unknown, when a
+value is anything other than `allow` or `deny`, or when the retired `Allow` or
+`Deny` arrays are present. Configuration section names (`Profile`, `Flags`,
+`Overrides`) are case-insensitive, following .NET configuration keys; profile,
+risk flag, service, and operation names and `allow`/`deny` values are exact and
+case-sensitive. Policy is fixed for the process lifetime; restart the server
+after changing it.
+
+## Precedence
+
+The first rule that applies decides each request:
+
+1. An operation that is not registered for the exact target is unsupported
+   (`Unimplemented`, `operation-unsupported`).
+   An operation with missing or unreviewed risk, effect, or replay-safety
+   metadata, including `Unknown` or `Unspecified` replay safety, is denied
+   with `operation-risk-unreviewed`. An unknown or unspecified execution scope
+   is denied with `operation-isolation-unreviewed`, and a request that cannot
+   be read against its reviewed options is denied with
+   `operation-request-unclassified`.
+2. An exclusive workflow is denied with `operation-isolation-unsupported`, and
+   a request whose options leave work running after the call returns is denied
+   with `operation-option-isolation-unsupported`.
+3. An override of the operation decides next: `deny` denies it, and `allow`
+   admits it without consulting the flags or the profile.
+4. A `deny` setting on any of the request's flags denies it.
+5. The profile admits the request when each of its flags is in the profile's set
+   or set to `allow`, and the effect filter passes. Otherwise it is denied.
+
+A request's flags are the risk flags of its operation's reviewed row, plus
+`interactive_ui` when a request option turns on operator UI. Before dispatch,
+the worker supervisor also enforces a duration-class safeguard, denying any
+operation without a reviewed duration class with
+`operation-duration-unreviewed`. No setting changes the first two rules.
+An unregistered operation returns `Unimplemented`; policy denials return the
+typed, value-free `PermissionDenied` outcome with a `NotStarted` disposition.
+After admission, the server also checks that the mapped MP command matches its
+registration. A mismatch fails request validation before dispatch
+(`InvalidArgument`, `request-validation-failed`, `NotStarted`).
+
+## Duration Classes
+
+The duration class selects the server's execution budget for a request. An
+admitted request whose option turns on operator UI receives the longer of the
+configured interactive budget and the operation's reviewed budget. For example,
+a 60-minute `long_running` budget survives a 30-minute `interactive` setting.
+
+| Duration Class | Configuration Key (Environment Variable Form) | Default | Maximum |
+| --- | --- | --- | --- |
+| `quick` | `Briosa__Worker__ExecutionWatchdogTimeout` | 30 seconds | 10 minutes |
+| `long_running` | `Briosa__Worker__LongRunningExecutionWatchdogTimeout` | 10 minutes | 2 hours |
+| `interactive` | `Briosa__Worker__InteractiveExecutionWatchdogTimeout` | 30 minutes | 8 hours |
+
+The longer budgets may not be shorter than the quick budget. When a budget
+expires after dispatch, the server terminates the worker and reports a watchdog
+timeout whose outcome is unknown; see
+[Understand MP Command Results](/docs/concepts/execution-outcomes). The readiness
+probe, worker startup, and the application's launch and close keep their own
+bounds; see [Windows Deployment](./windows.md#worker-time-bounds).
+
+## Migrating From Allow and Deny
+
+| Server 0.9.x | Server 0.10.0 |
+| --- | --- |
+| `Allow:0 … Allow:N` listing every registered operation (packaged) | `"Profile": "standard"` (packaged) |
+| A missing `Allow` denied every operation | A missing `Profile` fails startup |
+| `Deny:0=<service>.<operation>` | `Overrides:<service>:<operation>=deny` |
+| Adding an ID to `Allow` | `Overrides:<service>:<operation>=allow`, or a wider profile |
+| Narrowing by command only | `Flags:<risk_flag>=deny` narrows a whole risk family, except operations with an `allow` override |
+| `Briosa__Security__Operations__Deny__0` | `Briosa__Security__Operations__Overrides__<service>__<operation>=deny` |
+
+To keep the previous behavior as closely as the new model allows:
+
+```powershell
+$env:Briosa__Security__Operations__Profile = "full"
+$env:Briosa__Security__Operations__Flags__interactive_ui = "allow"
+```
+
+This admits reviewed standalone operations, including interactive ones.
+Exclusive workflows, requests whose options leave work running after the call
+returns, requests that cannot be classified against their reviewed options,
+and operations with unreviewed metadata (including unknown replay safety)
+still fail closed before overrides apply.
+
+Compared with the previous default, `standard` stops admitting device sessions,
+device configuration, and motion (use `device`); external IO, code execution,
+and file deletion (use `full`); operations that open or block on operator UI
+(use the interactive opt-in); and exclusive workflows, which nothing admits.
+The operations that the client conformance scenarios and the
+[Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples) use all
+stay admitted by `standard`.
+
+**Replay safety.** Server 0.10.0 also tightens replay classification. The 11
+surviving `Make*RuntimeSelect` operations on each target moved from replay
+safety `Safe` to `Unsafe`, because replaying one prompts the operator again.
+An operation whose replay safety is `Unknown` or `Unspecified` is denied as
+unreviewed (`operation-risk-unreviewed`) under every setting.
+
+The [authoritative policy guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/command-policy-and-auditing.md)
+gives the full precedence and the audit records.

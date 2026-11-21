@@ -53,7 +53,7 @@ the `asyncio` setup.
 | --- | --- |
 | `BriosaLifecycleError` | The client is not started. |
 | `BriosaProtocolError` | The server returned an invalid state shape. |
-| `TimeoutError` | The caller timeout expired. |
+| `BriosaTransportError` | The caller timeout expired (`transport-deadline-exceeded`). |
 | `asyncio.CancelledError` | The task was cancelled. |
 
 The method is safe to repeat and exposes no process IDs, paths, registry data,

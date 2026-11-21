@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # File Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -2433,7 +2433,7 @@ The captured `Surface Compatibility Mode` sample is `false` in 2024 and `true` i
 | Input | `Import into Folders matching CAD file hierarchy` | Boolean | false | false |
 | Input | `Remove Empty Folders` | Boolean | true | true |
 | Input | `Surface Normals Mode (1 or 2)` | Integer | 1 | 1 |
-| Input | `Prompt on Missing Components` | Boolean | true | true |
+| Input | `Prompt on Missing Components` | Boolean | true | false |
 | Input | `Selective Import` | Boolean | false | false |
 | Input | `Surface Compatibility Mode` | Boolean | true | true |
 | Input | `Explode Surfaces` | Boolean | false | false |

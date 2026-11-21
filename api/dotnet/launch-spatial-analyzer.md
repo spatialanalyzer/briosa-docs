@@ -73,6 +73,10 @@ when the owned application is closed.
 | `ArgumentException` | Launch options are invalid, conflicting, or malformed. |
 | `OperationCanceledException` | The caller cancelled its wait; inspect application state. |
 
+After a launch timeout or a cancelled wait, the server may still bring
+SpatialAnalyzer to `Running`. Refresh application state before launching again,
+and treat `application-lifecycle-transition-in-progress` as refresh and retry.
+
 The method never closes an existing application and accepts no executable
 path, arbitrary argument list, launch-time MP, or close-existing-process
 option.

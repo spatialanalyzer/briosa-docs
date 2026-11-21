@@ -34,4 +34,9 @@ the `asyncio` setup.
 
 Recovery does not call `ConnectEx` or replay or resolve an earlier command.
 Failures use `ValueError`, the lifecycle and SDK error boundaries,
-`TimeoutError`, or normal task cancellation.
+`BriosaTransportError` with `transport-deadline-exceeded` when the caller
+`timeout` expires, or normal task cancellation. The server finishes a recovery
+it has accepted even after the caller stops waiting; refresh SDK state before
+retrying, as
+[After an Abandoned Lifecycle Call](./lifecycle.md#after-an-abandoned-lifecycle-call)
+describes.

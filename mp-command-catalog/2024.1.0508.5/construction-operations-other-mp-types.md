@@ -9,14 +9,14 @@ description: Reviewed Construction Operations / Other MP Types commands and rele
 <p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> Construction Operations <span aria-hidden="true">/</span> Other MP Types</p>
 
 This group contains 74 reviewed command entries. **Current** means implemented
-in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
+in Briosa Server 0.10.0 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
 | [Add a Collection Instrument to a Ref List](/mp-command-catalog/commands/construction-operations-other-mp-types#add-a-collection-instrument-to-a-ref-list) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
 | [Add a Collection Object Name to a Ref List](/mp-command-catalog/commands/construction-operations-other-mp-types#add-a-collection-object-name-to-a-ref-list) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
-| [Add Collection Instruments to a Ref List - WildCard Selection](/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Add Collection Instruments to a Ref List - WildCard Selection](/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 | [Add Double to Double List](/mp-command-catalog/commands/construction-operations-other-mp-types#add-double-to-double-list) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
 | [Append two Collection Object Name Ref Lists](/mp-command-catalog/commands/construction-operations-other-mp-types#append-two-collection-object-name-ref-lists) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
 | [Append two Relationship Ref Lists](/mp-command-catalog/commands/construction-operations-other-mp-types#append-two-relationship-ref-lists) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |

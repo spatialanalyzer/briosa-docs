@@ -9,7 +9,7 @@ description: Reviewed Excel Direct Connect / Read commands and released Briosa s
 <p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> Excel Direct Connect <span aria-hidden="true">/</span> Read</p>
 
 This group contains 4 reviewed command entries. **Current** means implemented
-in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
+in Briosa Server 0.10.0 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |

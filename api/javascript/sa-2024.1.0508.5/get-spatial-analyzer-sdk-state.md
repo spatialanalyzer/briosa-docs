@@ -8,7 +8,9 @@ description: Diagnose SpatialAnalyzer SDK process, connection, readiness, incide
 [SA 2026.1.0529.7](/api/javascript/get-spatial-analyzer-sdk-state) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/get-spatial-analyzer-sdk-state)
 
 Reads the independently managed SA SDK state. Use it after an unexpected SDK
-exit, connection failure, worker failure, or aborted lifecycle call.
+exit, connection failure, worker failure, or aborted lifecycle call: the server
+finishes a transition it has accepted even after the caller stopped waiting, and
+this state shows where it ended.
 
 ## Signature
 
