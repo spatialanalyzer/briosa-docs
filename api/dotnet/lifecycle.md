@@ -352,8 +352,11 @@ public sealed record MpCompletion
 The client calls the observer once, synchronously, before the returned task
 completes, and only for a successful call. `State` is `Succeeded` with MP code
 2, or `PartialSuccess` with MP code 4. MP code 4 (PARTIAL SUCCESS) means the
-command did its work but not its full intended effect: the call still returns
-its outputs, and the client never throws for it or retries it. Four operations
+command did its work but not its full intended effect. The server reports it as
+a success, so the method never retries it and returns its outputs when all of
+them are retrieved. If an output can't be retrieved, the method throws
+`BriosaOperationException` and the observer doesn't run; see
+[Operation Failures](#operation-failures). Four operations
 report code 4 as an ordinary `MpFailure` instead, because their target
 documentation says the work was not done: `ConstructPointFromSurveyTargetCenterAsync`,
 `OpenSaFileAsync`, `OpenTemplateFileAsync`, and `SetReportOptionsForObjectAsync`.
@@ -466,12 +469,20 @@ public sealed class BriosaTransportException : BriosaException
 - `SdkCallFaulted` reports that an SDK call threw during the MP sequence.
   `ExecutionDisposition` carries the phase: `NotStarted` before the MP step,
   `StartedOutcomeUnknown` during it (reconcile before replaying), and
-  `Completed` when an output getter threw after MP success.
-  `MpExecution.OutputRetrievals` then tells the read outputs from the failed
-  one.
+  `Completed` when an output getter threw after MP code 2 or 4. `MpExecution`
+  then keeps `Succeeded` with 2 or `PartialSuccess` with 4, and its
+  `OutputRetrievals` are the per-output states the server reports. They don't
+  always identify the getter that threw: if the worker had to withhold that
+  evidence, every output is reported failed.
 - `MpExecution` carries the MP state, result code, and output retrievals of a
-  failure that relates to the MP command. A partial success whose output could
-  not be read stays `PartialSuccess` there.
+  failure that relates to the MP command. If an output can't be retrieved after
+  code 4, the call fails and the observer doesn't run. The kind is
+  `SdkCallFaulted` when an output getter threw, and `OutputRetrievalFailure`
+  when a getter returned no usable value or the worker couldn't deliver the
+  result (diagnostic `worker-output-encoding-rejected`). With either kind,
+  `MpExecution` stays `PartialSuccess` with code 4. Its `OutputRetrievals`
+  don't always identify the getter that failed, because an undeliverable
+  result can mark every output failed.
 - A blocking SpatialAnalyzer dialog arrives as `WorkerWatchdogTimeout`, or as a
   readiness failure, with diagnostic `sa-modal-dialog-open` and
   `OperatorInterventionRequired` guidance. The client never retries it. The

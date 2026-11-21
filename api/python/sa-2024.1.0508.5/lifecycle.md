@@ -441,9 +441,10 @@ class MpExecutionState(StrEnum):
 
 Every MP method takes the keyword-only `on_mp_completion` observer (contract
 major 3). An MP that returns code 4 (PARTIAL SUCCESS) did its work, but not all
-of its intended effect. The method returns its outputs as usual and never
-raises or retries. The observer receives one `MpCompletion`, `SUCCEEDED` with
-MP code 2 or `PARTIAL_SUCCESS` with code 4, before the method returns:
+of its intended effect. The method returns its outputs as usual when all of
+them are retrieved, and never retries. The observer receives one
+`MpCompletion`, `SUCCEEDED` with MP code 2 or `PARTIAL_SUCCESS` with code 4,
+before the method returns:
 
 ```python
 completions: list[MpCompletion] = []
@@ -458,6 +459,19 @@ with code 4. Anything else, including a missing code, is `BriosaProtocolError`
 (`mp-completion-invalid`). The observer runs before the outputs are mapped, so
 it hears of a success even when the outputs then fail to map. A failed call
 reports no completion, and return types never change.
+
+After code 4, the call fails when an output can't be retrieved, and
+`BriosaOperationError.failure.mp_execution` keeps `PARTIAL_SUCCESS` with
+code 4:
+
+- `OUTPUT_RETRIEVAL_FAILURE` when a getter returned no usable value, or when
+  the worker couldn't deliver the result, for example an oversized value;
+- `SDK_CALL_FAULTED` when a getter raised.
+
+Both have disposition `COMPLETED` and replay guidance `DO_NOT_REPLAY`.
+`mp_execution.output_retrievals` gives each output's state as the server
+reports it. It doesn't always identify the getter: an undeliverable result, or
+a getter fault without per-output evidence, marks every output `FAILED`.
 
 ## Operation Errors
 
@@ -584,7 +598,8 @@ Task cancellation stays `asyncio.CancelledError`.
 
 - **MP execution details.** `OperationFailure.mp_execution` carries the
   server's value-free MP state, code, and output retrievals, and keeps
-  `PARTIAL_SUCCESS` distinct, for example when code 4 came without an output.
+  `PARTIAL_SUCCESS` distinct, for example when an output can't be retrieved
+  after code 4 (see [MP Completion](#mp-completion)).
   Four operations report code 4 as an ordinary `MP_FAILURE` with code 4.
   `construct_point_from_survey_target_center` and
   `set_report_options_for_object` do so because their target documentation

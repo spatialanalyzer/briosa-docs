@@ -59,9 +59,9 @@ empty string, zero, or another value that could be mistaken for a real result.
 SpatialAnalyzer reports MP code `4` (`PARTIAL SUCCESS`) when a command did its
 work but not its full intended effect, for example a fit that exceeded its
 tolerance or a command that processed some, but not all, of the named objects.
-Server 0.10.0 reports it as a success: the call returns its outputs, the MP
-execution state is `PartialSuccess` with code `4`, and the command is
-**completed**. Do not repeat the call to change its outcome.
+Server 0.10.0 reports it as a success: the call returns its outputs when all of
+them are retrieved, the MP execution state is `PartialSuccess` with code `4`,
+and the command is **completed**. Do not repeat the call to change its outcome.
 
 Four operations are the exception: for
 `construct_point_from_survey_target_center`, `open_sa_file`,
@@ -85,8 +85,12 @@ The client calls the observer once, after it checks the completion and before it
 maps the outputs. Every client checks each MP success, whether or not you pass
 an observer: a success must report `Succeeded` with code `2` or
 `PartialSuccess` with code `4`, and anything else is a protocol error. If an
-output then fails, the failure keeps `PartialSuccess` and code `4` in its MP
-execution details.
+output then fails, the call fails instead, and the observer doesn't run. The
+`DataLoss` error (`OutputRetrievalFailure`, or `SdkCallFaulted` for a getter
+that threw) keeps `PartialSuccess` and code `4` in its MP execution details, so
+the code is never lost. Both stay **completed** and say **do not replay**. The
+output retrievals in those details are the per-output states the server
+reports, which don't always identify the getter that failed.
 
 ## When the SDK Raises an Exception
 
@@ -105,7 +109,8 @@ exception text:
 - **In an output getter after MP success or partial success**, the command is
   **completed** (`sdk-output-getter-faulted`). That output is reported as
   unavailable rather than replaced with a default value, and the other outputs
-  are still retrieved.
+  are still retrieved. If the worker has to withhold that per-output evidence,
+  every output is reported failed.
 
 Server 0.9.2 reported these faults through interim kinds, such as `Internal`
 for a fault before `ExecuteStep`; `SdkCallFaulted` replaces them.

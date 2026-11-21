@@ -479,8 +479,8 @@ Every MP function takes `BriosaCallOptions` as its optional last argument. The
 not MP inputs.
 
 An MP that returns code 4 (PARTIAL SUCCESS) did its work, but not its full
-intended effect. The call still succeeds: it resolves with its outputs as usual,
-never rejects for it, and is never retried. `onMpCompletion` receives the call's
+intended effect. The call is never retried, and it resolves with its outputs
+when the server retrieves all of them. `onMpCompletion` receives the call's
 own `MpCompletion`, `succeeded` with MP code 2 or `partialSuccess` with MP code
 4, so concurrent calls stay distinguishable.
 
@@ -501,6 +501,15 @@ disagrees with its code. The callback runs once, after that check and before the
 client maps the outputs, so it still reports a completion whose output mapping
 then fails. A failed call reports no completion. An exception that the callback
 throws rejects the call, although the operation completed.
+
+The server retrieves the outputs before it replies. If it can't retrieve one
+after code 4, the call rejects with `BriosaOperationError` instead, and the
+callback isn't called, because the call didn't succeed. The kind is
+`outputRetrievalFailure` when a getter returned no usable value or the worker
+couldn't deliver the outputs, for example one too large to encode, and
+`sdkCallFaulted` when a getter threw. Both have the `executionDisposition`
+`completed` and the `replayGuidance` `doNotReplay`, and their `mpExecution`
+keeps the state `partialSuccess` and MP code 4.
 
 Four operations report code 4 as an ordinary `mpFailure` with MP code 4 instead,
 because their target documentation says that code leaves the work undone:
@@ -601,14 +610,16 @@ way.
 - **MP execution details.** `mpExecution` carries the server's value-free MP
   state, MP code, and output retrievals, or `null` when the server sent none. A
   `partialSuccess` state stays distinct there, for example when an output could
-  not be retrieved after code 4.
+  not be retrieved after code 4. `outputRetrievals` holds the per-output states
+  that the server reports. They don't always identify the getter that failed:
+  when the worker can't deliver the outputs, every output can be marked
+  `failed`, whether the kind is `outputRetrievalFailure` or `sdkCallFaulted`.
 - **SDK call faults.** `sdkCallFaulted` reports that one SDK call threw during
   the MP sequence. It is its own kind, never folded into `internal` or a
   retrieval failure. Read the proven phase from `executionDisposition`:
   `notStarted` (before Execute Step; do not replay), `startedOutcomeUnknown`
-  (reconcile before any replay), or `completed` (an output getter failed after
-  the MP succeeded; `mpExecution.outputRetrievals` tells the outputs that were
-  read from the one that failed).
+  (reconcile before any replay), or `completed` (an output getter threw after
+  the MP returned code 2 or 4).
 - **Modal dialogs.** When a SpatialAnalyzer modal dialog holds an MP, the failure
   stays `workerWatchdogTimeout` with `startedOutcomeUnknown`, its diagnostic is
   `sa-modal-dialog-open`, and its recovery guidance is

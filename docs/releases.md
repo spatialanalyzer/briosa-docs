@@ -59,7 +59,8 @@ covers every change for applications.
   string, and three optional inputs are now omitted when absent. The clients
   require every input the server requires.
 - **Typed outcomes.** MP code `4` is reported as a partial success with its
-  outputs. An SA SDK exception has its own failure kind, `SdkCallFaulted`.
+  outputs when all of them are retrieved. An SA SDK exception has its own
+  failure kind, `SdkCallFaulted`.
   Lifecycle failures gain caller-cancellation kinds, and an accepted lifecycle
   transition continues detached when its caller stops waiting.
 - **Operator settings.** Execution budgets follow each operation's duration

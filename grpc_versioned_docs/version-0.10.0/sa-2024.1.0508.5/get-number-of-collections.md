@@ -23,7 +23,8 @@ grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.AnalysisOperations/GetNumberOf
 ```
 
 The worker sets the MP step, executes it, retrieves the MP result, requires
-result code `2`, and only then retrieves the `Total Count` integer. MP or
-getter failure never substitutes a count.
+result code `2`, or `4` (a partial success, reported as `PARTIAL_SUCCESS`), and
+only then retrieves the `Total Count` integer. MP or getter failure never
+substitutes a count.
 
 [View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5/docs/operations/get-number-of-collections.md).

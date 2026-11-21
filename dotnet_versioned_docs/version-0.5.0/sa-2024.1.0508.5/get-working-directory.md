@@ -52,8 +52,10 @@ MP command; pass the token by name when you leave the observer out.
 
 The task completes with the working directory reported by SpatialAnalyzer. The
 client validates the required MP output and does not expose the generated gRPC
-result envelope. A partial success (MP code 4) still returns the directory; the
-observer reports it as `PartialSuccess`. See
+result envelope. A partial success (MP code 4) still returns the directory when
+it is retrieved, and the observer reports it as `PartialSuccess`. If the
+directory can't be retrieved, the method throws `BriosaOperationException` and
+the observer doesn't run. See
 [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Failures and Cancellation

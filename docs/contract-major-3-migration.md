@@ -157,9 +157,9 @@ sent as given.
 
 SpatialAnalyzer reports MP code `4` when a command did its work but not its
 full intended effect. Server 0.10.0 reports it as a completed success with its
-outputs, and the clients never throw for it or retry it. Do not replay the call
-to change its outcome. Four operations keep code `4` as an MP failure:
-`construct_point_from_survey_target_center`, `open_sa_file`,
+outputs when all of them are retrieved, and the clients never retry it. Do not
+replay the call to change its outcome. Four operations keep code `4` as an MP
+failure: `construct_point_from_survey_target_center`, `open_sa_file`,
 `open_template_file`, and `set_report_options_for_object`. Their documentation
 says the work was not done, except that the SA 2024.1.0508.5 documentation
 doesn't list code `4` for the two open-file commands; they keep the failure
@@ -184,8 +184,13 @@ error. See [Understand MP Command Results](/docs/concepts/execution-outcomes#whe
 - **MP details on failures.** The operation errors carry the MP execution
   details: .NET `BriosaOperationException.MpExecution`, Python
   `OperationFailure.mp_execution`, and JavaScript
-  `BriosaOperationError.mpExecution`. A partial success whose output could not
-  be read stays `PartialSuccess` there.
+  `BriosaOperationError.mpExecution`. If an output can't be retrieved after
+  code `4`, the call fails and the observer doesn't run. The kind is
+  `SdkCallFaulted` when an output getter threw, and `OutputRetrievalFailure`
+  when a getter returned no usable value or the worker couldn't deliver the
+  result. With either kind, the MP details keep `PartialSuccess` with code `4`.
+  Their output retrievals are the per-output states the server reports, which
+  don't always identify the getter that failed.
 - **Blocking dialogs.** A command stalled by a SpatialAnalyzer modal dialog
   reports a watchdog timeout with diagnostic `sa-modal-dialog-open` and
   operator-intervention guidance. Dismiss the dialog before recovering the SDK.

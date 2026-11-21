@@ -54,9 +54,12 @@ The command has no MP input object. The optional `BriosaCallOptions` carry the
 
 The promise resolves to the working directory reported by SpatialAnalyzer. The
 client validates the required MP output and does not expose the generated gRPC
-result message. A partial success (MP code 4) still resolves with the directory,
-and `onMpCompletion` reports it as `partialSuccess`. A missing directory output
-rejects with `BriosaProtocolError` and diagnostic `working-directory-missing`.
+result message. A partial success (MP code 4) still resolves with the directory
+when the server retrieves it, and `onMpCompletion` reports it as
+`partialSuccess`. If the server can't retrieve the directory, the call rejects
+with `BriosaOperationError` instead, and `onMpCompletion` isn't called. A
+successful reply without the directory rejects with `BriosaProtocolError` and
+diagnostic `working-directory-missing`.
 
 ## Observing the MP Completion
 
