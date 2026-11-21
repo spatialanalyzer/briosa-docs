@@ -279,4 +279,4 @@ enum OperationEffect {
 
 ```
 
-[Candidate Discovery Source](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/proto/briosa/discovery.proto) · [Version Coordinates](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/proto/briosa/version_coordinates.proto)
+[Released Discovery Source](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/proto/briosa/discovery.proto) · [Version Coordinates](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/proto/briosa/version_coordinates.proto)

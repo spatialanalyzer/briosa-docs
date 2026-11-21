@@ -104,4 +104,4 @@ Parameter and result notes:
 | --- | --- |
 | `search_string` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)
+[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.5.0/targets/2024.1.0508.5)

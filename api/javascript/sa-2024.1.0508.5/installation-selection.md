@@ -102,4 +102,4 @@ console.log(report.selected?.version ?? report.diagnosticCode);
 
 Diagnostic paths are explicitly requested local data. Avoid publishing them in logs or support reports. See [Installation Selection](/docs/deployment/installation-selection) and [Diagnostics](/docs/deployment/diagnostics) for deployment guidance.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/installationModels.ts)
+[Released Source](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/installationModels.ts)

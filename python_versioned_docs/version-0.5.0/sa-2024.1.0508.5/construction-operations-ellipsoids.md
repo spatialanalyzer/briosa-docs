@@ -36,4 +36,4 @@ async def construct_ellipsoid(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)
+[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.5.0/targets/2024.1.0508.5)

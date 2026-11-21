@@ -263,4 +263,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/c6691dff8e9a7af9d6c4accf422074dab7287e8c/targets/2024.1.0508.5)
+[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.0/targets/2024.1.0508.5)

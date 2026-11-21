@@ -247,4 +247,4 @@ device, trapping, watch, robot-interface, and appliance session workflows are
 exclusive, and every profile, flag, and override denies them for now: a call
 fails with `PolicyDenied` and `NotStarted`.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSelection.cs) · [Candidate Snapshot Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSnapshot.cs)
+[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSelection.cs) · [Released Snapshot Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSnapshot.cs)

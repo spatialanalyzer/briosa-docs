@@ -12,7 +12,7 @@ These declarations describe the handwritten client **0.5.0** for **SA 2024.1.050
 
 ## `AngularUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const AngularUnits = Object.freeze({
@@ -30,7 +30,7 @@ export type AngularUnits = (typeof AngularUnits)[keyof typeof AngularUnits];
 
 ## `AsciiFileFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const AsciiFileFormat = Object.freeze({
@@ -86,7 +86,7 @@ export type AsciiFileFormat = (typeof AsciiFileFormat)[keyof typeof AsciiFileFor
 
 ## `BSplineFitOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface BSplineFitOptions {
@@ -109,7 +109,7 @@ export interface BSplineFitOptions {
 
 ## `BaseColorType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const BaseColorType = Object.freeze({
@@ -122,7 +122,7 @@ export type BaseColorType = (typeof BaseColorType)[keyof typeof BaseColorType];
 
 ## `BaseMidColorType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const BaseMidColorType = Object.freeze({
@@ -136,7 +136,7 @@ export type BaseMidColorType = (typeof BaseMidColorType)[keyof typeof BaseMidCol
 
 ## `CalibrationApplianceNodeStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CalibrationApplianceNodeStatus {
@@ -147,7 +147,7 @@ export interface CalibrationApplianceNodeStatus {
 
 ## `CalloutPosition`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CalloutPosition {
@@ -162,7 +162,7 @@ export interface CalloutPosition {
 
 ## `CalloutViewProperties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CalloutViewProperties {
@@ -180,7 +180,7 @@ export interface CalloutViewProperties {
 
 ## `ChartName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ChartName {
@@ -190,7 +190,7 @@ export interface ChartName {
 
 ## `ChartType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ChartType = Object.freeze({
@@ -203,7 +203,7 @@ export type ChartType = (typeof ChartType)[keyof typeof ChartType];
 
 ## `CloudThinningOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CloudThinningOptions {
@@ -216,7 +216,7 @@ export interface CloudThinningOptions {
 
 ## `CloudToCadAlignmentResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CloudToCadAlignmentResult {
@@ -229,7 +229,7 @@ export interface CloudToCadAlignmentResult {
 
 ## `CloudViewerInstrumentInput`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CloudViewerInstrumentInput {
@@ -239,7 +239,7 @@ export interface CloudViewerInstrumentInput {
 
 ## `CollectionGroupName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface CollectionGroupName {
@@ -250,7 +250,7 @@ export interface CollectionGroupName {
 
 ## `CollectionInstrumentId`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface CollectionInstrumentId {
@@ -261,7 +261,7 @@ export interface CollectionInstrumentId {
 
 ## `CollectionItemName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface CollectionItemName {
@@ -273,7 +273,7 @@ export interface CollectionItemName {
 
 ## `CollectionMachineId`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CollectionMachineId {
@@ -284,7 +284,7 @@ export interface CollectionMachineId {
 
 ## `CollectionName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface CollectionName {
@@ -294,7 +294,7 @@ export interface CollectionName {
 
 ## `CollectionObjectName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface CollectionObjectName {
@@ -306,7 +306,7 @@ export interface CollectionObjectName {
 
 ## `CollectionVectorGroupName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface CollectionVectorGroupName {
@@ -317,7 +317,7 @@ export interface CollectionVectorGroupName {
 
 ## `Color`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface Color {
@@ -329,7 +329,7 @@ export interface Color {
 
 ## `ColorRangeMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ColorRangeMethod = Object.freeze({
@@ -345,7 +345,7 @@ export type ColorRangeMethod = (typeof ColorRangeMethod)[keyof typeof ColorRange
 
 ## `ColorizationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ColorizationOptions {
@@ -397,7 +397,7 @@ export const ColorizationOptions = Object.freeze({
 
 ## `CompTechnique`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const CompTechnique = Object.freeze({
@@ -410,7 +410,7 @@ export type CompTechnique = (typeof CompTechnique)[keyof typeof CompTechnique];
 
 ## `CoordinateSystemType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const CoordinateSystemType = Object.freeze({
@@ -423,7 +423,7 @@ export type CoordinateSystemType = (typeof CoordinateSystemType)[keyof typeof Co
 
 ## `CurrentTrappingStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface CurrentTrappingStatus {
@@ -435,7 +435,7 @@ export interface CurrentTrappingStatus {
 
 ## `DatasetType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const DatasetType = Object.freeze({
@@ -449,7 +449,7 @@ export type DatasetType = (typeof DatasetType)[keyof typeof DatasetType];
 
 ## `DatumInput`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface DatumInput {
@@ -459,7 +459,7 @@ export interface DatumInput {
 
 ## `DegreeOfFreedom`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const DegreeOfFreedom = Object.freeze({
@@ -472,7 +472,7 @@ export type DegreeOfFreedom = (typeof DegreeOfFreedom)[keyof typeof DegreeOfFree
 
 ## `DistanceUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const DistanceUnits = Object.freeze({
@@ -488,7 +488,7 @@ export type DistanceUnits = (typeof DistanceUnits)[keyof typeof DistanceUnits];
 
 ## `EmbeddedReportFile`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface EmbeddedReportFile {
@@ -499,7 +499,7 @@ export interface EmbeddedReportFile {
 
 ## `EulerZxzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface EulerZxzTransformComponents {
@@ -514,7 +514,7 @@ export interface EulerZxzTransformComponents {
 
 ## `EulerZyxTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface EulerZyxTransformComponents {
@@ -529,7 +529,7 @@ export interface EulerZyxTransformComponents {
 
 ## `EulerZyzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface EulerZyzTransformComponents {
@@ -544,7 +544,7 @@ export interface EulerZyzTransformComponents {
 
 ## `ExportDataDelimeterType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ExportDataDelimeterType = Object.freeze({
@@ -557,7 +557,7 @@ export type ExportDataDelimeterType = (typeof ExportDataDelimeterType)[keyof typ
 
 ## `ExportTargetNameFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ExportTargetNameFormat = Object.freeze({
@@ -571,7 +571,7 @@ export type ExportTargetNameFormat = (typeof ExportTargetNameFormat)[keyof typeo
 
 ## `ExportVectorNameFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ExportVectorNameFormat = Object.freeze({
@@ -585,7 +585,7 @@ export type ExportVectorNameFormat = (typeof ExportVectorNameFormat)[keyof typeo
 
 ## `FeatureCheckCylinderEvalOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FeatureCheckCylinderEvalOptions {
@@ -596,7 +596,7 @@ export interface FeatureCheckCylinderEvalOptions {
 
 ## `FeatureCheckDatumReference`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FeatureCheckDatumReference {
@@ -611,7 +611,7 @@ export interface FeatureCheckDatumReference {
 
 ## `FeatureCheckDatumReferencesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FeatureCheckDatumReferencesResult {
@@ -623,7 +623,7 @@ export interface FeatureCheckDatumReferencesResult {
 
 ## `FeatureCheckInput`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FeatureCheckInput {
@@ -633,7 +633,7 @@ export interface FeatureCheckInput {
 
 ## `FeatureCheckReportingOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FeatureCheckReportingOptions {
@@ -648,7 +648,7 @@ export interface FeatureCheckReportingOptions {
 
 ## `FileReference`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface FileReference {
@@ -659,7 +659,7 @@ export interface FileReference {
 
 ## `FilterProximitySettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FilterProximitySettings {
@@ -679,7 +679,7 @@ export interface FilterProximitySettings {
 
 ## `FitConstraintScalarOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface FitConstraintScalarOptions {
@@ -697,7 +697,7 @@ export const FitConstraintScalarOptions = Object.freeze({
 
 ## `FitDofOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FitDofOptions {
@@ -713,7 +713,7 @@ export interface FitDofOptions {
 
 ## `FitErrorResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FitErrorResult {
@@ -724,7 +724,7 @@ export interface FitErrorResult {
 
 ## `FitMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const FitMethod = Object.freeze({
@@ -736,7 +736,7 @@ export type FitMethod = (typeof FitMethod)[keyof typeof FitMethod];
 
 ## `FixedXyzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FixedXyzTransformComponents {
@@ -751,7 +751,7 @@ export interface FixedXyzTransformComponents {
 
 ## `FixedXyzTransformVectors`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface FixedXyzTransformVectors {
@@ -762,7 +762,7 @@ export interface FixedXyzTransformVectors {
 
 ## `Font`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface Font {
@@ -782,7 +782,7 @@ export const Font = Object.freeze({
 
 ## `FrameName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface FrameName {
@@ -792,7 +792,7 @@ export interface FrameName {
 
 ## `GdtMeasurements`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface GdtMeasurements {
@@ -803,7 +803,7 @@ export interface GdtMeasurements {
 
 ## `GdtOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface GdtOptions {
@@ -821,7 +821,7 @@ export interface GdtOptions {
 
 ## `GeneralRelationshipStatistics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface GeneralRelationshipStatistics {
@@ -835,7 +835,7 @@ export interface GeneralRelationshipStatistics {
 
 ## `GeometryRelationshipOutlierFilterMetrics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface GeometryRelationshipOutlierFilterMetrics {
@@ -854,7 +854,7 @@ export interface GeometryRelationshipOutlierFilterMetrics {
 
 ## `GeometryType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const GeometryType = Object.freeze({
@@ -874,7 +874,7 @@ export type GeometryType = (typeof GeometryType)[keyof typeof GeometryType];
 
 ## `GroupAverageResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface GroupAverageResult {
@@ -886,7 +886,7 @@ export interface GroupAverageResult {
 
 ## `InstrumentBestFitResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentBestFitResult {
@@ -902,7 +902,7 @@ export interface InstrumentBestFitResult {
 
 ## `InstrumentModelResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentModelResult {
@@ -913,7 +913,7 @@ export interface InstrumentModelResult {
 
 ## `InstrumentPositionUpdate`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentPositionUpdate {
@@ -927,7 +927,7 @@ export interface InstrumentPositionUpdate {
 
 ## `InstrumentTargetStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentTargetStatus {
@@ -940,7 +940,7 @@ export interface InstrumentTargetStatus {
 
 ## `InstrumentTargetsAndModeProfiles`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentTargetsAndModeProfiles {
@@ -951,7 +951,7 @@ export interface InstrumentTargetsAndModeProfiles {
 
 ## `InstrumentTypeName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentTypeName {
@@ -961,7 +961,7 @@ export interface InstrumentTypeName {
 
 ## `InstrumentWeatherSetting`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentWeatherSetting {
@@ -974,7 +974,7 @@ export interface InstrumentWeatherSetting {
 
 ## `InstrumentXyzUncertainties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface InstrumentXyzUncertainties {
@@ -986,7 +986,7 @@ export interface InstrumentXyzUncertainties {
 
 ## `ItemType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ItemType = Object.freeze({
@@ -1037,7 +1037,7 @@ export type ItemType = (typeof ItemType)[keyof typeof ItemType];
 
 ## `LastInstrumentIndexResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface LastInstrumentIndexResult {
@@ -1048,7 +1048,7 @@ export interface LastInstrumentIndexResult {
 
 ## `LrFlipTestResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface LrFlipTestResult {
@@ -1068,7 +1068,7 @@ export interface LrFlipTestResult {
 
 ## `LrInstrumentInput`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface LrInstrumentInput {
@@ -1078,7 +1078,7 @@ export interface LrInstrumentInput {
 
 ## `LrLoSeparationTestResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface LrLoSeparationTestResult {
@@ -1099,7 +1099,7 @@ export interface LrLoSeparationTestResult {
 
 ## `LrSnrInfo`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface LrSnrInfo {
@@ -1113,7 +1113,7 @@ export interface LrSnrInfo {
 
 ## `MakeGdtDatumAnnotationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface MakeGdtDatumAnnotationOptions {
@@ -1130,7 +1130,7 @@ export interface MakeGdtDatumAnnotationOptions {
 
 ## `MakeGdtFeatureCheckAnnotationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface MakeGdtFeatureCheckAnnotationOptions {
@@ -1169,7 +1169,7 @@ export interface MakeGdtFeatureCheckAnnotationOptions {
 
 ## `MeasuredSideForPlanarOffset`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const MeasuredSideForPlanarOffset = Object.freeze({
@@ -1182,7 +1182,7 @@ export type MeasuredSideForPlanarOffset = (typeof MeasuredSideForPlanarOffset)[k
 
 ## `MeasuredSideForRadialOffset`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const MeasuredSideForRadialOffset = Object.freeze({
@@ -1195,7 +1195,7 @@ export type MeasuredSideForRadialOffset = (typeof MeasuredSideForRadialOffset)[k
 
 ## `MpDialogInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const MpDialogInteractionMode = Object.freeze({
@@ -1207,7 +1207,7 @@ export type MpDialogInteractionMode = (typeof MpDialogInteractionMode)[keyof typ
 
 ## `MpInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const MpInteractionMode = Object.freeze({
@@ -1220,7 +1220,7 @@ export type MpInteractionMode = (typeof MpInteractionMode)[keyof typeof MpIntera
 
 ## `NormalDirection`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const NormalDirection = Object.freeze({
@@ -1233,7 +1233,7 @@ export type NormalDirection = (typeof NormalDirection)[keyof typeof NormalDirect
 
 ## `ObjectOriginResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface ObjectOriginResult {
@@ -1246,7 +1246,7 @@ export interface ObjectOriginResult {
 
 ## `ObjectType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ObjectType = Object.freeze({
@@ -1281,7 +1281,7 @@ export type ObjectType = (typeof ObjectType)[keyof typeof ObjectType];
 
 ## `ObservationInfo`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface ObservationInfo {
@@ -1299,7 +1299,7 @@ export interface ObservationInfo {
 
 ## `ObservationSphericalValues`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface ObservationSphericalValues {
@@ -1311,7 +1311,7 @@ export interface ObservationSphericalValues {
 
 ## `PerimeterLists`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface PerimeterLists {
@@ -1322,7 +1322,7 @@ export interface PerimeterLists {
 
 ## `PointComparisonResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface PointComparisonResult {
@@ -1337,7 +1337,7 @@ export interface PointComparisonResult {
 
 ## `PointDeltaReportOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface PointDeltaReportOptions {
@@ -1375,7 +1375,7 @@ export const PointDeltaReportOptions = Object.freeze({
 
 ## `PointFilterInputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const PointFilterInputType = Object.freeze({
@@ -1388,7 +1388,7 @@ export type PointFilterInputType = (typeof PointFilterInputType)[keyof typeof Po
 
 ## `PointName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface PointName {
@@ -1400,7 +1400,7 @@ export interface PointName {
 
 ## `PointToPointRelationshipStatistics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface PointToPointRelationshipStatistics {
@@ -1414,7 +1414,7 @@ export interface PointToPointRelationshipStatistics {
 
 ## `PointsToObjectsRelationshipStatistics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface PointsToObjectsRelationshipStatistics {
@@ -1432,7 +1432,7 @@ export interface PointsToObjectsRelationshipStatistics {
 
 ## `PointsToPointsRelationshipAssociatedData`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface PointsToPointsRelationshipAssociatedData {
@@ -1443,7 +1443,7 @@ export interface PointsToPointsRelationshipAssociatedData {
 
 ## `ProjectedPointGradient`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface ProjectedPointGradient {
@@ -1456,7 +1456,7 @@ export interface ProjectedPointGradient {
 
 ## `ProjectionOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ProjectionOptions {
@@ -1482,7 +1482,7 @@ export const ProjectionOptions = Object.freeze({
 
 ## `RelWeightingMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const RelWeightingMode = Object.freeze({
@@ -1498,7 +1498,7 @@ export type RelWeightingMode = (typeof RelWeightingMode)[keyof typeof RelWeighti
 
 ## `RelationshipAssociatedData`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RelationshipAssociatedData {
@@ -1512,7 +1512,7 @@ export interface RelationshipAssociatedData {
 
 ## `RelationshipFitResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RelationshipFitResult {
@@ -1525,7 +1525,7 @@ export interface RelationshipFitResult {
 
 ## `RelationshipStatusFlags`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RelationshipStatusFlags {
@@ -1539,7 +1539,7 @@ export interface RelationshipStatusFlags {
 
 ## `RelationshipWatchWindowTemplateOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RelationshipWatchWindowTemplateOptions {
@@ -1561,7 +1561,7 @@ export interface RelationshipWatchWindowTemplateOptions {
 
 ## `RelationshipWatchWindowUdpSettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RelationshipWatchWindowUdpSettings {
@@ -1574,7 +1574,7 @@ export interface RelationshipWatchWindowUdpSettings {
 
 ## `RenderModeType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const RenderModeType = Object.freeze({
@@ -1588,7 +1588,7 @@ export type RenderModeType = (typeof RenderModeType)[keyof typeof RenderModeType
 
 ## `ReportOutputOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export type ReportOutputOptions =
@@ -1613,7 +1613,7 @@ export const ReportOutputOptions = Object.freeze({
 
 ## `ReportOutputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ReportOutputType = Object.freeze({
@@ -1628,7 +1628,7 @@ export type ReportOutputType = (typeof ReportOutputType)[keyof typeof ReportOutp
 
 ## `ReportPageSettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ReportPageSettings = Object.freeze({
@@ -1640,7 +1640,7 @@ export type ReportPageSettings = (typeof ReportPageSettings)[keyof typeof Report
 
 ## `ReportViewOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ReportViewOptions {
@@ -1652,7 +1652,7 @@ export interface ReportViewOptions {
 
 ## `ReportViewType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const ReportViewType = Object.freeze({
@@ -1665,7 +1665,7 @@ export type ReportViewType = (typeof ReportViewType)[keyof typeof ReportViewType
 
 ## `RobotCalibrationMetrics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RobotCalibrationMetrics {
@@ -1681,7 +1681,7 @@ export interface RobotCalibrationMetrics {
 
 ## `RobotModelLinkConfiguration`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RobotModelLinkConfiguration {
@@ -1715,7 +1715,7 @@ export interface RobotModelLinkConfiguration {
 
 ## `RobotModelLinkParameters`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface RobotModelLinkParameters {
@@ -1726,7 +1726,7 @@ export interface RobotModelLinkParameters {
 
 ## `SaInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const SaInteractionMode = Object.freeze({
@@ -1739,7 +1739,7 @@ export type SaInteractionMode = (typeof SaInteractionMode)[keyof typeof SaIntera
 
 ## `ScalarToleranceLimit`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ScalarToleranceLimit {
@@ -1750,7 +1750,7 @@ export interface ScalarToleranceLimit {
 
 ## `SetInstrumentBaseUncertaintyCovarianceMatrixInput`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface SetInstrumentBaseUncertaintyCovarianceMatrixInput {
@@ -1761,7 +1761,7 @@ export interface SetInstrumentBaseUncertaintyCovarianceMatrixInput {
 
 ## `SetMeasurementsInput`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface SetMeasurementsInput {
@@ -1773,7 +1773,7 @@ export interface SetMeasurementsInput {
 
 ## `SigmoidalGapFitConstraints`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface SigmoidalGapFitConstraints {
@@ -1790,7 +1790,7 @@ export interface SigmoidalGapFitConstraints {
 
 ## `SlotType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const SlotType = Object.freeze({
@@ -1802,7 +1802,7 @@ export type SlotType = (typeof SlotType)[keyof typeof SlotType];
 
 ## `SphereFitComputationMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const SphereFitComputationMode = Object.freeze({
@@ -1815,7 +1815,7 @@ export type SphereFitComputationMode = (typeof SphereFitComputationMode)[keyof t
 
 ## `SurfaceAnalysisMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const SurfaceAnalysisMode = Object.freeze({
@@ -1836,7 +1836,7 @@ export type SurfaceAnalysisMode = (typeof SurfaceAnalysisMode)[keyof typeof Surf
 
 ## `SurfaceFaceList`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface SurfaceFaceList {
@@ -1846,7 +1846,7 @@ export interface SurfaceFaceList {
 
 ## `TcpFixtureUncertainties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface TcpFixtureUncertainties {
@@ -1864,7 +1864,7 @@ export interface TcpFixtureUncertainties {
 
 ## `TemperatureUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const TemperatureUnits = Object.freeze({
@@ -1876,7 +1876,7 @@ export type TemperatureUnits = (typeof TemperatureUnits)[keyof typeof Temperatur
 
 ## `ToleranceLimit`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ToleranceLimit {
@@ -1887,7 +1887,7 @@ export interface ToleranceLimit {
 
 ## `ToleranceScalarOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ToleranceScalarOptions {
@@ -1905,7 +1905,7 @@ export const ToleranceScalarOptions = Object.freeze({
 
 ## `ToleranceVectorOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ToleranceVectorOptions {
@@ -1935,7 +1935,7 @@ export const ToleranceVectorOptions = Object.freeze({
 
 ## `TrackerEdmTheodoliteUncertainties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface TrackerEdmTheodoliteUncertainties {
@@ -1950,7 +1950,7 @@ export interface TrackerEdmTheodoliteUncertainties {
 
 ## `Transform`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface Transform {
@@ -1960,7 +1960,7 @@ export interface Transform {
 
 ## `TransformAxes`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface TransformAxes {
@@ -1973,7 +1973,7 @@ export interface TransformAxes {
 
 ## `TranslucencyType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const TranslucencyType = Object.freeze({
@@ -1986,7 +1986,7 @@ export type TranslucencyType = (typeof TranslucencyType)[keyof typeof Translucen
 
 ## `UncertaintyCovarianceMatrix`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface UncertaintyCovarianceMatrix {
@@ -2001,7 +2001,7 @@ export interface UncertaintyCovarianceMatrix {
 
 ## `Vector`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface Vector {
@@ -2013,7 +2013,7 @@ export interface Vector {
 
 ## `VectorName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface VectorName {
@@ -2025,7 +2025,7 @@ export interface VectorName {
 
 ## `ViewName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface ViewName {
@@ -2035,7 +2035,7 @@ export interface ViewName {
 
 ## `WindowState`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export const WindowState = Object.freeze({
@@ -2050,7 +2050,7 @@ export type WindowState = (typeof WindowState)[keyof typeof WindowState];
 
 ## `WorldFixedXyzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface WorldFixedXyzTransformComponents extends FixedXyzTransformComponents {
@@ -2060,7 +2060,7 @@ export interface WorldFixedXyzTransformComponents extends FixedXyzTransformCompo
 
 ## `WorldFixedXyzTransformVectors`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface WorldFixedXyzTransformVectors {
@@ -2072,7 +2072,7 @@ export interface WorldFixedXyzTransformVectors {
 
 ## `WorldTransform`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/operationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/operationValues.ts)
 
 ```ts
 export interface WorldTransform {
@@ -2083,7 +2083,7 @@ export interface WorldTransform {
 
 ## `WrtlChannelStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5/src/waveBOperationValues.ts)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/targets/2024.1.0508.5/src/waveBOperationValues.ts)
 
 ```ts
 export interface WrtlChannelStatus {

@@ -1760,4 +1760,4 @@ message WrtlChannelStatus {
 }
 ```
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5/proto/briosa)
+[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.0/targets/2024.1.0508.5/proto/briosa)

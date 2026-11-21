@@ -47,4 +47,4 @@ No released signature is available for SA 2024.1.0508.5.
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder).
 No released signature is available for SA 2024.1.0508.5.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)
+[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.0/targets/2024.1.0508.5)

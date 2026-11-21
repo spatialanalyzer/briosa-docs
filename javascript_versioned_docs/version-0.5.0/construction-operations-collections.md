@@ -125,4 +125,4 @@ Parameter and result notes:
 | --- | --- |
 | `searchString` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)
+[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.0/targets/2026.1.0529.7)

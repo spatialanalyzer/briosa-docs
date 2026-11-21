@@ -41,7 +41,7 @@ Client 0.5.0 selects only servers of behavioral contract major 3, which Server
 Server 0.9.x; the two clients and servers install side by side. Every MP method
 now takes an optional `onMpCompletion` observer, nine operations are gone, and
 several inputs became required or optional. See the
-[client 0.5.0 migration notes](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/docs/contract-major-3-migration.md)
+[client 0.5.0 migration notes](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/docs/contract-major-3-migration.md)
 for every change.
 
 ## MP Commands

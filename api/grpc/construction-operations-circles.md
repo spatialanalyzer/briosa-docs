@@ -72,4 +72,4 @@ message ConstructCirclesFromSurfaceFacesRuntimeSelectResult {
 Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code -1 for both the Circle and the Line mode on both exact targets. No replacement extracts circles or lines from surfaces on these exact targets. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)
+[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.0/targets/2026.1.0529.7)

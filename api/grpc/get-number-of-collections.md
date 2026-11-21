@@ -27,4 +27,4 @@ result code `2`, or `4` (a partial success, reported as `PARTIAL_SUCCESS`), and
 only then retrieves the `Total Count` integer. MP or getter failure never
 substitutes a count.
 
-[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/docs/operations/get-number-of-collections.md).
+[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/get-number-of-collections.md).

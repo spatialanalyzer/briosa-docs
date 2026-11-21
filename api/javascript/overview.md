@@ -43,7 +43,7 @@ rollback. MP functions take an optional `onMpCompletion` observer in their call
 options, nine operations are gone, and several inputs became required or
 optional. See the
 [contract major 3 migration guide](/docs/contract-major-3-migration) and the
-[client 0.5.0 migration notes](https://github.com/spatialanalyzer/briosa-js/blob/feda30f3bd0bdae8cf9b02ae307146de259e2167/docs/contract-major-3-migration.md)
+[client 0.5.0 migration notes](https://github.com/spatialanalyzer/briosa-js/blob/v0.5.0/docs/contract-major-3-migration.md)
 for every change. The nine removed operations keep their method pages, which
 explain the removal; each page's method history keeps the 0.4.0 contract.
 

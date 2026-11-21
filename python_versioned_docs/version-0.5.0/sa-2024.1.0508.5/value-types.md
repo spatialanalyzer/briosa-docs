@@ -12,7 +12,7 @@ These declarations describe the handwritten client **0.5.0** for **SA 2024.1.050
 
 ## `ActiveUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -24,7 +24,7 @@ class ActiveUnits:
 
 ## `AngularUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class AngularUnits(str, Enum):
@@ -41,7 +41,7 @@ class AngularUnits(str, Enum):
 
 ## `AsciiFileFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class AsciiFileFormat(str, Enum):
@@ -107,7 +107,7 @@ class AsciiFileFormat(str, Enum):
 
 ## `AskForStringPullDownVersionResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -118,7 +118,7 @@ class AskForStringPullDownVersionResult:
 
 ## `AxisIdentifier`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class AxisIdentifier(Enum):
@@ -132,7 +132,7 @@ class AxisIdentifier(Enum):
 
 ## `BSplineFitOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -155,7 +155,7 @@ class BSplineFitOptions:
 
 ## `BSplinePointSortMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class BSplinePointSortMode(str, Enum):
@@ -166,7 +166,7 @@ class BSplinePointSortMode(str, Enum):
 
 ## `BaseColorType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class BaseColorType(str, Enum):
@@ -177,7 +177,7 @@ class BaseColorType(str, Enum):
 
 ## `BaseMidColorType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class BaseMidColorType(str, Enum):
@@ -189,7 +189,7 @@ class BaseMidColorType(str, Enum):
 
 ## `BestFitTransformationGroupToGroupResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -205,7 +205,7 @@ class BestFitTransformationGroupToGroupResult:
 
 ## `CalibrationApplianceNodeStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -216,7 +216,7 @@ class CalibrationApplianceNodeStatus:
 
 ## `CalloutPosition`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -231,7 +231,7 @@ class CalloutPosition:
 
 ## `CalloutViewProperties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -249,7 +249,7 @@ class CalloutViewProperties:
 
 ## `ChartName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -259,7 +259,7 @@ class ChartName:
 
 ## `ChartType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ChartType(str, Enum):
@@ -270,7 +270,7 @@ class ChartType(str, Enum):
 
 ## `CloudBoxType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class CloudBoxType(str, Enum):
@@ -282,7 +282,7 @@ class CloudBoxType(str, Enum):
 
 ## `CloudThinningMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class CloudThinningMode(str, Enum):
@@ -293,7 +293,7 @@ class CloudThinningMode(str, Enum):
 
 ## `CloudThinningOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True)
@@ -306,7 +306,7 @@ class CloudThinningOptions:
 
 ## `CloudToCadAlignmentResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -319,7 +319,7 @@ class CloudToCadAlignmentResult:
 
 ## `CollectionGroupName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -330,7 +330,7 @@ class CollectionGroupName:
 
 ## `CollectionInstrumentId`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -341,7 +341,7 @@ class CollectionInstrumentId:
 
 ## `CollectionItemName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -353,7 +353,7 @@ class CollectionItemName:
 
 ## `CollectionMachineId`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -364,7 +364,7 @@ class CollectionMachineId:
 
 ## `CollectionName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -374,7 +374,7 @@ class CollectionName:
 
 ## `CollectionObjectName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -386,7 +386,7 @@ class CollectionObjectName:
 
 ## `CollectionVectorGroupName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -397,7 +397,7 @@ class CollectionVectorGroupName:
 
 ## `CollimationBaselineMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class CollimationBaselineMethod(str, Enum):
@@ -408,7 +408,7 @@ class CollimationBaselineMethod(str, Enum):
 
 ## `CollimationTiltMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class CollimationTiltMode(str, Enum):
@@ -418,7 +418,7 @@ class CollimationTiltMode(str, Enum):
 
 ## `Color`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -430,7 +430,7 @@ class Color:
 
 ## `ColorRangeMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ColorRangeMethod(str, Enum):
@@ -444,7 +444,7 @@ class ColorRangeMethod(str, Enum):
 
 ## `ColorizationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -473,7 +473,7 @@ class ColorizationOptions:
 
 ## `CompTechnique`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class CompTechnique(str, Enum):
@@ -485,7 +485,7 @@ class CompTechnique(str, Enum):
 
 ## `ComputeGroupToGroupOrientationRxRyRzResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -497,7 +497,7 @@ class ComputeGroupToGroupOrientationRxRyRzResult:
 
 ## `ConstructObjectType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class ConstructObjectType(str, Enum):
@@ -516,7 +516,7 @@ class ConstructObjectType(str, Enum):
 
 ## `ConstructVectorGroupGroupToGroupCompareResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -529,7 +529,7 @@ class ConstructVectorGroupGroupToGroupCompareResult:
 
 ## `CoordinateSystemType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class CoordinateSystemType(str, Enum):
@@ -541,7 +541,7 @@ class CoordinateSystemType(str, Enum):
 
 ## `CreatePointUncertaintyCloudPointSetsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -553,7 +553,7 @@ class CreatePointUncertaintyCloudPointSetsResult:
 
 ## `CurrentTrappingStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -565,7 +565,7 @@ class CurrentTrappingStatus:
 
 ## `DatasetType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class DatasetType(str, Enum):
@@ -577,7 +577,7 @@ class DatasetType(str, Enum):
 
 ## `DegreeOfFreedom`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class DegreeOfFreedom(str, Enum):
@@ -589,7 +589,7 @@ class DegreeOfFreedom(str, Enum):
 
 ## `DeleteCollectionsByWildcardResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -600,7 +600,7 @@ class DeleteCollectionsByWildcardResult:
 
 ## `DeleteFoldersByWildcardResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -611,7 +611,7 @@ class DeleteFoldersByWildcardResult:
 
 ## `DirectCadAccessResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -624,7 +624,7 @@ class DirectCadAccessResult:
 
 ## `DistanceUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class DistanceUnits(str, Enum):
@@ -638,7 +638,7 @@ class DistanceUnits(str, Enum):
 
 ## `DoubleVector6`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -648,7 +648,7 @@ class DoubleVector6:
 
 ## `DriftCheckResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -661,7 +661,7 @@ class DriftCheckResult:
 
 ## `DynamicCircleMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class DynamicCircleMode(str, Enum):
@@ -680,7 +680,7 @@ class DynamicCircleMode(str, Enum):
 
 ## `DynamicEllipseMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class DynamicEllipseMode(str, Enum):
@@ -690,7 +690,7 @@ class DynamicEllipseMode(str, Enum):
 
 ## `DynamicLineMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class DynamicLineMode(str, Enum):
@@ -703,7 +703,7 @@ class DynamicLineMode(str, Enum):
 
 ## `DynamicPlaneMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class DynamicPlaneMode(str, Enum):
@@ -731,7 +731,7 @@ class DynamicPlaneMode(str, Enum):
 
 ## `DynamicPointMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class DynamicPointMode(str, Enum):
@@ -744,7 +744,7 @@ class DynamicPointMode(str, Enum):
 
 ## `EdgePointMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class EdgePointMode(str, Enum):
@@ -755,7 +755,7 @@ class EdgePointMode(str, Enum):
 
 ## `EmbeddedReportFile`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -766,7 +766,7 @@ class EmbeddedReportFile:
 
 ## `EulerXyzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -781,7 +781,7 @@ class EulerXyzTransformComponents:
 
 ## `EulerZxzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -796,7 +796,7 @@ class EulerZxzTransformComponents:
 
 ## `EulerZyxTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -811,7 +811,7 @@ class EulerZyxTransformComponents:
 
 ## `EulerZyzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -826,7 +826,7 @@ class EulerZyzTransformComponents:
 
 ## `EvaluateFeatureCheckResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -854,7 +854,7 @@ class EvaluateFeatureCheckResult:
 
 ## `EvaluateFeatureChecksResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -866,7 +866,7 @@ class EvaluateFeatureChecksResult:
 
 ## `ExportDataDelimeterType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ExportDataDelimeterType(str, Enum):
@@ -877,7 +877,7 @@ class ExportDataDelimeterType(str, Enum):
 
 ## `ExportTargetNameFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ExportTargetNameFormat(str, Enum):
@@ -889,7 +889,7 @@ class ExportTargetNameFormat(str, Enum):
 
 ## `ExportVectorNameFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ExportVectorNameFormat(str, Enum):
@@ -901,7 +901,7 @@ class ExportVectorNameFormat(str, Enum):
 
 ## `FeatureCheckCylinderEvalOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -912,7 +912,7 @@ class FeatureCheckCylinderEvalOptions:
 
 ## `FeatureCheckDatumReference`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -927,7 +927,7 @@ class FeatureCheckDatumReference:
 
 ## `FeatureCheckDatumReferencesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -939,7 +939,7 @@ class FeatureCheckDatumReferencesResult:
 
 ## `FeatureCheckReportingOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -954,7 +954,7 @@ class FeatureCheckReportingOptions:
 
 ## `FileReference`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -965,7 +965,7 @@ class FileReference:
 
 ## `FilterProximitySettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -985,7 +985,7 @@ class FilterProximitySettings:
 
 ## `FitConstraintScalarOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -997,7 +997,7 @@ class FitConstraintScalarOptions:
 
 ## `FitDofOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1013,7 +1013,7 @@ class FitDofOptions:
 
 ## `FitErrorResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1024,7 +1024,7 @@ class FitErrorResult:
 
 ## `FitMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class FitMethod(str, Enum):
@@ -1035,7 +1035,7 @@ class FitMethod(str, Enum):
 
 ## `FixedXyzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -1050,7 +1050,7 @@ class FixedXyzTransformComponents:
 
 ## `FixedXyzTransformVectors`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -1061,7 +1061,7 @@ class FixedXyzTransformVectors:
 
 ## `Font`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1074,7 +1074,7 @@ class Font:
 
 ## `FrameAxis`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class FrameAxis(Enum):
@@ -1085,7 +1085,7 @@ class FrameAxis(Enum):
 
 ## `FrameConstructionMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class FrameConstructionMethod(Enum):
@@ -1099,7 +1099,7 @@ class FrameConstructionMethod(Enum):
 
 ## `FrameName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1109,7 +1109,7 @@ class FrameName:
 
 ## `GdtDistanceBetweenMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class GdtDistanceBetweenMode(Enum):
@@ -1119,7 +1119,7 @@ class GdtDistanceBetweenMode(Enum):
 
 ## `GdtEvaluationMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class GdtEvaluationMethod(Enum):
@@ -1134,7 +1134,7 @@ class GdtEvaluationMethod(Enum):
 
 ## `GdtExtendedEvaluationMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class GdtExtendedEvaluationMethod(Enum):
@@ -1153,7 +1153,7 @@ class GdtExtendedEvaluationMethod(Enum):
 
 ## `GdtFeatureType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class GdtFeatureType(Enum):
@@ -1182,7 +1182,7 @@ class GdtFeatureType(Enum):
 
 ## `GdtMeasurements`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1193,7 +1193,7 @@ class GdtMeasurements:
 
 ## `GdtOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1211,7 +1211,7 @@ class GdtOptions:
 
 ## `GdtToleranceZoneType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class GdtToleranceZoneType(Enum):
@@ -1228,7 +1228,7 @@ class GdtToleranceZoneType(Enum):
 
 ## `GeneralRelationshipStatistics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1242,7 +1242,7 @@ class GeneralRelationshipStatistics:
 
 ## `GeometryRelationshipOutlierFilterMetrics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1261,7 +1261,7 @@ class GeometryRelationshipOutlierFilterMetrics:
 
 ## `GeometryRelationshipPointEditMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class GeometryRelationshipPointEditMode(str, Enum):
@@ -1272,7 +1272,7 @@ class GeometryRelationshipPointEditMode(str, Enum):
 
 ## `GeometryType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class GeometryType(str, Enum):
@@ -1290,7 +1290,7 @@ class GeometryType(str, Enum):
 
 ## `GetActiveLanguageResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1301,7 +1301,7 @@ class GetActiveLanguageResult:
 
 ## `GetBSplinePropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1316,7 +1316,7 @@ class GetBSplinePropertiesResult:
 
 ## `GetCirclePropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1329,7 +1329,7 @@ class GetCirclePropertiesResult:
 
 ## `GetCloudPointCountResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -1342,7 +1342,7 @@ class GetCloudPointCountResult:
 
 ## `GetCloudRGBValuesNearPointResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -1355,7 +1355,7 @@ class GetCloudRGBValuesNearPointResult:
 
 ## `GetCloudRGBValuesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -1368,7 +1368,7 @@ class GetCloudRGBValuesResult:
 
 ## `GetConePropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1383,7 +1383,7 @@ class GetConePropertiesResult:
 
 ## `GetCoordinateForIthPointInPointSetResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1394,7 +1394,7 @@ class GetCoordinateForIthPointInPointSetResult:
 
 ## `GetCylinderPropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1414,7 +1414,7 @@ class GetCylinderPropertiesResult:
 
 ## `GetDimensionValueResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1430,7 +1430,7 @@ class GetDimensionValueResult:
 
 ## `GetEllipsePropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1443,7 +1443,7 @@ class GetEllipsePropertiesResult:
 
 ## `GetEulerParametersForFrameResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1459,7 +1459,7 @@ class GetEulerParametersForFrameResult:
 
 ## `GetEulerParametersForIthFrameInFrameSetResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1475,7 +1475,7 @@ class GetEulerParametersForIthFrameInFrameSetResult:
 
 ## `GetGeomRelationshipAutoVectorsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1489,7 +1489,7 @@ class GetGeomRelationshipAutoVectorsResult:
 
 ## `GetGeomRelationshipCriteriaResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1508,7 +1508,7 @@ class GetGeomRelationshipCriteriaResult:
 
 ## `GetGeomRelationshipPointListResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1520,7 +1520,7 @@ class GetGeomRelationshipPointListResult:
 
 ## `GetIthPointFromGroupResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1532,7 +1532,7 @@ class GetIthPointFromGroupResult:
 
 ## `GetIthVectorFromVectorGroupResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1547,7 +1547,7 @@ class GetIthVectorFromVectorGroupResult:
 
 ## `GetIthVectorFromVectorNameRefListResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1563,7 +1563,7 @@ class GetIthVectorFromVectorNameRefListResult:
 
 ## `GetLinePropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1579,7 +1579,7 @@ class GetLinePropertiesResult:
 
 ## `GetMeasurementAuxiliaryDataResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1590,7 +1590,7 @@ class GetMeasurementAuxiliaryDataResult:
 
 ## `GetMeasurementWeatherDataResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1602,7 +1602,7 @@ class GetMeasurementWeatherDataResult:
 
 ## `GetNamedDoubleListVariableMinMaxResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1613,7 +1613,7 @@ class GetNamedDoubleListVariableMinMaxResult:
 
 ## `GetPipeRelationshipCutStatusResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1626,7 +1626,7 @@ class GetPipeRelationshipCutStatusResult:
 
 ## `GetPipeRelationshipPropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1645,7 +1645,7 @@ class GetPipeRelationshipPropertiesResult:
 
 ## `GetPipeRelationshipWeightsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1662,7 +1662,7 @@ class GetPipeRelationshipWeightsResult:
 
 ## `GetPlanePropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1674,7 +1674,7 @@ class GetPlanePropertiesResult:
 
 ## `GetPointCoordinateCylindricalResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1686,7 +1686,7 @@ class GetPointCoordinateCylindricalResult:
 
 ## `GetPointCoordinatePolarResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1698,7 +1698,7 @@ class GetPointCoordinatePolarResult:
 
 ## `GetPointCoordinateResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1711,7 +1711,7 @@ class GetPointCoordinateResult:
 
 ## `GetPointOfViewParametersResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1728,7 +1728,7 @@ class GetPointOfViewParametersResult:
 
 ## `GetPointPropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1745,7 +1745,7 @@ class GetPointPropertiesResult:
 
 ## `GetPointToLineDistanceResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1759,7 +1759,7 @@ class GetPointToLineDistanceResult:
 
 ## `GetPointToPointDistanceResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1773,7 +1773,7 @@ class GetPointToPointDistanceResult:
 
 ## `GetPointToleranceResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1799,7 +1799,7 @@ class GetPointToleranceResult:
 
 ## `GetRelationshipFitConstraintsScalarTypeResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1813,7 +1813,7 @@ class GetRelationshipFitConstraintsScalarTypeResult:
 
 ## `GetRelationshipOutlierRejectionScalarTypeResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1826,7 +1826,7 @@ class GetRelationshipOutlierRejectionScalarTypeResult:
 
 ## `GetRelationshipProjectionOptionsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1840,7 +1840,7 @@ class GetRelationshipProjectionOptionsResult:
 
 ## `GetRelationshipSubSamplingOptionsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1853,7 +1853,7 @@ class GetRelationshipSubSamplingOptionsResult:
 
 ## `GetRelationshipToleranceScalarTypeResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1867,7 +1867,7 @@ class GetRelationshipToleranceScalarTypeResult:
 
 ## `GetRelationshipToleranceVectorTypeResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1893,7 +1893,7 @@ class GetRelationshipToleranceVectorTypeResult:
 
 ## `GetReportTagValueResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1905,7 +1905,7 @@ class GetReportTagValueResult:
 
 ## `GetScaleBarStatsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1917,7 +1917,7 @@ class GetScaleBarStatsResult:
 
 ## `GetScreenResolutionResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1932,7 +1932,7 @@ class GetScreenResolutionResult:
 
 ## `GetSlotPropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1949,7 +1949,7 @@ class GetSlotPropertiesResult:
 
 ## `GetSpherePropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1961,7 +1961,7 @@ class GetSpherePropertiesResult:
 
 ## `GetSurfacePhysicalStatsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1972,7 +1972,7 @@ class GetSurfacePhysicalStatsResult:
 
 ## `GetTorusPropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1985,7 +1985,7 @@ class GetTorusPropertiesResult:
 
 ## `GetVectorFromVectorGroupByNameResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1999,7 +1999,7 @@ class GetVectorFromVectorGroupByNameResult:
 
 ## `GetVectorGroupPropertiesResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2025,7 +2025,7 @@ class GetVectorGroupPropertiesResult:
 
 ## `GroupAverageResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True)
@@ -2037,7 +2037,7 @@ class GroupAverageResult:
 
 ## `GroupToSurfaceFitResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2049,7 +2049,7 @@ class GroupToSurfaceFitResult:
 
 ## `InspectionFilter`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class InspectionFilter(str, Enum):
@@ -2060,7 +2060,7 @@ class InspectionFilter(str, Enum):
 
 ## `InstrumentBestFitResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2076,7 +2076,7 @@ class InstrumentBestFitResult:
 
 ## `InstrumentModelResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2087,7 +2087,7 @@ class InstrumentModelResult:
 
 ## `InstrumentPositionReportingFrame`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class InstrumentPositionReportingFrame(str, Enum):
@@ -2098,7 +2098,7 @@ class InstrumentPositionReportingFrame(str, Enum):
 
 ## `InstrumentPositionUpdate`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2112,7 +2112,7 @@ class InstrumentPositionUpdate:
 
 ## `InstrumentTargetStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2125,7 +2125,7 @@ class InstrumentTargetStatus:
 
 ## `InstrumentTargetsAndModeProfiles`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2136,7 +2136,7 @@ class InstrumentTargetsAndModeProfiles:
 
 ## `InstrumentTypeName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -2146,7 +2146,7 @@ class InstrumentTypeName:
 
 ## `InstrumentWeatherSetting`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2159,7 +2159,7 @@ class InstrumentWeatherSetting:
 
 ## `InstrumentXyzUncertainties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2171,7 +2171,7 @@ class InstrumentXyzUncertainties:
 
 ## `ItemType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ItemType(str, Enum):
@@ -2220,7 +2220,7 @@ class ItemType(str, Enum):
 
 ## `LastInstrumentIndexResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2231,7 +2231,7 @@ class LastInstrumentIndexResult:
 
 ## `LrFlipTestResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2251,7 +2251,7 @@ class LrFlipTestResult:
 
 ## `LrLoSeparationTestResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2272,7 +2272,7 @@ class LrLoSeparationTestResult:
 
 ## `LrSelfTestResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2293,7 +2293,7 @@ class LrSelfTestResult:
 
 ## `LrSnrInfo`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2307,7 +2307,7 @@ class LrSnrInfo:
 
 ## `MakeGdtDatumAnnotationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, kw_only=True)
@@ -2324,7 +2324,7 @@ class MakeGdtDatumAnnotationOptions:
 
 ## `MakeGdtFeatureCheckAnnotationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, kw_only=True)
@@ -2363,7 +2363,7 @@ class MakeGdtFeatureCheckAnnotationOptions:
 
 ## `MeasuredSideForPlanarOffset`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class MeasuredSideForPlanarOffset(str, Enum):
@@ -2375,7 +2375,7 @@ class MeasuredSideForPlanarOffset(str, Enum):
 
 ## `MeasuredSideForRadialOffset`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class MeasuredSideForRadialOffset(str, Enum):
@@ -2387,7 +2387,7 @@ class MeasuredSideForRadialOffset(str, Enum):
 
 ## `MeshVolumeResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -2398,7 +2398,7 @@ class MeshVolumeResult:
 
 ## `MpDialogInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class MpDialogInteractionMode(str, Enum):
@@ -2408,7 +2408,7 @@ class MpDialogInteractionMode(str, Enum):
 
 ## `MpInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class MpInteractionMode(str, Enum):
@@ -2419,7 +2419,7 @@ class MpInteractionMode(str, Enum):
 
 ## `MushroomTargetHoleInspectionResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2430,7 +2430,7 @@ class MushroomTargetHoleInspectionResult:
 
 ## `NormalDirection`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class NormalDirection(str, Enum):
@@ -2442,7 +2442,7 @@ class NormalDirection(str, Enum):
 
 ## `ObjectOriginResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True)
@@ -2455,7 +2455,7 @@ class ObjectOriginResult:
 
 ## `ObjectType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ObjectType(str, Enum):
@@ -2489,7 +2489,7 @@ class ObjectType(str, Enum):
 
 ## `ObservationInfo`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2507,7 +2507,7 @@ class ObservationInfo:
 
 ## `ObservationSphericalValues`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2519,7 +2519,7 @@ class ObservationSphericalValues:
 
 ## `OffsetDirectionType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class OffsetDirectionType(str, Enum):
@@ -2530,7 +2530,7 @@ class OffsetDirectionType(str, Enum):
 
 ## `PerimeterLists`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2541,7 +2541,7 @@ class PerimeterLists:
 
 ## `PointComparisonResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2556,7 +2556,7 @@ class PointComparisonResult:
 
 ## `PointDeltaReportOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2578,7 +2578,7 @@ class PointDeltaReportOptions:
 
 ## `PointFilterInputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class PointFilterInputType(str, Enum):
@@ -2590,7 +2590,7 @@ class PointFilterInputType(str, Enum):
 
 ## `PointName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2602,7 +2602,7 @@ class PointName:
 
 ## `PointOutputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class PointOutputType(str, Enum):
@@ -2612,7 +2612,7 @@ class PointOutputType(str, Enum):
 
 ## `PointToPointRelationshipStatistics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2626,7 +2626,7 @@ class PointToPointRelationshipStatistics:
 
 ## `PointsToObjectsRelationshipStatistics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2644,7 +2644,7 @@ class PointsToObjectsRelationshipStatistics:
 
 ## `PointsToPointsRelationshipAssociatedData`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2655,7 +2655,7 @@ class PointsToPointsRelationshipAssociatedData:
 
 ## `ProjectedPointGradient`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True)
@@ -2668,7 +2668,7 @@ class ProjectedPointGradient:
 
 ## `ProjectionOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2684,7 +2684,7 @@ class ProjectionOptions:
 
 ## `QueryCloudsToObjectsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2695,7 +2695,7 @@ class QueryCloudsToObjectsResult:
 
 ## `QueryCloudsToSurfaceResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2706,7 +2706,7 @@ class QueryCloudsToSurfaceResult:
 
 ## `QueryFrameToFrameResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2721,7 +2721,7 @@ class QueryFrameToFrameResult:
 
 ## `QueryGroupsToObjectsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2734,7 +2734,7 @@ class QueryGroupsToObjectsResult:
 
 ## `QueryPointToObjectsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2748,7 +2748,7 @@ class QueryPointToObjectsResult:
 
 ## `QueryPointsToObjectsResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2761,7 +2761,7 @@ class QueryPointsToObjectsResult:
 
 ## `RGBColorChannel`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class RGBColorChannel(str, Enum):
@@ -2773,7 +2773,7 @@ class RGBColorChannel(str, Enum):
 
 ## `RGBFilterOperation`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class RGBFilterOperation(str, Enum):
@@ -2784,7 +2784,7 @@ class RGBFilterOperation(str, Enum):
 
 ## `RelWeightingMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class RelWeightingMode(str, Enum):
@@ -2802,7 +2802,7 @@ class RelWeightingMode(str, Enum):
 
 ## `RelationshipAssociatedData`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2816,7 +2816,7 @@ class RelationshipAssociatedData:
 
 ## `RelationshipFitResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2829,7 +2829,7 @@ class RelationshipFitResult:
 
 ## `RelationshipStatusFlags`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2843,7 +2843,7 @@ class RelationshipStatusFlags:
 
 ## `RelationshipWatchWindowTemplateOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2865,7 +2865,7 @@ class RelationshipWatchWindowTemplateOptions:
 
 ## `RelationshipWatchWindowUdpSettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2878,7 +2878,7 @@ class RelationshipWatchWindowUdpSettings:
 
 ## `RenderModeType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class RenderModeType(str, Enum):
@@ -2891,7 +2891,7 @@ class RenderModeType(str, Enum):
 
 ## `ReportOutputOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2904,7 +2904,7 @@ class ReportOutputOptions:
 
 ## `ReportOutputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ReportOutputType(str, Enum):
@@ -2917,7 +2917,7 @@ class ReportOutputType(str, Enum):
 
 ## `ReportPageSettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ReportPageSettings(str, Enum):
@@ -2928,7 +2928,7 @@ class ReportPageSettings(str, Enum):
 
 ## `ReportViewOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -2940,7 +2940,7 @@ class ReportViewOptions:
 
 ## `ReportViewType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class ReportViewType(str, Enum):
@@ -2951,7 +2951,7 @@ class ReportViewType(str, Enum):
 
 ## `ResetCloudBoundingBoxResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -2970,7 +2970,7 @@ class ResetCloudBoundingBoxResult:
 
 ## `RobotActiveJointComponent`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class RobotActiveJointComponent(str, Enum):
@@ -2989,7 +2989,7 @@ class RobotActiveJointComponent(str, Enum):
 
 ## `RobotCalibrationMetrics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3005,7 +3005,7 @@ class RobotCalibrationMetrics:
 
 ## `RobotModelLinkConfiguration`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3039,7 +3039,7 @@ class RobotModelLinkConfiguration:
 
 ## `RobotModelLinkParameters`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3050,7 +3050,7 @@ class RobotModelLinkParameters:
 
 ## `RobotModelLinkType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class RobotModelLinkType(str, Enum):
@@ -3060,7 +3060,7 @@ class RobotModelLinkType(str, Enum):
 
 ## `SaInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class SaInteractionMode(str, Enum):
@@ -3071,7 +3071,7 @@ class SaInteractionMode(str, Enum):
 
 ## `ScalarToleranceLimit`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3082,7 +3082,7 @@ class ScalarToleranceLimit:
 
 ## `ShowUsmnDialog`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class ShowUsmnDialog(str, Enum):
@@ -3093,7 +3093,7 @@ class ShowUsmnDialog(str, Enum):
 
 ## `SigmoidalGapFitConstraints`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3110,7 +3110,7 @@ class SigmoidalGapFitConstraints:
 
 ## `SlotType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class SlotType(str, Enum):
@@ -3121,7 +3121,7 @@ class SlotType(str, Enum):
 
 ## `SolverMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class SolverMode(str, Enum):
@@ -3133,7 +3133,7 @@ class SolverMode(str, Enum):
 
 ## `SphereAxisCheckResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3149,7 +3149,7 @@ class SphereAxisCheckResult:
 
 ## `SphereFitComputationMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class SphereFitComputationMode(str, Enum):
@@ -3161,7 +3161,7 @@ class SphereFitComputationMode(str, Enum):
 
 ## `SurfaceAnalysisMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class SurfaceAnalysisMode(str, Enum):
@@ -3181,7 +3181,7 @@ class SurfaceAnalysisMode(str, Enum):
 
 ## `SurfaceDissectionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class SurfaceDissectionMode(Enum):
@@ -3191,7 +3191,7 @@ class SurfaceDissectionMode(Enum):
 
 ## `SurfaceFaceList`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True)
@@ -3201,7 +3201,7 @@ class SurfaceFaceList:
 
 ## `SurveyTargetType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class SurveyTargetType(str, Enum):
@@ -3211,7 +3211,7 @@ class SurveyTargetType(str, Enum):
 
 ## `SystemString`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class SystemString(str, Enum):
@@ -3230,7 +3230,7 @@ class SystemString(str, Enum):
 
 ## `TargetComputationMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class TargetComputationMethod(str, Enum):
@@ -3244,7 +3244,7 @@ class TargetComputationMethod(str, Enum):
 
 ## `TcpFixtureUncertainties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3262,7 +3262,7 @@ class TcpFixtureUncertainties:
 
 ## `TemperatureUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class TemperatureUnits(str, Enum):
@@ -3273,7 +3273,7 @@ class TemperatureUnits(str, Enum):
 
 ## `ToleranceLimit`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3284,7 +3284,7 @@ class ToleranceLimit:
 
 ## `ToleranceScalarOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3296,7 +3296,7 @@ class ToleranceScalarOptions:
 
 ## `ToleranceVectorOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3314,7 +3314,7 @@ class ToleranceVectorOptions:
 
 ## `TrackerEdmTheodoliteUncertainties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3329,7 +3329,7 @@ class TrackerEdmTheodoliteUncertainties:
 
 ## `Transform`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3339,7 +3339,7 @@ class Transform:
 
 ## `TransformAxes`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -3352,7 +3352,7 @@ class TransformAxes:
 
 ## `TranslucencyType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class TranslucencyType(str, Enum):
@@ -3363,7 +3363,7 @@ class TranslucencyType(str, Enum):
 
 ## `UncertaintyCovarianceMatrix`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3378,7 +3378,7 @@ class UncertaintyCovarianceMatrix:
 
 ## `Vector`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True)
@@ -3390,7 +3390,7 @@ class Vector:
 
 ## `VectorName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3402,7 +3402,7 @@ class VectorName:
 
 ## `ViewName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3412,7 +3412,7 @@ class ViewName:
 
 ## `WcfAxis`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 class WcfAxis(str, Enum):
@@ -3423,7 +3423,7 @@ class WcfAxis(str, Enum):
 
 ## `WindowState`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 class WindowState(str, Enum):
@@ -3436,7 +3436,7 @@ class WindowState(str, Enum):
 
 ## `WorkingFrameProperties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_models.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3448,7 +3448,7 @@ class WorkingFrameProperties:
 
 ## `WorldFixedXyzTransformComponents`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -3458,7 +3458,7 @@ class WorldFixedXyzTransformComponents(FixedXyzTransformComponents):
 
 ## `WorldFixedXyzTransformVectors`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_models.py)
 
 ```python
 @dataclass(frozen=True)
@@ -3470,7 +3470,7 @@ class WorldFixedXyzTransformVectors:
 
 ## `WorldTransform`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -3481,7 +3481,7 @@ class WorldTransform:
 
 ## `WrtlChannelStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/wave_b_operation_values.py)
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)

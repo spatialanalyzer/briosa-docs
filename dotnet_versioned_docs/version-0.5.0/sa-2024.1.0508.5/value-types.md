@@ -12,7 +12,7 @@ These declarations describe the handwritten client **0.5.0** for **SA 2024.1.050
 
 ## `AngularUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum AngularUnits
@@ -30,7 +30,7 @@ public enum AngularUnits
 
 ## `AsciiFileFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum AsciiFileFormat
@@ -84,7 +84,7 @@ public enum AsciiFileFormat
 
 ## `AxisIdentifier`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum AxisIdentifier
@@ -100,7 +100,7 @@ public enum AxisIdentifier
 
 ## `BSplineFitOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record BSplineFitOptions
@@ -124,7 +124,7 @@ public sealed record BSplineFitOptions
 
 ## `BSplinePointSortMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum BSplinePointSortMode
@@ -137,7 +137,7 @@ public enum BSplinePointSortMode
 
 ## `BaseColorType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum BaseColorType { Red = 1, Green = 2, Blue = 3 }
@@ -145,7 +145,7 @@ public enum BaseColorType { Red = 1, Green = 2, Blue = 3 }
 
 ## `BaseMidColorType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum BaseMidColorType { Red = 1, Green = 2, Gray = 3, Blue = 4 }
@@ -153,7 +153,7 @@ public enum BaseMidColorType { Red = 1, Green = 2, Gray = 3, Blue = 4 }
 
 ## `CalloutViewProperties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record CalloutViewProperties
@@ -172,7 +172,7 @@ public sealed record CalloutViewProperties
 
 ## `ChartName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record ChartName { public required string Name { get; init; } }
@@ -180,7 +180,7 @@ public sealed record ChartName { public required string Name { get; init; } }
 
 ## `ChartType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ChartType { RunChart = 1, IndividualXMovingRange = 2, BullseyeChart = 3 }
@@ -188,7 +188,7 @@ public enum ChartType { RunChart = 1, IndividualXMovingRange = 2, BullseyeChart 
 
 ## `CloudBoxType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum CloudBoxType
@@ -202,7 +202,7 @@ public enum CloudBoxType
 
 ## `CloudThinningMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum CloudThinningMode
@@ -215,7 +215,7 @@ public enum CloudThinningMode
 
 ## `CloudThinningOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record CloudThinningOptions
@@ -229,7 +229,7 @@ public sealed record CloudThinningOptions
 
 ## `CloudToCadAlignmentResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record CloudToCadAlignmentResult
@@ -243,7 +243,7 @@ public sealed record CloudToCadAlignmentResult
 
 ## `CollectionGroupName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record CollectionGroupName
@@ -255,7 +255,7 @@ public sealed record CollectionGroupName
 
 ## `CollectionInstrumentId`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record CollectionInstrumentId
@@ -267,7 +267,7 @@ public sealed record CollectionInstrumentId
 
 ## `CollectionItemName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record CollectionItemName
@@ -280,7 +280,7 @@ public sealed record CollectionItemName
 
 ## `CollectionMachineId`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record CollectionMachineId
@@ -292,7 +292,7 @@ public sealed record CollectionMachineId
 
 ## `CollectionName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record CollectionName { public required string Name { get; init; } }
@@ -300,7 +300,7 @@ public sealed record CollectionName { public required string Name { get; init; }
 
 ## `CollectionObjectName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record CollectionObjectName
@@ -313,7 +313,7 @@ public sealed record CollectionObjectName
 
 ## `CollectionVectorGroupName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record CollectionVectorGroupName
@@ -325,7 +325,7 @@ public sealed record CollectionVectorGroupName
 
 ## `CollimationBaselineMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum CollimationBaselineMethod
@@ -338,7 +338,7 @@ public enum CollimationBaselineMethod
 
 ## `CollimationTiltMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum CollimationTiltMode
@@ -350,7 +350,7 @@ public enum CollimationTiltMode
 
 ## `Color`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record Color
@@ -367,7 +367,7 @@ public sealed record Color
 
 ## `ColorRangeMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ColorRangeMethod
@@ -383,7 +383,7 @@ public enum ColorRangeMethod
 
 ## `ColorizationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record ColorizationOptions
@@ -412,7 +412,7 @@ public sealed record ColorizationOptions
 
 ## `CompTechnique`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum CompTechnique { Standard = 1, MaxInscribed = 2, MinCircumscribed = 3 }
@@ -420,7 +420,7 @@ public enum CompTechnique { Standard = 1, MaxInscribed = 2, MinCircumscribed = 3
 
 ## `ConstructObjectType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum ConstructObjectType
@@ -441,7 +441,7 @@ public enum ConstructObjectType
 
 ## `CoordinateSystemType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum CoordinateSystemType { Cartesian = 1, Cylindric = 2, Polar = 3 }
@@ -449,7 +449,7 @@ public enum CoordinateSystemType { Cartesian = 1, Cylindric = 2, Polar = 3 }
 
 ## `CurrentTrappingStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record CurrentTrappingStatus
@@ -462,7 +462,7 @@ public sealed record CurrentTrappingStatus
 
 ## `DatasetType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum DatasetType { X = 1, Y = 2, Z = 3, Magnitude = 4 }
@@ -470,7 +470,7 @@ public enum DatasetType { X = 1, Y = 2, Z = 3, Magnitude = 4 }
 
 ## `DegreeOfFreedom`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum DegreeOfFreedom { Any = 1, LockFocusLocation = 2, LockVertexLocation = 3 }
@@ -478,7 +478,7 @@ public enum DegreeOfFreedom { Any = 1, LockFocusLocation = 2, LockVertexLocation
 
 ## `DistanceUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum DistanceUnits { Meters = 1, Centimeters = 2, Millimeters = 3, Feet = 4, Inches = 5, UsSurveyFeet = 6 }
@@ -486,7 +486,7 @@ public enum DistanceUnits { Meters = 1, Centimeters = 2, Millimeters = 3, Feet =
 
 ## `DoubleVector6`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record DoubleVector6
@@ -497,7 +497,7 @@ public sealed record DoubleVector6
 
 ## `DynamicCircleMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum DynamicCircleMode
@@ -514,7 +514,7 @@ public enum DynamicCircleMode
 
 ## `DynamicEllipseMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum DynamicEllipseMode
@@ -526,7 +526,7 @@ public enum DynamicEllipseMode
 
 ## `DynamicLineMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum DynamicLineMode
@@ -541,7 +541,7 @@ public enum DynamicLineMode
 
 ## `DynamicPlaneMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum DynamicPlaneMode
@@ -559,7 +559,7 @@ public enum DynamicPlaneMode
 
 ## `DynamicPointMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum DynamicPointMode
@@ -574,7 +574,7 @@ public enum DynamicPointMode
 
 ## `EdgePointMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum EdgePointMode
@@ -587,7 +587,7 @@ public enum EdgePointMode
 
 ## `EmbeddedReportFile`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record EmbeddedReportFile
@@ -599,7 +599,7 @@ public sealed record EmbeddedReportFile
 
 ## `ExportDataDelimeterType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ExportDataDelimeterType { Space = 1, Comma = 2, Tab = 3 }
@@ -607,7 +607,7 @@ public enum ExportDataDelimeterType { Space = 1, Comma = 2, Tab = 3 }
 
 ## `ExportTargetNameFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ExportTargetNameFormat { CollectionGroupTarget = 1, GroupTarget = 2, Target = 3, None = 4 }
@@ -615,7 +615,7 @@ public enum ExportTargetNameFormat { CollectionGroupTarget = 1, GroupTarget = 2,
 
 ## `ExportVectorNameFormat`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ExportVectorNameFormat { CollectionGroupVector = 1, GroupVector = 2, Vector = 3, None = 4 }
@@ -623,7 +623,7 @@ public enum ExportVectorNameFormat { CollectionGroupVector = 1, GroupVector = 2,
 
 ## `FeatureCheckCylinderEvalOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record FeatureCheckCylinderEvalOptions
@@ -635,7 +635,7 @@ public sealed record FeatureCheckCylinderEvalOptions
 
 ## `FeatureCheckDatumReference`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record FeatureCheckDatumReference
@@ -651,7 +651,7 @@ public sealed record FeatureCheckDatumReference
 
 ## `FeatureCheckReportingOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record FeatureCheckReportingOptions
@@ -667,7 +667,7 @@ public sealed record FeatureCheckReportingOptions
 
 ## `FileReference`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record FileReference
@@ -679,7 +679,7 @@ public sealed record FileReference
 
 ## `FilterProximitySettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record FilterProximitySettings
@@ -700,7 +700,7 @@ public sealed record FilterProximitySettings
 
 ## `FitConstraintScalarOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public readonly record struct FitConstraintScalarOptions(
@@ -710,7 +710,7 @@ public readonly record struct FitConstraintScalarOptions(
 
 ## `FitDofOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record FitDofOptions
@@ -727,7 +727,7 @@ public sealed record FitDofOptions
 
 ## `FitMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum FitMethod { MinimumRms = 1, BestAxis = 2 }
@@ -735,7 +735,7 @@ public enum FitMethod { MinimumRms = 1, BestAxis = 2 }
 
 ## `Font`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record Font
@@ -748,7 +748,7 @@ public sealed record Font
 
 ## `FrameAxis`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum FrameAxis
@@ -761,7 +761,7 @@ public enum FrameAxis
 
 ## `FrameConstructionMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum FrameConstructionMethod
@@ -777,7 +777,7 @@ public enum FrameConstructionMethod
 
 ## `FrameName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record FrameName { public required string Name { get; init; } }
@@ -785,7 +785,7 @@ public sealed record FrameName { public required string Name { get; init; } }
 
 ## `GdtDistanceBetweenMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum GdtDistanceBetweenMode
@@ -797,7 +797,7 @@ public enum GdtDistanceBetweenMode
 
 ## `GdtEvaluationMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum GdtEvaluationMethod
@@ -814,7 +814,7 @@ public enum GdtEvaluationMethod
 
 ## `GdtExtendedEvaluationMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum GdtExtendedEvaluationMethod
@@ -835,7 +835,7 @@ public enum GdtExtendedEvaluationMethod
 
 ## `GdtFeatureType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum GdtFeatureType
@@ -866,7 +866,7 @@ public enum GdtFeatureType
 
 ## `GdtMeasurements`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record GdtMeasurements
@@ -878,7 +878,7 @@ public sealed record GdtMeasurements
 
 ## `GdtOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record GdtOptions
@@ -897,7 +897,7 @@ public sealed record GdtOptions
 
 ## `GdtToleranceZoneType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum GdtToleranceZoneType
@@ -916,7 +916,7 @@ public enum GdtToleranceZoneType
 
 ## `GeometryRelationshipOutlierFilterMetrics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record GeometryRelationshipOutlierFilterMetrics
@@ -936,7 +936,7 @@ public sealed record GeometryRelationshipOutlierFilterMetrics
 
 ## `GeometryRelationshipPointEditMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum GeometryRelationshipPointEditMode
@@ -949,7 +949,7 @@ public enum GeometryRelationshipPointEditMode
 
 ## `GeometryType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum GeometryType { Line = 1, Plane = 2, Circle = 3, Sphere = 4, Cylinder = 5, Cone = 6, Paraboloid = 7, Ellipse = 8, Slot = 9, Torus = 10 }
@@ -957,7 +957,7 @@ public enum GeometryType { Line = 1, Plane = 2, Circle = 3, Sphere = 4, Cylinder
 
 ## `GroupAverageResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record GroupAverageResult
@@ -970,7 +970,7 @@ public sealed record GroupAverageResult
 
 ## `InspectionFilter`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum InspectionFilter
@@ -983,7 +983,7 @@ public enum InspectionFilter
 
 ## `InstrumentPositionReportingFrame`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum InstrumentPositionReportingFrame
@@ -996,7 +996,7 @@ public enum InstrumentPositionReportingFrame
 
 ## `InstrumentTargetStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record InstrumentTargetStatus
@@ -1010,7 +1010,7 @@ public sealed record InstrumentTargetStatus
 
 ## `InstrumentTypeName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record InstrumentTypeName
@@ -1021,7 +1021,7 @@ public sealed record InstrumentTypeName
 
 ## `ItemType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ItemType
@@ -1072,7 +1072,7 @@ public enum ItemType
 
 ## `LrFlipTestResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record LrFlipTestResult
@@ -1093,7 +1093,7 @@ public sealed record LrFlipTestResult
 
 ## `LrLoSeparationTestResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record LrLoSeparationTestResult
@@ -1115,7 +1115,7 @@ public sealed record LrLoSeparationTestResult
 
 ## `LrSnrInfo`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record LrSnrInfo
@@ -1130,7 +1130,7 @@ public sealed record LrSnrInfo
 
 ## `MakeGdtDatumAnnotationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record MakeGdtDatumAnnotationOptions
@@ -1148,7 +1148,7 @@ public sealed record MakeGdtDatumAnnotationOptions
 
 ## `MakeGdtFeatureCheckAnnotationOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record MakeGdtFeatureCheckAnnotationOptions
@@ -1188,7 +1188,7 @@ public sealed record MakeGdtFeatureCheckAnnotationOptions
 
 ## `MeasuredSideForPlanarOffset`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum MeasuredSideForPlanarOffset { AbovePlane = 1, ProbeCenter = 2, BelowPlane = 3 }
@@ -1196,7 +1196,7 @@ public enum MeasuredSideForPlanarOffset { AbovePlane = 1, ProbeCenter = 2, Below
 
 ## `MeasuredSideForRadialOffset`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum MeasuredSideForRadialOffset { Inside = 1, ProbeCenter = 2, Outside = 3 }
@@ -1204,7 +1204,7 @@ public enum MeasuredSideForRadialOffset { Inside = 1, ProbeCenter = 2, Outside =
 
 ## `MpDialogInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum MpDialogInteractionMode { BlockApplicationInteraction = 1, AllowApplicationInteraction = 2 }
@@ -1212,7 +1212,7 @@ public enum MpDialogInteractionMode { BlockApplicationInteraction = 1, AllowAppl
 
 ## `MpInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum MpInteractionMode { HaltOnFailureOnly = 1, HaltOnFailureOrPartialSuccess = 2, NeverHalt = 3 }
@@ -1220,7 +1220,7 @@ public enum MpInteractionMode { HaltOnFailureOnly = 1, HaltOnFailureOrPartialSuc
 
 ## `NormalDirection`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum NormalDirection { ProbingDirection = 1, WorkingOriginPositive = 2, RightHandRule = 3 }
@@ -1228,7 +1228,7 @@ public enum NormalDirection { ProbingDirection = 1, WorkingOriginPositive = 2, R
 
 ## `ObjectOriginResult`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record ObjectOriginResult
@@ -1242,7 +1242,7 @@ public sealed record ObjectOriginResult
 
 ## `ObjectType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ObjectType
@@ -1277,7 +1277,7 @@ public enum ObjectType
 
 ## `ObservationInfo`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record ObservationInfo
@@ -1296,7 +1296,7 @@ public sealed record ObservationInfo
 
 ## `ObservationSphericalValues`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record ObservationSphericalValues
@@ -1309,7 +1309,7 @@ public sealed record ObservationSphericalValues
 
 ## `OffsetDirectionType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum OffsetDirectionType
@@ -1322,7 +1322,7 @@ public enum OffsetDirectionType
 
 ## `PerimeterLists`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record PerimeterLists
@@ -1334,7 +1334,7 @@ public sealed record PerimeterLists
 
 ## `PointDeltaReportOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record PointDeltaReportOptions
@@ -1356,7 +1356,7 @@ public sealed record PointDeltaReportOptions
 
 ## `PointFilterInputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum PointFilterInputType { CardinalPoints = 1, InputPoints = 2, NominalCardinalPoints = 3 }
@@ -1364,7 +1364,7 @@ public enum PointFilterInputType { CardinalPoints = 1, InputPoints = 2, NominalC
 
 ## `PointName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record PointName
@@ -1377,7 +1377,7 @@ public sealed record PointName
 
 ## `PointOutputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum PointOutputType
@@ -1389,7 +1389,7 @@ public enum PointOutputType
 
 ## `PointsToPointsRelationshipAssociatedData`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record PointsToPointsRelationshipAssociatedData
@@ -1401,7 +1401,7 @@ public sealed record PointsToPointsRelationshipAssociatedData
 
 ## `ProjectedPointGradient`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record ProjectedPointGradient
@@ -1415,7 +1415,7 @@ public sealed record ProjectedPointGradient
 
 ## `ProjectionOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record ProjectionOptions
@@ -1431,7 +1431,7 @@ public sealed record ProjectionOptions
 
 ## `RGBColorChannel`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum RGBColorChannel
@@ -1445,7 +1445,7 @@ public enum RGBColorChannel
 
 ## `RGBFilterOperation`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum RGBFilterOperation
@@ -1458,7 +1458,7 @@ public enum RGBFilterOperation
 
 ## `RelWeightingMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum RelWeightingMode { NormalizeEquationCount = 1, NormalizeEquationCountAndToleranceWidth = 2, ResetAllWeights = 3, NormalizeSquareRootEquationCount = 4, NormalizeSquareRootAndToleranceWidth = 5 }
@@ -1466,7 +1466,7 @@ public enum RelWeightingMode { NormalizeEquationCount = 1, NormalizeEquationCoun
 
 ## `RelationshipAssociatedData`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record RelationshipAssociatedData
@@ -1481,7 +1481,7 @@ public sealed record RelationshipAssociatedData
 
 ## `RelationshipStatusFlags`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record RelationshipStatusFlags
@@ -1496,7 +1496,7 @@ public sealed record RelationshipStatusFlags
 
 ## `RelationshipWatchWindowTemplateOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record RelationshipWatchWindowTemplateOptions
@@ -1518,7 +1518,7 @@ public sealed record RelationshipWatchWindowTemplateOptions
 
 ## `RelationshipWatchWindowUdpSettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record RelationshipWatchWindowUdpSettings
@@ -1532,7 +1532,7 @@ public sealed record RelationshipWatchWindowUdpSettings
 
 ## `RenderModeType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum RenderModeType { Wireframe = 1, HiddenLineRemoved = 2, SolidAndEdges = 3, Solid = 4 }
@@ -1540,7 +1540,7 @@ public enum RenderModeType { Wireframe = 1, HiddenLineRemoved = 2, SolidAndEdges
 
 ## `ReportOutputOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record ReportOutputOptions
@@ -1553,7 +1553,7 @@ public sealed record ReportOutputOptions
 
 ## `ReportOutputType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ReportOutputType { None = 1, SaReport = 2, SaDocument = 3, Pdf = 4, Rtf = 5 }
@@ -1561,7 +1561,7 @@ public enum ReportOutputType { None = 1, SaReport = 2, SaDocument = 3, Pdf = 4, 
 
 ## `ReportPageSettings`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ReportPageSettings { Portrait = 1, Landscape = 2 }
@@ -1569,7 +1569,7 @@ public enum ReportPageSettings { Portrait = 1, Landscape = 2 }
 
 ## `ReportViewOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record ReportViewOptions
@@ -1582,7 +1582,7 @@ public sealed record ReportViewOptions
 
 ## `ReportViewType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum ReportViewType { None = 1, CurrentView = 2, CalloutView = 3 }
@@ -1590,7 +1590,7 @@ public enum ReportViewType { None = 1, CurrentView = 2, CalloutView = 3 }
 
 ## `RobotActiveJointComponent`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum RobotActiveJointComponent
@@ -1611,7 +1611,7 @@ public enum RobotActiveJointComponent
 
 ## `RobotCalibrationMetrics`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record RobotCalibrationMetrics
@@ -1628,7 +1628,7 @@ public sealed record RobotCalibrationMetrics
 
 ## `RobotModelLinkConfiguration`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record RobotModelLinkConfiguration
@@ -1663,7 +1663,7 @@ public sealed record RobotModelLinkConfiguration
 
 ## `RobotModelLinkType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum RobotModelLinkType
@@ -1675,7 +1675,7 @@ public enum RobotModelLinkType
 
 ## `SaInteractionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum SaInteractionMode { Manual = 1, Automatic = 2, Silent = 3 }
@@ -1683,7 +1683,7 @@ public enum SaInteractionMode { Manual = 1, Automatic = 2, Silent = 3 }
 
 ## `ScalarToleranceLimit`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public readonly record struct ScalarToleranceLimit(bool Enabled = false, double Value = 0);
@@ -1691,7 +1691,7 @@ public readonly record struct ScalarToleranceLimit(bool Enabled = false, double 
 
 ## `ShowUsmnDialog`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum ShowUsmnDialog
@@ -1704,7 +1704,7 @@ public enum ShowUsmnDialog
 
 ## `SigmoidalGapFitConstraints`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record SigmoidalGapFitConstraints
@@ -1722,7 +1722,7 @@ public sealed record SigmoidalGapFitConstraints
 
 ## `SlotType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum SlotType { Round = 1, Square = 2 }
@@ -1730,7 +1730,7 @@ public enum SlotType { Round = 1, Square = 2 }
 
 ## `SolverMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum SolverMode
@@ -1744,7 +1744,7 @@ public enum SolverMode
 
 ## `SphereFitComputationMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum SphereFitComputationMode { Standard = 1, MaxInscribed = 2, MinCircumscribed = 3 }
@@ -1752,7 +1752,7 @@ public enum SphereFitComputationMode { Standard = 1, MaxInscribed = 2, MinCircum
 
 ## `SurfaceAnalysisMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum SurfaceAnalysisMode { None = 1, Relationship = 2, Normals = 3, Curvature = 4, DeviationRms = 5, DeviationMax = 6, DeviationAverage = 7, DeviationMin = 8, DeviationMaxAbsolute = 9, DeviationMaxDelta = 10, PseudoSurface = 11 }
@@ -1760,7 +1760,7 @@ public enum SurfaceAnalysisMode { None = 1, Relationship = 2, Normals = 3, Curva
 
 ## `SurfaceDissectionMode`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum SurfaceDissectionMode
@@ -1772,7 +1772,7 @@ public enum SurfaceDissectionMode
 
 ## `SurfaceFaceList`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record SurfaceFaceList
@@ -1783,7 +1783,7 @@ public sealed record SurfaceFaceList
 
 ## `SurveyTargetType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum SurveyTargetType
@@ -1795,7 +1795,7 @@ public enum SurveyTargetType
 
 ## `SystemString`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum SystemString
@@ -1816,7 +1816,7 @@ public enum SystemString
 
 ## `TargetComputationMethod`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum TargetComputationMethod
@@ -1832,7 +1832,7 @@ public enum TargetComputationMethod
 
 ## `TcpFixtureUncertainties`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record TcpFixtureUncertainties
@@ -1851,7 +1851,7 @@ public sealed record TcpFixtureUncertainties
 
 ## `TemperatureUnits`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum TemperatureUnits { Fahrenheit = 1, Celsius = 2 }
@@ -1859,7 +1859,7 @@ public enum TemperatureUnits { Fahrenheit = 1, Celsius = 2 }
 
 ## `ToleranceLimit`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public readonly record struct ToleranceLimit(bool Enabled = false, double Value = 0);
@@ -1867,7 +1867,7 @@ public readonly record struct ToleranceLimit(bool Enabled = false, double Value 
 
 ## `ToleranceScalarOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public readonly record struct ToleranceScalarOptions(
@@ -1877,7 +1877,7 @@ public readonly record struct ToleranceScalarOptions(
 
 ## `ToleranceVectorOptions`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record ToleranceVectorOptions
@@ -1897,7 +1897,7 @@ public sealed record ToleranceVectorOptions
 
 ## `Transform`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record Transform
@@ -1919,7 +1919,7 @@ public sealed record Transform
 
 ## `TranslucencyType`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum TranslucencyType { Solid = 1, Translucent = 2, Wireframe = 3 }
@@ -1927,7 +1927,7 @@ public enum TranslucencyType { Solid = 1, Translucent = 2, Wireframe = 3 }
 
 ## `UncertaintyCovarianceMatrix`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record UncertaintyCovarianceMatrix
@@ -1943,7 +1943,7 @@ public sealed record UncertaintyCovarianceMatrix
 
 ## `Vector`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record Vector
@@ -1960,7 +1960,7 @@ public sealed record Vector
 
 ## `VectorName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record VectorName
@@ -1973,7 +1973,7 @@ public sealed record VectorName
 
 ## `ViewName`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record ViewName { public required string Name { get; init; } }
@@ -1981,7 +1981,7 @@ public sealed record ViewName { public required string Name { get; init; } }
 
 ## `WcfAxis`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public enum WcfAxis
@@ -1994,7 +1994,7 @@ public enum WcfAxis
 
 ## `WindowState`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public enum WindowState { Maximize = 1, Minimize = 2, Restore = 3, Show = 4, Hide = 5 }
@@ -2002,7 +2002,7 @@ public enum WindowState { Maximize = 1, Minimize = 2, Restore = 3, Show = 4, Hid
 
 ## `WorldTransform`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/OperationValues.cs)
 
 ```csharp
 public sealed record WorldTransform
@@ -2014,7 +2014,7 @@ public sealed record WorldTransform
 
 ## `WrtlChannelStatus`
 
-[Candidate Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
+[Released Declaration](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2024.1.0508.5/src/Briosa.Client/WaveBOperationValues.cs)
 
 ```csharp
 public sealed record WrtlChannelStatus

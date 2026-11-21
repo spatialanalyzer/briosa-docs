@@ -50,4 +50,4 @@ Parameter and result notes:
 | --- | --- |
 | `searchString` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5)
+[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.5.0/targets/2024.1.0508.5)

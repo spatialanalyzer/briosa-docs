@@ -103,4 +103,4 @@ else:
 
 Diagnostic paths are explicitly requested local data. Avoid publishing them in logs or support reports. See [Installation Selection](/docs/deployment/installation-selection) and [Diagnostics](/docs/deployment/diagnostics) for deployment guidance.
 
-[Candidate Source](https://github.com/spatialanalyzer/briosa-py/blob/6a04ff934d554be0767bea997f9517676674b8a4/targets/2026.1.0529.7/src/briosa/installation_models.py)
+[Released Source](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2026.1.0529.7/src/briosa/installation_models.py)
