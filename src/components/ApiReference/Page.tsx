@@ -17,6 +17,7 @@ import FamilySwitch from './FamilySwitch';
 import {Availability, Differences} from './Versions';
 import TOC from '@theme/TOC';
 import Admonition from '@theme/Admonition';
+import SpriteIcon from '@site/src/components/Scanline/SpriteIcon';
 import './styles.css';
 
 export const labels: Record<string, string> = {grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API', javascript: 'JavaScript and TypeScript API'};
@@ -109,7 +110,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
         <button className="api-navigation-toggle" type="button" aria-controls="api-navigation-content" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
           <svg className="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="1.5" /><path d="M9.5 4.5v15" /><path className="api-ico-accent" d="M5.5 8.5h2M5.5 11.5h2" /></svg>
           <span>API Navigation</span>
-          <svg className="api-navigation-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          <SpriteIcon icon="chevron" className="api-navigation-chevron" width="16" height="16" aria-hidden="true" />
         </button>
         <div id="api-navigation-content"><Sidebar key={page.path} navigation={navigation} page={page} history={isHistory} /></div>
       </aside>
@@ -167,7 +168,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
           {!isHistory && <Differences page={page} sameContract={sameContract} />}
           <footer className="api-footer">
             <a className="api-edit" href={`https://github.com/spatialanalyzer/briosa-docs/edit/main/${page.source}`}>
-              <svg className="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5h4l10-10a2.1 2.1 0 0 0-3-3l-10 10z" /><path d="m14 8 2 2" /></svg>
+              <SpriteIcon icon="edit" className="sl-ico" aria-hidden="true" />
               Edit This Reference
             </a>
           </footer>

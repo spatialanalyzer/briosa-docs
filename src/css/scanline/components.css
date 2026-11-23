@@ -48,6 +48,15 @@
   --ac: var(--sl-laser);
 }
 
+/* Docusaurus's external link icon at its default size and spacing, which
+ * its attributes and CSS module set before. The footer repeats it 11 times a
+ * page, so the class replaces them (#113). */
+.sl-external {
+  width: 13.5px;
+  height: 13.5px;
+  margin-left: 0.3rem;
+}
+
 /* ---------- Corner brackets: the instrument's lock-on frame ---------- */
 .sl-brk {
   --bk: var(--sl-laser);

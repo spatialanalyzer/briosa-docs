@@ -29,6 +29,9 @@ The homepage keeps its styles in `src/pages/index.module.css` and its components
   - `--sl-f-mono` (JetBrains Mono): code, identifiers, numbers.
 - Respect `prefers-reduced-motion`: animations must have a finished still.
 - Keep keyboard focus visible. Use title case for headings, labels, and table headers (see AGENTS.md).
+- Draw an icon that every page repeats from `static/img/icons.svg` with
+  `SpriteIcon` (`src/components/Scanline/SpriteIcon.tsx`), not inline artwork,
+  so pages stay small (#113). A symbol takes its color and stroke from the icon.
 
 ## Shared classes
 
