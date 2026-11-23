@@ -271,7 +271,10 @@ Dotted SA-target and release roots include directory-index fallbacks for static 
 directories that Docusaurus's default preview server mistakes for files.
 
 API navigation uses the standard Docusaurus sidebar components, with scoped
-controls for command filtering and longer method lists. All desktop tables of
+controls for command filtering and longer method lists. The sidebar link and
+category items in `src/theme/DocSidebarItem` are ejected from Docusaurus 3.10.2
+only to drop theme class names that no style uses, which saves about 60 MB
+across the API pages. Compare them with the upstream components when upgrading. All desktop tables of
 contents share `src/theme/TOC` and `src/css/toc.css` across API, guide, and catalog
 pages. Keep those shared components consistent when adjusting navigation styles.
 
