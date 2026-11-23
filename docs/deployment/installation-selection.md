@@ -41,9 +41,10 @@ checks that the installation matches the exact SA target and declares support
 for this client; it rejects Server 0.9.x and earlier, while client 0.4.0 rejects
 Server 0.10.x. For server releases after 0.10.0, a patch update keeps the same
 clients working; a minor update may require a client upgrade. Earlier pairings:
-Servers **0.7.0** and **0.8.0** work with clients **0.2.0** and **0.3.0**,
-Server **0.6.1** works with clients **0.1.1**, **0.2.0**, and **0.3.0**, and
-Server **0.6.0** works only with client **0.1.0**. Other servers without
+Servers **0.7.0** and **0.8.0** work with clients **0.2.0** and **0.3.0**, and
+Server **0.6.0** works only with client **0.1.0**. Client 0.1.1 pins the exact
+Server 0.6.1 build; clients 0.2.0 and 0.3.0 also accept that reviewed build as
+an exception. Other servers without
 compatibility metadata are rejected. Direct gRPC from the published protocol
 artifact is also supported.
 
@@ -197,7 +198,7 @@ The discovery report exposes validated installations, the selected descriptor,
 and rejection codes. Distinguish:
 
 - Nothing installed in the requested locations.
-- Installations found, but none match the exact SA target, compatible server version, or constraints.
+- Installations were found, but none matched the exact SA target, declared support for this client, and satisfied the application's selection constraints.
 - Conflicting installations with ambiguous provenance.
 - Damaged or stale metadata.
 - A launched server whose live identity differs from the selected manifest.

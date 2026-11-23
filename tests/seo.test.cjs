@@ -75,12 +75,13 @@ test('internal search is omitted from the sitemap and carries noindex when enabl
   assert.doesNotMatch(robots, /Disallow:\s*\/search/);
 });
 
-test('renamed migration guide is in the sitemap and old URL redirects with fragment forwarding', () => {
+test('renamed migration guide is in the sitemap and old URL redirects with query and fragment forwarding', () => {
   assert.ok(urls.includes(`${origin}/docs/server-0-10-and-client-0-5-migration`), 'new migration URL in sitemap');
   assert.ok(!urls.includes(`${origin}/docs/contract-major-3-migration`), 'old migration URL omitted from sitemap');
   const redirectHtml = readFileSync(join(build, 'docs', 'contract-major-3-migration', 'index.html'), 'utf8');
   const $ = load(redirectHtml);
   assert.equal($('meta[http-equiv="refresh"]').attr('content'), '0; url=/docs/server-0-10-and-client-0-5-migration');
   assert.equal($('link[rel="canonical"]').attr('href'), '/docs/server-0-10-and-client-0-5-migration');
+  assert.match(redirectHtml, /window\.location\.search/, 'redirect preserves query string');
   assert.match(redirectHtml, /window\.location\.hash/, 'redirect preserves anchor fragments');
 });

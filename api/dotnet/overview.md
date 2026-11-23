@@ -34,7 +34,7 @@ underlying service contract, use the [gRPC API Reference](/api/grpc).
 
 [View the .NET client repository](https://github.com/spatialanalyzer/briosa-dotnet)
 
-## Server 0.10 and Client 0.5 Compatibility
+## Server 0.10 and Client 0.5 Compatibility {/* #contract-major-3 */}
 
 Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server
 0.10.0), and Client 0.4.0 works with Server 0.9.x. Before launch, client 0.5.x

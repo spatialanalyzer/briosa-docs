@@ -24,7 +24,7 @@ Install the package matching your exact SA release. Client 0.5.x works with
 Server 0.10.x for that target (Client 0.5.0 was tested with Server 0.10.0;
 Client 0.4.0 works with Server 0.9.x), and direct gRPC from the published
 protocol artifact is also supported. Before launch, client 0.5.x checks that
-the installation matches the exact SA target and declares support for it, and
+the installation matches the exact SA target and declares support for this client, and
 rejects Server 0.9.x and earlier. See
 [Release Status](/docs/releases) for package links and validation limits,
 [installation selection](/docs/deployment/installation-selection) for per-application choices,

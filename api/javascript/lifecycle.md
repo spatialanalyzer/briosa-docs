@@ -479,9 +479,9 @@ export interface MpCompletion {
 }
 ```
 
-Every MP function takes `BriosaCallOptions` as its optional last argument. The
-`signal` and the `onMpCompletion` observer (added in client 0.5.0) are call controls,
-not MP inputs.
+Every MP function takes `BriosaCallOptions` as its optional last argument.
+`signal` aborts the caller's wait. Client 0.5.0 added the `onMpCompletion`
+observer. Neither is an MP input.
 
 An MP that returns code 4 (PARTIAL SUCCESS) did its work, but not its full
 intended effect. The call is never retried, and it resolves with its outputs

@@ -261,9 +261,11 @@ All four ran successfully with Server 0.7.0 and licensed SA 2026.1.0529.7;
 see the [validation record](https://github.com/spatialanalyzer/briosa-examples/blob/main/docs/evidence/licensed-2026-09-19.md).
 With their client 0.4.0 and Server 0.9.0 pins, the tutorials passed 47 portable
 fake-server scenarios; licensed execution of those release pins has not yet been
-recorded. The tutorials' README names the client and server versions they use. A
-tutorial that uses client 0.4.0 needs Server 0.9.x, and one that uses client 0.5.0 needs Server 0.10.x;
-each client rejects the other server line.
+recorded. The tutorials' README names the client and server versions they use.
+Use the versions named by the tutorial: Client 0.4.0 was tested with Server
+0.9.x, and Client 0.5.0 was tested with Server 0.10.0. A later server is
+eligible if it matches the exact SA target, declares support for the client,
+and satisfies the application's constraints.
 SA 2024 qualification remains outstanding.
 
 ## Supported SpatialAnalyzer Targets
