@@ -87,6 +87,7 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          {from: '/docs/contract-major-3-migration', to: '/docs/server-0-10-and-client-0-5-migration'},
           {from: '/docs/operations/overview', to: '/api/grpc'},
           {from: '/docs/operations/get-working-directory', to: '/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory'},
           {from: '/docs/operations/get-number-of-collections', to: '/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-collections'},

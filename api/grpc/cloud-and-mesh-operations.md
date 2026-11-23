@@ -845,7 +845,7 @@ message DeleteCloudPointsByRadialDistanceFromPointsResult {
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
 
-Contract major 3 removed this operation from Server 0.10.0. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and a licensed session validated it on both targets for one cloud and one point. No released signature
+Server 0.10.0 removed this operation. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and a licensed session validated it on both targets for one cloud and one point. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Generate General Mesh {/* #generate-general-mesh */}

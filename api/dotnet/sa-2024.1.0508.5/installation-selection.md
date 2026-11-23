@@ -24,9 +24,9 @@ Set `ServerSelection` on `BriosaStartOptions`; its default is `new BriosaServerS
 
 Without constraints the client considers all three scopes, excludes prereleases, and chooses the highest compatible stable release. Exclusion and search-root lists default to empty. Prerelease and legacy environment override flags default to false. An invalid explicit selection fails without fallback. Search roots identify package stores containing the committed products layout, not arbitrary executable directories. Elevated automatic selection only admits protected machine installations.
 
-The package requires contract major **3**, revision **at least 0**, for its exact SA target. Servers of other contract majors, including the major-2 Server 0.9 releases, and servers without contract metadata, including Server 0.6.1, are rejected before launch; discovery reports `server-installation-incompatible` for them. Keep client 0.4.0 for applications that must run against Server 0.9.x; the two clients and servers install side by side. Generated artifacts are pinned to the Server 0.10.0 protocol checkpoint `0.10.0-dev.1`; this build pin is not the runtime selection rule.
+Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server 0.10.0) for its exact SA target. Before launch, it checks that the installation matches the exact SA target and declares support for this client; a version number alone does not make an installation eligible. For server releases after 0.10.0, a patch update keeps the same clients working; a minor update may require a client upgrade. Incompatible servers, including Server 0.9.x and earlier (and Server 0.6.1), are rejected before launch; discovery reports `server-installation-incompatible` for them. Keep client 0.4.0 for applications that must run against Server 0.9.x; the two clients and servers install side by side. Generated artifacts are pinned to the Server 0.10.0 protocol checkpoint `0.10.0-dev.1`; this build pin is not the runtime selection rule.
 
-`BRIOSA_SERVER_PATH` is ignored unless the legacy override flag is enabled and no direct selector is supplied. Prefer per-application selection. The chosen installation stays fixed for the session and recovery. Startup checks the live server identity against the selected evidence before SDK or SA activity; contract compatibility never bypasses exact-target checks, policy, ownership, or readiness.
+`BRIOSA_SERVER_PATH` is ignored unless the legacy override flag is enabled and no direct selector is supplied. Prefer per-application selection. The chosen installation stays fixed for the session and recovery. Startup checks the live server identity against the selected evidence before SDK or SA activity; server-client compatibility never bypasses exact-target checks, policy, ownership, or readiness.
 
 ### `BriosaServerSelection`
 
@@ -116,7 +116,7 @@ fingerprint only for equality, for example to tell whether a replacement
 generation runs under the same policy. Each admitted operation carries its
 reviewed risk flags (an ordered list, empty when no risk applies), duration
 class, validation status, and admission, exactly as the server reports them. A
-value from a later server revision maps to the enum's `Unknown` member instead
+value from a later compatible server release maps to the enum's `Unknown` member instead
 of failing discovery. The client never recomputes admission and never
 pre-validates request options; a request option can still make the server deny
 an admitted operation at call time.
@@ -234,7 +234,7 @@ public enum TargetIsolationMode
 }
 ```
 
-The server's packaged `standard` profile is narrower than the major-2 default.
+The server's packaged `standard` profile is narrower than the Server 0.9.x default.
 The seven device-configuration setters (`SetAbsoluteInstrumentScaleFactorAsync`,
 `SetMultiplyInstrumentScaleFactorAsync`, `SetRobotMachineModelLinkParametersAsync`,
 `SetActiveRobotCalibrationAsync`, `SetRobotCalibrationToolFrameAsync`,

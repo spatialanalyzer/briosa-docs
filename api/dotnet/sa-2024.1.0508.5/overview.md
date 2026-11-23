@@ -34,13 +34,18 @@ underlying service contract, use the [gRPC API Reference](/api/grpc/sa-2024.1.05
 
 [View the .NET client repository](https://github.com/spatialanalyzer/briosa-dotnet)
 
-## Contract Major 3
+## Server 0.10 and Client 0.5 Compatibility
 
-Client 0.5.0 selects only servers of behavioral contract major 3, which Server
-0.10.0 introduces. Keep client 0.4.0 for applications that must run against
-Server 0.9.x; the two clients and servers install side by side. Every MP method
-now takes an optional `onMpCompletion` observer, nine operations are gone, and
-several inputs became required or optional. See the
+Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server
+0.10.0), and Client 0.4.0 works with Server 0.9.x. Before launch, client 0.5.x
+checks that the installation matches the exact SA target and declares support
+for this client, and rejects Server 0.9.x and earlier. Keep client 0.4.0 for
+applications that must run against Server 0.9.x; the two clients and servers
+install side by side. Every MP method now takes an optional `onMpCompletion`
+observer, nine operations are gone, and several inputs became required or
+optional. See the
+[Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-client-0-5-migration)
+and the
 [client 0.5.0 migration notes](https://github.com/spatialanalyzer/briosa-dotnet/blob/1202f690bb97508e2523909d045bdb8aecc188cb/docs/contract-major-3-migration.md)
 for every change.
 

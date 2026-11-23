@@ -154,6 +154,6 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `search_string` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `search_string` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 [Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.0/targets/2024.1.0508.5)

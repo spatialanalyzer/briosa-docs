@@ -20,11 +20,15 @@ when your client exits.
 :::note[Client 0.5.0 and Server 0.10.0]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
-Install the package matching your exact SA release. Client 0.5.0 selects a
-compatible server for that target using behavioral contract 3.0. See
+Install the package matching your exact SA release. Client 0.5.x works with
+Server 0.10.x for that target (Client 0.5.0 was tested with Server 0.10.0;
+Client 0.4.0 works with Server 0.9.x), and direct gRPC from the published
+protocol artifact is also supported. Before launch, client 0.5.x checks that
+the installation matches the exact SA target and declares support for it, and
+rejects Server 0.9.x and earlier. See
 [Release Status](/docs/releases) for package links and validation limits,
 [installation selection](/docs/deployment/installation-selection) for per-application choices,
-and the [contract major 3 migration guide](/docs/contract-major-3-migration) to upgrade from client 0.4.0.
+and the [Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-client-0-5-migration) to upgrade from client 0.4.0.
 
 :::
 
@@ -66,7 +70,7 @@ starting only the Briosa control plane.
 When application launch is selected, clients can request a local SA job file,
 an instrument quick-start for a new job, or a minimized window. Briosa does not
 accept an executable path, arbitrary process arguments, or launch-time MP
-execution through the launch RPC. The contract-aware client line adds an exact
+execution through the launch RPC. Clients 0.2.0 and later add an exact
 SA executable path as per-process server startup configuration; it must pass
 the target's file-version check. See
 [Side-by-Side Installation Selection](/docs/deployment/installation-selection)

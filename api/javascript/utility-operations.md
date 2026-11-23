@@ -51,7 +51,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `folderPath` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `folderPath` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 ## Delete Items {/* #delete-items */}
 
@@ -559,7 +559,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `scaleFactor` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Set Active Custom Language {/* #set-active-custom-language */}
 
@@ -982,7 +982,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `profileFileName` | Optional (major 3): omitted when absent; an empty path is rejected. |
+| `profileFileName` | Optional: omitted when absent; an empty path is rejected. |
 
 ## Set View Idle Update Frequency {/* #set-view-idle-update-frequency */}
 

@@ -16,7 +16,7 @@ This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other 
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds)
 
-Contract major 3 removed this operation from Server 0.10.0. On both exact targets SpatialAnalyzer reported an improper argument and returned no MP result, and the worker stalled until its watchdog ended it. No replacement polygonizes point clouds on these exact targets. No released signature
+Server 0.10.0 removed this operation. On both exact targets SpatialAnalyzer reported an improper argument and returned no MP result, and the worker stalled until its watchdog ended it. No replacement polygonizes point clouds on these exact targets. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Shared Type {/* #shared-type */}

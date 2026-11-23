@@ -41,8 +41,10 @@ result types, and links to the corresponding gRPC contract and MP catalog.
 The catalog's Current status describes server availability. Client package
 versions and runtime validation are separate claims.
 
-Client 0.5.0 selects only servers that implement behavioral contract major 3
-(Server 0.10.0). Every MP method takes the keyword-only `on_mp_completion`
+Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server
+0.10.0; Client 0.4.0 works with Server 0.9.x). Before launch, it checks that
+the installation matches the exact SA target and declares support for this
+client, and rejects Server 0.9.x and earlier. Every MP method takes the keyword-only `on_mp_completion`
 observer, which reports a [partial success](./lifecycle.md#mp-completion)
 without changing the return value. The
 [lifecycle overview](./lifecycle.md#server-snapshot-and-capabilities) also

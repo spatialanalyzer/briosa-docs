@@ -355,9 +355,17 @@ export async function compileReference(siteDir) {
   const redirects = {};
   const navigation = {};
 
+  // Docs routes that moved after released snapshots linked to them. Frozen
+  // snapshots stay untouched; their rendered links follow the moved destination
+  // directly while client-redirects keeps external bookmarks working.
+  const docRedirects = {
+    '/docs/contract-major-3-migration': '/docs/server-0-10-and-client-0-5-migration',
+  };
+
   function resolveLink(href, ctx, id) {
     if (href.startsWith('#')) return href;
     const [address, fragment] = href.split('#');
+    if (Object.hasOwn(docRedirects, address)) return fragment ? `${docRedirects[address]}#${fragment}` : docRedirects[address];
     let dest = ctx;
     let destId;
     if (address.startsWith('./') || address.endsWith('.md') && !address.includes('://')) {

@@ -16,7 +16,7 @@ This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other e
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations#mirror-objects) · [gRPC Contract](/api/grpc/construction-operations#mirror-objects)
 
-Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement mirrors objects on these exact targets. No released signature
+Client 0.5.0 removed this method (with Server 0.10.0). SpatialAnalyzer returned MP code -1 on both exact targets. No replacement mirrors objects on these exact targets. No released signature
 is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Copy Object {/* #copy-object */}

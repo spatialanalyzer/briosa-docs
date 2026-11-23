@@ -52,7 +52,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) · [gRPC Contract](/api/grpc/construction-operations-circles#construct-circles-lines-from-surfaces)
 
-Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code -1 for both the Circle and the Line mode on both exact targets. No replacement extracts circles or lines from surfaces on these exact targets. No released signature
+Client 0.5.0 removed this method (with Server 0.10.0). SpatialAnalyzer returned MP code -1 for both the Circle and the Line mode on both exact targets. No replacement extracts circles or lines from surfaces on these exact targets. No released signature
 is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 [Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.5.0/targets/2026.1.0529.7)

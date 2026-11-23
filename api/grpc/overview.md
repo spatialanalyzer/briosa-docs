@@ -54,7 +54,7 @@ profiles that admit it, its risk flags, and its duration class; see
 reference does not override those controls or imply that an operation is ready
 to run in the current session.
 
-Behavioral contract major 3 removed nine operations on these exact targets: eight
+Server 0.10.0 removed nine operations on these exact targets: eight
 failed end to end on both targets (three of them reached MP code `2` but returned
 no usable list), and the ninth was removed unverified because no operator could
 complete the selection. Their pages remain as unavailable views that explain the
