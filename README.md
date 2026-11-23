@@ -173,6 +173,18 @@ After deployment, verify the homepage, a documentation article, API reference,
 and MP catalog, including their assets and canonical URLs. Check
 `/sitemap.xml`, `/robots.txt`, and the old-host redirects as well.
 
+### Site Size
+
+Docs CI and the Pages deploy report the built site's size in the job summary
+with `node scripts/report-build-size.mjs build`. The whole site is measured
+against GitHub Pages' 1 GB limit for a published site. Without the frozen
+redirect documents, it is measured against the 800 MB budget in
+[issue #113](https://github.com/spatialanalyzer/briosa-docs/issues/113), in
+decimal megabytes. Each warns above its limit, and neither fails the build. Run
+the same command after `npm run build` to measure locally. Markup that every
+page repeats is the cost to watch: icons that every page shows come from the
+`static/img/icons.svg` sprite instead of inline artwork.
+
 ### Rollback
 
 To restore `https://spatialanalyzer.github.io/briosa-docs/`, revert the custom
