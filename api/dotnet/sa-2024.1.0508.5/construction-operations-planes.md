@@ -72,8 +72,8 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `resultingHighPlaneName` | Optional (major 3): when it is absent, SpatialAnalyzer uses its default name. An empty name is rejected. |
-| `resultingLowPlaneName` | Optional (major 3): when it is absent, SpatialAnalyzer uses its default name. An empty name is rejected. |
+| `resultingHighPlaneName` | Optional: when it is absent, SpatialAnalyzer uses its default name. An empty name is rejected. |
+| `resultingLowPlaneName` | Optional: when it is absent, SpatialAnalyzer uses its default name. An empty name is rejected. |
 
 ## Construct Planes, Bisect 2 Planes {/* #construct-planes-bisect-2-planes */}
 

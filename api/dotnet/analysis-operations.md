@@ -203,7 +203,7 @@ Parameter and result notes:
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
+| `startingConditionGeometry` | Optional: omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
@@ -235,7 +235,7 @@ Parameter and result notes:
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
+| `startingConditionGeometry` | Optional: omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
@@ -266,7 +266,7 @@ Parameter and result notes:
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
+| `startingConditionGeometry` | Optional: omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 

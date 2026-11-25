@@ -19,11 +19,15 @@ and client applications can diagnose or recover the SDK without restarting SA.
 :::note[Client 0.5.0 and Server 0.10.0]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
-Install the package matching your exact SA release. Client 0.5.0 selects a
-compatible server for that target using behavioral contract 3.0. See
+Install the package matching your exact SA release. Client 0.5.x works with
+Server 0.10.x for that target (Client 0.5.0 was tested with Server 0.10.0;
+Client 0.4.0 works with Server 0.9.x), and direct gRPC from the published
+protocol artifact is also supported. Before launch, client 0.5.x checks that
+the installation matches the exact SA target and declares support for this client, and
+rejects Server 0.9.x and earlier. See
 [Release Status](/docs/releases) for package links and validation limits,
 [installation selection](/docs/deployment/installation-selection) for per-application choices,
-and the [contract major 3 migration guide](/docs/contract-major-3-migration) to upgrade from client 0.4.0.
+and the [Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-client-0-5-migration) to upgrade from client 0.4.0.
 
 :::
 
@@ -56,9 +60,9 @@ Each first-party client distribution identifies the exact SpatialAnalyzer
 release it supports. The package version remains an independent Briosa client
 version; it is not the SpatialAnalyzer version.
 
-Both targets are published as client **0.5.0**. Use Server **0.10.0** for
-the same exact target. Compatible contract revisions can be selected
-independently of the client's generation artifact.
+Both targets are published as client **0.5.0**. Use Server **0.10.0** (or a
+later compatible server release) for the same exact target. Compatible server
+updates can be selected without rebuilding or upgrading the client package.
 Choose one exact target for each application environment. The examples below
 use SA 2026; the matching SA 2024 install command follows each example.
 

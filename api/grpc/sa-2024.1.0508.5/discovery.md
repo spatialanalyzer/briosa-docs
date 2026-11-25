@@ -11,7 +11,7 @@ description: Server 0.10.0 identity, compatibility, readiness, admission, and ca
 
 ## Compatibility and Runtime Identity
 
-Server 0.10.0 declares behavioral contract **major 3, revision 0** for its exact target. `GetServerInfoResponse.compatibility` (field 11) is independent of product version and source revision. Matching these coordinates does not bypass exact SA/SDK identity, ownership, runtime admission, or readiness checks. An unavailable runtime identity must not be inferred from the configured target.
+Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server 0.10.0), and Client 0.4.0 works with Server 0.9.x, for the exact target; clients 0.4.x and earlier reject Server 0.10.x, and clients 0.5.x reject Server 0.9.x and earlier. Direct gRPC from the published protocol artifact is also supported. Introduced in Server 0.7.0, `GetServerInfoResponse.compatibility` reports the running server's declaration for its exact SA target, independently of its product version and source revision. Before launch, clients check the installation metadata. Matching server-client compatibility does not bypass exact SA/SDK identity, ownership, runtime admission, or readiness checks. An unavailable runtime identity must not be inferred from the configured target.
 
 `version` uses `VersionCoordinates` for product/source and exact-target build coordinates. `ready_for_mp`, connection/readiness state, target isolation, and activated/connected identity evidence describe current runtime conditions. Capability entries identify the operation, fully qualified RPC, effect, replay safety, and execution scope. Never automatically replay an operation whose outcome is uncertain.
 

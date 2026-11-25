@@ -386,7 +386,7 @@ message CreateTextCalloutResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)
 
-Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run. No released signature
+Server 0.10.0 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Set Default Callout View Properties {/* #set-default-callout-view-properties */}
@@ -420,7 +420,7 @@ message SetDefaultCalloutViewPropertiesResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties)
 
-Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement sets callout view properties on a list. Set Default Callout View Properties remains. No released signature
+Server 0.10.0 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement sets callout view properties on a list. Set Default Callout View Properties remains. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Delete Callout View {/* #delete-callout-view */}

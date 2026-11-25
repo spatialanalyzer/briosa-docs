@@ -109,7 +109,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `acknowledgeArrival` | Defaults to true (major 3). |
+| `acknowledgeArrival` | Defaults to true. |
 
 ## Move Robot/Machine through Path {/* #move-robotmachine-through-path */}
 
@@ -169,7 +169,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `acknowledgeArrival` | Defaults to true (major 3). |
+| `acknowledgeArrival` | Defaults to true. |
 
 ## Set Robot/Machine Parameter {/* #set-robotmachine-parameter */}
 
@@ -199,7 +199,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `parameterValue` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `parameterValue` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Get Robot/Machine Parameter {/* #get-robotmachine-parameter */}
 
@@ -252,7 +252,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `configuration` | Its scalar parameters, from `dhAlphaComponent` through `segmentCgMassKg`, are required (major 3): a request that omits one is rejected before dispatch instead of overwriting it with 0 or false. |
+| `configuration` | Its scalar parameters, from `dhAlphaComponent` through `segmentCgMassKg`, are required: a request that omits one is rejected before dispatch instead of overwriting it with 0 or false. |
 
 ## Get Robot/Machine Model Link Parameters {/* #get-robotmachine-model-link-parameters */}
 
@@ -405,12 +405,12 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `joint1` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint2` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint3` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint4` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint5` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint6` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint1` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint2` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint3` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint4` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint5` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint6` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
 
 ## Simulate Robot/Machine Path, Output CSV File {/* #simulate-robotmachine-path-output-csv-file */}
 
@@ -486,7 +486,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `calibrationName` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `calibrationName` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 ## Import Poses Match to Measurements {/* #import-poses-match-to-measurements */}
 

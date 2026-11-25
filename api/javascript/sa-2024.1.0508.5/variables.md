@@ -77,7 +77,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `name` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 ## Delete Variables -- Wildcard Match {/* #delete-variables----wildcard-match */}
 
@@ -103,7 +103,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `variableWildcardCriteria` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `variableWildcardCriteria` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 ## Get Boolean Variable {/* #get-boolean-variable */}
 

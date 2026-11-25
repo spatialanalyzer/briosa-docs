@@ -266,7 +266,7 @@ export type LifecycleRecoveryGuidance =
   | 'operatorActionRequired';
 ```
 
-`callerCancelled` and `callerDeadlineExceeded` (contract major 3) describe the
+`callerCancelled` and `callerDeadlineExceeded` (added in Server 0.10.0 and client 0.5.0) describe the
 caller's own interruption. They are distinct from `stateConflict`, and the
 client never retries them. A remote caller rarely receives them, because gRPC
 delivers no response after a cancellation or a deadline.
@@ -420,7 +420,7 @@ export type OperationAdmission =
 - Each capability carries its reviewed `riskFlags` (an ordered set in the
   server's order; an empty array means that no reviewed risk applies),
   `durationClass`, `validationStatus`, and `admission`, all taken from the
-  server and never recomputed. A value that a later contract revision adds maps
+  server and never recomputed. A value that a later compatible server release adds maps
   to `'unknown'`; it never fails discovery. The validation status is
   informational and never blocks an admitted operation.
 - The snapshot's `operations` are the admitted ones only, and
@@ -434,7 +434,7 @@ export type OperationAdmission =
   `deniedProfile`, `deniedFlag`, `deniedOverride`, `deniedExclusive`, or
   `deniedUnreviewed`. Denied entries never become callable and never change the
   generation's admitted set.
-- The server's packaged `standard` profile is narrower than the major-2 default.
+- The server's packaged `standard` profile is narrower than the Server 0.9.x default.
   The seven device-configuration setters (`setAbsoluteInstrumentScaleFactor`,
   `setMultiplyInstrumentScaleFactor`, `setRobotMachineModelLinkParameters`,
   `setActiveRobotCalibration`, `setRobotCalibrationToolFrame`,
@@ -479,9 +479,9 @@ export interface MpCompletion {
 }
 ```
 
-Every MP function takes `BriosaCallOptions` as its optional last argument. The
-`signal` and the `onMpCompletion` observer (contract major 3) are call controls,
-not MP inputs.
+Every MP function takes `BriosaCallOptions` as its optional last argument.
+`signal` aborts the caller's wait. Client 0.5.0 added the `onMpCompletion`
+observer. Neither is an MP input.
 
 An MP that returns code 4 (PARTIAL SUCCESS) did its work, but not its full
 intended effect. The call is never retried, and it resolves with its outputs

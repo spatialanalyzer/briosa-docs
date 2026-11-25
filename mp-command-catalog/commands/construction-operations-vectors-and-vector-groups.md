@@ -492,7 +492,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
-**Uncommitted in Briosa Server 0.10.0.** Contract major 3 removed this operation. No operator could complete its selection on either exact target in a licensed session, so it is unverified. SpatialAnalyzer never rejected it. It can return in a later 3.x revision once a licensed session verifies it. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+**Uncommitted in Briosa Server 0.10.0.** Server 0.10.0 and clients 0.5.0 removed this operation. No operator could complete its selection on either exact target in a licensed session, so it is unverified. SpatialAnalyzer never rejected it. It can return in a later compatible server release once a licensed session verifies it. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
 
 **Recommended Alternative:** Build a vector name list directly, or from a vector group with Make a Vector Name Ref List From a Vector Group.
 
@@ -535,7 +535,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
-**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the selected vector groups could not be read back. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+**Excluded in Briosa Server 0.10.0.** Server 0.10.0 and clients 0.5.0 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the selected vector groups could not be read back. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
 
 **Recommended Alternative:** No replacement selects vector groups at run time on these exact targets.
 

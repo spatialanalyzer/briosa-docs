@@ -239,14 +239,14 @@ message MakeVectorNameRefListFromVectorGroupResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select)
 
-Contract major 3 removed this operation from Server 0.10.0. No operator could complete its selection on either exact target in a licensed session, so it is unverified. SpatialAnalyzer never rejected it. It can return in a later 3.x revision once a licensed session verifies it. Build a vector name list directly, or from a vector group with Make a Vector Name Ref List From a Vector Group. No released signature
+Server 0.10.0 removed this operation. No operator could complete its selection on either exact target in a licensed session, so it is unverified. SpatialAnalyzer never rejected it. It can return in a later compatible server release once a licensed session verifies it. Build a vector name list directly, or from a vector group with Make a Vector Name Ref List From a Vector Group. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Make a Collection Vector Group Name Ref List - Runtime Select {/* #make-a-collection-vector-group-name-ref-list---runtime-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select)
 
-Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code 2 on both exact targets, but the selected vector groups could not be read back. No replacement selects vector groups at run time on these exact targets. No released signature
+Server 0.10.0 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the selected vector groups could not be read back. No replacement selects vector groups at run time on these exact targets. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Make Vector Names Unique in Vector Group {/* #make-vector-names-unique-in-vector-group */}

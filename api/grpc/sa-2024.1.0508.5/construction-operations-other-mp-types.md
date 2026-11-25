@@ -362,7 +362,7 @@ message SetCollectionInstrumentRefListVariableResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection)
 
-Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code 2 on both exact targets, but the instrument list could not be read back, and the MP documents no other output. A reference list is a client-side value in Briosa, so build the instrument list directly. No released signature
+Server 0.10.0 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the instrument list could not be read back, and the MP documents no other output. A reference list is a client-side value in Briosa, so build the instrument list directly. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Make a Collection Instrument Reference List- Runtime Select {/* #make-a-collection-instrument-reference-list--runtime-select */}

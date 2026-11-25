@@ -223,7 +223,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `parameter_value` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `parameter_value` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Get Robot/Machine Parameter {/* #get-robotmachine-parameter */}
 
@@ -336,28 +336,28 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `dh_alpha_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `dh_a_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `dh_d_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `dh_theta_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `dh_x_axis_deflection_factor` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `dh_y_axis_deflection_factor` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `dh_z_axis_deflection_factor` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `six_dof_x_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `six_dof_y_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `six_dof_z_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `six_dof_rx_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `six_dof_ry_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `six_dof_rz_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `encoder_offset_value` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `minimum_encoder_limit` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `maximum_encoder_limit` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `encoder_sense_negative` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `include_additional_encoder` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `additional_encoder_index_offset` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `additional_encoder_sense_negative` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `segment_origin_mass_kg` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
-| `segment_cg_mass_kg` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_alpha_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_a_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_d_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_theta_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_x_axis_deflection_factor` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_y_axis_deflection_factor` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_z_axis_deflection_factor` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_x_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_y_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_z_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_rx_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_ry_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_rz_component` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `encoder_offset_value` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `minimum_encoder_limit` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `maximum_encoder_limit` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `encoder_sense_negative` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `include_additional_encoder` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `additional_encoder_index_offset` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `additional_encoder_sense_negative` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `segment_origin_mass_kg` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `segment_cg_mass_kg` | Required: an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
 
 ## Get Robot/Machine Model Link Parameters {/* #get-robotmachine-model-link-parameters */}
 
@@ -599,12 +599,12 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `joint_1` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint_2` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint_3` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint_4` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint_5` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
-| `joint_6` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_1` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_2` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_3` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_4` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_5` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_6` | Required: an omitted joint is rejected before dispatch instead of being sent as 0. |
 
 ## Simulate Robot/Machine Path, Output CSV File {/* #simulate-robotmachine-path-output-csv-file */}
 
@@ -693,7 +693,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `calibration_name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `calibration_name` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 ## Import Poses Match to Measurements {/* #import-poses-match-to-measurements */}
 

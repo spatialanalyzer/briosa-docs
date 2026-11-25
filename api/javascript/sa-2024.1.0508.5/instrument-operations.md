@@ -247,7 +247,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+| `measureImmediately` | Defaults to true, as for the other measure operations. |
 
 ## Get Current Instrument Position Update {/* #get-current-instrument-position-update */}
 
@@ -342,7 +342,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+| `measureImmediately` | Defaults to true, as for the other measure operations. |
 
 ## Measure Existing Single Point (Manual Guide) {/* #measure-existing-single-point-manual-guide */}
 
@@ -366,7 +366,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+| `measureImmediately` | Defaults to true, as for the other measure operations. |
 
 ## Measure Existing Single Point and Compare {/* #measure-existing-single-point-and-compare */}
 
@@ -394,7 +394,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+| `measureImmediately` | Defaults to true, as for the other measure operations. |
 
 ## Set Probe Offset Frame Online (Measure Raw Frame) {/* #set-probe-offset-frame-online-measure-raw-frame */}
 
@@ -639,7 +639,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `observationIndex` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Move Measurement Observation {/* #move-measurement-observation */}
 
@@ -671,7 +671,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `observationIndex` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Initiate Servo-Guide {/* #initiate-servo-guide */}
 
@@ -854,7 +854,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+| `measureImmediately` | Defaults to true, as for the other measure operations. |
 
 ## Measure {/* #measure */}
 
@@ -1084,7 +1084,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `nominalsGroup` | Optional (major 3): omitted when absent. An empty object name is sent blank, which SpatialAnalyzer documents as no nominals group. |
+| `nominalsGroup` | Optional: omitted when absent. An empty object name is sent blank, which SpatialAnalyzer documents as no nominals group. |
 | `analysisTimeLimit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
@@ -1475,10 +1475,10 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `temperature` | Required (major 3) when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Temperature in degrees Fahrenheit. |
-| `pressure` | Required (major 3) when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Pressure in millimeters of mercury. |
-| `relativeHumidity` | Required (major 3) when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Relative humidity in percent. |
-| `setAutomatically` | Required (major 3). |
+| `temperature` | Required when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Temperature in degrees Fahrenheit. |
+| `pressure` | Required when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Pressure in millimeters of mercury. |
+| `relativeHumidity` | Required when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Relative humidity in percent. |
+| `setAutomatically` | Required. |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
@@ -1567,7 +1567,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `scaleFactor` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Set (absolute) Instrument Scale Factor (CAUTION!) {/* #set-absolute-instrument-scale-factor-caution */}
 
@@ -1596,7 +1596,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `scaleFactor` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Get Instrument Scale Factor {/* #get-instrument-scale-factor */}
 
@@ -2255,7 +2255,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `autoStart` | Defaults to true (major 3). |
+| `autoStart` | Defaults to true. |
 
 ## Auto-Measure Vectors {/* #auto-measure-vectors */}
 
@@ -2343,7 +2343,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `waitForComplete` | Defaults to true (major 3). |
+| `waitForComplete` | Defaults to true. |
 
 ## Auto-Measure Batch of Features {/* #auto-measure-batch-of-features */}
 

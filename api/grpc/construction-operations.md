@@ -16,7 +16,7 @@ This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other 
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations#mirror-objects)
 
-Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement mirrors objects on these exact targets. No released signature
+Server 0.10.0 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement mirrors objects on these exact targets. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Copy Object {/* #copy-object */}
