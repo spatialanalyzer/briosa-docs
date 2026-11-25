@@ -173,6 +173,18 @@ After deployment, verify the homepage, a documentation article, API reference,
 and MP catalog, including their assets and canonical URLs. Check
 `/sitemap.xml`, `/robots.txt`, and the old-host redirects as well.
 
+### Site Size
+
+Docs CI and the Pages deploy report the built site's size in the job summary
+with `node scripts/report-build-size.mjs build`. The report follows the Pages
+upload rules by excluding dotfiles and files in dot-directories. The whole
+artifact is measured against GitHub Pages' 1 GB limit for a published site.
+The 800 MB budget in [issue #113](https://github.com/spatialanalyzer/briosa-docs/issues/113)
+excludes the frozen redirect documents. The report uses decimal units and
+warns above either limit without failing the build. Run the same command after
+`npm run build` to measure locally. The shared stylesheet carries the theme
+toggle artwork so it can paint with the page.
+
 ### Rollback
 
 To restore `https://spatialanalyzer.github.io/briosa-docs/`, revert the custom
@@ -259,9 +271,13 @@ Dotted SA-target and release roots include directory-index fallbacks for static 
 directories that Docusaurus's default preview server mistakes for files.
 
 API navigation uses the standard Docusaurus sidebar components, with scoped
-controls for command filtering and longer method lists. All desktop tables of
-contents share `src/theme/TOC` and `src/css/toc.css` across API, guide, and catalog
-pages. Keep those shared components consistent when adjusting navigation styles.
+controls for command filtering and longer method lists. The sidebar link and
+category items in `src/theme/DocSidebarItem` are ejected from Docusaurus 3.10.2
+only to drop unused theme class names and shorten local class names, which
+saves about 53 MB across the API pages. Compare them with the upstream
+components when upgrading. All desktop tables of contents share `src/theme/TOC`
+and `src/css/toc.css` across API, guide, and catalog pages. Keep those shared
+components consistent when adjusting navigation styles.
 
 The SA selector stores the explicit preference locally; following an exact
 URL sets the current browsing context without overriding that saved default.

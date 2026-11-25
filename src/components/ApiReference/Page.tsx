@@ -109,7 +109,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
         <button className="api-navigation-toggle" type="button" aria-controls="api-navigation-content" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
           <svg className="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="1.5" /><path d="M9.5 4.5v15" /><path className="api-ico-accent" d="M5.5 8.5h2M5.5 11.5h2" /></svg>
           <span>API Navigation</span>
-          <svg className="api-navigation-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          <svg className="api-navigation-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
         </button>
         <div id="api-navigation-content"><Sidebar key={page.path} navigation={navigation} page={page} history={isHistory} /></div>
       </aside>

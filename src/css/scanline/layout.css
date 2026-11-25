@@ -554,6 +554,17 @@ nav.menu {
   opacity: 0.6;
 }
 
+@media (forced-colors: active) {
+  .menu__caret::before,
+  .menu__link--sublist-caret::after {
+    forced-color-adjust: none;
+    background: CanvasText;
+    mask: var(--ifm-menu-link-sublist-icon) center / 1.6rem 1.6rem no-repeat;
+    filter: none;
+    opacity: 1;
+  }
+}
+
 .sl-sidebar__lock {
   position: absolute;
   left: 0;

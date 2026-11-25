@@ -69,7 +69,7 @@ export default function VersionSelect({label, value, options, placeholder = 'Cho
       <span className="api-version-value" id={`${id}-value`}>
         {selected ? <><span className="api-version-text">{selected.label}</span>{selected.badge && <span className="api-version-badge">{selected.badge}</span>}</> : <span className="api-version-placeholder">{placeholder}</span>}
       </span>
-      <svg className="api-version-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+      <svg className="api-version-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
     </button>
     {open && <ul className="api-version-options" id={`${id}-list`} role="listbox" aria-labelledby={`${id}-label`}>
       {options.map((option, index) => <li key={option.value} id={`${id}-option-${index}`} role="option"
