@@ -32,7 +32,12 @@ async function isRedirect(file) {
 try {
   const total = {files: 0, bytes: 0};
   const redirects = {files: 0, bytes: 0};
-  const files = (await readdir(root, {recursive: true, withFileTypes: true})).filter((entry) => entry.isFile());
+  // The Pages upload excludes dotfiles and files inside dot-directories.
+  const files = (await readdir(root, {recursive: true, withFileTypes: true})).filter(
+    (entry) => entry.isFile() && !path.relative(root, path.join(entry.parentPath, entry.name))
+      .split(path.sep)
+      .some((part) => part.startsWith('.')),
+  );
   // Read files concurrently: the site has tens of thousands of them.
   let next = 0;
   await Promise.all(Array.from({length: 32}, async () => {

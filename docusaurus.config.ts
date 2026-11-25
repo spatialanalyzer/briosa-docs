@@ -22,8 +22,9 @@ if (Object.values(algolia).some(Boolean) && !searchEnabled) {
 const config: Config = {
   title: 'Briosa',
   tagline: 'SpatialAnalyzer integration, simplified.',
-  // The brand guide's icon set: the SVG favicon, the multisize ICO, and the home-screen icon.
   headTags: [
+    {tagName: 'link', attributes: {rel: 'preload', as: 'image', href: '/img/icons.svg'}},
+    // The brand guide's icon set: the SVG favicon, the multisize ICO, and the home-screen icon.
     {tagName: 'link', attributes: {rel: 'icon', href: '/brand/icons/favicon.svg', type: 'image/svg+xml'}},
     {tagName: 'link', attributes: {rel: 'icon', href: '/brand/icons/favicon.ico', sizes: 'any'}},
     {tagName: 'link', attributes: {rel: 'apple-touch-icon', href: '/brand/icons/apple-touch-icon.png'}},

@@ -176,14 +176,14 @@ and MP catalog, including their assets and canonical URLs. Check
 ### Site Size
 
 Docs CI and the Pages deploy report the built site's size in the job summary
-with `node scripts/report-build-size.mjs build`. The whole site is measured
-against GitHub Pages' 1 GB limit for a published site. Without the frozen
-redirect documents, it is measured against the 800 MB budget in
-[issue #113](https://github.com/spatialanalyzer/briosa-docs/issues/113), in
-decimal megabytes. Each warns above its limit, and neither fails the build. Run
-the same command after `npm run build` to measure locally. Markup that every
-page repeats is the cost to watch: icons that every page shows come from the
-`static/img/icons.svg` sprite instead of inline artwork.
+with `node scripts/report-build-size.mjs build`. The report follows the Pages
+upload rules by excluding dotfiles and files in dot-directories. The whole
+artifact is measured against GitHub Pages' 1 GB limit for a published site.
+The 800 MB budget in [issue #113](https://github.com/spatialanalyzer/briosa-docs/issues/113)
+excludes the frozen redirect documents. The report uses decimal units and
+warns above either limit without failing the build. Run the same command after
+`npm run build` to measure locally. Pages preload the shared
+`static/img/icons.svg` sprite for repeated icons.
 
 ### Rollback
 
@@ -273,10 +273,11 @@ directories that Docusaurus's default preview server mistakes for files.
 API navigation uses the standard Docusaurus sidebar components, with scoped
 controls for command filtering and longer method lists. The sidebar link and
 category items in `src/theme/DocSidebarItem` are ejected from Docusaurus 3.10.2
-only to drop theme class names that no style uses, which saves about 60 MB
-across the API pages. Compare them with the upstream components when upgrading. All desktop tables of
-contents share `src/theme/TOC` and `src/css/toc.css` across API, guide, and catalog
-pages. Keep those shared components consistent when adjusting navigation styles.
+only to drop unused theme class names and shorten local class names, which
+saves about 53 MB across the API pages. Compare them with the upstream
+components when upgrading. All desktop tables of contents share `src/theme/TOC`
+and `src/css/toc.css` across API, guide, and catalog pages. Keep those shared
+components consistent when adjusting navigation styles.
 
 The SA selector stores the explicit preference locally; following an exact
 URL sets the current browsing context without overriding that saved default.

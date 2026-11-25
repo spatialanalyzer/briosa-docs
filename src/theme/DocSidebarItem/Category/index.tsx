@@ -1,15 +1,13 @@
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * Licensed under the MIT license; see static/img/THIRD-PARTY-NOTICES.md.
  */
 
 // Ejected from @docusaurus/theme-classic 3.10.2. Each API page lists dozens of
 // sidebar categories, so the item keeps only the level-1 theme class, which
-// the sidebar styles use, keeps short class names, and omits the redundant
-// tabindex="0" on child links (#113). The API sidebar's filter key resets a
-// filtered branch. Otherwise unchanged.
+// the sidebar styles use, and keeps short class names (#113). The API sidebar's
+// filter key resets a filtered branch. Otherwise unchanged.
 import React, {
   type ComponentProps,
   type ReactNode,
@@ -307,11 +305,9 @@ function DocSidebarItemCategoryCollapsible({
       </div>
 
       <Collapsible lazy as="ul" className="menu__list" collapsed={collapsed}>
-        {/* A link is focusable without tabindex="0"; a collapsing branch's
-            links leave the tab order, as upstream. */}
         <DocSidebarItems
           items={items}
-          tabIndex={collapsed ? -1 : undefined}
+          tabIndex={collapsed ? -1 : 0}
           onItemClick={onItemClick}
           activePath={activePath}
           level={level + 1}

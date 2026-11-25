@@ -1,8 +1,7 @@
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * Licensed under the MIT license; see static/img/THIRD-PARTY-NOTICES.md.
  */
 
 // Ejected from @docusaurus/theme-classic 3.10.2. Each API page lists dozens of
