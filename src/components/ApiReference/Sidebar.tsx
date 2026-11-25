@@ -4,7 +4,6 @@ import type {PropSidebarItem, PropSidebarItemCategory} from '@docusaurus/plugin-
 import type {Navigation, PageData} from './types';
 import {suffix, methodHref, methodFilter} from './context';
 import {SidebarControls} from './SidebarControls';
-import SpriteIcon from '@site/src/components/Scanline/SpriteIcon';
 
 // On a history page, navigation stays among method histories, which keep the
 // release/SA pair being read, instead of entering one target's reference.
@@ -19,7 +18,7 @@ export default function Sidebar({navigation: nav, page, history = false}: {navig
     filter: <label className="api-filter">
       <span className="sl-hud">Find a Command</span>
       <span className="api-field">
-        <SpriteIcon icon="find" className="sl-ico" aria-hidden="true" />
+        <svg className="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6" /><path d="m15 15 5 5" /></svg>
         <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Name or API spelling" />
       </span>
     </label>,

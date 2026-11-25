@@ -14,8 +14,8 @@ The following code and artwork come from `@docusaurus/theme-classic` 3.10.2.
 
 - `src/theme/DocSidebarItem/Category/index.tsx` and `styles.module.css`
 - `src/theme/DocSidebarItem/Link/index.tsx` and `styles.module.css`
-- `src/theme/Icon/ExternalLink/index.tsx` and the `light`, `dark`, `system`, and
-  `menu` icon paths in `static/img/icons.svg`
+- `src/theme/Icon/ExternalLink/index.tsx`
+- The light, dark, and system icon paths in `src/css/scanline/components.css`
 
 MIT License
 

@@ -182,8 +182,8 @@ artifact is measured against GitHub Pages' 1 GB limit for a published site.
 The 800 MB budget in [issue #113](https://github.com/spatialanalyzer/briosa-docs/issues/113)
 excludes the frozen redirect documents. The report uses decimal units and
 warns above either limit without failing the build. Run the same command after
-`npm run build` to measure locally. Pages preload the shared
-`static/img/icons.svg` sprite for repeated icons.
+`npm run build` to measure locally. The shared stylesheet carries the theme
+toggle artwork so it can paint with the page.
 
 ### Rollback
 

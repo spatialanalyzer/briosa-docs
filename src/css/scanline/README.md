@@ -29,9 +29,9 @@ The homepage keeps its styles in `src/pages/index.module.css` and its components
   - `--sl-f-mono` (JetBrains Mono): code, identifiers, numbers.
 - Respect `prefers-reduced-motion`: animations must have a finished still.
 - Keep keyboard focus visible. Use title case for headings, labels, and table headers (see AGENTS.md).
-- Draw an icon that every page repeats from `static/img/icons.svg` with
-  `SpriteIcon` (`src/components/Scanline/SpriteIcon.tsx`), not inline artwork,
-  so pages stay small (#113). A symbol takes its color and stroke from the icon.
+- Keep first-paint control glyphs in the HTML or the render-blocking stylesheet.
+  The theme toggle shares its artwork through CSS masks and uses an SVG fill
+  for the inherited color, including in forced-colors mode.
 
 ## Shared classes
 
