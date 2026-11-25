@@ -32,6 +32,6 @@ limit are rejected at the transport boundary before MP operation mapping.
 
 ## Build Pins and Runtime Compatibility
 
-The protocol ZIP's version and source pin identify the schema used to build your client. Server behavioral contract 3.0 is a separate runtime promise for an exact target, not a product v1 release. A raw client must implement and validate its own admission handling, including the [admission profile](./operation-admission.md) that discovery reports; downloading a compatible-looking schema alone does not establish runtime compatibility. Never retry uncertain MP work automatically.
+The protocol ZIP's version and source pin identify the schema used to build your client. Client 0.5.0 was tested with Server 0.10.0 for the same exact SA target; a matching schema alone does not establish runtime compatibility. A raw client must implement and validate its own admission handling, including the [admission profile](./operation-admission.md) that discovery reports. Never retry uncertain MP work automatically.
 
 SpatialAnalyzer must be separately installed, running when MP work executes, and licensed. Briosa is independent and does not imply Hexagon endorsement or support.

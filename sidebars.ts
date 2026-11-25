@@ -4,7 +4,7 @@ const sidebars: SidebarsConfig = {
   docsSidebar: [
     'intro',
     'releases',
-    'contract-major-3-migration',
+    'server-0-10-and-client-0-5-migration',
     'mp-argument-name-migration',
     'runtime-redesign-migration',
     {

@@ -125,7 +125,7 @@ test('the command index preserves one disposition per command and exact target',
 });
 
 test('product guides and landing pages use the DocSearch content selectors', () => {
-  for (const route of ['index', 'install', 'api', 'docs/intro']) {
+  for (const route of ['index', 'install', 'api', 'docs/intro', 'docs/server-0-10-and-client-0-5-migration']) {
     let called = false;
     const $ = load(html(route));
     extract({$, url: new URL(`https://briosa.dev/${route.replace(/(^|\/)index$/, '')}`),
@@ -139,6 +139,7 @@ test('product guides and landing pages use the DocSearch content selectors', () 
     });
     assert.ok(called, route);
   }
+  assert.equal(run('docs/contract-major-3-migration/index').length, 0, 'old migration URL redirect produces no search records');
 });
 
 

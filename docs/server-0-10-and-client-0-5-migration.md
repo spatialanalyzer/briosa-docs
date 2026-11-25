@@ -1,12 +1,12 @@
 ---
-title: Contract Major 3 Migration
-description: Move an application from client 0.4.0 and Server 0.9.x to client 0.5.0 and Server 0.10.0, behavioral contract major 3.
+title: Server 0.10 and Client 0.5 Migration
+description: Move an application from client 0.4.0 and Server 0.9.x to client 0.5.0 and Server 0.10.0.
 ---
 
-# Contract Major 3 Migration
+# Server 0.10 and Client 0.5 Migration
 
 Server 0.10.0 and the exact-target .NET, Python, and JavaScript 0.5.0 clients
-introduce behavioral contract major 3 for both SA targets.
+introduce breaking changes for both SA targets.
 Several changes break callers on purpose: the default operation admission is
 narrower, some request defaults changed, nine operations are gone, and inputs
 the server always required are now required in the client signatures. Most
@@ -15,21 +15,26 @@ breaks surface as compile or type errors rather than at run time.
 The current API references document Server 0.10.0 and client 0.5.0. Each
 method's history page keeps the Server 0.9.0 and client 0.4.0 contracts. Each
 client's own migration notes give the language-specific changes:
-[.NET](https://github.com/spatialanalyzer/briosa-dotnet/blob/main/docs/contract-major-3-migration.md),
-[Python](https://github.com/spatialanalyzer/briosa-py/blob/main/targets/2026.1.0529.7/README.md#contract-major-3-050),
-and [JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/blob/main/docs/contract-major-3-migration.md).
+[.NET](https://github.com/spatialanalyzer/briosa-dotnet/blob/main/docs/client-0.5-migration.md),
+[Python](https://github.com/spatialanalyzer/briosa-py/blob/main/targets/2026.1.0529.7/README.md#upgrading-to-050-server-010x),
+and [JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/blob/main/docs/client-0.5-migration.md).
 
 ## Upgrade the Client and Server Together
 
-Client 0.5.0 selects and accepts only servers of contract major 3, and rejects
-the major-2 Server 0.9 releases during installation selection. Client 0.4.0
-keeps selecting a major-2 server and rejects Server 0.10.0. Install Server
+Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server
+0.10.0), and Client 0.4.0 works with Server 0.9.x. Before launch, client 0.5.x
+checks that the installation matches the exact SA target and declares support
+for this client; it rejects Server 0.9.x and earlier. Client 0.4.0 checks for a
+Server 0.9.x-compatible installation and rejects Server 0.10.x. Install Server
 0.10.0 beside 0.9.2 for each exact target, and keep 0.9.2 until every
-application that uses client 0.4.0 has migrated. To roll an application back,
-select the 0.9.2 and 0.4.0 pair explicitly; a rollback never replays MP work.
+application that uses client 0.4.0 has migrated. For server releases after
+0.10.0, a patch update keeps the same clients working; a minor update may
+require a client upgrade. To roll an application back, select the 0.9.2 and
+0.4.0 pair explicitly; a rollback never replays MP work.
 See [installation selection](/docs/deployment/installation-selection).
 
-Raw gRPC applications regenerate their bindings from the Server 0.10.0
+First-party clients are not required: direct gRPC applications regenerate their
+bindings from the Server 0.10.0
 [protocol artifact](/docs/deployment/protocol-artifacts) of the exact target.
 
 ## Configure Operation Admission
@@ -92,7 +97,9 @@ The clients use the language's naming for these fields, such as
 
 ## Replace Removed Operations
 
-Contract major 3 removes nine operations from both exact targets. Their client
+Server 0.10.0 and client 0.5.0 remove nine operations from both exact targets.
+Eight failed to produce a usable result in licensed testing; the ninth could not
+be verified. Their client
 methods, protobuf messages, and the `CircleLineMode`, `MirrorFramePlane`, and
 `MeshOrientationType` value types are gone, so code that used them stops
 compiling. Their API pages remain, explain the removal, and link to the
@@ -108,7 +115,7 @@ contract that Server 0.9.2 and client 0.4.0 serve.
 | Add Collection Instruments to a Ref List - WildCard Selection | The instrument list could not be read back. | Build the reference list in the client. |
 | Construct Polygonized Surface from Point Clouds | SpatialAnalyzer reported an improper argument and the worker stalled. | No replacement. |
 | Make a Collection Vector Group Name Ref List - Runtime Select | The selected vector groups could not be read back. | No replacement. |
-| Make a Vector Name Ref List - Runtime Select | No operator could complete its selection in a licensed session, so it is unverified. It can return in a later 3.x revision. | Build the list in the client, or use Make a Vector Name Ref List From a Vector Group. |
+| Make a Vector Name Ref List - Runtime Select | No operator could complete its selection in a licensed session, so it is unverified. It can return in a later compatible server release once a licensed session verifies it. | Build the list in the client, or use Make a Vector Name Ref List From a Vector Group. |
 
 ## Pass Inputs the Server Requires
 
@@ -253,6 +260,8 @@ The client migration notes describe these fixes for each language.
 Server 0.10.0 packages use the same schema-3 distribution format, so Briosa
 Installer 0.3.0 or later installs them beside 0.9.2. The
 [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples) name the
-client and server versions they use in their README. A tutorial that uses client
-0.4.0 needs Server 0.9.x, and one that uses client 0.5.0 needs Server 0.10.0;
-each client rejects the other major.
+client and server versions they use in their README. Use the versions named by
+the tutorial: Client 0.4.0 was tested with Server 0.9.x, and Client 0.5.0 was
+tested with Server 0.10.0. A later server is eligible if it matches the exact
+SA target, declares support for the client, and satisfies the application's
+constraints.

@@ -82,7 +82,7 @@ changes the SDK registered with Windows.
 Each running Briosa server still works with only one exact release and one
 active SpatialAnalyzer instance at a time.
 
-The contract-aware client line adds
+Clients 0.2.0 and later add
 [per-application installation selection](../deployment/installation-selection).
 An SA 2026 application and an SA 2024 application can independently discover
 their matching compatible distributions. This does not change the registered

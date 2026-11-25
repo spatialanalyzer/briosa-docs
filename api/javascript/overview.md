@@ -34,15 +34,17 @@ underlying service contract, use the [gRPC API Reference](/api/grpc).
 
 [View the JavaScript client repository](https://github.com/spatialanalyzer/briosa-js)
 
-## Contract Major 3
+## Server 0.10 and Client 0.5 Compatibility {/* #contract-major-3 */}
 
-Client 0.5.0 selects only servers of behavioral contract major 3, which Server
-0.10.0 introduces. Server 0.10.0 installs beside Server 0.9.x, and the 0.4.0
-packages keep selecting contract-major-2 servers, so they remain available for
-rollback. MP functions take an optional `onMpCompletion` observer in their call
-options, nine operations are gone, and several inputs became required or
-optional. See the
-[contract major 3 migration guide](/docs/contract-major-3-migration) and the
+Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server
+0.10.0), and Client 0.4.0 works with Server 0.9.x. Before launch, client 0.5.x
+checks that the installation matches the exact SA target and declares support
+for this client, and rejects Server 0.9.x and earlier. Server 0.10.0 installs
+beside Server 0.9.x, and the 0.4.0 packages keep working with Server 0.9.x, so
+they remain available for rollback. MP functions take an optional
+`onMpCompletion` observer in their call options, nine operations are gone, and
+several inputs became required or optional. See the
+[Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-client-0-5-migration) and the
 [client 0.5.0 migration notes](https://github.com/spatialanalyzer/briosa-js/blob/79ed14bf6906c5b079032a9d695cfee2cd62678e/docs/contract-major-3-migration.md)
 for every change. The nine removed operations keep their method pages, which
 explain the removal; each page's method history keeps the 0.4.0 contract.

@@ -45,8 +45,8 @@ defaults or omission behavior.
 
 Released support was reconciled with the Server 0.7.0 protobuf, handwritten
 operation registration, and capability source; Server 0.9.2 registers the same
-996 operations, and Server 0.10.0 registers 987 of them after contract major 3
-removed nine. A separate limited local licensed
+996 operations, and Server 0.10.0 registers 987 of them after removing
+nine. A separate limited local licensed
 smoke test covered six read-only operations; it did not validate all 987 operations.
 Existing At Risk qualifications remain visible; fixture,
 equipment, interaction, and external-software needs carry forward to the 2024

@@ -264,4 +264,4 @@ Hexagon.
 
 ## Server Package Compatibility
 
-Servers 0.9.0 through 0.10.0 use schema-3 distributions, which require **Briosa Installer 0.3.0** or later. Install each exact SA target independently, and keep Server 0.9.2 beside 0.10.0 while applications still use client 0.4.0. The installer does not supply SpatialAnalyzer or its license. See [Installation Selection](/docs/deployment/installation-selection) for client 0.5.0 discovery and migration.
+Servers 0.9.0 through 0.10.0 use schema-3 distributions, which require **Briosa Installer 0.3.0** or later. Client 0.5.0 works with Server 0.10.0 (Client 0.5.x works with Server 0.10.x), and Client 0.4.0 works with Server 0.9.x (0.9.0 through 0.9.2); each client rejects the other server line. Direct gRPC from the published protocol artifact is also supported. Install each exact SA target independently, and keep Server 0.9.2 beside 0.10.0 while applications still use client 0.4.0. The installer does not supply SpatialAnalyzer or its license. See [Installation Selection](/docs/deployment/installation-selection) for client 0.5.0 discovery and migration.

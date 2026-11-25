@@ -48,7 +48,7 @@ export declare function getWorkingDirectory(
 
 The command has no MP input object. The optional `BriosaCallOptions` carry the
 `signal` that aborts the caller's wait and the `onMpCompletion` observer
-(contract major 3); neither is part of the MP command.
+(added in client 0.5.0); neither is part of the MP command.
 
 ## Return Value
 

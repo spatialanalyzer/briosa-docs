@@ -127,7 +127,7 @@ Parameter and result notes:
 | Member | Meaning |
 | --- | --- |
 | `surfaceNormalsMode` | MP qualifier: 1 or 2. |
-| `promptOnMissingComponents` | Defaults to false (major 3). |
+| `promptOnMissingComponents` | Defaults to false. |
 | `cadFileUnits` | An empty value uses the units specified in the file. |
 
 ## Export ASCII Frame Set {/* #export-ascii-frame-set */}

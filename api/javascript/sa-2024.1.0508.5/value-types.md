@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/value-types) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/value-types)
 
-These declarations describe the handwritten client **0.5.0** for **SA 2024.1.0508.5**. Generated transport types remain private. Operation pages define required inputs and omission behavior. In an input value, a member without `?` is required: at contract major 3 the client fills in no settings value, transform, or list that the server requires. A `ReportOutputOptions` value takes exactly one destination, and `ToleranceVectorOptions.noLimits` is the named value for a relationship without limits. Numeric protobuf values and public language values are separate representations; do not substitute values from another target.
+These declarations describe the handwritten client **0.5.0** for **SA 2024.1.0508.5**. Generated transport types remain private. Operation pages define required inputs and omission behavior. In an input value, a member without `?` is required: client 0.5.0 fills in no settings value, transform, or list that the server requires. A `ReportOutputOptions` value takes exactly one destination, and `ToleranceVectorOptions.noLimits` is the named value for a relationship without limits. Numeric protobuf values and public language values are separate representations; do not substitute values from another target.
 
 ## `AngularUnits`
 

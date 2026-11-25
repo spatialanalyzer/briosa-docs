@@ -140,7 +140,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `vector_index` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `vector_index` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Delete Vector by Name {/* #delete-vector-by-name */}
 
@@ -173,7 +173,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `vector_name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `vector_name` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 ## Delete Vectors {/* #delete-vectors */}
 

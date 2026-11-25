@@ -5,8 +5,8 @@ description: Discover exact-target Briosa installations and choose a compatible 
 
 # Select Compatible Side-by-Side Installations
 
-The contract-aware client line separates the protocol artifact used to build a
-client from the Briosa distribution it can run. One workstation can keep SA
+Clients 0.2.0 and later separate the protocol artifact used to build a
+client from the Briosa server distribution it can run. One workstation can keep SA
 2024.1.0508.5 and SA 2026.1.0529.7 products, including several Briosa versions
 for either target. Each application makes its own selection.
 
@@ -14,8 +14,8 @@ for either target. Each application makes its own selection.
 
 This guide describes Server 0.10.0 and client 0.5.0, available for both exact SA
 targets. See [Release Status](/docs/releases) for package links and validation.
-Client 0.4.0 keeps selecting a major-2 server such as 0.9.2, so keep 0.9.2
-installed beside 0.10.0 until its applications migrate.
+Client 0.4.0 keeps selecting Server 0.9.x (such as 0.9.2) and rejects Server
+0.10.x, so keep 0.9.2 installed beside 0.10.0 until its applications migrate.
 Published 0.1.1 clients keep their exact Server 0.6.1 pin; installing a newer
 server does not change those clients.
 
@@ -27,19 +27,26 @@ server does not change those clients.
 | --- | --- |
 | Client package SA target | Exactly matches the selected server product |
 | Activated SDK and connected SA | Each exactly matches the server target before execution |
-| Behavioral contract | Same major; server revision meets the client's minimum |
+| Declared client compatibility | Server installation matches the exact SA target and declares support for this client (Client 0.5.x works with Server 0.10.x; Client 0.4.0 works with Server 0.9.x) |
 | Server package version | Meets the application's optional version constraints |
 | Generation artifact | Remains pinned for reproducible client builds |
 | Running server provenance | Matches the selected installation's manifest |
 
-Contract **3.0** covers lifecycle, errors, execution outcomes, presence,
-capabilities, admission, and ownership. A matching protobuf package alone
-is insufficient. Client 0.5.0 requires major 3, revision 0; a newer
-sufficient revision within major 3 is eligible unless excluded. Client 0.4.0
-keeps its major-2 rule, so it selects Server 0.9.x and rejects 0.10.0, and
-0.5.0 rejects 0.9.x. Older clients retain their original major-1 rules,
-including the reviewed exact Server 0.6.1 exception. Other servers without
-contract metadata are rejected.
+Server-client compatibility covers lifecycle, errors, execution outcomes,
+presence, capabilities, admission, and ownership. A matching protobuf package
+or version number alone is insufficient. Client **0.5.x** works with Server
+**0.10.x** (Client 0.5.0 was tested with Server 0.10.0), and Client **0.4.0**
+works with Server **0.9.x** (0.9.0 through 0.9.2). Before launch, client 0.5.x
+checks that the installation matches the exact SA target and declares support
+for this client; it rejects Server 0.9.x and earlier, while client 0.4.0 rejects
+Server 0.10.x. For server releases after 0.10.0, a patch update keeps the same
+clients working; a minor update may require a client upgrade. Earlier pairings:
+Servers **0.7.0** and **0.8.0** work with clients **0.2.0** and **0.3.0**, and
+Server **0.6.0** works only with client **0.1.0**. Client 0.1.1 pins the exact
+Server 0.6.1 build; clients 0.2.0 and 0.3.0 also accept that reviewed build as
+an exception. Other servers without
+compatibility metadata are rejected. Direct gRPC from the published protocol
+artifact is also supported.
 
 ## Automatic Selection
 
@@ -160,12 +167,12 @@ Existing packages retain their original runtime requirements:
 
 | Client Version | Server Selection |
 | --- | --- |
-| 0.1.0 | Its exact pinned Server 0.6.0 build for the package's SA target |
+| 0.1.0 | Its exact pinned Server 0.6.0 build for the package's SA target (rejects Server 0.6.1) |
 | 0.1.1 | Its exact pinned Server 0.6.1 build for the package's SA target |
-| 0.2.0 | Contract-aware selection, plus the reviewed Server 0.6.1 exception |
-| 0.3.0 | Major 1; [MP argument name migration](/docs/mp-argument-name-migration) |
-| 0.4.0 | Major 2; [runtime redesign migration](/docs/runtime-redesign-migration) |
-| 0.5.0 | Major 3; [contract major 3 migration](/docs/contract-major-3-migration) |
+| 0.2.0 | Servers 0.7.0 and 0.8.0, plus the reviewed Server 0.6.1 exception |
+| 0.3.0 | Servers 0.7.0 and 0.8.0 (plus the reviewed Server 0.6.1 exception); [MP argument name migration](/docs/mp-argument-name-migration) |
+| 0.4.0 | Servers 0.9.0 through 0.9.2 (`0.9.x`); [runtime redesign migration](/docs/runtime-redesign-migration) |
+| 0.5.0 | Compatible Server 0.10.x installations (Client 0.5.0 was tested with Server 0.10.0); [Server 0.10 and Client 0.5 migration](/docs/server-0-10-and-client-0-5-migration) |
 
 Installing a new server does not broaden an old client's compatibility. Keep
 the old distribution installed until applications using it have migrated.
@@ -191,7 +198,7 @@ The discovery report exposes validated installations, the selected descriptor,
 and rejection codes. Distinguish:
 
 - Nothing installed in the requested locations.
-- Installations found, but none match the target, contract, or constraints.
+- Installations were found, but none matched the exact SA target, declared support for this client, and satisfied the application's selection constraints.
 - Conflicting installations with ambiguous provenance.
 - Damaged or stale metadata.
 - A launched server whose live identity differs from the selected manifest.

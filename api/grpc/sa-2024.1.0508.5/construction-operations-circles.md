@@ -69,7 +69,7 @@ message ConstructCirclesFromSurfaceFacesRuntimeSelectResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces)
 
-Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code -1 for both the Circle and the Line mode on both exact targets. No replacement extracts circles or lines from surfaces on these exact targets. No released signature
+Server 0.10.0 removed this operation. SpatialAnalyzer returned MP code -1 for both the Circle and the Line mode on both exact targets. No replacement extracts circles or lines from surfaces on these exact targets. No released signature
 is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 [Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.0/targets/2024.1.0508.5)

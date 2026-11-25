@@ -352,7 +352,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `template_chart_name` | Optional (major 3): omitted when absent; an empty name is rejected. A name that matches no chart opens a blocking SpatialAnalyzer dialog. |
+| `template_chart_name` | Optional: omitted when absent; an empty name is rejected. A name that matches no chart opens a blocking SpatialAnalyzer dialog. |
 
 ## Define Report Template {/* #define-report-template */}
 
@@ -896,7 +896,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `tag_name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+| `tag_name` | Required and not empty: an omitted, empty or whitespace-only value is rejected before dispatch. |
 
 ## Rename Picture {/* #rename-picture */}
 

@@ -268,7 +268,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+| `measureImmediately` | Defaults to true, as for the other measure operations. |
 
 ## Measure Existing Single Point and Compare {/* #measure-existing-single-point-and-compare */}
 
@@ -467,7 +467,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `observationIndex` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Move Measurement Observation {/* #move-measurement-observation */}
 
@@ -492,7 +492,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `observationIndex` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Initiate Servo-Guide {/* #initiate-servo-guide */}
 
@@ -790,7 +790,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `nominalsGroup` | Optional (major 3): omitted when absent. An empty object name is sent blank, which SpatialAnalyzer documents as no nominals group. |
+| `nominalsGroup` | Optional: omitted when absent. An empty object name is sent blank, which SpatialAnalyzer documents as no nominals group. |
 | `analysisTimeLimit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
@@ -1090,10 +1090,10 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `setAutomatically` | Required (major 3). |
-| `temperature` | Required (major 3) when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Temperature in degrees Fahrenheit. |
-| `pressure` | Required (major 3) when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Pressure in millimeters of mercury. |
-| `relativeHumidity` | Required (major 3) when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Relative humidity in percent. |
+| `setAutomatically` | Required. |
+| `temperature` | Required when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Temperature in degrees Fahrenheit. |
+| `pressure` | Required when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Pressure in millimeters of mercury. |
+| `relativeHumidity` | Required when `setAutomatically` is false. When it is true, SpatialAnalyzer ignores it and an omitted value is sent as 0. Relative humidity in percent. |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
@@ -1161,7 +1161,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `scaleFactor` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Set (absolute) Instrument Scale Factor (CAUTION!) {/* #set-absolute-instrument-scale-factor-caution */}
 
@@ -1183,7 +1183,7 @@ Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+| `scaleFactor` | Required: an omitted value is rejected before dispatch instead of being sent as 0. |
 
 ## Get Instrument Scale Factor {/* #get-instrument-scale-factor */}
 

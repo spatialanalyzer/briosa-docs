@@ -42,7 +42,7 @@ Client 0.5.0 checks installation evidence before starting SA. Use its inert disc
 | --- | --- |
 | `server-distribution-not-found` | Install the exact-target distribution with Installer 0.3.0 or later, rescan its registered store, or provide an explicit validated path. |
 | `server-installation-invalid` | Verify or repair the selected package, manifest, receipt, and executable path. |
-| `server-installation-incompatible` | Check the package target, behavioral contract, version constraints, exclusions, and allowed scopes. |
+| `server-installation-incompatible` | Check that the server matches the client's exact SA target and declares support for this client (Client 0.5.x works with Server 0.10.x; Client 0.4.0 works with Server 0.9.x), as well as any version constraints, exclusions, and allowed scopes. |
 | `server-installation-ambiguous` | Resolve conflicting installation identities or constrain the application to one valid installation. |
 | `server-installation-changed` | The selected files changed before launch. Finish installation or repair, then start a new session and resolve again. |
 | `server-installation-identity-mismatch` | The live server does not match selected installation evidence. Stop it, verify the package and launch path, and resolve a fresh session. |

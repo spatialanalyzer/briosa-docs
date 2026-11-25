@@ -275,7 +275,7 @@ class SpatialAnalyzerSdkLifecycleFailureKind(StrEnum):
     CALLER_DEADLINE_EXCEEDED = "caller_deadline_exceeded"
 ```
 
-`CALLER_CANCELLED` and `CALLER_DEADLINE_EXCEEDED` (contract major 3) describe
+`CALLER_CANCELLED` and `CALLER_DEADLINE_EXCEEDED` (added in Server 0.10.0 and client 0.5.0) describe
 the caller's own interruption, never a state conflict, and the client never
 retries them. gRPC rarely delivers them: cancelling the awaiting task raises
 `asyncio.CancelledError`, and a lifecycle `timeout` raises
@@ -283,7 +283,7 @@ retries them. gRPC rarely delivers them: cancelling the awaiting task raises
 
 ### After an Abandoned Lifecycle Call
 
-A contract-major-3 server finishes a start, connection, reconnection, or
+Server 0.10.x finishes a start, connection, reconnection, or
 recovery it has accepted under its own bounds, even after the caller stops
 waiting through a `timeout`, the startup budget, or task cancellation.
 
@@ -392,7 +392,7 @@ class OperationAdmission(StrEnum):
   the fingerprint only for equality.
 - Each capability carries its reviewed `risk_flags` (an ordered set; empty
   means no reviewed risk applies), `duration_class`, `validation_status`, and
-  `admission`. A value that a later 3.x revision adds maps to `UNKNOWN`.
+  `admission`. A value that a later compatible server release adds maps to `UNKNOWN`.
   Validation status is informational.
 - The snapshot's operations are the admitted ones only. The client takes
   admission from the server and never pre-validates a call or its options; the
@@ -439,8 +439,8 @@ class MpExecutionState(StrEnum):
     PARTIAL_SUCCESS = "partial_success"
 ```
 
-Every MP method takes the keyword-only `on_mp_completion` observer (contract
-major 3). An MP that returns code 4 (PARTIAL SUCCESS) did its work, but not all
+Every MP method takes the keyword-only `on_mp_completion` observer (added in
+client 0.5.0). An MP that returns code 4 (PARTIAL SUCCESS) did its work, but not all
 of its intended effect. The method returns its outputs as usual when all of
 them are retrieved, and never retries. The observer receives one
 `MpCompletion`, `SUCCEEDED` with MP code 2 or `PARTIAL_SUCCESS` with code 4,

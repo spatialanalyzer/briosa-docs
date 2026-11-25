@@ -16,7 +16,7 @@ This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other e
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds) · [gRPC Contract](/api/grpc/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds)
 
-Client 0.5.0 removed this method with behavioral contract major 3. On both exact targets SpatialAnalyzer reported an improper argument and returned no MP result, and the worker stalled until its watchdog ended it. No replacement polygonizes point clouds on these exact targets. No released signature
+Client 0.5.0 removed this method (with Server 0.10.0). On both exact targets SpatialAnalyzer reported an improper argument and returned no MP result, and the worker stalled until its watchdog ended it. No replacement polygonizes point clouds on these exact targets. No released signature
 is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Shared Type {/* #shared-type */}
