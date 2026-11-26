@@ -707,13 +707,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC Contract](/api/grpc/file-operations#get-working-directory)
 
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
-  getWorkingDirectory(
-    timeoutMs: number | null,
-    signal?: AbortSignal,
-  ): Promise<string>;
-}
+export declare function getWorkingDirectory(
+  client: BriosaClient,
+  options?: BriosaCallOptions,
+): Promise<string>;
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
