@@ -323,7 +323,8 @@ node scripts/javascript-owner-maps.mjs <briosa-js checkout> <javascript-package-
 ```
 
 [`tests/javascript-owner-maps/README.md`](tests/javascript-owner-maps/README.md)
-explains the maps and the known differences that await a decision.
+explains the maps, the working pin, and the recorded documentation errors that
+https://github.com/spatialanalyzer/briosa-docs/issues/152 corrects.
 
 ## Release Checklist
 
@@ -331,7 +332,7 @@ explains the maps and the known differences that await a decision.
 2. Compare tagged protobuf, runtime registration, capability policy, and handwritten client APIs; reconcile target-specific signatures, defaults, and values.
 3. Update guides and every catalog representation without promoting validation claims.
 4. Cut each product snapshot with its Docusaurus version command and update defaults. Do not add the new release to `compatibilityAddresses` in `plugins/api-reference/targets.json`; current references already have release-independent addresses.
-   For a JavaScript client release, build its owner map with `scripts/javascript-owner-maps.mjs` and set `working` in `tests/javascript-owner-maps/references.json`.
+   For a JavaScript client release, build its owner map with `scripts/javascript-owner-maps.mjs` and set `release` in `tests/javascript-owner-maps/working.json` when the working reference moves to it.
 5. Run Node.js 24 `npm ci` and `npm run check`; verify the search-enabled build, current/historical routes, target navigation, and representative released-package examples.
 6. After merge and deployment, verify live routes and refresh the Algolia crawler/index. Local checks do not refresh deployed search.
 

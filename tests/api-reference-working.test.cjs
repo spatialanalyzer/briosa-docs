@@ -336,140 +336,272 @@ test('a new release adds no compatibility redirect documents', async () => {
 // JavaScript method owners. Each JavaScript reference is checked against the
 // owner map pinned to the client release it documents, which
 // scripts/javascript-owner-maps.mjs builds from that release's tag in
-// spatialanalyzer/briosa-js. A map gives every method of each exact target one
+// spatialanalyzer/briosa-js. A map gives every method of each exact target an
 // owner: an operation-group interface reached through a client property, the
 // client interface itself, or the package, for a package-level function.
 //
-// A page declares a method in a TypeScript block in one of three forms:
-// - as a member of an interface block. A group method's block carries the
-//   label "// Member of <Group> (briosa.<property>.<method>(...))" on the line
-//   above the interface;
-// - as a `function`, which declares a package-level function; or
-// - as a bare signature, such as `stop(): Promise<void>;`, which the lifecycle
-//   pages use for client members.
+// The TypeScript parser reads each TypeScript block on a page, whatever its
+// layout. A page declares a method in one of three forms:
+// - as a member of an interface. A group method's interface carries the label
+//   "// Member of <Group> (briosa.<property>.<method>(...))" and declares only
+//   that method;
+// - as a `function` (or a declared function-typed constant), which declares a
+//   package-level function; or
+// - as a bare signature outside any declaration, such as
+//   `stop(): Promise<void>;`, which the lifecycle pages use for client members.
 //
-// The check fails when a declared method has another owner in the pinned map,
-// is absent from it, or lacks or misstates its owner label; when a pinned
-// method is declared on no page of a target's reference; and when a page that
-// declares group methods does not say how to call them. The working
-// reference's client release, and known differences that await a decision,
-// are recorded in tests/javascript-owner-maps/references.json.
+// For each reference and each exact target its sidebar lists, the check fails
+// when a declared method has another owner in the pinned map, is absent from
+// it, or lacks or misstates its owner label; when an owner label labels no
+// method, or a client-owner interface declares none; when a pinned method is
+// declared on no page; when a page that declares group methods does not say how
+// to call them; and when the map, the overview, or a group page names another
+// client release. tests/javascript-owner-maps/ holds the working reference's
+// release, the reviewed omissions, and the frozen baseline of the 0.1.0
+// snapshot's known errors; each entry must still occur, or the check fails.
 const ownerMaps = 'tests/javascript-owner-maps';
+const packageOwner = 'package-level function';
 const rebuild = (release) => `node scripts/javascript-owner-maps.mjs <briosa-js checkout> ${release}`;
 const pageText = new Map();
 const readPage = (file) => {
   if (!pageText.has(file)) pageText.set(file, require('node:fs').readFileSync(file, 'utf8').replace(/\r\n/g, '\n'));
   return pageText.get(file);
 };
-const ownerLabel = /^\/\/ Member of /;
-const interfaceStart = /^(?:export\s+)?(?:declare\s+)?interface\s+([\w$]+)\b[^{]*\{$/;
+const ownerLabelLine = /^[ \t]*\/\/\s*Member of\b.*$/gm;
+const notSignatures = new Set(['if', 'for', 'while', 'switch', 'catch', 'function', 'return', 'await', 'typeof', 'new', 'delete', 'void', 'super', 'import', 'export', 'with', 'yield']);
+const blocks = new Map();
 
-function declaredMethods(text) {
-  const found = [];
-  for (const [, code] of text.matchAll(/^```ts\n([\s\S]*?)^```/gm)) {
-    const lines = code.split('\n');
-    for (let i = 0; i < lines.length; i++) {
-      let m;
-      if (ownerLabel.test(lines[i])) {
-        if (!interfaceStart.test(lines[i + 1] ?? '')) found.push({form: 'orphan', label: lines[i]});
-      } else if ((m = lines[i].match(interfaceStart))) {
-        const label = ownerLabel.test(lines[i - 1] ?? '') ? lines[i - 1] : null;
-        for (i++; i < lines.length && !lines[i].startsWith('}'); i++) {
-          const member = lines[i].match(/^ {2}(\[Symbol\.\w+\]|[A-Za-z_$][\w$]*)\??(?:<[^>]*>)?\(/);
-          if (member) found.push({form: 'interface', name: member[1], owner: m[1], label});
-        }
-      } else if ((m = lines[i].match(/^(?:export\s+)?(?:declare\s+)?(?:async\s+)?function\s+([\w$]+)/))) {
-        found.push({form: 'function', name: m[1]});
-      } else if ((m = lines[i].match(/^(\[Symbol\.\w+\]|[A-Za-z_$][\w$]*)(?:<[^>]*>)?\(/))) {
-        // A signature, unlike a call, follows its parameter list with a return type.
-        const rest = lines.slice(i).join('\n');
-        let end = m[0].length - 1;
-        for (let depth = 0; end < rest.length; end++) if (rest[end] === '(') depth++; else if (rest[end] === ')' && --depth === 0) break;
-        if (/^\s*:/.test(rest.slice(end + 1))) found.push({form: 'signature', name: m[1]});
-      }
+// The interfaces, functions, and bare signatures that one TypeScript block declares.
+function readBlock(code) {
+  if (blocks.has(code)) return blocks.get(code);
+  const ts = require('typescript');
+  const file = ts.createSourceFile('block.ts', code, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
+  const line = (position) => file.getLineAndCharacterOfPosition(position).line + 1;
+  const nameOf = (name) => (ts.isComputedPropertyName(name) ? `[${name.expression.getText(file)}]` : name.text);
+  const found = {interfaces: [], functions: [], signatures: [], problems: []};
+  const labelled = new Set();
+  const containers = [];
+  const visit = (node, topLevel) => {
+    const literal = ts.isTypeAliasDeclaration(node) && ts.isTypeLiteralNode(node.type);
+    if (ts.isInterfaceDeclaration(node) || literal) {
+      const comments = ts.getLeadingCommentRanges(code, node.getFullStart()) ?? [];
+      const labels = comments.filter((c) => /^\/\/\s*Member of\b/.test(code.slice(c.pos, c.end)));
+      for (const c of labels) labelled.add(c.pos);
+      const members = literal ? node.type.members : node.members;
+      const methods = members
+        .filter((m) => m.name && (ts.isMethodSignature(m) || (ts.isPropertySignature(m) && m.type && ts.isFunctionTypeNode(m.type))))
+        .map((m) => nameOf(m.name));
+      found.interfaces.push({name: node.name.text, keyword: !literal, labels: labels.map((c) => code.slice(c.pos, c.end).trim()), methods, line: line(node.getStart(file))});
+    } else if (topLevel && ts.isFunctionDeclaration(node) && node.name) {
+      found.functions.push({name: node.name.text, line: line(node.getStart(file))});
+    } else if (topLevel && ts.isVariableStatement(node) && node.modifiers?.some((m) => m.kind === ts.SyntaxKind.DeclareKeyword)) {
+      for (const d of node.declarationList.declarations) if (ts.isIdentifier(d.name) && d.type && ts.isFunctionTypeNode(d.type)) found.functions.push({name: d.name.text, line: line(d.getStart(file))});
     }
+    if (ts.isInterfaceDeclaration(node) || ts.isTypeLiteralNode(node) || ts.isClassLike(node) || ts.isObjectLiteralExpression(node) || ts.isBlock(node) || ts.isModuleBlock(node) || ts.isEnumDeclaration(node)) {
+      containers.push([node.getStart(file), node.end]);
+    }
+    const inner = topLevel && (ts.isModuleDeclaration(node) || ts.isModuleBlock(node));
+    ts.forEachChild(node, (child) => visit(child, inner));
+  };
+  for (const statement of file.statements) visit(statement, true);
+  // Every owner label must label an interface.
+  for (const m of code.matchAll(ownerLabelLine)) {
+    const position = m.index + m[0].indexOf('//');
+    if (!labelled.has(position)) found.problems.push(`the owner label "${m[0].trim()}" on line ${line(position)} does not label an interface declaration.`);
   }
+  // An interface the parser could not read must not drop out of the check.
+  const scanner = ts.createScanner(ts.ScriptTarget.Latest, true, ts.LanguageVariant.Standard, code);
+  let keywords = 0;
+  for (let token = scanner.scan(); token !== ts.SyntaxKind.EndOfFileToken; token = scanner.scan()) if (token === ts.SyntaxKind.InterfaceKeyword) keywords++;
+  const interfaces = found.interfaces.filter((i) => i.keyword).length;
+  if (keywords > interfaces) found.problems.push(`a TypeScript block has ${keywords} interface keywords but ${interfaces} readable interface declarations.`);
+  // Bare signatures: an identifier, its parameters, then a return type, outside any declaration.
+  for (const m of code.matchAll(/^[ \t]*(\[Symbol\.\w+\]|[A-Za-z_$][\w$]*)[ \t]*(?:<[^>()\n]*>)?\(/gm)) {
+    const start = m.index + m[0].length - m[0].trimStart().length;
+    if (notSignatures.has(m[1]) || containers.some(([from, to]) => from < start && start < to)) continue;
+    let end = m.index + m[0].length - 1;
+    for (let depth = 0; end < code.length; end++) if (code[end] === '(') depth++; else if (code[end] === ')' && --depth === 0) break;
+    if (/^\s*:/.test(code.slice(end + 1))) found.signatures.push({name: m[1], line: line(start)});
+  }
+  blocks.set(code, found);
   return found;
+}
+
+// The exact targets a sidebar lists in addition to its reference's default target.
+function sidebarTargets(load, file) {
+  const sidebar = Object.values(load(file))[0];
+  if (!Array.isArray(sidebar)) throw new Error('it has no sidebar');
+  return sidebar.filter((item) => typeof item === 'object' && item.type === 'category').map((item) => item.label?.match(/^SA (\S+)$/)?.[1]).filter(Boolean);
 }
 
 // Returns every ownership failure in the JavaScript references under siteRoot,
 // and what was checked. `overrides` replaces file text by repository path.
 function ownerCheck(siteRoot, overrides = {}) {
   const {existsSync, readdirSync} = require('node:fs');
+  const exists = (rel) => rel in overrides || existsSync(path.join(siteRoot, rel));
   const read = (rel) => (rel in overrides ? overrides[rel] : readPage(path.join(siteRoot, rel)));
   const json = (rel) => JSON.parse(read(rel));
+  // The working sidebar is TypeScript; transpile it and its local imports.
+  const modules = new Map();
+  const loadSidebar = (rel) => {
+    if (rel.endsWith('.json')) return json(rel);
+    if (!modules.has(rel)) {
+      const ts = require('typescript');
+      const module = {exports: {}};
+      modules.set(rel, module);
+      const local = (specifier) => {
+        if (!specifier.startsWith('.')) return require(specifier);
+        const base = path.posix.join(path.posix.dirname(rel), specifier);
+        return loadSidebar([base, `${base}.ts`].find((f) => f.endsWith('.ts') && exists(f)) ?? `${base}.ts`);
+      };
+      const {outputText} = ts.transpileModule(read(rel), {compilerOptions: {module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022}});
+      new Function('require', 'module', 'exports', outputText)(local, module, module.exports);
+    }
+    const {exports} = modules.get(rel);
+    return exports.default ?? exports;
+  };
   const failures = [];
   const checked = [];
-  const used = new Set();
+  const scopes = new Set();
+  // A reference or target that cannot be checked is reported once, not again for each exception.
+  const skipped = new Set();
   const targets = json('plugins/api-reference/targets.json');
-  const {working, knownDifferences = {}} = json(`${ownerMaps}/references.json`);
+  const working = json(`${ownerMaps}/working.json`).release;
+  const scopeOf = ({reference, release, target}) => `${reference} (client ${release}, SA ${target})`;
+  // Each reviewed omission is one method in one reference, release, and target.
+  const omissions = new Map();
+  for (const {owner, methods, scopes: where} of json(`${ownerMaps}/omissions.json`).omissions) {
+    for (const scope of where) for (const method of methods) omissions.set(`${scopeOf(scope)}|${owner}|${method}`, {owner, method, scope, seen: false});
+  }
+  const baselineNames = new Set([...readdirSync(path.join(siteRoot, ownerMaps)), ...Object.keys(overrides).filter((k) => k.startsWith(`${ownerMaps}/`)).map((k) => k.slice(ownerMaps.length + 1))]);
+  const baselines = [...baselineNames].filter((name) => /^baseline-[^/]+\.json$/.test(name)).sort().map((name) => ({file: `${ownerMaps}/${name}`, ...json(`${ownerMaps}/${name}`)}));
   const references = [
-    {reference: 'api/javascript', release: working, defaultTarget: targets.workingDefault},
-    ...json('javascript_versions.json').map((release) => ({reference: `javascript_versioned_docs/version-${release}`, release, defaultTarget: targets.snapshots.javascript[release]})),
+    {reference: 'api/javascript', release: working, defaultTarget: targets.workingDefault, sidebar: 'sidebarsJavascript.ts'},
+    ...json('javascript_versions.json').map((release) => ({reference: `javascript_versioned_docs/version-${release}`, release, defaultTarget: targets.snapshots.javascript[release], sidebar: `javascript_versioned_sidebars/version-${release}-sidebars.json`})),
   ];
-  for (const {reference, release, defaultTarget} of references) {
+  for (const {reference, release, defaultTarget, sidebar} of references) {
+    const tag = `v${release}`;
     const mapFile = `${ownerMaps}/${release}.json`;
-    if (!(mapFile in overrides) && !existsSync(path.join(siteRoot, mapFile))) {
+    if (!exists(reference)) {
+      skipped.add(reference);
+      failures.push(`${reference}, which documents client ${release}, is missing.`);
+      continue;
+    }
+    if (!exists(mapFile)) {
+      skipped.add(reference);
       failures.push(`${reference} documents client ${release}, which has no pinned owner map at ${mapFile}. Build it with: ${rebuild(release)}`);
       continue;
     }
     const map = json(mapFile);
-    const subfolders = readdirSync(path.join(siteRoot, reference), {withFileTypes: true}).filter((d) => d.isDirectory() && d.name.startsWith('sa-')).map((d) => d.name);
-    for (const sub of ['', ...subfolders]) {
-      const folder = sub ? `${reference}/${sub}` : reference;
-      const target = sub ? sub.slice(3) : defaultTarget;
-      const pinnedIn = `client ${release} (${map.source.tag}, SA ${target})`;
+    const versions = Object.entries(map.targets ?? {}).filter(([, owners]) => owners.package?.version !== release);
+    if (map.release !== release || map.source?.tag !== tag || versions.length) {
+      const packages = versions.map(([target, owners]) => `SA ${target} from ${owners.package?.name}@${owners.package?.version}`).join(', ');
+      skipped.add(reference);
+      failures.push(`${mapFile} is the owner map of client ${map.release} (${map.source?.tag}${packages ? `; ${packages}` : ''}), not of client ${release} (${tag}), which ${reference} documents. Rebuild it with: ${rebuild(release)}`);
+      continue;
+    }
+    let listed;
+    try {
+      listed = sidebarTargets(loadSidebar, sidebar);
+    } catch (error) {
+      skipped.add(reference);
+      failures.push(`${sidebar}, the sidebar of ${reference}, cannot be read: ${error.message}`);
+      continue;
+    }
+    const folders = readdirSync(path.join(siteRoot, reference), {withFileTypes: true}).filter((d) => d.isDirectory() && d.name.startsWith('sa-')).map((d) => d.name.slice(3));
+    for (const target of listed.filter((t) => !folders.includes(t))) skipped.add(scopeOf({reference, release, target}));
+    for (const target of listed) if (!folders.includes(target)) failures.push(`${sidebar} lists SA ${target} for ${reference}, but ${reference}/sa-${target} is missing.`);
+    for (const target of folders) if (!listed.includes(target)) failures.push(`${reference}/sa-${target} is not listed in ${sidebar}.`);
+    for (const target of [defaultTarget, ...folders.filter((t) => t !== defaultTarget).sort()]) {
+      const folder = target === defaultTarget ? reference : `${reference}/sa-${target}`;
+      const scope = scopeOf({reference, release, target});
+      scopes.add(scope);
+      const pinnedIn = `client ${release} (${tag}, SA ${target})`;
       const owners = map.targets[target];
       if (!owners) {
-        failures.push(`${folder} documents SA ${target}, which the pinned owner map for client ${release} (${map.source.tag}) does not cover. Rebuild it with: ${rebuild(release)}`);
+        failures.push(`${folder} documents SA ${target}, which ${mapFile} (${tag}) does not cover. Rebuild it with: ${rebuild(release)}`);
         continue;
       }
       const client = owners.client.interface;
+      // Pinned methods by owner and name; one name may belong to several owners.
       const pinned = new Map();
-      for (const [group, {property, methods}] of Object.entries(owners.groups)) for (const method of methods) pinned.set(method, {owner: group, property, text: `${group} (briosa.${property})`});
-      for (const method of owners.client.members) pinned.set(method, {owner: client, text: client});
-      for (const method of owners.functions) pinned.set(method, {owner: 'package-level function', text: 'a package-level function'});
-      // A known difference listed under "*" applies to every reference folder.
-      const scopes = ['*', folder].filter((scope) => knownDifferences[scope]);
-      const knownUndocumented = new Map(scopes.flatMap((scope) => (knownDifferences[scope].undocumented ?? []).map((method) => [method, scope])));
-      const knownOwners = new Map(scopes.flatMap((scope) => Object.entries(knownDifferences[scope].documentedOwners ?? {}).flatMap(([documented, pages]) => Object.entries(pages).flatMap(([page, methods]) => methods.map((method) => [`${page}#${method}`, {documented, scope}])))));
-      const declared = new Set();
+      const byName = new Map();
+      const pin = (owner, name, property) => {
+        const p = {owner, name, property, text: property ? `${owner} (briosa.${property})` : owner === packageOwner ? 'a package-level function' : owner};
+        pinned.set(`${owner}#${name}`, p);
+        byName.set(name, [...(byName.get(name) ?? []), p]);
+      };
+      for (const [group, {property, methods}] of Object.entries(owners.groups)) for (const method of methods) pin(group, method, property);
+      for (const method of owners.client.members) pin(client, method);
+      for (const method of owners.functions) pin(packageOwner, method);
+      // The frozen baseline of known errors for this scope, with each declaration's expected count.
+      const known = new Map();
+      for (const b of baselines.filter((b) => scopeOf(b) === scope)) {
+        b.seen = true;
+        for (const e of b.entries) known.set(`${e.page}|${e.method}|${e.pinned}|${e.documented}`, {...e, file: b.file, count: 0});
+      }
+      const covered = new Set();
       let declarations = 0;
+      const overview = `${folder}/overview.md`;
+      const stated = exists(overview) ? [...read(overview).matchAll(/\*\*(\d+\.\d+\.\d+)\*\* client reference/g)].map((m) => m[1]) : [];
+      if (!stated.length) failures.push(`${overview} does not state "This is the **${release}** client reference", the release that ${reference} is checked against.`);
+      for (const other of stated.filter((s) => s !== release)) failures.push(`${overview} states the **${other}** client reference, but ${reference} is checked against the owner map for client ${release}.`);
       for (const page of readdirSync(path.join(siteRoot, folder)).filter((name) => name.endsWith('.md')).sort()) {
         const file = `${folder}/${page}`;
         const text = read(file);
-        for (const [, stated] of text.matchAll(/\bclient \*\*(\d+\.\d+\.\d+)\*\*/g)) {
-          if (stated !== release) failures.push(`${file} states client ${stated}, but ${reference} is checked against the owner map for client ${release}.`);
+        for (const [, other] of text.matchAll(/\bclient \*\*(\d+\.\d+\.\d+)\*\*/g)) {
+          if (other !== release) failures.push(`${file} states client ${other}, but ${reference} is checked against the owner map for client ${release}.`);
         }
         const groupsDeclared = new Set();
-        for (const d of declaredMethods(text)) {
-          if (d.form === 'orphan') {
-            failures.push(`${file}: the owner label "${d.label}" is not directly above an interface declaration.`);
-            continue;
+        for (const [, code] of text.matchAll(/^```ts\n([\s\S]*?)^```/gm)) {
+          const block = readBlock(code);
+          for (const problem of block.problems) failures.push(`${file}: ${problem}`);
+          const found = [];
+          for (const i of block.interfaces) {
+            const owner = Boolean(owners.groups[i.name]) || i.name === client;
+            const [label] = i.labels;
+            let labelChecked = false;
+            if (i.labels.length > 1) failures.push(`${file}: interface ${i.name} on block line ${i.line} has ${i.labels.length} owner labels.`);
+            else if (label) {
+              const m = label.match(/^\/\/ Member of ([\w$]+)(?: \(briosa\.([\w$]+)\.([\w$]+)\(\.\.\.\)\))?$/);
+              const declares = i.methods.length ? `declares ${i.methods.join(', ')}` : 'declares no method';
+              if (!m) failures.push(`${file}: the owner label "${label}" of interface ${i.name} does not read "// Member of <Group> (briosa.<property>.<method>(...))".`);
+              else if (m[1] !== i.name) failures.push(`${file}: the owner label "${label}" names ${m[1]}, but labels interface ${i.name}, which ${declares}.`);
+              else if (m[3] ? i.methods.length !== 1 || i.methods[0] !== m[3] : !i.methods.length) failures.push(`${file}: the owner label "${label}" ${m[3] ? `names ${m[3]}` : 'labels methods'}, but interface ${i.name} ${declares}.`);
+              else labelChecked = true;
+            }
+            if (owner && !i.methods.length && !label) failures.push(`${file}: interface ${i.name} on block line ${i.line} declares no method, so it documents nothing that ${pinnedIn} pins to ${i.name}.`);
+            for (const name of i.methods) {
+              // Methods of other interfaces, such as BriosaServerSnapshot.supports, are not client methods.
+              if (!owner && !label && !byName.has(name)) continue;
+              found.push({form: 'interface', name, documented: i.name, as: `a member of ${i.name}`, label, labelChecked: labelChecked || !label});
+            }
           }
-          const pin = pinned.get(d.name);
-          // Methods of other interfaces, such as BriosaServerSnapshot.supports, are not client methods.
-          if (d.form === 'interface' && !pin && !d.label && !owners.groups[d.owner] && d.owner !== client) continue;
-          declarations++;
-          declared.add(d.name);
-          const documented = d.form === 'function' ? 'package-level function' : d.form === 'signature' ? client : d.owner;
-          const as = d.form === 'function' ? 'a package-level function' : d.form === 'signature' ? `an unlabelled ${client} member signature` : `a member of ${d.owner}`;
-          if (!pin) {
-            failures.push(`${file}: ${d.name} is documented as ${as}, but the pinned owner map for ${pinnedIn} has no such method.`);
-            continue;
+          for (const f of block.functions) found.push({form: 'function', name: f.name, documented: packageOwner, as: 'a package-level function'});
+          for (const s of block.signatures) found.push({form: 'signature', name: s.name, documented: client, as: `an unlabelled ${client} member signature`});
+          for (const d of found) {
+            declarations++;
+            const correct = pinned.get(`${d.documented}#${d.name}`);
+            if (correct) {
+              covered.add(`${correct.owner}#${d.name}`);
+              if (d.form !== 'interface') continue;
+              if (correct.property) groupsDeclared.add(correct.owner);
+              const expected = correct.property ? `// Member of ${correct.owner} (briosa.${correct.property}.${d.name}(...))` : `// Member of ${correct.owner}`;
+              if (correct.property && !d.label) failures.push(`${file}: ${d.name} is documented as a member of ${d.documented} without an owner label; its pinned owner in ${pinnedIn} is ${correct.text}. Label it "${expected}".`);
+              else if (d.label && d.labelChecked && d.label !== expected) failures.push(`${file}: ${d.name} is documented as a member of ${d.documented} with the owner label "${d.label}"; its pinned owner in ${pinnedIn} is ${correct.text}, labelled "${expected}".`);
+              continue;
+            }
+            const pins = byName.get(d.name);
+            if (!pins) {
+              failures.push(`${file}: ${d.name} is documented as ${d.as}, but ${mapFile} (${tag}, SA ${target}) has no such method.`);
+              continue;
+            }
+            // A misplaced declaration stands in for its only pinned owner, so it is reported once.
+            if (pins.length === 1) covered.add(`${pins[0].owner}#${d.name}`);
+            const entry = pins.length === 1 && known.get(`${page}|${d.name}|${pins[0].owner}|${d.documented}`);
+            if (entry) entry.count++;
+            else failures.push(`${file}: ${d.name} is documented as ${d.as}; its pinned owner in ${pinnedIn} is ${pins.map((p) => p.text).join(' or ')}.`);
           }
-          if (documented !== pin.owner) {
-            const key = `${page}#${d.name}`;
-            const known = knownOwners.get(key);
-            if (known?.documented === documented) used.add(`${known.scope}|${key}`);
-            else failures.push(`${file}: ${d.name} is documented as ${as}; its pinned owner in ${pinnedIn} is ${pin.text}.`);
-            continue;
-          }
-          if (d.form !== 'interface') continue;
-          const expected = pin.property ? `// Member of ${pin.owner} (briosa.${pin.property}.${d.name}(...))` : `// Member of ${pin.owner}`;
-          if (pin.property) groupsDeclared.add(pin.owner);
-          if (pin.property && !d.label) failures.push(`${file}: ${d.name} is documented as a member of ${d.owner} without an owner label; its pinned owner in ${pinnedIn} is ${pin.text}. Label it "${expected}".`);
-          else if (d.label && d.label !== expected) failures.push(`${file}: ${d.name} is documented as a member of ${d.owner} with the owner label "${d.label}"; its pinned owner in ${pinnedIn} is ${pin.text}, labelled "${expected}".`);
         }
         const cut = text.indexOf('\n## ');
         const intro = cut < 0 ? text : text.slice(0, cut);
@@ -480,27 +612,33 @@ function ownerCheck(siteRoot, overrides = {}) {
           }
         }
       }
-      for (const [method, pin] of pinned) {
-        if (declared.has(method)) continue;
-        if (knownUndocumented.has(method)) used.add(`${knownUndocumented.get(method)}|${method}`);
-        else failures.push(`${folder}: no page declares ${method}; its pinned owner in ${pinnedIn} is ${pin.text}.`);
+      for (const e of known.values()) {
+        const text = byName.get(e.method)?.find((p) => p.owner === e.pinned)?.text ?? e.pinned;
+        const as = e.documented === packageOwner ? 'a package-level function' : e.documented === client ? `a ${client} member` : `a member of ${e.documented}`;
+        if (e.count === e.occurrences) continue;
+        if (!e.count) failures.push(`${e.file} records ${e.method} on ${folder}/${e.page} as documented as ${as} (pinned owner ${e.pinned}), but the page no longer declares it that way. Remove the entry.`);
+        else failures.push(`${folder}/${e.page}: ${e.method} is documented as ${as} ${e.count} times; its pinned owner in ${pinnedIn} is ${text}, and ${e.file} records ${e.occurrences}.`);
       }
-      checked.push({folder, release, tag: map.source.tag, commit: map.source.commit, target, declarations});
-    }
-  }
-  for (const [scope, known] of Object.entries(knownDifferences)) {
-    const where = scope === '*' ? 'every reference folder' : scope;
-    for (const method of known.undocumented ?? []) {
-      if (!used.has(`${scope}|${method}`)) failures.push(`${ownerMaps}/references.json lists ${method} as undocumented in ${where}, but the check no longer finds it undocumented there. Remove the entry.`);
-    }
-    for (const [documented, pages] of Object.entries(known.documentedOwners ?? {})) {
-      for (const [page, methods] of Object.entries(pages)) {
-        for (const method of methods) {
-          if (!used.has(`${scope}|${page}#${method}`)) failures.push(`${ownerMaps}/references.json lists ${method} on ${page} in ${where} as documented under ${documented}, but the check no longer finds that difference. Remove the entry.`);
+      for (const [key, p] of pinned) {
+        const omission = omissions.get(`${scope}|${p.owner}|${p.name}`);
+        if (omission) omission.seen = true;
+        if (covered.has(key)) {
+          if (omission) failures.push(`${ownerMaps}/omissions.json records ${p.name} (${p.text}) as undocumented in ${scope}, but a page in ${folder} now declares it. Remove that scope from the entry.`);
+        } else if (!omission) {
+          failures.push(`${mapFile} (${tag}, SA ${target}) pins ${p.name} to ${p.text}, but no page in ${folder} has a documented declaration of it.`);
         }
       }
+      checked.push({folder, release, tag, commit: map.source.commit, target, declarations});
     }
   }
+  for (const o of omissions.values()) {
+    if (o.seen || skipped.has(o.scope.reference) || skipped.has(scopeOf(o.scope))) continue;
+    const scope = scopeOf(o.scope);
+    failures.push(scopes.has(scope)
+      ? `${ownerMaps}/omissions.json records ${o.method} as an undocumented ${o.owner} in ${scope}, but ${ownerMaps}/${o.scope.release}.json does not pin it to ${o.owner} for SA ${o.scope.target}.`
+      : `${ownerMaps}/omissions.json records ${o.method} as undocumented in ${scope}, which is not a reference, release, and target that the check covers. Remove or update that scope.`);
+  }
+  for (const b of baselines) if (!b.seen && !skipped.has(b.reference) && !skipped.has(scopeOf(b))) failures.push(`${b.file} records known errors in ${scopeOf(b)}, which is not a reference, release, and target that the check covers.`);
   return {failures, checked};
 }
 
@@ -512,34 +650,47 @@ test('JavaScript methods are documented under the owner their pinned client rele
 
 test('the JavaScript owner check names the method, both owners, and the file', () => {
   const folder = 'api/javascript';
-  const {working} = JSON.parse(readPage(path.join(root, ownerMaps, 'references.json')));
-  const map = JSON.parse(readPage(path.join(root, ownerMaps, `${working}.json`)));
+  const fs = require('node:fs');
+  const data = (name) => JSON.parse(readPage(path.join(root, ownerMaps, name)));
+  const {release: working} = data('working.json');
+  const map = data(`${working}.json`);
   const target = JSON.parse(readPage(path.join(root, 'plugins/api-reference/targets.json'))).workingDefault;
   const {groups} = map.targets[target];
   const pinnedIn = `client ${working} (${map.source.tag}, SA ${target})`;
+  const failuresWith = (overrides) => ownerCheck(root, overrides).failures;
   // The first labelled group method in the working reference, and another real group.
-  const pages = require('node:fs').readdirSync(path.join(root, folder)).filter((name) => name.endsWith('.md')).sort();
-  const page = pages.find((name) => declaredMethods(readPage(path.join(root, folder, name))).some((d) => d.label && groups[d.owner]));
+  const declared = (text) => [...text.matchAll(/^```ts\n([\s\S]*?)^```/gm)].flatMap(([, code]) => readBlock(code).interfaces.filter((i) => i.labels.length && groups[i.name]));
+  const page = fs.readdirSync(path.join(root, folder)).filter((name) => name.endsWith('.md')).sort().find((name) => declared(readPage(path.join(root, folder, name))).length);
   const file = `${folder}/${page}`;
   const text = readPage(path.join(root, file));
-  const {name: method, owner: group} = declaredMethods(text).find((d) => d.label && groups[d.owner]);
+  const {name: group, methods: [method]} = declared(text)[0];
   const {property} = groups[group];
   const other = Object.keys(groups).find((g) => g !== group);
   const label = `// Member of ${group} (briosa.${property}.${method}(...))`;
   const block = `${label}\ninterface ${group} {\n  ${method}(`;
   assert.ok(text.includes(block), `${file} declares ${method} in the labelled form`);
-  const failuresWith = (overrides) => ownerCheck(root, overrides).failures;
   const pinned = `${group} (briosa.${property})`;
+  const append = (code) => `${text}\n\`\`\`ts\n${code}\n\`\`\`\n`;
+  const misplaced = (owner) => `${file}: ${method} is documented as a member of ${owner}; its pinned owner in ${pinnedIn} is ${pinned}.`;
 
   // The defect in https://github.com/spatialanalyzer/briosa-docs/issues/137: a group method declared on the client.
-  assert.deepEqual(failuresWith({[file]: text.replace(block, `// Member of BriosaClient\ninterface BriosaClient {\n  ${method}(`)}), [
-    `${file}: ${method} is documented as a member of BriosaClient; its pinned owner in ${pinnedIn} is ${pinned}.`,
-  ]);
+  assert.deepEqual(failuresWith({[file]: text.replace(block, `// Member of BriosaClient\ninterface BriosaClient {\n  ${method}(`)}), [misplaced('BriosaClient')]);
   // A method moved consistently to another real group: label, interface, and calling sentence agree.
   const moved = text.replace(block, `// Member of ${other} (briosa.${groups[other].property}.${method}(...))\ninterface ${other} {\n  ${method}(`)
     .replace('\n## ', `\nCall \`${other}\` methods through \`briosa.${groups[other].property}.<method>(...)\`.\n\n## `);
-  assert.deepEqual(failuresWith({[file]: moved}), [
-    `${file}: ${method} is documented as a member of ${other}; its pinned owner in ${pinnedIn} is ${pinned}.`,
+  assert.deepEqual(failuresWith({[file]: moved}), [misplaced(other)]);
+  // A second, misplaced declaration in any layout: indented, on one line, or as a type literal.
+  assert.deepEqual(failuresWith({[file]: append(`// Member of ${other} (briosa.${groups[other].property}.${method}(...))\ninterface ${other} {\n      ${method}(\n        collection: CollectionName,\n      ): Promise<void>;\n}`)}), [misplaced(other)]);
+  assert.deepEqual(failuresWith({[file]: append(`interface BriosaClient { ${method}(): void; }`)}), [misplaced('BriosaClient')]);
+  assert.deepEqual(failuresWith({[file]: append(`type BriosaClient = { ${method}(): void };`)}), [misplaced('BriosaClient')]);
+  assert.deepEqual(failuresWith({[file]: append(`  ${method}(collection: CollectionName): Promise<void>;`)}), [`${file}: ${method} is documented as an unlabelled BriosaClient member signature; its pinned owner in ${pinnedIn} is ${pinned}.`]);
+  // An owner label that labels no method, and a client-owner interface without one.
+  assert.deepEqual(failuresWith({[file]: append('// Member of BriosaClient\ninterface BriosaClient {\n}')}), [`${file}: the owner label "// Member of BriosaClient" labels methods, but interface BriosaClient declares no method.`]);
+  assert.deepEqual(failuresWith({[file]: append(`${label}\ninterface ${group} {\n}`)}), [`${file}: the owner label "${label}" names ${method}, but interface ${group} declares no method.`]);
+  assert.deepEqual(failuresWith({[file]: append('interface BriosaClient {}')}), [`${file}: interface BriosaClient on block line 1 declares no method, so it documents nothing that ${pinnedIn} pins to BriosaClient.`]);
+  assert.deepEqual(failuresWith({[file]: append(`${label}\n\nexport declare function ${method}(): void;`)}), [
+    `${file}: the owner label "${label}" on line 1 does not label an interface declaration.`,
+    `${file}: ${method} is documented as a package-level function; its pinned owner in ${pinnedIn} is ${pinned}.`,
   ]);
   // A removed owner label.
   assert.deepEqual(failuresWith({[file]: text.replace(`${label}\n`, '')}), [
@@ -549,55 +700,160 @@ test('the JavaScript owner check names the method, both owners, and the file', (
   const added = `${method}Twice`;
   const addedBlock = `// Member of ${group} (briosa.${property}.${added}(...))\ninterface ${group} {\n  ${added}(): Promise<void>;\n}\n\n`;
   assert.deepEqual(failuresWith({[file]: text.replace(block, `${addedBlock}${block}`)}), [
-    `${file}: ${added} is documented as a member of ${group}, but the pinned owner map for ${pinnedIn} has no such method.`,
+    `${file}: ${added} is documented as a member of ${group}, but ${ownerMaps}/${working}.json (${map.source.tag}, SA ${target}) has no such method.`,
   ]);
   // A pinned method that no page declares: its section is removed, or the map gains a method.
   const start = text.lastIndexOf('\n## ', text.indexOf(block));
   const section = text.slice(start, text.indexOf('\n## ', start + 1));
-  assert.deepEqual(failuresWith({[file]: text.replace(section, '')}), [
-    `${folder}: no page declares ${method}; its pinned owner in ${pinnedIn} is ${pinned}.`,
-  ]);
+  const undeclared = (name, where) => `${ownerMaps}/${working}.json (${map.source.tag}, SA ${target}) pins ${name} to ${pinned}, but no page in ${where} has a documented declaration of it.`;
+  assert.deepEqual(failuresWith({[file]: text.replace(section, '')}), [undeclared(method, folder)]);
   const extended = structuredClone(map);
   extended.targets[target].groups[group].methods.push(added);
   const missing = failuresWith({[`${ownerMaps}/${working}.json`]: JSON.stringify(extended)});
-  assert.ok(missing.includes(`${folder}: no page declares ${added}; its pinned owner in ${pinnedIn} is ${pinned}.`), missing.join('\n'));
-  assert.ok(missing.every((f) => f.endsWith(`: no page declares ${added}; its pinned owner in ${pinnedIn} is ${pinned}.`)), missing.join('\n'));
+  assert.ok(missing.includes(undeclared(added, folder)), missing.join('\n'));
+  assert.ok(missing.every((f) => f.startsWith(`${ownerMaps}/${working}.json (`) && f.includes(` pins ${added} to ${pinned}, but no page in `)), missing.join('\n'));
+
+  // Another release's map in place of the right one, and an overview that names another release.
+  const [release, previous] = JSON.parse(readPage(path.join(root, 'javascript_versions.json'))).filter((r) => r !== working);
+  if (previous) {
+    assert.deepEqual(failuresWith({[`${ownerMaps}/${release}.json`]: readPage(path.join(root, ownerMaps, `${previous}.json`))}).filter((f) => f.startsWith(`${ownerMaps}/${release}.json is`)), [
+      `${ownerMaps}/${release}.json is the owner map of client ${previous} (v${previous}; ${Object.entries(data(`${previous}.json`).targets).map(([t, o]) => `SA ${t} from ${o.package.name}@${previous}`).join(', ')}), not of client ${release} (v${release}), which javascript_versioned_docs/version-${release} documents. Rebuild it with: ${rebuild(release)}`,
+    ]);
+  }
+  const overview = `${folder}/overview.md`;
+  const stated = readPage(path.join(root, overview));
+  assert.deepEqual(failuresWith({[overview]: stated.replace(`This is the **${working}** client reference`, 'This is the **9.9.9** client reference')}), [
+    `${overview} states the **9.9.9** client reference, but ${folder} is checked against the owner map for client ${working}.`,
+  ]);
+
+  // A reviewed omission retires once the method is documented in that scope.
+  const omission = data('omissions.json').omissions.find((o) => o.owner === 'package-level function' && o.scopes.some((s) => s.reference === folder && s.release === working && s.target === target));
+  if (omission) {
+    const lifecycle = `${folder}/lifecycle.md`;
+    const [name] = omission.methods;
+    assert.deepEqual(failuresWith({[lifecycle]: `${readPage(path.join(root, lifecycle))}\n\`\`\`ts\nexport declare function ${name}(client: BriosaClient): unknown;\n\`\`\`\n`}), [
+      `${ownerMaps}/omissions.json records ${name} (a package-level function) as undocumented in ${folder} (client ${working}, SA ${target}), but a page in ${folder} now declares it. Remove that scope from the entry.`,
+    ]);
+  }
+  // A known error in the frozen baseline may not occur more often than recorded.
+  const baselineName = fs.readdirSync(path.join(root, ownerMaps)).find((name) => /^baseline-.*\.json$/.test(name));
+  if (baselineName) {
+    const baseline = data(baselineName);
+    const entry = baseline.entries.find((e) => e.documented === 'package-level function');
+    const folderOf = baseline.target === JSON.parse(readPage(path.join(root, 'plugins/api-reference/targets.json'))).snapshots.javascript[baseline.release] ? baseline.reference : `${baseline.reference}/sa-${baseline.target}`;
+    const known = `${folderOf}/${entry.page}`;
+    const owner = JSON.parse(readPage(path.join(root, ownerMaps, `${baseline.release}.json`))).targets[baseline.target].groups[entry.pinned];
+    assert.deepEqual(failuresWith({[known]: `${readPage(path.join(root, known))}\n\`\`\`ts\nfunction ${entry.method}(): Promise<void>;\n\`\`\`\n`}), [
+      `${known}: ${entry.method} is documented as a package-level function ${entry.occurrences + 1} times; its pinned owner in client ${baseline.release} (v${baseline.release}, SA ${baseline.target}) is ${entry.pinned} (briosa.${owner.property}), and ${ownerMaps}/${baselineName} records ${entry.occurrences}.`,
+    ]);
+  }
 });
 
-test('a client release that adds an operation group or a client member needs only its owner map', async () => {
+// A minimal site: one release, both as the working reference and as a
+// snapshot, documenting `owners` for SA 2026 and SA 2024.
+async function ownerFixture(owners, pages, {omissions = [], sidebarTargets = ['2024.1.0508.5']} = {}) {
   const fixture = await mkdtemp(path.join(os.tmpdir(), 'briosa-javascript-owners-'));
-  try {
-    const target = '2026.1.0529.7';
-    const owners = {
-      client: {interface: 'BriosaClient', members: ['restart', 'start']},
-      groups: {MeshOperations: {property: 'meshOperations', methods: ['smoothMesh']}},
-      functions: ['createBriosaClient'],
-    };
-    const map = {release: '9.0.0', source: {repository: 'https://github.com/spatialanalyzer/briosa-js', tag: 'v9.0.0', commit: '0'.repeat(40)}, targets: {[target]: owners}};
-    const files = {
-      'plugins/api-reference/targets.json': JSON.stringify({workingDefault: target, snapshots: {javascript: {'9.0.0': target}}}),
-      'javascript_versions.json': '["9.0.0"]',
-      [`${ownerMaps}/references.json`]: JSON.stringify({working: '9.0.0'}),
-      [`${ownerMaps}/9.0.0.json`]: JSON.stringify(map),
-    };
-    const pages = {
-      'lifecycle.md': '# Lifecycle\n\n```ts\nexport declare function createBriosaClient(): BriosaClient;\n\nstart(): Promise<void>;\n\nrestart(): Promise<void>;\n```\n',
-      'mesh-operations.md': '# Mesh Operations\n\nThis reference covers client **9.0.0**. Call `MeshOperations` methods through `briosa.meshOperations.<method>(...)`.\n\n## Smooth Mesh\n\n```ts\n// Member of MeshOperations (briosa.meshOperations.smoothMesh(...))\ninterface MeshOperations {\n  smoothMesh(\n    mesh: CollectionObjectName,\n  ): Promise<void>;\n}\n```\n',
-    };
-    for (const folder of ['api/javascript', 'javascript_versioned_docs/version-9.0.0']) {
+  const targets = ['2026.1.0529.7', '2024.1.0508.5'];
+  const sidebar = JSON.stringify({javascriptSidebar: ['overview', ...sidebarTargets.map((t) => ({type: 'category', label: `SA ${t}`, items: [`sa-${t}/overview`]})), 'lifecycle']});
+  const map = {release: '9.0.0', source: {repository: 'https://github.com/spatialanalyzer/briosa-js', tag: 'v9.0.0', commit: '0'.repeat(40)}, targets: Object.fromEntries(targets.map((t) => [t, {package: {name: `@spatialanalyzer/briosa-${t}`, version: '9.0.0', integrity: 'sha512-'}, ...owners}]))};
+  const files = {
+    'plugins/api-reference/targets.json': JSON.stringify({workingDefault: targets[0], snapshots: {javascript: {'9.0.0': targets[0]}}}),
+    'javascript_versions.json': '["9.0.0"]',
+    'sidebarsJavascript.ts': `const sidebars = ${sidebar};\nexport default sidebars;\n`,
+    'javascript_versioned_sidebars/version-9.0.0-sidebars.json': sidebar,
+    [`${ownerMaps}/working.json`]: JSON.stringify({release: '9.0.0'}),
+    [`${ownerMaps}/omissions.json`]: JSON.stringify({omissions}),
+    [`${ownerMaps}/9.0.0.json`]: JSON.stringify(map),
+  };
+  for (const reference of ['api/javascript', 'javascript_versioned_docs/version-9.0.0']) {
+    for (const [i, target] of targets.entries()) {
+      const folder = i ? `${reference}/sa-${target}` : reference;
+      files[`${folder}/overview.md`] = `# Overview\n\nThis is the **9.0.0** client reference for **SA ${target}**.\n`;
       for (const [name, text] of Object.entries(pages)) files[`${folder}/${name}`] = text;
     }
-    for (const [file, text] of Object.entries(files)) {
-      await mkdir(path.dirname(path.join(fixture, file)), {recursive: true});
-      await writeFile(path.join(fixture, file), text);
-    }
+  }
+  for (const [file, text] of Object.entries(files)) {
+    await mkdir(path.dirname(path.join(fixture, file)), {recursive: true});
+    await writeFile(path.join(fixture, file), text);
+  }
+  return fixture;
+}
+const groupPage = (title, group, property, methods) => `# ${title}\n\nThis reference covers client **9.0.0**. Call \`${group}\` methods through \`briosa.${property}.<method>(...)\`.\n\n${methods.map((m) => `## ${m}\n\n\`\`\`ts\n// Member of ${group} (briosa.${property}.${m}(...))\ninterface ${group} {\n  ${m}(\n    collection: CollectionName,\n  ): Promise<void>;\n}\n\`\`\`\n`).join('\n')}`;
+const lifecyclePage = '# Lifecycle\n\n```ts\nexport declare function createBriosaClient(): BriosaClient;\n\nstart(): Promise<void>;\n\nrestart(): Promise<void>;\n```\n';
+
+test('a client release that adds an operation group or a client member needs only its owner map', async () => {
+  const owners = {
+    client: {interface: 'BriosaClient', members: ['restart', 'start']},
+    groups: {MeshOperations: {property: 'meshOperations', methods: ['smoothMesh']}},
+    functions: ['createBriosaClient'],
+  };
+  const pages = {'lifecycle.md': lifecyclePage, 'mesh-operations.md': groupPage('Mesh Operations', 'MeshOperations', 'meshOperations', ['smoothMesh'])};
+  const fixtures = [];
+  try {
+    const fixture = await ownerFixture(owners, pages);
+    fixtures.push(fixture);
     const {failures, checked} = ownerCheck(fixture);
     assert.deepEqual(failures, []);
-    assert.deepEqual(checked.map((c) => [c.folder, c.declarations]), [['api/javascript', 4], ['javascript_versioned_docs/version-9.0.0', 4]]);
-    // A listed difference that no longer occurs fails, so the list cannot go stale.
-    const listed = {working: '9.0.0', knownDifferences: {'*': {undocumented: ['restart']}}};
-    assert.deepEqual(ownerCheck(fixture, {[`${ownerMaps}/references.json`]: JSON.stringify(listed)}).failures, [
-      `${ownerMaps}/references.json lists restart as undocumented in every reference folder, but the check no longer finds it undocumented there. Remove the entry.`,
+    assert.deepEqual(checked.map((c) => [c.folder, c.declarations]), [
+      ['api/javascript', 4], ['api/javascript/sa-2024.1.0508.5', 4],
+      ['javascript_versioned_docs/version-9.0.0', 4], ['javascript_versioned_docs/version-9.0.0/sa-2024.1.0508.5', 4],
+    ]);
+    // A target that the sidebar lists cannot drop out of the check.
+    await rm(path.join(fixture, 'api/javascript/sa-2024.1.0508.5'), {recursive: true});
+    assert.deepEqual(ownerCheck(fixture).failures, ['sidebarsJavascript.ts lists SA 2024.1.0508.5 for api/javascript, but api/javascript/sa-2024.1.0508.5 is missing.']);
+    // An omission must be reviewed for each scope, and is retired when the method is documented.
+    const scope = (reference, target) => ({reference, release: '9.0.0', target});
+    const omissions = [{owner: 'package-level function', methods: ['createMeshOperations'], scopes: [scope('api/javascript', '2026.1.0529.7')]}];
+    const withFactory = {...owners, functions: ['createBriosaClient', 'createMeshOperations']};
+    const omitted = await ownerFixture(withFactory, pages, {omissions});
+    fixtures.push(omitted);
+    const undeclared = (folder, target) => `${ownerMaps}/9.0.0.json (v9.0.0, SA ${target}) pins createMeshOperations to a package-level function, but no page in ${folder} has a documented declaration of it.`;
+    assert.deepEqual(ownerCheck(omitted).failures, [
+      undeclared('api/javascript/sa-2024.1.0508.5', '2024.1.0508.5'),
+      undeclared('javascript_versioned_docs/version-9.0.0', '2026.1.0529.7'),
+      undeclared('javascript_versioned_docs/version-9.0.0/sa-2024.1.0508.5', '2024.1.0508.5'),
+    ]);
+    const documented = {[`api/javascript/lifecycle.md`]: `${lifecyclePage}\n\`\`\`ts\nexport declare function createMeshOperations(client: BriosaClient): MeshOperations;\n\`\`\`\n`};
+    assert.ok(ownerCheck(omitted, documented).failures.includes(`${ownerMaps}/omissions.json records createMeshOperations (a package-level function) as undocumented in api/javascript (client 9.0.0, SA 2026.1.0529.7), but a page in api/javascript now declares it. Remove that scope from the entry.`));
+    // An omission for a release that no reference documents is reported, not ignored.
+    const stale = {[`${ownerMaps}/omissions.json`]: JSON.stringify({omissions: [{owner: 'BriosaClient', methods: ['restart'], scopes: [scope('api/javascript', '2026.1.0529.7'), {reference: 'api/javascript', release: '8.0.0', target: '2026.1.0529.7'}]}]})};
+    assert.deepEqual(ownerCheck(fixture, stale).failures.filter((f) => f.startsWith(`${ownerMaps}/omissions.json`)), [
+      `${ownerMaps}/omissions.json records restart (BriosaClient) as undocumented in api/javascript (client 9.0.0, SA 2026.1.0529.7), but a page in api/javascript now declares it. Remove that scope from the entry.`,
+      `${ownerMaps}/omissions.json records restart as undocumented in api/javascript (client 8.0.0, SA 2026.1.0529.7), which is not a reference, release, and target that the check covers. Remove or update that scope.`,
+    ]);
+  } finally {
+    // mkdtemp owns these unique fixtures.
+    for (const fixture of fixtures) await rm(fixture, {recursive: true, force: true});
+  }
+});
+
+test('two owners may share a method name', async () => {
+  const owners = {
+    client: {interface: 'BriosaClient', members: ['restart', 'start']},
+    groups: {
+      GdtOperations: {property: 'gdtOperations', methods: ['makeFeatureChecks']},
+      MeshReviewOperations: {property: 'meshReviewOperations', methods: ['makeFeatureChecks']},
+    },
+    functions: ['createBriosaClient'],
+  };
+  const pages = {
+    'lifecycle.md': lifecyclePage,
+    'gdt-construction.md': groupPage('GDT Construction', 'GdtOperations', 'gdtOperations', ['makeFeatureChecks']),
+    'mesh-review-operations.md': groupPage('Mesh Review Operations', 'MeshReviewOperations', 'meshReviewOperations', ['makeFeatureChecks']),
+  };
+  const fixture = await ownerFixture(owners, pages);
+  try {
+    assert.deepEqual(ownerCheck(fixture).failures, []);
+    const removed = {};
+    for (const folder of ['api/javascript', 'api/javascript/sa-2024.1.0508.5']) removed[`${folder}/gdt-construction.md`] = '# GDT Construction\n';
+    assert.deepEqual(ownerCheck(fixture, removed).failures, [
+      `${ownerMaps}/9.0.0.json (v9.0.0, SA 2026.1.0529.7) pins makeFeatureChecks to GdtOperations (briosa.gdtOperations), but no page in api/javascript has a documented declaration of it.`,
+      `${ownerMaps}/9.0.0.json (v9.0.0, SA 2024.1.0508.5) pins makeFeatureChecks to GdtOperations (briosa.gdtOperations), but no page in api/javascript/sa-2024.1.0508.5 has a documented declaration of it.`,
+    ]);
+    const robot = {'api/javascript/gdt-construction.md': groupPage('GDT Construction', 'RobotOperations', 'robotOperations', ['makeFeatureChecks'])};
+    assert.deepEqual(ownerCheck(fixture, robot).failures, [
+      'api/javascript/gdt-construction.md: makeFeatureChecks is documented as a member of RobotOperations; its pinned owner in client 9.0.0 (v9.0.0, SA 2026.1.0529.7) is GdtOperations (briosa.gdtOperations) or MeshReviewOperations (briosa.meshReviewOperations).',
+      `${ownerMaps}/9.0.0.json (v9.0.0, SA 2026.1.0529.7) pins makeFeatureChecks to GdtOperations (briosa.gdtOperations), but no page in api/javascript has a documented declaration of it.`,
     ]);
   } finally {
     // mkdtemp owns this unique fixture.
