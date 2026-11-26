@@ -11,6 +11,43 @@ has one of three owners:
 
 The check runs offline under `npm run check`. It never reads GitHub or npm.
 
+## Supported Declaration Forms
+
+The check is a closed world. The site's Markdown parser finds every code
+block on every page. Blocks in `ts`, `typescript`, `tsx`, `mts`, `cts`, `js`,
+`javascript`, `jsx`, `mjs` or `cjs`, with any metadata after the language, are
+read with the TypeScript parser. Each declaration in them must take one of the
+forms below. A block in any other language, or raw HTML, may not name a
+pinned method followed by `(`.
+
+Anything else that declares, or could declare, a callable fails as an
+unsupported form, with its page line, owner and method, and the form to use.
+That includes a class other than an error class, a namespace or module, a
+nested declaration, an object type or type alias with a method, call signature
+or function type, an object-literal method, and a function value outside a
+call. A parse error fails with the compiler's message, apart from the bare
+signatures and placeholders below.
+
+The counts are the blocks that use each form across the eleven reference
+folders, which have 14,107 blocks in all.
+
+| Form | Example | Blocks |
+| --- | --- | ---: |
+| Group interface: a root, unexported interface whose label names its only method; an overload set repeats that name | `// Member of GdtOperations (briosa.gdtOperations.makeFeatureChecks(...))`<br>`interface GdtOperations { makeFeatureChecks(collection: CollectionName): Promise<void>; }` | 4,497 |
+| Bare member signature, for a client member: a root statement at the start of a line | `stop(): Promise<void>;` | 136 |
+| Package-level function: a root `function`, `export function` or `export declare function` without a body | `export declare function getWorkingDirectory(client: BriosaClient): Promise<string>;` | 6,533 |
+| Data interface: an exported interface whose methods and function-typed properties are not pinned methods | `export interface BriosaServerSnapshot { readonly briosaVersion: string; supports(method: string): boolean; }` | 11,718 |
+| Data type: a type alias with no method, call signature or function type | `export type InstallationScope = 'machine' \| 'user' \| 'portable';` | 470 |
+| Value object: an exported constant with no function value | `export const AngularUnits = Object.freeze({ degrees: 'degrees' });` | 434 |
+| Error class: an exported class that extends another, with only properties and getters | `export class BriosaOperationError extends BriosaError { readonly operationId: string; }` | 19 |
+| Enum | `export enum GdtFeatureType { Diameter = "diameter" }` | 1 |
+| Example: imports, statements and local constants; a function value only as a call argument | `await getWorkingDirectory(briosa, { onMpCompletion: ({ state }) => {} });` | 835 |
+| Placeholder: `...` standing for a value before `,`, `)`, `]` or `}` | `await getLineProperties(briosa, { lineName: ... });` | 371 |
+
+A labelled client interface (`// Member of BriosaClient`) is not a supported
+form; client members are bare signatures. To support a new form, change the
+check and this table in the same reviewed change.
+
 ## Maps
 
 Each `<release>.json` file is the owner map of one
