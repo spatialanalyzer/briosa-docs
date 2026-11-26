@@ -311,12 +311,31 @@ links. Release, search, and SEO checks verify the built routes and metadata.
 Browser checks must also exercise target persistence, shared links, release
 switching, Back/Forward, mobile navigation, and keyboard access.
 
+`tests/api-reference-working.test.cjs` also checks that the JavaScript
+reference documents each method under the owner that the released client gives
+it: an operation group, `BriosaClient`, or the package. It compares every
+JavaScript snapshot, and the working reference, with an owner map that
+`scripts/javascript-owner-maps.mjs` builds from that release's briosa-js tag.
+When you cut a JavaScript snapshot for a new client release, build its map:
+
+```powershell
+node scripts/javascript-owner-maps.mjs <briosa-js checkout> <javascript-package-version>
+```
+
+The check reads the code blocks in the JavaScript reference against the
+declaration forms that
+[`tests/javascript-owner-maps/README.md`](tests/javascript-owner-maps/README.md)
+lists, along with the forms it does not read. That README also explains the
+maps, the working pin, and the recorded documentation errors that
+https://github.com/spatialanalyzer/briosa-docs/issues/152 corrects.
+
 ## Release Checklist
 
 1. Verify published GitHub releases and package registries for both exact targets.
 2. Compare tagged protobuf, runtime registration, capability policy, and handwritten client APIs; reconcile target-specific signatures, defaults, and values.
 3. Update guides and every catalog representation without promoting validation claims.
 4. Cut each product snapshot with its Docusaurus version command and update defaults. Do not add the new release to `compatibilityAddresses` in `plugins/api-reference/targets.json`; current references already have release-independent addresses.
+   For a JavaScript client release, build its owner map with `scripts/javascript-owner-maps.mjs` and set `release` in `tests/javascript-owner-maps/working.json` when the working reference moves to it.
 5. Run Node.js 24 `npm ci` and `npm run check`; verify the search-enabled build, current/historical routes, target navigation, and representative released-package examples.
 6. After merge and deployment, verify live routes and refresh the Algolia crawler/index. Local checks do not refresh deployed search.
 
