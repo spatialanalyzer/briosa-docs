@@ -25,6 +25,114 @@ contracts in an explicitly reviewed implementation issue;
 Supported catalog entries should link to the API reference instead of
 duplicating client usage guidance.
 
+## Choose Markdown, MDX Components, or React
+
+Start with plain Markdown (`.md`). Use the globally registered `<Steps>` or
+`<LinkCards>` components when a Markdown page needs a numbered procedure or a
+grid of related links. Write a standalone React component (`.tsx`) only when a
+page or widget needs custom layout, build-time data imports, or client-side
+state and browser APIs that Markdown cannot express.
+
+### Plain Markdown
+
+Use plain Markdown for guides, concepts, deployment instructions, release notes,
+API snapshots, and MP command catalog pages. Standard Markdown covers headings,
+lists, tables, fenced code blocks, links, and Docusaurus admonitions
+(`:::note`, `:::tip`, `:::warning`, `:::caution`).
+
+- **Example:** `docs/getting-started/prerequisites.md` is a plain Markdown guide
+  with headings, a bullet list, a `:::warning` admonition, and links, with no
+  imports or JSX.
+
+Pages that stay in `.md` can still import a specific component when needed, such
+as `@theme/Tabs` and `@theme/TabItem` for multi-language code blocks in
+`docs/getting-started/first-request.md`, or `CatalogFilter` in
+`mp-command-catalog/commands/index.md`.
+
+### Globally Registered Components
+
+`src/theme/MDXComponents.tsx` registers `<Steps>` and `<LinkCards>` from
+`src/components/Docs/index.tsx` for every Markdown and MDX page, so you can use
+them without an `import` statement:
+
+- `<Steps>` wraps a Markdown ordered list when step order matters. It renders
+  each item as a numbered station along a vertical line.
+- `<LinkCards>` wraps a Markdown unordered list of links. It renders each link
+  as a destination card in a responsive grid.
+
+Leave a blank line after the opening tag and before the closing tag so MDX
+parses the Markdown list inside the wrapper.
+
+- **Example:** `docs/getting-started/first-request.md` uses `<Steps>` for the
+  direct gRPC startup sequence and `<LinkCards>` for the tutorial links:
+
+```markdown
+<Steps>
+
+1. Start a compatible local Briosa server.
+2. Call `StartSpatialAnalyzerSdk`.
+3. Optionally call `LaunchSpatialAnalyzer` when it needs a fresh application.
+4. Call `ConnectToSpatialAnalyzer` and require `ready_for_mp = true`.
+
+</Steps>
+
+<LinkCards>
+
+- [.NET](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/dotnet)
+- [TypeScript](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/typescript)
+- [Python](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/python)
+- [Direct gRPC](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/grpc)
+
+</LinkCards>
+```
+
+### Standalone React Components
+
+Write a React component under `src/pages/` or `src/components/` when a page or
+widget requires:
+
+- structured build-time data imports, such as reading version JSON files;
+- custom full-width layout outside the standard docs article frame; or
+- client-side state, effects, keyboard navigation, canvas or SVG rendering, or
+  browser APIs such as `ResizeObserver`, `IntersectionObserver`, `localStorage`,
+  or clipboard access.
+
+Keep reusable UI logic in TypeScript under `src/components/` rather than
+defining components inline in Markdown.
+
+- **Example:** `src/pages/api/index.tsx` is a standalone React page that imports
+  the four `*_versions.json` files and `plugins/api-reference/targets.json` to
+  render the `/api` product cards and version chips.
+
+### Why the Homepage Stays in `src/components/Home/`
+
+`src/pages/index.tsx` is a thin shell that wraps the Docusaurus `<Layout>`,
+adds `WebSite` JSON-LD metadata, and composes eight section components from
+`src/components/Home/`.
+
+The homepage stays in React instead of MDX because its sections are interactive
+and share browser-side motion and full-width layout logic:
+
+- `Hero.tsx` runs a `<canvas>` point-cloud animation (`bladeScan.ts`), a tabbed
+  install terminal with copy controls, and a Pause Motion toggle shared across
+  the page through `runtime.ts` and `MotionRoot`.
+- `LiveSession.tsx` steps through C#, Python, and TypeScript code using
+  `requestAnimationFrame` and `IntersectionObserver` to drive a synchronized SVG
+  viewport, tree, and console log.
+- `Architecture.tsx` animates the request path in SVG (`photonFlow.ts`).
+- `Catalog.tsx` lays out the interactive MP root-group SVG spectrum with
+  `ResizeObserver`, `IntersectionObserver`, and arrow-key navigation.
+- `Products.tsx`, `ExactTargets.tsx`, and `Closing.tsx` share the same
+  full-width band layout and Scanline styling from `src/pages/index.module.css`.
+
+The versions, exact targets, operation counts, gRPC service count, MP root-group
+counts, and featured operations shown on the homepage live in
+`src/components/Home/data.ts`, copied by hand from committed site pages rather
+than generated. Those pages (`docs/releases.md`, `src/pages/install.md`, the MP
+Command Catalog overviews and group hierarchy, and the current gRPC reference)
+remain the source of truth, and `npm run check` verifies the homepage values in
+`src/components/Home/data.ts` against them.
+
 ## Draft and Release API Contracts
 
 Current defaults are Server **0.10.0** and clients **0.5.0**. Servers 0.9.1 and 0.9.2 are schema-identical to 0.9.0 and have no separate API snapshot. Working `api/` content is not published until snapshotted. Within each product version, existing source describes SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. The published reference for each SA target, such as `/api/grpc/sa-2024.1.0508.5/`, shows the newest release that documents that target. Each method's history page, such as `/api/grpc/analysis-operations/angle-between-line-and-plane`, shows every distinct contract that earlier releases published. Earlier releases keep their guide and group pages at `/api/<family>/sa-<target>/<release>/`. Release-qualified method addresses redirect to the current page or to the matching history revision.
