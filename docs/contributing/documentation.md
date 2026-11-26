@@ -27,33 +27,37 @@ duplicating client usage guidance.
 
 ## Choose Markdown, MDX Components, or React
 
-Start with plain Markdown (`.md`). Use the globally registered `<Steps>` or
-`<LinkCards>` components when a Markdown page needs a numbered procedure or a
-grid of related links. Write a standalone React component (`.tsx`) only when a
-page or widget needs custom layout, build-time data imports, or client-side
-state and browser APIs that Markdown cannot express.
+Start with plain Markdown (`.md`). On pages Docusaurus compiles as MDX, use
+`<Steps>` for a numbered procedure or `<LinkCards>` for a grid of related
+links. In API reference Markdown, use ordinary lists and links. Write a
+standalone React component (`.tsx`) only when a page or widget needs custom
+layout, build-time data imports, or client-side state and browser APIs that
+Markdown cannot express.
 
 ### Plain Markdown
 
 Use plain Markdown for guides, concepts, deployment instructions, release notes,
-API snapshots, and MP command catalog pages. Standard Markdown covers headings,
-lists, tables, fenced code blocks, links, and Docusaurus admonitions
-(`:::note`, `:::tip`, `:::warning`, `:::caution`).
+API snapshots, and MP command catalog pages. Use Markdown for headings, lists,
+fenced code blocks, and links. The site also supports pipe tables and
+Docusaurus admonitions (`:::note`, `:::tip`, `:::warning`, and `:::caution`).
 
 - **Example:** `docs/getting-started/prerequisites.md` is a plain Markdown guide
   with headings, a bullet list, a `:::warning` admonition, and links, with no
   imports or JSX.
 
-Pages that stay in `.md` can still import a specific component when needed, such
-as `@theme/Tabs` and `@theme/TabItem` for multi-language code blocks in
+A `.md` page compiled as MDX can also import a component, such as
+`@theme/Tabs` and `@theme/TabItem` for multi-language code blocks in
 `docs/getting-started/first-request.md`, or `CatalogFilter` in
 `mp-command-catalog/commands/index.md`.
 
 ### Globally Registered Components
 
 `src/theme/MDXComponents.tsx` registers `<Steps>` and `<LinkCards>` from
-`src/components/Docs/index.tsx` for every Markdown and MDX page, so you can use
-them without an `import` statement:
+`src/components/Docs/index.tsx`. You can use them without an import in product
+guides, MP command catalog pages, and Markdown pages under `src/pages/` that
+Docusaurus compiles as MDX. The API reference plugin renders released snapshots
+to HTML, so use ordinary Markdown lists in `api/` sources and their versioned
+snapshots.
 
 - `<Steps>` wraps a Markdown ordered list when step order matters. It renders
   each item as a numbered station along a vertical line.
