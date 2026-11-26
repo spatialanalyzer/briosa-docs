@@ -134,8 +134,8 @@ counts, and featured operations shown on the homepage live in
 `src/components/Home/data.ts`, copied by hand from committed site pages rather
 than generated. Those pages (`docs/releases.md`, `src/pages/install.md`, the MP
 Command Catalog overviews and group hierarchy, and the current gRPC reference)
-remain the source of truth, and `npm run check` verifies the homepage values in
-`src/components/Home/data.ts` against them.
+remain the source of truth. No check compares the copy with them, so update
+`src/components/Home/data.ts` in the same change as any of those pages.
 
 ## Draft and Release API Contracts
 
