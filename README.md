@@ -202,11 +202,11 @@ in [issue #9](https://github.com/spatialanalyzer/briosa-docs/issues/9).
 ## Site Branding
 
 The site uses the approved Caliper b identity from
-[`briosa-brand@v2.1.0`](https://github.com/spatialanalyzer/briosa-brand/tree/v2.1.0).
+[`briosa-brand@v2.2.0`](https://github.com/spatialanalyzer/briosa-brand/tree/v2.2.0).
 Committed artwork, the original Inter font, licenses, and provenance live in
 [`static/brand/`](static/brand/README.md).
 
-`src/css/custom.css` maps the brand's theme tokens to the documentation theme.
+`src/css/scanline/tokens.css` maps the brand's theme tokens to the documentation theme.
 Light mode uses clean-room pages with white panels, ink text and headings, and
 link-blue links. Dark mode uses void pages with navy panels, light ink text,
 and cyan links, including the navbar and mobile menu. The hero and footer use
