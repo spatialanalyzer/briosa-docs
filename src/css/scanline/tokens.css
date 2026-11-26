@@ -3,9 +3,16 @@
  *
  * Scanline is dark-first: an instrument bench with a void ground, hairline
  * rules, a laser accent, and the deviation color map (#3E5BFF → #FF4D6D) as
- * the signature palette. Shared palette roles come from static/brand/colors.css.
- * Translucent overlays and shadows keep their own values for compositing over
- * the site's surfaces.
+ * the signature palette. Brand colors come from static/brand/colors.css, and
+ * static/brand/README.md records its release. Everything else here is the
+ * site's own; a comment explains each literal that equals a brand color.
+ *
+ * colors.css holds only opaque colors, so translucent fills, lines, glows and
+ * shadows keep their own rgba() values, even where they use a brand hue.
+ * --sl-hover, --sl-line, --sl-line-2 and --sl-grid use the brand line tint,
+ * #003875 on light and #78BEFF on dark, which the pack publishes only in
+ * colors.json; --sl-brand is the light tint. The homepage animation parses
+ * --sl-line-2 and --sl-brand as plain colors, so they stay rgba() and hex.
  *
  * Docusaurus always sets data-theme on <html>, so :root carries the light
  * values and [data-theme='dark'] the dark ones. Components read only --sl-*
@@ -38,15 +45,17 @@
   --sl-btn-glow: rgba(0, 150, 214, 0.35);
   --sl-on-laser: #02142B;
   --sl-sheen: rgba(255, 255, 255, 0.7);
-  /* Glints use a fixed white highlight across backgrounds. */
+  /* White in both themes: a highlight, not the light panel color it matches. */
   --sl-glint: #FFFFFF;
   --sl-nav-bg: rgba(243, 247, 251, 0.82);
   --sl-hero-glow: rgba(0, 186, 241, 0.16);
   --sl-hero-glow-2: rgba(0, 56, 117, 0.06);
   --sl-grid: rgba(0, 56, 117, 0.06);
-  /* In both themes, terminal surfaces, syntax, execution highlights, and
-     measurement indicators keep their own palette so their contrast can be tuned
-     independently of the brand's panels, links, text, and status colors. */
+  /* Terminal surfaces, syntax colors, the executed-line highlight, OK readouts
+     and axis labels are the site's own palette in both themes, tuned against the
+     terminal background. Some equal a brand color, such as --sl-tok-fn and
+     light-link, but stay literal so a brand change cannot move them without a
+     new contrast check. */
   --sl-term-bg: rgba(255, 255, 255, 0.9);
   --sl-term-solid: #FFFFFF;
   --sl-tok-kw: #2E47D9;
@@ -65,8 +74,8 @@
   --sl-shadow: 0 1px 2px rgba(6, 26, 51, 0.06), 0 24px 50px -30px rgba(6, 26, 51, 0.28);
   --sl-scrim: rgba(6, 26, 51, 0.38);
 
-  /* The footer has its own dark background in each theme. Its light-mode
-     background is independent of the brand's light-mode text color. */
+  /* The footer is always the dark band, in both themes. Its light-theme fill
+     equals light-ink, which is a text color, so it stays literal. */
   --sl-foot-bg: #061A33;
   --sl-foot-line: rgba(160, 205, 255, 0.16);
   --sl-foot-grid: rgba(160, 205, 255, 0.06);
@@ -84,7 +93,10 @@
   --sl-inv-tick: var(--briosa-dark-ink-2);
   --sl-inv-pt: var(--briosa-dark-point-small);
 
-  /* The brand status colors meet 4.5:1 as pill labels on an 11% tint. */
+  /* Status follows the deviation map: in tolerance is green, coming next is cyan,
+     undecided is slate, uncommitted is amber, excluded is red, and what the SDK
+     lacks is indigo. The brand status colors read at 4.5:1 or more as 10.5px
+     pill labels on an 11% tint of themselves, over every surface of their theme. */
   --sl-st-current: var(--briosa-light-status-current);
   --sl-st-next: var(--briosa-light-status-next);
   --sl-st-undecided: var(--briosa-light-status-undecided);
@@ -92,8 +104,10 @@
   --sl-st-excluded: var(--briosa-light-status-excluded);
   --sl-st-unavailable: var(--briosa-light-status-unavailable);
 
-  /* The gauge lights one segment of the deviation map. Callout text in both
-     themes keeps its own colors for contrast on tinted callout backgrounds. */
+  /* Callout severity: the gauge lights one segment of the deviation map.
+     Callout text keeps its own colors in both themes, chosen for the tinted
+     callout background. Most light values differ from the brand status colors,
+     so reading those instead would change the text. */
   --sl-co-info: var(--sl-dev-n2);
   --sl-co-note: var(--sl-dev-n1);
   --sl-co-tip: var(--sl-dev-0);
@@ -106,7 +120,10 @@
   --sl-co-danger-t: #B81E40;
 
   --sl-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-  /* These stacks use the family names and fallbacks for the site's loaded faces. */
+  /* The site loads Saira and JetBrains Mono from @fontsource-variable packages,
+     as 'Saira Variable' and 'JetBrains Mono Variable', and Inter from
+     static/brand/fonts in custom.css. It does not vendor the pack's fonts/web
+     files, so these stacks name the site's faces before the pack's families. */
   --sl-f-display: 'Saira Variable', 'Saira', 'Segoe UI', system-ui, sans-serif;
   --sl-f-body: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --sl-f-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;

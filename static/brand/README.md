@@ -1,15 +1,22 @@
 # Briosa Brand Assets
 
-This directory contains the site's subset of the
-[v2.2.0 release pack](https://github.com/spatialanalyzer/briosa-brand/releases/tag/v2.2.0).
-The [v2.2.0 tag](https://github.com/spatialanalyzer/briosa-brand/tree/v2.2.0)
-points to commit `74cf2cc1f2c6614f78b2f2c7f6e59d2c86b950b3`.
-The release ZIP has SHA-256
-`30e004fa9fa4dd78dbed5ef7b53110e764cb1712f8c894b8afde83a415d12f83`.
-Its `SHA256SUMS.txt` has SHA-256
+These files are copied unchanged from the
+[v2.2.0 release pack](https://github.com/spatialanalyzer/briosa-brand/releases/tag/v2.2.0)
+of `spatialanalyzer/briosa-brand`. The
+[v2.2.0 tag](https://github.com/spatialanalyzer/briosa-brand/tree/v2.2.0)
+points to commit `74cf2cc1f2c6614f78b2f2c7f6e59d2c86b950b3`. The release ZIP,
+`briosa-brand-v2.2.0.zip`, has SHA-256
+`30e004fa9fa4dd78dbed5ef7b53110e764cb1712f8c894b8afde83a415d12f83`, and its
+`SHA256SUMS.txt` has SHA-256
 `c53177c58cfa267d3cae0f5c6ab12a469031bc0c5f73442f0b174ccaa3161933`.
-Each file listed below matches that manifest, and `.gitattributes` preserves
-the release bytes.
+
+This is a subset of the pack: only the files listed below, which the site
+uses. Each matches the pack's `SHA256SUMS.txt`, keeps its path from the pack,
+and is kept byte-for-byte by `.gitattributes`. The license and third-party
+notices are unchanged release files that do not name a version, so this record
+names it. The notices also describe pack files that the site does not copy,
+such as the Saira and JetBrains Mono variable fonts and the web and desktop
+font builds.
 
 - `colors.css`: the dark and light theme color tokens.
 - `icons/favicon.svg`, `icons/favicon.ico`, and `icons/apple-touch-icon.png`:
@@ -24,8 +31,9 @@ the release bytes.
 - `fonts/Saira-OFL.txt`: license of Saira, from which the artwork's wordmark,
   slogan, and product labels are outlined. The site loads the Saira variable
   font through `@fontsource-variable/saira/wdth.css` for display text.
-- `fonts/JetBrainsMono-OFL.txt`: license linked from the third-party notices.
-  The site loads JetBrains Mono for code through `@fontsource-variable/jetbrains-mono`.
+- `fonts/JetBrainsMono-OFL.txt`: license of JetBrains Mono, which the
+  third-party notices link to. The site loads JetBrains Mono for code through
+  `@fontsource-variable/jetbrains-mono`.
 - `LICENSE` and `THIRD-PARTY-NOTICES.md`: the v2.2.0 release's license and
   third-party notices.
 
