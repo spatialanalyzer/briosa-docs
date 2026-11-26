@@ -340,17 +340,18 @@ test('a new release adds no compatibility redirect documents', async () => {
 // owner: an operation-group interface reached through a client property, the
 // client interface itself, or the package, for a package-level function.
 //
-// The check is a closed world. The site's Markdown parser selects every code
-// block; TypeScript and JavaScript blocks are parsed with the TypeScript
-// parser, and every declaration in them must be one of the supported forms
-// that tests/javascript-owner-maps/README.md lists. A group method is declared
-// in an interface labelled "// Member of <Group> (briosa.<property>.<method>(...))",
+// The site's Markdown parser selects every code block; TypeScript and
+// JavaScript blocks are parsed with the TypeScript parser, and each declaration
+// in them should be one of the supported forms that
+// tests/javascript-owner-maps/README.md lists. A group method is declared in an
+// interface labelled "// Member of <Group> (briosa.<property>.<method>(...))",
 // a client member as a bare signature, and a package-level function as a
-// root-level `function` without a body. Anything else that declares or could
-// declare a callable fails as an unsupported form, and so does any parse error
-// other than the two conventions the reference uses: bare member signatures
-// and `...` standing for a value. A block in another language may not name a
-// pinned method.
+// root-level `function` without a body. Other declarations of callables that
+// the check reads fail as unsupported forms, and so does any parse error other
+// than the two conventions the reference uses: bare member signatures and `...`
+// standing for a value. A block in another language may not name a pinned
+// method. The check is not complete; the README's Known Limits section lists
+// the forms it does not read.
 //
 // For each reference and each exact target its sidebar lists, the check also
 // fails when a declared method has another owner in the pinned map, is absent
@@ -398,7 +399,7 @@ function codeBlocks(parser, text) {
 }
 
 const blocks = new Map();
-// The declarations of one TypeScript block, read in a closed world. Lines are block lines.
+// The declarations of one TypeScript block, read against the supported forms. Lines are block lines.
 function readBlock(code, jsx = false) {
   const key = `${jsx}\0${code}`;
   if (blocks.has(key)) return blocks.get(key);
@@ -409,14 +410,15 @@ function readBlock(code, jsx = false) {
   const nameOf = (name, file) => (!name ? undefined : ts.isComputedPropertyName(name) ? `[${name.expression.getText(file)}]` : name.text);
   const hasModifier = (node, kind) => Boolean(node.modifiers?.some((m) => m.kind === kind));
 
-  // Bare member signatures: a root statement at the start of a line, with a
-  // name, a parameter list, and a return type, that parses as an interface member.
+  // Bare member signatures: a root statement on its own line, with a name, a
+  // parameter list, and a return type, that parses as exactly one interface
+  // member. Indentation and a space before the parameter list are allowed.
   let prepared = code;
   const original = parse(code);
   for (const statement of original.statements) {
     const start = statement.getStart(original);
-    if (start > 0 && code[start - 1] !== '\n') continue;
-    const m = code.slice(start).match(/^(\[Symbol\.\w+\]|[A-Za-z_$][\w$]*)(?:<[^>()\n]*>)?\(/);
+    if (!/^[ \t]*$/.test(code.slice(code.lastIndexOf('\n', start - 1) + 1, start))) continue;
+    const m = code.slice(start).match(/^(\[Symbol\.\w+\]|[A-Za-z_$][\w$]*)[ \t]*(?:<[^>()\n]*>)?[ \t]*\(/);
     if (!m || reserved.has(m[1])) continue;
     let close = start + m[0].length - 1;
     for (let depth = 0; close < code.length; close++) if (code[close] === '(') depth++; else if (code[close] === ')' && --depth === 0) break;
@@ -733,6 +735,13 @@ async function ownerCheck(siteRoot, overrides = {}) {
               : `${at(line)}: ${what}${owner ? ` on ${owner}` : ''} is not a supported declaration form. ${ownerMaps}/README.md lists the supported forms.`);
           };
           for (const u of block.unsupported) report(u.line, u.what, u.owner, u.method);
+          // A data type's own method whose name a pinned method also has. The check cannot tell
+          // it from a misplaced pinned method, so it keeps the author's receiver and says what the
+          // rules allow, instead of suggesting a different owner.
+          const collision = (line, receiver, method) => {
+            const pins = byName.get(method).map((p) => (p.owner === packageOwner ? `the package-level function ${method}` : `${p.owner}.${method}${p.property ? ` (briosa.${p.property})` : ''}`)).join(' or ');
+            failures.push(`${at(line)}: ${receiver}.${method} shares a name with the pinned ${pins} in ${pinnedIn}, so the check cannot tell it from a misplaced pinned method. To document the data method with the current rules, describe ${receiver}.${method} in prose and leave it out of the TypeScript declaration.`);
+          };
           // What the map pins the method that a group-owner label names to.
           const labelled = (label) => {
             const method = label.match(/\(briosa\.[\w$]+\.([\w$]+)\(\.\.\.\)\)$/)?.[1];
@@ -745,7 +754,10 @@ async function ownerCheck(siteRoot, overrides = {}) {
             const callable = c.members.filter((m) => m.kind !== 'property');
             const reason = !c.exported || !c.extends ? 'a class that does not export and extend another class' : ownerNames.has(c.name) ? 'a class named for an owner' : undefined;
             if (reason) for (const m of callable.length ? callable : [{line: c.line}]) report(m.line, reason, c.name, m.name);
-            else for (const m of callable.filter((m) => m.kind !== 'getter' || byName.has(m.name))) report(m.line, `a ${m.kind} of a class`, c.name, m.name);
+            else {
+              for (const m of callable.filter((m) => m.kind !== 'getter')) report(m.line, `a ${m.kind} of a class`, c.name, m.name);
+              for (const m of callable.filter((m) => m.kind === 'getter' && byName.has(m.name))) collision(m.line, c.name, m.name);
+            }
             if (!reason && !callable.some((m) => m.kind !== 'getter' || byName.has(m.name))) used.add('error class');
           }
           for (const i of block.interfaces) {
@@ -764,7 +776,10 @@ async function ownerCheck(siteRoot, overrides = {}) {
               } else {
                 // A data interface: exported, whose callable members are not pinned methods.
                 const pinnedMembers = callable.filter((m) => m.kind === 'call signature' || byName.has(m.name));
-                for (const m of pinnedMembers) report(m.line, `a ${m.kind} of interface ${i.name}`, undefined, m.name);
+                for (const m of pinnedMembers) {
+                  if (m.kind === 'call signature') report(m.line, `a ${m.kind} of interface ${i.name}`, undefined, m.name);
+                  else collision(m.line, i.name, m.name);
+                }
                 if (!pinnedMembers.length) used.add('data interface');
               }
               continue;
@@ -955,11 +970,31 @@ test('the JavaScript owner check names the method, both owners, and the file', a
     [`export interface ${other}Helpers {\n  readonly operations: { ${method}(): void };\n}`, 1, `a method of an object type declares ${method} on ${other}Helpers`],
     [`{\n  interface ${other} { ${method}(): void; }\n}`, 1, `a nested declaration declares ${method} on ${other}`],
     [`const helper = { ${method}() {} };`, 0, `a method of an object literal declares ${method} on helper`],
-    [`export interface ${other}Accessors {\n  get ${method}(): Promise<void>;\n}`, 1, `a getter of interface ${other}Accessors declares ${method}`],
   ];
   for (const [code, offset, what] of forms) {
     m = append(code);
     assert.deepEqual(await failuresWith({[file]: m.changed}), [`${file}:${m.line + offset}: ${what}, which is not a supported declaration form; its pinned owner in ${pinnedIn} is ${pinned}. ${advice}`], code);
+  }
+  // A data type's own method that shares a pinned name keeps its receiver in the message,
+  // and the supported edit, the method described in prose, passes.
+  const clientMember = map.targets[target].client.members.find((name) => /^[\w$]+$/.test(name));
+  const collides = (receiver, name, pins) => `${receiver}.${name} shares a name with the pinned ${pins} in ${pinnedIn}, so the check cannot tell it from a misplaced pinned method. To document the data method with the current rules, describe ${receiver}.${name} in prose and leave it out of the TypeScript declaration.`;
+  for (const [code, offset, receiver, name, pins] of [
+    [`export interface FeatureValidator {\n  readonly name: string;\n  ${method}(collection: CollectionName): boolean;\n}`, 2, 'FeatureValidator', method, `${group}.${method} (briosa.${property})`],
+    [`export interface FeatureValidator {\n  get ${method}(): boolean;\n}`, 1, 'FeatureValidator', method, `${group}.${method} (briosa.${property})`],
+    [`export interface RetryTimer {\n  ${clientMember}(): void;\n}`, 1, 'RetryTimer', clientMember, `BriosaClient.${clientMember}`],
+  ]) {
+    m = append(code);
+    assert.deepEqual(await failuresWith({[file]: m.changed}), [`${file}:${m.line + offset}: ${collides(receiver, name, pins)}`], code);
+  }
+  assert.deepEqual(await failuresWith({[file]: `${text}\n\`FeatureValidator.${method}\` reports whether a collection passes.\n\n\`\`\`ts\nexport interface FeatureValidator {\n  readonly name: string;\n}\n\`\`\`\n`}), []);
+  // A bare client signature may be indented, or have a space before its parameter list.
+  const stop = `${folder}/stop.md`;
+  const stopText = readPage(path.join(root, stop));
+  const signature = stopText.match(/^([\w$]+)\(\): Promise<void>;$/m);
+  assert.ok(signature, `${stop} has a bare signature`);
+  for (const changed of [`    ${signature[0]}`, `${signature[1]} ${signature[0].slice(signature[1].length)}`, `  ${signature[1]} ${signature[0].slice(signature[1].length)}`]) {
+    assert.deepEqual(await failuresWith({[stop]: stopText.replace(signature[0], changed)}), [], changed);
   }
   m = append(`export type ${method[0].toUpperCase()}${method.slice(1)} = { (): Promise<void> };`);
   assert.deepEqual(await failuresWith({[file]: m.changed}), [`${file}:${m.line}: a call signature on ${method[0].toUpperCase()}${method.slice(1)} is not a supported declaration form. ${ownerMaps}/README.md lists the supported forms.`]);

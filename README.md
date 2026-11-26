@@ -322,12 +322,12 @@ When you cut a JavaScript snapshot for a new client release, build its map:
 node scripts/javascript-owner-maps.mjs <briosa-js checkout> <javascript-package-version>
 ```
 
-The check reads every code block in the JavaScript reference and accepts only
-the declaration forms that
+The check reads the code blocks in the JavaScript reference against the
+declaration forms that
 [`tests/javascript-owner-maps/README.md`](tests/javascript-owner-maps/README.md)
-lists. That README also explains the maps, the working pin, and the recorded
-documentation errors that https://github.com/spatialanalyzer/briosa-docs/issues/152
-corrects.
+lists, along with the forms it does not read. That README also explains the
+maps, the working pin, and the recorded documentation errors that
+https://github.com/spatialanalyzer/briosa-docs/issues/152 corrects.
 
 ## Release Checklist
 
