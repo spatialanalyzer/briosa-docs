@@ -1,4 +1,4 @@
-const {readFileSync} = require('node:fs');
+const {globSync, readFileSync} = require('node:fs');
 const {join} = require('node:path');
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
@@ -25,11 +25,10 @@ function agrees(fact, actual, expected, page) {
 test('homepage product versions, exact targets, and package names agree with the release and install pages', () => {
   const releases = 'docs/releases.md';
   const install = 'src/pages/install.md';
-  const products = read(releases).split(/^## /m).find((section) => section.startsWith('Available Products\n'));
-  assert.ok(products, `Could not read versions and targets from ${releases} (Available Products).`);
+  const products = read(releases).split('\n');
   const row = (product) => {
-    const cells = products.split('\n').find((line) => line.startsWith(`| ${product} |`));
-    assert.ok(cells, `Could not read the ${product} row from ${releases} (Available Products).`);
+    const [cells, duplicate] = products.filter((line) => line.startsWith(`| ${product} |`));
+    assert.ok(cells && !duplicate, `Could not read a unique ${product} row for the homepage versions and targets in ${releases}.`);
     return cells.split('|').map((cell) => cell.trim());
   };
   const version = (fact, cell) => capture(fact, releases, cell, /^\[?(\d+\.\d+\.\d+)(?:\]\(|$)/);
@@ -154,49 +153,55 @@ function operationIdentity(nodes) {
 }
 
 test('homepage gRPC services, featured operations, and ticker RPCs agree with the current reference', async () => {
-  const {loadReference, sections, targetBase} = await import('../plugins/api-reference/content.mjs');
+  const {loadReference, targetBase} = await import('../plugins/api-reference/content.mjs');
   const target = home.targets.sa2026;
   const facts = 'grpcServices, featuredOperations, and tickerRpcs';
-  const {contexts: [current]} = await loadReference(root, {family: 'grpc', target});
+  const {contexts: [current]} = await loadReference(root, {family: 'grpc', target}).catch((error) => {
+    const sidebars = globSync('grpc_versioned_sidebars/version-*-sidebars.json', {cwd: root})
+      .map((file) => file.replaceAll('\\', '/')).sort();
+    const inputs = ['grpc_versions.json', 'plugins/api-reference/targets.json', ...sidebars];
+    throw new Error(`Could not verify ${facts} for SA ${target}. ${error.message}. Reference inputs include ${inputs.join(', ')}.`, {cause: error});
+  });
   assert.ok(current, `Could not verify ${facts} for SA ${target} using grpc_versions.json and plugins/api-reference/targets.json.`);
-  const overview = `${current.sourceRoot}/overview.md`;
+  const sourceFile = (id) => `${current.sourceRoot}/${id}.md`;
+  const overview = sourceFile('overview');
   assert.ok(current.pages.overview, `Could not verify ${facts}. The current SA ${target} reference is missing ${overview}.`);
+  const sidebar = `grpc_versioned_sidebars/version-${current.release}-sidebars.json`;
+  const guides = ['discovery', 'lifecycle'];
+  // Keep the reviewed source paths even when a group loses its last RPC or service.
+  const referenceSources = [overview, sidebar, ...guides.map(sourceFile), ...current.groups.map(({id}) => sourceFile(id))].join(', ');
 
-  const services = new Map();
+  const services = new Set();
   const rpcNames = new Set();
-  const rpcSources = new Map();
   const methods = new Map();
   const base = targetBase('grpc', target);
   for (const page of Object.values(current.pages)) {
     if (page.kind !== 'method' || !page.available) continue;
     const nodes = markdown.parse(page.body).children;
     const signatures = new Set(protobufBlocks(nodes).flatMap(declaredRpcs));
-    const identity = operationIdentity(nodes);
-    if (identity) rpcSources.set(identity[2], page.source);
     if (!signatures.size) continue;
+    const identity = operationIdentity(nodes);
     assert.ok(identity && signatures.has(identity[2]),
       `Could not verify ${facts} for ${page.id} in ${page.source}. Expected an operation identity matching the released RPC declaration (${[...signatures].join(', ')}).`);
     const [, service, rpc] = identity;
-    if (!services.has(service)) services.set(service, page.source);
+    services.add(service);
     rpcNames.add(rpc);
     methods.set(`${service}/${rpc}`, {href: `${base}/${page.id}`, source: page.source});
   }
 
-  const contracts = [];
-  for (const [id, sectionTitle] of [['discovery', /^Released Contract$/], ['lifecycle', / Service$/]]) {
-    const source = `${current.sourceRoot}/${id}.md`;
+  for (const id of guides) {
+    const source = sourceFile(id);
     const page = current.pages[id];
     assert.ok(page, `Could not verify grpcServices and tickerRpcs. The current reference is missing ${source}.`);
-    const contractSections = sections(page.body).filter(({title}) => sectionTitle.test(title));
-    assert.ok(contractSections.length, `Could not read the grpcServices and tickerRpcs contract sections in ${source}.`);
-    contracts.push(source);
-    for (const {body} of contractSections) {
-      for (const proto of protobufBlocks(markdown.parse(body).children)) {
-        const declared = [...proto.matchAll(/\bservice\s+([A-Za-z_]\w*)\s*\{/g)];
-        if (!declared.length) continue;
-        for (const [, service] of declared) services.set(service, source);
-        for (const rpc of declaredRpcs(proto)) rpcNames.add(rpc);
-      }
+    const blocks = protobufBlocks(markdown.parse(page.body).children);
+    // Discovery publishes its contract as a package. Lifecycle publishes service snippets.
+    const contracts = id === 'discovery' ? blocks.filter((proto) => /\bpackage\s+briosa\s*;/.test(proto)) : blocks;
+    assert.ok(contracts.length, `Could not read the grpcServices and tickerRpcs protobuf contract in ${source}.`);
+    for (const proto of contracts) {
+      const declared = [...proto.matchAll(/\bservice\s+([A-Za-z_]\w*)\s*\{/g)];
+      if (!declared.length) continue;
+      for (const [, service] of declared) services.add(service);
+      for (const rpc of declaredRpcs(proto)) rpcNames.add(rpc);
     }
   }
 
@@ -204,20 +209,17 @@ test('homepage gRPC services, featured operations, and ticker RPCs agree with th
     const fact = `featuredOperations[${index}] (${service}/${rpc})`;
     const method = methods.get(`${service}/${rpc}`);
     const group = href.startsWith(`${base}/`) ? href.slice(base.length + 1).split('/')[0] : '';
-    const source = current.pages[group]?.source ?? overview;
-    const sidebar = `grpc_versioned_sidebars/version-${current.release}-sidebars.json`;
-    assert.ok(method, `${fact} in src/components/Home/data.ts has no released RPC and published method route in ${source} (see ${sidebar}).`);
-    agrees(`${fact}.href`, href, method.href, method.source);
+    const linkedSource = group ? sourceFile(group) : '';
+    const sources = linkedSource ? `${linkedSource} (see ${sidebar})` : referenceSources;
+    assert.ok(method, `${fact} in src/components/Home/data.ts has no released RPC and published method route in ${sources}.`);
+    const routeSources = [...new Set([method.source, linkedSource, sidebar].filter(Boolean))];
+    agrees(`${fact}.href`, href, method.href, routeSources.join(', '));
   }
 
-  if (home.grpcServices !== services.size) {
-    const pages = [...new Set([...contracts, ...services.values()])].sort();
-    agrees('grpcServices', home.grpcServices, services.size, `${overview} and its service sources (${pages.join(', ')})`);
-  }
+  agrees('grpcServices', home.grpcServices, services.size, referenceSources);
   for (const [index, row] of home.tickerRpcs.entries()) {
     for (const rpc of row) {
-      const source = rpcSources.get(rpc) ?? [overview, ...contracts].join(', ');
-      assert.ok(rpcNames.has(rpc), `tickerRpcs[${index}] includes ${rpc} in src/components/Home/data.ts, which has no released RPC in ${source}.`);
+      assert.ok(rpcNames.has(rpc), `tickerRpcs[${index}] includes ${rpc} in src/components/Home/data.ts, which has no released RPC in ${referenceSources}.`);
     }
   }
 });
