@@ -10,9 +10,10 @@
  * colors.css holds only opaque colors, so translucent fills, lines, glows and
  * shadows keep their own rgba() values, even where they use a brand hue.
  * --sl-hover, --sl-line, --sl-line-2 and --sl-grid use the brand line tint,
- * #003875 on light and #78BEFF on dark, which the pack publishes only in
- * colors.json; --sl-brand is the light tint. The homepage animation parses
- * --sl-line-2 and --sl-brand as plain colors, so they stay rgba() and hex.
+ * #003875 on light and #78BEFF on dark, which the pack defines in colors.json
+ * and omits from colors.css; --sl-brand is the light tint. The homepage
+ * animation parses --sl-line-2 and --sl-brand as plain colors, so they stay
+ * rgba() and hex.
  *
  * Docusaurus always sets data-theme on <html>, so :root carries the light
  * values and [data-theme='dark'] the dark ones. Components read only --sl-*
@@ -52,10 +53,10 @@
   --sl-hero-glow-2: rgba(0, 56, 117, 0.06);
   --sl-grid: rgba(0, 56, 117, 0.06);
   /* Terminal surfaces, syntax colors, the executed-line highlight, OK readouts
-     and axis labels are the site's own palette in both themes, tuned against the
-     terminal background. Some equal a brand color, such as --sl-tok-fn and
-     light-link, but stay literal so a brand change cannot move them without a
-     new contrast check. */
+     and axis labels are the site's own palette in both themes, contrast-checked
+     on their respective surfaces, including the SA viewport for axis labels.
+     Some equal a brand color, such as --sl-tok-fn and light-link, but stay
+     literal so a brand change cannot move them without a new contrast check. */
   --sl-term-bg: rgba(255, 255, 255, 0.9);
   --sl-term-solid: #FFFFFF;
   --sl-tok-kw: #2E47D9;
