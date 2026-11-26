@@ -1,8 +1,10 @@
-const {existsSync, readFileSync, readdirSync} = require('node:fs');
+const {readFileSync} = require('node:fs');
 const {join} = require('node:path');
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
 const {load} = require('cheerio');
+const {unified} = require('unified');
+const {default: remarkParse} = require('remark-parse');
 const home = require('../src/components/Home/data.ts');
 
 const root = join(__dirname, '..');
@@ -54,10 +56,10 @@ test('homepage product versions, exact targets, and package names agree with the
     exactTargets.set(year, target);
   }
 
-  for (const [product, registry, path] of [
-    ['.NET client', 'nuget', /^\/packages\/([^/]+)\//],
-    ['Python client', 'pypi', /^\/project\/([^/]+)\//],
-    ['JavaScript/TypeScript client', 'npm', /^\/package\/([^/]+\/[^/]+)\/v\//],
+  for (const [product, registry, origin, path] of [
+    ['.NET client', 'nuget', 'https://www.nuget.org', /^\/packages\/([^/]+)\/([^/]+)\/?$/],
+    ['Python client', 'pypi', 'https://pypi.org', /^\/project\/([^/]+)\/([^/]+)\/?$/],
+    ['JavaScript/TypeScript client', 'npm', 'https://www.npmjs.com', /^\/package\/([^/]+\/[^/]+)\/v\/([^/]+)\/?$/],
   ]) {
     const [, , clientVersion, links] = row(product);
     const source = `${releases} (${product})`;
@@ -65,7 +67,13 @@ test('homepage product versions, exact targets, and package names agree with the
     for (const [year, target] of exactTargets) {
       const fact = `packagesFor(${target}).${registry}`;
       const link = capture(fact, source, links, new RegExp(`\\[SA ${year}\\]\\(([^)]+)\\)`));
-      agrees(fact, home.packagesFor(target)[registry], capture(fact, source, new URL(link).pathname, path), source);
+      const destination = URL.parse(link);
+      assert.equal(destination?.origin, origin, `Could not read ${fact} from ${source}. Expected an absolute package link on ${origin}.`);
+      const coordinates = destination.pathname.match(path);
+      assert.ok(coordinates, `Could not read ${fact} and its pinned versions.clients value from ${source}.`);
+      const [, name, pin] = coordinates;
+      agrees(fact, home.packagesFor(target)[registry], name, source);
+      agrees(`versions.clients for SA ${target} ${registry} link`, home.versions.clients, pin, source);
     }
   }
 });
@@ -125,61 +133,91 @@ test('homepage operation totals, reviewed commands, and MP groups agree with the
     count(capture('mpObservations2026', overviews[2026], overview2026, /Group pages list the ([\d,]+) SDK-observed commands/)), overviews[2026]);
 });
 
-test('homepage gRPC services, featured operations, and ticker RPCs agree with the current reference', async () => {
-  const {sections, targetBase} = await import('../plugins/api-reference/content.mjs');
-  const target = home.targets.sa2026;
-  const releases = JSON.parse(read('grpc_versions.json'));
-  const snapshots = JSON.parse(read('plugins/api-reference/targets.json')).snapshots.grpc;
-  // The newest snapshot that documents this exact target supplies its current routes.
-  const current = releases.map((release) => {
-    const directory = `grpc_versioned_docs/version-${release}`;
-    return snapshots[release] === target ? directory : `${directory}/sa-${target}`;
-  }).find((directory) => existsSync(join(root, directory, 'overview.md')));
-  assert.ok(current, `Could not find the current grpcServices, featuredOperations, or tickerRpcs sources for SA ${target} in grpc_versioned_docs/.`);
+const markdown = unified().use(remarkParse);
 
-  const services = new Set();
+function protobufBlocks(nodes) {
+  return nodes.filter((node) => node.type === 'code' && /^proto(?:buf)?$/.test(node.lang))
+    // Strip quoted strings along with comments so only declarations contribute.
+    .map((node) => node.value.replace(/"(?:\\[\s\S]|[^"\\])*"|'(?:\\[\s\S]|[^'\\])*'|\/\/[^\r\n]*|\/\*[\s\S]*?\*\//g, ' '));
+}
+
+const declaredRpcs = (proto) => Array.from(proto.matchAll(/\brpc\s+([A-Za-z_]\w*)\s*\(/g), ([, rpc]) => rpc);
+
+function operationIdentity(nodes) {
+  for (const node of nodes) {
+    if (node.type !== 'paragraph') continue;
+    const [path, label] = node.children;
+    if (path?.type === 'inlineCode' && label?.type === 'text' && /^\s*·\s*Operation\s+ID:/.test(label.value)) {
+      return path.value.match(/^\/briosa\.([A-Za-z_]\w*)\/([A-Za-z_]\w*)$/);
+    }
+  }
+}
+
+test('homepage gRPC services, featured operations, and ticker RPCs agree with the current reference', async () => {
+  const {loadReference, sections, targetBase} = await import('../plugins/api-reference/content.mjs');
+  const target = home.targets.sa2026;
+  const facts = 'grpcServices, featuredOperations, and tickerRpcs';
+  const {contexts: [current]} = await loadReference(root, {family: 'grpc', target});
+  assert.ok(current, `Could not verify ${facts} for SA ${target} using grpc_versions.json and plugins/api-reference/targets.json.`);
+  const overview = `${current.sourceRoot}/overview.md`;
+  assert.ok(current.pages.overview, `Could not verify ${facts}. The current SA ${target} reference is missing ${overview}.`);
+
+  const services = new Map();
   const rpcNames = new Set();
+  const rpcSources = new Map();
   const methods = new Map();
   const base = targetBase('grpc', target);
-  const protos = (markdown) => [...markdown.matchAll(/^```proto(?:buf)?[ \t]*\n([\s\S]*?)^```$/gm)].map((match) => match[1]);
-  for (const file of readdirSync(join(root, current)).filter((name) => name.endsWith('.md'))) {
-    const source = `${current}/${file}`;
-    const markdown = read(source);
-    for (const proto of protos(markdown)) {
-      const declared = [...proto.matchAll(/^service (\w+)\s*\{/gm)];
-      if (!declared.length) continue;
-      for (const [, service] of declared) services.add(service);
-      for (const [, rpc] of proto.matchAll(/^\s*rpc (\w+)\(/gm)) rpcNames.add(rpc);
-    }
-    if (!markdown.includes('`/briosa.')) continue;
-    for (const {anchor, body} of sections(markdown)) {
-      const path = body.match(/^`\/briosa\.(\w+)\/(\w+)` · Operation ID:/m);
-      if (!path || /No released signature\s+is available/.test(body)) continue;
-      const [, service, rpc] = path;
-      const signature = new RegExp(`^\\s*rpc ${rpc}\\s*\\(`, 'm');
-      if (!protos(body).some((proto) => signature.test(proto))) continue;
-      // The reference uses the catalog anchor for a method route when one exists.
-      const catalogAnchor = body.match(/\/mp-command-catalog\/commands\/[^\s)#]+#([^\s)]+)/)?.[1];
-      const href = `${base}/${file.slice(0, -3)}/${catalogAnchor ?? anchor}`;
-      services.add(service);
-      rpcNames.add(rpc);
-      methods.set(`${service}/${rpc}`, {href, source});
+  for (const page of Object.values(current.pages)) {
+    if (page.kind !== 'method' || !page.available) continue;
+    const nodes = markdown.parse(page.body).children;
+    const signatures = new Set(protobufBlocks(nodes).flatMap(declaredRpcs));
+    const identity = operationIdentity(nodes);
+    if (identity) rpcSources.set(identity[2], page.source);
+    if (!signatures.size) continue;
+    assert.ok(identity && signatures.has(identity[2]),
+      `Could not verify ${facts} for ${page.id} in ${page.source}. Expected an operation identity matching the released RPC declaration (${[...signatures].join(', ')}).`);
+    const [, service, rpc] = identity;
+    if (!services.has(service)) services.set(service, page.source);
+    rpcNames.add(rpc);
+    methods.set(`${service}/${rpc}`, {href: `${base}/${page.id}`, source: page.source});
+  }
+
+  const contracts = [];
+  for (const [id, sectionTitle] of [['discovery', /^Released Contract$/], ['lifecycle', / Service$/]]) {
+    const source = `${current.sourceRoot}/${id}.md`;
+    const page = current.pages[id];
+    assert.ok(page, `Could not verify grpcServices and tickerRpcs. The current reference is missing ${source}.`);
+    const contractSections = sections(page.body).filter(({title}) => sectionTitle.test(title));
+    assert.ok(contractSections.length, `Could not read the grpcServices and tickerRpcs contract sections in ${source}.`);
+    contracts.push(source);
+    for (const {body} of contractSections) {
+      for (const proto of protobufBlocks(markdown.parse(body).children)) {
+        const declared = [...proto.matchAll(/\bservice\s+([A-Za-z_]\w*)\s*\{/g)];
+        if (!declared.length) continue;
+        for (const [, service] of declared) services.set(service, source);
+        for (const rpc of declaredRpcs(proto)) rpcNames.add(rpc);
+      }
     }
   }
 
-  const reference = `${current}/overview.md and its service and operation pages`;
-  agrees('grpcServices', home.grpcServices, services.size, reference);
   for (const [index, {service, rpc, href}] of home.featuredOperations.entries()) {
     const fact = `featuredOperations[${index}] (${service}/${rpc})`;
     const method = methods.get(`${service}/${rpc}`);
     const group = href.startsWith(`${base}/`) ? href.slice(base.length + 1).split('/')[0] : '';
-    const source = `${current}/${group}.md`;
-    assert.ok(method, `${fact} in src/components/Home/data.ts has no released RPC in ${existsSync(join(root, source)) ? source : reference}.`);
+    const source = current.pages[group]?.source ?? overview;
+    const sidebar = `grpc_versioned_sidebars/version-${current.release}-sidebars.json`;
+    assert.ok(method, `${fact} in src/components/Home/data.ts has no released RPC and published method route in ${source} (see ${sidebar}).`);
     agrees(`${fact}.href`, href, method.href, method.source);
+  }
+
+  if (home.grpcServices !== services.size) {
+    const pages = [...new Set([...contracts, ...services.values()])].sort();
+    agrees('grpcServices', home.grpcServices, services.size, `${overview} and its service sources (${pages.join(', ')})`);
   }
   for (const [index, row] of home.tickerRpcs.entries()) {
     for (const rpc of row) {
-      assert.ok(rpcNames.has(rpc), `tickerRpcs[${index}] includes ${rpc} in src/components/Home/data.ts, which has no released RPC in ${reference}.`);
+      const source = rpcSources.get(rpc) ?? [overview, ...contracts].join(', ');
+      assert.ok(rpcNames.has(rpc), `tickerRpcs[${index}] includes ${rpc} in src/components/Home/data.ts, which has no released RPC in ${source}.`);
     }
   }
 });

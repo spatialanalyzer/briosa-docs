@@ -194,11 +194,12 @@ function differenceSummary(a, b) {
 }
 
 // Release snapshots are inputs, never a new source of protocol/support claims.
-export async function loadReference(siteDir) {
+// A current-target lookup uses the same sidebar and page extraction as a full build.
+export async function loadReference(siteDir, currentTarget) {
   const targets = JSON.parse(await readFile(path.join(siteDir, 'plugins/api-reference/targets.json'), 'utf8'));
   const contexts = [];
   const releases = {};
-  for (const family of Object.keys(families)) {
+  for (const family of currentTarget ? [currentTarget.family] : Object.keys(families)) {
     releases[family] = JSON.parse(await readFile(path.join(siteDir, `${family}_versions.json`), 'utf8'));
     for (const release of releases[family]) {
       const defaultTarget = targets.snapshots[family]?.[release];
@@ -208,6 +209,7 @@ export async function loadReference(siteDir) {
       const folders = (await readdir(root, {withFileTypes: true})).filter((f) => f.isDirectory() && f.name.startsWith('sa-')).map((f) => f.name);
       for (const folder of ['', ...folders]) {
         const target = folder.slice(3) || defaultTarget;
+        if (currentTarget && target !== currentTarget.target) continue;
         const normalizeSidebar = (items) => items.map((item) => typeof item === 'string' ? item.replace(`${folder}/`, '') : {...item, link: item.link ? {...item.link, id: item.link.id?.replace(`${folder}/`, '')} : undefined, items: normalizeSidebar(item.items ?? [])});
         const targetSidebar = folder ? normalizeSidebar(sidebar.find((s) => s.label === `SA ${target}`)?.items ?? []) : sidebar;
         const groups = flattenGroups(targetSidebar.find((item) => item.label === 'MP Commands')?.items ?? []);
@@ -263,7 +265,9 @@ export async function loadReference(siteDir) {
           } else ctx.pages[id] = {id, title: doc.title, ...(doc.heading && {heading: doc.heading, code: doc.code}), label: doc.meta.sidebar_label, kind: 'guide', body: doc.body.replace(/^# .*\n/m, ''), source};
         }
         contexts.push(ctx);
+        if (currentTarget) break;
       }
+      if (currentTarget && contexts.length) break;
     }
   }
   return {contexts, releases, compatibility: targets.compatibilityAddresses ?? {}, sameContract: targets.sameContract ?? {}};
