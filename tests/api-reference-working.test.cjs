@@ -378,7 +378,7 @@ function readBlock(code) {
   const file = ts.createSourceFile('block.ts', code, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
   const line = (position) => file.getLineAndCharacterOfPosition(position).line + 1;
   const nameOf = (name) => (ts.isComputedPropertyName(name) ? `[${name.expression.getText(file)}]` : name.text);
-  const found = {interfaces: [], functions: [], signatures: [], problems: []};
+  const found = {interfaces: [], functions: [], signatures: [], orphans: [], problems: []};
   const labelled = new Set();
   const containers = [];
   const visit = (node, topLevel) => {
@@ -407,7 +407,7 @@ function readBlock(code) {
   // Every owner label must label an interface.
   for (const m of code.matchAll(ownerLabelLine)) {
     const position = m.index + m[0].indexOf('//');
-    if (!labelled.has(position)) found.problems.push(`the owner label "${m[0].trim()}" on line ${line(position)} does not label an interface declaration.`);
+    if (!labelled.has(position)) found.orphans.push({label: m[0].trim(), line: line(position)});
   }
   // An interface the parser could not read must not drop out of the check.
   const scanner = ts.createScanner(ts.ScriptTarget.Latest, true, ts.LanguageVariant.Standard, code);
@@ -556,6 +556,13 @@ function ownerCheck(siteRoot, overrides = {}) {
         for (const [, code] of text.matchAll(/^```ts\n([\s\S]*?)^```/gm)) {
           const block = readBlock(code);
           for (const problem of block.problems) failures.push(`${file}: ${problem}`);
+          // What the map pins the method that a group-owner label names to.
+          const labelled = (label) => {
+            const method = label.match(/\(briosa\.[\w$]+\.([\w$]+)\(\.\.\.\)\)$/)?.[1];
+            const pins = method && byName.get(method);
+            return method ? `; ${pins ? `the pinned owner of ${method} in ${pinnedIn} is ${pins.map((p) => p.text).join(' or ')}` : `${pinnedIn} pins no ${method}`}` : '';
+          };
+          for (const o of block.orphans) failures.push(`${file}: the owner label "${o.label}" on block line ${o.line} does not label an interface declaration${labelled(o.label)}.`);
           const found = [];
           for (const i of block.interfaces) {
             const owner = Boolean(owners.groups[i.name]) || i.name === client;
@@ -566,8 +573,8 @@ function ownerCheck(siteRoot, overrides = {}) {
               const m = label.match(/^\/\/ Member of ([\w$]+)(?: \(briosa\.([\w$]+)\.([\w$]+)\(\.\.\.\)\))?$/);
               const declares = i.methods.length ? `declares ${i.methods.join(', ')}` : 'declares no method';
               if (!m) failures.push(`${file}: the owner label "${label}" of interface ${i.name} does not read "// Member of <Group> (briosa.<property>.<method>(...))".`);
-              else if (m[1] !== i.name) failures.push(`${file}: the owner label "${label}" names ${m[1]}, but labels interface ${i.name}, which ${declares}.`);
-              else if (m[3] ? i.methods.length !== 1 || i.methods[0] !== m[3] : !i.methods.length) failures.push(`${file}: the owner label "${label}" ${m[3] ? `names ${m[3]}` : 'labels methods'}, but interface ${i.name} ${declares}.`);
+              else if (m[1] !== i.name) failures.push(`${file}: the owner label "${label}" names ${m[1]}, but labels interface ${i.name}, which ${declares}${labelled(label)}.`);
+              else if (m[3] ? i.methods.length !== 1 || i.methods[0] !== m[3] : !i.methods.length) failures.push(m[3] ? `${file}: the owner label "${label}" names ${m[3]}, but interface ${i.name} ${declares}${labelled(label)}.` : `${file}: the owner label "${label}" labels interface ${i.name}, which declares no method, so it documents nothing that ${pinnedIn} pins to ${i.name}.`);
               else labelChecked = true;
             }
             if (owner && !i.methods.length && !label) failures.push(`${file}: interface ${i.name} on block line ${i.line} declares no method, so it documents nothing that ${pinnedIn} pins to ${i.name}.`);
@@ -685,11 +692,11 @@ test('the JavaScript owner check names the method, both owners, and the file', (
   assert.deepEqual(failuresWith({[file]: append(`type BriosaClient = { ${method}(): void };`)}), [misplaced('BriosaClient')]);
   assert.deepEqual(failuresWith({[file]: append(`  ${method}(collection: CollectionName): Promise<void>;`)}), [`${file}: ${method} is documented as an unlabelled BriosaClient member signature; its pinned owner in ${pinnedIn} is ${pinned}.`]);
   // An owner label that labels no method, and a client-owner interface without one.
-  assert.deepEqual(failuresWith({[file]: append('// Member of BriosaClient\ninterface BriosaClient {\n}')}), [`${file}: the owner label "// Member of BriosaClient" labels methods, but interface BriosaClient declares no method.`]);
-  assert.deepEqual(failuresWith({[file]: append(`${label}\ninterface ${group} {\n}`)}), [`${file}: the owner label "${label}" names ${method}, but interface ${group} declares no method.`]);
+  assert.deepEqual(failuresWith({[file]: append('// Member of BriosaClient\ninterface BriosaClient {\n}')}), [`${file}: the owner label "// Member of BriosaClient" labels interface BriosaClient, which declares no method, so it documents nothing that ${pinnedIn} pins to BriosaClient.`]);
+  assert.deepEqual(failuresWith({[file]: append(`${label}\ninterface ${group} {\n}`)}), [`${file}: the owner label "${label}" names ${method}, but interface ${group} declares no method; the pinned owner of ${method} in ${pinnedIn} is ${pinned}.`]);
   assert.deepEqual(failuresWith({[file]: append('interface BriosaClient {}')}), [`${file}: interface BriosaClient on block line 1 declares no method, so it documents nothing that ${pinnedIn} pins to BriosaClient.`]);
   assert.deepEqual(failuresWith({[file]: append(`${label}\n\nexport declare function ${method}(): void;`)}), [
-    `${file}: the owner label "${label}" on line 1 does not label an interface declaration.`,
+    `${file}: the owner label "${label}" on block line 1 does not label an interface declaration; the pinned owner of ${method} in ${pinnedIn} is ${pinned}.`,
     `${file}: ${method} is documented as a package-level function; its pinned owner in ${pinnedIn} is ${pinned}.`,
   ]);
   // A removed owner label.
