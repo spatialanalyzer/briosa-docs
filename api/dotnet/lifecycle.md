@@ -88,7 +88,7 @@ phases plus 20 seconds, counted from the start of the call. It only grows, it
 never revives a startup whose two minutes have already run out, and it stays
 two minutes when an allowance the selection needs is missing.
 
-| Selected phases | Allowance |
+| Selected Phases | Allowance |
 | --- | --- |
 | Start SDK, launch, and connect | `LifecycleBounds.StartupWithLaunch` |
 | Start SDK and connect | `LifecycleBounds.StartupWithoutLaunch` |

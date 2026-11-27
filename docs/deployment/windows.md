@@ -106,11 +106,12 @@ A graceful server shutdown (such as Ctrl+C or **Stop server** in Control
 Center) lets accepted lifecycle work finish and then stops the worker. At the
 default settings, the host allows 105 seconds for that shutdown:
 `ApplicationStartupTimeout` (30 s), plus the longest accepted SDK exchange
-(Connect, 60 s), plus worker teardown (15 s). An MP command already in flight
-is outside that bound and drains under its own execution budget. If the
-command outlasts the host shutdown bound, the host reports a shutdown failure,
-still waits for the command to end and stops the worker, and the server exits
-with an error.
+(Connect, 60 s), plus worker teardown (15 s). The host’s shutdown window starts
+when shutdown begins. Time spent waiting for an in-flight MP command counts
+against that window. The command retains its own execution budget, which adds
+no time to the host’s allowance. If the command outlasts the window, the host
+reports a shutdown failure, finishes draining the command, stops the worker,
+and exits with an error.
 
 Server 0.10.1 publishes the allowances that follow from these settings in
 `GetServerInfo` as `lifecycle_bounds`, in milliseconds, including the host

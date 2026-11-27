@@ -70,9 +70,9 @@ it reads what that server adds; with Server 0.10.0, each addition is `None` or
   denied capabilities, says which policy step denied a call. Each capability
   lists its reviewed `request_options`. None of it changes a failure's kind or
   a capability's admission.
-- **Python 3.10.** A startup-budget expiry raises `BriosaStartupError`, which on
-  Python 3.10 also derives from `asyncio.TimeoutError`, and a `stop()` during a
-  hung startup now closes the client's resources on the first call.
+- **Python 3.10.** On Python 3.10, you can catch a startup-budget expiry as
+  either `BriosaStartupError` or `asyncio.TimeoutError`. Calling `stop()`
+  during a hung startup now closes the client’s resources on the first call.
 
 The fields 0.5.1 added stay out of `repr()`, equality, and hashing, but
 `dataclasses.fields()`, `astuple()`, and `asdict()` include them. The README of

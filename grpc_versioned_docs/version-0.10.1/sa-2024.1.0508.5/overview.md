@@ -17,8 +17,9 @@ Download the server through [Install Briosa](/install). Use the
 [.NET](/api/dotnet/sa-2024.1.0508.5), [Python](/api/python/sa-2024.1.0508.5), or
 [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5) reference for the idiomatic client
 source APIs. The .NET and Python clients are published as version 0.5.1 and the
-JavaScript/TypeScript client as version 0.5.2, for both exact targets. Clients
-0.5.0 and later work with this server.
+JavaScript/TypeScript client as version 0.5.2, for both exact targets. For the
+matching SA target, Server 0.10.1 works with clients 0.5.0 and 0.5.1 in all
+three languages and with JavaScript/TypeScript client 0.5.2.
 
 :::warning[Local-Only API]
 
@@ -38,8 +39,14 @@ to read the new fields.
   while the worker's result budget rises from 64 KiB to 1 MiB (1,048,576 bytes).
   The public protobuf message can differ in size from the worker frame. Set your
   gRPC client's receive limit to at least 4 MiB to receive results up to that
-  budget. A result over the budget still fails with `DATA_LOSS`,
-  `OUTPUT_RETRIEVAL_FAILURE`, and diagnostic `worker-output-encoding-rejected`.
+  budget. If the completed worker result frame exceeds 1 MiB, the call returns
+  `DATA_LOSS` with disposition `COMPLETED`, replay guidance `DO_NOT_REPLAY`,
+  and the original MP result code. When no output getter faulted, the failure
+  kind is `OUTPUT_RETRIEVAL_FAILURE` with diagnostic
+  `worker-output-encoding-rejected`. If an output getter also faulted, the
+  failure kind is `SDK_CALL_FAULTED`. Outputs retained in the frame are
+  reported as retrieved, and outputs dropped for size carry
+  `worker-output-encoding-rejected`.
 - **Discovery.** `GetServerInfo` publishes the server's lifecycle wait
   allowances and its configured SpatialAnalyzer interaction mode.
   `ListCapabilities` adds each operation's reviewed request options and, for a

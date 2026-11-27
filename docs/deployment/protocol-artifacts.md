@@ -35,8 +35,14 @@ limit are rejected at the transport boundary before MP operation mapping.
 Results can be larger. Server 0.10.1 raises the worker's result budget from
 64 KiB to **1 MiB (1,048,576 bytes)**; the public protobuf message can differ
 in size. Set your gRPC client's receive limit to at least **4 MiB** to receive
-results up to that budget. A result over the budget fails with `DATA_LOSS`,
-`OUTPUT_RETRIEVAL_FAILURE`, and diagnostic `worker-output-encoding-rejected`.
+results up to that budget. If the completed worker result frame exceeds 1 MiB,
+the call returns `DATA_LOSS` with disposition `COMPLETED`, replay guidance
+`DO_NOT_REPLAY`, and the original MP result code. When no output getter
+faulted, the failure kind is `OUTPUT_RETRIEVAL_FAILURE` with diagnostic
+`worker-output-encoding-rejected`. If an output getter also faulted, the
+failure kind is `SDK_CALL_FAULTED`. Outputs retained in the frame are reported
+as retrieved, and outputs dropped for size carry
+`worker-output-encoding-rejected`.
 
 ## Build Pins and Runtime Compatibility
 

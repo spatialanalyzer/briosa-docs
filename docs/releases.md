@@ -60,9 +60,14 @@ client [0.5.2](https://github.com/spatialanalyzer/briosa-js/releases/tag/v0.5.2)
 see [Known Issue](#known-issue-a-javascript-call-can-occasionally-receive-no-reply).
 
 - **Larger results.** Inbound requests stay limited to 64 KiB, and the worker's
-  result budget rises from 64 KiB to 1 MiB (1,048,576 bytes). A result over 1 MiB
-  still fails as in Server 0.10.0 (`DATA_LOSS`, `OUTPUT_RETRIEVAL_FAILURE`,
-  diagnostic `worker-output-encoding-rejected`). The published 0.5.0 and 0.5.1
+  result budget rises from 64 KiB to 1 MiB (1,048,576 bytes). If the completed
+  worker result frame exceeds 1 MiB, the call returns `DATA_LOSS` with
+  disposition `COMPLETED`, replay guidance `DO_NOT_REPLAY`, and the original MP
+  result code. When no output getter faulted, the failure kind is
+  `OUTPUT_RETRIEVAL_FAILURE` with diagnostic `worker-output-encoding-rejected`.
+  If an output getter also faulted, the failure kind is `SDK_CALL_FAULTED`.
+  Outputs retained in the frame are reported as retrieved, and outputs dropped
+  for size carry `worker-output-encoding-rejected`. The published 0.5.0 and 0.5.1
   clients receive results up to the new budget without extra configuration.
   Direct gRPC callers should set a receive limit of at least 4 MiB.
 - **Typed policy denials and request options.** A policy-denied call carries
@@ -146,8 +151,9 @@ of November 27, 2026, no released ASP.NET Core 10 runtime included it. See the
 ### Validation of Server 0.10.1
 
 The release workflow ran both targets' validation, including the protocol
-comparison with Server 0.10.0, and built each Windows, protocol, and client
-conformance archive twice with identical results. All 18 client gate jobs
+comparison with Server 0.10.0, and produced two byte-identical unsigned builds
+of each Windows, protocol, and client conformance archive before signing the
+Windows packages. All 18 client gate jobs
 passed: the published 0.5.0 and 0.5.1 clients in all three languages ran the
 conformance scenarios against the release build with a fake worker on both
 targets, and the published 0.4.0 clients rejected the server before launch.

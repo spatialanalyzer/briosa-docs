@@ -143,7 +143,10 @@ nothing:
   covers only the server's own work and does not promise that a response
   arrives or a process exits within it. `StartupWithLaunch` and
   `StartupWithoutLaunch` size a startup of several requests; they are not
-  server deadlines. An unset `StartupTimeout` is sized from them; see
+  server deadlines. An unset `StartupTimeout` uses these fields when startup
+  starts the SDK and connects. Without connection it uses the allowances for
+  the individual phases selected. If no phase is selected or a required
+  allowance is missing, the default stays two minutes; see
   [Client Construction](./lifecycle.md#client-construction).
 - `ConfiguredInteractionMode` is the SpatialAnalyzer interaction mode the server
   is configured to set after each Connect (`Briosa:SpatialAnalyzer:InteractionMode`).

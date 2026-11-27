@@ -550,8 +550,11 @@ only so that values written for client 0.5.0 still type-check.
   unavailable, never unbounded. Each covers only the server's own work and does
   not promise that a response arrives or a process exits within it.
   `startupWithLaunchMs` and `startupWithoutLaunchMs` size a startup of several
-  requests and are not server deadlines; an omitted `startupTimeoutMs` is sized
-  from them.
+  requests and are not server deadlines; an omitted `startupTimeoutMs` uses
+  these fields when startup starts the SDK and connects. Without connection it
+  uses `startSdkMs`, `launchSpatialAnalyzerMs`, or their sum according to the
+  phases selected. If no phase is selected or a required allowance is missing,
+  the default stays two minutes.
 - `configuredSpatialAnalyzerInteractionMode` is the interaction mode the server
   is configured to set after each Connect: the server's configuration, never
   SpatialAnalyzer's current mode.
@@ -718,6 +721,12 @@ export interface MpExecutionDetails {
 `BriosaOperationError` carries a valid typed operation failure. Its
 `completionUnknown` is true for `startedOutcomeUnknown`, and
 `reconciliationRequired` adds the replay guidance `reconcileBeforeReplay`.
+Its constructor takes `operationId`, `kind`, `diagnosticCode`,
+`executionDisposition`, `recoveryGuidance`, `replayGuidance`,
+`replaySafety`, and the optional `mpExecution`, in that order; client 0.5.1
+adds the optional `policyDenial` (`PolicyDenialDetails | null`) as a ninth and
+last argument, after `mpExecution`, and the error keeps it only for kind
+`policyDenied`.
 `BriosaTransportError` reports a transport failure without a valid typed
 operation detail. Its `diagnosticCode` is `transport-` followed by the gRPC
 status name in lower kebab case, such as `transport-deadline-exceeded` or

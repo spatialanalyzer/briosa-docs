@@ -98,8 +98,8 @@ server's `Briosa:Worker:StartupTimeout`, `Briosa:Worker:ReadinessProbeTimeout`,
 or `Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the startup budget
 too.
 
-On Python 3.10, the `BriosaStartupError` raised when the startup budget expires
-also derives from `asyncio.TimeoutError`, so a handler written for client 0.5.0
+On Python 3.10, you can catch a startup-budget expiry as either
+`BriosaStartupError` or `asyncio.TimeoutError`, so an existing timeout handler
 still catches it. SpatialAnalyzer launch, SDK connection, identity
 verification, and readiness probing retain their own server-configured safety
 bounds. `command_timeout=None` means the client adds no MP-command deadline.
@@ -547,7 +547,10 @@ hashing; `dataclasses.fields()`, `astuple()`, and `asdict()` include them.
   server's own work, and none promises that a response arrives or a process
   exits within it. `startup_with_launch` and `startup_without_launch` size a
   startup of several requests and are not server deadlines; an omitted
-  `startup_timeout` is sized from them.
+  `startup_timeout` uses these fields when startup starts the SDK and connects.
+  Without connection it uses `start_sdk`, `launch_spatial_analyzer`, or their
+  sum according to the phases selected. If no phase is selected or a required
+  allowance is missing, the default stays two minutes.
 - `configured_interaction_mode` is the SpatialAnalyzer interaction mode the
   server is configured to set after each Connect
   (`Briosa:SpatialAnalyzer:InteractionMode`). It is the server's configuration,
