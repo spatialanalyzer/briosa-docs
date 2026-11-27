@@ -93,10 +93,11 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Released Availability
 
-Released availability reflects Briosa Server **0.10.0** for both SA **2026.1.0529.7** (1,018 Current operations) and SA **2024.1.0508.5** (987 Current operations).
+Released availability reflects Briosa Server **0.10.1** for both SA **2026.1.0529.7** (1,018 Current operations) and SA **2024.1.0508.5** (987 Current operations).
 Browse command groups to find exact MP labels, inputs, outputs, API links,
 and alternatives.
 
 Released server support and client-package publication are separate. The .NET,
-Python, and JavaScript/TypeScript clients are published as package version
-**0.5.0** for each exact target. See [Release Status](/docs/releases).
+Python, and JavaScript/TypeScript clients are published as package versions
+**0.5.1** (.NET and Python) and **0.5.2** (JavaScript/TypeScript) for each
+exact target. See [Release Status](/docs/releases).

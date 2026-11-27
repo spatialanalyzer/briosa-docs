@@ -21,10 +21,13 @@ SDK Setup describe that machine; it does not manage other hosts remotely.
 · [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.4.1)
 · [All downloads](https://briosa.dev/downloads)
 
-Installer 0.4.1 and Server 0.10.0 are self-contained distributions. Update
+Installer 0.4.1 and Server 0.10.1 are self-contained distributions. Update
 both the Installer and installed server packages to receive their bundled
 runtime fixes; installing a newer system-wide .NET runtime does not update
-these packages.
+these packages. Use Server 0.10.1 for new installations and move existing
+0.10.0 installations to it: the 0.10.0 Windows packages omit the license
+notices for their third-party components, which 0.10.1 includes under
+`licenses/`.
 
 ## Before You Begin
 
@@ -264,4 +267,4 @@ Hexagon.
 
 ## Server Package Compatibility
 
-Servers 0.9.0 through 0.10.0 use schema-3 distributions, which require **Briosa Installer 0.3.0** or later. Client 0.5.0 works with Server 0.10.0 (Client 0.5.x works with Server 0.10.x), and Client 0.4.0 works with Server 0.9.x (0.9.0 through 0.9.2); each client rejects the other server line. Direct gRPC from the published protocol artifact is also supported. Install each exact SA target independently, and keep Server 0.9.2 beside 0.10.0 while applications still use client 0.4.0. The installer does not supply SpatialAnalyzer or its license. See [Installation Selection](/docs/deployment/installation-selection) for client 0.5.0 discovery and migration.
+Servers 0.9.0 through 0.10.1 use schema-3 distributions, which require **Briosa Installer 0.3.0** or later. Clients 0.5.0 and 0.5.1, and JavaScript/TypeScript client 0.5.2, work with Servers 0.10.0 and 0.10.1, and Client 0.4.0 works with Server 0.9.x (0.9.0 through 0.9.2); each client rejects the other server line. When 0.10.0 and 0.10.1 are both installed for a target, the published 0.5.0, 0.5.1, and 0.5.2 clients select 0.10.1 unless the application selects a server explicitly. Direct gRPC from the published protocol artifact is also supported. Install each exact SA target independently, and keep Server 0.9.2 beside 0.10.1 while applications still use client 0.4.0. Use the Control Center from the same package as the server. The installer does not supply SpatialAnalyzer or its license. See [Installation Selection](/docs/deployment/installation-selection) for client 0.5.x discovery and migration.

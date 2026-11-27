@@ -17,13 +17,14 @@ This separation lets you keep the control plane available without starting SA,
 restart a failed SDK without restarting Briosa, and leave SpatialAnalyzer open
 when your client exits.
 
-:::note[Client 0.5.0 and Server 0.10.0]
+:::note[Clients 0.5.1 and 0.5.2 with Server 0.10.1]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
-Install the package matching your exact SA release. Client 0.5.x works with
-Server 0.10.x for that target (Client 0.5.0 was tested with Server 0.10.0;
-Client 0.4.0 works with Server 0.9.x), and direct gRPC from the published
-protocol artifact is also supported. Before launch, client 0.5.x checks that
+Install the package matching your exact SA release: .NET or Python 0.5.1, or
+JavaScript/TypeScript 0.5.2. Clients 0.5.0, 0.5.1, and 0.5.2 work with Servers
+0.10.0 and 0.10.1 for that target, Client 0.4.0 works with Server 0.9.x, and
+direct gRPC from the published protocol artifact is also supported. Use Server
+0.10.1 for new installations. Before launch, client 0.5.x checks that
 the installation matches the exact SA target and declares support for this client, and
 rejects Server 0.9.x and earlier. See
 [Release Status](/docs/releases) for package links and validation limits,
@@ -191,7 +192,7 @@ SDK startup, connection, identity verification, recovery, and MP execution
 retain separate server-configured safety bounds. MP execution uses the budget of
 each operation's duration class; see [Operation Admission](/docs/deployment/operation-admission#duration-classes).
 
-Server 0.10.0 accepts each launch, start, connect, reconnect, and recovery at
+Server 0.10.0 and later accept each launch, start, connect, reconnect, and recovery at
 one point, after its state checks and before its first transition. Cancelling
 or timing out before that point withdraws the request, and nothing changes.
 After it, the transition continues detached under the server's own bounds even

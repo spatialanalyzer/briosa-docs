@@ -6,7 +6,7 @@ import {useColorMode} from '@docusaurus/theme-common';
 import styles from '@site/src/pages/index.module.css';
 import {createBladeScan, type BladeScan} from './bladeScan';
 import {CopyButton, MotionToggle, useTabs} from './parts';
-import {packagesFor, targets, versions} from './data';
+import {clientReleases, packagesFor, targets, versions} from './data';
 import Icon from './Icon';
 
 const pk = packagesFor(targets.sa2026);
@@ -14,30 +14,30 @@ const installs = [
   {
     id: 'dotnet',
     label: '.NET',
-    command: `dotnet add package ${pk.nuget} --version ${versions.clients}`,
+    command: `dotnet add package ${pk.nuget} --version ${versions.dotnet}`,
     code: (
       <>
-        dotnet add package <span className={styles.pk}>{pk.nuget}</span> --version {versions.clients}
+        dotnet add package <span className={styles.pk}>{pk.nuget}</span> --version {versions.dotnet}
       </>
     ),
   },
   {
     id: 'py',
     label: 'Python',
-    command: `python -m pip install ${pk.pypi}==${versions.clients}`,
+    command: `python -m pip install ${pk.pypi}==${versions.python}`,
     code: (
       <>
-        python -m pip install <span className={styles.pk}>{pk.pypi}</span>=={versions.clients}
+        python -m pip install <span className={styles.pk}>{pk.pypi}</span>=={versions.python}
       </>
     ),
   },
   {
     id: 'npm',
     label: 'npm',
-    command: `npm install briosa@npm:${pk.npm}@${versions.clients}`,
+    command: `npm install briosa@npm:${pk.npm}@${versions.javascript}`,
     code: (
       <>
-        npm install briosa@npm:<span className={styles.pk}>{pk.npm}</span>@{versions.clients}
+        npm install briosa@npm:<span className={styles.pk}>{pk.npm}</span>@{versions.javascript}
       </>
     ),
   },
@@ -181,7 +181,7 @@ export default function Hero(): ReactNode {
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>
             <span className={styles.pulse} aria-hidden="true" />
-            Server {versions.server} · Clients {versions.clients}
+            Server {versions.server} · Clients {clientReleases}
           </p>
           <h1 id="home-hero-title" className={styles.heroTitle}>
             <span className={styles.heroLine}>From code</span>{' '}

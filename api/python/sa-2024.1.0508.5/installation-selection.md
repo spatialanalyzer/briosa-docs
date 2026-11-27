@@ -1,13 +1,13 @@
 ---
 title: Installation Selection and Discovery
-description: Client 0.5.0 server selectors, inert discovery, selection reports, and startup failures for SA 2024.1.0508.5.
+description: Client 0.5.1 server selectors, inert discovery, selection reports, and startup failures for SA 2024.1.0508.5.
 ---
 
 # Installation Selection and Discovery
 
 [SA 2026.1.0529.7](/api/python/installation-selection) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/installation-selection)
 
-These APIs are released in client **0.5.0**. Import them from the same exact-target package as the client. Discovery reads local installation evidence without launching the server, SDK, or SpatialAnalyzer. It does not prove runtime readiness.
+These APIs are released in client **0.5.1**. Import them from the same exact-target package as the client. Discovery reads local installation evidence without launching the server, SDK, or SpatialAnalyzer. It does not prove runtime readiness.
 
 ## Discovery and Resolution
 
@@ -28,7 +28,7 @@ Set `server_selection` on `BriosaStartOptions`; its default is `BriosaServerSele
 
 Without constraints the client considers all three scopes, excludes prereleases, and chooses the highest compatible stable release. Exclusion and search-root lists default to empty. Prerelease and legacy environment override flags default to false. An invalid explicit selection fails without fallback. Search roots identify package stores containing the committed products layout, not arbitrary executable directories. Elevated automatic selection only admits protected machine installations.
 
-Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server 0.10.0) for its exact SA target. Before launch, it checks that the installation matches the exact SA target and declares support for this client; a version number alone does not make an installation eligible. For server releases after 0.10.0, a patch update keeps the same clients working; a minor update may require a client upgrade. Incompatible servers, including Server 0.9.x and earlier (and the earlier Server 0.6.1 legacy exception), are rejected before launch. Keep client 0.4.0 for applications that must run against Server 0.9.x. Generated artifacts are pinned to the frozen Server 0.10.0 protocol checkpoint `0.10.0-dev.1`; this build pin is not the runtime selection rule.
+Clients 0.5.0 and 0.5.1 work with Servers 0.10.0 and 0.10.1 for their exact SA target. Before launch, the client checks that the installation matches the exact SA target and declares support for this client; a version number alone does not make an installation eligible. For server releases after 0.10.0, a patch update keeps the same clients working; a minor update may require a client upgrade. Incompatible servers, including Server 0.9.x and earlier (and the earlier Server 0.6.1 legacy exception), are rejected before launch. Keep client 0.4.0 for applications that must run against Server 0.9.x. Generated artifacts are pinned to the protocol checkpoint `0.10.1-dev.1`, whose protobuf files are identical to the Server 0.10.1 release; this build pin is not the runtime selection rule.
 
 `BRIOSA_SERVER_PATH` is ignored unless the legacy override flag is enabled and no direct selector is supplied. Prefer per-application selection. The chosen installation stays fixed for the session and recovery. Startup checks the live server identity against the selected evidence before SDK or SA activity; server-client compatibility never bypasses exact-target checks, policy, ownership, or readiness.
 
@@ -92,7 +92,7 @@ class BriosaDiscoveryReport:
 ```python
 from briosa import BriosaServerSelection, discover_installations
 
-report = discover_installations(BriosaServerSelection(minimum_version="0.10.0"))
+report = discover_installations(BriosaServerSelection(minimum_version="0.10.1"))
 for diagnostic in report.diagnostics:
     print(diagnostic.code)
 if report.selected is not None:
@@ -103,4 +103,4 @@ else:
 
 Diagnostic paths are explicitly requested local data. Avoid publishing them in logs or support reports. See [Installation Selection](/docs/deployment/installation-selection) and [Diagnostics](/docs/deployment/diagnostics) for deployment guidance.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.0/targets/2024.1.0508.5/src/briosa/installation_models.py)
+[Released Source](https://github.com/spatialanalyzer/briosa-py/blob/v0.5.1/targets/2024.1.0508.5/src/briosa/installation_models.py)

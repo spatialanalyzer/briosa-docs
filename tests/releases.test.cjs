@@ -13,7 +13,7 @@ const revision = (family, id, release, target) => {
 
 test('current, historical, and exact-target references have distinct identities', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
-    const current = family === 'grpc' ? '0.10.0' : '0.5.0';
+    const current = {grpc: '0.10.1', dotnet: '0.5.1', python: '0.5.1', javascript: '0.5.2'}[family];
     const previous = family === 'grpc' ? '0.5.1' : '0.1.0';
     const root = `api/${family}`;
     assert.match(html(`${root}/sa-2026.1.0529.7/analysis-operations`)('title').text(), new RegExp(`${current} · SA 2026`));
@@ -49,13 +49,13 @@ test('client discovery references expose the current selector and reports', () =
   }
 });
 
-test('contract major 3 keeps retired methods as unavailable views with their history', () => {
+test('the nine operations Server 0.10.0 retired keep unavailable views with their history', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
     const release = family === 'grpc' ? '0.9.0' : '0.4.0';
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
       const $ = html(`api/${family}/sa-${target}/construction-operations/mirror-objects`);
       assert.match($('meta[name="robots"]').attr('content'), /noindex/, `${family} ${target}`);
-      assert.match($('article').text(), /contract major 3/i, `${family} ${target}`);
+      assert.match($('article').text(), family === 'grpc' ? /Server 0\.10\.0 removed this operation/ : /Client 0\.5\.0 removed this method \(with Server 0\.10\.0\)/, `${family} ${target}`);
       assert.ok(revision(family, 'construction-operations/mirror-objects', release, target).length, `${family} ${target} keeps the ${release} contract`);
     }
   }

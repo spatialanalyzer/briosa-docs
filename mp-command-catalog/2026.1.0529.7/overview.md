@@ -1,12 +1,12 @@
 ---
 title: SA 2026.1.0529.7 Catalog
-description: Find SpatialAnalyzer 2026.1.0529.7 MP commands and their availability in Briosa Server 0.10.0.
+description: Find SpatialAnalyzer 2026.1.0529.7 MP commands and their availability in Briosa Server 0.10.1.
 ---
 
 # SA 2026.1.0529.7 Catalog
 
 This catalog preserves the SpatialAnalyzer MP Editor group hierarchy and
-explains each reviewed command's availability in **Briosa Server 0.10.0**.
+explains each reviewed command's availability in **Briosa Server 0.10.1**.
 
 <div className="catalog-quicklinks">
 

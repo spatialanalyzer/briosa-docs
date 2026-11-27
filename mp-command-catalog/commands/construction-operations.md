@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries cover the 14 commands observed directly in the Construction
 Operations root group for SA 2026.1.0529.7. The group's subgroups are reviewed
-separately. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
+separately. Current entries are included in Briosa Server 0.10.1; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -210,7 +210,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
-**Excluded in Briosa Server 0.10.0.** Server 0.10.0 and clients 0.5.0 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+**Excluded in Briosa Server 0.10.1.** Server 0.10.0 and clients 0.5.0 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
 
 **Recommended Alternative:** No replacement mirrors objects on these exact targets.
 
@@ -970,7 +970,7 @@ from `Any` through `Vertex Points`, followed by `Point Offset`. A second
 exported `Object Type` setter with `Entire Solid` and `Select Faces` choices is
 an SA View SDK Code export defect and is not part of the command signature.
 
-Included in Briosa Server 0.10.0 because callers may intentionally coordinate an
+Included in Briosa Server 0.10.1 because callers may intentionally coordinate an
 operator-driven CAD selection workflow. Briosa requires `Object Type` rather
 than defaulting it to `Any`; choosing a specific type avoids the additional
 type-selection dialog, while callers can still select `Any` when that dialog is

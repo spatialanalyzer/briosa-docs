@@ -1,11 +1,11 @@
 ---
 title: Operation Admission
-description: How Server 0.10.0 decides which MP operations it admits, from named profiles, risk flags, overrides, and request options.
+description: How Server 0.10.0 and later decide which MP operations they admit, from named profiles, risk flags, overrides, and request options.
 ---
 
 # Operation Admission
 
-Server 0.10.0 admits MP operations through a named **admission profile**. The
+Server 0.10.0 and later admit MP operations through a named **admission profile**. The
 profile is applied to the reviewed classification of every registered operation
 for the exact target: its risk flags, duration class, validation status, and
 isolation class. The packaged default is the `standard` profile. Admission can
@@ -198,6 +198,25 @@ After admission, the server also checks that the mapped MP command matches its
 registration. A mismatch fails request validation before dispatch
 (`InvalidArgument`, `request-validation-failed`, `NotStarted`).
 
+### Which Rule Denied a Call
+
+From Server 0.10.1, a policy-denied call carries `PolicyDenialDetails` in its
+typed operation error. It names the rule that decided (`PROFILE`, `FLAG`,
+`OVERRIDE`, `EXCLUSIVE`, or `UNREVIEWED`) and, where it applies, the first
+denied risk flag in vocabulary order, the active admission profile, and the
+request option field the server attributed the denial to. It never records a
+request value. Status codes, failure kinds, dispositions, guidance, diagnostic
+codes, audit rules, and the policy fingerprint are unchanged.
+
+`ListCapabilities` adds the same detail to every denied entry when
+`include_denied` is set, and lists each operation's reviewed request options,
+including for admitted operations in the default response. Each option reports
+its field name, its effect (`INTERACTIVE_UI` or `BACKGROUND_WORK`), the
+condition that activates it, and what omitting it does, with the admission of a
+request that turns on that option alone. The first-party clients 0.5.1 and
+0.5.2 expose these values; the 0.5.0 clients ignore them. See
+[Server Discovery](/api/grpc/sa-2026.1.0529.7/discovery#policy-denial-details).
+
 ## Duration Classes
 
 The duration class selects the server's execution budget for a request. An
@@ -220,7 +239,7 @@ bounds; see [Windows Deployment](./windows.md#worker-time-bounds).
 
 ## Migrating From Allow and Deny
 
-| Server 0.9.x | Server 0.10.0 |
+| Server 0.9.x | Server 0.10.x |
 | --- | --- |
 | `Allow:0 … Allow:N` listing every registered operation (packaged) | `"Profile": "standard"` (packaged) |
 | A missing `Allow` denied every operation | A missing `Profile` fails startup |
@@ -256,5 +275,5 @@ safety `Safe` to `Unsafe`, because replaying one prompts the operator again.
 An operation whose replay safety is `Unknown` or `Unspecified` is denied as
 unreviewed (`operation-risk-unreviewed`) under every setting.
 
-The [authoritative policy guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.0/targets/2026.1.0529.7/docs/operations/command-policy-and-auditing.md)
+The [authoritative policy guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2026.1.0529.7/docs/operations/command-policy-and-auditing.md)
 gives the full precedence and the audit records.

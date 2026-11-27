@@ -72,10 +72,26 @@ whichever phases are selected. When it expires, `start()` rejects with
 `BriosaStartupError` and diagnostic `startup-timeout`, including while an RPC is
 in flight. Two minutes covers the server's default worst case of about 100
 seconds for a start that launches SpatialAnalyzer, with a 20-second margin;
-[`start`](./start.md#startup-options) shows when to raise it. SpatialAnalyzer
-launch, SDK connection, identity verification, and readiness probing retain
-their own server-configured safety bounds. Lifecycle methods add no deadline of
-their own. Omitting `commandTimeoutMs`, or setting it to `null`, means the
+[`start`](./start.md#startup-options) shows when to raise it. A value you set,
+including an explicit `120000`, is always the budget.
+
+With Server 0.10.1, which publishes its lifecycle bounds, an omitted
+`startupTimeoutMs` is sized once, when the client first reads and validates the
+server's identity: the deadline moves to the start of `start()` plus the larger
+of two minutes and the server's startup allowance for the selected phases plus
+20 seconds. Time already spent counts, and a startup that has already reached
+its deadline is not extended. When the selected phases need an allowance the
+server does not publish, the two minutes stay. From that point the client also
+checks the clock before each later startup request, whether you set the budget
+or not, and reports a step that fails at or past the deadline as
+`startup-timeout` with that failure as its `cause`. If startup fails after the
+client takes ownership of the session, that session refuses MP commands until
+you call `stop()` and a new `start()` succeeds. With Server 0.10.0 the budget is
+two minutes, as in client 0.5.0.
+
+SpatialAnalyzer launch, SDK connection, identity verification, and readiness
+probing retain their own server-configured safety bounds. Lifecycle methods add
+no deadline of their own. Omitting `commandTimeoutMs`, or setting it to `null`, means the
 client adds no MP-command deadline; `commandTimeoutMs` applies only to MP
 commands.
 
@@ -352,8 +368,30 @@ export interface BriosaServerSnapshot {
   readonly admissionProfile: string;
   readonly policyFingerprint: string;
   readonly operations: readonly BriosaOperationCapability[];
+  readonly lifecycleBounds?: BriosaLifecycleBounds;
+  readonly configuredSpatialAnalyzerInteractionMode?: ConfiguredSpatialAnalyzerInteractionMode;
   supports(fullyQualifiedMethod: string): boolean;
 }
+
+export interface BriosaLifecycleBounds {
+  readonly startSdkMs: number | null;
+  readonly launchSpatialAnalyzerMs: number | null;
+  readonly connectSpatialAnalyzerMs: number | null;
+  readonly recoverSdkMs: number | null;
+  readonly stopSdkMs: number | null;
+  readonly closeOwnedSpatialAnalyzerMs: number | null;
+  readonly startupWithLaunchMs: number | null;
+  readonly startupWithoutLaunchMs: number | null;
+  readonly hostGracefulShutdown: BriosaHostShutdownBound;
+}
+
+export type BriosaHostShutdownBound =
+  | { readonly kind: 'unavailable' }
+  | { readonly kind: 'finite'; readonly milliseconds: number }
+  | { readonly kind: 'unbounded' };
+
+export type ConfiguredSpatialAnalyzerInteractionMode =
+  'unknown' | 'unchanged' | 'silent' | 'automatic' | 'manual';
 
 export interface BriosaCapabilityListOptions extends BriosaLifecycleCallOptions {
   readonly includeDenied?: boolean;
@@ -374,7 +412,50 @@ export interface BriosaOperationCapability {
   readonly durationClass: OperationDurationClass;
   readonly validationStatus: OperationValidationStatus;
   readonly admission: OperationAdmission;
+  readonly policyDenial?: PolicyDenialDetails | null;
+  readonly requestOptions?: readonly BriosaOperationRequestOption[] | null;
 }
+
+export interface BriosaOperationRequestOption {
+  readonly fieldName: string;
+  readonly effect: OperationRequestOptionEffect;
+  readonly condition: OperationRequestOptionCondition;
+  readonly enablingEnumValues: readonly string[];
+  readonly omission: OperationRequestOptionOmission;
+  readonly admission: OperationAdmission;
+  readonly policyDenial: PolicyDenialDetails | null;
+}
+
+export type OperationRequestOptionEffect =
+  'unspecified' | 'interactiveUi' | 'backgroundWork' | 'unknown';
+
+export type OperationRequestOptionCondition =
+  | 'unspecified'
+  | 'whenTrue'
+  | 'whenFalse'
+  | 'whenPresent'
+  | 'whenNonEmpty'
+  | 'whenOneOf'
+  | 'unknown';
+
+export type OperationRequestOptionOmission =
+  'unspecified' | 'doesNotActivate' | 'activates' | 'required' | 'unknown';
+
+export interface PolicyDenialDetails {
+  readonly rule: PolicyDenialRule;
+  readonly deniedFlag: OperationRiskFlag | null;
+  readonly admissionProfile: string | null;
+  readonly requestOptionField: string | null;
+}
+
+export type PolicyDenialRule =
+  | 'unspecified'
+  | 'profile'
+  | 'flag'
+  | 'override'
+  | 'exclusive'
+  | 'unreviewed'
+  | 'unknown';
 
 export type OperationRiskFlag =
   | 'unspecified'
@@ -457,6 +538,40 @@ export type OperationAdmission =
   package: a denied call fails with `BriosaOperationError` of kind `policyDenied` and
   disposition `notStarted`.
 
+Client 0.5.1 also reads what Server 0.10.1 adds to discovery. Server 0.10.0
+sends none of it: there, `policyDenial` and `requestOptions` are `null`, each
+millisecond allowance in `lifecycleBounds` is `null`, `hostGracefulShutdown` has
+`kind: 'unavailable'`, and `configuredSpatialAnalyzerInteractionMode` is
+`'unknown'`. The client always sets these members; the types mark them optional
+only so that values written for client 0.5.0 still type-check.
+
+- `lifecycleBounds` gives each of the server's lifecycle wait allowances in
+  milliseconds, or `null` when it is unavailable; an absent or zero allowance is
+  unavailable, never unbounded. Each covers only the server's own work and does
+  not promise that a response arrives or a process exits within it.
+  `startupWithLaunchMs` and `startupWithoutLaunchMs` size a startup of several
+  requests and are not server deadlines; an omitted `startupTimeoutMs` uses
+  these fields when startup starts the SDK and connects. Without connection it
+  uses `startSdkMs`, `launchSpatialAnalyzerMs`, or their sum according to the
+  phases selected. If no phase is selected or a required allowance is missing,
+  the default stays two minutes.
+- `configuredSpatialAnalyzerInteractionMode` is the interaction mode the server
+  is configured to set after each Connect: the server's configuration, never
+  SpatialAnalyzer's current mode.
+- `requestOptions` lists the request fields that turn on operator UI or leave
+  work running, each with its effect, condition, omission, and what the policy
+  decides for a request that turns on that option alone. It is `[]` when no
+  option applies, and `null` when the server does not describe options. The
+  server still decides every request; the client never checks a request
+  against these descriptions.
+- `policyDenial` on a denied capability, on a request option, and on a
+  [`policyDenied` error](#operation-errors) names the policy step that denied
+  (`rule`), the risk flag set to deny (`deniedFlag`), the admission profile, and
+  the request option field the server attributed the denial to. It holds names
+  only, never a request value, and it never changes `admission`.
+
+A value this client doesn't know is `'unknown'`, never a permission.
+
 MP admission needs both the SDK state and the latest server snapshot to report
 readiness. `start()` refreshes the snapshot itself when it connects the SDK. When
 you connect the SDK yourself, for example after a control-plane-only `start()`,
@@ -535,6 +650,7 @@ export class BriosaOperationError extends BriosaError {
   readonly replayGuidance: ReplayGuidance;
   readonly replaySafety: ReplaySafety;
   readonly mpExecution: MpExecutionDetails | null;
+  readonly policyDenial?: PolicyDenialDetails | null;
   get completionUnknown(): boolean;
   get reconciliationRequired(): boolean;
 }
@@ -607,6 +723,12 @@ export interface MpExecutionDetails {
 `BriosaOperationError` carries a valid typed operation failure. Its
 `completionUnknown` is true for `startedOutcomeUnknown`, and
 `reconciliationRequired` adds the replay guidance `reconcileBeforeReplay`.
+Its constructor takes `operationId`, `kind`, `diagnosticCode`,
+`executionDisposition`, `recoveryGuidance`, `replayGuidance`,
+`replaySafety`, and the optional `mpExecution`, in that order; client 0.5.1
+adds the optional `policyDenial` (`PolicyDenialDetails | null`) as a ninth and
+last argument, after `mpExecution`, and the error keeps it only for kind
+`policyDenied`.
 `BriosaTransportError` reports a transport failure without a valid typed
 operation detail. Its `diagnosticCode` is `transport-` followed by the gRPC
 status name in lower kebab case, such as `transport-deadline-exceeded` or
@@ -640,7 +762,10 @@ way.
   getter for it. Clients don't set it.
 - **Policy denials.** A call that the server's admission policy denies fails with
   kind `policyDenied` and disposition `notStarted`; see
-  [Server Snapshot and Capabilities](#server-snapshot-and-capabilities).
+  [Server Snapshot and Capabilities](#server-snapshot-and-capabilities). With
+  Server 0.10.1, `policyDenial` says which policy step denied it. It is `null`
+  for every other kind and with Server 0.10.0, and it never changes the error's
+  kind, disposition, or guidance.
 - **Rejected arguments.** The client never sends an empty value, 0, or false for
   an input you left unset, and it does not pre-validate empty strings. The server
   rejects an invalid request before dispatch with kind `validation`, diagnostic

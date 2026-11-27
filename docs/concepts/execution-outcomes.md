@@ -59,7 +59,7 @@ empty string, zero, or another value that could be mistaken for a real result.
 SpatialAnalyzer reports MP code `4` (`PARTIAL SUCCESS`) when a command did its
 work but not its full intended effect, for example a fit that exceeded its
 tolerance or a command that processed some, but not all, of the named objects.
-Server 0.10.0 reports it as a success: the call returns its outputs when all of
+Server 0.10.0 and later report it as a success: the call returns its outputs when all of
 them are retrieved, the MP execution state is `PartialSuccess` with code `4`,
 and the command is **completed**. Do not repeat the call to change its outcome.
 
@@ -97,7 +97,7 @@ that failed.
 ## When the SDK Raises an Exception
 
 An exception from the SA SDK during an MP sequence does not stop the Briosa
-worker. Server 0.10.0 reports it with the dedicated failure kind
+worker. Server 0.10.0 and later report it with the dedicated failure kind
 `SdkCallFaulted`, the phase it can prove, and a diagnostic code, without the
 exception text:
 

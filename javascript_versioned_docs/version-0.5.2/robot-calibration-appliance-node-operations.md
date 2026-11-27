@@ -1,0 +1,697 @@
+---
+title: Robot Calibration Appliance Node Operations
+description: Released javascript 0.5.2 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+toc_max_heading_level: 2
+---
+
+# Robot Calibration Appliance Node Operations
+
+[SA 2026.1.0529.7](/api/javascript/robot-calibration-appliance-node-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/robot-calibration-appliance-node-operations)
+
+This reference covers **SA 2026.1.0529.7**, client **0.5.2**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+
+Call `RobotCalibrationApplianceNodeOperations` methods through `briosa.robotCalibrationApplianceNodeOperations.<method>(...)`. [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
+
+## Add Calibration Appliance Node {/* #add-calibration-appliance-node */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+```ts
+export interface AddCalibrationApplianceNodeInput {
+  readonly calibrationApplianceNodeToAdd: CollectionObjectName;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.addCalibrationApplianceNode(...))
+interface RobotCalibrationApplianceNodeOperations {
+  addCalibrationApplianceNode(
+    input: AddCalibrationApplianceNodeInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Delete Calibration Appliance Node {/* #delete-calibration-appliance-node */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
+```ts
+export interface DeleteCalibrationApplianceNodeInput {
+  readonly calibrationApplianceNodeToDelete: CollectionObjectName;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.deleteCalibrationApplianceNode(...))
+interface RobotCalibrationApplianceNodeOperations {
+  deleteCalibrationApplianceNode(
+    input: DeleteCalibrationApplianceNodeInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Connect/Disconnect Calibration Appliance Node {/* #connectdisconnect-calibration-appliance-node */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+export interface ConnectDisconnectCalibrationApplianceNodeInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly connect?: boolean;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.connectDisconnectCalibrationApplianceNode(...))
+interface RobotCalibrationApplianceNodeOperations {
+  connectDisconnectCalibrationApplianceNode(
+    input: ConnectDisconnectCalibrationApplianceNodeInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Instrument {/* #set-calibration-appliance-node-instrument */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeInstrumentInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly instrument: CollectionInstrumentId;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeInstrument(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeInstrument(
+    input: SetCalibrationApplianceNodeInstrumentInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Measurement Profile {/* #set-calibration-appliance-node-measurement-profile */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeMeasurementProfileInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly measurementProfile?: string;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementProfile(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeMeasurementProfile(
+    input: SetCalibrationApplianceNodeMeasurementProfileInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Measurement Target {/* #set-calibration-appliance-node-measurement-target */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeMeasurementTargetInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly measurementTarget?: string;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementTarget(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeMeasurementTarget(
+    input: SetCalibrationApplianceNodeMeasurementTargetInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Enable/Disable Calibration Appliance Node Instrument Auto Point {/* #enabledisable-calibration-appliance-node-instrument-auto-point */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+export interface EnableDisableCalibrationApplianceNodeInstrumentAutoPointInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly enableInstrumentAutoPoint?: boolean;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.enableDisableCalibrationApplianceNodeInstrumentAutoPoint(...))
+interface RobotCalibrationApplianceNodeOperations {
+  enableDisableCalibrationApplianceNodeInstrumentAutoPoint(
+    input: EnableDisableCalibrationApplianceNodeInstrumentAutoPointInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Instrument Dwell Time {/* #set-calibration-appliance-node-instrument-dwell-time */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeInstrumentDwellTimeInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly measurementDwellTime?: number;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeInstrumentDwellTime(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeInstrumentDwellTime(
+    input: SetCalibrationApplianceNodeInstrumentDwellTimeInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measurementDwellTime` | Time in seconds. |
+
+## Skip Calibration Appliance Node Measurement {/* #skip-calibration-appliance-node-measurement */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+export interface SkipCalibrationApplianceNodeMeasurementInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.skipCalibrationApplianceNodeMeasurement(...))
+interface RobotCalibrationApplianceNodeOperations {
+  skipCalibrationApplianceNodeMeasurement(
+    input: SkipCalibrationApplianceNodeMeasurementInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Measurement Frame {/* #set-calibration-appliance-node-measurement-frame */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeMeasurementFrameInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly measurementReferenceFrame: CollectionObjectName;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementFrame(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeMeasurementFrame(
+    input: SetCalibrationApplianceNodeMeasurementFrameInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Measurement Offset Transform {/* #set-calibration-appliance-node-measurement-offset-transform */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeMeasurementOffsetTransformInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly measurementOffsetTransform: Transform;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementOffsetTransform(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeMeasurementOffsetTransform(
+    input: SetCalibrationApplianceNodeMeasurementOffsetTransformInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Measurement Point Group {/* #set-calibration-appliance-node-measurement-point-group */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeMeasurementPointGroupInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly pointGroupName: CollectionObjectName;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeMeasurementPointGroup(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeMeasurementPointGroup(
+    input: SetCalibrationApplianceNodeMeasurementPointGroupInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Calibration Appliance IP Address {/* #set-calibration-appliance-node-calibration-appliance-ip-address */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_config`, `external_io` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeCalibrationApplianceIpAddressInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly calibrationApplianceIpAddress?: string;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeCalibrationApplianceIpAddress(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeCalibrationApplianceIpAddress(
+    input: SetCalibrationApplianceNodeCalibrationApplianceIpAddressInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Trapping Node ID {/* #set-calibration-appliance-node-trapping-node-id */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeTrappingNodeIdInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly trappingNodeId?: number;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeTrappingNodeId(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeTrappingNodeId(
+    input: SetCalibrationApplianceNodeTrappingNodeIdInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Enable/Disable Calibration Appliance Node Trap Manager {/* #enabledisable-calibration-appliance-node-trap-manager */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+export interface EnableDisableCalibrationApplianceNodeTrapManagerInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly enable?: boolean;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.enableDisableCalibrationApplianceNodeTrapManager(...))
+interface RobotCalibrationApplianceNodeOperations {
+  enableDisableCalibrationApplianceNodeTrapManager(
+    input: EnableDisableCalibrationApplianceNodeTrapManagerInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Clear Calibration Appliance Node Trap Manager Requests {/* #clear-calibration-appliance-node-trap-manager-requests */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `destructive`, `device_session` · **Duration Class:** `long_running`
+
+```ts
+export interface ClearCalibrationApplianceNodeTrapManagerRequestsInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.clearCalibrationApplianceNodeTrapManagerRequests(...))
+interface RobotCalibrationApplianceNodeOperations {
+  clearCalibrationApplianceNodeTrapManagerRequests(
+    input: ClearCalibrationApplianceNodeTrapManagerRequestsInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Integer Value {/* #set-calibration-appliance-node-integer-value */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeIntegerValueInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly indexOffset?: number;
+  readonly integerValue?: number;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeIntegerValue(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeIntegerValue(
+    input: SetCalibrationApplianceNodeIntegerValueInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Get Calibration Appliance Node Integer Value {/* #get-calibration-appliance-node-integer-value */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface GetCalibrationApplianceNodeIntegerValueInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly indexOffset?: number;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeIntegerValue(...))
+interface RobotCalibrationApplianceNodeOperations {
+  getCalibrationApplianceNodeIntegerValue(
+    input: GetCalibrationApplianceNodeIntegerValueInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<number>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Real Value {/* #set-calibration-appliance-node-real-value */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeRealValueInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly indexOffset?: number;
+  readonly realValue?: number;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeRealValue(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeRealValue(
+    input: SetCalibrationApplianceNodeRealValueInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Get Calibration Appliance Node Real Value {/* #get-calibration-appliance-node-real-value */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface GetCalibrationApplianceNodeRealValueInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly indexOffset?: number;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeRealValue(...))
+interface RobotCalibrationApplianceNodeOperations {
+  getCalibrationApplianceNodeRealValue(
+    input: GetCalibrationApplianceNodeRealValueInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<number>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Data {/* #set-calibration-appliance-node-data */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeDataInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly realValues?: Iterable<number>;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeData(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeData(
+    input: SetCalibrationApplianceNodeDataInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Get Calibration Appliance Node Data {/* #get-calibration-appliance-node-data */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface GetCalibrationApplianceNodeDataInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly realValueCount: number;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeData(...))
+interface RobotCalibrationApplianceNodeOperations {
+  getCalibrationApplianceNodeData(
+    input: GetCalibrationApplianceNodeDataInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<readonly number[]>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set Calibration Appliance Node Display Robot {/* #set-calibration-appliance-node-display-robot */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```ts
+export interface SetCalibrationApplianceNodeDisplayRobotInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly machineId: CollectionMachineId;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.setCalibrationApplianceNodeDisplayRobot(...))
+interface RobotCalibrationApplianceNodeOperations {
+  setCalibrationApplianceNodeDisplayRobot(
+    input: SetCalibrationApplianceNodeDisplayRobotInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Update Calibration Appliance Node Display Robot Joints {/* #update-calibration-appliance-node-display-robot-joints */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+export interface UpdateCalibrationApplianceNodeDisplayRobotJointsInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+  readonly enableDisplayRobotJointUpdates?: boolean;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.updateCalibrationApplianceNodeDisplayRobotJoints(...))
+interface RobotCalibrationApplianceNodeOperations {
+  updateCalibrationApplianceNodeDisplayRobotJoints(
+    input: UpdateCalibrationApplianceNodeDisplayRobotJointsInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<void>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Get Calibration Appliance Node Status {/* #get-calibration-appliance-node-status */}
+
+[MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC Contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+```ts
+export interface GetCalibrationApplianceNodeStatusInput {
+  readonly calibrationApplianceNode: CollectionObjectName;
+}
+
+// Member of RobotCalibrationApplianceNodeOperations (briosa.robotCalibrationApplianceNodeOperations.getCalibrationApplianceNodeStatus(...))
+interface RobotCalibrationApplianceNodeOperations {
+  getCalibrationApplianceNodeStatus(
+    input: GetCalibrationApplianceNodeStatusInput,
+    callOptions?: BriosaCallOptions,
+  ): Promise<CalibrationApplianceNodeStatus>;
+}
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Result Type {/* #result-type */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## addCalibrationApplianceNode {/* #addcalibrationappliancenode */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## deleteCalibrationApplianceNode {/* #deletecalibrationappliancenode */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## connectDisconnectCalibrationApplianceNode {/* #connectdisconnectcalibrationappliancenode */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeInstrument {/* #setcalibrationappliancenodeinstrument */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeMeasurementProfile {/* #setcalibrationappliancenodemeasurementprofile */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeMeasurementTarget {/* #setcalibrationappliancenodemeasurementtarget */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## enableDisableCalibrationApplianceNodeInstrumentAutoPoint {/* #enabledisablecalibrationappliancenodeinstrumentautopoint */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeInstrumentDwellTime {/* #setcalibrationappliancenodeinstrumentdwelltime */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## skipCalibrationApplianceNodeMeasurement {/* #skipcalibrationappliancenodemeasurement */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeMeasurementFrame {/* #setcalibrationappliancenodemeasurementframe */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeMeasurementOffsetTransform {/* #setcalibrationappliancenodemeasurementoffsettransform */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeMeasurementPointGroup {/* #setcalibrationappliancenodemeasurementpointgroup */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeCalibrationApplianceIpAddress {/* #setcalibrationappliancenodecalibrationapplianceipaddress */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeTrappingNodeId {/* #setcalibrationappliancenodetrappingnodeid */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## enableDisableCalibrationApplianceNodeTrapManager {/* #enabledisablecalibrationappliancenodetrapmanager */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## clearCalibrationApplianceNodeTrapManagerRequests {/* #clearcalibrationappliancenodetrapmanagerrequests */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeIntegerValue {/* #setcalibrationappliancenodeintegervalue */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## getCalibrationApplianceNodeIntegerValue {/* #getcalibrationappliancenodeintegervalue */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeRealValue {/* #setcalibrationappliancenoderealvalue */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## getCalibrationApplianceNodeRealValue {/* #getcalibrationappliancenoderealvalue */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeData {/* #setcalibrationappliancenodedata */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## getCalibrationApplianceNodeData {/* #getcalibrationappliancenodedata */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## setCalibrationApplianceNodeDisplayRobot {/* #setcalibrationappliancenodedisplayrobot */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## updateCalibrationApplianceNodeDisplayRobotJoints {/* #updatecalibrationappliancenodedisplayrobotjoints */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## getCalibrationApplianceNodeStatus {/* #getcalibrationappliancenodestatus */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.2/targets/2026.1.0529.7)

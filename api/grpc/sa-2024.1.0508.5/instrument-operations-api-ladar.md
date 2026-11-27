@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / API - LADAR
-description: Availability of the API - LADAR commands that Server 0.10.0 provides only for SA 2026.1.0529.7.
+description: Availability of the API - LADAR commands that Server 0.10.1 provides only for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 :::note[Not Available for SA 2024.1.0508.5]
 
-Server 0.10.0 for SA 2024.1.0508.5 has no RPC for these commands, and no earlier
+Server 0.10.1 for SA 2024.1.0508.5 has no RPC for these commands, and no earlier
 SA 2024.1.0508.5 server had one. The
 [SA 2026.1.0529.7 reference](/api/grpc/instrument-operations-api-ladar)
 documents them for that target.

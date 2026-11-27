@@ -471,7 +471,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Inputs are `Destination Callout View`, `Relationship Name`, X/Y positions
-(default 0), and optional edit-text notes. Included in Briosa Server 0.10.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-relationship-callout)
+(default 0), and optional edit-text notes. Included in Briosa Server 0.10.1. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-relationship-callout)
 
 ## Create Picture Callout
 
@@ -516,7 +516,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Inputs are the destination callout view, picture name, X/Y positions (defaults
 0.4/0.6), image scale percentage (default 100), and an optional anchor object.
-Included in Briosa Server 0.10.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-picture-callout)
+Included in Briosa Server 0.10.1. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-picture-callout)
 
 ## Create Text Callout
 
@@ -559,7 +559,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Inputs are the destination callout view, required edit-text lines, X/Y
-positions (defaults 0.4/0.6), and an optional anchor point. Included in Briosa Server 0.10.0.
+positions (defaults 0.4/0.6), and an optional anchor point. Included in Briosa Server 0.10.1.
 [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-text-callout)
 
 ## Make a Callout View Ref List
@@ -639,7 +639,7 @@ The exporter places `Resultant Callout View List` in its input position without 
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
-**Excluded in Briosa Server 0.10.0.** Server 0.10.0 and clients 0.5.0 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+**Excluded in Briosa Server 0.10.1.** Server 0.10.0 and clients 0.5.0 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
 
 **Recommended Alternative:** Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run.
 
@@ -855,7 +855,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Inputs define the default name, view recall flags, leader and border thickness
 and colors, text-divider behavior, and font. Exact defaults include gray leader
 RGB `(128, 128, 128)`, blue border RGB `(0, 0, 255)`, and `MS Shell Dlg` at 8
-points. Included in Briosa Server 0.10.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-default-callout-view-properties)
+points. Included in Briosa Server 0.10.1. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-default-callout-view-properties)
 
 ## Set Callout View Properties
 
@@ -902,7 +902,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
-**Excluded in Briosa Server 0.10.0.** Server 0.10.0 and clients 0.5.0 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+**Excluded in Briosa Server 0.10.1.** Server 0.10.0 and clients 0.5.0 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
 
 **Recommended Alternative:** No replacement sets callout view properties on a list. Set Default Callout View Properties remains.
 

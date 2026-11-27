@@ -13,7 +13,8 @@ This section follows the public API of the Briosa JavaScript and TypeScript
 client library. Use it to look up client lifecycle, operation methods, result
 types, errors, timeouts, and cancellation behavior for Node.js applications.
 
-This is the **0.5.0** client reference for **SA 2024.1.0508.5**.
+This is the **0.5.2** client reference for **SA 2024.1.0508.5**.
+Client 0.5.1 has the same API, so this reference also describes it.
 Use this SA 2024 reference; the [SA 2026 reference](/api/javascript) covers the other released exact target. Arguments, choices, and command availability can differ.
 
 :::note[Local Connections]
@@ -36,11 +37,11 @@ underlying service contract, use the [gRPC API Reference](/api/grpc/sa-2024.1.05
 
 ## Server 0.10 and Client 0.5 Compatibility {/* #contract-major-3 */}
 
-Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server
-0.10.0), and Client 0.4.0 works with Server 0.9.x. Before launch, client 0.5.x
-checks that the installation matches the exact SA target and declares support
-for this client, and rejects Server 0.9.x and earlier. Server 0.10.0 installs
-beside Server 0.9.x, and the 0.4.0 packages keep working with Server 0.9.x, so
+Clients 0.5.0, 0.5.1, and 0.5.2 work with Servers 0.10.0 and 0.10.1 for the
+same exact SA target, and client 0.4.0 works with Server 0.9.x. Before launch,
+client 0.5.x checks that the installation matches the exact SA target and
+declares support for this client, and rejects Server 0.9.x and earlier. Server
+0.10.x installs beside Server 0.9.x, and the 0.4.0 packages keep working with Server 0.9.x, so
 they remain available for rollback. MP functions take an optional
 `onMpCompletion` observer in their call options, nine operations are gone, and
 several inputs became required or optional. See the
@@ -48,6 +49,39 @@ several inputs became required or optional. See the
 [client 0.5.0 migration notes](https://github.com/spatialanalyzer/briosa-js/blob/79ed14bf6906c5b079032a9d695cfee2cd62678e/docs/contract-major-3-migration.md)
 for every change. The nine removed operations keep their method pages, which
 explain the removal; each page's method history keeps the 0.4.0 contract.
+
+## Changes in Clients 0.5.1 and 0.5.2
+
+Use client 0.5.2 for JavaScript and TypeScript applications. It has the same
+API as 0.5.1, needs no application changes, and works with the same servers.
+It raises the HTTP/2 receive window from 65,535 bytes to 16 MiB on each stream
+and on the shared connection. With clients 0.5.0 and 0.5.1, a call that
+followed a large response on the same connection could occasionally receive no
+reply, with Server 0.10.0 and with a Server 0.10.1 development build. The
+observations are consistent with a
+[known HTTP/2 defect in ASP.NET Core 10.0.15](https://github.com/dotnet/aspnetcore/issues/70124),
+which both servers ship. With one call at a time, the larger window leaves room
+for the largest response the client accepts; concurrent large responses share
+the connection's window and can still have to wait. See the
+[0.5.2 release notes](https://github.com/spatialanalyzer/briosa-js/releases/tag/v0.5.2)
+and [briosa#450](https://github.com/spatialanalyzer/briosa/issues/450).
+
+Client 0.5.1 adds to 0.5.0 without changing its MP functions. With Server
+0.10.1, it reads what that server adds; with Server 0.10.0, each addition
+reports "not available".
+
+- **Startup budget.** An omitted `startupTimeoutMs` grows to the server's
+  published startup allowance plus 20 seconds, never below two minutes. A value
+  you set is always the budget. See
+  [Client Construction](./lifecycle.md#client-construction).
+- **Server snapshot.** `lifecycleBounds` reports the server's lifecycle wait
+  allowances, and `configuredSpatialAnalyzerInteractionMode` the
+  SpatialAnalyzer interaction mode the server is configured to set. See
+  [Server Snapshot and Capabilities](./lifecycle.md#server-snapshot-and-capabilities).
+- **Policy denials.** `BriosaOperationError.policyDenial`, and the same detail
+  on denied capabilities, says which policy step denied a call. Each capability
+  lists its reviewed `requestOptions`. None of it changes an error's kind or a
+  capability's admission.
 
 ## MP Commands
 
@@ -60,7 +94,7 @@ See [Release Status](/docs/releases) for product availability and validation lim
 
 ## Exact Target
 
-This section covers **SA 2024.1.0508.5**. Return to [SA 2026.1.0529.7](/api/javascript). Both references belong to product release 0.5.0.
+This section covers **SA 2024.1.0508.5**. Return to [SA 2026.1.0529.7](/api/javascript). Both references belong to product release 0.5.2.
 
 ## Selection and Value Types
 

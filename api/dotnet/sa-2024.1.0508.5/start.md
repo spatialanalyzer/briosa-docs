@@ -38,11 +38,16 @@ The parameterless overload delegates to `BriosaStartOptions.Default`.
 | `LaunchSpatialAnalyzer` | `true` | Launch a fresh exact-target SpatialAnalyzer application. |
 | `ConnectToSpatialAnalyzer` | `true` | Connect the new SDK generation and establish MP readiness. |
 | `LaunchOptions` | Empty | Controlled initial job, instrument quick-start, and window-state options. |
-| `StartupTimeout` | 2 minutes | One overall budget for the complete startup procedure requested by this call, whichever phases are selected. |
+| `StartupTimeout` | 2 minutes | One overall budget for the complete startup procedure requested by this call, whichever phases are selected. Left unset, it is sized from the startup allowance that Server 0.10.1 publishes. |
 
 `ConnectToSpatialAnalyzer` cannot be `true` when
 `StartSpatialAnalyzerSdk` is `false`. Non-default `LaunchOptions` require
 `LaunchSpatialAnalyzer` to be `true`.
+
+A `StartupTimeout` you set is always the budget. Left unset, it is two minutes,
+and with Server 0.10.1 it grows to the server's published startup allowance for
+the selected phases plus 20 seconds, never below two minutes; see
+[Client Construction](./lifecycle.md#client-construction).
 
 ## Example
 

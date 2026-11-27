@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 
 import styles from '@site/src/pages/index.module.css';
 import {ChannelHead} from './parts';
-import {currentOperations2026, formatCount, grpcServices, packagesFor, targets, versions} from './data';
+import {clientReleases, currentOperations2026, formatCount, grpcServices, packagesFor, targets, versions} from './data';
 import Icon from './Icon';
 
 /** A spotlight follows the pointer around the card's edge. */
@@ -140,7 +140,7 @@ export default function Products(): ReactNode {
         </div>
         <div className={styles.clientsPanel}>
           <div>
-            <h3>First-Party Clients {versions.clients}</h3>
+            <h3>First-Party Clients {clientReleases}</h3>
             <p>
               One package per exact target for .NET, Python, and JavaScript or TypeScript. SA 2024 swaps the target in
               each package name.

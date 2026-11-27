@@ -13,11 +13,11 @@ not mean that every documented API is only a proposal.
 
 | Product | Released Version | Availability |
 | --- | --- | --- |
-| Briosa Server and Control Center | [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; works with clients 0.5.x (Client 0.5.0 was tested with Server 0.10.0) and direct gRPC from the protocol artifact. [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) remains available for client 0.4.0 applications |
+| Briosa Server and Control Center | [0.10.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.1) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; works with clients 0.5.0 and 0.5.1, JavaScript client 0.5.2, and direct gRPC from the protocol artifact. [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) remains available for client 0.4.0 applications |
 | Briosa Installer | [0.4.1](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.4.1) | Signed Windows setup and portable distribution; patched .NET runtime 10.0.15 |
-| .NET client | 0.5.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.5.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.5.0) |
-| Python client | 0.5.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.5.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.5.0/) |
-| JavaScript/TypeScript client | 0.5.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.5.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.5.0) |
+| .NET client | [0.5.1](https://github.com/spatialanalyzer/briosa-dotnet/releases/tag/v0.5.1) | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.5.1), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.5.1) |
+| Python client | [0.5.1](https://github.com/spatialanalyzer/briosa-py/releases/tag/v0.5.1) | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.5.1/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.5.1/) |
+| JavaScript/TypeScript client | [0.5.2](https://github.com/spatialanalyzer/briosa-js/releases/tag/v0.5.2) | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.5.2), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.5.2). Same API as 0.5.1, with a larger HTTP/2 receive window; use 0.5.2 |
 
 Use [Install Briosa](/install) to obtain the released Windows products and
 [Install the Exact-Target Client](/docs/getting-started/run-the-server#install-the-exact-target-client)
@@ -25,21 +25,173 @@ for registry installation commands. A separately installed and licensed
 SpatialAnalyzer environment remains required for MP execution. Connections
 remain local and use loopback.
 
-Each package name contains the exact SA target; its **0.5.0** package version is
-independent of SA and the server version. Client **0.5.x** works with Server
-**0.10.x** (Client 0.5.0 was tested with Server 0.10.0), and Client **0.4.0**
-works with Server **0.9.x**. Before launch, client 0.5.x checks that the
-installation matches the exact SA target and declares support for this client,
-and rejects Server 0.9.x and earlier. For server releases after 0.10.0, a patch
-update keeps the same clients working; a minor update may require a client
-upgrade. Client 0.5.0's generation artifact is pinned to the frozen Server
-0.10.0 protocol. Client 0.4.0 rejects Server 0.10.x, so keep Server 0.9.2
-installed beside 0.10.0 until its applications migrate. Direct gRPC from the
+Each package name contains the exact SA target; its package version is
+independent of SA and the server version. Clients **0.5.0** and **0.5.1**, and
+JavaScript client **0.5.2**, work with Servers **0.10.0** and **0.10.1**, and
+Client **0.4.0** works with Server **0.9.x**. Before launch, client 0.5.x checks
+that the installation matches the exact SA target and declares support for this
+client, and rejects Server 0.9.x and earlier. For server releases after 0.10.0,
+a patch update keeps the same clients working; a minor update may require a
+client upgrade. Clients 0.5.1 and 0.5.2 are generated from protocol checkpoint
+`0.10.1-dev.1`, whose protobuf files are identical to the Server 0.10.1 release;
+client 0.5.0's generation artifact is pinned to the frozen Server 0.10.0
+protocol. Client 0.4.0 rejects Server 0.10.x, so keep Server 0.9.2 installed
+beside 0.10.1 until its applications migrate. Direct gRPC from the
 published protocol artifact is also supported. C# uses `using Briosa;`, Python uses `import briosa`, and JavaScript uses
 the npm alias `briosa`. Use separate environments or applications for different targets.
 See [installation selection and migration](/docs/deployment/installation-selection).
 
+## Server 0.10.1 and Clients 0.5.1 and 0.5.2
+
+Server [0.10.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.1),
+released on November 27, 2026 for both exact targets, is a compatible update to
+Server 0.10.0. Use 0.10.1 for new installations and move existing 0.10.0
+installations to it: its Windows packages include the third-party license
+notices that the 0.10.0 packages omitted. Choose the Windows x64 server package
+for your exact installed SpatialAnalyzer release.
+
+Server 0.10.1 works with the published 0.5.0 and 0.5.1 clients for .NET,
+JavaScript/TypeScript, and Python, and with JavaScript/TypeScript client 0.5.2,
+for the matching target. Clients 0.5.0, 0.5.1, and 0.5.2 reject Server 0.9.x
+and earlier, and clients 0.4.0 and earlier reject Server 0.10.x; keep
+[Server 0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2)
+installed for applications that use client 0.4.0. Use JavaScript/TypeScript
+client [0.5.2](https://github.com/spatialanalyzer/briosa-js/releases/tag/v0.5.2);
+see [Known Issue](#known-issue-a-javascript-call-can-occasionally-receive-no-reply).
+
+- **Larger results.** Inbound requests stay limited to 64 KiB, and the worker's
+  result budget rises from 64 KiB to 1 MiB (1,048,576 bytes). If the completed
+  worker result frame exceeds 1 MiB, the call returns `DATA_LOSS` with
+  disposition `COMPLETED`, replay guidance `DO_NOT_REPLAY`, and the original MP
+  result code. When no output getter faulted, the failure kind is
+  `OUTPUT_RETRIEVAL_FAILURE` with diagnostic `worker-output-encoding-rejected`.
+  If an output getter also faulted, the failure kind is `SDK_CALL_FAULTED`.
+  Outputs retained in the frame are reported as retrieved, and outputs dropped
+  for size carry `worker-output-encoding-rejected`. The published 0.5.0 and 0.5.1
+  clients receive results up to the new budget without extra configuration.
+  Direct gRPC callers should set a receive limit of at least 4 MiB.
+- **Typed policy denials and request options.** A policy-denied call carries
+  which policy step denied it, the denied risk flag, the admission profile, or
+  the request option field, never a request value. Discovery adds the same
+  detail to denied entries and lists each operation's reviewed request options.
+  Status codes, failure kinds, dispositions, guidance, diagnostic codes, and the
+  policy fingerprint are unchanged. See
+  [Server Discovery](/api/grpc/sa-2026.1.0529.7/discovery#policy-denial-details).
+- **Lifecycle bounds and interaction mode.** `GetServerInfo` publishes the
+  server's lifecycle wait allowances and the SpatialAnalyzer interaction mode it
+  is configured to set. That mode is server configuration; SpatialAnalyzer's
+  live mode is never read back.
+- **Control Center.** After **Stop server**, Control Center waits for the
+  server's published shutdown bound plus 5 seconds (110 seconds at the default
+  settings, up from 45). Use the Control Center from the same package as the
+  server: Control Center 0.10.0 shows **Status unavailable** for Server 0.10.1.
+- **Readiness reporting.** When the worker's execution consumer fails, health
+  checks, `GetServerInfo`, `GetSpatialAnalyzerSdkState`, and the `briosa.ready`
+  gauge report not ready at once (`worker-execution-consumer-failed`).
+- **License notices.** Both Windows server ZIPs include `licenses/README.md`
+  and `licenses/index.json`. Most bundled .NET runtime files use the MIT
+  license; the files listed under `perFileLicenses` fall under Microsoft's .NET
+  Library License or Windows SDK License, which `licenses/README.md` describes
+  in its Microsoft components section. Those files fall outside Briosa's
+  Apache-2.0 license.
+- **Diagnostics.** The server logs startup and lifecycle timing records, and
+  can emit opt-in Debug records for each unary call. The client conformance
+  package allows 240 seconds per fixture and can retain failure diagnostics.
+
+Applications that use automatic server selection and the packaged worker need
+no configuration change. If you pin the server version or executable path,
+update the pin to select 0.10.1; if you set `Briosa:Worker:ExecutablePath`,
+point it to the matching 0.10.1 worker. When 0.10.0 and 0.10.1 are both
+installed for the same target, clients 0.5.0 and 0.5.1 select 0.10.1 on a fresh
+start unless the application selects a server explicitly. Bindings generated
+from the 0.10.0 protocol artifact remain compatible; regenerate from the 0.10.1
+artifact to read the new fields. See
+[Versioning and compatibility](https://github.com/spatialanalyzer/briosa/blob/main/docs/versioning.md):
+a patch release stays compatible with the same client line, while a minor
+release in `0.x` may require an updated client.
+
+Client 0.5.1 adds access to the typed policy-denial details, the per-capability
+request options, the lifecycle bounds, and the configured interaction mode in
+all three languages. When the startup timeout is left unset, it sizes the
+timeout from the server's published startup allowance plus 20 seconds, with a
+two-minute minimum. With Server 0.10.0, which publishes none of these values,
+each addition reports that the server sent nothing, and the startup timeout
+stays two minutes. JavaScript/TypeScript client 0.5.2 has the same API as 0.5.1
+and raises the HTTP/2 receive window from 65,535 bytes to 16 MiB. The client
+references describe each addition: [.NET](/api/dotnet),
+[Python](/api/python), and [JavaScript/TypeScript](/api/javascript).
+
+### Known Issue: A JavaScript Call Can Occasionally Receive No Reply
+
+This happened with Server 0.10.0 and with a Server 0.10.1 development build.
+The observations are consistent with a
+[known HTTP/2 defect in ASP.NET Core 10.0.15](https://github.com/dotnet/aspnetcore/issues/70124),
+which both server releases ship: if a response waits for the client's stream
+window to reopen, a race can leave a later response on the same connection
+unwritten. The capture could not establish the cause of the observed stall.
+
+- **JavaScript/TypeScript clients 0.5.0 and 0.5.1** use a 65,535-byte window and
+  request the capability listing (141 to 148 KB) during a default start, so they
+  can meet the condition with Server 0.10.0 and with Server 0.10.1. In hosted
+  conformance runs, 2 JavaScript jobs stalled against at least 317 clean ones
+  (about 0.6%), both with client 0.5.1. Client 0.5.2 raises the window to 16 MiB
+  on each stream and on the connection. With one call at a time, that leaves
+  room for the largest response the client accepts; concurrent large responses
+  share the connection's window and can still have to wait. **Update JavaScript
+  applications to 0.5.2.**
+- **.NET clients 0.5.0 and 0.5.1** use a 65,535-byte stream window with a
+  64 MiB connection window and can meet the condition in principle. No stall
+  was observed with them.
+- **Python clients** use 4 MiB windows, which these responses do not exceed.
+
+The upstream fix was merged and backported to .NET 10 on November 16, 2026. As
+of November 27, 2026, no released ASP.NET Core 10 runtime included it. See the
+[Briosa investigation](https://github.com/spatialanalyzer/briosa/issues/450#issuecomment-7221078872).
+
+### Validation of Server 0.10.1
+
+The release workflow ran both targets' validation, including the protocol
+comparison with Server 0.10.0, and produced two byte-identical unsigned builds
+of each Windows, protocol, and client conformance archive before signing the
+Windows packages. All 18 client gate jobs
+passed: the published 0.5.0 and 0.5.1 clients in all three languages ran the
+conformance scenarios against the release build with a fake worker on both
+targets, and the published 0.4.0 clients rejected the server before launch.
+JavaScript/TypeScript client 0.5.2 is not yet one of the clients the server's
+release gate runs; it passed its own conformance suite against a Server 0.10.1
+development build and selected 0.10.1 in the Installer acceptance below.
+The first-party executables and DLLs in each Windows server ZIP carry valid,
+timestamped Authenticode signatures.
+
+Before publication, the signed draft packages were tested with the Installer
+0.4.1 command line on Windows. For each target, 0.10.1 installed beside 0.10.0,
+both verified, repair restored a deliberately altered file, and removing 0.10.1
+left 0.10.0 unchanged. With both installed, the published 0.5.0 and 0.5.1
+clients in all three languages, and JavaScript client 0.5.2, selected 0.10.1
+automatically, honored an explicit choice of either version, and rejected the
+other target's installation; after 0.10.1 was removed they selected 0.10.0. The
+published 0.4.0 clients rejected both versions.
+
+The release workflow runs against no licensed SpatialAnalyzer, and no licensed
+client-library run is claimed. A licensed probe session on November 26, 2026,
+using a 0.10.1 probe build, measured result sizes under the 1 MiB budget on
+both targets: point-name lists of up to 10,000 elements succeeded, and a
+20,000-element list returned `DATA_LOSS` with
+`worker-output-encoding-rejected`. Discovery, policy-denial details, and
+readiness reporting were tested without licensed SpatialAnalyzer.
+
 ## Server 0.10.0 and Clients 0.5.0
+
+:::warning[Notice: Use Server 0.10.1]
+
+The Server 0.10.0 Windows packages do not include the license notices for the
+third-party components they ship, including files from Microsoft's .NET
+runtime. [Server 0.10.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.1)
+includes them under `licenses/` and works with the same client versions. Use
+0.10.1 for new installations and move existing 0.10.0 installations to it. The
+0.10.0 assets are unchanged.
+
+:::
 
 Server [0.10.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.0)
 and the exact-target 0.5.0 clients are a breaking release for both exact
@@ -317,9 +469,11 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 The [Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-client-0-5-migration)
 explains the Server 0.10.0 and client 0.5.0 upgrade, and the
 [runtime redesign migration guide](/docs/runtime-redesign-migration) covers
-Server 0.9.x and client 0.4.0. The current [gRPC reference](/api/grpc) documents **Server 0.10.0**;
-the [.NET](/api/dotnet), [Python](/api/python), and
-[JavaScript/TypeScript](/api/javascript) references document **client 0.5.0**.
+Server 0.9.x and client 0.4.0. The current [gRPC reference](/api/grpc) documents **Server 0.10.1**;
+the [.NET](/api/dotnet) and [Python](/api/python) references document
+**client 0.5.1**, and the [JavaScript/TypeScript](/api/javascript) reference
+documents **client 0.5.2**, which has the same API as JavaScript/TypeScript
+client 0.5.1, so 0.5.1 has no separate JavaScript reference.
 Each includes a separate SA 2024 section alongside SA 2026, and each method's
 history page keeps every earlier contract. Servers 0.9.1 and 0.9.2 have the same
 protobuf and public API schemas as 0.9.0, so the
@@ -327,7 +481,9 @@ protobuf and public API schemas as 0.9.0, so the
 services and messages; their runtime corrections are listed in
 [Server 0.9.2 Corrections](#server-092-corrections) and
 [Server 0.9.1 Corrections](#server-091-corrections).
-Historical references include [client 0.4.0](/api/dotnet/sa-2026.1.0529.7/0.4.0),
+Historical references include [Server 0.10.0](/api/grpc/sa-2026.1.0529.7/0.10.0),
+[client 0.5.0](/api/dotnet/sa-2026.1.0529.7/0.5.0),
+[client 0.4.0](/api/dotnet/sa-2026.1.0529.7/0.4.0),
 [Server 0.8.0](/api/grpc/sa-2026.1.0529.7/0.8.0),
 [client 0.3.0](/api/dotnet/sa-2026.1.0529.7/0.3.0), [Server 0.7.0](/api/grpc/sa-2026.1.0529.7/0.7.0), and
 [client 0.2.0](/api/dotnet/sa-2026.1.0529.7/0.2.0).
@@ -339,7 +495,9 @@ Historical references include [client 0.4.0](/api/dotnet/sa-2026.1.0529.7/0.4.0)
 | 0.2.0 | Servers 0.7.0 and 0.8.0, plus the exact reviewed Server 0.6.1 exception | Retained API, including discovery and selection |
 | 0.3.0 | Servers 0.7.0 and 0.8.0, plus the exact reviewed Server 0.6.1 exception | Clean MP argument names; [migration guide](/docs/mp-argument-name-migration) |
 | 0.4.0 | Servers 0.9.0 through 0.9.2 (`0.9.x`) | Retained API; [runtime redesign migration guide](/docs/runtime-redesign-migration) |
-| 0.5.0 | Compatible Server 0.10.x installations (Client 0.5.0 was tested with Server 0.10.0) | Current API; [Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-client-0-5-migration) |
+| 0.5.0 | Servers 0.10.0 and 0.10.1 | Retained API; [Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-client-0-5-migration) |
+| 0.5.1 | Servers 0.10.0 and 0.10.1 | Current .NET and Python API; adds policy-denial details, request options, lifecycle bounds, and the configured interaction mode |
+| 0.5.2 (JavaScript/TypeScript) | Servers 0.10.0 and 0.10.1 | Current JavaScript/TypeScript API, the same as 0.5.1, with a 16 MiB HTTP/2 receive window |
 
 The [public compatibility matrix](https://github.com/spatialanalyzer/briosa/blob/main/compatibility/matrix.json) records the tested package identities and their fake-SDK scenarios, distinguishing published artifacts from development candidates. This is compatibility evidence, not licensed validation of every MP operation. Preserve legacy installations until their consuming applications migrate. `BRIOSA_SERVER_PATH` requires explicit opt-in; prefer per-application selectors.
 The product guides, installation instructions, release status, and MP catalog
