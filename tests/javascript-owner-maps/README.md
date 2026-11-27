@@ -39,20 +39,20 @@ that a pinned method has, because the check cannot tell it from a misplaced
 pinned method. Describe such a method in prose, for example
 `FeatureValidator.makeFeatureChecks`, and leave it out of the declaration.
 
-The counts are the blocks that use each form across the eleven reference
-folders, which have 14,107 blocks in all.
+The counts are the blocks that use each form across the thirteen reference
+folders, which have 16,624 blocks in all.
 
 | Form | Example | Blocks |
 | --- | --- | ---: |
-| Group interface: a root, unexported interface whose label names its only method; an overload set repeats that name | `// Member of GdtOperations (briosa.gdtOperations.makeFeatureChecks(...))`<br>`interface GdtOperations { makeFeatureChecks(collection: CollectionName): Promise<void>; }` | 4,497 |
-| Bare member signature, for a client member: a root statement on its own line that parses as one interface member; indentation and a space before `(` are allowed | `stop(): Promise<void>;` | 136 |
-| Package-level function: a root `function`, `export function` or `export declare function` without a body | `export declare function getWorkingDirectory(client: BriosaClient): Promise<string>;` | 6,533 |
-| Data interface: an exported interface whose methods and function-typed properties are not pinned methods | `export interface BriosaServerSnapshot { readonly briosaVersion: string; supports(method: string): boolean; }` | 11,718 |
-| Data type: a type alias with no method, call signature or function type | `export type InstallationScope = 'machine' \| 'user' \| 'portable';` | 470 |
-| Value object: an exported constant with no function value | `export const AngularUnits = Object.freeze({ degrees: 'degrees' });` | 434 |
-| Error class: an exported class that extends another, with only properties and getters | `export class BriosaOperationError extends BriosaError { readonly operationId: string; }` | 19 |
+| Group interface: a root, unexported interface whose label names its only method; an overload set repeats that name | `// Member of GdtOperations (briosa.gdtOperations.makeFeatureChecks(...))`<br>`interface GdtOperations { makeFeatureChecks(collection: CollectionName): Promise<void>; }` | 5,388 |
+| Bare member signature, for a client member: a root statement on its own line that parses as one interface member; indentation and a space before `(` are allowed | `stop(): Promise<void>;` | 162 |
+| Package-level function: a root `function`, `export function` or `export declare function` without a body | `export declare function getWorkingDirectory(client: BriosaClient): Promise<string>;` | 7,653 |
+| Data interface: an exported interface whose methods and function-typed properties are not pinned methods | `export interface BriosaServerSnapshot { readonly briosaVersion: string; supports(method: string): boolean; }` | 13,889 |
+| Data type: a type alias with no method, call signature or function type | `export type InstallationScope = 'machine' \| 'user' \| 'portable';` | 558 |
+| Value object: an exported constant with no function value | `export const AngularUnits = Object.freeze({ degrees: 'degrees' });` | 522 |
+| Error class: an exported class that extends another, with only properties and getters | `export class BriosaOperationError extends BriosaError { readonly operationId: string; }` | 25 |
 | Enum | `export enum GdtFeatureType { Diameter = "diameter" }` | 1 |
-| Example: imports, statements and local constants; a function value only as a call argument | `await getWorkingDirectory(briosa, { onMpCompletion: ({ state }) => {} });` | 835 |
+| Example: imports, statements and local constants; a function value only as a call argument | `await getWorkingDirectory(briosa, { onMpCompletion: ({ state }) => {} });` | 875 |
 | Placeholder: `...` standing for a value before `,`, `)`, `]` or `}` | `await getLineProperties(briosa, { lineName: ... });` | 371 |
 
 A labelled client interface (`// Member of BriosaClient`) is not a supported
@@ -129,7 +129,7 @@ page is fixed, remove its entries. Never add entries by rerunning the check.
   - `createConstructionOperations`, `createGdtOperations`,
     `createInstrumentOperations`,
     `createRobotCalibrationApplianceNodeOperations` and `createRobotOperations`
-    are missing from all eleven reference folders. Every release exports these
+    are missing from all thirteen reference folders. Every release exports these
     package-level functions, which build an operation group from a client.
   - `BriosaClient.getServerSnapshot` is missing from 0.1.0 and from both
     targets of 0.2.0, 0.3.0 and 0.4.0.

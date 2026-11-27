@@ -13,8 +13,10 @@
       ],
       "reason": "Every release exports these factories, which build an operation group from a client, and no page declares them.",
       "scopes": [
-        {"reference": "api/javascript", "release": "0.5.0", "target": "2026.1.0529.7"},
-        {"reference": "api/javascript", "release": "0.5.0", "target": "2024.1.0508.5"},
+        {"reference": "api/javascript", "release": "0.5.2", "target": "2026.1.0529.7"},
+        {"reference": "api/javascript", "release": "0.5.2", "target": "2024.1.0508.5"},
+        {"reference": "javascript_versioned_docs/version-0.5.2", "release": "0.5.2", "target": "2026.1.0529.7"},
+        {"reference": "javascript_versioned_docs/version-0.5.2", "release": "0.5.2", "target": "2024.1.0508.5"},
         {"reference": "javascript_versioned_docs/version-0.5.0", "release": "0.5.0", "target": "2026.1.0529.7"},
         {"reference": "javascript_versioned_docs/version-0.5.0", "release": "0.5.0", "target": "2024.1.0508.5"},
         {"reference": "javascript_versioned_docs/version-0.4.0", "release": "0.4.0", "target": "2026.1.0529.7"},
