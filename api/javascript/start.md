@@ -37,7 +37,14 @@ Omitting `options` uses the default startup procedure.
 
 The 120-second startup budget covers the server's default worst case of about
 100 seconds for a start that launches SpatialAnalyzer, with a 20-second margin.
-If you raise the server's `Briosa:Worker:StartupTimeout`,
+A `startupTimeoutMs` you set, including an explicit `120000`, is always the
+budget. When you omit it, Server 0.10.1's published lifecycle bounds size the
+budget: when the client first reads and validates the server's identity, the
+deadline moves to the start of `start()` plus the larger of two minutes and the
+server's startup allowance for the selected phases plus 20 seconds. See
+[Client Construction](./lifecycle.md#client-construction). With Server 0.10.0,
+which publishes no allowance, the budget stays two minutes: if you raise that
+server's `Briosa:Worker:StartupTimeout`,
 `Briosa:Worker:ReadinessProbeTimeout`, or
 `Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the budget too, to at
 least 3 times `StartupTimeout`, plus `ReadinessProbeTimeout`, plus

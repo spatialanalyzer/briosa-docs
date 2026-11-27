@@ -268,7 +268,10 @@ A caller whose gRPC deadline had passed gets `DEADLINE_EXCEEDED` with
 `CALLER_DEADLINE_EXCEEDED`. gRPC delivers no response to a caller that cancelled
 or exceeded its deadline, so a remote caller observes only the transport status;
 the typed detail and its audit record serve in-process callers and operators.
-`TIMEOUT` still means that a server-side bound expired.
+`TIMEOUT` still means that a server-side bound expired. From Server 0.10.1,
+`GetServerInfoResponse.lifecycle_bounds` publishes these bounds as wait
+allowances computed from the server's effective configuration; see
+[Lifecycle Bounds and Interaction Mode](./discovery.md#lifecycle-bounds-and-interaction-mode).
 
 While an accepted transition holds the lifecycle, a concurrent lifecycle request
 fails with `ABORTED`, kind `STATE_CONFLICT`, diagnostic

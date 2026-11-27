@@ -1,13 +1,13 @@
 ---
 title: Installation Selection and Discovery
-description: Client 0.5.0 server selectors, inert discovery, selection reports, startup failures, and the capability snapshot for SA 2026.1.0529.7.
+description: Client 0.5.1 server selectors, inert discovery, selection reports, startup failures, and the capability snapshot for SA 2026.1.0529.7.
 ---
 
 # Installation Selection and Discovery
 
 [SA 2026.1.0529.7](/api/dotnet/installation-selection) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/installation-selection)
 
-These APIs are released in client **0.5.0**. Import them from the same exact-target package as the client. Discovery reads local installation evidence without launching the server, SDK, or SpatialAnalyzer. It does not prove runtime readiness.
+These APIs are released in client **0.5.1**. Import them from the same exact-target package as the client. Discovery reads local installation evidence without launching the server, SDK, or SpatialAnalyzer. It does not prove runtime readiness.
 
 ## Discovery and Resolution
 
@@ -24,7 +24,7 @@ Set `ServerSelection` on `BriosaStartOptions`; its default is `new BriosaServerS
 
 Without constraints the client considers all three scopes, excludes prereleases, and chooses the highest compatible stable release. Exclusion and search-root lists default to empty. Prerelease and legacy environment override flags default to false. An invalid explicit selection fails without fallback. Search roots identify package stores containing the committed products layout, not arbitrary executable directories. Elevated automatic selection only admits protected machine installations.
 
-Client 0.5.x works with Server 0.10.x (Client 0.5.0 was tested with Server 0.10.0) for its exact SA target. Before launch, it checks that the installation matches the exact SA target and declares support for this client; a version number alone does not make an installation eligible. For server releases after 0.10.0, a patch update keeps the same clients working; a minor update may require a client upgrade. Incompatible servers, including Server 0.9.x and earlier (and Server 0.6.1), are rejected before launch; discovery reports `server-installation-incompatible` for them. Keep client 0.4.0 for applications that must run against Server 0.9.x; the two clients and servers install side by side. Generated artifacts are pinned to the Server 0.10.0 protocol checkpoint `0.10.0-dev.1`; this build pin is not the runtime selection rule.
+Clients 0.5.0 and 0.5.1 work with Servers 0.10.0 and 0.10.1 for their exact SA target. Before launch, the client checks that the installation matches the exact SA target and declares support for this client; a version number alone does not make an installation eligible. For server releases after 0.10.0, a patch update keeps the same clients working; a minor update may require a client upgrade. Incompatible servers, including Server 0.9.x and earlier (and Server 0.6.1), are rejected before launch; discovery reports `server-installation-incompatible` for them. Keep client 0.4.0 for applications that must run against Server 0.9.x; the two clients and servers install side by side. Generated artifacts are pinned to the protocol checkpoint `0.10.1-dev.1`, whose protobuf files are identical to the Server 0.10.1 release; this build pin is not the runtime selection rule.
 
 `BRIOSA_SERVER_PATH` is ignored unless the legacy override flag is enabled and no direct selector is supplied. Prefer per-application selection. The chosen installation stays fixed for the session and recovery. Startup checks the live server identity against the selected evidence before SDK or SA activity; server-client compatibility never bypasses exact-target checks, policy, ownership, or readiness.
 
@@ -88,7 +88,7 @@ public sealed record BriosaDiscoveryReport(
 ```csharp
 using Briosa;
 
-var report = BriosaInstallations.Discover(new BriosaServerSelection { MinimumVersion = "0.10.0" });
+var report = BriosaInstallations.Discover(new BriosaServerSelection { MinimumVersion = "0.10.1" });
 foreach (var diagnostic in report.Diagnostics)
     Console.WriteLine(diagnostic.Code);
 if (report.Selected is { } selected)
@@ -131,6 +131,46 @@ After a manual `ConnectToSpatialAnalyzerAsync` in control-plane-only mode, call
 `GetServerSnapshotAsync` again before MP work: MP admission needs both the
 snapshot and the SDK state to report readiness.
 
+Client 0.5.1 also reads what Server 0.10.1 adds to discovery. Server 0.10.0
+sends none of it, and each value below then reports that the server sent
+nothing:
+
+- `LifecycleBounds` holds the server's lifecycle wait allowances as optional
+  `TimeSpan` values, computed from the server's own configuration. The value is
+  `null` when the server publishes none, and an allowance that is absent or
+  zero is `null`: unavailable, never unbounded. `HostGracefulShutdown` is
+  `Unavailable`, `Finite` with its `Limit`, or `Unbounded`. Each allowance
+  covers only the server's own work and does not promise that a response
+  arrives or a process exits within it. `StartupWithLaunch` and
+  `StartupWithoutLaunch` size a startup of several requests; they are not
+  server deadlines. An unset `StartupTimeout` is sized from them; see
+  [Client Construction](./lifecycle.md#client-construction).
+- `ConfiguredInteractionMode` is the SpatialAnalyzer interaction mode the server
+  is configured to set after each Connect (`Briosa:SpatialAnalyzer:InteractionMode`).
+  It is the server's configuration, never SpatialAnalyzer's live mode.
+  `Unknown` stands for an unreported value, as from Server 0.10.0, and for a
+  value this client does not recognize.
+- `RequestOptions` lists each operation's reviewed request options: `null` when
+  the server does not describe them (Server 0.10.0), and empty when none apply.
+  Each `OperationRequestOption` names its protobuf field, its effect (operator
+  UI or work left running), the condition and enum values that turn it on, what
+  omitting it does, and what the policy decides for a request that turns on
+  that option alone. The server still decides every request, and the client
+  never pre-validates a request from this description.
+- `PolicyDenial` on a denied capability, on a denied request option, and on a
+  [`PolicyDenied` failure](./lifecycle.md#operation-failures) carries one
+  `PolicyDenialDetails` value: the `PolicyDenialRule`, the denied risk flag of a
+  flag denial, the admission profile of a profile denial, and the request field
+  the server attributed the denial to. It holds names only, never a request
+  value, and it never changes a capability's admission.
+
+An unknown rule, effect, condition, omission, or admission value maps to its
+enum's `Unknown` member. It is metadata only: it never admits anything and never
+fails discovery. `BriosaServerSnapshot` and `BriosaOperationCapability` compare,
+hash, and print as in client 0.5.0: the 0.5.1 members take no part in equality
+or hashing, and `ToString()` shows them only when the server sent them.
+Reflection-based serializers do see the 0.5.1 members.
+
 ```csharp
 public sealed record BriosaServerSnapshot
 {
@@ -146,8 +186,45 @@ public sealed record BriosaServerSnapshot
     public string AdmissionProfile { get; init; } = string.Empty;
     public string PolicyFingerprint { get; init; } = string.Empty;
     public required IReadOnlyList<BriosaOperationCapability> Operations { get; init; }
+    public LifecycleBounds? LifecycleBounds { get; init; }
+    public ConfiguredSpatialAnalyzerInteractionMode ConfiguredInteractionMode { get; init; }
 
     public bool Supports(string fullyQualifiedMethod);
+}
+
+public sealed record LifecycleBounds
+{
+    public TimeSpan? StartSdk { get; init; }
+    public TimeSpan? LaunchSpatialAnalyzer { get; init; }
+    public TimeSpan? ConnectToSpatialAnalyzer { get; init; }
+    public TimeSpan? RecoverSdk { get; init; }
+    public TimeSpan? StopSdk { get; init; }
+    public TimeSpan? CloseOwnedSpatialAnalyzer { get; init; }
+    public TimeSpan? StartupWithLaunch { get; init; }
+    public TimeSpan? StartupWithoutLaunch { get; init; }
+    public GracefulShutdownBound HostGracefulShutdown { get; init; }
+}
+
+public sealed record GracefulShutdownBound
+{
+    public GracefulShutdownBoundKind Kind { get; init; }
+    public TimeSpan? Limit { get; init; }
+}
+
+public enum GracefulShutdownBoundKind
+{
+    Unavailable = 0,
+    Finite = 1,
+    Unbounded = 2,
+}
+
+public enum ConfiguredSpatialAnalyzerInteractionMode
+{
+    Unknown = 0,
+    Unchanged = 1,
+    Silent = 2,
+    Automatic = 3,
+    Manual = 4,
 }
 
 public sealed record BriosaDeniedOperationListing
@@ -167,6 +244,66 @@ public sealed record BriosaOperationCapability
     public OperationDurationClass DurationClass { get; init; }
     public OperationValidationStatus ValidationStatus { get; init; }
     public OperationAdmission Admission { get; init; }
+    public PolicyDenialDetails? PolicyDenial { get; init; }
+    public IReadOnlyList<OperationRequestOption>? RequestOptions { get; init; }
+}
+
+public sealed record OperationRequestOption
+{
+    public required string FieldName { get; init; }
+    public OperationRequestOptionEffect Effect { get; init; }
+    public OperationRequestOptionCondition Condition { get; init; }
+    public IReadOnlyList<string> EnablingEnumValues { get; init; } = [];
+    public OperationRequestOptionOmission Omission { get; init; }
+    public OperationAdmission Admission { get; init; }
+    public PolicyDenialDetails? PolicyDenial { get; init; }
+}
+
+public enum OperationRequestOptionEffect
+{
+    Unknown = -1,
+    Unspecified = 0,
+    InteractiveUi = 1,
+    BackgroundWork = 2,
+}
+
+public enum OperationRequestOptionCondition
+{
+    Unknown = -1,
+    Unspecified = 0,
+    WhenTrue = 1,
+    WhenFalse = 2,
+    WhenPresent = 3,
+    WhenNonEmpty = 4,
+    WhenOneOf = 5,
+}
+
+public enum OperationRequestOptionOmission
+{
+    Unknown = -1,
+    Unspecified = 0,
+    DoesNotActivate = 1,
+    Activates = 2,
+    Required = 3,
+}
+
+public sealed record PolicyDenialDetails
+{
+    public PolicyDenialRule Rule { get; init; }
+    public OperationRiskFlag? DeniedFlag { get; init; }
+    public string? AdmissionProfile { get; init; }
+    public string? RequestOptionField { get; init; }
+}
+
+public enum PolicyDenialRule
+{
+    Unknown = -1,
+    Unspecified = 0,
+    Profile = 1,
+    Flag = 2,
+    Override = 3,
+    Exclusive = 4,
+    Unreviewed = 5,
 }
 
 public enum OperationRiskFlag
@@ -247,4 +384,4 @@ device, trapping, watch, robot-interface, and appliance session workflows are
 exclusive, and every profile, flag, and override denies them for now: a call
 fails with `PolicyDenied` and `NotStarted`.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSelection.cs) · [Released Snapshot Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.0/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSnapshot.cs)
+[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.1/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSelection.cs) · [Released Snapshot Source](https://github.com/spatialanalyzer/briosa-dotnet/blob/v0.5.1/targets/2026.1.0529.7/src/Briosa.Client/BriosaServerSnapshot.cs)

@@ -8,18 +8,25 @@
  *   ("The server registry includes 1,018 MP operations").
  * - SA 2024 dispositions: mp-command-catalog/2024.1.0508.5/overview.md
  *   (1,283 captured commands, 987 Current) and mp-command-catalog/overview.md.
- * - gRPC services: the gRPC 0.10.0 reference for SA 2026.1.0529.7
- *   (grpc_versioned_docs/version-0.10.0): 20 MP operation services plus
+ * - gRPC services: the gRPC 0.10.1 reference for SA 2026.1.0529.7
+ *   (grpc_versioned_docs/version-0.10.1): 20 MP operation services plus
  *   DiscoveryService, SpatialAnalyzerLifecycle, and SpatialAnalyzerSdkLifecycle.
  * - MP root groups: mp-command-catalog/2026.1.0529.7/group-hierarchy.md, the
  *   observed SetStep count of each root group (1,360 in all).
  */
 
 export const versions = {
-  server: '0.10.0',
-  clients: '0.5.0',
+  server: '0.10.1',
+  // .NET and Python publish 0.5.1. JavaScript/TypeScript publishes 0.5.2, which
+  // has the same API as its 0.5.1 and is the recommended JavaScript client.
+  dotnet: '0.5.1',
+  python: '0.5.1',
+  javascript: '0.5.2',
   installer: '0.4.1',
 } as const;
+
+/** The current client releases, for headings. Update it if .NET and Python diverge. */
+export const clientReleases = `${versions.dotnet} and ${versions.javascript}`;
 
 export const targets = {
   sa2026: '2026.1.0529.7',
@@ -117,7 +124,7 @@ export const featuredOperations = [
   },
 ] as const;
 
-/** Released RPC names for the decorative ticker; each exists in the gRPC 0.10.0 reference. */
+/** Released RPC names for the decorative ticker; each exists in the gRPC 0.10.1 reference. */
 export const tickerRpcs = [
   [
     'GetPointCoordinate', 'GetPointToPointDistance', 'ConstructPointInWorkingCoordinates',

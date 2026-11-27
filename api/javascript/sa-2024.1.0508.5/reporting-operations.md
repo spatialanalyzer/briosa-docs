@@ -1,6 +1,6 @@
 ---
 title: Reporting Operations
-description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.2 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/reporting-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/reporting-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.2**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
@@ -1461,4 +1461,4 @@ export declare function setVectorGroupReportOptions(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.0/targets/2024.1.0508.5)
+[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.2/targets/2024.1.0508.5)

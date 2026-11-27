@@ -78,12 +78,31 @@ construction mode.
 Timeout values are seconds. `BriosaStartOptions.startup_timeout` bounds the
 complete startup procedure requested by that call. Its 120-second default
 covers the server's default worst case of about 100 seconds for a start that
-launches SpatialAnalyzer, with a 20-second margin. If you raise the server's
-`Briosa:Worker:StartupTimeout`, `Briosa:Worker:ReadinessProbeTimeout`, or
-`Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the startup budget
-too. SpatialAnalyzer launch, SDK connection, identity verification, and
-readiness probing retain their own server-configured safety bounds.
-`command_timeout=None` means the client adds no MP-command deadline.
+launches SpatialAnalyzer, with a 20-second margin. An explicit value, including
+`120.0`, is always used as given.
+
+With Server 0.10.1, which publishes its lifecycle bounds, a budget you omit
+follows the server's own settings: once the client has verified the server, the
+budget becomes the server's startup allowance for the selected phases plus 20
+seconds, counted from the start of `start()`, and never less than two minutes.
+Only constructing `BriosaStartOptions` itself without passing `startup_timeout`
+omits it. `dataclasses.replace()` passes every field's current value, so its
+result has an explicit budget, and a subclass of `BriosaStartOptions` always
+uses its own `startup_timeout`. Once the server has published lifecycle bounds,
+the client also checks the deadline and cancellation before each startup
+request, including when you set the budget yourself. If startup fails after the
+client takes ownership of the session, MP commands are admitted again only
+after `stop()` and a new successful `start()`. With Server 0.10.0, which
+publishes no allowance, the budget stays two minutes: if you raise that
+server's `Briosa:Worker:StartupTimeout`, `Briosa:Worker:ReadinessProbeTimeout`,
+or `Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the startup budget
+too.
+
+On Python 3.10, the `BriosaStartupError` raised when the startup budget expires
+also derives from `asyncio.TimeoutError`, so a handler written for client 0.5.0
+still catches it. SpatialAnalyzer launch, SDK connection, identity
+verification, and readiness probing retain their own server-configured safety
+bounds. `command_timeout=None` means the client adds no MP-command deadline.
 
 The three startup switches are independent except that connecting requires the
 same startup call to start an SDK generation. Launch options must remain at
@@ -323,6 +342,15 @@ class BriosaServerSnapshot:
     operations: tuple[BriosaOperationCapability, ...]
     admission_profile: str
     policy_fingerprint: str
+    lifecycle_bounds: BriosaLifecycleBounds | None = field(
+        default=None, repr=False, compare=False, kw_only=True
+    )
+    configured_interaction_mode: ConfiguredSpatialAnalyzerInteractionMode = field(
+        default=ConfiguredSpatialAnalyzerInteractionMode.UNKNOWN,
+        repr=False,
+        compare=False,
+        kw_only=True,
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -335,6 +363,101 @@ class BriosaOperationCapability:
     duration_class: OperationDurationClass = OperationDurationClass.UNSPECIFIED
     validation_status: OperationValidationStatus = OperationValidationStatus.UNSPECIFIED
     admission: OperationAdmission = OperationAdmission.UNSPECIFIED
+    policy_denial: PolicyDenialDetails | None = field(
+        default=None, repr=False, compare=False, kw_only=True
+    )
+    request_options: tuple[OperationRequestOption, ...] | None = field(
+        default=None, repr=False, compare=False, kw_only=True
+    )
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class BriosaLifecycleBounds:
+    start_sdk: timedelta | None = None
+    launch_spatial_analyzer: timedelta | None = None
+    connect_spatial_analyzer: timedelta | None = None
+    recover_sdk: timedelta | None = None
+    stop_sdk: timedelta | None = None
+    close_owned_spatial_analyzer: timedelta | None = None
+    startup_with_launch: timedelta | None = None
+    startup_without_launch: timedelta | None = None
+    host_graceful_shutdown: GracefulShutdownBound = field(
+        default_factory=GracefulShutdownBound
+    )
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class GracefulShutdownBound:
+    kind: GracefulShutdownBoundKind = GracefulShutdownBoundKind.UNAVAILABLE
+    duration: timedelta | None = None
+
+
+class GracefulShutdownBoundKind(StrEnum):
+    UNAVAILABLE = "unavailable"
+    FINITE = "finite"
+    UNBOUNDED = "unbounded"
+
+
+class ConfiguredSpatialAnalyzerInteractionMode(StrEnum):
+    UNKNOWN = "unknown"
+    UNCHANGED = "unchanged"
+    SILENT = "silent"
+    AUTOMATIC = "automatic"
+    MANUAL = "manual"
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class OperationRequestOption:
+    field_name: str
+    effect: OperationRequestOptionEffect
+    condition: OperationRequestOptionCondition
+    enabling_enum_values: tuple[str, ...] = ()
+    omission: OperationRequestOptionOmission
+    admission: OperationAdmission
+    policy_denial: PolicyDenialDetails | None = None
+
+
+class OperationRequestOptionEffect(StrEnum):
+    UNSPECIFIED = "unspecified"
+    INTERACTIVE_UI = "interactive_ui"
+    BACKGROUND_WORK = "background_work"
+    UNKNOWN = "unknown"
+
+
+class OperationRequestOptionCondition(StrEnum):
+    UNSPECIFIED = "unspecified"
+    WHEN_TRUE = "when_true"
+    WHEN_FALSE = "when_false"
+    WHEN_PRESENT = "when_present"
+    WHEN_NON_EMPTY = "when_non_empty"
+    WHEN_ONE_OF = "when_one_of"
+    UNKNOWN = "unknown"
+
+
+class OperationRequestOptionOmission(StrEnum):
+    UNSPECIFIED = "unspecified"
+    DOES_NOT_ACTIVATE = "does_not_activate"
+    ACTIVATES = "activates"
+    REQUIRED = "required"
+    UNKNOWN = "unknown"
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class PolicyDenialDetails:
+    rule: PolicyDenialRule
+    denied_flag: OperationRiskFlag | None = None
+    admission_profile: str | None = None
+    request_option_field: str | None = None
+
+
+class PolicyDenialRule(StrEnum):
+    UNSPECIFIED = "unspecified"
+    PROFILE = "profile"
+    FLAG = "flag"
+    OVERRIDE = "override"
+    EXCLUSIVE = "exclusive"
+    UNREVIEWED = "unreviewed"
+    UNKNOWN = "unknown"
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -411,6 +534,43 @@ class OperationAdmission(StrEnum):
   or a per-operation `allow` override. Methods for denied and exclusive
   operations remain, and a denied call fails with `POLICY_DENIED` and
   `NOT_STARTED`.
+
+Client 0.5.1 also reads what Server 0.10.1 adds to discovery. Server 0.10.0
+sends none of it, and each value below is then `None` or `UNKNOWN`. The fields
+that 0.5.1 added are keyword-only and stay out of `repr()`, equality, and
+hashing; `dataclasses.fields()`, `astuple()`, and `asdict()` include them.
+
+- `lifecycle_bounds` holds the server's published lifecycle wait allowances,
+  each a `timedelta`, or `None` when the server reported it absent or zero:
+  unavailable, never unbounded. `host_graceful_shutdown.kind` is `UNAVAILABLE`,
+  `FINITE` (with a `duration`), or `UNBOUNDED`. Each allowance covers only the
+  server's own work, and none promises that a response arrives or a process
+  exits within it. `startup_with_launch` and `startup_without_launch` size a
+  startup of several requests and are not server deadlines; an omitted
+  `startup_timeout` is sized from them.
+- `configured_interaction_mode` is the SpatialAnalyzer interaction mode the
+  server is configured to set after each Connect
+  (`Briosa:SpatialAnalyzer:InteractionMode`). It is the server's configuration,
+  never SpatialAnalyzer's live mode, which has no getter and can change at any
+  time.
+- `request_options` lists each operation's reviewed request options: `None`
+  when the server does not describe them, and an empty tuple when none apply.
+  Each `OperationRequestOption` gives the protobuf `field_name`, its `effect`
+  (operator UI or work left running), the `condition` and
+  `enabling_enum_values` that turn it on, what `omission` does, and the
+  `admission` and `policy_denial` for a request that turns on that option
+  alone. The server still decides every call, and the client never
+  pre-validates a request from this description.
+- `policy_denial` on a denied capability, on a request option, and on a
+  [`POLICY_DENIED` failure](#operation-errors) is a `PolicyDenialDetails`:
+  the `rule`, the `denied_flag` of a flag denial (`UNKNOWN` for a flag this
+  client doesn't know), the `admission_profile` of a profile denial, and the
+  `request_option_field` the server attributed the denial to. It holds names
+  only, never a request value, and it never changes `admission`.
+
+A rule, effect, condition, or omission that this client doesn't recognize is
+`UNKNOWN`. It is metadata only: it never admits anything and never fails
+discovery.
 
 MP admission needs both the SDK state and the client's latest snapshot to
 report readiness. When the startup did not connect the SDK, or after an
@@ -499,6 +659,9 @@ class OperationFailure:
     replay_safety: ReplaySafety
     mp_execution: MpExecutionDetails | None = None
     worker_generation: int | None = None
+    policy_denial: PolicyDenialDetails | None = field(
+        default=None, repr=False, compare=False, kw_only=True
+    )
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -617,6 +780,21 @@ Task cancellation stays `asyncio.CancelledError`.
   `Briosa:SpatialAnalyzer:InteractionMode` to `Silent`; the default is
   `Unchanged`. SpatialAnalyzer keeps the mode across restarts and has no getter
   for it, and the client never sets it.
+- **Policy denials.** A `POLICY_DENIED` failure fails with `NOT_STARTED`. With
+  Server 0.10.1, `OperationFailure.policy_denial` says which policy step denied
+  the call; see [Server Snapshot and Capabilities](#server-snapshot-and-capabilities).
+  It is `None` for every other kind and with Server 0.10.0, and it never
+  changes the failure's kind, disposition, or guidance.
+
+  ```python
+  try:
+      await briosa.save_as(job_file)
+  except BriosaOperationError as error:
+      denial = error.failure.policy_denial
+      if denial is not None and denial.rule is PolicyDenialRule.FLAG:
+          print(f"Denied by the {denial.denied_flag} flag")
+  ```
+
 - **Rejected arguments.** An argument you leave unset is never sent as an empty
   value, 0, or false, and the client doesn't pre-validate empty values. The
   server rejects them before dispatch with `VALIDATION` and `NOT_STARTED`.

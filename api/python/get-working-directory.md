@@ -50,7 +50,7 @@ async def get_working_directory(
 ) -> str: ...
 ```
 
-The command has no MP inputs. Like every MP method in client 0.5.0, it is an
+The command has no MP inputs. Like every MP method in client 0.5.1, it is an
 ordinary MP operation and takes the keyword-only
 [`on_mp_completion`](./lifecycle.md#mp-completion) observer. Applications can
 set a client-wide command timeout or use normal `asyncio` cancellation and

@@ -72,16 +72,45 @@ Briosa server on an owned loopback endpoint. Direct control of a manually
 started server uses the public gRPC API rather than a separate first-party
 client construction mode.
 
-`BriosaStartOptions.StartupTimeout` defaults to two minutes. It is one overall
-budget for the complete startup procedure requested by that call, whichever
-phases are selected. When it expires, `StartAsync` throws
-`BriosaStartupException` with diagnostic `startup-timeout`. Two minutes covers
-the server's default worst case of about 100 seconds for a start that launches
-SpatialAnalyzer, plus a 20-second margin; raise it when the server's lifecycle
-bounds are raised. SpatialAnalyzer launch, SDK connection, identity
-verification, and readiness probing retain their own server-configured safety
-bounds. Lifecycle methods add no deadline of their own. `CommandTimeout`
-defaults to `null`, meaning the client adds no MP-command deadline.
+`BriosaStartOptions.StartupTimeout` is one overall budget for the complete
+startup procedure requested by that call, whichever phases are selected. When
+it expires, `StartAsync` throws `BriosaStartupException` with diagnostic
+`startup-timeout`. A value you set is always the budget, including an explicit
+two minutes. When you leave it unset, the budget starts at two minutes, the
+value the property returns. Two minutes covers the server's default worst case
+of about 100 seconds for a start that launches SpatialAnalyzer, plus a
+20-second margin.
+
+With Server 0.10.1, which publishes its lifecycle bounds, an unset budget is
+sized once, at the first validated discovery of the server: it becomes the
+longer of two minutes and the server's startup allowance for the selected
+phases plus 20 seconds, counted from the start of the call. It only grows, it
+never revives a startup whose two minutes have already run out, and it stays
+two minutes when an allowance the selection needs is missing.
+
+| Selected phases | Allowance |
+| --- | --- |
+| Start SDK, launch, and connect | `LifecycleBounds.StartupWithLaunch` |
+| Start SDK and connect | `LifecycleBounds.StartupWithoutLaunch` |
+| Start SDK and launch | `StartSdk` + `LaunchSpatialAnalyzer` |
+| Start SDK only | `StartSdk` |
+| Launch only | `LaunchSpatialAnalyzer` |
+
+Once the server has published lifecycle bounds, the client also checks the
+budget against the clock before each startup request, whether you set the
+budget or not, so no startup request is sent after the deadline. A step that
+fails after the deadline reports `startup-timeout`, with that failure as its
+`InnerException`. If startup fails after the client takes ownership of the
+session, MP commands stay refused (`mp-command-admission-closed`) whatever
+state the client reads afterwards; call `StopAsync()`, then a new
+`StartAsync()`. With Server 0.10.0, which publishes no
+bounds, the budget stays two minutes, only its timer ends the start, and you
+raise it yourself when that server's lifecycle bounds are raised.
+
+SpatialAnalyzer launch, SDK connection, identity verification, and readiness
+probing retain their own server-configured safety bounds. Lifecycle methods add
+no deadline of their own. `CommandTimeout` defaults to `null`, meaning the
+client adds no MP-command deadline.
 
 The three startup switches are independent except that connecting requires the
 same startup call to start an SDK generation. Launch options must remain at
@@ -389,6 +418,7 @@ public sealed class BriosaOperationException : BriosaException
     public ReplayGuidance ReplayGuidance { get; }
     public ReplaySafety ReplaySafety { get; }
     public MpExecutionDetails? MpExecution { get; }
+    public PolicyDenialDetails? PolicyDenial { get; }
 }
 
 public enum OperationFailureKind
@@ -493,6 +523,11 @@ public sealed class BriosaTransportException : BriosaException
 - A call the server's admission policy denies fails with `PolicyDenied` and
   `NotStarted`; see
   [Server Snapshot and Admission](./installation-selection.md#server-snapshot-and-admission).
+  With Server 0.10.1, `PolicyDenial` says which policy step denied it: the
+  `PolicyDenialRule`, the denied risk flag, the admission profile, or the
+  request field the server attributed the denial to. It is `null` with Server
+  0.10.0 and for every other kind. It never changes the kind, disposition, or
+  guidance.
 - A transport failure without a typed trailer is a `BriosaTransportException`
   whose `DiagnosticCode` is `transport-` plus the gRPC status name in lower
   kebab case, such as `transport-deadline-exceeded` or `transport-unavailable`.

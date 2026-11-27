@@ -39,10 +39,17 @@ Passing `None` uses `BriosaStartOptions()`.
 
 The 120-second startup budget covers the server's default worst case of about
 100 seconds for a start that launches SpatialAnalyzer, with a 20-second margin.
-If you raise the server's `Briosa:Worker:StartupTimeout`,
+An explicit `startup_timeout`, including `120.0`, is always used as given.
+When you construct `BriosaStartOptions` without it, Server 0.10.1's published
+lifecycle bounds size the budget: once the client has verified the server, the
+budget becomes the server's startup allowance for the selected phases plus 20
+seconds, counted from the start of `start()`, and never less than two minutes.
+With Server 0.10.0, which publishes no allowance, it stays at two minutes, so
+if you raise that server's `Briosa:Worker:StartupTimeout`,
 `Briosa:Worker:ReadinessProbeTimeout`, or
-`Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the budget too. When
-it expires, `start()` raises `BriosaStartupError` with diagnostic
+`Briosa:SpatialAnalyzer:ApplicationStartupTimeout`, raise the budget too. See
+[Client Construction](./lifecycle.md#client-construction). When the budget
+expires, `start()` raises `BriosaStartupError` with diagnostic
 `startup-timeout`. The server finishes a step it has accepted, so the abandoned
 start may still produce a ready generation. Calling `start()` again waits for the
 same start, and other lifecycle calls fail with `client-start-in-progress` until

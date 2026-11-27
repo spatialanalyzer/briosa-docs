@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / API - LADAR
-description: Availability of the API - LADAR commands that client 0.5.0 provides only for SA 2026.1.0529.7.
+description: Availability of the API - LADAR commands that client 0.5.2 provides only for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -10,8 +10,8 @@ toc_max_heading_level: 2
 
 :::note[Not Available for SA 2024.1.0508.5]
 
-The SA 2024.1.0508.5 package of client 0.5.0 has no operation for these commands,
-and Server 0.10.0 for that target has no matching RPC. The
+The SA 2024.1.0508.5 package of client 0.5.2 has no operation for these commands,
+and Server 0.10.1 for that target has no matching RPC. The
 [SA 2026.1.0529.7 reference](/api/javascript/instrument-operations-api-ladar)
 documents them for that target.
 
@@ -47,4 +47,4 @@ No released signature is available for SA 2024.1.0508.5.
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder).
 No released signature is available for SA 2024.1.0508.5.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.0/targets/2024.1.0508.5)
+[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.5.2/targets/2024.1.0508.5)
