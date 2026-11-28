@@ -25,7 +25,7 @@ bound; SpatialAnalyzer reports an out-of-range value through the MP outcome.
 From the extracted server package directory, with the server running on its default endpoint:
 
 ```powershell
-'{"collectionIndex":0}' | grpcurl -plaintext -protoset descriptor/briosa.protoset -d @ 127.0.0.1:50051 briosa.AnalysisOperations/GetIthCollectionName
+'{"collectionIndex":0}' | grpcurl -plaintext -protoset descriptor/briosa.protoset -d '@' 127.0.0.1:50051 briosa.AnalysisOperations/GetIthCollectionName
 ```
 
 The returned name is application data and is not logged by default. After MP
