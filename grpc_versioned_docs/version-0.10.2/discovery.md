@@ -26,7 +26,7 @@ Clients 0.5.1 and JavaScript/TypeScript client 0.5.2 size an unset startup timeo
 
 ## Admission and Classification
 
-`ListCapabilitiesResponse` reports the resolved `admission_profile` (`read-only`, `standard`, `device`, or `full`) and a `policy_fingerprint`. The fingerprint is a value-free `sha256:` digest over every admission input. Equal fingerprints mean equal static admission decisions; compare it only for equality, and never parse it.
+`ListCapabilitiesResponse` reports the resolved `admission_profile` (`read-only`, `standard`, `device`, or `full`) and a `policy_fingerprint`. The fingerprint is a value-free `sha256:` digest over every input to the server's static admission policy. Equal fingerprints mean equal static admission decisions (a per-call caller restriction can change a call's outcome without changing the fingerprint); compare it only for equality, and never parse it.
 
 Each `OperationCapability` also carries the operation's reviewed classification:
 

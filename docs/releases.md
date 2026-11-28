@@ -56,8 +56,9 @@ Server 0.10.2 works with the published 0.5.0 and 0.5.1 clients for .NET,
 JavaScript/TypeScript, and Python, and with JavaScript/TypeScript client 0.5.2,
 for the matching target. No new client release accompanies Server 0.10.2, and no
 published first-party client exposes the three new features yet; published
-clients ignore the new response and error fields. Clients 0.4.0 and earlier
-reject Server 0.10.2 before launch; keep
+clients ignore the new response and error fields. Clients older than 0.5.0 do
+not work with Server 0.10.2, and the published 0.4.0 clients reject it before
+launch; keep
 [Server 0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2)
 installed for applications that use client 0.4.0. Use JavaScript/TypeScript
 client [0.5.2](https://github.com/spatialanalyzer/briosa-js/releases/tag/v0.5.2);
@@ -156,11 +157,13 @@ running packaged client scenarios with a fake worker. All 20 client
 compatibility gate cases across both targets passed: 14 compatible cases
 (published 0.5.0 and 0.5.1 clients for .NET, JavaScript/TypeScript, and Python,
 plus JavaScript/TypeScript 0.5.2, with `large-result` passing once in each) and
-6 cases where published 0.4.0 clients rejected the server before launch. In each
-final Windows server ZIP, all 14 signed first-party executables and DLLs carry
-valid, timestamped Authenticode signatures, and `files.sha256` verifies 866
-files (the other 852 unsigned files matched the same run's unsigned archive,
-including `descriptor/briosa.protoset` matching the released protocol ZIP).
+6 cases where published 0.4.0 clients rejected the server before launch. In each final Windows server ZIP, all 14 signed first-party executables and
+DLLs carry valid, timestamped Authenticode signatures, and `files.sha256`
+verifies 866 files. The other 852 files per target (outside Briosa's signing
+catalog) matched, by inventory and SHA-256, the same release run's server ZIP
+built before signing. They include `descriptor/briosa.protoset`, which is not
+signed and matches the descriptor in the released protocol ZIP for the same
+target.
 
 Before publication, the signed draft packages were checked on Windows on both
 targets with the signed Installer 0.4.1 command line in an isolated package
@@ -171,11 +174,11 @@ clients in all three languages, and JavaScript/TypeScript client 0.5.2, selected
 0.10.2 automatically, accepted an explicit choice of either version, rejected
 the other target, and selected 0.10.1 after 0.10.2 was removed; the published
 0.4.0 clients rejected both versions. Starting the installed 0.10.2 server with
-its worker stopped reported version `0.10.2` and `compatibility` major `3`,
-revision `2` through `GetServerInfo`, and `ListCapabilities` returned a
-non-empty `mp_step` on every capability (797 by default and 1,018 with
-`include_denied` for `2026.1.0529.7`; 778 and 987 for `2024.1.0508.5`). The
-Installer's window was not exercised.
+its worker stopped reported version `0.10.2`, `compatibility.major` `3`, and
+`compatibility.revision` `2` through `GetServerInfo`, and `ListCapabilities`
+returned a non-empty `mp_step` on every capability (797 by default and 1,018
+with `include_denied` for `2026.1.0529.7`; 778 and 987 for `2024.1.0508.5`).
+The Installer's window was not exercised.
 
 Nothing in Server 0.10.2 was run against a licensed SpatialAnalyzer
 installation. The release workflow runs against no licensed SpatialAnalyzer, and
@@ -273,8 +276,10 @@ window to reopen, a race can leave a later response on the same connection
 unwritten. The capture could not establish the cause of the observed stall.
 
 - **JavaScript/TypeScript clients 0.5.0 and 0.5.1** use a 65,535-byte window and
-  request the capability listing (141 to 148 KB) during a default start, so they
-  can meet the condition with Servers 0.10.0, 0.10.1, and 0.10.2. In hosted
+  request the capability listing during a default start (measured at 141 to 148
+  KB with Servers 0.10.0 and 0.10.1; a Server 0.10.2 listing is larger because
+  every capability now carries `mp_step`), so they can meet the condition with
+  Servers 0.10.0, 0.10.1, and 0.10.2. In hosted
   conformance runs, 2 JavaScript jobs stalled against at least 317 clean ones
   (about 0.6%), both with client 0.5.1. Client 0.5.2 raises the window to 16 MiB
   on each stream and on the connection. With one call at a time, that leaves

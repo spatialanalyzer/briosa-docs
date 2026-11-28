@@ -168,7 +168,9 @@ after changing it.
 
 ## Precedence
 
-The first rule that applies decides each request:
+Steps 1 to 5 decide the server's own admission, where the first matching rule
+decides. Any request the server admits (including by an `allow` override in
+step 3) then continues to step 6 when the call carries a caller restriction:
 
 1. An operation that is not registered for the exact target is unsupported
    (`Unimplemented`, `operation-unsupported`).
@@ -181,12 +183,15 @@ The first rule that applies decides each request:
 2. An exclusive workflow is denied with `operation-isolation-unsupported`, and
    a request whose options leave work running after the call returns is denied
    with `operation-option-isolation-unsupported`.
-3. An override of the operation decides next: `deny` denies it, and `allow`
-   admits it without consulting the flags or the profile.
+3. An override of the operation decides server admission next: `deny` denies
+   it, and `allow` admits it under server policy without consulting the flags
+   or the profile (still subject to step 6 if the call carries a caller
+   restriction).
 4. A `deny` setting on any of the request's flags denies it.
-5. The profile admits the request when each of its flags is in the profile's set
-   or set to `allow`, and the effect filter passes. Otherwise it is denied.
-6. Only when the steps above admit the request and the call carries a
+5. The profile admits the request under server policy when each of its flags
+   is in the profile's set or set to `allow`, and the effect filter passes.
+   Otherwise it is denied.
+6. When steps 1 to 5 admit the request and the call carries a
    `briosa-caller-restriction` header (Server 0.10.2 and later), the server
    checks the caller's denied flags and then the caller's profile alone; see
    [Caller Restriction](#caller-restriction).

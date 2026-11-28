@@ -20,8 +20,10 @@ Implements the `Get Working Directory` MP for exact target `2024.1.0508.5`.
 | Result | optional string `directory` plus shared `execution` details |
 | Classification | read only · global-state read · replay safe |
 
+From the extracted server package directory, with the server running on its default endpoint:
+
 ```powershell
-grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory
+grpcurl -plaintext -protoset descriptor/briosa.protoset -d '{}' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory
 ```
 
 The returned path is application data. Briosa returns it to the caller but does

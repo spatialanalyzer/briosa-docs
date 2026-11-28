@@ -18,8 +18,10 @@ Implements the `Get Number of Collections` MP for exact target
 | Result | optional `int32 total_count` plus shared `execution` details |
 | Classification | read only · global-state read · replay safe |
 
+From the extracted server package directory, with the server running on its default endpoint:
+
 ```powershell
-grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.AnalysisOperations/GetNumberOfCollections
+grpcurl -plaintext -protoset descriptor/briosa.protoset -d '{}' 127.0.0.1:50051 briosa.AnalysisOperations/GetNumberOfCollections
 ```
 
 The worker sets the MP step, executes it, retrieves the MP result, requires
