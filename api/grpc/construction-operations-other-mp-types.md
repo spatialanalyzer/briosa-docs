@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Other MP Types
-description: Released grpc 0.10.1 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.2 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-other-mp-types) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.10.1**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.2**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -1044,4 +1044,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.1/targets/2026.1.0529.7)
+[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.2/targets/2026.1.0529.7)

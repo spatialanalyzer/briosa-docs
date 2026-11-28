@@ -186,6 +186,10 @@ The first rule that applies decides each request:
 4. A `deny` setting on any of the request's flags denies it.
 5. The profile admits the request when each of its flags is in the profile's set
    or set to `allow`, and the effect filter passes. Otherwise it is denied.
+6. Only when the steps above admit the request and the call carries a
+   `briosa-caller-restriction` header (Server 0.10.2 and later), the server
+   checks the caller's denied flags and then the caller's profile alone; see
+   [Caller Restriction](#caller-restriction).
 
 A request's flags are the risk flags of its operation's reviewed row, plus
 `interactive_ui` when a request option turns on operator UI. Before dispatch,
@@ -202,20 +206,98 @@ registration. A mismatch fails request validation before dispatch
 
 From Server 0.10.1, a policy-denied call carries `PolicyDenialDetails` in its
 typed operation error. It names the rule that decided (`PROFILE`, `FLAG`,
-`OVERRIDE`, `EXCLUSIVE`, or `UNREVIEWED`) and, where it applies, the first
-denied risk flag in vocabulary order, the active admission profile, and the
-request option field the server attributed the denial to. It never records a
-request value. Status codes, failure kinds, dispositions, guidance, diagnostic
-codes, audit rules, and the policy fingerprint are unchanged.
+`OVERRIDE`, `EXCLUSIVE`, or `UNREVIEWED`, and from Server 0.10.2 `CALLER_PROFILE`
+or `CALLER_FLAG`) and, where it applies, the first denied risk flag in
+vocabulary order (`denied_flag` or `caller_denied_flag`), the active or caller
+admission profile (`admission_profile` or `caller_admission_profile`), and the
+request option field (`request_option_field`) the server attributed the denial
+to. It never records a request value. Status codes, failure kinds, dispositions,
+guidance, diagnostic codes for server denials, and the policy fingerprint are
+unchanged.
 
 `ListCapabilities` adds the same detail to every denied entry when
 `include_denied` is set, and lists each operation's reviewed request options,
 including for admitted operations in the default response. Each option reports
 its field name, its effect (`INTERACTIVE_UI` or `BACKGROUND_WORK`), the
 condition that activates it, and what omitting it does, with the admission of a
-request that turns on that option alone. The first-party clients 0.5.1 and
-0.5.2 expose these values; the 0.5.0 clients ignore them. See
+request that turns on that option alone. Discovery never reports `CALLER_PROFILE`
+or `CALLER_FLAG` because `ListCapabilities` ignores the caller restriction
+header. The first-party clients 0.5.1 and
+0.5.2 expose the Server 0.10.1 values; the 0.5.0 clients ignore them. See
 [Server Discovery](/api/grpc/sa-2026.1.0529.7/discovery#policy-denial-details).
+
+## Caller Restriction
+
+Server 0.10.2 and later accept one optional ASCII gRPC metadata header on MP
+operation calls, `briosa-caller-restriction`, to narrow admission for that
+single call. It can never widen what the server's own configuration admits.
+
+:::warning[Older Servers Silently Ignore This Header]
+
+Server 0.10.1 and earlier ignore `briosa-caller-restriction`, so on those
+servers a call runs under the server's configuration alone. Any caller that
+relies on a restriction must first query `DiscoveryService/GetServerInfo` and
+verify that `compatibility.major` is `3` and `compatibility.revision` is `2` or
+later (Server 0.10.2 or later). If live discovery fails or reports an earlier
+revision, stop before sending the restricted call rather than falling back to
+an unrestricted call.
+
+:::
+
+### Header Grammar and Malformed Headers
+
+Send one ASCII metadata entry containing one or two case-sensitive clauses
+separated by `"; "` (semicolon and one space), each clause at most once in
+either order:
+
+- `profile=<profile>`, where `<profile>` is `read-only`, `standard`, `device`,
+  or `full`.
+- `deny=<flag>[,<flag>...]`, where each `<flag>` appears at most once in any
+  order from the 11 risk flags listed above.
+
+No other whitespace, quoting, keys, or characters are accepted, and the maximum
+accepted length is 256 characters (the longest valid value is 193 characters).
+For example: `profile=read-only; deny=interactive_ui`.
+
+The server inspects the header before policy, request mapping, or dispatch. An
+empty value, more than one header field, a binary `briosa-caller-restriction-bin`
+entry (never decoded), an unknown or repeated key, profile, or flag, wrong case,
+extra whitespace, stray punctuation, or a value over 256 characters fails closed
+with `INVALID_ARGUMENT` (`The request is invalid.`), failure kind `VALIDATION`,
+diagnostic `caller-restriction-invalid`, disposition `NOT_STARTED`, and replay
+guidance `DO_NOT_REPLAY`, with neither `request_validation` nor `policy_denial`
+set. Header text is never repeated in errors or logs. Use the supported direct
+loopback connection: the server distinguishes multiple entries only when it
+receives them as separate header fields.
+
+### Evaluation, Scope, and Auditing
+
+When the server's own configuration admits the call, the server evaluates the
+caller restriction on the same effective risk flags and effect (including
+`interactive_ui` added by a request option, whether set or omitted). Server
+`Flags:<flag>=allow` settings and per-operation `allow` overrides do not widen
+the caller's limits, and exclusive workflows and unreviewed operations remain
+denied. A wider caller profile is accepted and still limits on its own terms
+(for example, `profile=full` still denies `interactive_ui`). The server checks
+the caller's `deny` list first (`CALLER_FLAG`, reporting `caller_denied_flag`
+in `risk_flags` order) and then the caller's `profile` (`CALLER_PROFILE`,
+reporting `caller_admission_profile`), alongside `request_option_field` when a
+request option decided. Caller denials return `PERMISSION_DENIED` /
+`POLICY_DENIED` with `NOT_STARTED` and diagnostic `caller-restriction-denied`
+(or `caller-restriction-option-denied` when only a request option caused the
+caller's limits to deny).
+
+The header applies to MP operation calls only; lifecycle, discovery, health,
+and desktop RPCs ignore it. `ListCapabilities` does not read it
+([briosa#463](https://github.com/spatialanalyzer/briosa/issues/463)), and
+`policy_fingerprint` is unchanged. A caller restriction is a caller limiting
+itself, not authentication: any local caller can omit it. On calls that carry a
+restriction, `PolicyAllowed` (2002) and `PolicyRejected` (2003) audit events
+add `CallerProfile`, `CallerDeniedFlags`, and `CallerRestrictionDecision`
+(`admitted`, `denied`, or `not_evaluated`) using reviewed names only, and
+record `caller.flag.<flag>` or `caller.profile.<profile>` (prefixed with
+`option.<field>/` when a request option decided) only when that caller rule
+denies the call.
 
 ## Duration Classes
 
@@ -275,5 +357,5 @@ safety `Safe` to `Unsafe`, because replaying one prompts the operator again.
 An operation whose replay safety is `Unknown` or `Unspecified` is denied as
 unreviewed (`operation-risk-unreviewed`) under every setting.
 
-The [authoritative policy guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2026.1.0529.7/docs/operations/command-policy-and-auditing.md)
+The [authoritative policy guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2026.1.0529.7/docs/operations/command-policy-and-auditing.md)
 gives the full precedence and the audit records.

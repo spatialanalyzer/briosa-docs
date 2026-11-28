@@ -264,7 +264,7 @@ test('search prefers the release of the reference being read, including release-
   assert.deepEqual(searchFilters('/api/grpc/file-operations/direct-cad-access', current), ['api_family:grpc']);
   assert.equal(searchFilters('/docs/intro', current), undefined);
   const built = JSON.parse(readFileSync(path.join(root, '.docusaurus', 'globalData.json'), 'utf8'))['briosa-api-reference'].default.current;
-  for (const [family, release] of Object.entries({grpc: '0.10.1', dotnet: '0.5.1', python: '0.5.1', javascript: '0.5.2'})) {
+  for (const [family, release] of Object.entries({grpc: '0.10.2', dotnet: '0.5.1', python: '0.5.1', javascript: '0.5.2'})) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) assert.equal(built[family][target], release, `${family} ${target}`);
   }
 });
@@ -364,9 +364,9 @@ test('method pages render their contract as an operation panel with highlighted,
   // the served page and its search records carry no button text.
   assert.equal($('.api-contract button').length, 0);
   // The current reference has no later same-contract servers.
-  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.10.1']);
+  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.10.2']);
   assert.equal($('.api-same-contract').length, 0);
-  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.10\.1\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
+  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.10\.2\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
   // The Server 0.9.0 reference names the later servers that serve its contract
   // unchanged: in a chip, and in a site note kept apart from the released text.
   const earlier = read('/api/grpc/sa-2026.1.0529.7/0.9.0/file-operations');

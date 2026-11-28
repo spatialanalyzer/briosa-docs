@@ -1,6 +1,6 @@
 ---
 title: Server Discovery
-description: Server 0.10.1 identity, compatibility, readiness, admission, and capability RPCs for SA 2024.1.0508.5.
+description: Server 0.10.2 identity, compatibility, readiness, admission, and capability RPCs for SA 2024.1.0508.5.
 ---
 
 # Server Discovery
@@ -11,7 +11,7 @@ description: Server 0.10.1 identity, compatibility, readiness, admission, and ca
 
 ## Compatibility and Runtime Identity
 
-Clients 0.5.0 and 0.5.1, and JavaScript client 0.5.2, work with Servers 0.10.0 and 0.10.1 for the exact target, and Client 0.4.0 works with Server 0.9.x; clients 0.4.x and earlier reject Server 0.10.x, and clients 0.5.x reject Server 0.9.x and earlier. Direct gRPC from the published protocol artifact is also supported. Introduced in Server 0.7.0, `GetServerInfoResponse.compatibility` reports the running server's declaration for its exact SA target, independently of its product version and source revision. Before launch, clients check the installation metadata. Matching server-client compatibility does not bypass exact SA/SDK identity, ownership, runtime admission, or readiness checks. An unavailable runtime identity must not be inferred from the configured target.
+Clients 0.5.0 and 0.5.1, and JavaScript client 0.5.2, work with Servers 0.10.0, 0.10.1, and 0.10.2 for the exact target, and Client 0.4.0 works with Server 0.9.x; clients 0.4.x and earlier reject Server 0.10.x, and clients 0.5.x reject Server 0.9.x and earlier. Direct gRPC from the published protocol artifact is also supported. Introduced in Server 0.7.0, `GetServerInfoResponse.compatibility` reports the running server's declaration for its exact SA target, independently of its product version and source revision. Server 0.10.2 reports `major` `3` and `revision` `2` (up from `revision` `1` in Server 0.10.1). Before launch, clients check the installation metadata. Matching server-client compatibility does not bypass exact SA/SDK identity, ownership, runtime admission, or readiness checks. An unavailable runtime identity must not be inferred from the configured target.
 
 `version` uses `VersionCoordinates` for product/source and exact-target build coordinates. `ready_for_mp`, connection/readiness state, target isolation, and activated/connected identity evidence describe current runtime conditions. Capability entries identify the operation, fully qualified RPC, effect, replay safety, and execution scope. Never automatically replay an operation whose outcome is uncertain.
 
@@ -38,21 +38,24 @@ Each `OperationCapability` also carries the operation's reviewed classification:
 | `admission` | `ADMITTED`, or the precedence step that denied the operation. |
 | `policy_denial` | From Server 0.10.1, set exactly when `admission` is a denied value: which policy step denied the operation's reviewed row. See [Policy Denial Details](#policy-denial-details). |
 | `request_options` | From Server 0.10.1, always set: the operation's reviewed request options, with an empty list when none applies. Server 0.10.0 leaves it absent. |
+| `mp_step` | From Server 0.10.2, set on every listed capability, admitted or denied: the exact SpatialAnalyzer MP command name the operation executes, for example `Get Working Directory`. It carries no argument or result value and never affects admission. Earlier servers leave it empty. |
 
-By default the response lists only admitted operations. Set `include_denied` to also list every registered operation the policy denies, each with its denial reason in `admission`. A denied entry never becomes callable. A request option can still deny an admitted operation at call time, for example one that opens operator UI without the interactive opt-in; `admission` reports the reviewed row only.
+By default the response lists only admitted operations. Set `include_denied` to also list every registered operation the policy denies, each with its denial reason in `admission`. A denied entry never becomes callable. A request option can still deny an admitted operation at call time, for example one that opens operator UI without the interactive opt-in; `admission` reports the reviewed row only. `ListCapabilities` reports admission under the server's own configuration only and ignores the `briosa-caller-restriction` request header, so an operation listed as admitted can still be denied at call time when a call carries a caller restriction.
 
 Each `OperationRequestOption` in `request_options` names a request field that turns on operator UI (`INTERACTIVE_UI`) or leaves work running after the call returns (`BACKGROUND_WORK`), the `condition` and `enabling_enum_values` that turn it on, and what `omission` does. Its `admission` and `policy_denial` describe what the active policy decides for a request that turns on that option alone, with every other option inactive; the server decides an actual request with all of its options together. The description never permits anything, and a client must not pre-validate a request from it. Each operation page in this reference shows the profiles that admit it, its risk flags, and its duration class, and [Operation Admission](/docs/deployment/operation-admission) explains the profiles and the interactive opt-in.
 
 ## Policy Denial Details
 
-From Server 0.10.1, `PolicyDenialDetails` in `briosa/operation_outcomes.proto` describes a policy denial without request values. Discovery sets it on a denied capability and a denied request option, and the server sets `OperationError.policy_denial` in the `briosa-operation-error-bin` trailer on every `POLICY_DENIED` failure and on no other kind. Status codes, failure kinds, dispositions, guidance, diagnostic codes, and `policy_fingerprint` are unchanged. Server 0.10.0 does not send it, and clients built for Server 0.10.0 ignore it.
+From Server 0.10.1, `PolicyDenialDetails` in `briosa/operation_outcomes.proto` describes a policy denial without request values. Discovery sets it on a denied capability and a denied request option, and the server sets `OperationError.policy_denial` in the `briosa-operation-error-bin` trailer on every `POLICY_DENIED` failure and on no other kind. Server 0.10.2 adds `POLICY_DENIAL_RULE_CALLER_PROFILE` (`6`), `POLICY_DENIAL_RULE_CALLER_FLAG` (`7`), `caller_admission_profile` (field `5`), and `caller_denied_flag` (field `6`) for calls narrowed by the `briosa-caller-restriction` request header; discovery never reports a `CALLER_` rule or the caller fields. Status codes, failure kinds, dispositions, guidance, diagnostic codes for server denials, and `policy_fingerprint` are unchanged. Server 0.10.0 does not send `PolicyDenialDetails`, and clients built for Server 0.10.0 ignore it.
 
 ```proto
 // The step of the active admission policy that denied a call or an operation.
-// Each value names the same step as one denied value of OperationAdmission in
-// discovery: PROFILE and DENIED_PROFILE, FLAG and DENIED_FLAG, OVERRIDE and
-// DENIED_OVERRIDE, EXCLUSIVE and DENIED_EXCLUSIVE, UNREVIEWED and
-// DENIED_UNREVIEWED. The numbers differ, so match the two enums by name.
+// Each value up to UNREVIEWED names the same step as one denied value of
+// OperationAdmission in discovery: PROFILE and DENIED_PROFILE, FLAG and
+// DENIED_FLAG, OVERRIDE and DENIED_OVERRIDE, EXCLUSIVE and DENIED_EXCLUSIVE,
+// UNREVIEWED and DENIED_UNREVIEWED. The numbers differ, so match the two enums
+// by name. The CALLER_ values name the caller's own restriction, which only a
+// call carries, so discovery has no matching value.
 enum PolicyDenialRule {
   POLICY_DENIAL_RULE_UNSPECIFIED = 0;
   // The profile, widened by flags set to allow, does not admit every risk flag,
@@ -68,11 +71,22 @@ enum PolicyDenialRule {
   // The operation's classification metadata is not reviewed, or the request
   // cannot be read against the operation's reviewed request options.
   POLICY_DENIAL_RULE_UNREVIEWED = 5;
+  // The server's configuration admitted the call, and the profile named by the
+  // caller's own briosa-caller-restriction request header does not admit every
+  // effective risk flag of the request, or its read-only effect filter excludes
+  // the operation. No flag set to allow and no override widens the caller's
+  // profile. Server 0.10.2 and later.
+  POLICY_DENIAL_RULE_CALLER_PROFILE = 6;
+  // The server's configuration admitted the call, and the caller's own
+  // briosa-caller-restriction request header denies one of the request's
+  // effective risk flags. Server 0.10.2 and later.
+  POLICY_DENIAL_RULE_CALLER_FLAG = 7;
 }
 
 // Value-free detail of a policy denial, shared by a denied call and by
 // discovery. Server 0.10.1 and later send it. Server 0.10.0 does not, and
 // clients built for Server 0.10.0, such as the 0.5.0 clients, ignore it.
+// Discovery never reports a CALLER_ rule.
 message PolicyDenialDetails {
   PolicyDenialRule rule = 1;
   // The risk flag set to deny that decided, as the lowercase suffix of its
@@ -87,15 +101,81 @@ message PolicyDenialDetails {
   // request turns on several options with the deciding effect, it names the
   // first in the server's reviewed order, which need not be the only cause.
   // Absent when the operation's reviewed row decided, and when the request could
-  // not be read against its reviewed options.
+  // not be read against its reviewed options. The CALLER_ rules set it in the
+  // same way.
   optional string request_option_field = 3;
   // The active admission profile: read-only, standard, device, or full.
   // Present exactly when rule is PROFILE.
   optional string admission_profile = 4;
+  // The profile the caller's own restriction named: read-only, standard,
+  // device, or full. Present exactly when rule is CALLER_PROFILE. It is never the
+  // server's profile, which admitted the call. Server 0.10.2 and later.
+  optional string caller_admission_profile = 5;
+  // The risk flag the caller's own restriction denied that decided, as the
+  // lowercase suffix of its OperationRiskFlag value name, like denied_flag.
+  // Present exactly when rule is CALLER_FLAG. When the caller denies several of
+  // the request's flags, it names the first in OperationRiskFlag declaration
+  // order. Server 0.10.2 and later.
+  optional string caller_denied_flag = 6;
 }
 
 // In OperationError, field 11:
 optional PolicyDenialDetails policy_denial = 11;
+```
+
+## Request Validation Details
+
+From Server 0.10.2, when a request fails field validation, the server sets `OperationError.request_validation` (field `12`, `RequestValidationDetails`) in `briosa-operation-error-bin`. It names the first invalid request field (`field_path`, exact protobuf field names separated by dots from the request message down, omitting indices through repeated message fields) and the constraint it did not meet (`RequestFieldConstraint`), with no request value. The server stops at the first invalid field it finds, so a request can have others. `request_validation` is published only when the path resolves to a field of the request schema with a fitting constraint, and is absent when a validation failure does not belong to one request field (such as `request-encoding-rejected` or `caller-restriction-invalid`). Status `INVALID_ARGUMENT`, status text `The request is invalid.`, failure kind `OPERATION_FAILURE_KIND_VALIDATION`, diagnostic code `request-validation-failed`, disposition `EXECUTION_DISPOSITION_NOT_STARTED`, and replay guidance `REPLAY_GUIDANCE_DO_NOT_REPLAY` are unchanged, and neither field paths nor request values are added to audit logs, traces, or metrics. Earlier servers do not set it, and clients built for them ignore it.
+
+```proto
+// The constraint a request field did not meet. Each value names one kind of
+// check the server makes while it reads a request, before anything is
+// dispatched. A newer server can send a value that an older client does not
+// know; such a client can still use field_path.
+enum RequestFieldConstraint {
+  REQUEST_FIELD_CONSTRAINT_UNSPECIFIED = 0;
+  // The field must be set, and it is absent. It is a message field, or a
+  // field with explicit presence (proto3 optional) whose presence the
+  // operation checks. Some fields are required only when another field of the
+  // request turns on the behavior that uses them.
+  REQUEST_FIELD_CONSTRAINT_REQUIRED = 1;
+  // The string must contain a character other than whitespace. An operation
+  // that does not check a string's presence reads an absent string as empty,
+  // so an absent string can fail this check instead of REQUIRED.
+  REQUEST_FIELD_CONSTRAINT_NOT_BLANK = 2;
+  // The repeated field must have at least one element.
+  REQUEST_FIELD_CONSTRAINT_NOT_EMPTY = 3;
+  // The repeated field must have the exact number of elements the value
+  // needs, for example 16 for a transform.
+  REQUEST_FIELD_CONSTRAINT_ELEMENT_COUNT = 4;
+  // The number must be in the range the target accepts, for example 0 to 255
+  // for a color channel.
+  REQUEST_FIELD_CONSTRAINT_RANGE = 5;
+  // The field must hold a choice this operation supports on this target. For
+  // an enum field, a number the schema does not define and a defined value the
+  // operation does not accept fail this check. Each operation decides whether
+  // UNSPECIFIED fails it: some read UNSPECIFIED as the operation's default. A
+  // string field that names a target choice, such as an instrument type name,
+  // fails it for a name the target does not define.
+  REQUEST_FIELD_CONSTRAINT_SUPPORTED_CHOICE = 6;
+  // One field of a oneof must be set. field_path names the message that holds
+  // the oneof.
+  REQUEST_FIELD_CONSTRAINT_ONEOF_REQUIRED = 7;
+}
+
+// Value-free detail of a request that failed validation: which field, and
+// which constraint. It never carries the value the request sent.
+message RequestValidationDetails {
+  // The request field, as protobuf field names separated by dots from the
+  // request message down, for example "point_name.target_name". A path through
+  // a repeated message field names the element's field without an index, for
+  // example "objects.object_type" for any element of objects.
+  string field_path = 1;
+  RequestFieldConstraint constraint = 2;
+}
+
+// In OperationError, field 12:
+optional RequestValidationDetails request_validation = 12;
 ```
 
 ## Released Contract
@@ -382,6 +462,12 @@ message OperationCapability {
   // request options and leaves it absent; clients built for Server 0.10.0
   // ignore it.
   optional OperationRequestOptions request_options = 13;
+  // The exact name of the SpatialAnalyzer MP command that the operation
+  // executes, for example "Get Working Directory". It names the command only
+  // and never carries an argument or result value. Server 0.10.2 and later set
+  // it on every listed operation, admitted or denied. Earlier servers leave it
+  // empty, and clients that predate the field ignore it.
+  string mp_step = 14;
 }
 
 // The reviewed request options of one operation. A present message with an
@@ -542,4 +628,4 @@ enum OperationEffect {
 
 ```
 
-[Released Discovery Source](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2024.1.0508.5/proto/briosa/discovery.proto) · [Version Coordinates](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2024.1.0508.5/proto/briosa/version_coordinates.proto) · [Operation Outcomes](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2024.1.0508.5/proto/briosa/operation_outcomes.proto)
+[Released Discovery Source](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2024.1.0508.5/proto/briosa/discovery.proto) · [Version Coordinates](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2024.1.0508.5/proto/briosa/version_coordinates.proto) · [Operation Outcomes](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2024.1.0508.5/proto/briosa/operation_outcomes.proto)

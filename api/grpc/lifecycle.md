@@ -401,6 +401,8 @@ transition has ended.
 - A caller's cancellation or deadline withdraws a transition only before the
   server accepts it; afterwards the transition continues detached. Refresh
   state after a cancelled lifecycle call.
+- Lifecycle RPCs have no operation policy and ignore the
+  `briosa-caller-restriction` request header.
 - These RPCs are loopback-only. Remote administration requires a later release
   with authenticated transport, authorization, and exclusive-controller policy.
 

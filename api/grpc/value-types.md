@@ -1,13 +1,13 @@
 ---
 title: MP Value Types
-description: Server 0.10.1 exact-target protobuf values for SA 2026.1.0529.7.
+description: Server 0.10.2 exact-target protobuf values for SA 2026.1.0529.7.
 ---
 
 # MP Value Types
 
 [SA 2026.1.0529.7](/api/grpc/value-types) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/value-types)
 
-These are the released Server **0.10.1** protobuf values for **SA 2026.1.0529.7**. Preserve reserved numbers and exact-target domains. Client libraries expose their own handwritten representations.
+These are the released Server **0.10.2** protobuf values for **SA 2026.1.0529.7**. Preserve reserved numbers and exact-target domains. Client libraries expose their own handwritten representations.
 
 ## `AngularUnits`
 
@@ -1823,4 +1823,4 @@ message WrtlChannelStatus {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.1/targets/2026.1.0529.7/proto/briosa)
+[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.10.2/targets/2026.1.0529.7/proto/briosa)

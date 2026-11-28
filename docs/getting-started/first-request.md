@@ -18,14 +18,14 @@ Before continuing, install and license the supported SpatialAnalyzer release,
 close competing SA and SDK instances, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Clients 0.5.1 and 0.5.2 with Server 0.10.1]
+:::note[Clients 0.5.1 and 0.5.2 with Server 0.10.2]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release: .NET or Python 0.5.1, or
 JavaScript/TypeScript 0.5.2. Clients 0.5.0, 0.5.1, and 0.5.2 work with Servers
-0.10.0 and 0.10.1 for that target, Client 0.4.0 works with Server 0.9.x, and
+0.10.0 through 0.10.2 for that target, Client 0.4.0 works with Server 0.9.x, and
 direct gRPC from the published protocol artifact is also supported. Use Server
-0.10.1 for new installations. Before launch, client 0.5.x checks that
+0.10.2 for new installations. Before launch, client 0.5.x checks that
 the installation matches the exact SA target and declares support for this client, and
 rejects Server 0.9.x and earlier. See
 [Release Status](/docs/releases) for package links and validation limits,
@@ -144,6 +144,11 @@ the MP call after those lifecycle steps complete:
 ```powershell
 grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory
 ```
+
+Packaged servers do not enable gRPC server reflection. From Server 0.10.2, each
+Windows server package ships `descriptor/briosa.protoset` so `grpcurl` can call
+it with `-protoset descriptor/briosa.protoset`; see
+[Windows Deployment](../deployment/windows#protocol-descriptor).
 
 The authoritative protobuf contracts are published by the
 [Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/main/targets/2026.1.0529.7/proto/briosa).

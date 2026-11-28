@@ -89,8 +89,13 @@ the original response or authorize automatic replay.
 
 Debug and Trace add metadata detail. They never enable request/response
 payloads, geometry, returned values, paths, credentials, raw SDK exception text,
-or ambient scopes. Follow [safe reporting guidance](./diagnostics.md) before
-sharing diagnostics.
+or ambient scopes. On Server 0.10.2 and later, `PolicyAllowed` (2002) and
+`PolicyRejected` (2003) events for a call carrying `briosa-caller-restriction`
+add `CallerProfile`, `CallerDeniedFlags`, and `CallerRestrictionDecision`
+(`admitted`, `denied`, or `not_evaluated`) using reviewed names only, never raw
+header text; field-validation failures do not add field paths or request values
+to logs, traces, or metrics. Follow [safe reporting guidance](./diagnostics.md)
+before sharing diagnostics.
 
 ## Optional Metrics and Tracing
 
@@ -120,4 +125,4 @@ Collector failure does not change command results.
 
 For complete configuration keys, event IDs, metric names, limits, and measured
 performance evidence, see the
-[server observability reference](https://github.com/spatialanalyzer/briosa/blob/b2e5bda/targets/2026.1.0529.7/docs/operations/server-observability.md).
+[server observability reference](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2026.1.0529.7/docs/operations/server-observability.md).
