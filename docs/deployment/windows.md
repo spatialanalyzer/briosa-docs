@@ -19,10 +19,10 @@ Briosa release archives are self-contained .NET 10 Windows x64 products for one
 exact SpatialAnalyzer target:
 
 ```text
-briosa-0.10.1-sa-<exact-sa-target>-win-x64.zip
+briosa-0.10.2-sa-<exact-sa-target>-win-x64.zip
 ```
 
-Choose exact target `2024.1.0508.5` or `2026.1.0529.7` from the [Server 0.10.1 assets](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.1). Use the adjacent ZIP checksum and provenance. Schema-3 packages require Installer **0.3.0** or later. Manual extraction alone does not create a registered, committed package-store receipt; use Installer to manage discovery, or an explicitly selected validated server path as described in [Installation Selection](./installation-selection). Raw gRPC users should also read [Protocol Artifacts](./protocol-artifacts).
+Choose exact target `2024.1.0508.5` or `2026.1.0529.7` from the [Server 0.10.2 assets](https://github.com/spatialanalyzer/briosa/releases/tag/v0.10.2). Use the adjacent ZIP checksum and provenance. Schema-3 packages require Installer **0.3.0** or later. Manual extraction alone does not create a registered, committed package-store receipt; use Installer to manage discovery, or an explicitly selected validated server path as described in [Installation Selection](./installation-selection). Raw gRPC users should also read [Protocol Artifacts](./protocol-artifacts).
 
 The archive does not contain SpatialAnalyzer, its installer, SDK executable,
 original type library, license material, or vendor documentation.
@@ -33,7 +33,7 @@ attributions, licenses, and notices. The Microsoft runtime files listed under
 `perFileLicenses` carry Microsoft's terms and fall outside Briosa's Apache-2.0
 license; the archive includes both applicable texts, the .NET Library License
 and the Windows SDK License. The Server 0.10.0 packages omit these notices, so
-use 0.10.1 for new installations and move existing 0.10.0 installations to it.
+use 0.10.2 for new installations and move existing 0.10.0 installations to it.
 
 ## Verify and Extract
 
@@ -68,6 +68,31 @@ The packaged `appsettings.json` admits operations through the `standard`
 [admission profile](./operation-admission.md). Server 0.10.0 and later refuse to start
 when it finds the retired `Briosa:Security:Operations:Allow` or `Deny` arrays,
 or no `Profile`.
+
+## Protocol Descriptor
+
+From Server 0.10.2, each Windows server package includes
+`descriptor/briosa.protoset`, a Buf protobuf descriptor set (`FileDescriptorSet`)
+of every service and message the server's protocol defines. It is unsigned
+first-party data verified by `files.sha256` and is byte-identical to
+`descriptor/briosa.protoset` in the protocol artifact for the same release.
+
+Packaged servers do not enable gRPC server reflection, so tools such as
+[`grpcurl`](https://github.com/fullstorydev/grpcurl) can pass the bundled
+descriptor from the package directory instead:
+
+```powershell
+grpcurl -plaintext -protoset descriptor/briosa.protoset 127.0.0.1:50051 list
+grpcurl -plaintext -protoset descriptor/briosa.protoset -d '{}' 127.0.0.1:50051 briosa.DiscoveryService/ListCapabilities
+```
+
+The descriptor describes the schema only, regardless of server configuration;
+`ListCapabilities` reports which operations the running server admits and sets
+each entry's `mp_step` to its exact SpatialAnalyzer MP command name. The
+descriptor carries few comments; use the [protocol artifact](./protocol-artifacts.md)
+to generate a client. Building server packages from source requires
+[Buf](https://buf.build) on `PATH` (or via `-BufPath`); users installing
+released packages do not need Buf.
 
 ## Worker Time Bounds
 
@@ -113,11 +138,11 @@ no time to the host’s allowance. If the command outlasts the window, the host
 reports a shutdown failure, finishes draining the command, stops the worker,
 and exits with an error.
 
-Server 0.10.1 publishes the allowances that follow from these settings in
-`GetServerInfo` as `lifecycle_bounds`, in milliseconds, including the host
-shutdown bound. The first-party clients 0.5.1 and 0.5.2 size an unset startup timeout
-from them, and Control Center waits for the published shutdown bound plus 5
-seconds after **Stop server** (110 seconds at the defaults). See
+From Server 0.10.1, the server publishes the allowances that follow from these
+settings in `GetServerInfo` as `lifecycle_bounds`, in milliseconds, including
+the host shutdown bound. The first-party clients 0.5.1 and 0.5.2 size an unset
+startup timeout from them, and Control Center waits for the published shutdown
+bound plus 5 seconds after **Stop server** (110 seconds at the defaults). See
 [Server Discovery](/api/grpc/sa-2026.1.0529.7/discovery#lifecycle-bounds-and-interaction-mode).
 
 ## Request and Result Sizes
@@ -155,10 +180,10 @@ mode across restarts and has no getter, so Briosa cannot restore the operator's
 previous mode. In the licensed probe sessions, `Silent` turned each observed
 blocking dialog into an immediate MP failure while operator prompts still
 worked; those are observations of bounded sessions, not vendor guarantees.
-Server 0.10.1 reports the configured value in `GetServerInfo` as
-`configured_spatial_analyzer_interaction_mode`, whether or not SpatialAnalyzer
-is connected. It is the configured value, never a reading of SpatialAnalyzer's
-current mode.
+From Server 0.10.1, the server reports the configured value in `GetServerInfo`
+as `configured_spatial_analyzer_interaction_mode`, whether or not
+SpatialAnalyzer is connected. It is the configured value, never a reading of
+SpatialAnalyzer's current mode.
 
 At an MP watchdog, readiness-probe, or interaction-mode timeout, Briosa
 reports `sa-modal-dialog-open` if it can identify a visible standard modal
@@ -174,4 +199,4 @@ targets; they do not establish detection for every dialog or licensed
 execution of the readiness-timeout path.
 
 For the full package contract, use the
-[authoritative Windows guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2026.1.0529.7/docs/operations/windows-package.md).
+[authoritative Windows guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2026.1.0529.7/docs/operations/windows-package.md).

@@ -121,6 +121,39 @@ The worker stays in service for later commands. An exception that leaves the
 worker's SDK thread in an untrustworthy state still stops the worker, and the
 command's outcome is then unknown.
 
+## When a Request Fails Validation
+
+Before queuing an MP command, the server checks the request fields that the
+operation needs: required fields, non-blank strings, non-empty lists, exact
+list lengths, number ranges, supported choices, and required `oneof`
+selections. A request that fails validation never reaches SpatialAnalyzer: it
+returns `INVALID_ARGUMENT` with status text `The request is invalid.`, failure
+kind `VALIDATION`, diagnostic `request-validation-failed`, disposition
+**not started**, and replay guidance **do not replay** (correct the request
+before sending it again).
+
+From Server 0.10.2, `OperationError.request_validation` (`RequestValidationDetails`)
+in the `briosa-operation-error-bin` trailer names the first invalid field
+(`field_path`, exact protobuf field names separated by dots, omitting indices
+through repeated message fields, such as `point.target_name` or
+`objects.object_type`) and the constraint it failed (`RequestFieldConstraint`:
+`REQUIRED`, `NOT_BLANK`, `NOT_EMPTY`, `ELEMENT_COUNT`, `RANGE`,
+`SUPPORTED_CHOICE`, or `ONEOF_REQUIRED`), with no request value. The server
+stops at the first invalid field it finds, so a request can have others.
+`request_validation` is absent when a validation failure does not belong to one
+request field (such as `request-encoding-rejected` or
+`caller-restriction-invalid`), and neither field paths nor request values are
+recorded in audit logs, traces, or metrics.
+
+Policy, readiness, and queue-capacity failures occur before field validation
+and carry no validation detail. If the server reports `INTERNAL` with
+diagnostic `request-violation-after-mapping` and disposition **outcome
+unknown**, execution may have started: follow the returned replay guidance
+rather than treating it as an ordinary invalid request. Published 0.5.x
+first-party clients ignore `request_validation`; direct gRPC callers can read
+it using bindings generated from the 0.10.2 protocol artifact. See
+[Request Validation Details](/api/grpc/sa-2026.1.0529.7/discovery#request-validation-details).
+
 ## The Three Outcomes That Matter
 
 Briosa reports what it can prove about each command:

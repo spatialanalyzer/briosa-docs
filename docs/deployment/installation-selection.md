@@ -12,11 +12,11 @@ for either target. Each application makes its own selection.
 
 :::note[Clients 0.5.1 and 0.5.2]
 
-This guide describes Server 0.10.1 and the current clients, .NET and Python
+This guide describes Server 0.10.2 and the current clients, .NET and Python
 0.5.1 and JavaScript/TypeScript 0.5.2, available for both exact SA targets. See
 [Release Status](/docs/releases) for package links and validation. Client 0.4.0
 keeps selecting Server 0.9.x (such as 0.9.2) and rejects Server 0.10.x, so keep
-0.9.2 installed beside 0.10.1 until its applications migrate.
+0.9.2 installed beside 0.10.2 until its applications migrate.
 Published 0.1.1 clients keep their exact Server 0.6.1 pin; installing a newer
 server does not change those clients.
 
@@ -28,7 +28,7 @@ server does not change those clients.
 | --- | --- |
 | Client package SA target | Exactly matches the selected server product |
 | Activated SDK and connected SA | Each exactly matches the server target before execution |
-| Declared client compatibility | Server installation matches the exact SA target and declares support for this client (Clients 0.5.0, 0.5.1, and 0.5.2 work with Servers 0.10.0 and 0.10.1; Client 0.4.0 works with Server 0.9.x) |
+| Declared client compatibility | Server installation matches the exact SA target and declares support for this client (Clients 0.5.0, 0.5.1, and 0.5.2 work with Servers 0.10.0 through 0.10.2; Client 0.4.0 works with Server 0.9.x) |
 | Server package version | Meets the application's optional version constraints |
 | Generation artifact | Remains pinned for reproducible client builds |
 | Running server provenance | Matches the selected installation's manifest |
@@ -36,8 +36,8 @@ server does not change those clients.
 Server-client compatibility covers lifecycle, errors, execution outcomes,
 presence, capabilities, admission, and ownership. A matching protobuf package
 or version number alone is insufficient. Clients **0.5.0** and **0.5.1**, and
-JavaScript/TypeScript client **0.5.2**, work with Servers **0.10.0** and
-**0.10.1**, and Client **0.4.0** works with Server **0.9.x** (0.9.0 through
+JavaScript/TypeScript client **0.5.2**, work with Servers **0.10.0** through
+**0.10.2**, and Client **0.4.0** works with Server **0.9.x** (0.9.0 through
 0.9.2). Before launch, client 0.5.x
 checks that the installation matches the exact SA target and declares support
 for this client; it rejects Server 0.9.x and earlier, while client 0.4.0 rejects
@@ -77,7 +77,7 @@ using Briosa;
 
 var selection = new BriosaServerSelection
 {
-    Version = "0.10.1",
+    Version = "0.10.2",
     SearchRoots = [@"D:\Briosa Packages"],
 };
 var report = BriosaInstallations.Discover(selection);
@@ -95,7 +95,7 @@ For Node.js with the exact-target package installed under the `briosa` alias:
 ```typescript
 import { createBriosaClient, discoverInstallations } from 'briosa';
 
-const serverSelection = { version: '0.10.1' };
+const serverSelection = { version: '0.10.2' };
 const report = await discoverInstallations(serverSelection);
 const client = createBriosaClient();
 try {
@@ -115,7 +115,7 @@ from briosa import BriosaClient, BriosaServerSelection, BriosaStartOptions
 
 
 async def main():
-    selection = BriosaServerSelection(version="0.10.1")
+    selection = BriosaServerSelection(version="0.10.2")
     client = BriosaClient()
     try:
         await client.start(BriosaStartOptions(
@@ -145,10 +145,10 @@ explicit choices fail; the client does not silently choose another installation.
 
 The selection remains fixed for the session. Recovery uses the same distribution.
 A newly installed release becomes eligible only on a fresh explicit startup. For
-example, with Servers 0.10.0 and 0.10.1 both installed for the same target, the
-published 0.5.0, 0.5.1, and 0.5.2 clients select 0.10.1 on a fresh start unless
+example, with Servers 0.10.1 and 0.10.2 both installed for the same target, the
+published 0.5.0, 0.5.1, and 0.5.2 clients select 0.10.2 on a fresh start unless
 the application selects a version explicitly. An application that pins
-`0.10.0` keeps that server until you update its pin.
+`0.10.1` keeps that server until you update its pin.
 
 ## Find the SpatialAnalyzer Application
 
@@ -178,9 +178,9 @@ Existing packages retain their original runtime requirements:
 | 0.2.0 | Servers 0.7.0 and 0.8.0, plus the reviewed Server 0.6.1 exception |
 | 0.3.0 | Servers 0.7.0 and 0.8.0 (plus the reviewed Server 0.6.1 exception); [MP argument name migration](/docs/mp-argument-name-migration) |
 | 0.4.0 | Servers 0.9.0 through 0.9.2 (`0.9.x`); [runtime redesign migration](/docs/runtime-redesign-migration) |
-| 0.5.0 | Servers 0.10.0 and 0.10.1; [Server 0.10 and Client 0.5 migration](/docs/server-0-10-and-client-0-5-migration) |
-| 0.5.1 | Servers 0.10.0 and 0.10.1; adds the Server 0.10.1 discovery and policy-denial details |
-| 0.5.2 (JavaScript/TypeScript) | Servers 0.10.0 and 0.10.1; same API as 0.5.1 |
+| 0.5.0 | Servers 0.10.0 through 0.10.2; [Server 0.10 and Client 0.5 migration](/docs/server-0-10-and-client-0-5-migration) |
+| 0.5.1 | Servers 0.10.0 through 0.10.2; adds the Server 0.10.1 discovery and policy-denial details |
+| 0.5.2 (JavaScript/TypeScript) | Servers 0.10.0 through 0.10.2; same API as 0.5.1 |
 
 Installing a new server does not broaden an old client's compatibility. Keep
 the old distribution installed until applications using it have migrated.

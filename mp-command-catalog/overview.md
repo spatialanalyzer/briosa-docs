@@ -93,7 +93,7 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Released Availability
 
-Released availability reflects Briosa Server **0.10.1** for both SA **2026.1.0529.7** (1,018 Current operations) and SA **2024.1.0508.5** (987 Current operations).
+Released availability reflects Briosa Server **0.10.2** for both SA **2026.1.0529.7** (1,018 Current operations) and SA **2024.1.0508.5** (987 Current operations).
 Browse command groups to find exact MP labels, inputs, outputs, API links,
 and alternatives.
 

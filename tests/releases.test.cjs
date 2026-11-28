@@ -13,7 +13,7 @@ const revision = (family, id, release, target) => {
 
 test('current, historical, and exact-target references have distinct identities', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
-    const current = {grpc: '0.10.1', dotnet: '0.5.1', python: '0.5.1', javascript: '0.5.2'}[family];
+    const current = {grpc: '0.10.2', dotnet: '0.5.1', python: '0.5.1', javascript: '0.5.2'}[family];
     const previous = family === 'grpc' ? '0.5.1' : '0.1.0';
     const root = `api/${family}`;
     assert.match(html(`${root}/sa-2026.1.0529.7/analysis-operations`)('title').text(), new RegExp(`${current} · SA 2026`));

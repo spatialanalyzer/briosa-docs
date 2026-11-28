@@ -22,12 +22,14 @@ Implements the `Get i-th Collection Name` MP for exact target
 while omission fails with `InvalidArgument`. Briosa does not invent an upper
 bound; SpatialAnalyzer reports an out-of-range value through the MP outcome.
 
+From the extracted server package directory, with the server running on its default endpoint:
+
 ```powershell
-grpcurl -plaintext -d '{"collectionIndex":0}' 127.0.0.1:50051 briosa.AnalysisOperations/GetIthCollectionName
+'{"collectionIndex":0}' | grpcurl -plaintext -protoset descriptor/briosa.protoset -d '@' 127.0.0.1:50051 briosa.AnalysisOperations/GetIthCollectionName
 ```
 
 The returned name is application data and is not logged by default. After MP
 success, the worker retrieves `Resultant Name`; getter failure produces a
 data-loss outcome rather than an empty name.
 
-[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2026.1.0529.7/docs/operations/get-ith-collection-name.md).
+[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2026.1.0529.7/docs/operations/get-ith-collection-name.md).

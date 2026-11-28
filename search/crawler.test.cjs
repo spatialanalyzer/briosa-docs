@@ -116,7 +116,7 @@ test('the command index preserves one disposition per command and exact target',
       assert.ok(row.attr('hidden') !== undefined, href);
     }
   }
-  // Servers 0.10.0 and 0.10.1 register 987 SA 2024 operations; Server 0.10.0 retired nine.
+  // Servers 0.10.0 through 0.10.2 register 987 SA 2024 operations; Server 0.10.0 retired nine.
   assert.equal(statuses2024.current, 987);
   assert.equal(statuses2024.excluded, 179);
   assert.equal(statuses2024.uncommitted, 42);
@@ -146,7 +146,7 @@ test('product guides and landing pages use the DocSearch content selectors', () 
 test('API results keep exact current release/SA context and method-section destinations', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
-      const release = {grpc: '0.10.1', dotnet: '0.5.1', python: '0.5.1', javascript: '0.5.2'}[family];
+      const release = {grpc: '0.10.2', dotnet: '0.5.1', python: '0.5.1', javascript: '0.5.2'}[family];
       const previous = family === 'grpc' ? '0.9.0' : '0.4.0';
       const route = `api/${family}/sa-${target}/analysis-operations/angle-between-line-and-plane`;
       const records = run(route);

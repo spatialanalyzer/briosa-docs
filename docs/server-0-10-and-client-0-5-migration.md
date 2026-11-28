@@ -1,6 +1,6 @@
 ---
 title: Server 0.10 and Client 0.5 Migration
-description: Move an application from client 0.4.0 and Server 0.9.x to client 0.5.x and Server 0.10.1.
+description: Move an application from client 0.4.0 and Server 0.9.x to client 0.5.x and Server 0.10.2.
 ---
 
 # Server 0.10 and Client 0.5 Migration
@@ -12,23 +12,23 @@ narrower, some request defaults changed, nine operations are gone, and inputs
 the server always required are now required in the client signatures. Most
 breaks surface as compile or type errors rather than at run time.
 
-:::note[Use Server 0.10.1 and the Current Clients]
+:::note[Use Server 0.10.2 and the Current Clients]
 
-Server 0.10.1 is a compatible update to 0.10.0 and works with the same client
-versions. Use it for new installations and move existing 0.10.0 installations
-to it: the Server 0.10.0 Windows packages do not include the license notices
-for the third-party components they ship, and 0.10.1 includes them under
-`licenses/`. Install .NET or Python client 0.5.1, or JavaScript/TypeScript
-client 0.5.2. Everything in this guide applies to them; see
-[Release Status](/docs/releases#server-0101-and-clients-051-and-052) for what
-they add.
+Server 0.10.2 is a compatible update to 0.10.0 and 0.10.1 and works with the
+same client versions. Use it for new installations and move existing 0.10.0
+installations to it: the Server 0.10.0 Windows packages do not include the
+license notices for the third-party components they ship, and Server 0.10.1 and
+later include them under `licenses/`. Install .NET or Python client 0.5.1, or
+JavaScript/TypeScript client 0.5.2. Everything in this guide applies to them;
+see [Release Status](/docs/releases#server-0102) for what Server 0.10.2 and the
+current clients add.
 
 :::
 
-The current API references document Server 0.10.1, .NET and Python client
+The current API references document Server 0.10.2, .NET and Python client
 0.5.1, and JavaScript/TypeScript client 0.5.2. Each method's history page keeps
-the Server 0.10.0 and client 0.5.0 contracts, and the Server 0.9.0 and client
-0.4.0 contracts. Each
+the Server 0.10.1, Server 0.10.0, and client 0.5.0 contracts, and the Server
+0.9.0 and client 0.4.0 contracts. Each
 client's own migration notes give the language-specific changes:
 [.NET](https://github.com/spatialanalyzer/briosa-dotnet/blob/main/docs/client-0.5-migration.md),
 [Python](https://github.com/spatialanalyzer/briosa-py/blob/main/targets/2026.1.0529.7/README.md#upgrading-to-050-server-010x),
@@ -37,12 +37,12 @@ and [JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/blob/ma
 ## Upgrade the Client and Server Together
 
 Clients 0.5.0 and 0.5.1, and JavaScript/TypeScript client 0.5.2, work with
-Servers 0.10.0 and 0.10.1, and Client 0.4.0 works with Server 0.9.x. Before
+Servers 0.10.0 through 0.10.2, and Client 0.4.0 works with Server 0.9.x. Before
 launch, client 0.5.x
 checks that the installation matches the exact SA target and declares support
 for this client; it rejects Server 0.9.x and earlier. Client 0.4.0 checks for a
 Server 0.9.x-compatible installation and rejects Server 0.10.x. Install Server
-0.10.1 beside 0.9.2 for each exact target, and keep 0.9.2 until every
+0.10.2 beside 0.9.2 for each exact target, and keep 0.9.2 until every
 application that uses client 0.4.0 has migrated. For server releases after
 0.10.0, a patch update keeps the same clients working; a minor update may
 require a client upgrade. To roll an application back, select the 0.9.2 and
@@ -50,9 +50,10 @@ require a client upgrade. To roll an application back, select the 0.9.2 and
 See [installation selection](/docs/deployment/installation-selection).
 
 First-party clients are not required: direct gRPC applications regenerate their
-bindings from the Server 0.10.1
+bindings from the Server 0.10.2
 [protocol artifact](/docs/deployment/protocol-artifacts) of the exact target.
-Bindings generated from the 0.10.0 artifact also work with Server 0.10.1.
+Bindings generated from the 0.10.0 or 0.10.1 artifact also work with Server
+0.10.2.
 
 ## Configure Operation Admission
 
@@ -186,7 +187,10 @@ covers, among others:
 
 When you pass `ReportOutputOptions`, name exactly one destination, an external
 path or an embedded file. An explicit `0`, `false`, or empty value is still
-sent as given.
+sent as given. On Server 0.10.2 and later, a field-validation failure also sets
+`OperationError.request_validation` naming the first rejected protobuf field
+path and constraint (for example `REQUIRED` for an absent required scalar); see
+[When a Request Fails Validation](/docs/concepts/execution-outcomes#when-a-request-fails-validation).
 
 ## Handle Partial Success
 
@@ -274,7 +278,7 @@ The client migration notes describe these fixes for each language.
 
 ## Installer and Examples
 
-Server 0.10.0 and 0.10.1 packages use the same schema-3 distribution format,
+Server 0.10.0 through 0.10.2 packages use the same schema-3 distribution format,
 so Briosa Installer 0.3.0 or later installs them beside 0.9.2. The
 [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples) name the
 client and server versions they use in their README. Use the versions named by

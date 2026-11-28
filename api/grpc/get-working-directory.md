@@ -20,8 +20,10 @@ Implements the `Get Working Directory` MP for exact target `2026.1.0529.7`.
 | Result | optional string `directory` plus shared `execution` details |
 | Classification | read only · global-state read · replay safe |
 
+From the extracted server package directory, with the server running on its default endpoint:
+
 ```powershell
-grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory
+grpcurl -plaintext -protoset descriptor/briosa.protoset -d '{}' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory
 ```
 
 The returned path is application data. Briosa returns it to the caller but does
@@ -33,7 +35,7 @@ only then retrieves the `Directory` string. MP failure prevents the getter from
 running; getter failure returns a data-loss outcome instead of an empty
 directory.
 
-[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2026.1.0529.7/docs/operations/get-working-directory.md).
+[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2026.1.0529.7/docs/operations/get-working-directory.md).
 
 ## Client Library References
 

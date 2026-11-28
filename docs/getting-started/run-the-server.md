@@ -16,14 +16,14 @@ The Briosa server, SDK, and SpatialAnalyzer application still have independent
 lifecycles. Direct gRPC users can start and control each resource separately,
 and client applications can diagnose or recover the SDK without restarting SA.
 
-:::note[Clients 0.5.1 and 0.5.2 with Server 0.10.1]
+:::note[Clients 0.5.1 and 0.5.2 with Server 0.10.2]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release: .NET or Python 0.5.1, or
 JavaScript/TypeScript 0.5.2. Clients 0.5.0, 0.5.1, and 0.5.2 work with Servers
-0.10.0 and 0.10.1 for that target, Client 0.4.0 works with Server 0.9.x, and
+0.10.0 through 0.10.2 for that target, Client 0.4.0 works with Server 0.9.x, and
 direct gRPC from the published protocol artifact is also supported. Use Server
-0.10.1 for new installations. Before launch, client 0.5.x checks that
+0.10.2 for new installations. Before launch, client 0.5.x checks that
 the installation matches the exact SA target and declares support for this client, and
 rejects Server 0.9.x and earlier. See
 [Release Status](/docs/releases) for package links and validation limits,
@@ -49,7 +49,7 @@ and the [Server 0.10 and Client 0.5 migration guide](/docs/server-0-10-and-clien
   servers that Control Center launches; see
   [Control Center version evidence](../deployment/control-center#set-up-version-evidence)
   and the
-  [server identity configuration guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.1/targets/2026.1.0529.7/docs/operations/health-and-discovery.md#operator-attestation-when-runtime-evidence-is-unavailable).
+  [server identity configuration guide](https://github.com/spatialanalyzer/briosa/blob/v0.10.2/targets/2026.1.0529.7/docs/operations/health-and-discovery.md#operator-attestation-when-runtime-evidence-is-unavailable).
 - Install the Briosa client package for your programming language
 
 SpatialAnalyzer remains separate software. Briosa does not install it, include
@@ -62,7 +62,7 @@ release it supports. The package version remains an independent Briosa client
 version; it is not the SpatialAnalyzer version.
 
 Both targets are published as client **0.5.1** for .NET and Python and as
-client **0.5.2** for JavaScript/TypeScript. Use Server **0.10.1** (or a later
+client **0.5.2** for JavaScript/TypeScript. Use Server **0.10.2** (or a later
 compatible server release) for the same exact target. Compatible server updates
 can be selected without rebuilding or upgrading the client package. Use
 JavaScript/TypeScript 0.5.2 rather than 0.5.0 or 0.5.1: it has the same API as

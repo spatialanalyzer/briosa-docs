@@ -233,7 +233,7 @@ npm run docusaurus docs:version:python <python-package-version>
 npm run docusaurus docs:version:javascript <javascript-package-version>
 ```
 
-Current defaults are Server **0.10.1**, .NET and Python clients **0.5.1**, and
+Current defaults are Server **0.10.2**, .NET and Python clients **0.5.1**, and
 JavaScript client **0.5.2**; schema-identical Servers 0.9.1 and 0.9.2 have no
 separate API snapshots, and JavaScript client 0.5.1, whose API equals 0.5.2's,
 has none either. Working `api/`
