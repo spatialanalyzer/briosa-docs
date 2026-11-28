@@ -1,0 +1,3 @@
+# Exclude GitHub Pages dotfiles and local OS metadata from Workers Static Assets.
+.nojekyll
+.DS_Store

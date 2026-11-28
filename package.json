@@ -42,7 +42,8 @@
     "@docusaurus/types": "3.10.2",
     "@types/react": "^19.3.0",
     "cheerio": "1.2.0",
-    "typescript": "~6.0.2"
+    "typescript": "~6.0.2",
+    "wrangler": "4.169.0"
   },
   "browserslist": {
     "production": [

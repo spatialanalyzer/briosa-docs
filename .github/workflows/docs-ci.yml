@@ -47,8 +47,8 @@ jobs:
           if [ "$build" -eq 0 ]; then echo "::warning title=Build memory::No Node build process was sampled, so build memory was not measured."
           elif [ "$build" -gt 10240 ]; then echo "::warning title=Build memory::The build's Node processes peaked at $build MB, above the 10 GB budget in #94."; fi
       - name: Report artifact size
-        # Report the built site's size against the 800 MB budget in #113, which
-        # excludes the frozen redirect documents, and GitHub Pages' 1 GB limit.
+        # Report manifest file count, largest file, total bytes, and collisions
+        # against Cloudflare Workers Paid limits and project budgets (#146).
         # Measurement never fails the build.
         run: node scripts/report-build-size.mjs build
       - name: Check search extraction
