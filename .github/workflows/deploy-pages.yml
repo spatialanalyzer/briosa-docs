@@ -1,8 +1,7 @@
-name: Deploy documentation
+name: Deploy documentation (GitHub Pages fallback)
 
+# Held manual during the Step 3-4 Cloudflare Workers rollback window (#146).
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 concurrency:
